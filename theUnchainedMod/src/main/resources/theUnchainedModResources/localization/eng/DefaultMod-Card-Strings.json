@@ -49,5 +49,101 @@
   "theUnchainedMod:OrbSkill": {
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "theUnchainedMod:Unshackling": {
+    "NAME": "Unshackling",
+    "DESCRIPTION": "Whenever you play a card, upgrade it.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, Upgrade it."
+  },
+  "theUnchainedMod:ManacleWhip": {
+    "NAME": "Manacle Whip",
+    "DESCRIPTION": "Deal !D! damage. Gain !M! Frail."
+  },
+  "theUnchainedMod:Whiplash": {
+    "NAME": "Whiplash",
+    "DESCRIPTION": "Deal !D! damage. NL 2 Chain: Deal !M! damage to the same Enemy."
+  },
+  "theUnchainedMod:SplinteredShield": {
+    "NAME": "Splintered Shield",
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Weak."
+  },
+  "theUnchainedMod:BrassKnuckle": {
+    "NAME": "Brass Knuckle",
+    "DESCRIPTION": "Deal !D! damage. NL 1 Chain: Gain [E]."
+  },
+  "theUnchainedMod:PlayDead": {
+    "NAME": "Play Dead",
+    "DESCRIPTION": "Gain !M! Vulnerable. NL 3 Chain: Gain 1 Intangible.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Vulnerable. NL 2 Chain: Gain 1 Intangible."
+  },
+  "theUnchainedMod:Postpone": {
+    "NAME": "Postpone",
+    "DESCRIPTION": "Relay !M! damage every turn."
+  },
+  "theUnchainedMod:ShieldFace": {
+    "NAME": "Shield Face",
+    "DESCRIPTION": "Gain !B! Block. Relay !M! damage."
+  },
+  "theUnchainedMod:RecklessSwing": {
+    "NAME": "Reckless Swing",
+    "DESCRIPTION": "Deal !D! damage. Take !M! damage at the end of turn."
+  },
+  "theUnchainedMod:ThreeSixty": {
+    "NAME": "360",
+    "DESCRIPTION": "An enemy loses !M! health. Deal !D! damage to ALL enemies."
+  },
+  "theUnchainedMod:QuickSwing": {
+    "NAME": "Quick Swing",
+    "DESCRIPTION": "Deal !D! damage. NL 1 Chain: Draw !M! cards."
+  },
+  "theUnchainedMod:StepBack": {
+    "NAME": "Step Back",
+    "DESCRIPTION": "Draw !M! cards. NL 1 Chain: Gain !B! Block."
+  },
+  "theUnchainedMod:HiddenBlade": {
+    "NAME": "Hidden Blade",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
+  },
+  "theUnchainedMod:MakeRoom": {
+    "NAME": "Make Room",
+    "DESCRIPTION": "Relay !M! damage. NL 2 Chain: Gain [E] [E].",
+    "UPGRADE_DESCRIPTION": "Relay !M! damage. NL 2 Chain: Gain [E] [E] [E]."
+  },
+  "theUnchainedMod:HalfSwing": {
+    "NAME": "Half Swing",
+    "DESCRIPTION": "An enemy loses !M! health. Deal !D! damage to a random enemy."
+  },
+  "theUnchainedMod:TieTogether": {
+    "NAME": "Tie Together",
+    "DESCRIPTION": "Relay !M! damage. NL Everytime the player takes damage, the enemy loses health equal to the same amount. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "You cannot be tied to multiple enemies."
+    ]
+  },
+  "theUnchainedMod:Liberation": {
+    "NAME": "Liberation",
+    "DESCRIPTION": "Gain !B! Block. NL Finish all your active Chains."
+  },
+  "theUnchainedMod:ClenchTeeth": {
+    "NAME": "Clench Teeth",
+    "DESCRIPTION": "Everytime you are debuffed during your turn, gain !M! Block."
+  },
+  "theUnchainedMod:NonDominantHand": {
+    "NAME": "Non-dominant Hand",
+    "DESCRIPTION": "Gain !M! Block for every Weak you have. NL Enemy loses !M! health for every Frail you have."
+  },
+  "theUnchainedMod:Cower": {
+    "NAME": "Cower",
+    "DESCRIPTION": "Relay !M! damage. NL Gain 2 Frail. NL Apply 1 Vulnerable to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Relay !M! damage. NL Gain 1 Frail. NL Apply 2 Vulnerable to ALL enemies."
+  },
+  "theUnchainedMod:MorningStar": {
+    "NAME": "Morning Star",
+    "DESCRIPTION": "Costs 1 less [E] for every 2-cost card played this combat. NL Enemy loses !M! health. NL Deal !D! damage."
+  },
+  "theUnchainedMod:Cruiserweight": {
+    "NAME": "Cruiserweight",
+    "DESCRIPTION": "Whenever you play a 2-cost card. Draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a 2-cost card. Draw 2 cards."
   }
 }
