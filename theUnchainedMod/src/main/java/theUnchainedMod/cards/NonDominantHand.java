@@ -29,8 +29,8 @@ public class NonDominantHand extends AbstractDynamicCard {
 
     public NonDominantHand() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = MAGIC_NUMBER;
-        defaultBaseSecondMagicNumber = SECOND_MAGIC_NUMBER;
+        baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
     }
 
     @Override
