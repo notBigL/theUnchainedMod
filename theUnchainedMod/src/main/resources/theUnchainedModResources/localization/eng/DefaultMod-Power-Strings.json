@@ -1,10 +1,133 @@
 {
-"theUnchainedMod:CommonPower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
-},
-"theUnchainedMod:RarePower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
-}
+  "theUnchainedMod:CommonPower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "You applied #b",
+      " keyword.",
+      " keywords."
+    ]
+  },
+  "theUnchainedMod:RarePower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "At the start of your turn, TOUCH #b",
+      " enemy.",
+      " enemies."
+    ]
+  },
+  "theUnchainedMod:UnshacklingPower": {
+    "NAME": "Unshackling",
+    "DESCRIPTIONS": [
+      "After playing a Card, upgrade it.",
+      "After playing a Card, upgrade it #b",
+      " times."
+    ]
+  },
+  "theUnchainedMod:BrassKnucklePower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this Turn, gain #y1 Energy.",
+      "If you play #b",
+      " more Attacks this Turn, gain #y1 Energy."
+    ]
+  },
+  "theUnchainedMod:WhiplashPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this Turn, deal #r",
+      " damage.",
+      "If you play #b",
+      " more Attacks this Turn, deal #r",
+      " damage."
+    ]
+  },
+  "theUnchainedMod:PlayDeadPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this Turn, gain #y1 Intangible.",
+      "If you play #b",
+      " more Skills this Turn, gain #y1 Intangible."
+    ]
+  },
+  "theUnchainedMod:RelayPower": {
+    "NAME": "Relay",
+    "DESCRIPTIONS": [
+      "ALL damage taken this turn is reduced by #b",
+      " NL The reduced amount is taken at the end of your next turn."
+    ]
+  },
+  "theUnchainedMod:RelayedDamagePower": {
+    "NAME": "Relayed Damage",
+    "DESCRIPTIONS": [
+      "At the end of this turn, take #r",
+      " damage."
+    ]
+  },
+  "theUnchainedMod:PostponePower": {
+    "NAME": "Postpone",
+    "DESCRIPTIONS": [
+      "Relay #y",
+      " damage every turn."
+    ]
+  },
+  "theUnchainedMod:QuickSwingPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this turn, draw #y2 cards.",
+      "If you play #b",
+      " more Attacks this Turn, draw #y2 cards.",
+      "If you play #b1 more Attack this turn, draw #y3 cards.",
+      " more Attacks this Turn, draw #y3 cards."
+    ]
+  },
+  "theUnchainedMod:StepBackPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this turn, gain #b",
+      " Block.",
+      "If you play #b",
+      " more Skills this turn, gain #b"
+    ]
+  },
+  "theUnchainedMod:MakeRoomPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this turn, gain #y2 Energy.",
+      "If you play #b",
+      " more Skills this turn, gain #y2 Energy."
+    ]
+  },
+  "theUnchainedMod:OiledChainsPower": {
+    "NAME": "Oiled Chains",
+    "DESCRIPTIONS": [
+      "The next card you play is free."
+    ]
+  },
+  "theUnchainedMod:TiedToThePlayerPower": {
+    "NAME": "Tied to the Player",
+    "DESCRIPTIONS": [
+      "This enemy loses HP everytime the player takes damage."
+    ]
+  },
+  "theUnchainedMod:TiedToAnEnemyPower": {
+    "NAME": "Tied to an enemy",
+    "DESCRIPTIONS": [
+      "This unit is tied to an enemy."
+    ]
+  },
+  "theUnchainedMod:ClenchTeethPower": {
+    "NAME": "Teeth are clenched",
+    "DESCRIPTIONS": [
+      "Everytime you are debuffed during your turn, gain #y",
+      " Block."
+    ]
+  },
+  "theUnchainedMod:CruiserweightPower": {
+    "NAME": "Cruiserweight",
+    "DESCRIPTIONS": [
+      "Everytime you play a 2-cost card. Draw #y",
+      " card.",
+      " cards."
+    ]
+  }
 }
