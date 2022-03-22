@@ -61,7 +61,7 @@
   },
   "theUnchainedMod:Whiplash": {
     "NAME": "Whiplash",
-    "DESCRIPTION": "Deal !D! damage. NL 2 Chain: Deal !M! damage to the same Enemy."
+    "DESCRIPTION": "Deal !D! damage. NL 2 Chain: The same enemy loses !M! health."
   },
   "theUnchainedMod:SplinteredShield": {
     "NAME": "Splintered Shield",

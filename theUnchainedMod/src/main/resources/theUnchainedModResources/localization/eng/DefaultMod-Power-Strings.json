@@ -34,11 +34,10 @@
   "theUnchainedMod:WhiplashPower": {
     "NAME": "Attack Chain",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this Turn, deal #r",
-      " damage.",
+      "If you play #b1 more Attack this Turn, enemy loses #r",
+      " health.",
       "If you play #b",
-      " more Attacks this Turn, deal #r",
-      " damage."
+      " more Attacks this Turn, enemy loses #r"
     ]
   },
   "theUnchainedMod:PlayDeadPower": {
