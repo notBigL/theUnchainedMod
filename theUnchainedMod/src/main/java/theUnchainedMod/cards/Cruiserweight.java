@@ -8,6 +8,7 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.powers.CruiserweightPower;
 
+import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
 public class Cruiserweight extends AbstractDynamicCard {
@@ -18,6 +19,7 @@ public class Cruiserweight extends AbstractDynamicCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 2;
     private static final int MAGIC_NUMBER = 1;
@@ -33,6 +35,8 @@ public class Cruiserweight extends AbstractDynamicCard {
         if(!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
 
     }
