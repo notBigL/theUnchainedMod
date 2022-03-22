@@ -31,8 +31,8 @@ public class BrassKnuckle extends AbstractDynamicCard {
 
     public BrassKnuckle() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
-        baseMagicNumber = MAGIC_NUMBER;
+        baseDamage = damage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
 
     @Override
