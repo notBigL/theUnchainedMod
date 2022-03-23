@@ -37,7 +37,7 @@ public class AbstractChainPower extends AbstractPower {
 
 
     public void onUseCard(AbstractCard c, UseCardAction action) {
-        if (c.cardID.equals("TheUnchainedMod:Liberation")) {
+        if (c.cardID.equals("theUnchainedMod:Liberation")) {
             this.addToBot(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, true));
         } else {
             this.addToBot(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID));
