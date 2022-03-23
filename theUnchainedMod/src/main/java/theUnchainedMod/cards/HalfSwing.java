@@ -29,7 +29,7 @@ public class HalfSwing extends AbstractDynamicCard {
 
     public HalfSwing() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
+        baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
 
