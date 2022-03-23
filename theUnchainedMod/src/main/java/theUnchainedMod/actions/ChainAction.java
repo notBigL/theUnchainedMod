@@ -52,7 +52,5 @@ public class ChainAction extends AbstractGameAction {
                 this.isDone = true;
             }
         }
-
-
     }
 }
