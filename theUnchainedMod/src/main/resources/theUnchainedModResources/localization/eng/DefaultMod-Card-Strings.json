@@ -73,8 +73,7 @@
   },
   "theUnchainedMod:PlayDead": {
     "NAME": "Play Dead",
-    "DESCRIPTION": "Gain !M! Vulnerable. NL 3 Chain: Gain 1 Intangible.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Vulnerable. NL 2 Chain: Gain 1 Intangible."
+    "DESCRIPTION": "Gain !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Gain 1 Intangible."
   },
   "theUnchainedMod:Postpone": {
     "NAME": "Postpone",
@@ -130,7 +129,7 @@
   },
   "theUnchainedMod:NonDominantHand": {
     "NAME": "Non-dominant Hand",
-    "DESCRIPTION": "Gain !M! Block for every Weak you have. NL Enemy loses !M! health for every Frail you have."
+    "DESCRIPTION": "Gain !M! Block for every Weak you have. NL Enemy loses !theUnchainedMod:SecondMagic! health for every Frail you have."
   },
   "theUnchainedMod:Cower": {
     "NAME": "Cower",
