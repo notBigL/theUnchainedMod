@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
@@ -42,7 +43,7 @@ public class ClenchTeethPower extends AbstractPower {
 
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (power.type == PowerType.DEBUFF && target.isPlayer) {
-            this.addToBot(new GainBlockAction(this.owner, this.amount));
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.amount));
         }
     }
 }

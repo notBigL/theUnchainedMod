@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
@@ -48,8 +49,8 @@ public class RelayedDamagePower extends AbstractPower {
         if (isPlayer) {
             DamageInfo damageInfo = new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS);
             RelayedDamageField.relayed.set(damageInfo, true);
-            this.addToBot(new DamageAction(this.owner, damageInfo, AbstractGameAction.AttackEffect.POISON));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, damageInfo, AbstractGameAction.AttackEffect.POISON));
         }
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 }

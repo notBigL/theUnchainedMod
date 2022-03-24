@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.actions.ChainAction;
 import theUnchainedMod.util.TextureLoader;
@@ -32,24 +33,24 @@ public class AbstractChainPower extends AbstractPower {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
     }
 
 
     public void onUseCard(AbstractCard c, UseCardAction action) {
         if (c.cardID.equals("theUnchainedMod:Liberation")) {
-            this.addToBot(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, true));
+            AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, true));
         } else {
-            this.addToBot(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID));
+            AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID));
             this.flash();
         }
     }
 
     private void loadTextures(AbstractCard.CardType type) {
-        if(type == AbstractCard.CardType.ATTACK) {
+        if (type == AbstractCard.CardType.ATTACK) {
             this.region128 = new TextureAtlas.AtlasRegion(attackTexture128, 0, 0, 128, 128);
             this.region48 = new TextureAtlas.AtlasRegion(attackTexture48, 0, 0, 48, 48);
-        } else if(type == AbstractCard.CardType.SKILL) {
+        } else if (type == AbstractCard.CardType.SKILL) {
             this.region128 = new TextureAtlas.AtlasRegion(skillTexture128, 0, 0, 128, 128);
             this.region48 = new TextureAtlas.AtlasRegion(skillTexture48, 0, 0, 48, 48);
         } else {

@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
@@ -41,6 +42,6 @@ public class PostponePower extends AbstractPower {
     }
 
     public void atStartOfTurnPostDraw() {
-        this.addToBot(new ApplyPowerAction(this.owner, this.owner, new RelayPower(this.owner, this.owner, this.amount)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new RelayPower(this.owner, this.owner, this.amount)));
     }
 }
