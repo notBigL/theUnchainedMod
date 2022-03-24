@@ -16,8 +16,8 @@ public class RelayedDamageOnAttackCall {
         //    tTAEP.damageEnemyWhenHit(info, damageAmount);
         //}
 
-        if (player.hasPower("TheUnchainedMod:RelayPower")) {
-            RelayPower relayPower = (RelayPower) player.getPower("TheUnchainedMod:RelayPower");
+        if (player.hasPower("theUnchainedMod:RelayPower")) {
+            RelayPower relayPower = (RelayPower) player.getPower("theUnchainedMod:RelayPower");
             damage = relayPower.relayDamageWhenAttacked(info, damage);
         }
         return damage;
