@@ -1,5 +1,6 @@
 package theUnchainedMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,6 +10,7 @@ import theUnchainedMod.characters.TheDefault;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
+@AutoAdd.Ignore
 public class DefaultCommonSkill extends AbstractDynamicCard {
 
     /*

@@ -1,5 +1,6 @@
 package theUnchainedMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,6 +13,7 @@ import theUnchainedMod.orbs.DefaultOrb;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
+@AutoAdd.Ignore
 public class OrbSkill extends AbstractDynamicCard {
 
     /*
