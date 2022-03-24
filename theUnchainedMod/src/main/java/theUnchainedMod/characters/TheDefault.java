@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.relics.DefaultClickableRelic;
+import theUnchainedMod.relics.OiledChains;
 import theUnchainedMod.relics.PlaceholderRelic;
 import theUnchainedMod.relics.PlaceholderRelic2;
 
@@ -64,7 +65,7 @@ public class TheDefault extends CustomPlayer {
     public static final int STARTING_HP = 75;
     public static final int MAX_HP = 75;
     public static final int STARTING_GOLD = 99;
-    public static final int CARD_DRAW = 9;
+    public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 3;
 
     // =============== /BASE STATS/ =================
@@ -156,21 +157,16 @@ public class TheDefault extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        retVal.add(DefaultCommonAttack.ID);
-        retVal.add(DefaultUncommonAttack.ID);
-        retVal.add(DefaultRareAttack.ID);
-
-        retVal.add(DefaultCommonSkill.ID);
-        retVal.add(DefaultUncommonSkill.ID);
-        retVal.add(DefaultRareSkill.ID);
-
-        retVal.add(DefaultCommonPower.ID);
-        retVal.add(DefaultUncommonPower.ID);
-        retVal.add(DefaultRarePower.ID);
-
-        retVal.add(DefaultAttackWithVariable.ID);
-        retVal.add(DefaultSecondMagicNumberSkill.ID);
-        retVal.add(OrbSkill.ID);
+        retVal.add(BasicStrike.ID);
+        retVal.add(BasicStrike.ID);
+        retVal.add(BasicStrike.ID);
+        retVal.add(BasicStrike.ID);
+        retVal.add(BasicDefend.ID);
+        retVal.add(BasicDefend.ID);
+        retVal.add(BasicDefend.ID);
+        retVal.add(BasicDefend.ID);
+        retVal.add(Whiplash.ID);
+        retVal.add(SplinteredShield.ID);
         return retVal;
     }
 
@@ -178,15 +174,11 @@ public class TheDefault extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(PlaceholderRelic.ID);
-        retVal.add(PlaceholderRelic2.ID);
-        retVal.add(DefaultClickableRelic.ID);
+        retVal.add(OiledChains.ID);
 
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
+        UnlockTracker.markRelicAsSeen(OiledChains.ID);
 
         return retVal;
     }
