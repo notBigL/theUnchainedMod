@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -53,13 +54,13 @@ public class TiedToAnEnemyPower extends AbstractPower {
                 tiedToThePlayerPower.damageEnemyWhenPlayerIsHit(damageAmount, this.owner);
             }
         } else {
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }
 
     public void atStartOfTurn() {
         if (tiedToThePlayerPower == null || tiedToThePlayerPower.owner == null || tiedToThePlayerPower.owner.isDead || !monster.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }
 

@@ -35,7 +35,7 @@ public class TiedToThePlayerPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.source = source;
-        type = PowerType.BUFF;
+        type = PowerType.DEBUFF;
         isTurnBased = false;
         this.player = player;
 
@@ -54,10 +54,10 @@ public class TiedToThePlayerPower extends AbstractPower {
     }
 
     public void damageEnemyWhenPlayerIsHit(int damageAmount, AbstractCreature player) {
-        this.addToBot(new DamageAction(this.owner, new DamageInfo(player, damageAmount, DamageInfo.DamageType.HP_LOSS)));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(player, damageAmount, DamageInfo.DamageType.HP_LOSS)));
     }
 
     public void onRemove() {
-        this.addToBot(new RemoveSpecificPowerAction(this.player, this.owner, "theUnchainedMod:TiedToAnEnemyPower"));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.player, this.owner, "theUnchainedMod:TiedToAnEnemyPower"));
     }
 }
