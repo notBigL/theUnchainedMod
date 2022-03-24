@@ -105,8 +105,8 @@
   },
   "theUnchainedMod:MakeRoom": {
     "NAME": "Make Room",
-    "DESCRIPTION": "Relay !M! damage. NL 2 Chain: Gain [E] [E].",
-    "UPGRADE_DESCRIPTION": "Relay !M! damage. NL 2 Chain: Gain [E] [E] [E]."
+    "DESCRIPTION": "Relay !M! damage. NL !theUnchainedMod:SecondMagic! Chain: Gain [E] [E].",
+    "UPGRADE_DESCRIPTION": "Relay !M! damage. NL !theUnchainedMod:SecondMagic! Chain: Gain [E] [E] [E]."
   },
   "theUnchainedMod:HalfSwing": {
     "NAME": "Half Swing",
