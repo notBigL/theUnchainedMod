@@ -143,5 +143,13 @@
     "NAME": "Cruiserweight",
     "DESCRIPTION": "Whenever you play a 2-cost card. Draw 1 card.",
     "UPGRADE_DESCRIPTION": "Whenever you play a 2-cost card. Draw 2 cards."
+  },
+  "theUnchainedMod:BasicStrike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theUnchainedMod:BasicDefend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
   }
 }
