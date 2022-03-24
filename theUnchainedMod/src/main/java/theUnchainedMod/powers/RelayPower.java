@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
@@ -44,7 +45,7 @@ public class RelayPower extends AbstractPower {
     }
 
     public void atStartOfTurn() {
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
     public int relayDamageWhenAttacked(DamageInfo info, int damageAmount) {
@@ -59,9 +60,11 @@ public class RelayPower extends AbstractPower {
                 relayedDamage = this.amount;
                 this.amount = 0;
             }
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new RelayedDamagePower(this.owner, this.owner, relayedDamage)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new RelayedDamagePower(this.owner, this.owner, relayedDamage)));
         }
-
+        if (this.amount == 0) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
         return damageAmount;
     }
 
