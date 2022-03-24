@@ -30,5 +30,19 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "theUnchainedMod:BootKnife": {
+    "NAME": "Boot Knife",
+    "FLAVOR": "It's handy. If you don't step into it.",
+    "DESCRIPTIONS": [
+      "At the start of combat, add a hidden blade to your hand."
+    ]
+  },
+  "theUnchainedMod:OiledChains": {
+    "NAME": "Oiled Chains",
+    "FLAVOR": "Don't touch. Your hands won't be clean for a century.",
+    "DESCRIPTIONS": [
+      "The seventh card you play each combat costs zero."
+    ]
   }
 }

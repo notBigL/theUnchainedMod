@@ -24,10 +24,7 @@ import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.events.IdentityCrisisEvent;
 import theUnchainedMod.potions.PlaceholderPotion;
-import theUnchainedMod.relics.BottledPlaceholderRelic;
-import theUnchainedMod.relics.DefaultClickableRelic;
-import theUnchainedMod.relics.PlaceholderRelic;
-import theUnchainedMod.relics.PlaceholderRelic2;
+import theUnchainedMod.relics.*;
 import theUnchainedMod.util.IDCheckDontTouchPls;
 import theUnchainedMod.util.TextureLoader;
 import theUnchainedMod.variables.DefaultCustomVariable;
@@ -373,6 +370,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new OiledChains(), TheDefault.Enums.COLOR_GRAY);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
