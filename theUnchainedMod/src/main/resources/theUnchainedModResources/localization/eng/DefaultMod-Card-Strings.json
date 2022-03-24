@@ -116,7 +116,7 @@
     "NAME": "Tie Together",
     "DESCRIPTION": "Relay !M! damage. NL Everytime the player takes damage, the enemy loses health equal to the same amount. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "You cannot be tied to multiple enemies."
+      "I cannot be tied to multiple enemies."
     ]
   },
   "theUnchainedMod:Liberation": {
@@ -151,5 +151,12 @@
   "theUnchainedMod:BasicDefend": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "theUnchainedMod:Finisher": {
+    "NAME": "Finisher",
+    "DESCRIPTION": "Can only be played if it would finish an Attack Chain. Deal !D! damage to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "I need to finish an Attack Chain with this."
+    ]
   }
 }
