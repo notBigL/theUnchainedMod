@@ -128,5 +128,13 @@
       " card.",
       " cards."
     ]
+  },
+  "theUnchainedMod:MuscleMemoryPower": {
+    "NAME": "Muscle Memory",
+    "DESCRIPTIONS": [
+      "The next 2-cost card you play is played twice.",
+      "The next #b",
+      " 2-cost cards you play are played twice."
+    ]
   }
 }

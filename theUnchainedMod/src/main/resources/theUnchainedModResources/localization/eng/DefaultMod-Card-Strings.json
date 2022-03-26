@@ -162,5 +162,10 @@
   "theUnchainedMod:KeepDistance": {
     "NAME": "Keep Distance",
     "DESCRIPTION": "Gain !B! Block. ALL enemies gain !M! Block."
+  },
+  "theUnchainedMod:MuscleMemory": {
+    "NAME": "Muscle Memory",
+    "DESCRIPTION": "This turn, your next 2-cost card is played twice.",
+    "UPGRADE_DESCRIPTION": "This turn, your next 2 2-cost cards are played twice."
   }
 }
