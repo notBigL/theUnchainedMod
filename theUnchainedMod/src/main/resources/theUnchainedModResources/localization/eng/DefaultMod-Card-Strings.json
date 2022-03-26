@@ -158,5 +158,9 @@
     "EXTENDED_DESCRIPTION": [
       "I need to finish an Attack Chain with this."
     ]
+  },
+  "theUnchainedMod:KeepDistance": {
+    "NAME": "Keep Distance",
+    "DESCRIPTION": "Gain !B! Block. ALL enemies gain !M! Block."
   }
 }
