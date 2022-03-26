@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.AllEnemiesVulnerableAction;
 import theUnchainedMod.characters.TheDefault;
