@@ -1,10 +1,7 @@
 package theUnchainedMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,10 +12,10 @@ import theUnchainedMod.characters.TheDefault;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class Finisher extends AbstractDynamicCard {
+public class Kusarigama extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Finisher.class.getSimpleName());
-    public static final String IMG = makeCardPath("Finisher.png");
+    public static final String ID = DefaultMod.makeID(Kusarigama.class.getSimpleName());
+    public static final String IMG = makeCardPath("Kusarigama.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
@@ -27,7 +24,7 @@ public class Finisher extends AbstractDynamicCard {
     private static final int COST = 2;
     private static final int DAMAGE = 30;
 
-    public Finisher() {
+    public Kusarigama() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         this.isMultiDamage = true;
