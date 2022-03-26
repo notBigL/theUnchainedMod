@@ -167,5 +167,9 @@
     "NAME": "Muscle Memory",
     "DESCRIPTION": "This turn, your next 2-cost card is played twice.",
     "UPGRADE_DESCRIPTION": "This turn, your next 2 2-cost cards are played twice."
+  },
+  "theUnchainedMod:HookedChain": {
+    "NAME": "Hooked Chain",
+    "DESCRIPTION": "Deal !D! damage. If not Fatal, gain !M! Vulnerable."
   }
 }
