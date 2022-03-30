@@ -143,5 +143,11 @@
       "At the end of next turn, take #r",
       " damage."
     ]
+  },
+  "theUnchainedMod:EndlessPatiencePower": {
+    "NAME": "Endless Patience",
+    "DESCRIPTIONS": [
+      "Relayed damage can be relayed again."
+    ]
   }
 }

@@ -175,5 +175,10 @@
   "theUnchainedMod:Reschedule": {
     "NAME": "Reschedule",
     "DESCRIPTION": "Your relayed damage is dealt next turn instead of this turn."
+  },
+  "theUnchainedMod:EndlessPatience": {
+    "NAME": "Endless Patience",
+    "DESCRIPTION": "Relay !M! damage. All relayed damage can be relayed again.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Relay !M! damage. All relayed damage can be relayed again."
   }
 }
