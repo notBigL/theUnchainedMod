@@ -11,7 +11,7 @@ public class ChainAction extends AbstractGameAction {
     private final AbstractCard.CardType cardType;
     private final AbstractGameAction finishedChainAction;
     private final String ChainPowerID;
-    private final boolean finisher;
+    private final String special;
 
     public ChainAction(AbstractCreature p, AbstractCard c, AbstractCard.CardType cT, AbstractGameAction fCA, String iD) {
         player = p;
@@ -19,26 +19,33 @@ public class ChainAction extends AbstractGameAction {
         cardType = cT;
         finishedChainAction = fCA;
         ChainPowerID = iD;
-        finisher = false;
-
+        this.special = "";
     }
 
-    public ChainAction(AbstractCreature p, AbstractCard c, AbstractCard.CardType cT, AbstractGameAction fCA, String iD, boolean liberation) {
+    public ChainAction(AbstractCreature p, AbstractCard c, AbstractCard.CardType cT, AbstractGameAction fCA, String iD, String special) {
         player = p;
         card = c;
         cardType = cT;
         finishedChainAction = fCA;
         ChainPowerID = iD;
-        finisher = liberation;
+        this.special = special;
     }
 
     @Override
     public void update() {
         AbstractPower chainPower = player.getPower(ChainPowerID);
         if (chainPower != null) {
-            if (finisher) {
+            if (special.equals("liberation")) {
                 this.addToBot(finishedChainAction);
                 player.powers.remove(chainPower);
+                this.isDone = true;
+            } else if(special.equals("routine")) {
+                --chainPower.amount;
+                if(chainPower.amount == 0) {
+                    this.addToBot(finishedChainAction);
+                    player.powers.remove(chainPower);
+                }
+                chainPower.updateDescription();
                 this.isDone = true;
             } else {
                 --chainPower.amount;

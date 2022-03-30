@@ -39,7 +39,10 @@ public class AbstractChainPower extends AbstractPower {
 
     public void onUseCard(AbstractCard c, UseCardAction action) {
         if (c.cardID.equals("theUnchainedMod:Liberation")) {
-            AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, true));
+            AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, "liberation"));
+        } else if (c.cardID.equals("theUnchainedMod:RoutinePunch") || c.cardID.equals("theUnchainedMod:RoutineDodge")) {
+            AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, "routine"));
+            this.flash();
         } else {
             AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID));
             this.flash();
