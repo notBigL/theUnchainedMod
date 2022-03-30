@@ -2,5 +2,9 @@
 "theUnchainedMod:PlaceholderPotion": {
         "NAME": "Placeholder Potion",
         "DESCRIPTIONS": ["Gain ", " At the end of your turn, lose ", " Strength."]
-}
+},
+        "theUnchainedMod:FinisherPotion": {
+                "NAME": "Finisher Potion",
+                "DESCRIPTIONS": ["Add a Liberation into your hand. It costs zero this turn."]
+        }
 }
