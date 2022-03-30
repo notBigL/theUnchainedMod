@@ -171,5 +171,9 @@
   "theUnchainedMod:HookedChain": {
     "NAME": "Hooked Chain",
     "DESCRIPTION": "Deal !D! damage. If not Fatal, gain !M! Vulnerable."
+  },
+  "theUnchainedMod:Reschedule": {
+    "NAME": "Reschedule",
+    "DESCRIPTION": "Your relayed damage is dealt next turn instead of this turn."
   }
 }

@@ -136,5 +136,12 @@
       "The next #b",
       " 2-cost cards you play are played twice."
     ]
+  },
+  "theUnchainedMod:NextTurnRelayedDamagePower": {
+    "NAME": "Next Turn Damage",
+    "DESCRIPTIONS": [
+      "At the end of next turn, take #r",
+      " damage."
+    ]
   }
 }
