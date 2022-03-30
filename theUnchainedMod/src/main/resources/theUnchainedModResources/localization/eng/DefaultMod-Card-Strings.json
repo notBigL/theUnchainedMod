@@ -180,5 +180,13 @@
     "NAME": "Endless Patience",
     "DESCRIPTION": "Relay !M! damage. All relayed damage can be relayed again.",
     "UPGRADE_DESCRIPTION": "Innate. NL Relay !M! damage. All relayed damage can be relayed again."
+  },
+  "theUnchainedMod:RoutinePunch": {
+    "NAME": "Routine Punch",
+    "DESCRIPTION": "Deal !D! damage. Counts as a link for any Chain."
+  },
+  "theUnchainedMod:RoutineDodge": {
+    "NAME": "Routine Dodge",
+    "DESCRIPTION": "Gain !B! Block. Counts as a link for any Chain."
   }
 }
