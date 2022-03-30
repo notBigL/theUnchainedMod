@@ -23,7 +23,7 @@ public class EndlessPatience extends AbstractDynamicCard {
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 5;
+    private static final int MAGIC_NUMBER = 7;
 
     public EndlessPatience() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
