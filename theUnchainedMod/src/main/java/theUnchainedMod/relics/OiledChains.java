@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theUnchainedMod.DefaultMod;
@@ -29,6 +30,7 @@ public class OiledChains extends CustomRelic {
     @Override
     public void atBattleStart() {
         this.counter = 0;
+        this.grayscale = false;
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
@@ -40,6 +42,11 @@ public class OiledChains extends CustomRelic {
             this.stopPulse();
             this.grayscale = true;
         }
+    }
+
+    public void onVictory() {
+        this.counter = 0;
+        this.grayscale = false;
     }
 
     @Override
