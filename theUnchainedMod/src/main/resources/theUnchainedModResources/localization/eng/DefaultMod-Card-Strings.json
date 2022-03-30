@@ -188,5 +188,9 @@
   "theUnchainedMod:RoutineDodge": {
     "NAME": "Routine Dodge",
     "DESCRIPTION": "Gain !B! Block. Counts as a link for any Chain."
+  },
+  "theUnchainedMod:SharedBurden": {
+    "NAME": "Shared Burden",
+    "DESCRIPTION": "Gain !M! Weak. Apply !theUnchainedMod:SecondMagic! Weak to ALL enemies."
   }
 }
