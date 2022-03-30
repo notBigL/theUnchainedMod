@@ -23,6 +23,7 @@ public class Kusarigama extends AbstractDynamicCard {
 
     private static final int COST = 2;
     private static final int DAMAGE = 30;
+    private static final int UPGRADE_PLUS_DMG = 6;
 
     public Kusarigama() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -34,6 +35,7 @@ public class Kusarigama extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeDamage(UPGRADE_PLUS_DMG);
         }
     }
 
