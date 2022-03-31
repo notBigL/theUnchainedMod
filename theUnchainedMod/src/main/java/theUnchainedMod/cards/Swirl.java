@@ -21,7 +21,7 @@ public class Swirl extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int DAMAGE = 3;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int UPGRADE_PLUS_DMG = 1;
 
     public Swirl() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
