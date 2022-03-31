@@ -85,7 +85,7 @@
   },
   "theUnchainedMod:RecklessSwing": {
     "NAME": "Reckless Swing",
-    "DESCRIPTION": "Deal !D! damage. Take !M! damage at the end of turn."
+    "DESCRIPTION": "Deal !D! damage. Take !M! theunchainedmod:Relayed_Damage at the end of turn."
   },
   "theUnchainedMod:ThreeSixty": {
     "NAME": "360",
