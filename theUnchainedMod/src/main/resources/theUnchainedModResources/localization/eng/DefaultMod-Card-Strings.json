@@ -168,8 +168,8 @@
     "DESCRIPTION": "This turn, your next 2-cost card is played twice.",
     "UPGRADE_DESCRIPTION": "This turn, your next 2 2-cost cards are played twice."
   },
-  "theUnchainedMod:HookedChain": {
-    "NAME": "Hooked Chain",
+  "theUnchainedMod:SliceThrough": {
+    "NAME": "Slice Through",
     "DESCRIPTION": "Deal !D! damage. If not Fatal, gain !M! Vulnerable."
   },
   "theUnchainedMod:Reschedule": {
@@ -192,5 +192,13 @@
   "theUnchainedMod:SharedBurden": {
     "NAME": "Shared Burden",
     "DESCRIPTION": "Gain !M! Weak. Apply !theUnchainedMod:SecondMagic! Weak to ALL enemies."
+  },
+  "theUnchainedMod:HookedChain": {
+    "NAME": "Hooked Chain",
+    "DESCRIPTION": "Deal !D! damage. Add a Hidden Blade into your hand."
+  },
+  "theUnchainedMod:Swirl": {
+    "NAME": "Swirl",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. This card does not count as a Chain link."
   }
 }
