@@ -35,28 +35,35 @@ public class ChainAction extends AbstractGameAction {
     public void update() {
         AbstractPower chainPower = player.getPower(ChainPowerID);
         if (chainPower != null) {
-            if (special.equals("liberation")) {
-                this.addToBot(finishedChainAction);
-                player.powers.remove(chainPower);
-                this.isDone = true;
-            } else if(special.equals("routine")) {
-                --chainPower.amount;
-                if(chainPower.amount == 0) {
+            switch (special) {
+                case "liberation":
                     this.addToBot(finishedChainAction);
                     player.powers.remove(chainPower);
-                }
-                chainPower.updateDescription();
-                this.isDone = true;
-            } else {
-                --chainPower.amount;
-                if (cardType != card.type) {
-                    player.powers.remove(chainPower);
-                } else if (chainPower.amount == 0) {
-                    this.addToBot(finishedChainAction);
-                    player.powers.remove(chainPower);
-                }
-                chainPower.updateDescription();
-                this.isDone = true;
+                    this.isDone = true;
+                    break;
+                case "swirl":
+                    this.isDone = true;
+                    break;
+                case "routine":
+                    --chainPower.amount;
+                    if (chainPower.amount == 0) {
+                        this.addToBot(finishedChainAction);
+                        player.powers.remove(chainPower);
+                    }
+                    chainPower.updateDescription();
+                    this.isDone = true;
+                    break;
+                default:
+                    --chainPower.amount;
+                    if (cardType != card.type) {
+                        player.powers.remove(chainPower);
+                    } else if (chainPower.amount == 0) {
+                        this.addToBot(finishedChainAction);
+                        player.powers.remove(chainPower);
+                    }
+                    chainPower.updateDescription();
+                    this.isDone = true;
+                    break;
             }
         }
     }
