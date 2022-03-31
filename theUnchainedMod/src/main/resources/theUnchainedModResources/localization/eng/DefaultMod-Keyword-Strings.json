@@ -16,5 +16,43 @@
       "multikeyword"
     ],
     "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
+  },
+  {
+    "PROPER_NAME": "Chain",
+    "NAMES": [
+      "Chain",
+      "chain",
+      "chains",
+      "chain:",
+      "chain."
+    ],
+    "DESCRIPTION": "Playing enough Cards with the same Type will unlock the specified Effect. Playing a Card with a different Type will delete the Chain. The Chain also wears off at the end of turn."
+  },
+  {
+    "PROPER_NAME": "Relay",
+    "NAMES": [
+      "Relay",
+      "relay",
+      "relayed",
+      "relaying"
+    ],
+    "DESCRIPTION": "Damage taken after Block is reduced by this amount. NL Reduced damage is dealt at the end of next turn."
+  },
+  {
+    "PROPER_NAME": "Link",
+    "NAMES": [
+      "Link",
+      "link",
+      "link."
+    ],
+    "DESCRIPTION": "A card counts as a link if it works toward resolving a Chain."
+  },
+  {
+    "PROPER_NAME": "Relayed Damage",
+    "NAMES": [
+      "Relayed Damage",
+      "relayed_damage"
+    ],
+    "DESCRIPTION": "Damage that was relayed. Is dealt to the Player at the end of turn."
   }
 ]

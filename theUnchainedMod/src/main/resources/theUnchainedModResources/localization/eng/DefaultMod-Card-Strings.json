@@ -61,7 +61,7 @@
   },
   "theUnchainedMod:Whiplash": {
     "NAME": "Whiplash",
-    "DESCRIPTION": "Deal !D! damage. NL 2 Chain: The same enemy loses !M! health."
+    "DESCRIPTION": "Deal !D! damage. NL 2 theunchainedmod:Chain: The same enemy loses !M! health."
   },
   "theUnchainedMod:SplinteredShield": {
     "NAME": "Splintered Shield",
@@ -69,19 +69,19 @@
   },
   "theUnchainedMod:BrassKnuckle": {
     "NAME": "Brass Knuckle",
-    "DESCRIPTION": "Deal !D! damage. NL 1 Chain: Gain [E]."
+    "DESCRIPTION": "Deal !D! damage. NL 1 theunchainedmod:Chain: Gain [E]."
   },
   "theUnchainedMod:PlayDead": {
     "NAME": "Play Dead",
-    "DESCRIPTION": "Gain !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Gain 1 Intangible."
+    "DESCRIPTION": "Gain !M! Vulnerable. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain 1 Intangible."
   },
   "theUnchainedMod:Postpone": {
     "NAME": "Postpone",
-    "DESCRIPTION": "Relay !M! damage every turn."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage every turn."
   },
   "theUnchainedMod:ShieldFace": {
     "NAME": "Shield Face",
-    "DESCRIPTION": "Gain !B! Block. Relay !M! damage."
+    "DESCRIPTION": "Gain !B! Block. theunchainedmod:Relay !M! damage."
   },
   "theUnchainedMod:RecklessSwing": {
     "NAME": "Reckless Swing",
@@ -93,11 +93,11 @@
   },
   "theUnchainedMod:QuickSwing": {
     "NAME": "Quick Swing",
-    "DESCRIPTION": "Deal !D! damage. NL 1 Chain: Draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL 1 theunchainedmod:Chain: Draw !M! cards."
   },
   "theUnchainedMod:StepBack": {
     "NAME": "Step Back",
-    "DESCRIPTION": "Draw !M! cards. NL 1 Chain: Gain !B! Block."
+    "DESCRIPTION": "Draw !M! cards. NL 1 theunchainedmod:Chain: Gain !B! Block."
   },
   "theUnchainedMod:HiddenBlade": {
     "NAME": "Hidden Blade",
@@ -105,8 +105,8 @@
   },
   "theUnchainedMod:MakeRoom": {
     "NAME": "Make Room",
-    "DESCRIPTION": "Relay !M! damage. NL !theUnchainedMod:SecondMagic! Chain: Gain [E] [E].",
-    "UPGRADE_DESCRIPTION": "Relay !M! damage. NL !theUnchainedMod:SecondMagic! Chain: Gain [E] [E] [E]."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain [E] [E].",
+    "UPGRADE_DESCRIPTION": "theunchainedmod:Relay !M! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain [E] [E] [E]."
   },
   "theUnchainedMod:HalfSwing": {
     "NAME": "Half Swing",
@@ -114,14 +114,14 @@
   },
   "theUnchainedMod:TieTogether": {
     "NAME": "Tie Together",
-    "DESCRIPTION": "Relay !M! damage. NL Everytime the player takes damage, the enemy loses health equal to the same amount. NL Exhaust.",
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Everytime the player takes damage, the enemy loses health equal to the same amount. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I cannot be tied to multiple enemies."
     ]
   },
   "theUnchainedMod:Liberation": {
     "NAME": "Liberation",
-    "DESCRIPTION": "Gain !B! Block. NL Finish all your active Chains."
+    "DESCRIPTION": "Gain !B! Block. NL Finish all your active theunchainedmod:Chains."
   },
   "theUnchainedMod:ClenchTeeth": {
     "NAME": "Clench Teeth",
@@ -141,8 +141,8 @@
   },
   "theUnchainedMod:Cruiserweight": {
     "NAME": "Cruiserweight",
-    "DESCRIPTION": "Whenever you play a 2-cost card. Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a 2-cost card. Draw 2 cards."
+    "DESCRIPTION": "Whenever you play a 2-cost card, draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a 2-cost card, draw 2 cards."
   },
   "theUnchainedMod:BasicStrike": {
     "NAME": "Strike",
@@ -154,9 +154,9 @@
   },
   "theUnchainedMod:Kusarigama": {
     "NAME": "Kusarigama",
-    "DESCRIPTION": "Can only be played if it would finish an Attack Chain. Deal !D! damage to ALL enemies.",
+    "DESCRIPTION": "Can only be played if it would finish an Attack theunchainedmod:Chain. Deal !D! damage to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
-      "I need to finish an Attack Chain with this."
+      "I need to finish an Attack theunchainedmod:Chain with this."
     ]
   },
   "theUnchainedMod:KeepDistance": {
@@ -174,20 +174,20 @@
   },
   "theUnchainedMod:Reschedule": {
     "NAME": "Reschedule",
-    "DESCRIPTION": "Your relayed damage is dealt next turn instead of this turn."
+    "DESCRIPTION": "Your theunchainedmod:Relayed_Damage is dealt next turn instead of this turn."
   },
   "theUnchainedMod:EndlessPatience": {
     "NAME": "Endless Patience",
-    "DESCRIPTION": "Relay !M! damage. All relayed damage can be relayed again.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Relay !M! damage. All relayed damage can be relayed again."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. All theunchainedmod:Relayed_Damage can be theunchainedmod:relayed again.",
+    "UPGRADE_DESCRIPTION": "Innate. NL theunchainedmod:Relay !M! damage. All theunchainedmod:Relayed_Damage can be theunchainedmod:relayed again."
   },
   "theUnchainedMod:RoutinePunch": {
     "NAME": "Routine Punch",
-    "DESCRIPTION": "Deal !D! damage. Counts as a link for any Chain."
+    "DESCRIPTION": "Deal !D! damage. Counts as a theunchainedmod:Link for any Chain."
   },
   "theUnchainedMod:RoutineDodge": {
     "NAME": "Routine Dodge",
-    "DESCRIPTION": "Gain !B! Block. Counts as a link for any Chain."
+    "DESCRIPTION": "Gain !B! Block. Counts as a theunchainedmod:Link for any Chain."
   },
   "theUnchainedMod:SharedBurden": {
     "NAME": "Shared Burden",
@@ -199,6 +199,6 @@
   },
   "theUnchainedMod:Swirl": {
     "NAME": "Swirl",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. This card does not count as a Chain link."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. This card does not count as a theunchainedmod:Link. NL Exhaust."
   }
 }
