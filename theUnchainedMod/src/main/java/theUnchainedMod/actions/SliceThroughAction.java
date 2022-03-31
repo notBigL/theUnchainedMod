@@ -11,14 +11,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
-public class HookedChainAction extends AbstractGameAction {
+public class SliceThroughAction extends AbstractGameAction {
 
     private DamageInfo info;
     private int amount;
     private AbstractPlayer player;
 
 
-    public HookedChainAction(AbstractCreature target, DamageInfo info, int vulnAmount, AbstractPlayer p) {
+    public SliceThroughAction(AbstractCreature target, DamageInfo info, int vulnAmount, AbstractPlayer p) {
         this.info = info;
         this.setValues(target, info);
         this.actionType = ActionType.DAMAGE;

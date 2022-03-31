@@ -10,22 +10,24 @@ import theUnchainedMod.characters.TheDefault;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class HookedChain extends AbstractDynamicCard {
+public class SliceThrough extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(HookedChain.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(SliceThrough.class.getSimpleName());
     public static final String IMG = makeCardPath("SliceThrough.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
-    private static final int DAMAGE = 11;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int COST = 1;
+    private static final int DAMAGE = 18;
+    private static final int UPGRADE_PLUS_DMG = 6;
+    private static final int MAGIC_NUMBER = 2;
 
-    public HookedChain() {
+    public SliceThrough() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
 
     @Override
