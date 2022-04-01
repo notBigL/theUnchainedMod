@@ -200,5 +200,9 @@
   "theUnchainedMod:Swirl": {
     "NAME": "Swirl",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. This card does not count as a theunchainedmod:Link. NL Exhaust."
+  },
+  "theUnchainedMod:PerfectExecution": {
+    "NAME": "Perfect Execution",
+    "DESCRIPTION": "Add a random 2-cost card into your hand. It costs !M! this turn. NL Exhaust."
   }
 }
