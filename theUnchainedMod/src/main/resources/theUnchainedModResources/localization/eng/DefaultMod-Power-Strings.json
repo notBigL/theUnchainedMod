@@ -149,5 +149,12 @@
     "DESCRIPTIONS": [
       "Relayed damage can be relayed again."
     ]
+  },
+  "theUnchainedMod:TunnelVisionPower": {
+    "NAME": "Tunnel Vision",
+    "DESCRIPTIONS": [
+      "Everytime you play an attack, lose #b",
+      " relayed damage."
+    ]
   }
 }

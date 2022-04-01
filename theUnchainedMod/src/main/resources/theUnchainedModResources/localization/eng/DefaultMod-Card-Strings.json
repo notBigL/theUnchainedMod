@@ -204,5 +204,9 @@
   "theUnchainedMod:PerfectExecution": {
     "NAME": "Perfect Execution",
     "DESCRIPTION": "Add a random 2-cost card into your hand. It costs !M! this turn. NL Exhaust."
+  },
+  "theUnchainedMod:TunnelVision": {
+    "NAME": "Tunnel Vision",
+    "DESCRIPTION": "Lose !M! theunchainedmod:Relayed_Damage whenever you play an attack."
   }
 }
