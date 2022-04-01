@@ -208,5 +208,9 @@
   "theUnchainedMod:TunnelVision": {
     "NAME": "Tunnel Vision",
     "DESCRIPTION": "Lose !M! theunchainedmod:Relayed_Damage whenever you play an attack."
+  },
+  "theUnchainedMod:CautiousStrike": {
+    "NAME": "Cautious Strike",
+    "DESCRIPTION": "Deal !D! damage. theunchainedmod:Relay !M! damage."
   }
 }
