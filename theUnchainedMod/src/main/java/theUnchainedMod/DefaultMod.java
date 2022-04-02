@@ -386,6 +386,8 @@ public class DefaultMod implements
         // If you don't have this it won't be visible in the compendium until you see them in game
         // (the others are all starters so they're marked as seen in the character file)
         UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
+        UnlockTracker.markRelicAsSeen(BootKnife.ID);
+        UnlockTracker.markRelicAsSeen(HeartOfTheUnderdog.ID);
         logger.info("Done adding relics!");
     }
     
