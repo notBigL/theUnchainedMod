@@ -28,6 +28,8 @@ public class BasicStrike extends AbstractDynamicCard {
     public BasicStrike() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
+        this.tags.add(CardTags.STARTER_STRIKE);
+        this.tags.add(CardTags.STRIKE);
     }
 
     @Override
