@@ -212,5 +212,9 @@
   "theUnchainedMod:CautiousStrike": {
     "NAME": "Cautious Strike",
     "DESCRIPTION": "Deal !D! damage. theunchainedmod:Relay !M! damage."
+  },
+  "theUnchainedMod:RipOutHeart": {
+    "NAME": "Rip Out Heart",
+    "DESCRIPTION": "Deal !D! damage. NL Lose all your Block. NL End your turn."
   }
 }

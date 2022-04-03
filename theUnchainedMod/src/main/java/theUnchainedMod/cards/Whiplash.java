@@ -39,7 +39,6 @@ public class Whiplash extends AbstractDynamicCard {
             upgradeName();
             upgradeBaseCost(0);
         }
-
     }
 
     @Override
