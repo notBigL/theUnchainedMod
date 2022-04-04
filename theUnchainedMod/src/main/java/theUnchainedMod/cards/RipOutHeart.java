@@ -27,7 +27,7 @@ public class RipOutHeart extends AbstractDynamicCard {
 
     public RipOutHeart() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
+        baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
 
