@@ -12,7 +12,6 @@ public class LoseBlockAction extends AbstractGameAction {
 
     private final int blockAmount;
 
-
     public LoseBlockAction(AbstractPlayer player, int block) {
         this.target = player;
         this.blockAmount = block;
@@ -30,7 +29,6 @@ public class LoseBlockAction extends AbstractGameAction {
                 c.applyPowers();
             }
         }
-
         this.tickDuration();
     }
 }
