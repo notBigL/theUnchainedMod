@@ -1,16 +1,14 @@
 package theUnchainedMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.LoseBlockAction;
 import theUnchainedMod.characters.TheDefault;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -25,7 +23,7 @@ public class RipOutHeart extends AbstractDynamicCard {
 
     private static final int COST = 3;
     private static final int DAMAGE = 66;
-    private static final int MAGIC_NUMBER = -100;
+    private static final int MAGIC_NUMBER = 100;
 
     public RipOutHeart() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -45,7 +43,7 @@ public class RipOutHeart extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new LoseBlockAction(p, magicNumber));
         AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
     }
 }
