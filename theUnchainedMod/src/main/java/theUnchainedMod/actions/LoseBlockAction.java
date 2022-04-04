@@ -22,10 +22,8 @@ public class LoseBlockAction extends AbstractGameAction {
         if (!this.target.isDying && !this.target.isDead && this.duration == this.startDuration) {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.SHIELD));
             this.target.loseBlock(this.blockAmount);
-            Iterator var1 = AbstractDungeon.player.hand.group.iterator();
 
-            while(var1.hasNext()) {
-                AbstractCard c = (AbstractCard)var1.next();
+            for (AbstractCard c : AbstractDungeon.player.hand.group) {
                 c.applyPowers();
             }
         }
