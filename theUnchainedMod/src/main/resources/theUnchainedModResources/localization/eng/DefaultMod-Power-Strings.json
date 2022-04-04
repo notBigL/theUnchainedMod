@@ -156,5 +156,14 @@
       "Everytime you play an attack, lose #b",
       " relayed damage."
     ]
+  },
+  "theUnchainedMod:SolarPlexusPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this turn, deal #r",
+      " damage #y",
+      " times.",
+      "If you play #b", " more Attacks this turn, deal #r"
+    ]
   }
 }

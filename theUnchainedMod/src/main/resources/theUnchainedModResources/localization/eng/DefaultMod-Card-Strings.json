@@ -61,7 +61,7 @@
   },
   "theUnchainedMod:Whiplash": {
     "NAME": "Whiplash",
-    "DESCRIPTION": "Deal !D! damage. NL 2 theunchainedmod:Chain: The same enemy loses !M! health."
+    "DESCRIPTION": "Deal !D! damage. NL 2 theunchainedmod:Chain: Enemy loses !M! health."
   },
   "theUnchainedMod:SplinteredShield": {
     "NAME": "Splintered Shield",
@@ -216,5 +216,9 @@
   "theUnchainedMod:RipOutHeart": {
     "NAME": "Rip Out Heart",
     "DESCRIPTION": "Deal !D! damage. NL Lose all your Block. NL End your turn."
+  },
+  "theUnchainedMod:SolarPlexus": {
+    "NAME": "Solar Plexus",
+    "DESCRIPTION": "Stun. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Deal !D! damage !M! times. NL Exhaust"
   }
 }
