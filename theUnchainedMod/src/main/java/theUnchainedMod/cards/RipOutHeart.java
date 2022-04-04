@@ -29,7 +29,6 @@ public class RipOutHeart extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        this.isMultiDamage = true;
     }
 
     @Override
