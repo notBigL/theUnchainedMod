@@ -30,7 +30,12 @@ public class RelayedDamagePower extends AbstractPower {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
-        this.amount = amount;
+        int amountAfterToughness = amount;
+        if (this.owner.hasPower("theUnchainedMod:ToughnessPower")) {
+            int toughnessAmount = this.owner.getPower("theUnchainedMod:ToughnessPower").amount;
+            amountAfterToughness -= toughnessAmount;
+        }
+        this.amount = amountAfterToughness;
         this.source = source;
         type = PowerType.BUFF;
         isTurnBased = false;
@@ -43,6 +48,15 @@ public class RelayedDamagePower extends AbstractPower {
 
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+    }
+
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        if (this.owner.hasPower("theUnchainedMod:ToughnessPower")) {
+            int toughnessAmount = this.owner.getPower("theUnchainedMod:ToughnessPower").amount;
+            stackAmount -= toughnessAmount;
+        }
+        this.amount += stackAmount;
     }
 
     public void atEndOfTurn(boolean isPlayer) {
