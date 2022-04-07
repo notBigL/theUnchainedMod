@@ -31,9 +31,12 @@ public class RelayedDamagePower extends AbstractPower {
         ID = POWER_ID;
         this.owner = owner;
         int amountAfterToughness = amount;
-        if (this.owner.hasPower("theUnchainedMod:ToughnessPower")) {
+        if (!this.owner.hasPower("theUnchainedMod:RelayedDamagePower") && this.owner.hasPower("theUnchainedMod:ToughnessPower")) {
             int toughnessAmount = this.owner.getPower("theUnchainedMod:ToughnessPower").amount;
             amountAfterToughness -= toughnessAmount;
+        }
+        if (amountAfterToughness <= 0) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
         this.amount = amountAfterToughness;
         this.source = source;
@@ -56,7 +59,9 @@ public class RelayedDamagePower extends AbstractPower {
             int toughnessAmount = this.owner.getPower("theUnchainedMod:ToughnessPower").amount;
             stackAmount -= toughnessAmount;
         }
-        this.amount += stackAmount;
+        if (stackAmount > 0) {
+            this.amount += stackAmount;
+        }
     }
 
     public void atEndOfTurn(boolean isPlayer) {
