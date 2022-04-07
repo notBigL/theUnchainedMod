@@ -225,5 +225,9 @@
     "NAME": "Break Free",
     "DESCRIPTION": "Draw !M! cards. Remove your Weak, Frail and Vulnerable. Gain [E] for every Debuff removed. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. Remove ALL your debuffs. Gain [E] for every Debuff removed. NL Exhaust."
+  },
+  "theUnchainedMod:BattleScars": {
+    "NAME": "Battle Scars",
+    "DESCRIPTION": "Gain !M! theunchainedmod:Toughness."
   }
 }
