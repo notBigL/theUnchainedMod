@@ -54,5 +54,13 @@
       "relayed_damage"
     ],
     "DESCRIPTION": "Damage that was relayed. Is dealt to the Player at the end of turn."
+  },
+  {
+    "PROPER_NAME": "Toughness",
+    "NAMES": [
+      "Toughness",
+      "toughness"
+    ],
+    "DESCRIPTION": "When relayed damage is applied, apply less equal to the Toughness Amount."
   }
 ]
