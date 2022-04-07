@@ -165,5 +165,11 @@
       " times.",
       "If you play #b", " more Attacks this turn, deal #r"
     ]
+  },
+  "theUnchainedMod:ToughnessPower": {
+    "NAME": "Toughness",
+    "DESCRIPTIONS": [
+      "When relayed damage is applied, apply", " less."
+    ]
   }
 }
