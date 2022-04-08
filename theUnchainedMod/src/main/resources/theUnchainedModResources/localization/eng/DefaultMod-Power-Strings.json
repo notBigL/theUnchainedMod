@@ -169,7 +169,7 @@
   "theUnchainedMod:ToughnessPower": {
     "NAME": "Toughness",
     "DESCRIPTIONS": [
-      "When relayed damage is applied, apply", " less."
+      "When relayed damage is applied, apply #b", " less."
     ]
   }
 }
