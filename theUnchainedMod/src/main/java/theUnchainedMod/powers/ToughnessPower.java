@@ -43,7 +43,7 @@ public class ToughnessPower extends AbstractPower {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
         if (this.amount == 0) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "Focus"));
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, NAME));
         }
         if (this.amount >= 99) {
             this.amount = 99;
