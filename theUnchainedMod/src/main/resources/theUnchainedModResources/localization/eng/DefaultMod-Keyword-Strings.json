@@ -62,5 +62,13 @@
       "toughness"
     ],
     "DESCRIPTION": "When relayed damage is applied, apply less equal to the Toughness Amount."
+  },
+  {
+    "PROPER_NAME": "Momentum",
+    "NAMES": [
+      "Momentum",
+      "momentum"
+    ],
+    "DESCRIPTION": "When you obtain 5 Momentum, add a Swirl into your hand."
   }
 ]
