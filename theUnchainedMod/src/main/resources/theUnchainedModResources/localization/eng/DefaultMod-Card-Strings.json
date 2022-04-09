@@ -183,11 +183,11 @@
   },
   "theUnchainedMod:RoutinePunch": {
     "NAME": "Routine Punch",
-    "DESCRIPTION": "Deal !D! damage. Counts as a theunchainedmod:Link for any Chain."
+    "DESCRIPTION": "Deal !D! damage. NL theunchainedmod:Link."
   },
   "theUnchainedMod:RoutineDodge": {
     "NAME": "Routine Dodge",
-    "DESCRIPTION": "Gain !B! Block. Counts as a theunchainedmod:Link for any Chain."
+    "DESCRIPTION": "Gain !B! Block. NL theunchainedmod:Link."
   },
   "theUnchainedMod:SharedBurden": {
     "NAME": "Shared Burden",
@@ -199,7 +199,7 @@
   },
   "theUnchainedMod:Swirl": {
     "NAME": "Swirl",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. This card does not count as a theunchainedmod:Link. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. Gain !B! Block. NL theunchainedmod:Link. NL Exhaust."
   },
   "theUnchainedMod:PerfectExecution": {
     "NAME": "Perfect Execution",

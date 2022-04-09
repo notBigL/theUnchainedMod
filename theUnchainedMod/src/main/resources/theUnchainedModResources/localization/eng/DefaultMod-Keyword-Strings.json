@@ -45,7 +45,7 @@
       "link",
       "link."
     ],
-    "DESCRIPTION": "A card counts as a link if it works toward resolving a Chain."
+    "DESCRIPTION": "Cards that count as any card type for finishing a Chain."
   },
   {
     "PROPER_NAME": "Relayed Damage",
