@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
@@ -47,7 +48,11 @@ public class MomentumPower extends AbstractPower {
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
         if (this.amount >= momentumRequired) {
-            this.addToBot(new MakeTempCardInHandAction(new Swirl(), 1, false));
+            Swirl card = new Swirl();
+            if(this.owner.hasPower("theUnchainedMod:FullSpinPower")) {
+                card.fullSpinApply(this.owner.getPower("theUnchainedMod:FullSpinPower").amount);
+            }
+            this.addToBot(new MakeTempCardInHandAction(card, 1, false));
             this.amount -= momentumRequired;
             if (this.amount <= 0) {
                 this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));

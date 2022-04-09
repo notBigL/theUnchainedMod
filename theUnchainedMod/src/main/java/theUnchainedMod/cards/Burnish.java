@@ -30,7 +30,7 @@ public class Burnish extends AbstractDynamicCard {
 
     @Override
     public void upgrade() {
-        if(!upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeBaseCost(0);
         }
@@ -39,6 +39,10 @@ public class Burnish extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new BurnishAction());
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Swirl(), magicNumber, false));
+        Swirl card = new Swirl();
+        if (p.hasPower("theUnchainedMod:FullSpinPower")) {
+            card.fullSpinApply(p.getPower("theUnchainedMod:FullSpinPower").amount);
+        }
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, magicNumber, false));
     }
 }

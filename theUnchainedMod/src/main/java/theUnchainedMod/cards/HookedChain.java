@@ -44,6 +44,10 @@ public class HookedChain extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Swirl(), 1, false));
+        Swirl card = new Swirl();
+        if(p.hasPower("theUnchainedMod:FullSpinPower")) {
+            card.fullSpinApply(p.getPower("theUnchainedMod:FullSpinPower").amount);
+        }
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1, false));
     }
 }
