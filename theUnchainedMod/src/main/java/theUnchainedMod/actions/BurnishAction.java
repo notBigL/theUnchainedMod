@@ -43,8 +43,8 @@ public class BurnishAction extends AbstractGameAction {
                 AbstractCard c;
                 for (Iterator var1 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator(); var1.hasNext(); this.player.hand.moveToExhaustPile(c)) {
                     c = (AbstractCard) var1.next();
-                    if (this.player.hand.getBottomCard().costForTurn > 0) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, this.player.hand.getBottomCard().costForTurn)));
+                    if (c.costForTurn > 0) {
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, c.costForTurn)));
                     }
                 }
                 AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
