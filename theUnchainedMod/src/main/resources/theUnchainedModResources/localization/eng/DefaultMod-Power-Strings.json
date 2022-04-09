@@ -177,5 +177,11 @@
     "DESCRIPTIONS": [
       "When you obtain #b", " Momentum, add a Swirl into your hand."
     ]
+  },
+  "theUnchainedMod:FullSpinPower": {
+    "NAME": "Full Spins",
+    "DESCRIPTIONS": [
+      "You have done #b", " full spins this turn."
+    ]
   }
 }
