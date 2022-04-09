@@ -32,7 +32,7 @@ public class MomentumPower extends AbstractPower {
         this.amount = amount;
         type = AbstractPower.PowerType.BUFF;
         isTurnBased = false;
-        momentumRequired = 7;
+        momentumRequired = 5;
 
         this.region128 = new TextureAtlas.AtlasRegion(texture128, 0, 0, 128, 128);
         this.region48 = new TextureAtlas.AtlasRegion(texture48, 0, 0, 48, 48);
