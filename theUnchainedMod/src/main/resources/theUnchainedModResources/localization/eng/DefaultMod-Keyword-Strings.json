@@ -26,7 +26,7 @@
       "chain:",
       "chain."
     ],
-    "DESCRIPTION": "Playing enough Cards with the same Type will unlock the specified Effect. Playing a Card with a different Type will delete the Chain. The Chain also wears off at the end of turn."
+    "DESCRIPTION": "Playing enough Cards with the same Type will finish Chain and unlock the specified Effect. Finishing a Chain applies momentum. Playing a Card with a different Type will delete the Chain. The Chain also wears off at the end of turn."
   },
   {
     "PROPER_NAME": "Relay",
@@ -70,5 +70,13 @@
       "momentum"
     ],
     "DESCRIPTION": "When you obtain 5 Momentum, add a Swirl into your hand."
+  },
+  {
+    "PROPER_NAME": "Full Spin",
+    "NAMES": [
+      "Full Spin",
+      "full_spin"
+    ],
+    "DESCRIPTION": "Doubles the damage and Block of Swirls this turn."
   }
 ]

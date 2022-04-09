@@ -199,7 +199,7 @@
   },
   "theUnchainedMod:Swirl": {
     "NAME": "Swirl",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. Gain !B! Block. NL theunchainedmod:Link. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. Gain !B! Block. NL Retain. theunchainedmod:Link. Gain 1 theunchainedmod:Full_Spin. Exhaust."
   },
   "theUnchainedMod:PerfectExecution": {
     "NAME": "Perfect Execution",
