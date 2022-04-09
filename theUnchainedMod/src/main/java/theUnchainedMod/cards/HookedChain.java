@@ -29,7 +29,7 @@ public class HookedChain extends AbstractDynamicCard {
     public HookedChain() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
-        this.cardsToPreview = new HiddenBlade();
+        this.cardsToPreview = new Swirl();
     }
 
     @Override
@@ -44,6 +44,6 @@ public class HookedChain extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new HiddenBlade(), 1, false));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Swirl(), 1, false));
     }
 }

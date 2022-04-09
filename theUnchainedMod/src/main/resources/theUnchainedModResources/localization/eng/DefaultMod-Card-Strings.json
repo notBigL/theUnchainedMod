@@ -195,7 +195,7 @@
   },
   "theUnchainedMod:HookedChain": {
     "NAME": "Hooked Chain",
-    "DESCRIPTION": "Deal !D! damage. Add a Hidden Blade into your hand."
+    "DESCRIPTION": "Deal !D! damage. Add a Swirl into your hand."
   },
   "theUnchainedMod:Swirl": {
     "NAME": "Swirl",
@@ -229,5 +229,9 @@
   "theUnchainedMod:BattleScars": {
     "NAME": "Battle Scars",
     "DESCRIPTION": "Gain !M! theunchainedmod:Toughness."
+  },
+  "theUnchainedMod:Burnish": {
+    "NAME": "Burnish",
+    "DESCRIPTION": "Exhaust a card. Gain theunchainedmod:Momentum equal to its cost. NL Add a Swirl into your hand."
   }
 }
