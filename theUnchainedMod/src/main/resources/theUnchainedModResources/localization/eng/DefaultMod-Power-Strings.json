@@ -171,5 +171,11 @@
     "DESCRIPTIONS": [
       "When relayed damage is applied, apply #b", " less."
     ]
+  },
+  "theUnchainedMod:MomentumPower": {
+    "NAME": "Momentum",
+    "DESCRIPTIONS": [
+      "When you obtain #b", " Momentum, add a Swirl into your hand."
+    ]
   }
 }

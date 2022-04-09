@@ -1,9 +1,12 @@
 package theUnchainedMod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import theUnchainedMod.powers.MomentumPower;
 
 public class ChainAction extends AbstractGameAction {
     private final AbstractCreature player;
@@ -39,16 +42,18 @@ public class ChainAction extends AbstractGameAction {
                 case "liberation":
                     this.addToBot(finishedChainAction);
                     player.powers.remove(chainPower);
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, 1)));
                     this.isDone = true;
                     break;
-                case "swirl":
-                    this.isDone = true;
-                    break;
-                case "routine":
+                //case "swirl":
+                //    this.isDone = true;
+                //    break;
+                case "link":
                     --chainPower.amount;
                     if (chainPower.amount == 0) {
                         this.addToBot(finishedChainAction);
                         player.powers.remove(chainPower);
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, 1)));
                     }
                     chainPower.updateDescription();
                     this.isDone = true;
@@ -60,6 +65,7 @@ public class ChainAction extends AbstractGameAction {
                     } else if (chainPower.amount == 0) {
                         this.addToBot(finishedChainAction);
                         player.powers.remove(chainPower);
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, 1)));
                     }
                     chainPower.updateDescription();
                     this.isDone = true;
