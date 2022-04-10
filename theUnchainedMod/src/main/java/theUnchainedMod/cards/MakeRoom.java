@@ -46,6 +46,7 @@ public class MakeRoom extends AbstractDynamicCard {
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
             this.energyGain++;
             this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
