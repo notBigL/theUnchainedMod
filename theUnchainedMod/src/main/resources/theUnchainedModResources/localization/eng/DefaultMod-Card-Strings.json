@@ -241,5 +241,10 @@
   "theUnchainedMod:SharePain": {
     "NAME": "Share Pain",
     "DESCRIPTION": "Deal damage equal to your theunchainedmod:Relayed_Damage !M! times."
+  },
+  "theUnchainedMod:DiveIntoFray": {
+    "NAME": "Dive Into Fray",
+    "DESCRIPTION": "Gain [E] [E]. NL Take !M! theunchainedmod:Relayed_Damage at the end of turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Take !M! theunchainedmod:Relayed_Damage at the end of turn. NL Exhaust."
   }
 }
