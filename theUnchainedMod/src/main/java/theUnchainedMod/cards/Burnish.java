@@ -1,6 +1,5 @@
 package theUnchainedMod.cards;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -20,11 +19,9 @@ public class Burnish extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 1;
 
     public Burnish() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = MAGIC_NUMBER;
         this.cardsToPreview = new Swirl();
     }
 
@@ -39,10 +36,5 @@ public class Burnish extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new BurnishAction());
-        Swirl card = new Swirl();
-        if (p.hasPower("theUnchainedMod:FullSpinPower")) {
-            card.fullSpinApply(p.getPower("theUnchainedMod:FullSpinPower").amount);
-        }
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, magicNumber, false));
     }
 }
