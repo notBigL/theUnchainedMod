@@ -22,7 +22,7 @@ public class RipOutHeart extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 3;
-    private static final int DAMAGE = 66;
+    private static final int DAMAGE = 42;
     private static final int MAGIC_NUMBER = 100;
 
     public RipOutHeart() {
