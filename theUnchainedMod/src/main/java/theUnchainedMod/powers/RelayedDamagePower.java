@@ -40,7 +40,7 @@ public class RelayedDamagePower extends AbstractPower {
         }
         this.amount = amountAfterToughness;
         this.source = source;
-        type = PowerType.BUFF;
+        type = PowerType.DEBUFF;
         isTurnBased = false;
 
         this.region128 = new TextureAtlas.AtlasRegion(texture128, 0, 0, 128, 128);
