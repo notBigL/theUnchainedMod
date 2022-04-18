@@ -26,6 +26,7 @@ public class SplinteredShield extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int BLOCK = 10;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
     private static final int MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = -1;
 
@@ -39,6 +40,7 @@ public class SplinteredShield extends AbstractDynamicCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
 
