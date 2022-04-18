@@ -22,13 +22,14 @@ public class RipOutHeart extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 3;
-    private static final int DAMAGE = 42;
+    private static final int DAMAGE = 48;
     private static final int MAGIC_NUMBER = 100;
 
     public RipOutHeart() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        this.exhaust = true;
     }
 
     @Override

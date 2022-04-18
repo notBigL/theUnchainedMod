@@ -215,7 +215,7 @@
   },
   "theUnchainedMod:RipOutHeart": {
     "NAME": "Rip Out Heart",
-    "DESCRIPTION": "Deal !D! damage. NL Lose all your Block. NL End your turn."
+    "DESCRIPTION": "Deal !D! damage. NL Lose all your Block. NL End your turn. NL Exhaust."
   },
   "theUnchainedMod:SolarPlexus": {
     "NAME": "Solar Plexus",
