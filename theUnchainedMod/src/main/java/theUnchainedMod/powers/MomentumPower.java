@@ -21,7 +21,6 @@ public class MomentumPower extends AbstractPower {
 
     private int momentumRequired;
 
-
     private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MomentumPower_power48.png");
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MomentumPower_power128.png");
 
@@ -29,10 +28,10 @@ public class MomentumPower extends AbstractPower {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
-        this.amount = amount;
+        momentumRequired = 3;
+        this.amount = checkForMomentumRequired(amount);
         type = AbstractPower.PowerType.BUFF;
         isTurnBased = false;
-        momentumRequired = 3;
 
         this.region128 = new TextureAtlas.AtlasRegion(texture128, 0, 0, 128, 128);
         this.region48 = new TextureAtlas.AtlasRegion(texture48, 0, 0, 48, 48);
@@ -46,16 +45,33 @@ public class MomentumPower extends AbstractPower {
 
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
-        if (this.amount >= momentumRequired) {
-            Swirl card = new Swirl();
-            if(this.owner.hasPower("theUnchainedMod:FullSpinPower")) {
-                card.fullSpinApply(this.owner.getPower("theUnchainedMod:FullSpinPower").amount);
+        this.amount = checkForMomentumRequired(this.amount);
+        if (this.amount <= 0) {
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
+    }
+
+    private int checkForMomentumRequired(int amount) {
+        Swirl card = new Swirl();
+        if (this.owner.hasPower("theUnchainedMod:FullSpinPower")) {
+            card.fullSpinApply(this.owner.getPower("theUnchainedMod:FullSpinPower").amount);
+        }
+        if (amount >= momentumRequired) {
+            if (amount >= 2 * momentumRequired) {
+                if (amount >= 3 * momentumRequired) {
+                    this.addToBot(new MakeTempCardInHandAction(card, 1, false));
+                    amount -= momentumRequired;
+                }
+                this.addToBot(new MakeTempCardInHandAction(card, 1, false));
+                amount -= momentumRequired;
             }
             this.addToBot(new MakeTempCardInHandAction(card, 1, false));
-            this.amount -= momentumRequired;
-            if (this.amount <= 0) {
-                this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-            }
+            amount -= momentumRequired;
         }
+        return amount;
+    }
+
+    public void setMomentumRequired(int newMomentumRequired) {
+        this.momentumRequired = newMomentumRequired;
     }
 }
