@@ -237,5 +237,9 @@
   "theUnchainedMod:SecretReserves": {
     "NAME": "Secret Reserves",
     "DESCRIPTION": "Gain Strength equal to your Weak. NL Lose all your Weak. Gain it back next turn. NL Exhaust."
+  },
+  "theUnchainedMod:SharePain": {
+    "NAME": "Share Pain",
+    "DESCRIPTION": "Deal damage equal to your theunchainedmod:Relayed_Damage !M! times."
   }
 }
