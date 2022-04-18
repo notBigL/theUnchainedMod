@@ -195,7 +195,7 @@
   },
   "theUnchainedMod:HookedChain": {
     "NAME": "Hooked Chain",
-    "DESCRIPTION": "Deal !D! damage. Add a Swirl into your hand."
+    "DESCRIPTION": "Deal !D! damage. Gain !M! theunchainedmod:Momentum."
   },
   "theUnchainedMod:Swirl": {
     "NAME": "Swirl",

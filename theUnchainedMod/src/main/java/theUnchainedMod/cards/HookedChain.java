@@ -1,6 +1,7 @@
 package theUnchainedMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.powers.MomentumPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -25,10 +27,13 @@ public class HookedChain extends AbstractDynamicCard {
     private static final int COST = 2;
     private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int MAGIC_NUMBER = 2;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
     public HookedChain() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC_NUMBER;
         this.cardsToPreview = new Swirl();
     }
 
@@ -37,6 +42,7 @@ public class HookedChain extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
 
     }
@@ -44,10 +50,6 @@ public class HookedChain extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        Swirl card = new Swirl();
-        if(p.hasPower("theUnchainedMod:FullSpinPower")) {
-            card.fullSpinApply(p.getPower("theUnchainedMod:FullSpinPower").amount);
-        }
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1, false));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p, magicNumber)));
     }
 }
