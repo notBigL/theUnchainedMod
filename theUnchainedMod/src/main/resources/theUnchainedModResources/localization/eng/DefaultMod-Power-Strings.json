@@ -183,5 +183,11 @@
     "DESCRIPTIONS": [
       "You have done #b", " full spins this turn."
     ]
+  },
+  "theUnchainedMod:NextTurnGainWeakPower": {
+    "NAME": "Gain Weak Next Turn",
+    "DESCRIPTIONS": [
+      "At the start of next turn, gain #r", " weak."
+    ]
   }
 }

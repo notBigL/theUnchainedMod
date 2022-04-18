@@ -233,5 +233,9 @@
   "theUnchainedMod:Burnish": {
     "NAME": "Burnish",
     "DESCRIPTION": "Exhaust a card. Gain theunchainedmod:Momentum equal to double its cost."
+  },
+  "theUnchainedMod:SecretReserves": {
+    "NAME": "Secret Reserves",
+    "DESCRIPTION": "Gain Strength equal to your Weak. NL Lose all your Weak. Gain it back next turn. NL Exhaust."
   }
 }
