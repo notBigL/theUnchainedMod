@@ -228,7 +228,7 @@
   },
   "theUnchainedMod:BattleScars": {
     "NAME": "Battle Scars",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Toughness."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Toughness. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! Dexterity."
   },
   "theUnchainedMod:Burnish": {
     "NAME": "Burnish",

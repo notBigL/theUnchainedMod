@@ -189,5 +189,13 @@
     "DESCRIPTIONS": [
       "At the start of next turn, gain #r", " weak."
     ]
+  },
+  "theUnchainedMod:BattleScarsPower": {
+    "NAME": "Power Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Power this Turn, gain #y", " Dexterity.",
+      "If you play #b",
+      " more Powers this Turn, gain #y"
+    ]
   }
 }
