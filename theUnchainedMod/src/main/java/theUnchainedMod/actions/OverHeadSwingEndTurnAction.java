@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.powers.AbstractChainPower;
 
-import java.util.Iterator;
-
 public class OverHeadSwingEndTurnAction extends AbstractGameAction {
 
     private final  AbstractPlayer player;
