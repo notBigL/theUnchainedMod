@@ -28,7 +28,7 @@ public class ThreeSixty extends AbstractDynamicCard {
 
     public ThreeSixty() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
+        baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         this.isMultiDamage = true;
     }
