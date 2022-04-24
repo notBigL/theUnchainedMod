@@ -246,5 +246,9 @@
     "NAME": "Dive Into Fray",
     "DESCRIPTION": "Gain [E] [E]. NL Take !M! theunchainedmod:Relayed_Damage at the end of turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Take !M! theunchainedmod:Relayed_Damage at the end of turn. NL Exhaust."
+  },
+  "theUnchainedMod:Ballet": {
+    "NAME": "Ballet",
+    "DESCRIPTION": "At the start of your turn, gain !M! theunchainedmod:Momentum. NL Swirls hit ALL enemies."
   }
 }

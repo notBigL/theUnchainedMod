@@ -197,5 +197,17 @@
       "If you play #b",
       " more Powers this Turn, gain #y"
     ]
+  },
+  "theUnchainedMod:GainMomentumEveryTurnPower": {
+    "NAME": "Fluid Movements",
+    "DESCRIPTIONS": [
+      "Gain #y", " Momentum every turn."
+    ]
+  },
+  "theUnchainedMod:SwirlsHitAllEnemiesPower": {
+    "NAME": "Large Radius",
+    "DESCRIPTIONS": [
+      "Swirls hit ALL enemies."
+    ]
   }
 }
