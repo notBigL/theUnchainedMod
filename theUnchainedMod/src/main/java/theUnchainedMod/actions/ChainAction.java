@@ -45,9 +45,6 @@ public class ChainAction extends AbstractGameAction {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, 1)));
                     this.isDone = true;
                     break;
-                //case "swirl":
-                //    this.isDone = true;
-                //    break;
                 case "link":
                     --chainPower.amount;
                     if (chainPower.amount == 0) {
