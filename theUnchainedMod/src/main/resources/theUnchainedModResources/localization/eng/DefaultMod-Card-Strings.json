@@ -254,5 +254,9 @@
   "theUnchainedMod:OverHeadSwing": {
     "NAME": "Over Head Swing",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have an active theunchainedmod:Chain end your turn."
+  },
+  "theUnchainedMod:SingleOut": {
+    "NAME": "Single Out",
+    "DESCRIPTION": "Deal !D! damage. NL A random enemy gains !M! Block."
   }
 }
