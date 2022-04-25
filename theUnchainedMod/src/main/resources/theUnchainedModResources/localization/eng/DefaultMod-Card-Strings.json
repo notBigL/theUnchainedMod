@@ -174,7 +174,7 @@
   },
   "theUnchainedMod:Reschedule": {
     "NAME": "Reschedule",
-    "DESCRIPTION": "Your theunchainedmod:Relayed_Damage is dealt next turn instead of this turn."
+    "DESCRIPTION": "Lose ALL your theunchainedmod:Relayed_Damage. NL Gain it back next turn."
   },
   "theUnchainedMod:EndlessPatience": {
     "NAME": "Endless Patience",
