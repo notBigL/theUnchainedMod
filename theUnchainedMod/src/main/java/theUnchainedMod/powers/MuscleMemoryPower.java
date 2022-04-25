@@ -75,6 +75,7 @@ public class MuscleMemoryPower extends AbstractPower {
             if (this.amount == 0) {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
             }
+            updateDescription();
         }
 
     }
