@@ -9,7 +9,7 @@ import theUnchainedMod.powers.AbstractChainPower;
 
 public class OverHeadSwingEndTurnAction extends AbstractGameAction {
 
-    private final  AbstractPlayer player;
+    private final AbstractPlayer player;
 
     public OverHeadSwingEndTurnAction(AbstractPlayer p) {
         player = p;
