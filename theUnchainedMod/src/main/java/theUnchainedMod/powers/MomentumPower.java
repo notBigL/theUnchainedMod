@@ -39,6 +39,10 @@ public class MomentumPower extends AbstractPower {
         updateDescription();
     }
 
+    public MomentumPower(final AbstractCreature owner) {
+        this(owner, 1);
+    }
+
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.momentumRequired + DESCRIPTIONS[1];
     }
