@@ -21,8 +21,8 @@ public class Postpone extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 2;
-    private static final int MAGIC_NUMBER = 5;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
+    private static final int MAGIC_NUMBER = 6;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
 
     public Postpone() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
