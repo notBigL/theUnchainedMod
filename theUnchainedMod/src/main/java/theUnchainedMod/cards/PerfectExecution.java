@@ -21,8 +21,7 @@ public class PerfectExecution extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 1;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = -1;
+    private static final int MAGIC_NUMBER = 0;
 
     public PerfectExecution() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -35,7 +34,6 @@ public class PerfectExecution extends AbstractDynamicCard {
         if(!upgraded) {
             upgradeName();
             upgradeBaseCost(0);
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
     }
 
