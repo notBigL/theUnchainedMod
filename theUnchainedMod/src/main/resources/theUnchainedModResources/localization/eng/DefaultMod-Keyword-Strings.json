@@ -26,7 +26,7 @@
       "chain:",
       "chain."
     ],
-    "DESCRIPTION": "Playing enough Cards with the same Type will finish Chain and unlock the specified Effect. Finishing a Chain applies momentum. Playing a Card with a different Type will delete the Chain. The Chain also wears off at the end of turn."
+    "DESCRIPTION": "Playing enough Cards with the same Type will finish Chain and unlock the specified Effect. Finishing a Chain applies momentum. Chains wear off at the end of turn."
   },
   {
     "PROPER_NAME": "Relay",
@@ -53,7 +53,7 @@
       "Relayed Damage",
       "relayed_damage"
     ],
-    "DESCRIPTION": "Damage that was relayed. Is dealt to the Player at the end of turn."
+    "DESCRIPTION": "Damage that was relayed. Is dealt to the Player at the end of the current turn."
   },
   {
     "PROPER_NAME": "Toughness",
