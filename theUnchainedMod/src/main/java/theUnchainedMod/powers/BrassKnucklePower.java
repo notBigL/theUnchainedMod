@@ -25,11 +25,10 @@ public class BrassKnucklePower extends AbstractChainPower {
         this.updateDescription();
     }
 
-    public void updateDescription(){
-        if(this.amount == 1) {
+    public void updateDescription() {
+        if (this.amount == 1) {
             this.description = DESCRIPTIONS[0];
-        }
-        else {
+        } else {
             this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         }
     }
