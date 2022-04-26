@@ -56,10 +56,10 @@ public class ChainAction extends AbstractGameAction {
                     this.isDone = true;
                     break;
                 default:
-                    --chainPower.amount;
-                    if (cardType != card.type) {
-                        player.powers.remove(chainPower);
-                    } else if (chainPower.amount == 0) {
+                    if (cardType == card.type) {
+                        --chainPower.amount;
+                    }
+                    if (chainPower.amount == 0) {
                         this.addToBot(finishedChainAction);
                         player.powers.remove(chainPower);
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, 1)));
