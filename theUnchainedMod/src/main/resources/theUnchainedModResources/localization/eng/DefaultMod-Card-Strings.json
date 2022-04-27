@@ -125,7 +125,7 @@
   },
   "theUnchainedMod:ClenchTeeth": {
     "NAME": "Clench Teeth",
-    "DESCRIPTION": "Everytime you are debuffed during your turn, gain !M! Block."
+    "DESCRIPTION": "Everytime you are debuffed during your turn, theunchainedmod:Relay !M! damage."
   },
   "theUnchainedMod:NonDominantHand": {
     "NAME": "Non-dominant Hand",

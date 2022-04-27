@@ -117,8 +117,8 @@
   "theUnchainedMod:ClenchTeethPower": {
     "NAME": "Teeth are clenched",
     "DESCRIPTIONS": [
-      "Everytime you are debuffed during your turn, gain #y",
-      " Block."
+      "Everytime you are debuffed during your turn, Relay #y",
+      " damage."
     ]
   },
   "theUnchainedMod:CruiserweightPower": {
