@@ -222,5 +222,14 @@
     "DESCRIPTIONS": [
       "If you play #b1 more Attack this Turn, deal #y" , " damage #y", " times, and reapply this Chain."
     ]
+  },
+  "theUnchainedMod:TunnelVisionChainPower": {
+    "NAME": "Power Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Power this Turn, gain #y",
+      " TunnelVision.",
+      "If you play #b",
+      " more Powers this Turn, gain #y"
+    ]
   }
 }
