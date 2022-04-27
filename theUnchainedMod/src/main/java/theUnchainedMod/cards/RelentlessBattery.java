@@ -47,6 +47,6 @@ public class RelentlessBattery extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         DamageInfo info = new DamageInfo(p, this.damage, this.damageTypeForTurn);
         AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(magicNumber, m, info));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RelentlessBatteryPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessBatteryPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
     }
 }

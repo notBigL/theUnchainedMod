@@ -47,6 +47,6 @@ public class StepBack extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StepBackPower(p, this.defaultSecondMagicNumber, this.block, TYPE)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new StepBackPower(p, this.defaultSecondMagicNumber, this.block, TYPE)));
     }
 }

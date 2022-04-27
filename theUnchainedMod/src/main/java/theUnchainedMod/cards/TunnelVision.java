@@ -46,6 +46,6 @@ public class TunnelVision extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TunnelVisionPower(p, p, this.magicNumber)));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TunnelVisionChainPower(p, CHAIN_LENGTH, defaultSecondMagicNumber, TYPE)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new TunnelVisionChainPower(p, CHAIN_LENGTH, defaultSecondMagicNumber, TYPE)));
     }
 }

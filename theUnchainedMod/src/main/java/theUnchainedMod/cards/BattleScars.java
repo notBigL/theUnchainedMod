@@ -45,6 +45,6 @@ public class BattleScars extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ToughnessPower(p, this.magicNumber)));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BattleScarsPower(p, CHAIN_LENGTH, defaultSecondMagicNumber, TYPE)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new BattleScarsPower(p, CHAIN_LENGTH, defaultSecondMagicNumber, TYPE)));
     }
 }

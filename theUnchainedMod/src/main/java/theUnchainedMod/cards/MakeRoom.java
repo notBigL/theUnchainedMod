@@ -53,6 +53,6 @@ public class MakeRoom extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RelayPower(p, p, this.magicNumber)));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MakeRoomPower(p, defaultSecondMagicNumber, new GainEnergyAction(this.energyGain), TYPE)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new MakeRoomPower(p, defaultSecondMagicNumber, new GainEnergyAction(this.energyGain), TYPE)));
     }
 }
