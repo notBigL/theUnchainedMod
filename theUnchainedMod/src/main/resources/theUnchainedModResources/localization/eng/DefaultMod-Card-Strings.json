@@ -133,7 +133,7 @@
   },
   "theUnchainedMod:Cower": {
     "NAME": "Cower",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Frail. NL Apply !theUnchainedMod:SecondMagic! Vulnerable to ALL enemies."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Gain 2 Frail. NL Apply !theUnchainedMod:SecondMagic! Vulnerable to ALL enemies."
   },
   "theUnchainedMod:MorningStar": {
     "NAME": "Morning Star",
