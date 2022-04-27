@@ -51,5 +51,12 @@
     "DESCRIPTIONS": [
       "Gain 1 Energy at the start of each turn. Gain 1 Weak at the start of each turn."
     ]
+  },
+  "theUnchainedMod:Carabiner": {
+    "NAME": "Carabiner",
+    "FLAVOR": "Its a cheap one. Good for one time use.",
+    "DESCRIPTIONS": [
+      "The first Chain card you play each combat unlocks its Chain Effect instantly in addition to applying the Chain."
+    ]
   }
 }
