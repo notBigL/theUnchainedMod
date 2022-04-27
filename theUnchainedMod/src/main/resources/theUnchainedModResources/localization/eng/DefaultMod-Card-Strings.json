@@ -258,5 +258,9 @@
   "theUnchainedMod:SingleOut": {
     "NAME": "Single Out",
     "DESCRIPTION": "Deal !D! damage. NL A random enemy gains !M! Block."
+  },
+  "theUnchainedMod:RelentlessBattery": {
+    "NAME": "Relentless Battery",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL 1 theunchainedmod:Chain: Deal !D! damage !M! times and reapply this theunchainedmod:Chain. NL Exhaust. "
   }
 }
