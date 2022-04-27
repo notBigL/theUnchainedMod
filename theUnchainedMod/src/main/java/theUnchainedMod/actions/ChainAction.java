@@ -42,7 +42,7 @@ public class ChainAction extends AbstractGameAction {
                 case "liberation":
                     this.addToBot(finishedChainAction);
                     player.powers.remove(chainPower);
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, 1)));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player)));
                     this.isDone = true;
                     break;
                 case "link":
@@ -50,7 +50,7 @@ public class ChainAction extends AbstractGameAction {
                     if (chainPower.amount == 0) {
                         this.addToBot(finishedChainAction);
                         player.powers.remove(chainPower);
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, 1)));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player)));
                     }
                     chainPower.updateDescription();
                     this.isDone = true;
@@ -62,7 +62,7 @@ public class ChainAction extends AbstractGameAction {
                     if (chainPower.amount == 0) {
                         this.addToBot(finishedChainAction);
                         player.powers.remove(chainPower);
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, 1)));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player)));
                     }
                     chainPower.updateDescription();
                     this.isDone = true;
