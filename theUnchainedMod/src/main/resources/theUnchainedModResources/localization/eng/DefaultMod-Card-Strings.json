@@ -262,5 +262,10 @@
   "theUnchainedMod:RelentlessBattery": {
     "NAME": "Relentless Battery",
     "DESCRIPTION": "Deal !D! damage !M! times. NL 1 theunchainedmod:Chain: Deal !D! damage !M! times and reapply this theunchainedmod:Chain. NL Exhaust. "
+  },
+  "theUnchainedMod:FigureEightKnot": {
+    "NAME": "Figure Eight Knot",
+    "DESCRIPTION": "Relay !theUnchainedMod:SecondMagic! damage. The next theunchainedmod:Chain card you play finishes its theunchainedmod:Chain instantly.",
+    "UPGRADE_DESCRIPTION": "Relay !theUnchainedMod:SecondMagic! damage. The next !M! theunchainedmod:Chain cards you play finish their theunchainedmod:Chains instantly."
   }
 }

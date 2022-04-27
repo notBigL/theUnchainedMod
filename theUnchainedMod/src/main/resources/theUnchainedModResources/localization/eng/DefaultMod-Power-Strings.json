@@ -229,5 +229,13 @@
       "If you play #b",
       " more Powers this Turn, gain #y"
     ]
+  },
+  "theUnchainedMod:KnotPower": {
+    "NAME": "Knot",
+    "DESCRIPTIONS": [
+      "The next Chain you play is finished instantly.",
+      "The next #b",
+      " Chains you play are finished instantly."
+    ]
   }
 }

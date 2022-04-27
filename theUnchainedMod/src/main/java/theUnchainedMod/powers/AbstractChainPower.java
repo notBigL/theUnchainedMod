@@ -3,9 +3,11 @@ package theUnchainedMod.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -30,6 +32,7 @@ public class AbstractChainPower extends AbstractPower {
         this.finishedChainAction = finishedChainAction;
         this.cardType = cardType;
         loadTextures(this.cardType);
+        instantFinishCheck();
     }
 
     public void atEndOfTurn(boolean isPlayer) {
@@ -59,6 +62,17 @@ public class AbstractChainPower extends AbstractPower {
         } else {
             this.region128 = new TextureAtlas.AtlasRegion(skillTexture128, 0, 0, 128, 128);
             this.region48 = new TextureAtlas.AtlasRegion(skillTexture48, 0, 0, 48, 48);
+        }
+    }
+
+    private void instantFinishCheck() {
+        AbstractPlayer player = (AbstractPlayer) owner;
+        String instantFinishID = "theUnchainedMod:KnotPower";
+        if (player.hasPower(instantFinishID)) {
+            player.getPower(instantFinishID).reducePower(1);
+            AbstractDungeon.actionManager.addToBottom(this.finishedChainAction);
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new MomentumPower(player)));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }
 }
