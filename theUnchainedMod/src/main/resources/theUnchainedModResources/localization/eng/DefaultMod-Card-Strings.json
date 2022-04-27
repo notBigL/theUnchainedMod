@@ -219,7 +219,7 @@
   },
   "theUnchainedMod:SolarPlexus": {
     "NAME": "Solar Plexus",
-    "DESCRIPTION": "Stun. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Deal !D! damage !M! times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Stun. NL Exhaust."
   },
   "theUnchainedMod:BreakFree": {
     "NAME": "Break Free",

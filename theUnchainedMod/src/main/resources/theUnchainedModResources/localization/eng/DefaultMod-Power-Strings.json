@@ -160,11 +160,9 @@
   "theUnchainedMod:SolarPlexusPower": {
     "NAME": "Attack Chain",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this turn, deal #r",
-      " damage #y",
-      " times.",
+      "If you play #b1 more Attack this turn, Stun the enemy.",
       "If you play #b",
-      " more Attacks this turn, deal #r"
+      " more Attacks this turn, Stun the enemy."
     ]
   },
   "theUnchainedMod:ToughnessPower": {
