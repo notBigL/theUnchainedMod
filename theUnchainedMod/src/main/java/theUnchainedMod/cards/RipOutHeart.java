@@ -2,6 +2,7 @@ package theUnchainedMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,12 +24,10 @@ public class RipOutHeart extends AbstractDynamicCard {
 
     private static final int COST = 3;
     private static final int DAMAGE = 48;
-    private static final int MAGIC_NUMBER = 100;
 
     public RipOutHeart() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC_NUMBER;
         this.exhaust = true;
     }
 
@@ -43,7 +42,7 @@ public class RipOutHeart extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
-        AbstractDungeon.actionManager.addToBottom(new LoseBlockAction(p, magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new RemoveAllBlockAction(p, p));
         AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
     }
 }
