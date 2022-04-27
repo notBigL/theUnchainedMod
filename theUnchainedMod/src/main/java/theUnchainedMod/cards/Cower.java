@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.powers.FrailPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.AllEnemiesVulnerableAction;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.powers.RelayPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -22,15 +23,14 @@ public class Cower extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 0;
-    private static final int BLOCK = 5;
-    private static final int MAGIC_NUMBER = 2;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = -1;
+    private static final int FRAIL = 2;
+    private static final int MAGIC_NUMBER = 6;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
     private static final int SECOND_MAGIC_NUMBER = 1;
     private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 1;
 
     public Cower() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
     }
@@ -46,8 +46,8 @@ public class Cower extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, magicNumber, false)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RelayPower(p, p, magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, FRAIL, false)));
         AbstractDungeon.actionManager.addToBottom(new AllEnemiesVulnerableAction(defaultSecondMagicNumber));
     }
 }
