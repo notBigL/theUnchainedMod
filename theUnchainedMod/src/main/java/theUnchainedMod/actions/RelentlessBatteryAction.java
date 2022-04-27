@@ -25,7 +25,9 @@ public class RelentlessBatteryAction extends AbstractGameAction {
     @Override
     public void update() {
         AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(this.attackAmount, this.monster, this.info));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RelentlessBatteryPower(AbstractDungeon.player, 1, new RelentlessBatteryAction(this.attackAmount, this.monster, this.info, this.damageAmount), this.damageAmount, this.attackAmount, AbstractCard.CardType.ATTACK)));
+        if (!isDeadOrEscaped(monster)) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RelentlessBatteryPower(AbstractDungeon.player, 1, new RelentlessBatteryAction(this.attackAmount, this.monster, this.info, this.damageAmount), this.damageAmount, this.attackAmount, AbstractCard.CardType.ATTACK)));
+        }
         this.isDone = true;
     }
 }
