@@ -265,11 +265,19 @@
   },
   "theUnchainedMod:FigureEightKnot": {
     "NAME": "Figure Eight Knot",
-    "DESCRIPTION": "Relay !theUnchainedMod:SecondMagic! damage. The next theunchainedmod:Chain card you play finishes its theunchainedmod:Chain instantly.",
-    "UPGRADE_DESCRIPTION": "Relay !theUnchainedMod:SecondMagic! damage. The next !M! theunchainedmod:Chain cards you play finish their theunchainedmod:Chains instantly."
+    "DESCRIPTION": "theunchainedmod:Relay !theUnchainedMod:SecondMagic! damage. The next theunchainedmod:Chain card you play finishes its theunchainedmod:Chain instantly.",
+    "UPGRADE_DESCRIPTION": "theunchainedmod:Relay !theUnchainedMod:SecondMagic! damage. The next !M! theunchainedmod:Chain cards you play finish their theunchainedmod:Chains instantly."
   },
   "theUnchainedMod:StareDown": {
     "NAME": "Stare Down",
     "DESCRIPTION": "Lose !M! Block. Gain [E] for every enemy who is blocking and [E] if all enemies are blocking. ALL enemies lose !M! Block."
+  },
+  "theUnchainedMod:EnclosingSteel": {
+    "NAME": "Enclosing Steel",
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. Your theunchainedmod:Relay does not wear off at the start of next turn."
+  },
+  "theUnchainedMod:BloodySwing": {
+    "NAME": "Bloody Swing",
+    "DESCRIPTION": "Deal !D! damage. Remove up to !M! theunchainedmod:Relayed_Damage and deal damage equal to the amount you removed."
   }
 }

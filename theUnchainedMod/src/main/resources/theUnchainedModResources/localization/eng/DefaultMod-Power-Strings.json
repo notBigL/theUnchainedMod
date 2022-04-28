@@ -237,5 +237,13 @@
       "The next #b",
       " Chains you play are finished instantly."
     ]
+  },
+  "theUnchainedMod:EnclosingSteelPower": {
+    "NAME": "Hugged by Chains",
+    "DESCRIPTIONS": [
+      "Dont lose your Relay at the start of next turn.",
+      "Dont lose your Relay at the start of the next #b",
+      " turns."
+    ]
   }
 }

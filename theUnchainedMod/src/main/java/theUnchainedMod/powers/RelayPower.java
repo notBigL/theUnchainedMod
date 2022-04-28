@@ -45,7 +45,9 @@ public class RelayPower extends AbstractPower {
     }
 
     public void atStartOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        if (!owner.hasPower("theUnchainedMod:EnclosingSteelPower")) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
     }
 
     public int relayDamageWhenAttacked(DamageInfo info, int damageAmount) {
