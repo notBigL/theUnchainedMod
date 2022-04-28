@@ -43,7 +43,7 @@ public class ClenchTeethPower extends AbstractPower {
     }
 
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.type == PowerType.DEBUFF && target.isPlayer) {
+        if (power.type == PowerType.DEBUFF && target.isPlayer && !AbstractDungeon.actionManager.turnHasEnded) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new RelayPower(target, target, this.amount)));
         }
     }
