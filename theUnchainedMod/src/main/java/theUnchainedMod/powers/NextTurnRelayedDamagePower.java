@@ -29,7 +29,7 @@ public class NextTurnRelayedDamagePower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         this.source = source;
-        type = PowerType.BUFF;
+        type = PowerType.DEBUFF;
         isTurnBased = false;
 
         this.region128 = new TextureAtlas.AtlasRegion(texture128, 0, 0, 128, 128);
