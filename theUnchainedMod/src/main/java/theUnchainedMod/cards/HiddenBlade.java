@@ -1,5 +1,6 @@
 package theUnchainedMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,6 +12,7 @@ import theUnchainedMod.characters.TheDefault;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
+@AutoAdd.Ignore
 public class HiddenBlade extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(HiddenBlade.class.getSimpleName());
@@ -33,7 +35,7 @@ public class HiddenBlade extends AbstractDynamicCard {
 
     @Override
     public void upgrade() {
-        if(!upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
