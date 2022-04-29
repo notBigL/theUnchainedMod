@@ -35,7 +35,7 @@
     "NAME": "Boot Knife",
     "FLAVOR": "It's handy. If you don't step into it.",
     "DESCRIPTIONS": [
-      "At the start of combat, add a #yHidden #yBlade to your hand."
+      "At the start of combat, add a #ySwirl to your hand."
     ]
   },
   "theUnchainedMod:OiledChains": {

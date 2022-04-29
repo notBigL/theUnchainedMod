@@ -4,7 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.cards.HiddenBlade;
+import theUnchainedMod.cards.Swirl;
 import theUnchainedMod.util.TextureLoader;
 
 import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;
@@ -23,7 +23,7 @@ public class BootKnife extends CustomRelic {
 
     @Override
     public void atBattleStartPreDraw() {
-        this.addToBot(new MakeTempCardInHandAction(new HiddenBlade(), 1, false));
+        this.addToBot(new MakeTempCardInHandAction(new Swirl(), 1, false));
         this.flash();
     }
 
