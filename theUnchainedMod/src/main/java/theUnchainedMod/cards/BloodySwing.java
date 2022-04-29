@@ -31,7 +31,6 @@ public class BloodySwing extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        this.tags.add(CardTags.STRIKE);
     }
 
     @Override
