@@ -287,6 +287,6 @@
   },
   "theUnchainedMod:SharpSplittings": {
     "NAME": "Sharp Splittings",
-    "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Frail. Apply !M! Vulnerable and !M! Weak to ALL enemies. Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Frail. Deal !D! damage to ALL enemies. Apply !M! Vulnerable and !M! Weak to ALL enemies."
   }
 }
