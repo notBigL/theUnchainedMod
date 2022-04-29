@@ -110,7 +110,9 @@
   },
   "theUnchainedMod:HalfSwing": {
     "NAME": "Half Swing",
-    "DESCRIPTION": "An enemy loses !M! health. Deal !D! damage to a random enemy."
+    "DESCRIPTION": "An enemy loses !M! health. Deal !D! damage to a random enemy.",
+    "UPGRADE_DESCRIPTION": "An enemy loses !M! health. Deal !D! damage to a random enemy. NL Gain 1 theunchainedmod:Momentum."
+
   },
   "theUnchainedMod:TieTogether": {
     "NAME": "Tie Together",
