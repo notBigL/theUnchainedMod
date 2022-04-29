@@ -19,14 +19,11 @@ public class NonDominantHand extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int MAGIC_NUMBER = 4;
-    private static final int SECOND_MAGIC_NUMBER = 4;
-    private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
 
     public NonDominantHand() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
     }
 
     @Override
@@ -34,13 +31,12 @@ public class NonDominantHand extends AbstractDynamicCard {
         if(!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
-            upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
         }
 
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new NonDominantHandAction(p, m, magicNumber, defaultSecondMagicNumber));
+        AbstractDungeon.actionManager.addToBottom(new NonDominantHandAction(p, m, magicNumber));
     }
 }

@@ -12,14 +12,12 @@ public class NonDominantHandAction extends AbstractGameAction {
 
     private final AbstractPlayer player;
     private final AbstractMonster monster;
-    private final int blockAmount;
     private final int damageAmount;
 
 
-    public NonDominantHandAction(AbstractPlayer p, AbstractMonster m, int block, int damage) {
+    public NonDominantHandAction(AbstractPlayer p, AbstractMonster m, int damage) {
         this.player = p;
         this.monster = m;
-        this.blockAmount = block;
         this.damageAmount = damage;
     }
 
@@ -27,7 +25,7 @@ public class NonDominantHandAction extends AbstractGameAction {
     public void update() {
         if (player.hasPower("Weakened")) {
             int weakAmount = player.getPower("Weakened").amount;
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, blockAmount * weakAmount));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, new DamageInfo(player, damageAmount * weakAmount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
         if (player.hasPower("Frail")) {
             int frailAmount = player.getPower("Frail").amount;
