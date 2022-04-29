@@ -112,7 +112,6 @@
     "NAME": "Half Swing",
     "DESCRIPTION": "An enemy loses !M! health. Deal !D! damage to a random enemy.",
     "UPGRADE_DESCRIPTION": "An enemy loses !M! health. Deal !D! damage to a random enemy. NL Gain 1 theunchainedmod:Momentum."
-
   },
   "theUnchainedMod:TieTogether": {
     "NAME": "Tie Together",
@@ -281,5 +280,9 @@
   "theUnchainedMod:BloodySwing": {
     "NAME": "Bloody Swing",
     "DESCRIPTION": "Deal !D! damage. Remove up to !M! theunchainedmod:Relayed_Damage and deal damage equal to the amount you removed."
+  },
+  "theUnchainedMod:Baguazhang": {
+    "NAME": "Baguazhang",
+    "DESCRIPTION": "If the enemy intents to do less than !M! damage, Block !B!."
   }
 }
