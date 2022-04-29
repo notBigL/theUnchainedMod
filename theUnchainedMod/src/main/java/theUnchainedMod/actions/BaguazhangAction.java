@@ -20,7 +20,7 @@ public class BaguazhangAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (targetMonster != null && targetMonster.getIntentBaseDmg() <= damageAmount) {
+        if (targetMonster != null && targetMonster.getIntentDmg() < damageAmount) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(source, amount));
         }
         this.isDone = true;
