@@ -54,9 +54,9 @@
   },
   "theUnchainedMod:Carabiner": {
     "NAME": "Carabiner",
-    "FLAVOR": "Its a cheap one. Good for one time use.",
+    "FLAVOR": "There is no better Tool for connecting Chains.",
     "DESCRIPTIONS": [
-      "The first Chain card you play each combat unlocks its Chain Effect instantly in addition to applying the Chain."
+      "Chains no longer wear off at the end of turn."
     ]
   }
 }

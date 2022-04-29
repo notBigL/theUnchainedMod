@@ -36,7 +36,9 @@ public class AbstractChainPower extends AbstractPower {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+        if (!AbstractDungeon.player.hasRelic("theUnchainedMod:Carabiner")) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+        }
     }
 
 

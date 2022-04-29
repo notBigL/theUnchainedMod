@@ -20,11 +20,6 @@ public class Carabiner extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.CLINK);
     }
 
-    public void onVictory() {
-        this.usedUp = false;
-        this.grayscale = false;
-    }
-
 
     @Override
     public String getUpdatedDescription() {
