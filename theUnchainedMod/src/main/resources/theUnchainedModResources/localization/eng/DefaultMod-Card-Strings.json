@@ -288,5 +288,11 @@
   "theUnchainedMod:SharpSplittings": {
     "NAME": "Sharp Splittings",
     "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Frail. Deal !D! damage to ALL enemies. Apply !M! Vulnerable and !M! Weak to ALL enemies."
+  },
+  "theUnchainedMod:HeavyShackles": {
+    "NAME": "Heavy Shackles",
+    "DESCRIPTION": "Gain !M! less [E] at the start of each turn. At the start of your turn, make all 2-cost cards in your hand free this turn.",
+    "UPGRADE_DESCRIPTION": "Gain !M! less [E] at the start of each turn. At the start of your turn, make all 2-cost cards in your hand free this turn and upgrade them for the rest of combat."
+
   }
 }

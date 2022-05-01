@@ -245,5 +245,12 @@
       "Dont lose your Relay at the start of the next #b",
       " turns."
     ]
+  },
+  "theUnchainedMod:HeavyShacklesPower": {
+    "NAME": "Heavy Shackles",
+    "DESCRIPTIONS": [
+      "All 2-cost cards you draw at the start of your turn, are free #b1 time.",
+      "All 2-cost cards you draw at the start of your turn, are free #b1 time and are upgraded for the rest of combat."
+    ]
   }
 }
