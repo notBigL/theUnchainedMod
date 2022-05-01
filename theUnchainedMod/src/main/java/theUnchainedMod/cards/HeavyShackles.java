@@ -25,7 +25,7 @@ public class HeavyShackles extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int MAGIC_NUMBER = 2;
-    private static final int SECOND_MAGIC_NUMBER = 2;
+    private static final int SECOND_MAGIC_NUMBER = 1;
 
     public HeavyShackles() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
