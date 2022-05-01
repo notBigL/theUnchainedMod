@@ -36,10 +36,14 @@ public class FullSpinPower extends AbstractPower {
 
         updateDescription();
         int preApplyAmount = 0;
-        if(this.owner.hasPower("theUnchainedMod:FullSpinPower")) {
+        if (this.owner.hasPower("theUnchainedMod:FullSpinPower")) {
             preApplyAmount = this.owner.getPower("theUnchainedMod:FullSpinPower").amount;
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyFullSpinsAction(this.amount + preApplyAmount));
+    }
+
+    public FullSpinPower(final AbstractCreature owner) {
+        this(owner, 1);
     }
 
     public void updateDescription() {
