@@ -249,8 +249,8 @@
   "theUnchainedMod:HeavyShacklesPower": {
     "NAME": "Heavy Shackles",
     "DESCRIPTIONS": [
-      "All 2-cost cards you draw at the start of your turn, are free #b1 time.",
-      "All 2-cost cards you draw at the start of your turn, are free #b1 time and are upgraded for the rest of combat."
+      "All 2-cost cards are free every turn.",
+      "All 2-cost cards are free every turn and are upgraded for the rest of combat."
     ]
   }
 }

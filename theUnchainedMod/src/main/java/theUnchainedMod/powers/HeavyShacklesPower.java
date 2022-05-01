@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.MakeTwoCostCardsFreeInHandAction;
+import theUnchainedMod.actions.MakeTwoCostCardsFreeAction;
 import theUnchainedMod.util.TextureLoader;
 
 public class HeavyShacklesPower extends AbstractPower {
@@ -49,6 +49,6 @@ public class HeavyShacklesPower extends AbstractPower {
 
     @Override
     public void atStartOfTurnPostDraw() {
-        AbstractDungeon.actionManager.addToBottom(new MakeTwoCostCardsFreeInHandAction(this.upgraded));
+        AbstractDungeon.actionManager.addToBottom(new MakeTwoCostCardsFreeAction(this.upgraded));
     }
 }
