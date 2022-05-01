@@ -291,8 +291,8 @@
   },
   "theUnchainedMod:HeavyShackles": {
     "NAME": "Heavy Shackles",
-    "DESCRIPTION": "Gain !M! less [E] at the start of each turn. At the start of your turn, make all 2-cost cards in your hand free this turn.",
-    "UPGRADE_DESCRIPTION": "Gain !M! less [E] at the start of each turn. At the start of your turn, make all 2-cost cards in your hand free this turn and upgrade them for the rest of combat."
+    "DESCRIPTION": "Gain !M! less [E] at the start of each turn. At the start of your turn, draw an additional card and make all 2-cost cards in your hand free this turn.",
+    "UPGRADE_DESCRIPTION": "Gain !M! less [E] at the start of each turn. At the start of your turn, draw an additional card, make all 2-cost cards in your hand free this turn and upgrade them for the rest of combat."
 
   }
 }
