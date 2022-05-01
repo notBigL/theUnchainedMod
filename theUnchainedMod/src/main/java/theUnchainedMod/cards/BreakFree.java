@@ -16,14 +16,14 @@ public class BreakFree extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(BreakFree.class.getSimpleName());
     public static final String IMG = makeCardPath("BreakFree.png");
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 2;
-    private static final int MAGIC_NUMBER = 2;
+    private static final int MAGIC_NUMBER = 3;
 
 
     public BreakFree() {
