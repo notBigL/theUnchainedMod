@@ -297,5 +297,11 @@
   "theUnchainedMod:WreckingBall": {
     "NAME": "Wrecking Ball",
     "DESCRIPTION": "ALL enemies gain !theUnchainedMod:SecondMagic! Block. 2 theunchainedmod:Chain: ALL enemies lose !M! HP."
+  },
+  "theUnchainedMod:SwipeArmor": {
+    "NAME": "Swipe Armor",
+    "DESCRIPTION": "Gain Block equal to the amount of Block ALL enemies have.",
+    "UPGRADE_DESCRIPTION": "Gain Block equal to double the amount of Block ALL enemies have."
+
   }
 }
