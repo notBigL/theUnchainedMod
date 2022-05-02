@@ -22,7 +22,9 @@ public class SwipeArmorAction extends AbstractGameAction {
             }
         }
         if (blockAmount > 0) {
-            blockAmount = blockAmount * 2;
+            if (doubleAmount) {
+                blockAmount = blockAmount * 2;
+            }
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, blockAmount));
         }
         this.isDone = true;
