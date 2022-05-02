@@ -10,7 +10,7 @@ public class SwipeArmorAction extends AbstractGameAction {
     boolean doubleAmount;
 
     public SwipeArmorAction(boolean doubleAmount) {
-    this.doubleAmount = doubleAmount;
+        this.doubleAmount = doubleAmount;
     }
 
     @Override
@@ -25,5 +25,6 @@ public class SwipeArmorAction extends AbstractGameAction {
             blockAmount = blockAmount * 2;
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, blockAmount));
         }
+        this.isDone = true;
     }
 }

@@ -20,7 +20,6 @@ public class SwipeArmor extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
-
     private static final int COST = 1;
 
     public SwipeArmor() {
