@@ -311,5 +311,10 @@
     "NAME": "Hobbles",
     "DESCRIPTION": "Innate. NL Deal !D! damage. Apply !M! Vulnerable. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. Apply !M! Vulnerable. NL Retain. NL Exhaust."
+  },
+  "theUnchainedMod:WeatherbeatenSkin": {
+    "NAME": "Weatherbeaten Skin",
+    "DESCRIPTION": "Gain X theunchainedmod:Toughness. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain X + 1 theunchainedmod:Toughness. NL Exhaust."
   }
 }
