@@ -252,5 +252,12 @@
       "All 2-cost cards are free every turn.",
       "All 2-cost cards are free every turn and are upgraded for the rest of combat."
     ]
+  },
+  "theUnchainedMod:WreckingBallPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this turn, ALL enemies lose #y" , " HP.",
+      "If you play #b" , " more Attacks this turn, ALL enemies lose #y"
+    ]
   }
 }

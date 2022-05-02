@@ -293,6 +293,9 @@
     "NAME": "Heavy Shackles",
     "DESCRIPTION": "Gain !M! less [E] at the start of each turn. At the start of your turn, draw an additional card and make all 2-cost cards cost zero this turn.",
     "UPGRADE_DESCRIPTION": "Gain !M! less [E] at the start of each turn. At the start of your turn, draw an additional card, make all 2-cost cards cost zero this turn and upgrade them for the rest of combat."
-
+  },
+  "theUnchainedMod:WreckingBall": {
+    "NAME": "Wrecking Ball",
+    "DESCRIPTION": "ALL enemies gain !theUnchainedMod:SecondMagic! Block. 2 theunchainedmod:Chain: ALL enemies lose !M! HP."
   }
 }
