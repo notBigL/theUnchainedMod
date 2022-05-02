@@ -302,6 +302,9 @@
     "NAME": "Swipe Armor",
     "DESCRIPTION": "Gain Block equal to the amount of Block ALL enemies have.",
     "UPGRADE_DESCRIPTION": "Gain Block equal to double the amount of Block ALL enemies have."
-
+  },
+  "theUnchainedMod:LongerChains": {
+    "NAME": "Longer Chains",
+    "DESCRIPTION": "At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn."
   }
 }

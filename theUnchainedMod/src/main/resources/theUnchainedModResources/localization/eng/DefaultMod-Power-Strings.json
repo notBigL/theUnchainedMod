@@ -218,7 +218,9 @@
   "theUnchainedMod:RelentlessBatteryPower": {
     "NAME": "Attack Chain",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this Turn, deal #y" , " damage #y", " times, and reapply this Chain."
+      "If you play #b1 more Attack this Turn, deal #y",
+      " damage #y",
+      " times, and reapply this Chain."
     ]
   },
   "theUnchainedMod:TunnelVisionChainPower": {
@@ -256,8 +258,17 @@
   "theUnchainedMod:WreckingBallPower": {
     "NAME": "Attack Chain",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this turn, ALL enemies lose #y" , " HP.",
-      "If you play #b" , " more Attacks this turn, ALL enemies lose #y"
+      "If you play #b1 more Attack this turn, ALL enemies lose #y",
+      " HP.",
+      "If you play #b",
+      " more Attacks this turn, ALL enemies lose #y"
+    ]
+  },
+  "theUnchainedMod:LongerChainsPower": {
+    "NAME": "Longer Chains",
+    "DESCRIPTIONS": [
+      "At the start of each turn, ALL enemies gain #y",
+      " Block."
     ]
   }
 }
