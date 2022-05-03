@@ -270,5 +270,12 @@
       "At the start of each turn, ALL enemies gain #y",
       " Block."
     ]
+  },
+  "theUnchainedMod:GlimpseIntoFuturePower": {
+    "NAME": "A Glimpse into the Future",
+    "DESCRIPTIONS": [
+      "If your Energy is zero at the end of this turn, gain #y", " Energy next turn.",
+      "Next turn gain #y"," Energy."
+    ]
   }
 }

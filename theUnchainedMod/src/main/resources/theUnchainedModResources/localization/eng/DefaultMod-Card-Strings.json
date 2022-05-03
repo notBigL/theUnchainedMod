@@ -316,5 +316,9 @@
     "NAME": "Weatherbeaten Skin",
     "DESCRIPTION": "Gain X theunchainedmod:Toughness. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain X + 1 theunchainedmod:Toughness. NL Exhaust."
+  },
+  "theUnchainedMod:GlimpseIntoFuture": {
+    "NAME": "Glimpse into Future",
+    "DESCRIPTION": "Gain !B! Block. NL If you end this turn with 0 [E] , gain !M! [E] next turn."
   }
 }
