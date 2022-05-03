@@ -277,5 +277,12 @@
       "If your Energy is zero at the end of this turn, gain #y", " Energy next turn.",
       "Next turn gain #y"," Energy."
     ]
+  },
+  "theUnchainedMod:LongGamePower": {
+    "NAME": "Long Game Power",
+    "DESCRIPTIONS": [
+      "If your Block is zero at the end of this turn, gain #b", " Block next turn and draw #y1 card.",
+      "Gain #b"
+    ]
   }
 }
