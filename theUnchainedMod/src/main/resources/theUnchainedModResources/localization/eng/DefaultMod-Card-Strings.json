@@ -324,5 +324,10 @@
   "theUnchainedMod:LongGame": {
     "NAME": "Long Game",
     "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you end this turn with 0 Block, gain !B! Block next turn and draw an additional card."
+  },
+  "theUnchainedMod:Pirouette": {
+    "NAME": "Pirouette",
+    "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Weak. NL Gain !M! theunchainedmod:Momentum. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Weak. NL Gain !M! theunchainedmod:Momentum."
   }
 }
