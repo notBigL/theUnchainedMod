@@ -32,7 +32,7 @@ public class SplinteredShield extends AbstractDynamicCard {
 
     public SplinteredShield() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
+        baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
 
