@@ -89,7 +89,7 @@
   },
   "theUnchainedMod:ThreeSixty": {
     "NAME": "360",
-    "DESCRIPTION": "An enemy loses !M! HP. Deal !D! damage to ALL enemies. NL Gain 1 theunchainedmod:Momentum."
+    "DESCRIPTION": "An enemy loses !M! HP. Deal !D! damage to ALL enemies. NL Gain 1 theunchainedmod:Full_SPin."
   },
   "theUnchainedMod:QuickSwing": {
     "NAME": "Quick Swing",
