@@ -338,5 +338,11 @@
   "theUnchainedMod:NonDominantFoot": {
     "NAME": "Non-dominant Foot",
     "DESCRIPTION": "Gain !M! Block for every Weak you have. NL Gain !M! Block for every Frail you have."
+  },
+  "theUnchainedMod:Spin": {
+    "NAME": "Spin",
+    "DESCRIPTION": "Gain X theunchainedmod:Momentum times 2. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain (X theunchainedmod:Momentum times 2) + 1. NL Exhaust."
+
   }
 }
