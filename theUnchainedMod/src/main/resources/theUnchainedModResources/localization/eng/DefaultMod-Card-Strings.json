@@ -334,5 +334,9 @@
     "NAME": "Free Form",
     "DESCRIPTION": "Ethereal. NL ALL Chains are finished instantly.",
     "UPGRADE_DESCRIPTION": "ALL Chains are finished instantly."
+  },
+  "theUnchainedMod:NonDominantFoot": {
+    "NAME": "Non-dominant Foot",
+    "DESCRIPTION": "Gain !M! Block for every Weak you have. NL Gain !M! Block for every Frail you have."
   }
 }
