@@ -2,10 +2,12 @@ package theUnchainedMod.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
@@ -57,20 +59,18 @@ public class MomentumPower extends AbstractPower {
 
     private int checkForMomentumRequired(int amount) {
         Swirl card = new Swirl();
+        int amountOfSwirls = 0;
         if (this.owner.hasPower("theUnchainedMod:FullSpinPower")) {
             card.fullSpinApply(this.owner.getPower("theUnchainedMod:FullSpinPower").amount);
         }
-        if (amount >= momentumRequired) {
-            if (amount >= 2 * momentumRequired) {
-                if (amount >= 3 * momentumRequired) {
-                    this.addToBot(new MakeTempCardInHandAction(card, 1, false));
-                    amount -= momentumRequired;
-                }
-                this.addToBot(new MakeTempCardInHandAction(card, 1, false));
-                amount -= momentumRequired;
-            }
-            this.addToBot(new MakeTempCardInHandAction(card, 1, false));
+
+        while (amount >= momentumRequired) {
+            amountOfSwirls++;
             amount -= momentumRequired;
+        }
+        for(int i = amountOfSwirls; i > 0; i--) {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1, false));
+
         }
         return amount;
     }
