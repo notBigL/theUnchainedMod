@@ -117,8 +117,8 @@
   "theUnchainedMod:ClenchTeethPower": {
     "NAME": "Teeth are clenched",
     "DESCRIPTIONS": [
-      "Everytime you are debuffed during your turn, Relay #y",
-      " damage."
+      "Everytime you are debuffed during your turn, Gain #y",
+      " Block."
     ]
   },
   "theUnchainedMod:CruiserweightPower": {
@@ -289,6 +289,15 @@
     "NAME": "Free Form",
     "DESCRIPTIONS": [
       "ALL your Chains are finished instantly."
+    ]
+  },
+  "theUnchainedMod:ClenchTeethChainPower": {
+    "NAME": "Power Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Power this Turn, gain #y",
+      " Teeth are Clenched.",
+      "If you play #b",
+      " more Powers this Turn, gain #y"
     ]
   }
 }
