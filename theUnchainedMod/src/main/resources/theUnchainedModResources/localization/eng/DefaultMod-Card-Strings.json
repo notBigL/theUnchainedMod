@@ -138,7 +138,7 @@
   },
   "theUnchainedMod:MorningStar": {
     "NAME": "Morning Star",
-    "DESCRIPTION": "Costs 1 less [E] for every 2-cost card played this combat. NL Enemy loses !M! HP. NL Deal !D! damage."
+    "DESCRIPTION": "Costs 1 less [E] for every 2-cost card played this combat. Enemy loses !M! HP. Deal !D! damage. NL Set Cost to 4 after playing."
   },
   "theUnchainedMod:Cruiserweight": {
     "NAME": "Cruiserweight",
