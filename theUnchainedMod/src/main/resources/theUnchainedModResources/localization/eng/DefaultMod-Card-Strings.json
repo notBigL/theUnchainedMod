@@ -329,5 +329,10 @@
     "NAME": "Pirouette",
     "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Weak. NL Gain !M! theunchainedmod:Momentum. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Weak. NL Gain !M! theunchainedmod:Momentum."
+  },
+  "theUnchainedMod:FreeForm": {
+    "NAME": "Free Form",
+    "DESCRIPTION": "Ethereal. NL ALL Chains are finished instantly.",
+    "UPGRADE_DESCRIPTION": "ALL Chains are finished instantly."
   }
 }

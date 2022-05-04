@@ -22,6 +22,7 @@ public class AbstractChainPower extends AbstractPower {
     private static int chainIdOffset;
     public final AbstractGameAction finishedChainAction;
     public final AbstractCard.CardType cardType;
+    private final String powerIdWithoutOffset;
 
 
     public AbstractChainPower(String powerID, AbstractCreature player, int chainLength, AbstractGameAction finishedChainAction, AbstractCard.CardType cardType) {
@@ -32,6 +33,7 @@ public class AbstractChainPower extends AbstractPower {
         this.finishedChainAction = finishedChainAction;
         this.cardType = cardType;
         loadTextures(this.cardType);
+        this.powerIdWithoutOffset = powerID;
         instantFinishCheck();
     }
 
@@ -69,9 +71,15 @@ public class AbstractChainPower extends AbstractPower {
 
     private void instantFinishCheck() {
         AbstractPlayer player = (AbstractPlayer) owner;
-        String instantFinishID = "theUnchainedMod:KnotPower";
-        if (player.hasPower(instantFinishID)) {
-            player.getPower(instantFinishID).reducePower(1);
+        String knotID = "theUnchainedMod:KnotPower";
+        String instantFinishID = "theUnchainedMod:FreeFormPower";
+        if (player.hasPower(instantFinishID) || player.hasPower(knotID)) {
+            if (player.hasPower(knotID)) {
+                player.getPower(knotID).reducePower(1);
+            }
+            if (powerIdWithoutOffset.equals("theUnchainedMod:RelentlessBatteryPower")) {
+                return;
+            }
             AbstractDungeon.actionManager.addToBottom(this.finishedChainAction);
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new MomentumPower(player)));
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));

@@ -279,10 +279,16 @@
     ]
   },
   "theUnchainedMod:LongGamePower": {
-    "NAME": "Long Game Power",
+    "NAME": "Long Game",
     "DESCRIPTIONS": [
       "If your Block is zero at the end of this turn, gain #b", " Block next turn and draw #y1 card.",
       "Gain #b"
+    ]
+  },
+  "theUnchainedMod:FreeFormPower": {
+    "NAME": "Free Form",
+    "DESCRIPTIONS": [
+      "ALL your Chains are finished instantly."
     ]
   }
 }
