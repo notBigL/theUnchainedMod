@@ -343,6 +343,10 @@
     "NAME": "Spin",
     "DESCRIPTION": "Gain X theunchainedmod:Momentum times 2. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain (X theunchainedmod:Momentum times 2) + 1. NL Exhaust."
-
+  },
+  "theUnchainedMod:PeaceOffering": {
+    "NAME": "Peace Offering",
+    "DESCRIPTION": "Double your theunchainedmod:Relay. Double the Block of ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Double your theunchainedmod:Relay. Double the Block of ALL enemies."
   }
 }
