@@ -18,12 +18,12 @@ public class StareDownAction extends AbstractGameAction {
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (mo.currentBlock > 0) {
                 energyGain++;
-            } else {
+            } else if (!mo.isDead) {
                 allEnemiesBlocking = false;
             }
             AbstractDungeon.actionManager.addToBottom(new LoseBlockAction(mo, this.amount));
         }
-        if(allEnemiesBlocking) {
+        if (allEnemiesBlocking) {
             energyGain++;
         }
         if (energyGain > 0) {
