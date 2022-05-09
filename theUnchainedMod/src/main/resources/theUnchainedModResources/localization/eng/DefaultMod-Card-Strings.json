@@ -348,5 +348,9 @@
     "NAME": "Peace Offering",
     "DESCRIPTION": "Double your theunchainedmod:Relay. Double the Block of ALL enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Double your theunchainedmod:Relay. Double the Block of ALL enemies."
+  },
+  "theUnchainedMod:CullArmor": {
+    "NAME": "Cull Armor",
+    "DESCRIPTION": "ALL enemies lose HP equal to their Block. NL ALL enemies lose their Block. NL ALL enemies become Vulnerable."
   }
 }
