@@ -274,14 +274,17 @@
   "theUnchainedMod:GlimpseIntoFuturePower": {
     "NAME": "A Glimpse into the Future",
     "DESCRIPTIONS": [
-      "If your Energy is zero at the end of this turn, gain #y", " Energy next turn.",
-      "Next turn gain #y"," Energy."
+      "If your Energy is zero at the end of this turn, gain #y",
+      " Energy next turn.",
+      "Next turn gain #y",
+      " Energy."
     ]
   },
   "theUnchainedMod:LongGamePower": {
     "NAME": "Long Game",
     "DESCRIPTIONS": [
-      "If your Block is zero at the end of this turn, gain #b", " Block next turn and draw #y1 card.",
+      "If your Block is zero at the end of this turn, gain #b",
+      " Block next turn and draw #y1 card.",
       "Gain #b"
     ]
   },
@@ -314,6 +317,15 @@
       " Energy.",
       "If you play #b",
       " more Powers this Turn, gain #y"
+    ]
+  },
+  "theUnchainedMod:SwathePower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this turn, enemy gains #y",
+      " Block.",
+      "If you play #b",
+      " more Attacks this turn, enemy gains #y"
     ]
   }
 }

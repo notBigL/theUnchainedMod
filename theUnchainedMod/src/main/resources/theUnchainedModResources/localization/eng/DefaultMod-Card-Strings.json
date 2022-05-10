@@ -364,5 +364,9 @@
   "theUnchainedMod:LawOfInertia": {
     "NAME": "Law Of Inertia",
     "DESCRIPTION": "At the start of each turn, gain a 1 theunchainedmod:Chain, that gives !M! [E]."
+  },
+  "theUnchainedMod:Swathe": {
+    "NAME": "Swathe",
+    "DESCRIPTION": "Deal !D! damage. !theUnchainedMod:SecondMagic! theunchainedmod:Chain: the same enemy gains !M! Block."
   }
 }
