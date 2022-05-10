@@ -1,6 +1,7 @@
 package theUnchainedMod.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -24,13 +25,14 @@ public class Pirouette extends AbstractDynamicCard {
 
 
     private static final int COST = 0;
-    private static final int MAGIC_NUMBER = 3;
+    private static final int MAGIC_NUMBER = 2;
     private static final int SECOND_MAGIC_NUMBER = 2;
 
     public Pirouette() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
+        this.cardsToPreview = new Swirl();
         this.exhaust = true;
     }
 
@@ -46,7 +48,12 @@ public class Pirouette extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        Swirl card = new Swirl();
+        if (p.hasPower("theUnchainedMod:FullSpinPower")) {
+            card.fullSpinApply(p.getPower("theUnchainedMod:FullSpinPower").amount);
+        }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WeakPower(p, defaultSecondMagicNumber, false)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p, magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card));
     }
 }
