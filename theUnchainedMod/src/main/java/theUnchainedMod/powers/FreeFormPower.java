@@ -32,4 +32,9 @@ public class FreeFormPower extends AbstractPower {
 
         updateDescription();
     }
+
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0];
+    }
+
 }
