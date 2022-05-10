@@ -352,5 +352,13 @@
   "theUnchainedMod:CullArmor": {
     "NAME": "Cull Armor",
     "DESCRIPTION": "ALL enemies lose HP equal to their Block. NL ALL enemies lose their Block. NL ALL enemies become Vulnerable."
+  },
+  "theUnchainedMod:EscapeRope": {
+    "NAME": "Escape Rope",
+    "DESCRIPTION": "If you have an active Chain, take an extra turn after this turn. End your turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "If you have an active Chain, take an extra turn after this turn. End your turn.",
+    "EXTENDED_DESCRIPTION": [
+      "I need an active Chain to play this."
+    ]
   }
 }
