@@ -1,6 +1,5 @@
 package theUnchainedMod.powers;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -32,7 +31,7 @@ public class InertiaPower extends AbstractChainPower {
         if (this.amount == 1) {
             this.description = DESCRIPTIONS[0] + this.energyAmount + DESCRIPTIONS[1];
         } else {
-            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3] + DESCRIPTIONS[1];
+            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3] + this.energyAmount + DESCRIPTIONS[1];
         }
     }
 }
