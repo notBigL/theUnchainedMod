@@ -299,5 +299,21 @@
       "If you play #b",
       " more Powers this Turn, gain #y"
     ]
+  },
+  "theUnchainedMod:LawOfInertiaPower": {
+    "NAME": "Inertia",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain a Power Chain that gives ",
+      " Energy."
+    ]
+  },
+  "theUnchainedMod:InertiaPower": {
+    "NAME": "Power Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Power this Turn, gain #y",
+      " Energy.",
+      "If you play #b",
+      " more Powers this Turn, gain #y"
+    ]
   }
 }

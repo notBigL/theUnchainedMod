@@ -360,5 +360,9 @@
     "EXTENDED_DESCRIPTION": [
       "I need an active Chain to play this."
     ]
+  },
+  "theUnchainedMod:LawOfInertia": {
+    "NAME": "Law Of Inertia",
+    "DESCRIPTION": "At the start of each turn, gain a 1 theunchainedmod:Chain, that gives !M! [E]."
   }
 }
