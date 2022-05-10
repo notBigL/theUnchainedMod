@@ -327,5 +327,14 @@
       "If you play #b",
       " more Attacks this turn, enemy gains #y"
     ]
+  },
+  "theUnchainedMod:BlindSwingPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this turn, gain #y",
+      " Weak.",
+      "If you play #b",
+      " more Attacks this turn, gain #y"
+    ]
   }
 }

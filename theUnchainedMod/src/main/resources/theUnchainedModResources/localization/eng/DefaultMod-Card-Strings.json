@@ -368,5 +368,9 @@
   "theUnchainedMod:Swathe": {
     "NAME": "Swathe",
     "DESCRIPTION": "Deal !D! damage. !theUnchainedMod:SecondMagic! theunchainedmod:Chain: the same enemy gains !M! Block."
+  },
+  "theUnchainedMod:BlindSwing": {
+    "NAME": "Blind Swing",
+    "DESCRIPTION": "Deal !D! damage 2 times. !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain !M! Weak."
   }
 }
