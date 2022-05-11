@@ -21,10 +21,6 @@ public class NonDominantFootAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (player.hasPower("Weakened")) {
-            int weakAmount = player.getPower("Weakened").amount;
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, blockAmount * weakAmount));
-        }
         if (player.hasPower("Frail")) {
             int frailAmount = player.getPower("Frail").amount;
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, blockAmount * frailAmount));

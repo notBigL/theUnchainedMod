@@ -27,10 +27,6 @@ public class NonDominantHandAction extends AbstractGameAction {
             int weakAmount = player.getPower("Weakened").amount;
             AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, new DamageInfo(player, damageAmount * weakAmount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
-        if (player.hasPower("Frail")) {
-            int frailAmount = player.getPower("Frail").amount;
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(monster, new DamageInfo(player, damageAmount * frailAmount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        }
         isDone = true;
     }
 }
