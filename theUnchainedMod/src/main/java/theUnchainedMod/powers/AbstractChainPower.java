@@ -45,14 +45,23 @@ public class AbstractChainPower extends AbstractPower {
 
 
     public void onUseCard(AbstractCard c, UseCardAction action) {
-        if (c.cardID.equals("theUnchainedMod:Liberation")) {
-            AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, "liberation"));
-        } else if (c.cardID.equals("theUnchainedMod:RoutinePunch") || c.cardID.equals("theUnchainedMod:RoutineDodge") || c.cardID.equals("theUnchainedMod:Swirl")) {
-            AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, "link"));
-            this.flash();
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID));
-            this.flash();
+        switch (c.cardID) {
+            case "theUnchainedMod:DiamondSaw":
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+                break;
+            case "theUnchainedMod:Liberation":
+                AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, "liberation"));
+                break;
+            case "theUnchainedMod:RoutinePunch":
+            case "theUnchainedMod:RoutineDodge":
+            case "theUnchainedMod:Swirl":
+                AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, "link"));
+                this.flash();
+                break;
+            default:
+                AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID));
+                this.flash();
+                break;
         }
     }
 

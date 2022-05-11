@@ -291,8 +291,8 @@
   },
   "theUnchainedMod:HeavyShackles": {
     "NAME": "Heavy Shackles",
-    "DESCRIPTION": "Gain !M! less [E] at the start of each turn. At the start of your turn, draw an additional card and make all 2-cost cards cost zero this turn.",
-    "UPGRADE_DESCRIPTION": "Gain !M! less [E] at the start of each turn. At the start of your turn, draw an additional card, make all 2-cost cards cost zero this turn and upgrade them for the rest of combat."
+    "DESCRIPTION": "Gain !M! less [E] at the start of each turn. ALL 2-cost cards cost zero. At the start of your turn, draw an additional card.",
+    "UPGRADE_DESCRIPTION": "Gain !M! less [E] at the start of each turn. ALL 2-cost cards cost zero and are upgraded. At the start of your turn, draw an additional card."
   },
   "theUnchainedMod:WreckingBall": {
     "NAME": "Wrecking Ball",
@@ -376,5 +376,9 @@
   "theUnchainedMod:LastResort": {
     "NAME": "Last Resort",
     "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E]. !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Lose ALL your [E]. NL Exhaust."
+  },
+  "theUnchainedMod:DiamondSaw": {
+    "NAME": "Diamond Saw",
+    "DESCRIPTION": "Deal !D! damage. NL Delete ALL your active theunchainedmod:Chains."
   }
 }
