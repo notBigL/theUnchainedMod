@@ -336,5 +336,13 @@
       "If you play #b",
       " more Attacks this turn, gain #y"
     ]
+  },
+  "theUnchainedMod:LastResortPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this turn, lose ALL your Energy.",
+      "If you play #b",
+      " more Skills this turn, lose ALL your Energy."
+    ]
   }
 }

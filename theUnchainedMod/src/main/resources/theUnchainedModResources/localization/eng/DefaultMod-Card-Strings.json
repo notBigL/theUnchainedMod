@@ -372,5 +372,9 @@
   "theUnchainedMod:BlindSwing": {
     "NAME": "Blind Swing",
     "DESCRIPTION": "Deal !D! damage 2 times. !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain !M! Weak."
+  },
+  "theUnchainedMod:LastResort": {
+    "NAME": "Last Resort",
+    "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E]. !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Lose ALL your [E]. NL Exhaust."
   }
 }
