@@ -380,5 +380,9 @@
   "theUnchainedMod:DiamondSaw": {
     "NAME": "Diamond Saw",
     "DESCRIPTION": "Deal !D! damage. NL Delete ALL your active theunchainedmod:Chains."
+  },
+  "theUnchainedMod:ReinforcedElement": {
+    "NAME": "Reinforced Element",
+    "DESCRIPTION": "Gain !B! Block. If you have an active theunchainedmod:Chain, gain [E] and draw 1 card."
   }
 }
