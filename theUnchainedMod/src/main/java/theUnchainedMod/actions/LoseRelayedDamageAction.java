@@ -23,7 +23,7 @@ public class LoseRelayedDamageAction extends AbstractGameAction {
             } else {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, relayedDamage));
             }
-            this.isDone = true;
         }
+        this.isDone = true;
     }
 }
