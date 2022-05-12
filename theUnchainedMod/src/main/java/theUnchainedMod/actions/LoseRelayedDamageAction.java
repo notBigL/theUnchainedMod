@@ -12,7 +12,6 @@ public class LoseRelayedDamageAction extends AbstractGameAction {
         this.amount = relayedDamageToLose;
     }
 
-
     @Override
     public void update() {
         AbstractPlayer player = AbstractDungeon.player;
