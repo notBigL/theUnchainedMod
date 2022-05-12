@@ -42,7 +42,7 @@ public class FigureEightKnot extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RelayPower(p, p, defaultSecondMagicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RelayPower(p, p, magicNumber)));
         AbstractDungeon.actionManager.addToBottom(new LoseRelayedDamageAction(magicNumber));
     }
 }
