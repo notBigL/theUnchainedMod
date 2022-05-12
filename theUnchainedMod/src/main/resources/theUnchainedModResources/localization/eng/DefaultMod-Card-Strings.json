@@ -266,8 +266,7 @@
   },
   "theUnchainedMod:FigureEightKnot": {
     "NAME": "Figure Eight Knot",
-    "DESCRIPTION": "theunchainedmod:Relay !theUnchainedMod:SecondMagic! damage. The next theunchainedmod:Chain card you play finishes its theunchainedmod:Chain instantly.",
-    "UPGRADE_DESCRIPTION": "theunchainedmod:Relay !theUnchainedMod:SecondMagic! damage. The next !M! theunchainedmod:Chain cards you play finish their theunchainedmod:Chains instantly."
+    "DESCRIPTION": "theunchainedmod:Relay !theUnchainedMod:SecondMagic! damage. NL Lose !M! theunchainedmod:Relayed_Damage."
   },
   "theUnchainedMod:StareDown": {
     "NAME": "Stare Down",
