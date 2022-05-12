@@ -318,7 +318,7 @@
   },
   "theUnchainedMod:GlimpseIntoFuture": {
     "NAME": "Glimpse into Future",
-    "DESCRIPTION": "Gain !B! Block. NL If you end this turn with 0 [E] , gain !M! [E] next turn."
+    "DESCRIPTION": "Gain !B! Block. NL If you end this turn with 1 [E] , gain !M! [E] next turn."
   },
   "theUnchainedMod:LongGame": {
     "NAME": "Long Game",
