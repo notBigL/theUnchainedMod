@@ -383,5 +383,10 @@
   "theUnchainedMod:ReinforcedElement": {
     "NAME": "Reinforced Element",
     "DESCRIPTION": "Gain !B! Block. If you have an active theunchainedmod:Chain, gain [E] and draw 1 card."
+  },
+  "theUnchainedMod:GraspIntoFuture": {
+    "NAME": "Grasp Into Future",
+    "DESCRIPTION": "Copy a card and put the copy on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Copy a card two times and put the copies on top of your draw pile. NL Exhaust."
   }
 }
