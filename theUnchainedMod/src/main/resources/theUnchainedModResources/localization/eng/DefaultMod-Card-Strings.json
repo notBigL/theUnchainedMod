@@ -266,7 +266,7 @@
   },
   "theUnchainedMod:FigureEightKnot": {
     "NAME": "Figure Eight Knot",
-    "DESCRIPTION": "theunchainedmod:Relay !theUnchainedMod:SecondMagic! damage. NL Lose !M! theunchainedmod:Relayed_Damage."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Lose !M! theunchainedmod:Relayed_Damage."
   },
   "theUnchainedMod:StareDown": {
     "NAME": "Stare Down",
