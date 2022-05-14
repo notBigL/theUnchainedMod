@@ -333,7 +333,7 @@ public class DefaultMod implements
                 .create();
 
         // Add the event
-        BaseMod.addEvent(eventParams);
+        //BaseMod.addEvent(eventParams);
 
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
