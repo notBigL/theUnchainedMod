@@ -178,8 +178,8 @@
   },
   "theUnchainedMod:EndlessPatience": {
     "NAME": "Endless Patience",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. All theunchainedmod:Relayed_Damage can be theunchainedmod:relayed again.",
-    "UPGRADE_DESCRIPTION": "Innate. NL theunchainedmod:Relay !M! damage. All theunchainedmod:Relayed_Damage can be theunchainedmod:relayed again."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. theunchainedmod:Relayed_Damage can be theunchainedmod:relayed again.",
+    "UPGRADE_DESCRIPTION": "Innate. NL theunchainedmod:Relay !M! damage. theunchainedmod:Relayed_Damage can be theunchainedmod:relayed again."
   },
   "theUnchainedMod:RoutinePunch": {
     "NAME": "Routine Punch",
