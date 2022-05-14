@@ -46,6 +46,7 @@ public class OiledChains extends CustomRelic {
 
     public void onVictory() {
         this.counter = 0;
+        this.stopPulse();
         this.grayscale = false;
     }
 
