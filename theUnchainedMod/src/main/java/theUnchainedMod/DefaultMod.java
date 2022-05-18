@@ -379,6 +379,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new BootKnife(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new Carabiner(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new PolishedChains(), TheDefault.Enums.COLOR_GRAY);
 
 
         // This adds a relic to the Shared pool. Every character can find this relic.
@@ -390,7 +391,8 @@ public class DefaultMod implements
         UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
         UnlockTracker.markRelicAsSeen(BootKnife.ID);
         UnlockTracker.markRelicAsSeen(HeartOfTheUnderdog.ID);
-        //UnlockTracker.markRelicAsSeen(Carabiner.ID);
+        UnlockTracker.markRelicAsSeen(Carabiner.ID);
+        UnlockTracker.markRelicAsSeen(PolishedChains.ID);
         logger.info("Done adding relics!");
     }
 

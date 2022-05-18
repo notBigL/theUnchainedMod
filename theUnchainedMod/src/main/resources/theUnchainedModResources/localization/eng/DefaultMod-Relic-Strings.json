@@ -58,5 +58,12 @@
     "DESCRIPTIONS": [
       "Chains no longer wear off at the end of turn."
     ]
+  },
+  "theUnchainedMod:PolishedChains": {
+    "NAME": "Polished Chains",
+    "FLAVOR": "They are unbelievably soft.",
+    "DESCRIPTIONS": [
+      "Replaces #yOiled #yChains. Every seventh card you play each combat costs zero."
+    ]
   }
 }
