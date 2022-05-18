@@ -42,7 +42,7 @@ public class ChainAction extends AbstractGameAction {
                 case "liberation":
                     this.addToBot(finishedChainAction);
                     player.powers.remove(chainPower);
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player)));
+                    gainMomentumAfterFinishing();
                     this.isDone = true;
                     break;
                 case "link":
@@ -50,7 +50,7 @@ public class ChainAction extends AbstractGameAction {
                     if (chainPower.amount == 0) {
                         this.addToBot(finishedChainAction);
                         player.powers.remove(chainPower);
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player)));
+                        gainMomentumAfterFinishing();
                     }
                     chainPower.updateDescription();
                     this.isDone = true;
@@ -62,11 +62,20 @@ public class ChainAction extends AbstractGameAction {
                     if (chainPower.amount == 0) {
                         this.addToBot(finishedChainAction);
                         player.powers.remove(chainPower);
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player)));
+                        gainMomentumAfterFinishing();
                     }
                     chainPower.updateDescription();
                     this.isDone = true;
                     break;
+            }
+        }
+    }
+
+    private void gainMomentumAfterFinishing() {
+        if (player.hasPower("theUnchainedMod:FluidMovementPower")) {
+            int momentumAmount = player.getPower("theUnchainedMod:FluidMovementPower").amount;
+            if (momentumAmount > 0) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, momentumAmount)));
             }
         }
     }

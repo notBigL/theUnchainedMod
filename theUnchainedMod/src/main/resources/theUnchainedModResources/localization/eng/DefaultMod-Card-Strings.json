@@ -226,9 +226,9 @@
     "DESCRIPTION": "Draw !M! cards. Remove your Weak, Frail and Vulnerable. Gain [E] for every Debuff removed. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. Remove ALL your debuffs. Gain [E] for every Debuff removed. NL Exhaust."
   },
-  "theUnchainedMod:BattleScars": {
-    "NAME": "Battle Scars",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Toughness. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! Dexterity."
+  "theUnchainedMod:Instincts": {
+    "NAME": "Instincts",
+    "DESCRIPTION": "Finishing a theunchainedmod:Chain gives !M! theunchainedmod:Momentum. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! Dexterity."
   },
   "theUnchainedMod:Burnish": {
     "NAME": "Burnish",

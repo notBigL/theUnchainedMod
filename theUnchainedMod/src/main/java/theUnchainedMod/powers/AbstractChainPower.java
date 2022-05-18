@@ -90,8 +90,13 @@ public class AbstractChainPower extends AbstractPower {
                 return;
             }
             AbstractDungeon.actionManager.addToBottom(this.finishedChainAction);
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new MomentumPower(player)));
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            if (player.hasPower("theUnchainedMod:FluidMovementPower")) {
+                int momentumGain = player.getPower("theUnchainedMod:FluidMovementPower").amount;
+                if (momentumGain > 0) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, momentumGain)));
+                }
+            }
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, this));
         }
     }
 }
