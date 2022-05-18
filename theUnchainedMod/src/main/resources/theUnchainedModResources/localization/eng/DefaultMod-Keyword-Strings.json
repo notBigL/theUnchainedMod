@@ -8,7 +8,7 @@
       "chain:",
       "chain."
     ],
-    "DESCRIPTION": "Playing enough Cards with the same Type will finish Chain and unlock the specified Effect. Finishing a Chain applies momentum. Chains wear off at the end of turn."
+    "DESCRIPTION": "Playing enough Cards with the same Type will finish Chain and unlock the specified Effect. Chains wear off at the end of turn."
   },
   {
     "PROPER_NAME": "Relay",
