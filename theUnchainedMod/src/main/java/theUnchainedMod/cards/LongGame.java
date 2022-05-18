@@ -23,7 +23,7 @@ public class LongGame extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BLOCK = 16;
+    private static final int BLOCK = 10;
     private static final int UPGRADE_PLUS_BLOCK = 4;
     private static final int MAGIC_NUMBER = 5;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
