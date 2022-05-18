@@ -387,5 +387,9 @@
     "NAME": "Grasp Into Future",
     "DESCRIPTION": "Copy a card and put the copy on top of your draw pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Copy a card two times and put the copies on top of your draw pile. NL Exhaust."
+  },
+  "theUnchainedMod:SpinningWheel": {
+    "NAME": "Spinning Wheel",
+    "DESCRIPTION": "Deal !D! damage. Gain !B! Block. !theUnchainedMod:SecondMagic! theunchainedmod:Chain: gain !M! theunchainedmod:Momentum."
   }
 }

@@ -344,5 +344,14 @@
       "If you play #b",
       " more Skills this turn, lose ALL your Energy."
     ]
+  },
+  "theUnchainedMod:SpinningWheelPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this turn, gain #y",
+      " Momentum.",
+      "If you play #b",
+      " more Attacks this turn, gain #y"
+    ]
   }
 }
