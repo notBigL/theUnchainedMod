@@ -9,13 +9,14 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class SliceThroughAction extends AbstractGameAction {
 
-    private DamageInfo info;
-    private int amount;
-    private AbstractPlayer player;
+    private final DamageInfo info;
+    private final int amount;
+    private final AbstractPlayer player;
 
 
     public SliceThroughAction(AbstractCreature target, DamageInfo info, int vulnAmount, AbstractPlayer p) {
@@ -32,7 +33,7 @@ public class SliceThroughAction extends AbstractGameAction {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.NONE));
             this.target.damage(this.info);
             if (!((((AbstractMonster) this.target).isDying || this.target.currentHealth <= 0) && !this.target.halfDead)) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new VulnerablePower(player, amount, false)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new WeakPower(player, amount, false)));
             }
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();
