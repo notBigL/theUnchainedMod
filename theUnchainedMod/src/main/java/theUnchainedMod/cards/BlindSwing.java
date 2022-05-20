@@ -25,7 +25,7 @@ public class BlindSwing extends AbstractDynamicCard {
     private static final int DAMAGE = 4;
     private static final int UPGRADE_PLUS_DMG = 2;
     private static final int MAGIC_NUMBER = 2;
-    private static final int SECOND_MAGIC_NUMBER = 2;
+    private static final int SECOND_MAGIC_NUMBER = 1;
 
     public BlindSwing() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
