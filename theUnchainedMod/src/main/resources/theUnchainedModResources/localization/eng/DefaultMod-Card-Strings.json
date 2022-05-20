@@ -228,7 +228,7 @@
   },
   "theUnchainedMod:Instincts": {
     "NAME": "Instincts",
-    "DESCRIPTION": "Finishing a theunchainedmod:Chain gives !M! theunchainedmod:Momentum. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! Dexterity."
+    "DESCRIPTION": "Finishing a theunchainedmod:Chain gives !M! theunchainedmod:Momentum."
   },
   "theUnchainedMod:Burnish": {
     "NAME": "Burnish",
