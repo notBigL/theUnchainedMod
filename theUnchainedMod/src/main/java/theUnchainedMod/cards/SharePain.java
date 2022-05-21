@@ -1,13 +1,13 @@
 package theUnchainedMod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.MultiAttackAction;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.patches.RelayedDmgSum;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -21,29 +21,49 @@ public class SharePain extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 2;
-    private static final int MAGIC_NUMBER = 2;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
+    private static final int DAMAGE = 0;
+    private static final int SECOND_MAGIC_NUMBER = 2;
+    private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 1;
 
     public SharePain() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        baseDamage = damage = 0;
+        defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
     }
 
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
+            upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
         }
     }
 
     @Override
+    public void applyPowers() {
+        int realBaseDamage = this.baseDamage;
+        this.baseMagicNumber = RelayedDmgSum.relayedDamageSum.get(AbstractDungeon.actionManager);
+        this.baseDamage += this.baseMagicNumber;
+        super.applyPowers();
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        this.baseMagicNumber = RelayedDmgSum.relayedDamageSum.get(AbstractDungeon.actionManager);
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += this.baseMagicNumber;
+        super.calculateCardDamage(mo);
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+    }
+
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(p.hasPower("theUnchainedMod:RelayedDamagePower")) {
-            int relayedDamagePowerAmount = p.getPower("theUnchainedMod:RelayedDamagePower").amount;
-            for (int i = 0; i < this.magicNumber; i++) {
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, relayedDamagePowerAmount, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-            }
-        }
+        this.damage += this.magicNumber;
+        this.calculateCardDamage(m);
+        AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(defaultSecondMagicNumber, m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
+        //AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE, true));
     }
 }

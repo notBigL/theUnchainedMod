@@ -240,7 +240,7 @@
   },
   "theUnchainedMod:SharePain": {
     "NAME": "Share Pain",
-    "DESCRIPTION": "Deal damage equal to your theunchainedmod:Relayed_Damage !M! times."
+    "DESCRIPTION": "Deal !D! damage !theUnchainedMod:SecondMagic! times. NL Damage is equal to ALL theunchainedmod:Relayed_Damage you gained this combat."
   },
   "theUnchainedMod:DiveIntoFray": {
     "NAME": "Dive Into Fray",

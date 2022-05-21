@@ -3,6 +3,7 @@ package theUnchainedMod.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.patches.RelayedDamageField;
+import theUnchainedMod.patches.RelayedDmgSum;
 import theUnchainedMod.util.TextureLoader;
 
 public class RelayedDamagePower extends AbstractPower {
@@ -46,6 +48,9 @@ public class RelayedDamagePower extends AbstractPower {
         this.region128 = new TextureAtlas.AtlasRegion(texture128, 0, 0, 128, 128);
         this.region48 = new TextureAtlas.AtlasRegion(texture48, 0, 0, 48, 48);
 
+        GameActionManager actionManager = AbstractDungeon.actionManager;
+        RelayedDmgSum.relayedDamageSum.set(actionManager, RelayedDmgSum.relayedDamageSum.get(actionManager) + amount);
+
         updateDescription();
     }
 
@@ -61,7 +66,7 @@ public class RelayedDamagePower extends AbstractPower {
     }
 
     public void atStartOfTurn() {
-        if(this.amount == 0) {
+        if (this.amount == 0) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }
