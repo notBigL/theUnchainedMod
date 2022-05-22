@@ -53,7 +53,7 @@
   "theUnchainedMod:Unshackling": {
     "NAME": "Unshackling",
     "DESCRIPTION": "Whenever you play a card, Upgrade it for the rest of combat.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, Upgrade it, Upgrade it for the rest of combat."
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, Upgrade it for the rest of combat."
   },
   "theUnchainedMod:ManacleWhip": {
     "NAME": "Manacle Whip",

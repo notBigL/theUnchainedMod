@@ -327,10 +327,10 @@ public class DefaultMod implements
 
         // Create a new event builder
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
-        AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
-                .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
-                .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
-                .create();
+        //AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
+        //        .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
+        //        .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
+        //        .create();
 
         // Add the event
         //BaseMod.addEvent(eventParams);
