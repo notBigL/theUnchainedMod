@@ -42,6 +42,7 @@ public class ChainAction extends AbstractGameAction {
                 case "liberation":
                     this.addToBot(finishedChainAction);
                     player.powers.remove(chainPower);
+                    checkForInertia();
                     gainMomentumAfterFinishing();
                     this.isDone = true;
                     break;
@@ -50,6 +51,7 @@ public class ChainAction extends AbstractGameAction {
                     if (chainPower.amount == 0) {
                         this.addToBot(finishedChainAction);
                         player.powers.remove(chainPower);
+                        checkForInertia();
                         gainMomentumAfterFinishing();
                     }
                     chainPower.updateDescription();
@@ -62,6 +64,7 @@ public class ChainAction extends AbstractGameAction {
                     if (chainPower.amount == 0) {
                         this.addToBot(finishedChainAction);
                         player.powers.remove(chainPower);
+                        checkForInertia();
                         gainMomentumAfterFinishing();
                     }
                     chainPower.updateDescription();
@@ -77,6 +80,12 @@ public class ChainAction extends AbstractGameAction {
             if (momentumAmount > 0) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, momentumAmount)));
             }
+        }
+    }
+
+    private void checkForInertia() {
+        if(player.hasPower("theUnchainedMod:LawOfInertiaPower")) {
+            player.getPower("theUnchainedMod:LawOfInertiaPower").onSpecificTrigger();
         }
     }
 }

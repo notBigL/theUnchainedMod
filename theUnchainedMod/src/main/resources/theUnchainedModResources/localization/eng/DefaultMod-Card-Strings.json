@@ -361,7 +361,7 @@
   },
   "theUnchainedMod:LawOfInertia": {
     "NAME": "Law Of Inertia",
-    "DESCRIPTION": "At the start of each turn, gain a 1 theunchainedmod:Chain, that gives !M! [E]."
+    "DESCRIPTION": "At the start of each turn, lose !M! Strength and Dexterity. Whenever you finish a theunchainedmod:Chain gain !M! Strength and Dexterity."
   },
   "theUnchainedMod:Swathe": {
     "NAME": "Swathe",

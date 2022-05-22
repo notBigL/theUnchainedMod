@@ -90,6 +90,9 @@ public class AbstractChainPower extends AbstractPower {
                 return;
             }
             AbstractDungeon.actionManager.addToBottom(this.finishedChainAction);
+            if(player.hasPower("theUnchainedMod:LawOfInertiaPower")) {
+                player.getPower("theUnchainedMod:LawOfInertiaPower").onSpecificTrigger();
+            }
             if (player.hasPower("theUnchainedMod:FluidMovementPower")) {
                 int momentumGain = player.getPower("theUnchainedMod:FluidMovementPower").amount;
                 if (momentumGain > 0) {

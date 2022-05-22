@@ -306,8 +306,9 @@
   "theUnchainedMod:LawOfInertiaPower": {
     "NAME": "Inertia",
     "DESCRIPTIONS": [
-      "At the start of each turn, gain a Power Chain that gives ",
-      " Energy."
+      "At the start of each turn, lose ",
+      " Strength and Dexterity.",
+      " Whenever you finish a Chain, gain "
     ]
   },
   "theUnchainedMod:InertiaPower": {
