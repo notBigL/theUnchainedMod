@@ -325,8 +325,7 @@
   },
   "theUnchainedMod:Pirouette": {
     "NAME": "Pirouette",
-    "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Weak. NL Gain !M! theunchainedmod:Momentum. NL Add a Swirl into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Weak. NL Gain !M! theunchainedmod:Momentum. NL Add a Swirl into your hand."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Momentum. NL Add a Swirl into your hand. NL Exhaust."
   },
   "theUnchainedMod:FreeForm": {
     "NAME": "Free Form",
