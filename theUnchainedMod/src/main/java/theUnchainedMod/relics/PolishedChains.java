@@ -49,10 +49,6 @@ public class PolishedChains extends CustomRelic {
         this.grayscale = false;
     }
 
-    public void atTurnStart() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 1, false)));
-        this.flash();
-    }
 
     @Override
     public boolean canSpawn() {
