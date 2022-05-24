@@ -25,10 +25,10 @@ public class Hobbles extends AbstractDynamicCard {
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
 
-    private static final int COST = 0;
-    private static final int DAMAGE = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int MAGIC_NUMBER = 1;
+    private static final int COST = 1;
+    private static final int DAMAGE = 9;
+    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int MAGIC_NUMBER = 2;
 
     public Hobbles() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
