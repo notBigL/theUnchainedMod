@@ -115,7 +115,7 @@ public class DefaultMod implements
     private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/card_default_gray_orb.png";
 
     // Character assets
-    private static final String THE_DEFAULT_BUTTON = "theUnchainedModResources/images/charSelect/DefaultCharacterButton.png";
+    private static final String THE_DEFAULT_BUTTON = "theUnchainedModResources/images/charSelect/UnchainedCharacterButton.png";
     private static final String THE_DEFAULT_PORTRAIT = "theUnchainedModResources/images/charSelect/DefaultCharacterPortraitBG.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "theUnchainedModResources/images/char/defaultCharacter/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "theUnchainedModResources/images/char/defaultCharacter/shoulder2.png";
