@@ -84,8 +84,8 @@ public class ChainAction extends AbstractGameAction {
     }
 
     private void checkForInertia() {
-        if(player.hasPower("theUnchainedMod:LawOfInertiaPower")) {
-            player.getPower("theUnchainedMod:LawOfInertiaPower").onSpecificTrigger();
+        if(player.hasPower("theUnchainedMod:AccelerationPower")) {
+            player.getPower("theUnchainedMod:AccelerationPower").onSpecificTrigger();
         }
     }
 }

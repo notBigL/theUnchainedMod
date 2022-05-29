@@ -307,8 +307,14 @@
     "NAME": "Inertia",
     "DESCRIPTIONS": [
       "At the start of each turn, lose ",
-      " Strength and Dexterity.",
-      " Whenever you finish a Chain, gain "
+      " Strength and Dexterity."
+    ]
+  },
+  "theUnchainedMod:AccelerationPower": {
+    "NAME": "Accelerate",
+    "DESCRIPTIONS": [
+      " Whenever you finish a Chain, gain ",
+      " Strength and Dexterity."
     ]
   },
   "theUnchainedMod:InertiaPower": {
