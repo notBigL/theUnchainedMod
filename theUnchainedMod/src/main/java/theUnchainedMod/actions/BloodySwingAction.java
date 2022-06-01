@@ -26,7 +26,7 @@ public class BloodySwingAction extends AbstractGameAction {
         if (player.hasPower("theUnchainedMod:RelayedDamagePower")) {
             AbstractPower relayedDamage = player.getPower("theUnchainedMod:RelayedDamagePower");
             if (this.amount < relayedDamage.amount) {
-                relayedDamage.amount -= this.amount;
+                relayedDamage.reducePower(this.amount);
                 damage = this.amount;
             } else {
                 damage = relayedDamage.amount;

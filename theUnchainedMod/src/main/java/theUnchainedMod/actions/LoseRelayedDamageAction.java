@@ -18,7 +18,7 @@ public class LoseRelayedDamageAction extends AbstractGameAction {
         if (player.hasPower("theUnchainedMod:RelayedDamagePower")) {
             AbstractPower relayedDamage = player.getPower("theUnchainedMod:RelayedDamagePower");
             if (this.amount < relayedDamage.amount) {
-                relayedDamage.amount -= this.amount;
+                relayedDamage.reducePower(this.amount);
             } else {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, relayedDamage));
             }

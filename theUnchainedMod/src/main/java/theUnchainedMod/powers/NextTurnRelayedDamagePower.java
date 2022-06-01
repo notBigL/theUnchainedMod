@@ -43,13 +43,7 @@ public class NextTurnRelayedDamagePower extends AbstractPower {
     }
 
     public void atStartOfTurnPostDraw() {
-        int toughnessAmount = 0;
-        if (this.owner.hasPower("theUnchainedMod:ToughnessPower")) {
-            toughnessAmount = this.owner.getPower("theUnchainedMod:ToughnessPower").amount;
-        }
-        if (this.amount > toughnessAmount) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new RelayedDamagePower(this.owner, this.owner, this.amount)));
-        }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new RelayedDamagePower(this.owner, this.owner, this.amount)));
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 }

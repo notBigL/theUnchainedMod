@@ -32,15 +32,7 @@ public class RelayedDamagePower extends AbstractPower {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
-        int amountAfterToughness = amount;
-        if (this.owner.hasPower("theUnchainedMod:ToughnessPower")) {
-            int toughnessAmount = this.owner.getPower("theUnchainedMod:ToughnessPower").amount;
-            amountAfterToughness -= toughnessAmount;
-        }
-        if (amountAfterToughness < 0) {
-            amountAfterToughness = 0;
-        }
-        this.amount = amountAfterToughness;
+        this.amount = amount;
         this.source = source;
         type = PowerType.DEBUFF;
         isTurnBased = false;
