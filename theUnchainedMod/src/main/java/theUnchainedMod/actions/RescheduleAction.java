@@ -9,6 +9,7 @@ import theUnchainedMod.powers.NextTurnRelayedDamagePower;
 //TODO fix it so it works with new Relayed Damage
 public class RescheduleAction extends AbstractGameAction {
     private static final String relayedDamage = "theUnchainedMod:RelayedDamagePower";
+    private static final String nextTurnRelayedDamage = "theUnchainedMod:nextTurnRelayedDamagePower";
     private final AbstractPlayer player;
 
     public RescheduleAction(AbstractPlayer p) {
@@ -17,6 +18,9 @@ public class RescheduleAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        if(player.hasPower(nextTurnRelayedDamage)) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, nextTurnRelayedDamage));
+        }
         if(player.hasPower(relayedDamage)) {
             int rescheduleAmount = player.getPower(relayedDamage).amount;
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, relayedDamage));

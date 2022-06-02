@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
 
 public class LoseRelayedDamageAction extends AbstractGameAction {
 
@@ -15,12 +16,23 @@ public class LoseRelayedDamageAction extends AbstractGameAction {
     @Override
     public void update() {
         AbstractPlayer player = AbstractDungeon.player;
+        int restAmount = this.amount;
         if (player.hasPower("theUnchainedMod:RelayedDamagePower")) {
-            AbstractPower relayedDamage = player.getPower("theUnchainedMod:RelayedDamagePower");
-            if (this.amount < relayedDamage.amount) {
-                relayedDamage.reducePower(this.amount);
+            AbstractPower relayedDamagePower = player.getPower("theUnchainedMod:RelayedDamagePower");
+            if (this.amount < relayedDamagePower.amount) {
+                relayedDamagePower.reducePower(this.amount);
+                restAmount = 0;
             } else {
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, relayedDamage));
+                restAmount -= relayedDamagePower.amount;
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, relayedDamagePower));
+            }
+        }
+        if (restAmount > 0 && player.hasPower("theUnchainedMod:NextTurnRelayedDamagePower")) {
+            AbstractPower nextTurnRelayedDamagePower = player.getPower("theUnchainedMod:NextTurnRelayedDamagePower");
+            if (restAmount < nextTurnRelayedDamagePower.amount) {
+                nextTurnRelayedDamagePower.reducePower(restAmount);
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, nextTurnRelayedDamagePower));
             }
         }
         this.isDone = true;

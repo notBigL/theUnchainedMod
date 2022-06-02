@@ -54,6 +54,18 @@ public class RelayedDamagePower extends AbstractPower {
         }
     }
 
+    public void reducePower(int reduceAmount) {
+        if (this.amount - reduceAmount <= 0) {
+            this.fontScale = 8.0F;
+            this.amount = 0;
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        } else {
+            this.fontScale = 8.0F;
+            this.amount -= reduceAmount;
+        }
+        updateDescription();
+    }
+
     public void atStartOfTurn() {
         if (this.amount == 0) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));

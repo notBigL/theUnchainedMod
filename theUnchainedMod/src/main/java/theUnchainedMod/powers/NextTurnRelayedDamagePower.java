@@ -43,6 +43,18 @@ public class NextTurnRelayedDamagePower extends AbstractPower {
         updateDescription();
     }
 
+    public void reducePower(int reduceAmount) {
+        if (this.amount - reduceAmount <= 0) {
+            this.fontScale = 8.0F;
+            this.amount = 0;
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        } else {
+            this.fontScale = 8.0F;
+            this.amount -= reduceAmount;
+        }
+        updateDescription();
+    }
+
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
