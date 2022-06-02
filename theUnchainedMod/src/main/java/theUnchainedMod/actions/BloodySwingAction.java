@@ -23,17 +23,30 @@ public class BloodySwingAction extends AbstractGameAction {
     @Override
     public void update() {
         int damage = 0;
+        int restAmount = this.amount;
         if (player.hasPower("theUnchainedMod:RelayedDamagePower")) {
             AbstractPower relayedDamage = player.getPower("theUnchainedMod:RelayedDamagePower");
             if (this.amount < relayedDamage.amount) {
                 relayedDamage.reducePower(this.amount);
                 damage = this.amount;
+                restAmount = 0;
             } else {
                 damage = relayedDamage.amount;
+                restAmount -= relayedDamage.amount;
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, relayedDamage));
             }
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(player, damage, DamageInfo.DamageType.NORMAL), AttackEffect.FIRE));
         }
+        if (restAmount > 0 && player.hasPower("theUnchainedMod:NextTurnRelayedDamagePower")) {
+            AbstractPower nextTurnRelayedDamage = player.getPower("theUnchainedMod:NextTurnRelayedDamagePower");
+            if (restAmount < nextTurnRelayedDamage.amount) {
+                nextTurnRelayedDamage.reducePower(restAmount);
+                damage = this.amount;
+            } else {
+                damage += nextTurnRelayedDamage.amount;
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, nextTurnRelayedDamage));
+            }
+        }
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(player, damage, DamageInfo.DamageType.NORMAL), AttackEffect.FIRE));
         this.isDone = true;
     }
 }
