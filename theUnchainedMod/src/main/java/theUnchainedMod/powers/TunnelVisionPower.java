@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.ChainAction;
+import theUnchainedMod.actions.LoseRelayedDamageAction;
 import theUnchainedMod.patches.RelayedDamageField;
 import theUnchainedMod.util.TextureLoader;
 
@@ -48,12 +49,8 @@ public class TunnelVisionPower extends AbstractPower {
     }
 
     public void onUseCard(AbstractCard c, UseCardAction action) {
-        if(this.owner.hasPower("theUnchainedMod:RelayedDamagePower") && c.type == AbstractCard.CardType.ATTACK) {
-            AbstractPower relayedDamage = this.owner.getPower("theUnchainedMod:RelayedDamagePower");
-            relayedDamage.amount -= this.amount;
-            if(relayedDamage.amount <= 0) {
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, relayedDamage));
-            }
+        if (this.owner.hasPower("theUnchainedMod:RelayedDamagePower") && c.type == AbstractCard.CardType.ATTACK) {
+            AbstractDungeon.actionManager.addToBottom(new LoseRelayedDamageAction(this.amount));
         }
     }
 }
