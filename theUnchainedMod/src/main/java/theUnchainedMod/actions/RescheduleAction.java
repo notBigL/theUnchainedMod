@@ -6,10 +6,10 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theUnchainedMod.powers.NextTurnRelayedDamagePower;
-//TODO fix it so it works with new Relayed Damage
+
 public class RescheduleAction extends AbstractGameAction {
     private static final String relayedDamage = "theUnchainedMod:RelayedDamagePower";
-    private static final String nextTurnRelayedDamage = "theUnchainedMod:nextTurnRelayedDamagePower";
+    private static final String nextTurnRelayedDamage = "theUnchainedMod:NextTurnRelayedDamagePower";
     private final AbstractPlayer player;
 
     public RescheduleAction(AbstractPlayer p) {
@@ -18,10 +18,10 @@ public class RescheduleAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if(player.hasPower(nextTurnRelayedDamage)) {
+        if (player.hasPower(nextTurnRelayedDamage)) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, nextTurnRelayedDamage));
         }
-        if(player.hasPower(relayedDamage)) {
+        if (player.hasPower(relayedDamage)) {
             int rescheduleAmount = player.getPower(relayedDamage).amount;
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, relayedDamage));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new NextTurnRelayedDamagePower(player, player, rescheduleAmount)));
