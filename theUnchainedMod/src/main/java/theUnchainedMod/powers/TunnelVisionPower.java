@@ -49,7 +49,7 @@ public class TunnelVisionPower extends AbstractPower {
     }
 
     public void onUseCard(AbstractCard c, UseCardAction action) {
-        if (this.owner.hasPower("theUnchainedMod:RelayedDamagePower") && c.type == AbstractCard.CardType.ATTACK) {
+        if (c.type == AbstractCard.CardType.ATTACK) {
             AbstractDungeon.actionManager.addToBottom(new LoseRelayedDamageAction(this.amount));
         }
     }
