@@ -62,7 +62,7 @@ public class RelayPower extends AbstractPower {
                 relayedDamage = this.amount;
                 this.amount = 0;
             }
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new RelayedDamagePower(this.owner, this.owner, relayedDamage)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new NextTurnRelayedDamagePower(this.owner, this.owner, relayedDamage)));
         }
         if (this.amount == 0) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));

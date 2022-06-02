@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theUnchainedMod.powers.NextTurnRelayedDamagePower;
-
+//TODO fix it so it works with new Relayed Damage
 public class RescheduleAction extends AbstractGameAction {
     private static final String relayedDamage = "theUnchainedMod:RelayedDamagePower";
     private final AbstractPlayer player;

@@ -40,9 +40,6 @@ public class RelayedDamagePower extends AbstractPower {
         this.region128 = new TextureAtlas.AtlasRegion(texture128, 0, 0, 128, 128);
         this.region48 = new TextureAtlas.AtlasRegion(texture48, 0, 0, 48, 48);
 
-        GameActionManager actionManager = AbstractDungeon.actionManager;
-        RelayedDmgSum.relayedDamageSum.set(actionManager, RelayedDmgSum.relayedDamageSum.get(actionManager) + amount);
-
         updateDescription();
     }
 
