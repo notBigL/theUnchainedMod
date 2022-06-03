@@ -309,7 +309,7 @@
   },
   "theUnchainedMod:Hobbles": {
     "NAME": "Hobbles",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Apply !M! Weak. NL Retain. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Apply !M! Weak. NL Retain. NL Exhaust."
   },
   "theUnchainedMod:WeatherbeatenSkin": {
     "NAME": "Weatherbeaten Skin",
@@ -347,9 +347,9 @@
     "DESCRIPTION": "Double your theunchainedmod:Relay. Double the Block of ALL enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Double your theunchainedmod:Relay. Double the Block of ALL enemies."
   },
-  "theUnchainedMod:CullArmor": {
-    "NAME": "Cull Armor",
-    "DESCRIPTION": "ALL enemies lose HP equal to their Block. NL ALL enemies lose their Block. NL ALL enemies become Vulnerable."
+  "theUnchainedMod:Suffocate": {
+    "NAME": "Suffocate",
+    "DESCRIPTION": "ALL enemies lose HP equal to double their Block."
   },
   "theUnchainedMod:EscapeRope": {
     "NAME": "Escape Rope",

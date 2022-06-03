@@ -10,10 +10,10 @@ import theUnchainedMod.characters.TheDefault;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class CullArmor extends AbstractDynamicCard {
+public class Suffocate extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(CullArmor.class.getSimpleName());
-    public static final String IMG = makeCardPath("CullArmor.png");
+    public static final String ID = DefaultMod.makeID(Suffocate.class.getSimpleName());
+    public static final String IMG = makeCardPath("Suffocate.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
@@ -23,7 +23,7 @@ public class CullArmor extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 1;
 
 
-    public CullArmor() {
+    public Suffocate() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
@@ -39,6 +39,5 @@ public class CullArmor extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new CullArmorAction());
-        AbstractDungeon.actionManager.addToBottom(new AllEnemiesVulnerableAction(magicNumber));
     }
 }

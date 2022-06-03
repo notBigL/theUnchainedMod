@@ -15,10 +15,9 @@ public class CullArmorAction extends AbstractGameAction {
     public void update() {
         AbstractPlayer player = AbstractDungeon.player;
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            int blockOfEnemy = mo.currentBlock;
-            if (blockOfEnemy > 0) {
-                this.addToBot(new RemoveAllBlockAction(mo, player));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, new DamageInfo(player, blockOfEnemy, DamageInfo.DamageType.HP_LOSS), AttackEffect.FIRE));
+            int hpLossForEnemy = mo.currentBlock * 2;
+            if (hpLossForEnemy > 0) {
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, new DamageInfo(player, hpLossForEnemy, DamageInfo.DamageType.HP_LOSS), AttackEffect.FIRE));
             }
         }
         this.isDone = true;
