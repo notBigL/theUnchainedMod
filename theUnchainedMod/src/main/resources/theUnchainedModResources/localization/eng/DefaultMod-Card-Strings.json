@@ -333,9 +333,9 @@
     "DESCRIPTION": "Ethereal. NL ALL Chains are finished instantly.",
     "UPGRADE_DESCRIPTION": "ALL Chains are finished instantly."
   },
-  "theUnchainedMod:NonDominantFoot": {
-    "NAME": "Non-dominant Foot",
-    "DESCRIPTION": "Gain !M! Block for every Frail you have."
+  "theUnchainedMod:Wink": {
+    "NAME": "Wink",
+    "DESCRIPTION": "Enemy gains !M! Block. NL Draw !theUnchainedMod:SecondMagic! cards."
   },
   "theUnchainedMod:Spin": {
     "NAME": "Spin",
