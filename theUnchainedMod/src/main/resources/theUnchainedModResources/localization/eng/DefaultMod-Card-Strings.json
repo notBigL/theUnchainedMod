@@ -309,8 +309,7 @@
   },
   "theUnchainedMod:Hobbles": {
     "NAME": "Hobbles",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. Apply !M! Vulnerable. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. Apply !M! Vulnerable. NL Retain. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Deal !D! damage. !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Apply !M! Weak. NL Retain. NL Exhaust."
   },
   "theUnchainedMod:WeatherbeatenSkin": {
     "NAME": "Weatherbeaten Skin",

@@ -367,5 +367,14 @@
       "Everytime you finish a Chain, gain #y",
       " Momentum."
     ]
+  },
+  "theUnchainedMod:HobblesPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this Turn, apply #y",
+      " Weak to the enemy.",
+      "If you play #b",
+      " more Attacks this Turn, apply #y"
+    ]
   }
 }
