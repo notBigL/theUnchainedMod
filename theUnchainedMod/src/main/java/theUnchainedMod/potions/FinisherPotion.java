@@ -34,11 +34,9 @@ public class FinisherPotion extends CustomPotion {
     public void use(AbstractCreature target) {
         target = AbstractDungeon.player;
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            for (int i = 0; i < potency; i++) {
-                AbstractCard liberation = new Liberation();
-                liberation.setCostForTurn(0);
-                this.addToBot(new MakeTempCardInHandAction(liberation.makeStatEquivalentCopy(), this.potency));
-            }
+            AbstractCard liberation = new Liberation();
+            liberation.setCostForTurn(0);
+            this.addToBot(new MakeTempCardInHandAction(liberation.makeStatEquivalentCopy(), this.potency));
         }
     }
 
@@ -52,8 +50,7 @@ public class FinisherPotion extends CustomPotion {
         return 1;
     }
 
-    public void upgradePotion()
-    {
+    public void upgradePotion() {
         potency += 1;
         tips.clear();
         tips.add(new PowerTip(name, description));
