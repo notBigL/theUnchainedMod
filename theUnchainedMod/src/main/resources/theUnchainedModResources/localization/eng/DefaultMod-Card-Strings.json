@@ -137,7 +137,7 @@
   },
   "theUnchainedMod:MorningStar": {
     "NAME": "Morning Star",
-    "DESCRIPTION": "Costs 1 less [E] for every 2-cost card played this combat. Enemy loses !M! HP. Deal !D! damage. NL Set Cost to 4 after playing."
+    "DESCRIPTION": "Costs 1 less [E] for every 2-cost card played this combat. Enemy loses !M! HP. NL Set Cost to 4 after playing."
   },
   "theUnchainedMod:Cruiserweight": {
     "NAME": "Cruiserweight",
@@ -318,7 +318,7 @@
   },
   "theUnchainedMod:GlimpseIntoFuture": {
     "NAME": "Glimpse into Future",
-    "DESCRIPTION": "Gain !B! Block. NL If you end this turn with 1 [E] , gain !M! [E] next turn."
+    "DESCRIPTION": "Gain !B! Block. NL If you end this turn with more than 0 [E] , gain !M! [E] next turn."
   },
   "theUnchainedMod:LongGame": {
     "NAME": "Long Game",

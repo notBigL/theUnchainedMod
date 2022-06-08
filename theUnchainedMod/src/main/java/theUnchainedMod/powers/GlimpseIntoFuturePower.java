@@ -51,7 +51,7 @@ public class GlimpseIntoFuturePower extends AbstractPower {
 
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
-            if (EnergyPanel.getCurrentEnergy() == 1) {
+            if (EnergyPanel.getCurrentEnergy() >= 1) {
                 energyDepleted = true;
                 updateDescription();
             }

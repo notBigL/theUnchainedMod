@@ -22,9 +22,9 @@ public class SingleOut extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 12;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int UPGRADE_PLUS_DMG = 4;
     private static final int MAGIC_NUMBER = 3;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = -1;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
 
     public SingleOut() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
