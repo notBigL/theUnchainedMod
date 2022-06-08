@@ -22,7 +22,7 @@ public class DiamondSaw extends AbstractDynamicCard {
 
     private static final int COST = 2;
     private static final int DAMAGE = 25;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int UPGRADE_PLUS_DMG = 8;
 
     public DiamondSaw() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
