@@ -199,8 +199,8 @@
   },
   "theUnchainedMod:Swirl": {
     "NAME": "Swirl",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Retain. theunchainedmod:Link. Gain 1 theunchainedmod:Full_Spin. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Retain. theunchainedmod:Link. Gain 1 theunchainedmod:Momentum and 1 theunchainedmod:Full_Spin. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Retain. Gain 1 theunchainedmod:Full_Spin. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Retain. Gain 1 theunchainedmod:Momentum and 1 theunchainedmod:Full_Spin. Exhaust."
   },
   "theUnchainedMod:PerfectExecution": {
     "NAME": "Perfect Execution",
