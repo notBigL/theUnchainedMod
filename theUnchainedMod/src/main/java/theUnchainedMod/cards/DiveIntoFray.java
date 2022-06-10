@@ -1,5 +1,6 @@
 package theUnchainedMod.cards;
 
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -7,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.patches.RelayedDmgSum;
 import theUnchainedMod.powers.RelayedDamagePower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
@@ -51,5 +53,7 @@ public class DiveIntoFray extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(defaultSecondMagicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RelayedDamagePower(p, p, magicNumber)));
+        GameActionManager actionManager = AbstractDungeon.actionManager;
+        RelayedDmgSum.relayedDamageSum.set(actionManager, RelayedDmgSum.relayedDamageSum.get(actionManager) + magicNumber);
     }
 }
