@@ -203,7 +203,7 @@
     ]
   },
   "theUnchainedMod:GainMomentumEveryTurnPower": {
-    "NAME": "Fluid Movements",
+    "NAME": "Perfect Balance",
     "DESCRIPTIONS": [
       "Gain #y",
       " Momentum every turn."
@@ -274,7 +274,7 @@
   "theUnchainedMod:GlimpseIntoFuturePower": {
     "NAME": "A Glimpse into the Future",
     "DESCRIPTIONS": [
-      "If your Energy is zero at the end of this turn, gain #y",
+      "If you end your turn with more than 0 Energy, gain #y",
       " Energy next turn.",
       "Next turn gain #y",
       " Energy."
