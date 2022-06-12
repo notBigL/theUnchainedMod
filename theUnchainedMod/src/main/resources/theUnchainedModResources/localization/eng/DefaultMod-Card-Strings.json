@@ -322,7 +322,7 @@
   },
   "theUnchainedMod:LongGame": {
     "NAME": "Long Game",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you end this turn with 0 Block, gain !B! Block next turn and draw an additional card."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you are Frail, theunchainedmod:Relay !M! damage again and draw 1 additional card next turn."
   },
   "theUnchainedMod:Pirouette": {
     "NAME": "Pirouette",
