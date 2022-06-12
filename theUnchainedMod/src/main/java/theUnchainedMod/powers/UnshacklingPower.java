@@ -50,7 +50,6 @@ public class UnshacklingPower extends AbstractPower {
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
         AbstractDungeon.actionManager.addToBottom(new UpgradeCardAfterPlayingAction(card, this.amount));
-        this.flash();
     }
 
 }

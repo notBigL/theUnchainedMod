@@ -102,14 +102,13 @@ public class TheDefault extends CustomPlayer {
 
     public TheDefault(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "theUnchainedModResources/images/char/defaultCharacter/orb/vfx.png", null,
-                new SpriterAnimation(
-                        "theUnchainedModResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
+                "theUnchainedModResources/images/char/defaultCharacter/orb/vfx.png", (String)null,
+                (String)null);
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
 
-        initializeClass(null, // required call to load textures and setup energy/loadout.
+        initializeClass(THE_DEFAULT_CHARACTER, // required call to load textures and setup energy/loadout.
                 // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
                 THE_DEFAULT_SHOULDER_2, // campfire pose
                 THE_DEFAULT_SHOULDER_1, // another campfire pose
@@ -121,12 +120,17 @@ public class TheDefault extends CustomPlayer {
 
         // =============== ANIMATIONS =================  
 
-        loadAnimation(
-                THE_DEFAULT_SKELETON_ATLAS,
-                THE_DEFAULT_SKELETON_JSON,
-                1.0f);
-        AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
-        e.setTime(e.getEndTime() * MathUtils.random());
+        //Stuff that is used for the Animation. Kommt dahin wo jetzt die beiden (String) null im super Aufruf von TheDefault sind.
+        //"theUnchainedModResources/images/char/defaultCharacter/orb/vfx.png", null,
+        //        new SpriterAnimation(
+        //                "theUnchainedModResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
+
+        //loadAnimation(
+        //        THE_DEFAULT_SKELETON_ATLAS,
+        //        THE_DEFAULT_SKELETON_JSON,
+        //        1.0f);
+        //AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
+        //e.setTime(e.getEndTime() * MathUtils.random());
 
         // =============== /ANIMATIONS/ =================
 
@@ -201,7 +205,7 @@ public class TheDefault extends CustomPlayer {
     // Ascension 14 or higher. (ironclad loses 5, defect and silent lose 4 hp respectively)
     @Override
     public int getAscensionMaxHPLoss() {
-        return 0;
+        return 5;
     }
 
     // Should return the card color enum to be associated with your character.

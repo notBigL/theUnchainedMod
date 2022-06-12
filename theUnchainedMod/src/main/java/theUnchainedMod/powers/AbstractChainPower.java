@@ -19,6 +19,8 @@ public class AbstractChainPower extends AbstractPower {
     private static final Texture attackTexture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/AttackChain_power128.png");
     private static final Texture skillTexture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/SkillChain_power48.png");
     private static final Texture skillTexture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/SkillChain_power128.png");
+    private static final Texture powerTexture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/PowerChain_power48.png");
+    private static final Texture powerTexture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/PowerChain_power128.png");
     private static int chainIdOffset;
     public final AbstractGameAction finishedChainAction;
     public final AbstractCard.CardType cardType;
@@ -51,6 +53,7 @@ public class AbstractChainPower extends AbstractPower {
                 break;
             case "theUnchainedMod:Liberation":
                 AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, "liberation"));
+                this.flash();
                 break;
             case "theUnchainedMod:RoutinePunch":
             case "theUnchainedMod:RoutineDodge":
@@ -59,7 +62,9 @@ public class AbstractChainPower extends AbstractPower {
                 break;
             default:
                 AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID));
-                this.flash();
+                if(this.cardType == c.type) {
+                    this.flash();
+                }
                 break;
         }
     }
@@ -72,8 +77,8 @@ public class AbstractChainPower extends AbstractPower {
             this.region128 = new TextureAtlas.AtlasRegion(skillTexture128, 0, 0, 128, 128);
             this.region48 = new TextureAtlas.AtlasRegion(skillTexture48, 0, 0, 48, 48);
         } else {
-            this.region128 = new TextureAtlas.AtlasRegion(skillTexture128, 0, 0, 128, 128);
-            this.region48 = new TextureAtlas.AtlasRegion(skillTexture48, 0, 0, 48, 48);
+            this.region128 = new TextureAtlas.AtlasRegion(powerTexture128, 0, 0, 128, 128);
+            this.region48 = new TextureAtlas.AtlasRegion(powerTexture48, 0, 0, 48, 48);
         }
     }
 
