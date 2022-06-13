@@ -7,8 +7,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class StareDownAction extends AbstractGameAction {
 
-    public StareDownAction(int block) {
+    private final boolean upgraded;
+
+    public StareDownAction(int block, boolean upgraded) {
         this.amount = block;
+        this.upgraded = upgraded;
     }
 
     @Override
@@ -23,7 +26,7 @@ public class StareDownAction extends AbstractGameAction {
             }
             AbstractDungeon.actionManager.addToBottom(new LoseBlockAction(mo, this.amount));
         }
-        if (allEnemiesBlocking) {
+        if (allEnemiesBlocking && this.upgraded) {
             energyGain++;
         }
         if (energyGain > 0) {

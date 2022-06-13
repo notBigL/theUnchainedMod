@@ -271,7 +271,8 @@
   },
   "theUnchainedMod:StareDown": {
     "NAME": "Stare Down",
-    "DESCRIPTION": "Lose !M! Block. Gain [E] if ALL enemies are blocking and [E] for every enemy that is blocking. ALL enemies lose !theUnchainedMod:SecondMagic! Block."
+    "DESCRIPTION": "Gain [E] for every enemy that is blocking. ALL enemies lose !M! Block.",
+    "UPGRADE_DESCRIPTION": "Gain [E] if ALL enemies are blocking and [E] for every enemy that is blocking. ALL enemies lose !M! Block."
   },
   "theUnchainedMod:EnclosingSteel": {
     "NAME": "Enclosing Steel",
