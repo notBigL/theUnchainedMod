@@ -43,7 +43,7 @@ public class BlindSwing extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.HP_LOSS)));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.magicNumber, DamageInfo.DamageType.HP_LOSS)));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new BlindSwingPower(p, CHAIN_LENGTH, defaultSecondMagicNumber, TYPE)));
     }
 }
