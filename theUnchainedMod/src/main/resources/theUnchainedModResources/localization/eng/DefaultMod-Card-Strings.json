@@ -237,7 +237,7 @@
   },
   "theUnchainedMod:SecretReserves": {
     "NAME": "Secret Reserves",
-    "DESCRIPTION": "Gain Strength equal to your Weak. NL Lose all your Weak. Gain it back next turn. NL Exhaust."
+    "DESCRIPTION": "Gain Strength equal to your Frail. NL Lose all your Frail. NL Exhaust."
   },
   "theUnchainedMod:SharePain": {
     "NAME": "Share Pain",
