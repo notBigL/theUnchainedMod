@@ -22,7 +22,7 @@ public class Ballet extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
-    private static final int COST = 2;
+    private static final int COST = 3;
     private static final int MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
