@@ -30,7 +30,7 @@ public class MomentumPower extends AbstractPower {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
-        momentumRequired = 4;
+        momentumRequired = 3;
         this.amount = checkForMomentumRequired(amount);
         type = AbstractPower.PowerType.BUFF;
         isTurnBased = false;
