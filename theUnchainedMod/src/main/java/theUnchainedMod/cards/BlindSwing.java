@@ -1,6 +1,7 @@
 package theUnchainedMod.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,14 +23,13 @@ public class BlindSwing extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 0;
-    private static final int DAMAGE = 4;
-    private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int MAGIC_NUMBER = 2;
-    private static final int SECOND_MAGIC_NUMBER = 1;
+    private static final int MAGIC_NUMBER = 6;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
+    private static final int SECOND_MAGIC_NUMBER = 2;
+    private static final int CHAIN_LENGTH = 1;
 
     public BlindSwing() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
     }
@@ -38,13 +38,13 @@ public class BlindSwing extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(2, m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new BlindSwingPower(p, defaultSecondMagicNumber, magicNumber, TYPE)));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.HP_LOSS)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new BlindSwingPower(p, CHAIN_LENGTH, defaultSecondMagicNumber, TYPE)));
     }
 }
