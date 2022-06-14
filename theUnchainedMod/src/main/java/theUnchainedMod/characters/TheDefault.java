@@ -165,7 +165,7 @@ public class TheDefault extends CustomPlayer {
         retVal.add(BasicStrike.ID);
         retVal.add(BasicStrike.ID);
         retVal.add(BasicStrike.ID);
-        retVal.add(BasicDefend.ID);
+        retVal.add(BasicStrike.ID);
         retVal.add(BasicDefend.ID);
         retVal.add(BasicDefend.ID);
         retVal.add(BasicDefend.ID);
