@@ -292,8 +292,8 @@
   },
   "theUnchainedMod:HeavyShackles": {
     "NAME": "Heavy Shackles",
-    "DESCRIPTION": "Gain !M! less [E] at the start of each turn. ALL 2-cost cards cost zero. At the start of your turn, draw an additional card.",
-    "UPGRADE_DESCRIPTION": "Gain !M! less [E] at the start of each turn. ALL 2-cost cards cost zero and are upgraded. At the start of your turn, draw an additional card."
+    "DESCRIPTION": "ALL 2-cost cards cost zero once per turn.",
+    "UPGRADE_DESCRIPTION": "ALL 2-cost cards cost zero and are upgraded once per turn."
   },
   "theUnchainedMod:WreckingBall": {
     "NAME": "Wrecking Ball",
