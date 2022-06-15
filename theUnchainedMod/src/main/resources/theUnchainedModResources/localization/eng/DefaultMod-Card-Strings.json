@@ -105,8 +105,8 @@
   },
   "theUnchainedMod:MakeRoom": {
     "NAME": "Make Room",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain [E] [E].",
-    "UPGRADE_DESCRIPTION": "theunchainedmod:Relay !M! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain [E] [E] [E]."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you have no Block, gain [E].",
+    "UPGRADE_DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you have no Block, gain [E] [E]."
   },
   "theUnchainedMod:HalfSwing": {
     "NAME": "Half Swing",
