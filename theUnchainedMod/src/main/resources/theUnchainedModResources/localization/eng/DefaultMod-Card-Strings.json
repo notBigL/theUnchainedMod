@@ -391,6 +391,6 @@
   },
   "theUnchainedMod:SpinningWheel": {
     "NAME": "Spinning Wheel",
-    "DESCRIPTION": "Deal !D! damage. Gain !B! Block. NL Gain !M! theunchainedmod:Momentum."
+    "DESCRIPTION": "Gain !B! Block. Deal !D! damage. NL Gain !M! theunchainedmod:Momentum."
   }
 }
