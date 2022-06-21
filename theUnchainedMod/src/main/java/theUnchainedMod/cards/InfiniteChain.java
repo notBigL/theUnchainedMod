@@ -1,31 +1,29 @@
 package theUnchainedMod.cards;
 
-import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.FreeFormPower;
+import theUnchainedMod.powers.InfiniteChainPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-@AutoAdd.Ignore
-public class FreeForm extends AbstractDynamicCard {
+public class InfiniteChain extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(FreeForm.class.getSimpleName());
-    public static final String IMG = makeCardPath("FreeForm.png");
+    public static final String ID = DefaultMod.makeID(InfiniteChain.class.getSimpleName());
+    public static final String IMG = makeCardPath("InfiniteChain.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
-    private static final int COST = 3;
+    private static final int COST = 0;
 
-    public FreeForm() {
+    public InfiniteChain() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.isEthereal = true;
     }
@@ -34,7 +32,7 @@ public class FreeForm extends AbstractDynamicCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            this.isEthereal = false;
+            this.isInnate = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
@@ -43,6 +41,6 @@ public class FreeForm extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FreeFormPower(p)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new InfiniteChainPower(p, p, 1, new InfiniteChain())));
     }
 }

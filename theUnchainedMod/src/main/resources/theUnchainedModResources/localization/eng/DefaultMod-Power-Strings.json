@@ -288,10 +288,11 @@
       "Gain #b"
     ]
   },
-  "theUnchainedMod:FreeFormPower": {
-    "NAME": "Free Form",
+  "theUnchainedMod:InfiniteChainPower": {
+    "NAME": "Infinite Chain",
     "DESCRIPTIONS": [
-      "ALL your Chains are finished instantly."
+      "Next turn, add ",
+      " Infinite Chain into your hand."
     ]
   },
   "theUnchainedMod:ClenchTeethChainPower": {

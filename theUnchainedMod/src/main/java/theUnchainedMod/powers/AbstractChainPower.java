@@ -57,6 +57,7 @@ public class AbstractChainPower extends AbstractPower {
                 break;
             case "theUnchainedMod:RoutinePunch":
             case "theUnchainedMod:RoutineDodge":
+            case "theUnchainedMod:InfiniteChain":
                 AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, "link"));
                 this.flash();
                 break;
