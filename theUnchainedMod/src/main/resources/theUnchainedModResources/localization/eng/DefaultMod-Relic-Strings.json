@@ -47,7 +47,7 @@
   },
   "theUnchainedMod:HeartOfTheUnderdog": {
     "NAME": "Heart of the Underdog",
-    "FLAVOR": "Its beating is soft, but something tells you it will not flatline.",
+    "FLAVOR": "Its beating is fragile, but something tells you it will not flatline.",
     "DESCRIPTIONS": [
       "Gain 1 Energy at the start of each turn. Gain 1 Weak at the start of each turn."
     ]
