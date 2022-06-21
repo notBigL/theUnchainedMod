@@ -291,7 +291,7 @@
     "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Frail. Deal !D! damage to ALL enemies. Apply !M! Vulnerable and !M! Weak to ALL enemies."
   },
   "theUnchainedMod:HeavyShackles": {
-    "NAME": "Heavy Shackles",
+    "NAME": "Heavy Form",
     "DESCRIPTION": "ALL 2-cost cards cost zero once per turn.",
     "UPGRADE_DESCRIPTION": "ALL 2-cost cards cost zero and are upgraded once per turn."
   },

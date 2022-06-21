@@ -4,8 +4,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawPower;
-import com.megacrit.cardcrawl.powers.watcher.EnergyDownPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.MakeTwoCostCardsFreeAction;
 import theUnchainedMod.characters.TheDefault;
@@ -14,9 +12,9 @@ import theUnchainedMod.powers.HeavyShacklesPower;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class HeavyShackles extends AbstractDynamicCard {
+public class HeavyForm extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(HeavyShackles.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(HeavyForm.class.getSimpleName());
     public static final String IMG = makeCardPath("HeavyShackles.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -26,7 +24,7 @@ public class HeavyShackles extends AbstractDynamicCard {
 
     private static final int COST = 3;
 
-    public HeavyShackles() {
+    public HeavyForm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
     }
 
