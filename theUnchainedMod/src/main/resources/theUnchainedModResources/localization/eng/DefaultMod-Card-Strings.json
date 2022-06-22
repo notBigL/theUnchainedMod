@@ -89,7 +89,7 @@
   },
   "theUnchainedMod:ThreeSixty": {
     "NAME": "360",
-    "DESCRIPTION": "An enemy loses !M! HP. Deal !D! damage to ALL enemies. NL Gain 1 theunchainedmod:Momentum."
+    "DESCRIPTION": "An enemy loses !M! HP. Deal !D! damage to ALL enemies. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum."
   },
   "theUnchainedMod:QuickSwing": {
     "NAME": "Quick Swing",
@@ -110,7 +110,7 @@
   },
   "theUnchainedMod:HalfSwing": {
     "NAME": "Half Swing",
-    "DESCRIPTION": "An enemy loses !M! HP. Deal !D! damage to a random enemy. NL Gain 1 theunchainedmod:Momentum."
+    "DESCRIPTION": "An enemy loses !M! HP. Deal !D! damage to a random enemy. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum."
   },
   "theUnchainedMod:TieTogether": {
     "NAME": "Tie Together",

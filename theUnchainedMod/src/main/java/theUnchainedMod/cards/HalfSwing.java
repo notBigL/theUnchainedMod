@@ -29,11 +29,14 @@ public class HalfSwing extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_DMG = 2;
     private static final int MAGIC_NUMBER = 4;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
+    private static final int SECOND_MAGIC_NUMBER = 1;
+    private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 1;
 
     public HalfSwing() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
         this.cardsToPreview = new Swirl();
     }
 
@@ -51,7 +54,7 @@ public class HalfSwing extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, magicNumber, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         AbstractDungeon.actionManager.addToBottom(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p, defaultSecondMagicNumber)));
 
     }
 }
