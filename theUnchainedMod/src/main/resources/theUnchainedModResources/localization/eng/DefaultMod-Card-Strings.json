@@ -290,7 +290,7 @@
     "NAME": "Sharp Splittings",
     "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Frail. Deal !D! damage to ALL enemies. Apply !M! Vulnerable and !M! Weak to ALL enemies."
   },
-  "theUnchainedMod:HeavyShackles": {
+  "theUnchainedMod:HeavyForm": {
     "NAME": "Heavy Form",
     "DESCRIPTION": "ALL 2-cost cards cost zero once per turn.",
     "UPGRADE_DESCRIPTION": "ALL 2-cost cards cost zero and are upgraded once per turn."
@@ -319,7 +319,9 @@
   },
   "theUnchainedMod:GlimpseIntoFuture": {
     "NAME": "Glimpse into Future",
-    "DESCRIPTION": "Gain !B! Block. NL If you end this turn with more than 0 [E] , gain !M! [E] next turn."
+    "DESCRIPTION": "Gain !B! Block. NL If you end this turn with [E] left, gain [E] [E] next turn.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you end this turn with [E] left, gain [E] [E] [E] next turn."
+
   },
   "theUnchainedMod:LongGame": {
     "NAME": "Long Game",
