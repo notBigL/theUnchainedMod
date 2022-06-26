@@ -320,7 +320,7 @@
   "theUnchainedMod:GlimpseIntoFuture": {
     "NAME": "Glimpse into Future",
     "DESCRIPTION": "Gain !B! Block. NL If you end this turn with [E] left, gain [E] [E] next turn.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you end this turn with [E] left, gain [E] [E] [E] next turn."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you end this turn with [E] left, gain NL [E] [E] [E] next turn."
 
   },
   "theUnchainedMod:LongGame": {
