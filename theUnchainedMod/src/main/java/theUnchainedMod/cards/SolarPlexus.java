@@ -1,6 +1,8 @@
 package theUnchainedMod.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,16 +23,14 @@ public class SolarPlexus extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 4;
-    private static final int MAGIC_NUMBER = 4;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
+    private static final int MAGIC_NUMBER = 15;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 5;
     private static final int SECOND_MAGIC_NUMBER = 3;
     private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = -1;
 
 
     public SolarPlexus() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
         this.exhaust = true;
@@ -47,7 +47,7 @@ public class SolarPlexus extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(magicNumber, m, new DamageInfo(p, damage, damageTypeForTurn)));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new SolarPlexusPower(p, defaultSecondMagicNumber, m, CardType.ATTACK)));
     }
 }
