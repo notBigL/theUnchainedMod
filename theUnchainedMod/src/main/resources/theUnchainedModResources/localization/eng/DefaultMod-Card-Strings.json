@@ -170,7 +170,7 @@
   },
   "theUnchainedMod:SliceThrough": {
     "NAME": "Slice Through",
-    "DESCRIPTION": "Deal !D! damage. If not Fatal, gain !M! Weak."
+    "DESCRIPTION": "Deal !D! damage. If not Fatal, gain !M! Frail."
   },
   "theUnchainedMod:Reschedule": {
     "NAME": "Reschedule",
