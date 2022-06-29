@@ -372,7 +372,7 @@
   },
   "theUnchainedMod:BlindSwing": {
     "NAME": "Blind Swing",
-    "DESCRIPTION": "Enemy loses !M! HP. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! Weak."
+    "DESCRIPTION": "Enemy loses !M! HP. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! Frail."
   },
   "theUnchainedMod:LastResort": {
     "NAME": "Last Resort",
