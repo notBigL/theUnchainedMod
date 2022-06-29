@@ -129,7 +129,7 @@
   },
   "theUnchainedMod:NonDominantHand": {
     "NAME": "Non-dominant Hand",
-    "DESCRIPTION": "Enemy loses !M! HP for every Weak you have."
+    "DESCRIPTION": "Enemy loses !M! HP for every Frail you have."
   },
   "theUnchainedMod:Cower": {
     "NAME": "Cower",
