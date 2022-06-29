@@ -191,7 +191,7 @@
   },
   "theUnchainedMod:SharedBurden": {
     "NAME": "Shared Burden",
-    "DESCRIPTION": "Gain !M! Weak. Apply !theUnchainedMod:SecondMagic! Weak to ALL enemies."
+    "DESCRIPTION": "Gain !M! Frail. Apply !theUnchainedMod:SecondMagic! Weak to ALL enemies."
   },
   "theUnchainedMod:HookedChain": {
     "NAME": "Hooked Chain",
