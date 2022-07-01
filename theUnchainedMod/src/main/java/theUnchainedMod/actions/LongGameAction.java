@@ -17,7 +17,7 @@ public class LongGameAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if(target.hasPower("Frail")) {
+        if(target.hasPower("theUnchainedMod:MaladyPower")) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new RelayPower(target, target, amount)));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new DrawCardNextTurnPower(target, 1), 1));
         }

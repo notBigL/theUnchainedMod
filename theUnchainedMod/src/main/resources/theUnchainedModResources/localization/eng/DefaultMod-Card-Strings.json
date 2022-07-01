@@ -57,7 +57,7 @@
   },
   "theUnchainedMod:ManacleWhip": {
     "NAME": "Manacle Whip",
-    "DESCRIPTION": "Deal !D! damage. Gain !M! Frail."
+    "DESCRIPTION": "Deal !D! damage. Gain !M! theunchainedmod:Malady."
   },
   "theUnchainedMod:Whiplash": {
     "NAME": "Whiplash",
@@ -129,7 +129,7 @@
   },
   "theUnchainedMod:NonDominantHand": {
     "NAME": "Non-dominant Hand",
-    "DESCRIPTION": "Enemy loses !M! HP for every Frail you have."
+    "DESCRIPTION": "Enemy loses !M! HP for every stack of theunchainedmod:Malady you have."
   },
   "theUnchainedMod:Cower": {
     "NAME": "Cower",
@@ -325,7 +325,7 @@
   },
   "theUnchainedMod:LongGame": {
     "NAME": "Long Game",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you are Frail, theunchainedmod:Relay !M! damage again and draw 1 additional card next turn."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you are afflicted with theunchainedmod:Malady, theunchainedmod:Relay !M! damage again and draw 1 additional card next turn."
   },
   "theUnchainedMod:Pirouette": {
     "NAME": "Pirouette",
@@ -372,7 +372,7 @@
   },
   "theUnchainedMod:BlindSwing": {
     "NAME": "Blind Swing",
-    "DESCRIPTION": "Enemy loses !M! HP. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! Frail."
+    "DESCRIPTION": "Enemy loses !M! HP. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! theunchainedmod:Malady."
   },
   "theUnchainedMod:LastResort": {
     "NAME": "Last Resort",
