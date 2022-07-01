@@ -3,9 +3,11 @@ package theUnchainedMod.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.powers.MaladyPower;
 import theUnchainedMod.util.TextureLoader;
 
 import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;
@@ -31,9 +33,10 @@ public class HeartOfTheUnderdog extends CustomRelic {
         --AbstractDungeon.player.energy.energyMaster;
     }
 
-    public void atTurnStart() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FrailPower(AbstractDungeon.player, 1, false)));
-        this.flash();
+    public void atBattleStart() {
+            this.flash();
+            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new MaladyPower(AbstractDungeon.player, 5)));
     }
 
     @Override

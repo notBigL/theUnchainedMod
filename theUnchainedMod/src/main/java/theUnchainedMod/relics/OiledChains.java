@@ -37,6 +37,7 @@ public class OiledChains extends CustomRelic {
         ++this.counter;
         if (this.counter == 6) {
             this.beginLongPulse();
+            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new OiledChainsPower(AbstractDungeon.player, AbstractDungeon.player,1)));
         } else if (this.counter == 7) {
             this.stopPulse();

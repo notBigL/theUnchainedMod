@@ -3,6 +3,8 @@ package theUnchainedMod.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.cards.Swirl;
 import theUnchainedMod.util.TextureLoader;
@@ -23,6 +25,7 @@ public class BootKnife extends CustomRelic {
 
     @Override
     public void atBattleStartPreDraw() {
+        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         this.addToBot(new MakeTempCardInHandAction(new Swirl(), 1, false));
         this.flash();
     }
