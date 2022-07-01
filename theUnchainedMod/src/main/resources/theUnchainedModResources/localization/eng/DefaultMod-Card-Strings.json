@@ -73,7 +73,7 @@
   },
   "theUnchainedMod:PlayDead": {
     "NAME": "Play Dead",
-    "DESCRIPTION": "Gain !M! Vulnerable. Gain !M! theunchainedmod:Malady NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain 1 Intangible."
+    "DESCRIPTION": "Gain !M! Vulnerable. Gain !M! theunchainedmod:Malady. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain 1 Intangible."
   },
   "theUnchainedMod:Postpone": {
     "NAME": "Postpone",
