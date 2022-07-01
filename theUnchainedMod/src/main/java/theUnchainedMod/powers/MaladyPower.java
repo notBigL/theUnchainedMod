@@ -36,9 +36,9 @@ public class MaladyPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         type = AbstractPower.PowerType.DEBUFF;
-        isTurnBased = false;
+        isTurnBased = true;
 
-        maladyTimer = 0;
+        resetMaladyTimer();
 
         this.region128 = new TextureAtlas.AtlasRegion(texture128, 0, 0, 128, 128);
         this.region48 = new TextureAtlas.AtlasRegion(texture48, 0, 0, 48, 48);
@@ -48,28 +48,40 @@ public class MaladyPower extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
-        if(maladyTimer > 1) {
+        if (maladyTimer > 1) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new FrailPower(owner, 1, false)));
-            if(maladyTimer > 2) {
+            if (maladyTimer > 2) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new WeakPower(owner, 1, false)));
-                if(maladyTimer > 3) {
+                if (maladyTimer > 3) {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new VulnerablePower(owner, 1, false)));
                 }
             }
         }
     }
 
-    public void atEndOfRound() {
+    public void atEndOfTurn(boolean isPlayer) {
+        if (isPlayer) {
             if (this.amount == 0) {
-                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "theUnchainedMod:MaladyPower"));
             } else {
-                this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
+                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "theUnchainedMod:MaladyPower", 1));
             }
             maladyTimer++;
+        }
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        resetMaladyTimer();
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
     }
 
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.maladyTimer;
     }
 
+    private void resetMaladyTimer() {
+        maladyTimer = 0;
+    }
 }
