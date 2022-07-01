@@ -377,5 +377,12 @@
       "If you play #b",
       " more Attacks this Turn, apply #y"
     ]
+  },
+  "theUnchainedMod:MaladyPower": {
+    "NAME": "Malady",
+    "DESCRIPTIONS": [
+      "You are plagued by Malady for the next #r",
+      " turns, the maladyTimer is #y"
+    ]
   }
 }
