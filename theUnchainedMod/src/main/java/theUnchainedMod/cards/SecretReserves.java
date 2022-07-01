@@ -37,13 +37,13 @@ public class SecretReserves extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int frailAmount = 0;
-        if(p.hasPower("Frail")) {
-            frailAmount = p.getPower("Frail").amount;
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Frail"));
+        int maladyAmount = 0;
+        if(p.hasPower("theUnchainedMod:MaladyPower")) {
+            maladyAmount = p.getPower("theUnchainedMod:MaladyPower").amount;
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "theUnchainedMod:MaladyPower"));
         }
-        if(frailAmount != 0) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, frailAmount)));
+        if(maladyAmount != 0) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, maladyAmount)));
         }
     }
 }

@@ -11,6 +11,7 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.AllEnemiesVulnerableAction;
 import theUnchainedMod.actions.AllEnemiesWeakAction;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.powers.MaladyPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -47,7 +48,7 @@ public class SharpSplittings extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, this.defaultBaseSecondMagicNumber, false)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MaladyPower(p, this.defaultBaseSecondMagicNumber)));
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         AbstractDungeon.actionManager.addToBottom(new AllEnemiesVulnerableAction(this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new AllEnemiesWeakAction(this.magicNumber));

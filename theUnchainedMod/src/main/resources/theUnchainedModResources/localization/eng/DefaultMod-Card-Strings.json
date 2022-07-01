@@ -73,7 +73,7 @@
   },
   "theUnchainedMod:PlayDead": {
     "NAME": "Play Dead",
-    "DESCRIPTION": "Gain !M! Vulnerable. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain 1 Intangible."
+    "DESCRIPTION": "Gain !M! Vulnerable. Gain !M! theunchainedmod:Malady NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain 1 Intangible."
   },
   "theUnchainedMod:Postpone": {
     "NAME": "Postpone",
@@ -170,7 +170,7 @@
   },
   "theUnchainedMod:SliceThrough": {
     "NAME": "Slice Through",
-    "DESCRIPTION": "Deal !D! damage. If not Fatal, gain !M! Frail."
+    "DESCRIPTION": "Deal !D! damage. If not Fatal, gain !M! theunchainedmod:Malady."
   },
   "theUnchainedMod:Reschedule": {
     "NAME": "Reschedule",
@@ -237,7 +237,7 @@
   },
   "theUnchainedMod:SecretReserves": {
     "NAME": "Secret Reserves",
-    "DESCRIPTION": "Gain Strength equal to your Frail. NL Lose all your Frail. NL Exhaust."
+    "DESCRIPTION": "Gain Strength equal to your theunchainedmod:Malady. NL Cure your theunchainedmod:Malady. NL Exhaust."
   },
   "theUnchainedMod:SharePain": {
     "NAME": "Share Pain",
@@ -288,7 +288,7 @@
   },
   "theUnchainedMod:SharpSplittings": {
     "NAME": "Sharp Splittings",
-    "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Frail. Deal !D! damage to ALL enemies. Apply !M! Vulnerable and !M! Weak to ALL enemies."
+    "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! theunchainedmod:Malady. Deal !D! damage to ALL enemies. Apply !M! Vulnerable and !M! Weak to ALL enemies."
   },
   "theUnchainedMod:HeavyForm": {
     "NAME": "Heavy Form",

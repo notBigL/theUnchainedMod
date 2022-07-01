@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import theUnchainedMod.powers.MaladyPower;
 
 public class SliceThroughAction extends AbstractGameAction {
 
@@ -32,7 +32,7 @@ public class SliceThroughAction extends AbstractGameAction {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.NONE));
             this.target.damage(this.info);
             if (!((((AbstractMonster) this.target).isDying || this.target.currentHealth <= 0) && !this.target.halfDead)) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new FrailPower(player, amount, false)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MaladyPower(player, amount)));
             }
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();
