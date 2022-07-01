@@ -5,9 +5,9 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.powers.MaladyPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -23,7 +23,7 @@ public class SplinteredShield extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int BLOCK = 10;
     private static final int UPGRADE_PLUS_BLOCK = 5;
-    private static final int MAGIC_NUMBER = 2;
+    private static final int MAGIC_NUMBER = 3;
 
     public SplinteredShield() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -43,6 +43,6 @@ public class SplinteredShield extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, this.magicNumber, false)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MaladyPower(p, this.magicNumber)));
     }
 }

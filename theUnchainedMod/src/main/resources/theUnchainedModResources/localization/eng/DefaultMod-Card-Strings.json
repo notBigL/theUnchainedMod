@@ -65,7 +65,7 @@
   },
   "theUnchainedMod:SplinteredShield": {
     "NAME": "Splintered Shield",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! Frail."
+    "DESCRIPTION": "Gain !B! Block. Gain !M! theunchainedmod:Malady."
   },
   "theUnchainedMod:BrassKnuckle": {
     "NAME": "Brass Knuckle",
@@ -133,7 +133,7 @@
   },
   "theUnchainedMod:Cower": {
     "NAME": "Cower",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Gain 2 Frail. NL Apply !theUnchainedMod:SecondMagic! Vulnerable to ALL enemies."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Gain 1 theunchainedmod:Malady. NL Apply !theUnchainedMod:SecondMagic! Vulnerable to ALL enemies."
   },
   "theUnchainedMod:MorningStar": {
     "NAME": "Morning Star",
@@ -191,7 +191,7 @@
   },
   "theUnchainedMod:SharedBurden": {
     "NAME": "Shared Burden",
-    "DESCRIPTION": "Gain !M! Frail. Apply !theUnchainedMod:SecondMagic! Weak to ALL enemies."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Malady. Apply !theUnchainedMod:SecondMagic! Weak to ALL enemies."
   },
   "theUnchainedMod:HookedChain": {
     "NAME": "Hooked Chain",

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.AllEnemiesWeakAction;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.powers.MaladyPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -42,7 +43,7 @@ public class SharedBurden extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, magicNumber, false)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MaladyPower(p, magicNumber)));
         AbstractDungeon.actionManager.addToBottom(new AllEnemiesWeakAction(defaultSecondMagicNumber));
     }
 }
