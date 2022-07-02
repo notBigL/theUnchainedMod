@@ -44,7 +44,6 @@ public class PlayDead extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VulnerablePower(p, this.magicNumber, false)));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MaladyPower(p, this.magicNumber)));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PlayDeadPower(p, defaultSecondMagicNumber, TYPE)));
     }
 }
