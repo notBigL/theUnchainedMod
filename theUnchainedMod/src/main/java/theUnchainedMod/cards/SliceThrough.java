@@ -1,5 +1,7 @@
 package theUnchainedMod.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,14 +22,12 @@ public class SliceThrough extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 18;
-    private static final int UPGRADE_PLUS_DMG = 6;
-    private static final int MAGIC_NUMBER = 3;
+    private static final int DAMAGE = 9;
+    private static final int UPGRADE_PLUS_DMG = 5;
 
     public SliceThrough() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
 
     @Override
@@ -41,6 +41,6 @@ public class SliceThrough extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SliceThroughAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), magicNumber, p));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 }

@@ -170,7 +170,7 @@
   },
   "theUnchainedMod:SliceThrough": {
     "NAME": "Slice Through",
-    "DESCRIPTION": "Deal !D! damage. If not Fatal, gain !M! theunchainedmod:Malady."
+    "DESCRIPTION": "Deal !D! damage. Ignores enemy Block."
   },
   "theUnchainedMod:Reschedule": {
     "NAME": "Reschedule",
