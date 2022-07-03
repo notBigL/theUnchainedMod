@@ -402,5 +402,9 @@
   "theUnchainedMod:ShatteringSwing": {
     "NAME": "Shattering Swing",
     "DESCRIPTION": "Deal !D! damage. If the enemy has Block, deal !D! damage again."
+  },
+  "theUnchainedMod:DoubleDown": {
+    "NAME": "Double Down",
+    "DESCRIPTION": "Gain !B! Block twice."
   }
 }
