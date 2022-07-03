@@ -1,5 +1,6 @@
 package theUnchainedMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,6 +15,7 @@ import theUnchainedMod.powers.RelayPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
+@AutoAdd.Ignore
 public class Cower extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Cower.class.getSimpleName());

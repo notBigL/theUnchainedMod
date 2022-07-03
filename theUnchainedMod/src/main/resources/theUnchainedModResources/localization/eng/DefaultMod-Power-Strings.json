@@ -384,5 +384,12 @@
       "You are plagued by Malady for the next #r",
       " turns, the maladyTimer is #y"
     ]
+  },
+  "theUnchainedMod:SwingingPower": {
+    "NAME": "Keep on Swinging",
+    "DESCRIPTIONS": [
+      "ALL Swing Cards deal #b",
+      " more damage this combat."
+    ]
   }
 }

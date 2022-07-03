@@ -406,5 +406,9 @@
   "theUnchainedMod:DoubleDown": {
     "NAME": "Double Down",
     "DESCRIPTION": "Gain !B! Block twice."
+  },
+  "theUnchainedMod:KeepSwinging": {
+    "NAME": "Keep Swinging",
+    "DESCRIPTION": "All Cards with \"Swing\" in their name deal !M! additional damage."
   }
 }
