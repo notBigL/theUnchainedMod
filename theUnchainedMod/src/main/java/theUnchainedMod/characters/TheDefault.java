@@ -170,7 +170,7 @@ public class TheDefault extends CustomPlayer {
         retVal.add(BasicDefend.ID);
         retVal.add(BasicDefend.ID);
         retVal.add(Whiplash.ID);
-        retVal.add(SplinteredShield.ID);
+        retVal.add(Compounding.ID);
         return retVal;
     }
 

@@ -414,5 +414,9 @@
   "theUnchainedMod:PoeticJustice": {
     "NAME": "Poetic Justice",
     "DESCRIPTION": "Remove up to !M! theunchainedmod:Relayed_Damage. Gain Vigor equal to the amount you removed."
+  },
+  "theUnchainedMod:Compounding": {
+    "NAME": "Compounding",
+    "DESCRIPTION": "Gain !B! Block. Upgrade a card in your hand for the rest of combat."
   }
 }

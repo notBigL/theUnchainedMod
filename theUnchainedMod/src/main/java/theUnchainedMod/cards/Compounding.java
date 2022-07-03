@@ -1,36 +1,33 @@
 package theUnchainedMod.cards;
 
-import basemod.AutoAdd;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.unique.ArmamentsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.MaladyPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-@AutoAdd.Ignore
-public class SplinteredShield extends AbstractDynamicCard {
+public class Compounding extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(SplinteredShield.class.getSimpleName());
-    public static final String IMG = makeCardPath("SplinteredShield.png");
+    public static final String ID = DefaultMod.makeID(Compounding.class.getSimpleName());
+    public static final String IMG = makeCardPath("Compounding.png");
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int BLOCK = 10;
-    private static final int UPGRADE_PLUS_BLOCK = 5;
-    private static final int MAGIC_NUMBER = 3;
+    private static final int COST = 2;
+    private static final int BLOCK = 9;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
 
-    public SplinteredShield() {
+
+
+    public Compounding() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = block = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
 
     @Override
@@ -39,12 +36,11 @@ public class SplinteredShield extends AbstractDynamicCard {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
         }
-
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MaladyPower(p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, block));
+        AbstractDungeon.actionManager.addToBottom(new ArmamentsAction(false));
     }
 }
