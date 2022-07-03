@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.FullSpinPower;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.MomentumPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -36,6 +36,7 @@ public class ThreeSixty extends AbstractDynamicCard {
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
+        tags.add(CustomTags.SWING);
         this.cardsToPreview = new Swirl();
         this.isMultiDamage = true;
     }
