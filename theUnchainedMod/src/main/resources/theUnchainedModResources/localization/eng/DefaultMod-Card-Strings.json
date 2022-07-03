@@ -398,5 +398,9 @@
   "theUnchainedMod:Glare": {
     "NAME": "Glare",
     "DESCRIPTION": "Gain !B! Block. ALL enemies lose !M! Strength. Exhaust."
+  },
+  "theUnchainedMod:ShatteringSwing": {
+    "NAME": "Shattering Swing",
+    "DESCRIPTION": "Deal !D! damage. If the enemy has Block, deal !D! damage again."
   }
 }

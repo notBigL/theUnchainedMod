@@ -1,5 +1,6 @@
 package theUnchainedMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -15,6 +16,7 @@ import theUnchainedMod.powers.MaladyPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
+@AutoAdd.Ignore
 public class SharpSplittings extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID(SharpSplittings.class.getSimpleName());
     public static final String IMG = makeCardPath("SharpSplittings.png");
