@@ -418,5 +418,9 @@
   "theUnchainedMod:Compounding": {
     "NAME": "Compounding",
     "DESCRIPTION": "Gain !B! Block. Upgrade a card in your hand for the rest of combat."
+  },
+  "theUnchainedMod:ThreadOfAriadne": {
+    "NAME": "Thread Of Ariadne",
+    "DESCRIPTION": "This turn, gain [E] everytime you finish a theunchainedmod:Chain. Exhaust."
   }
 }

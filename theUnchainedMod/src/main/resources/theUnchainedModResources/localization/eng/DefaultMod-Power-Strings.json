@@ -391,5 +391,12 @@
       "ALL Swing Cards deal #b",
       " more damage this combat."
     ]
+  },
+  "theUnchainedMod:ThreadOfAriadnePower": {
+    "NAME": "Thread of Ariadne",
+    "DESCRIPTIONS": [
+      "This turn gain #y",
+      " Energy everytime you finish a Chain."
+    ]
   }
 }

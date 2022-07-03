@@ -2,6 +2,7 @@ package theUnchainedMod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -42,8 +43,7 @@ public class ChainAction extends AbstractGameAction {
                 case "liberation":
                     this.addToBot(finishedChainAction);
                     player.powers.remove(chainPower);
-                    checkForInertia();
-                    gainMomentumAfterFinishing();
+                    checkForFinishers();
                     this.isDone = true;
                     break;
                 case "link":
@@ -51,8 +51,7 @@ public class ChainAction extends AbstractGameAction {
                     if (chainPower.amount == 0) {
                         this.addToBot(finishedChainAction);
                         player.powers.remove(chainPower);
-                        checkForInertia();
-                        gainMomentumAfterFinishing();
+                        checkForFinishers();
                     }
                     chainPower.updateDescription();
                     this.isDone = true;
@@ -64,8 +63,7 @@ public class ChainAction extends AbstractGameAction {
                     if (chainPower.amount == 0) {
                         this.addToBot(finishedChainAction);
                         player.powers.remove(chainPower);
-                        checkForInertia();
-                        gainMomentumAfterFinishing();
+                        checkForFinishers();
                     }
                     chainPower.updateDescription();
                     this.isDone = true;
@@ -74,18 +72,19 @@ public class ChainAction extends AbstractGameAction {
         }
     }
 
-    private void gainMomentumAfterFinishing() {
+
+    private void checkForFinishers() {
+        if (player.hasPower("theUnchainedMod:AccelerationPower")) {
+            player.getPower("theUnchainedMod:AccelerationPower").onSpecificTrigger();
+        }
         if (player.hasPower("theUnchainedMod:FluidMovementPower")) {
             int momentumAmount = player.getPower("theUnchainedMod:FluidMovementPower").amount;
             if (momentumAmount > 0) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, momentumAmount)));
             }
         }
-    }
-
-    private void checkForInertia() {
-        if(player.hasPower("theUnchainedMod:AccelerationPower")) {
-            player.getPower("theUnchainedMod:AccelerationPower").onSpecificTrigger();
+        if (player.hasPower("theUnchainedMod:ThreadOfAriadnePower")) {
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(player.getPower("theUnchainedMod:ThreadOfAriadnePower").amount));
         }
     }
 }
