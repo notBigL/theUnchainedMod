@@ -1,35 +1,27 @@
 package theUnchainedMod.cards;
 
-import basemod.AutoAdd;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.AllEnemiesVulnerableAction;
-import theUnchainedMod.actions.LongGameAction;
+import theUnchainedMod.actions.PoeticJusticeAction;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.LongGamePower;
-import theUnchainedMod.powers.RelayPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-@AutoAdd.Ignore
-public class LongGame extends AbstractDynamicCard {
-
-    public static final String ID = DefaultMod.makeID(LongGame.class.getSimpleName());
-    public static final String IMG = makeCardPath("LongGame.png");
+public class PoeticJustice extends AbstractDynamicCard {
+    public static final String ID = DefaultMod.makeID(PoeticJustice.class.getSimpleName());
+    public static final String IMG = makeCardPath("PoeticJustice.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 6;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
+    private static final int MAGIC_NUMBER = 10;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 7;
 
-    public LongGame() {
+    public PoeticJustice() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
@@ -44,7 +36,6 @@ public class LongGame extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RelayPower(p, p, magicNumber)));
-        AbstractDungeon.actionManager.addToBottom(new LongGameAction(p, magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new PoeticJusticeAction(magicNumber));
     }
 }

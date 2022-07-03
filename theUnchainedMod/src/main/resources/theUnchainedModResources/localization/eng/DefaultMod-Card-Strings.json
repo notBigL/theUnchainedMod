@@ -410,5 +410,9 @@
   "theUnchainedMod:KeepSwinging": {
     "NAME": "Keep Swinging",
     "DESCRIPTION": "All Cards with \"Swing\" in their name deal !M! additional damage."
+  },
+  "theUnchainedMod:PoeticJustice": {
+    "NAME": "Poetic Justice",
+    "DESCRIPTION": "Remove up to !M! theunchainedmod:Relayed_Damage. Gain Vigor equal to the amount you removed."
   }
 }
