@@ -398,5 +398,14 @@
       "This turn gain #y",
       " Energy everytime you finish a Chain."
     ]
+  },
+  "theUnchainedMod:OverviewPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this Turn, ALL enemies gain #b",
+      "If you play #b",
+      " more Skills this Turn, ALL enemies gain #b",
+      " Weak."
+    ]
   }
 }

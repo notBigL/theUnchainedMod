@@ -422,5 +422,9 @@
   "theUnchainedMod:ThreadOfAriadne": {
     "NAME": "Thread Of Ariadne",
     "DESCRIPTION": "This turn, gain [E] everytime you finish a theunchainedmod:Chain. Exhaust."
+  },
+  "theUnchainedMod:Overview": {
+    "NAME": "Overview",
+    "DESCRIPTION": "Gain !M! temporary Dexterity. 1 theunchainedmod:Chain: ALL enemies gain !theUnchainedMod:SecondMagic! Weak."
   }
 }
