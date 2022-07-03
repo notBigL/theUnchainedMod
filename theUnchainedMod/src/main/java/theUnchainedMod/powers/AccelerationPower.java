@@ -23,7 +23,6 @@ public class AccelerationPower extends AbstractPower {
 
     private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/AccelerationPower_power48.png");
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/AccelerationPower_power128.png");
-    public int decreaseAmount;
 
     public AccelerationPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
