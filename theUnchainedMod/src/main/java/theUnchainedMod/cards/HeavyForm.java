@@ -1,5 +1,6 @@
 package theUnchainedMod.cards;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,6 +27,7 @@ public class HeavyForm extends AbstractDynamicCard {
 
     public HeavyForm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        tags.add(BaseModCardTags.FORM);
     }
 
     public void upgrade() {
