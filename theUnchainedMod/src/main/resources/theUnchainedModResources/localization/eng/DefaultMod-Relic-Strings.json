@@ -49,7 +49,7 @@
     "NAME": "Heart of the Underdog",
     "FLAVOR": "Its beating is fragile, but something tells you it will not flatline.",
     "DESCRIPTIONS": [
-      "Gain 1 Energy at the start of each turn. Start each Combat with 5 #yMalady."
+      "The first time you break the Block of an enemy each turn, gain 1 Energy."
     ]
   },
   "theUnchainedMod:Carabiner": {
