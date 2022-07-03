@@ -394,5 +394,9 @@
   "theUnchainedMod:SpinningWheel": {
     "NAME": "Spinning Wheel",
     "DESCRIPTION": "Gain !B! Block. Deal !D! damage. NL Gain !M! theunchainedmod:Momentum."
+  },
+  "theUnchainedMod:Glare": {
+    "NAME": "Glare",
+    "DESCRIPTION": "Gain !B! Block. ALL enemies lose !M! strength. Exhaust."
   }
 }
