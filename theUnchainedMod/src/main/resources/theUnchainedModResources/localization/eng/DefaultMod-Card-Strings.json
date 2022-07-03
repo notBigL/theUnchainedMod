@@ -61,7 +61,7 @@
   },
   "theUnchainedMod:Whiplash": {
     "NAME": "Whiplash",
-    "DESCRIPTION": "Deal !D! damage. NL 2 theunchainedmod:Chain: Enemy loses !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Enemy loses !M! HP."
   },
   "theUnchainedMod:SplinteredShield": {
     "NAME": "Splintered Shield",

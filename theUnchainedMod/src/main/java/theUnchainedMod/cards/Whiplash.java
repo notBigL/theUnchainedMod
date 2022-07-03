@@ -24,13 +24,14 @@ public class Whiplash extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 4;
-    private static final int CHAIN_LENGTH = 2;
-    private static final int MAGIC_NUMBER = 12;
+    private static final int MAGIC_NUMBER = 8;
+    private static final int SECOND_MAGIC_NUMBER = 1;
 
     public Whiplash() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
     }
 
     @Override
@@ -44,6 +45,6 @@ public class Whiplash extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new WhiplashPower(p, CHAIN_LENGTH, m, this.magicNumber, TYPE)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new WhiplashPower(p, defaultSecondMagicNumber, m, this.magicNumber, TYPE)));
     }
 }
