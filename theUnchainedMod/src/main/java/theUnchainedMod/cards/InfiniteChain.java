@@ -17,7 +17,7 @@ public class InfiniteChain extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("InfiniteChain.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
@@ -26,6 +26,7 @@ public class InfiniteChain extends AbstractDynamicCard {
     public InfiniteChain() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.isEthereal = true;
+        this.exhaust = true;
     }
 
     @Override

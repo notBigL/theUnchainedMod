@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.MakeTwoCostCardsFreeAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.powers.HeavyShacklesPower;
 
@@ -42,6 +41,5 @@ public class HeavyForm extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HeavyShacklesPower(p, this.upgraded)));
-        AbstractDungeon.actionManager.addToBottom(new MakeTwoCostCardsFreeAction(this.upgraded));
     }
 }

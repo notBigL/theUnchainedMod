@@ -333,8 +333,8 @@
   },
   "theUnchainedMod:InfiniteChain": {
     "NAME": "Infinite Chain",
-    "DESCRIPTION": "Ethereal. theunchainedmod:Link. NL Next turn, add an Infinite Chain into your Hand.",
-    "UPGRADE_DESCRIPTION": "Innate. Ethereal. theunchainedmod:Link. NL Next turn, add an Infinite Chain into your Hand."
+    "DESCRIPTION": "Ethereal. theunchainedmod:Link. NL Next turn, add an Infinite Chain into your Hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. Ethereal. theunchainedmod:Link. NL Next turn, add an Infinite Chain into your Hand. Exhaust."
   },
   "theUnchainedMod:Wink": {
     "NAME": "Wink",
