@@ -25,7 +25,7 @@ public class HookedChain extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 12;
     private static final int UPGRADE_PLUS_DMG = 4;
     private static final int MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
