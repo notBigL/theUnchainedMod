@@ -23,7 +23,6 @@ public class KeepDistance extends AbstractDynamicCard {
     private static final int BLOCK = 13;
     private static final int UPGRADE_PLUS_BLOCK = 4;
     private static final int MAGIC_NUMBER = 7;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
 
     public KeepDistance() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -36,7 +35,6 @@ public class KeepDistance extends AbstractDynamicCard {
         if(!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
     }
 
