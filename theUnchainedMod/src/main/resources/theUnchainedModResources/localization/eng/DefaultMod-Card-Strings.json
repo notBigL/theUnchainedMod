@@ -417,7 +417,7 @@
   },
   "theUnchainedMod:Compounding": {
     "NAME": "Compounding",
-    "DESCRIPTION": "Gain !B! Block. Upgrade a card in your hand for the rest of combat."
+    "DESCRIPTION": "Gain !B! Block. Make a card in your hand cost [E] less once this turn."
   },
   "theUnchainedMod:ThreadOfAriadne": {
     "NAME": "Thread Of Ariadne",
