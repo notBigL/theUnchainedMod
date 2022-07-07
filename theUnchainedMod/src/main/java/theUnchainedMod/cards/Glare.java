@@ -15,7 +15,7 @@ public class Glare extends AbstractDynamicCard{
 
     public static final String ID = DefaultMod.makeID(Glare.class.getSimpleName());
     public static final String IMG = makeCardPath("Glare.png");
-    private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.COMMON;
+    private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.SKILL;
     public static final AbstractCard.CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
