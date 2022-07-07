@@ -38,6 +38,6 @@ public class Suffocate extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new CullArmorAction());
+        AbstractDungeon.actionManager.addToBottom(new CullArmorAction(m));
     }
 }

@@ -352,7 +352,7 @@
   },
   "theUnchainedMod:Suffocate": {
     "NAME": "Suffocate",
-    "DESCRIPTION": "ALL enemies lose HP equal to double their Block."
+    "DESCRIPTION": "Enemy loses HP equal to double his Block."
   },
   "theUnchainedMod:EscapeRope": {
     "NAME": "Escape Rope",
