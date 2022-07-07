@@ -31,7 +31,7 @@ public class SharePain extends AbstractDynamicCard {
 
     public SharePain() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = damage = 0;
+        baseDamage = damage = DAMAGE;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
     }
 
