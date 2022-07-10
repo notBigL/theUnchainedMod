@@ -60,5 +60,13 @@
       "malady"
     ],
     "DESCRIPTION": "Applies debuffs that get worse, if it is not reapplied."
+  },
+  {
+    "PROPER_NAME": "Dented Armor",
+    "NAMES": [
+      "Dented Armor",
+      "dented_armor"
+    ],
+    "DESCRIPTION": "Creatures lose HP everytime they gain Block."
   }
 ]

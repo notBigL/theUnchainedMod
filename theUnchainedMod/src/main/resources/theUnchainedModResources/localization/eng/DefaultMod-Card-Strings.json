@@ -426,5 +426,9 @@
   "theUnchainedMod:Overview": {
     "NAME": "Overview",
     "DESCRIPTION": "Gain !M! temporary Dexterity. 1 theunchainedmod:Chain: ALL enemies gain !theUnchainedMod:SecondMagic! Weak."
+  },
+  "theUnchainedMod:CrushPlates": {
+    "NAME": "Crush Plates",
+    "DESCRIPTION": "Deal !D! damage. Add theunchainedmod:Dented_Armor for ALL damage that was blocked."
   }
 }

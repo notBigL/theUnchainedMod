@@ -407,5 +407,12 @@
       " more Skills this Turn, ALL enemies gain #b",
       " Weak."
     ]
+  },
+  "theUnchainedMod:DentedArmorPower": {
+    "NAME": "Dented Armor",
+    "DESCRIPTIONS": [
+      "Loses #r",
+      " HP everytime it gains Block."
+    ]
   }
 }
