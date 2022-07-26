@@ -124,7 +124,7 @@
   "theUnchainedMod:CruiserweightPower": {
     "NAME": "Cruiserweight",
     "DESCRIPTIONS": [
-      "Everytime you play a 2-cost card. Draw #y",
+      "Everytime you draw a 2-cost card. Draw #y",
       " card.",
       " cards."
     ]
@@ -274,7 +274,7 @@
   "theUnchainedMod:GlimpseIntoFuturePower": {
     "NAME": "A Glimpse into the Future",
     "DESCRIPTIONS": [
-      "If you end your turn with more than 0 Energy, gain #y",
+      "If you end your turn with 0 Energy, gain #y",
       " Energy next turn.",
       "Next turn gain #y",
       " Energy."

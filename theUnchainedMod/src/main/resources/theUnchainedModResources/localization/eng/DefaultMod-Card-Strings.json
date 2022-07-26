@@ -141,8 +141,8 @@
   },
   "theUnchainedMod:Cruiserweight": {
     "NAME": "Cruiserweight",
-    "DESCRIPTION": "Whenever you play a 2-cost card, draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a 2-cost card, draw 2 cards."
+    "DESCRIPTION": "Whenever you draw a 2-cost card, draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Whenever you draw a 2-cost card, draw 2 cards."
   },
   "theUnchainedMod:BasicStrike": {
     "NAME": "Strike",
