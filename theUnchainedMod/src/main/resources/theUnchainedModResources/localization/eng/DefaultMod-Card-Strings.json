@@ -433,5 +433,9 @@
   "theUnchainedMod:KickRocks": {
     "NAME": "Kick Rocks",
     "DESCRIPTION": "Apply !M! theunchainedmod:Dented_Armor. Apply !theUnchainedMod:SecondMagic! Weak. Exhaust."
+  },
+  "theUnchainedMod:Wit": {
+    "NAME": "Wit",
+    "DESCRIPTION": "Witty stuff."
   }
 }

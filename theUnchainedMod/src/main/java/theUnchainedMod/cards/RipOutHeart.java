@@ -1,5 +1,6 @@
 package theUnchainedMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
@@ -14,6 +15,7 @@ import theUnchainedMod.characters.TheDefault;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
+@AutoAdd.Ignore
 public class RipOutHeart extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID(RipOutHeart.class.getSimpleName());
     public static final String IMG = makeCardPath("RipOutHeart.png");
