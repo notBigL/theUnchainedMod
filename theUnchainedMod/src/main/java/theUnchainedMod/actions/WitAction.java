@@ -11,7 +11,7 @@ import java.util.Iterator;
 
 public class WitAction extends AbstractGameAction {
 
-    private boolean upgraded;
+    private final boolean upgraded;
 
     public WitAction(boolean upgraded) {
         this.upgraded = upgraded;
