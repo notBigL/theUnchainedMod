@@ -114,7 +114,7 @@
   },
   "theUnchainedMod:TieTogether": {
     "NAME": "Tie Together",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Everytime the player takes damage, the enemy loses HP equal to the same amount. NL Exhaust.",
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Whenever you take damage, the enemy loses HP equal to the same amount. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I cannot be tied to multiple enemies."
     ]
@@ -319,9 +319,8 @@
   },
   "theUnchainedMod:GlimpseIntoFuture": {
     "NAME": "Glimpse into Future",
-    "DESCRIPTION": "Gain !B! Block. NL If you end this turn with [E] left, gain [E] [E] next turn.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you end this turn with [E] left, gain NL [E] [E] [E] next turn."
-
+    "DESCRIPTION": "Gain !B! Block. NL If you end this turn on 0 [E] , gain [E] [E] next turn.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you end this turn on [E] , gain NL [E] [E] [E] next turn."
   },
   "theUnchainedMod:LongGame": {
     "NAME": "Long Game",
@@ -421,7 +420,7 @@
   },
   "theUnchainedMod:ThreadOfAriadne": {
     "NAME": "Thread Of Ariadne",
-    "DESCRIPTION": "This turn, gain [E] everytime you finish a theunchainedmod:Chain. Exhaust."
+    "DESCRIPTION": "This turn, whenever you finish a theunchainedmod:Chain, gain [E]. Exhaust."
   },
   "theUnchainedMod:Overview": {
     "NAME": "Overview",
