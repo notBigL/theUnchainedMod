@@ -436,6 +436,8 @@
   },
   "theUnchainedMod:Wit": {
     "NAME": "Wit",
-    "DESCRIPTION": "Witty stuff."
+    "DESCRIPTION": "Draw 1 card. If it is a 2-cost card, play it.",
+    "UPGRADE_DESCRIPTION": "Draw 1 card. If it is a 2-cost card, play it and draw another card."
+
   }
 }
