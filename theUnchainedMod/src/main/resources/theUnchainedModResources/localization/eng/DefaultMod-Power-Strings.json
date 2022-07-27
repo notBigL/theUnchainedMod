@@ -183,7 +183,8 @@
     "NAME": "Full Spins",
     "DESCRIPTIONS": [
       "You have done #b",
-      " full spins this turn."
+      " full spins this turn.",
+      " full spin this turn."
     ]
   },
   "theUnchainedMod:NextTurnGainWeakPower": {
