@@ -110,7 +110,7 @@
   },
   "theUnchainedMod:HalfSwing": {
     "NAME": "Half Swing",
-    "DESCRIPTION": "An enemy loses !M! HP. Deal !D! damage to a random enemy. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Scry !M!."
   },
   "theUnchainedMod:TieTogether": {
     "NAME": "Tie Together",
