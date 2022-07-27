@@ -88,8 +88,8 @@
     "DESCRIPTION": "Deal !D! damage. Take !M! theunchainedmod:Relayed_Damage at the end of turn."
   },
   "theUnchainedMod:ThreeSixty": {
-    "NAME": "360",
-    "DESCRIPTION": "An enemy loses !M! HP. Deal !D! damage to ALL enemies. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum."
+    "NAME": "Full Swing",
+    "DESCRIPTION": "Deal !D! damage. Deal !D! damage to ALL enemies. NL Gain !M! theunchainedmod:Momentum."
   },
   "theUnchainedMod:QuickSwing": {
     "NAME": "Quick Swing",
