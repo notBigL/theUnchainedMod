@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.SpinAction;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.patches.CustomTags;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -25,6 +26,7 @@ public class Spin extends AbstractDynamicCard {
 
     public Spin() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        tags.add(CustomTags.MOMENTUM);
         this.exhaust = true;
     }
 

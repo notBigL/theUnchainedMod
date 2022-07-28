@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.MomentumPower;
 import theUnchainedMod.powers.SpinningWheelPower;
 
@@ -36,6 +37,7 @@ public class SpinningWheel extends AbstractDynamicCard {
         baseDamage = damage = DAMAGE;
         baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        tags.add(CustomTags.MOMENTUM);
         this.cardsToPreview = new Swirl();
     }
 

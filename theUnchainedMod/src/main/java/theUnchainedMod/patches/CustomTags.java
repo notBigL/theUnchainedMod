@@ -5,4 +5,5 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class CustomTags {
     @SpireEnum public static AbstractCard.CardTags SWING;
+    @SpireEnum public static AbstractCard.CardTags MOMENTUM;
 }

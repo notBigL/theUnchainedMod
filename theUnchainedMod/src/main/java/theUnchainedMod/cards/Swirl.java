@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.FullSpinPower;
 import theUnchainedMod.powers.MomentumPower;
 
@@ -39,6 +40,7 @@ public class Swirl extends AbstractDynamicCard {
         realBaseBlock = BLOCK;
         baseDamage = damage = DAMAGE;
         baseBlock = block = BLOCK;
+        tags.add(CustomTags.MOMENTUM);
         this.isMultiDamage = true;
         this.exhaust = true;
         this.selfRetain = true;

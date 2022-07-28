@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.BurnishAction;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.patches.CustomTags;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -22,6 +23,7 @@ public class Burnish extends AbstractDynamicCard {
 
     public Burnish() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        tags.add(CustomTags.MOMENTUM);
         this.cardsToPreview = new Swirl();
     }
 

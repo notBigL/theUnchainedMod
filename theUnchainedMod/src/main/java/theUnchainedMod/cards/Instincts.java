@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.BattleScarsPower;
 import theUnchainedMod.powers.FluidMovementPower;
 
@@ -28,6 +29,8 @@ public class Instincts extends AbstractDynamicCard {
     public Instincts() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        tags.add(CustomTags.MOMENTUM);
+        this.cardsToPreview = new Swirl();
     }
 
     @Override

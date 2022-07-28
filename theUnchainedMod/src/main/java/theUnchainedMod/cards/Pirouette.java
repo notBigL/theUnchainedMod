@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.MomentumPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
@@ -31,6 +32,7 @@ public class Pirouette extends AbstractDynamicCard {
     public Pirouette() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        tags.add(CustomTags.MOMENTUM);
         this.cardsToPreview = new Swirl();
         this.exhaust = true;
     }
