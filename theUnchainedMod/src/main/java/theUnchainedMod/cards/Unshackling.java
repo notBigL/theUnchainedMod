@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.ClenchTeethPower;
 import theUnchainedMod.powers.UnshacklingPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;

@@ -7,10 +7,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.LoseRelayedDamageAction;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.KnotPower;
 import theUnchainedMod.powers.RelayPower;
 
-import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
 public class FigureEightKnot extends AbstractDynamicCard {

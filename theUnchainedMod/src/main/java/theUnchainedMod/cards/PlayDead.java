@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.MaladyPower;
 import theUnchainedMod.powers.PlayDeadPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;

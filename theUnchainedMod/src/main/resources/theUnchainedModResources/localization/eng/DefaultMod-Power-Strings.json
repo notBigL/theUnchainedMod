@@ -114,13 +114,6 @@
       "This unit is tied to an enemy."
     ]
   },
-  "theUnchainedMod:ClenchTeethPower": {
-    "NAME": "Teeth are clenched",
-    "DESCRIPTIONS": [
-      "Everytime you are debuffed during your turn, Gain #y",
-      " Block."
-    ]
-  },
   "theUnchainedMod:CruiserweightPower": {
     "NAME": "Cruiserweight",
     "DESCRIPTIONS": [
@@ -165,13 +158,6 @@
       " more Attacks this turn, Stun the enemy."
     ]
   },
-  "theUnchainedMod:ToughnessPower": {
-    "NAME": "Toughness",
-    "DESCRIPTIONS": [
-      "When relayed damage is applied, apply #b",
-      " less."
-    ]
-  },
   "theUnchainedMod:MomentumPower": {
     "NAME": "Momentum",
     "DESCRIPTIONS": [
@@ -185,22 +171,6 @@
       "You have done #b",
       " full spins this turn.",
       " full spin this turn."
-    ]
-  },
-  "theUnchainedMod:NextTurnGainWeakPower": {
-    "NAME": "Gain Weak Next Turn",
-    "DESCRIPTIONS": [
-      "At the start of next turn, gain #r",
-      " weak."
-    ]
-  },
-  "theUnchainedMod:BattleScarsPower": {
-    "NAME": "Power Chain",
-    "DESCRIPTIONS": [
-      "If you play #b1 more Power this Turn, gain #y",
-      " Dexterity.",
-      "If you play #b",
-      " more Powers this Turn, gain #y"
     ]
   },
   "theUnchainedMod:GainMomentumEveryTurnPower": {
@@ -233,14 +203,6 @@
       " more Powers this Turn, gain #y"
     ]
   },
-  "theUnchainedMod:KnotPower": {
-    "NAME": "Knot",
-    "DESCRIPTIONS": [
-      "The next Chain you play is finished instantly.",
-      "The next #b",
-      " Chains you play are finished instantly."
-    ]
-  },
   "theUnchainedMod:EnclosingSteelPower": {
     "NAME": "Hugged by Chains",
     "DESCRIPTIONS": [
@@ -257,12 +219,12 @@
     ]
   },
   "theUnchainedMod:WreckingBallPower": {
-    "NAME": "Attack Chain",
+    "NAME": "Skill Chain",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this turn, ALL enemies lose #y",
+      "If you play #b1 more Skill this turn, ALL enemies lose #y",
       " HP.",
       "If you play #b",
-      " more Attacks this turn, ALL enemies lose #y"
+      " more Skills this turn, ALL enemies lose #y"
     ]
   },
   "theUnchainedMod:LongerChainsPower": {
@@ -281,28 +243,11 @@
       " Energy."
     ]
   },
-  "theUnchainedMod:LongGamePower": {
-    "NAME": "Long Game",
-    "DESCRIPTIONS": [
-      "If your Block is zero at the end of this turn, gain #b",
-      " Block next turn and draw #y1 card.",
-      "Gain #b"
-    ]
-  },
   "theUnchainedMod:InfiniteChainPower": {
     "NAME": "Infinite Chain",
     "DESCRIPTIONS": [
       "Next turn, add ",
       " Infinite Chain into your hand."
-    ]
-  },
-  "theUnchainedMod:ClenchTeethChainPower": {
-    "NAME": "Power Chain",
-    "DESCRIPTIONS": [
-      "If you play #b1 more Power this Turn, gain #y",
-      " Teeth are Clenched.",
-      "If you play #b",
-      " more Powers this Turn, gain #y"
     ]
   },
   "theUnchainedMod:LawOfInertiaPower": {
@@ -319,48 +264,12 @@
       " Strength and Dexterity."
     ]
   },
-  "theUnchainedMod:InertiaPower": {
-    "NAME": "Power Chain",
-    "DESCRIPTIONS": [
-      "If you play #b1 more Power this Turn, gain #y",
-      " Energy.",
-      "If you play #b",
-      " more Powers this Turn, gain #y"
-    ]
-  },
-  "theUnchainedMod:SwathePower": {
-    "NAME": "Attack Chain",
-    "DESCRIPTIONS": [
-      "If you play #b1 more Attack this turn, enemy gains #y",
-      " Block.",
-      "If you play #b",
-      " more Attacks this turn, enemy gains #y"
-    ]
-  },
-  "theUnchainedMod:BlindSwingPower": {
-    "NAME": "Attack Chain",
-    "DESCRIPTIONS": [
-      "If you play #b1 more Attack this turn, gain #y",
-      " Malady.",
-      "If you play #b",
-      " more Attacks this turn, gain #y"
-    ]
-  },
   "theUnchainedMod:LastResortPower": {
     "NAME": "Skill Chain",
     "DESCRIPTIONS": [
       "If you play #b1 more Skill this turn, lose ALL your Energy.",
       "If you play #b",
       " more Skills this turn, lose ALL your Energy."
-    ]
-  },
-  "theUnchainedMod:SpinningWheelPower": {
-    "NAME": "Attack Chain",
-    "DESCRIPTIONS": [
-      "If you play #b1 more Attack this turn, gain #y",
-      " Momentum.",
-      "If you play #b",
-      " more Attacks this turn, gain #y"
     ]
   },
   "theUnchainedMod:FluidMovementPower": {
@@ -377,13 +286,6 @@
       " Weak to the enemy.",
       "If you play #b",
       " more Attacks this Turn, apply #y"
-    ]
-  },
-  "theUnchainedMod:MaladyPower": {
-    "NAME": "Malady",
-    "DESCRIPTIONS": [
-      "You are plagued by Malady for the next #r",
-      " turns, the maladyTimer is #y"
     ]
   },
   "theUnchainedMod:SwingingPower": {

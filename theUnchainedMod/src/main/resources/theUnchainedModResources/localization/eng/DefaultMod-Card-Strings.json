@@ -55,17 +55,9 @@
     "DESCRIPTION": "Whenever you play a card, Upgrade it for the rest of combat.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, Upgrade it for the rest of combat."
   },
-  "theUnchainedMod:ManacleWhip": {
-    "NAME": "Manacle Whip",
-    "DESCRIPTION": "Deal !D! damage. Gain !M! theunchainedmod:Malady."
-  },
   "theUnchainedMod:Whiplash": {
     "NAME": "Whiplash",
     "DESCRIPTION": "Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Enemy loses !M! HP."
-  },
-  "theUnchainedMod:SplinteredShield": {
-    "NAME": "Splintered Shield",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! theunchainedmod:Malady."
   },
   "theUnchainedMod:BrassKnuckle": {
     "NAME": "Brass Knuckle",
@@ -99,10 +91,6 @@
     "NAME": "Step Back",
     "DESCRIPTION": "Draw !M! cards. NL 1 theunchainedmod:Chain: Gain !B! Block."
   },
-  "theUnchainedMod:HiddenBlade": {
-    "NAME": "Hidden Blade",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
-  },
   "theUnchainedMod:MakeRoom": {
     "NAME": "Make Room",
     "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you have no Block, gain [E].",
@@ -122,18 +110,6 @@
   "theUnchainedMod:Liberation": {
     "NAME": "Liberation",
     "DESCRIPTION": "Gain !B! Block. NL Finish all your active theunchainedmod:Chains."
-  },
-  "theUnchainedMod:ClenchTeeth": {
-    "NAME": "Clench Teeth",
-    "DESCRIPTION": "Everytime you are debuffed during your turn, gain !M! Block. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! more."
-  },
-  "theUnchainedMod:NonDominantHand": {
-    "NAME": "Non-dominant Hand",
-    "DESCRIPTION": "Enemy loses !M! HP for every stack of theunchainedmod:Malady you have."
-  },
-  "theUnchainedMod:Cower": {
-    "NAME": "Cower",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Gain 1 theunchainedmod:Malady. NL Apply !theUnchainedMod:SecondMagic! Vulnerable to ALL enemies."
   },
   "theUnchainedMod:MorningStar": {
     "NAME": "Morning Star",
@@ -189,10 +165,6 @@
     "NAME": "Routine Dodge",
     "DESCRIPTION": "Gain !B! Block. NL theunchainedmod:Link."
   },
-  "theUnchainedMod:SharedBurden": {
-    "NAME": "Shared Burden",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Malady. Apply !theUnchainedMod:SecondMagic! Weak to ALL enemies."
-  },
   "theUnchainedMod:HookedChain": {
     "NAME": "Hooked Chain",
     "DESCRIPTION": "Deal !D! damage. Gain !M! theunchainedmod:Momentum."
@@ -214,18 +186,9 @@
     "NAME": "Cautious Strike",
     "DESCRIPTION": "Deal !D! damage. theunchainedmod:Relay !M! damage."
   },
-  "theUnchainedMod:RipOutHeart": {
-    "NAME": "Rip Out Heart",
-    "DESCRIPTION": "Deal !D! damage. NL Lose all your Block. NL End your turn. NL Exhaust."
-  },
   "theUnchainedMod:SolarPlexus": {
     "NAME": "Solar Plexus",
     "DESCRIPTION": "Deal !D! damage. NL !M! theunchainedmod:Chain: Stun. NL Exhaust."
-  },
-  "theUnchainedMod:BreakFree": {
-    "NAME": "Break Free",
-    "DESCRIPTION": "Draw !M! cards. Remove your Weak, Frail and Vulnerable. Gain [E] for every Debuff removed. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. Remove ALL your debuffs. Gain [E] for every Debuff removed. NL Exhaust."
   },
   "theUnchainedMod:Instincts": {
     "NAME": "Instincts",
@@ -234,10 +197,6 @@
   "theUnchainedMod:Burnish": {
     "NAME": "Burnish",
     "DESCRIPTION": "Exhaust a card. Gain theunchainedmod:Momentum equal to double its cost."
-  },
-  "theUnchainedMod:SecretReserves": {
-    "NAME": "Secret Reserves",
-    "DESCRIPTION": "Gain Strength equal to your theunchainedmod:Malady. NL Cure your theunchainedmod:Malady. NL Exhaust."
   },
   "theUnchainedMod:SharePain": {
     "NAME": "Share Pain",
@@ -286,10 +245,6 @@
     "NAME": "Baguazhang",
     "DESCRIPTION": "If the enemy intents to do less than !M! damage, Block !B!."
   },
-  "theUnchainedMod:SharpSplittings": {
-    "NAME": "Sharp Splittings",
-    "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! theunchainedmod:Malady. Deal !D! damage to ALL enemies. Apply !M! Vulnerable and !M! Weak to ALL enemies."
-  },
   "theUnchainedMod:HeavyForm": {
     "NAME": "Heavy Form",
     "DESCRIPTION": "ALL 2-cost cards cost zero once per turn.",
@@ -312,19 +267,10 @@
     "NAME": "Hobbles",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Apply !M! Weak. NL Retain. NL Exhaust."
   },
-  "theUnchainedMod:WeatherbeatenSkin": {
-    "NAME": "Weatherbeaten Skin",
-    "DESCRIPTION": "Gain X theunchainedmod:Toughness. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X + 1 theunchainedmod:Toughness. NL Exhaust."
-  },
   "theUnchainedMod:GlimpseIntoFuture": {
     "NAME": "Glimpse into Future",
     "DESCRIPTION": "Gain !B! Block. NL If you end this turn on 0 [E] , gain [E] [E] next turn.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you end this turn on [E] , gain NL [E] [E] [E] next turn."
-  },
-  "theUnchainedMod:LongGame": {
-    "NAME": "Long Game",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you are afflicted with theunchainedmod:Malady, theunchainedmod:Relay !M! damage again and draw 1 additional card next turn."
   },
   "theUnchainedMod:Pirouette": {
     "NAME": "Pirouette",
@@ -364,14 +310,6 @@
   "theUnchainedMod:LawOfInertia": {
     "NAME": "Law Of Inertia",
     "DESCRIPTION": "At the start of each turn, lose !M! Strength and Dexterity. Whenever you finish a theunchainedmod:Chain gain !theUnchainedMod:SecondMagic! Strength and Dexterity."
-  },
-  "theUnchainedMod:Swathe": {
-    "NAME": "Swathe",
-    "DESCRIPTION": "Deal !D! damage. !theUnchainedMod:SecondMagic! theunchainedmod:Chain: the same enemy gains !M! Block."
-  },
-  "theUnchainedMod:BlindSwing": {
-    "NAME": "Blind Swing",
-    "DESCRIPTION": "Enemy loses !M! HP. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! theunchainedmod:Malady."
   },
   "theUnchainedMod:LastResort": {
     "NAME": "Last Resort",

@@ -2,15 +2,10 @@ package theUnchainedMod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.FrailPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.powers.MaladyPower;
 import theUnchainedMod.util.TextureLoader;
 
 import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;

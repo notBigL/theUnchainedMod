@@ -7,10 +7,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.patches.CustomTags;
-import theUnchainedMod.powers.BattleScarsPower;
 import theUnchainedMod.powers.FluidMovementPower;
 
-import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
 public class Instincts extends AbstractDynamicCard {

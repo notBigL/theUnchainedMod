@@ -54,14 +54,6 @@
     "DESCRIPTION": "Doubles the damage and Block of Swirls this turn."
   },
   {
-    "PROPER_NAME": "Malady",
-    "NAMES": [
-      "Malady",
-      "malady"
-    ],
-    "DESCRIPTION": "Applies debuffs that get worse, if it is not reapplied."
-  },
-  {
     "PROPER_NAME": "Dented Armor",
     "NAMES": [
       "Dented Armor",

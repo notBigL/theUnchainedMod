@@ -12,7 +12,6 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.MomentumPower;
-import theUnchainedMod.powers.SpinningWheelPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
