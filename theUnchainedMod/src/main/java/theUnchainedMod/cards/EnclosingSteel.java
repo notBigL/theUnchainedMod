@@ -21,7 +21,7 @@ public class EnclosingSteel extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 8;
+    private static final int MAGIC_NUMBER = 9;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
     private static final int SECOND_MAGIC_NUMBER = 1;
 
