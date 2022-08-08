@@ -354,7 +354,7 @@
   },
   "theUnchainedMod:Compounding": {
     "NAME": "Compounding",
-    "DESCRIPTION": "Relay !M! damage. Make a card in your hand cost [E] less once this turn."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. Make a card in your hand cost [E] less once this turn."
   },
   "theUnchainedMod:ThreadOfAriadne": {
     "NAME": "Thread Of Ariadne",

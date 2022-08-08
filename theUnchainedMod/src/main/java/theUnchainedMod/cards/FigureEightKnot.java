@@ -22,7 +22,7 @@ public class FigureEightKnot extends AbstractDynamicCard {
 
 
     private static final int COST = 2;
-    private static final int MAGIC_NUMBER = 13;
+    private static final int MAGIC_NUMBER = 15;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
 
     public FigureEightKnot() {
