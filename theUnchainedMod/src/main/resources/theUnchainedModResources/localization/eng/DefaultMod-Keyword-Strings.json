@@ -18,7 +18,7 @@
       "relayed",
       "relaying"
     ],
-    "DESCRIPTION": "Damage taken after Block is reduced by this amount. NL Reduced damage is dealt at the end of the turn after next turn."
+    "DESCRIPTION": "Damage taken after Block is reduced. NL Half of the Reduced damage is dealt at the end of the turn after next turn."
   },
   {
     "PROPER_NAME": "Link",
@@ -35,7 +35,7 @@
       "Relayed Damage",
       "relayed_damage"
     ],
-    "DESCRIPTION": "Damage that was relayed. Is dealt to the Player at the end of the next turn."
+    "DESCRIPTION": "Damage that was relayed. Half of it (rounded down) is dealt to the Player at the end of the next turn."
   },
   {
     "PROPER_NAME": "Momentum",
