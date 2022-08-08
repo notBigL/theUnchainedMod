@@ -74,7 +74,8 @@ public class RelayedDamagePower extends AbstractPower {
 
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
-            DamageInfo damageInfo = new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS);
+            int damageAmount = this.amount / 2;
+            DamageInfo damageInfo = new DamageInfo(this.owner, damageAmount, DamageInfo.DamageType.THORNS);
             RelayedDamageField.relayed.set(damageInfo, true);
             AbstractDungeon.actionManager.addToTop(new DamageAction(this.owner, damageInfo, AbstractGameAction.AttackEffect.POISON));
             AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
