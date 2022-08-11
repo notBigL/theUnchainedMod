@@ -13,7 +13,7 @@ public class DoubleDown extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(DoubleDown.class.getSimpleName());
     public static final String IMG = makeCardPath("DoubleDown.png");
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
