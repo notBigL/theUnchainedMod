@@ -40,8 +40,6 @@ public class PeaceOffering extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.hasPower("theUnchainedMod:RelayPower")) {
-            AbstractDungeon.actionManager.addToBottom(new PeaceOfferingAction(AbstractDungeon.player.getPower("theUnchainedMod:RelayPower").amount));
-        }
+        AbstractDungeon.actionManager.addToBottom(new PeaceOfferingAction());
     }
 }

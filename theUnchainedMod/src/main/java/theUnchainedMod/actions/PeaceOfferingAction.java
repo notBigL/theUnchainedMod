@@ -10,10 +10,12 @@ import theUnchainedMod.powers.RelayPower;
 
 public class PeaceOfferingAction extends AbstractGameAction {
 
-    public PeaceOfferingAction(int relayAmount) {
-        this.amount = relayAmount;
+    public PeaceOfferingAction() {
+        this.amount = 0;
+        if (AbstractDungeon.player.hasPower("theUnchainedMod:RelayPower")) {
+            this.amount = AbstractDungeon.player.getPower("theUnchainedMod:RelayPower").amount;
+        }
     }
-
 
     @Override
     public void update() {
