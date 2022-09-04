@@ -31,10 +31,10 @@ public class SpinAction extends AbstractGameAction {
             effect += 2;
             this.player.getRelic("Chemical X").flash();
         }
-        effect *= 2;
         if (this.upgraded) {
             ++effect;
         }
+        effect *= 2;
         if (effect > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, effect)));
         }
