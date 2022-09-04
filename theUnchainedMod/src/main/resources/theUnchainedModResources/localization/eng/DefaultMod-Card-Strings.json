@@ -230,8 +230,8 @@
   },
   "theUnchainedMod:StareDown": {
     "NAME": "Stare Down",
-    "DESCRIPTION": "Gain [E] for every enemy that is blocking. ALL enemies lose !M! Block.",
-    "UPGRADE_DESCRIPTION": "Gain [E] if ALL enemies are blocking and [E] for every enemy that is blocking. ALL enemies lose !M! Block."
+    "DESCRIPTION": "Gain [E] for every enemy that is blocking.",
+    "UPGRADE_DESCRIPTION": "Gain [E] if ALL enemies are blocking and [E] for every enemy that is blocking."
   },
   "theUnchainedMod:EnclosingSteel": {
     "NAME": "Enclosing Steel",
@@ -261,7 +261,8 @@
   },
   "theUnchainedMod:LongerChains": {
     "NAME": "Longer Chains",
-    "DESCRIPTION": "At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn."
+    "DESCRIPTION": "At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn."
   },
   "theUnchainedMod:Hobbles": {
     "NAME": "Hobbles",
@@ -288,7 +289,7 @@
   "theUnchainedMod:Spin": {
     "NAME": "Spin",
     "DESCRIPTION": "Gain X theunchainedmod:Momentum times 2. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain (X theunchainedmod:Momentum times 2) + 1. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain (X + 1) theunchainedmod:Momentum times 2. NL Exhaust."
   },
   "theUnchainedMod:PeaceOffering": {
     "NAME": "Peace Offering",

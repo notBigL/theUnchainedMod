@@ -23,11 +23,9 @@ public class StareDown extends AbstractDynamicCard {
 
 
     private static final int COST = 0;
-    private static final int MAGIC_NUMBER = 9;
 
     public StareDown() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
 
     @Override
@@ -41,6 +39,6 @@ public class StareDown extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new StareDownAction(magicNumber, upgraded));
+        AbstractDungeon.actionManager.addToBottom(new StareDownAction(upgraded));
     }
 }

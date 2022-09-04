@@ -25,7 +25,6 @@ public class LongerChains extends AbstractDynamicCard {
     private static final int COST = 2;
     private static final int MAGIC_NUMBER = 2;
     private static final int SECOND_MAGIC_NUMBER = 8;
-    private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = -2;
 
     public LongerChains() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -37,7 +36,9 @@ public class LongerChains extends AbstractDynamicCard {
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
+            this.isInnate = true;
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

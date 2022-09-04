@@ -9,8 +9,7 @@ public class StareDownAction extends AbstractGameAction {
 
     private final boolean upgraded;
 
-    public StareDownAction(int block, boolean upgraded) {
-        this.amount = block;
+    public StareDownAction(boolean upgraded) {
         this.upgraded = upgraded;
     }
 
@@ -24,7 +23,6 @@ public class StareDownAction extends AbstractGameAction {
             } else if (!mo.isDead) {
                 allEnemiesBlocking = false;
             }
-            AbstractDungeon.actionManager.addToBottom(new LoseBlockAction(mo, this.amount));
         }
         if (allEnemiesBlocking && this.upgraded) {
             energyGain++;
