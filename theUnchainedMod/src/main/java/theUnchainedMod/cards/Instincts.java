@@ -21,7 +21,7 @@ public class Instincts extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
 
-    private static final int COST = 3;
+    private static final int COST = 1;
     private static final int MAGIC_NUMBER = 1;
 
     public Instincts() {
@@ -35,7 +35,7 @@ public class Instincts extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
+            upgradeBaseCost(0);
         }
     }
 
