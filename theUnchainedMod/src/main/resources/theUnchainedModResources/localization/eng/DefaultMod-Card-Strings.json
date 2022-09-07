@@ -363,7 +363,7 @@
   },
   "theUnchainedMod:Overview": {
     "NAME": "Overview",
-    "DESCRIPTION": "Gain !M! temporary Dexterity. 1 theunchainedmod:Chain: ALL enemies gain !theUnchainedMod:SecondMagic! Weak."
+    "DESCRIPTION": "Gain !M! temporary Dexterity. 1 theunchainedmod:Chain: Apply !theUnchainedMod:SecondMagic! Weak to ALL enemies."
   },
   "theUnchainedMod:CrushPlates": {
     "NAME": "Crush Plates",
