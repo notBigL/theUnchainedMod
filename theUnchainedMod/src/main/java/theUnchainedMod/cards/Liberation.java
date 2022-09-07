@@ -18,13 +18,14 @@ public class Liberation extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int BLOCK = 8;
     private static final int UPGRADE_PLUS_BLOCK = 4;
 
     public Liberation() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = block = BLOCK;
+        this.exhaust = true;
     }
 
     @Override

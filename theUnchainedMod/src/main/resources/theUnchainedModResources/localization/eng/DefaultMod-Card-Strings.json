@@ -109,7 +109,7 @@
   },
   "theUnchainedMod:Liberation": {
     "NAME": "Liberation",
-    "DESCRIPTION": "Gain !B! Block. NL Finish all your active theunchainedmod:Chains."
+    "DESCRIPTION": "Gain !B! Block. NL Finish all your active theunchainedmod:Chains. Exhaust."
   },
   "theUnchainedMod:MorningStar": {
     "NAME": "Morning Star",
@@ -271,7 +271,7 @@
   "theUnchainedMod:GlimpseIntoFuture": {
     "NAME": "Glimpse into Future",
     "DESCRIPTION": "Gain !B! Block. NL If you end this turn on 0 [E] , gain [E] [E] next turn.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you end this turn on [E] , gain NL [E] [E] [E] next turn."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you end this turn on 0 [E] , gain NL [E] [E] [E] next turn."
   },
   "theUnchainedMod:Pirouette": {
     "NAME": "Pirouette",
