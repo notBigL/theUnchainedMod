@@ -146,8 +146,8 @@
   "theUnchainedMod:TunnelVisionPower": {
     "NAME": "Tunnel Vision",
     "DESCRIPTIONS": [
-      "Everytime you play an attack, lose #b",
-      " relayed damage."
+      "At the start of your turn, apply #b",
+      " Dented Armor to ALL enemies."
     ]
   },
   "theUnchainedMod:SolarPlexusPower": {

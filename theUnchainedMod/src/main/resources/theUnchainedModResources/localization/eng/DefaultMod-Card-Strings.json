@@ -180,7 +180,7 @@
   },
   "theUnchainedMod:TunnelVision": {
     "NAME": "Tunnel Vision",
-    "DESCRIPTION": "Lose !M! theunchainedmod:Relayed_Damage whenever you play an attack. 1 theunchainedmod:Chain: Lose !theUnchainedMod:SecondMagic! more."
+    "DESCRIPTION": "At the start of your turn, apply !M! theunchainedmod:Dented_Armor to ALL enemies."
   },
   "theUnchainedMod:CautiousStrike": {
     "NAME": "Cautious Strike",

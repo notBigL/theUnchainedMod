@@ -11,12 +11,16 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.ChainAction;
 import theUnchainedMod.actions.LoseRelayedDamageAction;
 import theUnchainedMod.patches.RelayedDamageField;
 import theUnchainedMod.util.TextureLoader;
+
+import java.util.Iterator;
 
 public class TunnelVisionPower extends AbstractPower {
     public AbstractCreature source;
@@ -48,9 +52,18 @@ public class TunnelVisionPower extends AbstractPower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
-    public void onUseCard(AbstractCard c, UseCardAction action) {
-        if (c.type == AbstractCard.CardType.ATTACK) {
-            AbstractDungeon.actionManager.addToBottom(new LoseRelayedDamageAction(this.amount));
+    public void atStartOfTurnPostDraw() {
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            this.flash();
+            Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
+
+            while(var1.hasNext()) {
+                AbstractMonster m = (AbstractMonster)var1.next();
+                if (!m.isDead && !m.isDying) {
+                    this.addToBot(new ApplyPowerAction(m, this.owner, new DentedArmorPower(m, this.owner, this.amount), this.amount));
+                }
+            }
         }
+
     }
 }
