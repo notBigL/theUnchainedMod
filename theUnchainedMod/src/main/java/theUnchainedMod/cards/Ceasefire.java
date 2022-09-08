@@ -4,29 +4,27 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.SpinAction;
+import theUnchainedMod.actions.PeaceOfferingAction;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.patches.CustomTags;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class Spin extends AbstractDynamicCard {
+public class Ceasefire extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Spin.class.getSimpleName());
-    public static final String IMG = makeCardPath("Spin.png");
-    private static final CardRarity RARITY = CardRarity.RARE;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    public static final String ID = DefaultMod.makeID(Ceasefire.class.getSimpleName());
+    public static final String IMG = makeCardPath("PeaceOffering.png");
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ALL;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
 
-    private static final int COST = -1;
+    private static final int COST = 1;
 
-    public Spin() {
+    public Ceasefire() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        tags.add(CustomTags.MOMENTUM);
         this.exhaust = true;
     }
 
@@ -34,6 +32,7 @@ public class Spin extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.exhaust = false;
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
@@ -41,6 +40,6 @@ public class Spin extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new SpinAction(p, this.upgraded, this.freeToPlayOnce, this.energyOnUse));
+        AbstractDungeon.actionManager.addToBottom(new PeaceOfferingAction());
     }
 }

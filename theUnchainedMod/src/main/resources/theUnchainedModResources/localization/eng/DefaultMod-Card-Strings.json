@@ -59,8 +59,8 @@
     "NAME": "Whiplash",
     "DESCRIPTION": "Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Enemy loses !M! HP."
   },
-  "theUnchainedMod:BrassKnuckle": {
-    "NAME": "Brass Knuckle",
+  "theUnchainedMod:LashOut": {
+    "NAME": "Lash Out",
     "DESCRIPTION": "Deal !D! damage. NL 1 theunchainedmod:Chain: Gain [E]."
   },
   "theUnchainedMod:PlayDead": {
@@ -71,8 +71,8 @@
     "NAME": "Postpone",
     "DESCRIPTION": "theunchainedmod:Relay !M! damage every turn."
   },
-  "theUnchainedMod:ShieldFace": {
-    "NAME": "Shield Face",
+  "theUnchainedMod:DualBarrier": {
+    "NAME": "Dual Barrier",
     "DESCRIPTION": "Gain !B! Block. theunchainedmod:Relay !M! damage."
   },
   "theUnchainedMod:RecklessSwing": {
@@ -174,8 +174,8 @@
     "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Retain. Gain 1 theunchainedmod:Full_Spin. Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Retain. Gain 1 theunchainedmod:Momentum and 1 theunchainedmod:Full_Spin. Exhaust."
   },
-  "theUnchainedMod:PerfectExecution": {
-    "NAME": "Perfect Execution",
+  "theUnchainedMod:RoyalDecree": {
+    "NAME": "Royal Decree",
     "DESCRIPTION": "Add a random 2-cost card into your hand. It costs !M! this turn. NL Exhaust."
   },
   "theUnchainedMod:TunnelVision": {
@@ -203,8 +203,8 @@
     "DESCRIPTION": "Deal !D! damage. NL Damage is equal to ALL theunchainedmod:Relayed_Damage you gained this combat.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage !theUnchainedMod:SecondMagic! times. NL Damage is equal to ALL theunchainedmod:Relayed_Damage you gained this combat."
   },
-  "theUnchainedMod:DiveIntoFray": {
-    "NAME": "Dive Into Fray",
+  "theUnchainedMod:Overexertion": {
+    "NAME": "Overexertion",
     "DESCRIPTION": "Gain [E] [E]. NL Take !M! theunchainedmod:Relayed_Damage at the end of turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Take !M! theunchainedmod:Relayed_Damage at the end of turn. NL Exhaust."
   },
@@ -220,8 +220,8 @@
     "NAME": "Single Out",
     "DESCRIPTION": "Deal !D! damage. NL A random enemy gains !M! Block."
   },
-  "theUnchainedMod:RelentlessBattery": {
-    "NAME": "Relentless Battery",
+  "theUnchainedMod:RelentlessOnslaught": {
+    "NAME": "Relentless Onslaught",
     "DESCRIPTION": "Deal !D! damage !M! times. NL 1 theunchainedmod:Chain: Deal !D! damage !M! times and reapply this theunchainedmod:Chain. NL Exhaust. "
   },
   "theUnchainedMod:FigureEightKnot": {
@@ -282,17 +282,17 @@
     "DESCRIPTION": "Ethereal. theunchainedmod:Link. NL Next turn, add an Infinite Chain into your Hand. Exhaust.",
     "UPGRADE_DESCRIPTION": "Innate. Ethereal. theunchainedmod:Link. NL Next turn, add an Infinite Chain into your Hand. Exhaust."
   },
-  "theUnchainedMod:Wink": {
-    "NAME": "Wink",
+  "theUnchainedMod:TradeOffer": {
+    "NAME": "Trade Offer",
     "DESCRIPTION": "Enemy gains !M! Block. NL Draw !theUnchainedMod:SecondMagic! cards."
   },
-  "theUnchainedMod:Spin": {
-    "NAME": "Spin",
+  "theUnchainedMod:EndlessSpin": {
+    "NAME": "Endless Spin",
     "DESCRIPTION": "Gain X theunchainedmod:Momentum times 2. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain (X + 1) theunchainedmod:Momentum times 2. NL Exhaust."
   },
-  "theUnchainedMod:PeaceOffering": {
-    "NAME": "Peace Offering",
+  "theUnchainedMod:Ceasefire": {
+    "NAME": "Ceasefire",
     "DESCRIPTION": "Double your theunchainedmod:Relay. Double the Block of ALL enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Double your theunchainedmod:Relay. Double the Block of ALL enemies."
   },
@@ -300,8 +300,8 @@
     "NAME": "Suffocate",
     "DESCRIPTION": "Enemy loses HP equal to double his Block."
   },
-  "theUnchainedMod:EscapeRope": {
-    "NAME": "Escape Rope",
+  "theUnchainedMod:ThreadOfAriadne": {
+    "NAME": "Thread Of Ariadne",
     "DESCRIPTION": "If you have an active Chain, take an extra turn after this turn. End your turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "If you have an active Chain, take an extra turn after this turn. End your turn.",
     "EXTENDED_DESCRIPTION": [
@@ -316,21 +316,21 @@
     "NAME": "Last Resort",
     "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E]. !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Lose ALL your [E]. NL Exhaust."
   },
-  "theUnchainedMod:DiamondSaw": {
-    "NAME": "Diamond Saw",
+  "theUnchainedMod:SnapInHalf": {
+    "NAME": "Snap In Half",
     "DESCRIPTION": "Deal !D! damage. NL Delete ALL your active theunchainedmod:Chains."
   },
   "theUnchainedMod:ReinforcedElement": {
     "NAME": "Reinforced Element",
     "DESCRIPTION": "Gain !B! Block. If you have an active theunchainedmod:Chain, gain [E] and draw 1 card."
   },
-  "theUnchainedMod:GraspIntoFuture": {
-    "NAME": "Grasp Into Future",
+  "theUnchainedMod:Prophecy": {
+    "NAME": "Prophecy",
     "DESCRIPTION": "Copy a card and put the copy on top of your draw pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Copy a card two times and put the copies on top of your draw pile. NL Exhaust."
   },
-  "theUnchainedMod:SpinningWheel": {
-    "NAME": "Spinning Wheel",
+  "theUnchainedMod:Riposte": {
+    "NAME": "Riposte",
     "DESCRIPTION": "Gain !B! Block. Deal !D! damage. NL Gain !M! theunchainedmod:Momentum."
   },
   "theUnchainedMod:Glare": {
@@ -349,16 +349,16 @@
     "NAME": "Keep Swinging",
     "DESCRIPTION": "All Cards with \"Swing\" in their name deal !M! additional damage."
   },
-  "theUnchainedMod:PoeticJustice": {
-    "NAME": "Poetic Justice",
+  "theUnchainedMod:EyeForAnEye": {
+    "NAME": "Eye For An Eye",
     "DESCRIPTION": "Remove up to !M! theunchainedmod:Relayed_Damage. Gain Vigor equal to the amount you removed."
   },
   "theUnchainedMod:Compounding": {
     "NAME": "Compounding",
     "DESCRIPTION": "Gain !B! Block. Make a card in your hand cost [E] less once this turn."
   },
-  "theUnchainedMod:ThreadOfAriadne": {
-    "NAME": "Thread Of Ariadne",
+  "theUnchainedMod:ChaseDestiny": {
+    "NAME": "Chase Destiny",
     "DESCRIPTION": "This turn, whenever you finish a theunchainedmod:Chain, gain [E]. Exhaust."
   },
   "theUnchainedMod:Overview": {

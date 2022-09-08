@@ -14,9 +14,9 @@ import theUnchainedMod.powers.RelayedDamagePower;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class DiveIntoFray extends AbstractDynamicCard {
+public class Overexertion extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(DiveIntoFray.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(Overexertion.class.getSimpleName());
     public static final String IMG = makeCardPath("DiveIntoFray.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -31,7 +31,7 @@ public class DiveIntoFray extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 1;
 
 
-    public DiveIntoFray() {
+    public Overexertion() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;

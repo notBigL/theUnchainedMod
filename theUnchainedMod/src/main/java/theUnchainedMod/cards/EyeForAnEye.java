@@ -4,42 +4,38 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.PeaceOfferingAction;
+import theUnchainedMod.actions.PoeticJusticeAction;
 import theUnchainedMod.characters.TheDefault;
 
-import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class PeaceOffering extends AbstractDynamicCard {
-
-    public static final String ID = DefaultMod.makeID(PeaceOffering.class.getSimpleName());
-    public static final String IMG = makeCardPath("PeaceOffering.png");
+public class EyeForAnEye extends AbstractDynamicCard {
+    public static final String ID = DefaultMod.makeID(EyeForAnEye.class.getSimpleName());
+    public static final String IMG = makeCardPath("PoeticJustice.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ALL;
+    private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
-    public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
-
 
     private static final int COST = 1;
+    private static final int MAGIC_NUMBER = 10;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 7;
 
-    public PeaceOffering() {
+    public EyeForAnEye() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust = true;
+        baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
 
     @Override
     public void upgrade() {
-        if (!upgraded) {
+        if(!upgraded) {
             upgradeName();
-            this.exhaust = false;
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new PeaceOfferingAction());
+        AbstractDungeon.actionManager.addToBottom(new PoeticJusticeAction(magicNumber));
     }
 }

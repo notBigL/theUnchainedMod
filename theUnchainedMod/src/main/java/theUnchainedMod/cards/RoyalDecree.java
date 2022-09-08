@@ -1,41 +1,46 @@
 package theUnchainedMod.cards;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.PoeticJusticeAction;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.util.UtilityClass;
+
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class PoeticJustice extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(PoeticJustice.class.getSimpleName());
-    public static final String IMG = makeCardPath("PoeticJustice.png");
+public class RoyalDecree extends AbstractDynamicCard {
+
+    public static final String ID = DefaultMod.makeID(RoyalDecree.class.getSimpleName());
+    public static final String IMG = makeCardPath("PerfectExecution.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 10;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 7;
+    private static final int MAGIC_NUMBER = 0;
 
-    public PoeticJustice() {
+    public RoyalDecree() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        this.exhaust = true;
     }
 
     @Override
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
+            upgradeBaseCost(0);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new PoeticJusticeAction(magicNumber));
+        AbstractCard c = UtilityClass.returnTrulyRandomTwoCostCardInCombat();
+        c.setCostForTurn(magicNumber);
+        this.addToBot(new MakeTempCardInHandAction(c, true));
     }
 }

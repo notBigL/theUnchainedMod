@@ -10,8 +10,8 @@ import theUnchainedMod.characters.TheDefault;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class Wink extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(Wink.class.getSimpleName());
+public class TradeOffer extends AbstractDynamicCard {
+    public static final String ID = DefaultMod.makeID(TradeOffer.class.getSimpleName());
     public static final String IMG = makeCardPath("Wink.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -24,7 +24,7 @@ public class Wink extends AbstractDynamicCard {
     private static final int SECOND_MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 1;
 
-    public Wink() {
+    public TradeOffer() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;

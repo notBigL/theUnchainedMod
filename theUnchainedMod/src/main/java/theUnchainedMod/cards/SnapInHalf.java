@@ -11,9 +11,9 @@ import theUnchainedMod.characters.TheDefault;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class DiamondSaw extends AbstractDynamicCard {
+public class SnapInHalf extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(DiamondSaw.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(SnapInHalf.class.getSimpleName());
     public static final String IMG = makeCardPath("DiamondSaw.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -24,7 +24,7 @@ public class DiamondSaw extends AbstractDynamicCard {
     private static final int DAMAGE = 25;
     private static final int UPGRADE_PLUS_DMG = 8;
 
-    public DiamondSaw() {
+    public SnapInHalf() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
     }

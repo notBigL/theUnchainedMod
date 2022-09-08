@@ -10,9 +10,9 @@ import theUnchainedMod.characters.TheDefault;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class GraspIntoFuture extends AbstractDynamicCard {
+public class Prophecy extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(GraspIntoFuture.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(Prophecy.class.getSimpleName());
     public static final String IMG = makeCardPath("WeatherbeatenSkin.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -23,7 +23,7 @@ public class GraspIntoFuture extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    public GraspIntoFuture() {
+    public Prophecy() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
     }

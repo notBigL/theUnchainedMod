@@ -1,38 +1,37 @@
 package theUnchainedMod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.MultiAttackAction;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.BrassKnucklePower;
+import theUnchainedMod.powers.RelentlessBatteryPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class BrassKnuckle extends AbstractDynamicCard {
+public class RelentlessOnslaught extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(BrassKnuckle.class.getSimpleName());
-    public static final String IMG = makeCardPath("BrassKnuckle.png");
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    public static final String ID = DefaultMod.makeID(RelentlessOnslaught.class.getSimpleName());
+    public static final String IMG = makeCardPath("RelentlessBattery.png");
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 15;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int DAMAGE = 2;
+    private static final int UPGRADE_PLUS_DMG = 1;
     private static final int CHAIN_LENGTH = 1;
-    private static final int MAGIC_NUMBER = 1;
+    private static final int MAGIC_NUMBER = 3;
 
-    public BrassKnuckle() {
+    public RelentlessOnslaught() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        this.exhaust = true;
     }
 
     @Override
@@ -46,7 +45,8 @@ public class BrassKnuckle extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new BrassKnucklePower(p, CHAIN_LENGTH, new GainEnergyAction(baseMagicNumber), TYPE)));
+        DamageInfo info = new DamageInfo(p, this.damage, this.damageTypeForTurn);
+        AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(magicNumber, m, info));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessBatteryPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
     }
 }

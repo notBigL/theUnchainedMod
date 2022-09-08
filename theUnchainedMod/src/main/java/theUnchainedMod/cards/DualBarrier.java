@@ -11,9 +11,9 @@ import theUnchainedMod.powers.RelayPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class ShieldFace extends AbstractDynamicCard {
+public class DualBarrier extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(ShieldFace.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(DualBarrier.class.getSimpleName());
     public static final String IMG = makeCardPath("ShieldFace.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -26,7 +26,7 @@ public class ShieldFace extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 8;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
 
-    public ShieldFace() {
+    public DualBarrier() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
