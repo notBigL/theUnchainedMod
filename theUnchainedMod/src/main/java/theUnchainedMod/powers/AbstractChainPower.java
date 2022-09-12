@@ -48,7 +48,7 @@ public class AbstractChainPower extends AbstractPower {
 
     public void onUseCard(AbstractCard c, UseCardAction action) {
         switch (c.cardID) {
-            case "theUnchainedMod:DiamondSaw":
+            case "theUnchainedMod:SnapInHalf":
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
                 break;
             case "theUnchainedMod:Liberation":
