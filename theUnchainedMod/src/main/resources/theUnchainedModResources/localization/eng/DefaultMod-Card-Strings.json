@@ -375,12 +375,12 @@
   },
   "theUnchainedMod:Wit": {
     "NAME": "Wit",
-    "DESCRIPTION": "Draw !M! card, if it is a 2-cost card, play it.",
+    "DESCRIPTION": "Draw !M! card, if it is a 2-cost card, draw another card.",
     "UPGRADE_DESCRIPTION": "Draw !M! card, if it is a 2-cost card, play it and draw another card."
   },
   "theUnchainedMod:Haste": {
     "NAME": "Haste",
-    "DESCRIPTION": "Draw !M! card, if it gives you theunchainedmod:Momentum, play it. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum.",
+    "DESCRIPTION": "Draw !M! card, if it gives you theunchainedmod:Momentum, draw another card. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum.",
     "UPGRADE_DESCRIPTION": "Draw !M! card, if it gives you theunchainedmod:Momentum, play it and draw another card. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum."
   }
 }

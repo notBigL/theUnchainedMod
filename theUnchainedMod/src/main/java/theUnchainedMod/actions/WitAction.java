@@ -26,9 +26,9 @@ public class WitAction extends AbstractGameAction {
             while (var1.hasNext()) {
                 AbstractCard c = (AbstractCard) var1.next();
                 if (c.cost == 2 || c.costForTurn == 2) {
-                    AbstractDungeon.actionManager.addToTop(new NewQueueCardAction(c, true, false, true));
+                    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
                     if (upgraded) {
-                        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
+                        AbstractDungeon.actionManager.addToTop(new NewQueueCardAction(c, true, false, true));
                     }
                     break;
                 }

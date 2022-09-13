@@ -27,9 +27,9 @@ public class HasteAction extends AbstractGameAction {
             while (var1.hasNext()) {
                 AbstractCard c = (AbstractCard) var1.next();
                 if (c.tags.contains(CustomTags.MOMENTUM)) {
-                    AbstractDungeon.actionManager.addToTop(new NewQueueCardAction(c, true, false, true));
+                    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
                     if (upgraded) {
-                        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
+                        AbstractDungeon.actionManager.addToTop(new NewQueueCardAction(c, true, false, true));
                     }
                     break;
                 }
