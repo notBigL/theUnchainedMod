@@ -367,7 +367,7 @@
   },
   "theUnchainedMod:CrushPlates": {
     "NAME": "Crush Plates",
-    "DESCRIPTION": "Deal !D! damage. Add theunchainedmod:Dented_Armor for ALL damage that was blocked."
+    "DESCRIPTION": "Deal !D! damage. Apply theunchainedmod:Dented_Armor for ALL damage that was blocked."
   },
   "theUnchainedMod:KickRocks": {
     "NAME": "Kick Rocks",
