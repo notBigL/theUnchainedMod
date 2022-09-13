@@ -18,7 +18,7 @@ public class Haste extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Haste.class.getSimpleName());
     public static final String IMG = makeCardPath("Haste.png");
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
