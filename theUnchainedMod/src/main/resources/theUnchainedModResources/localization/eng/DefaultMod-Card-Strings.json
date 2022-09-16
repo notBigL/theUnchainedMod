@@ -266,7 +266,7 @@
   },
   "theUnchainedMod:Hobbles": {
     "NAME": "Hobbles",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Apply !M! Weak. NL Retain. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Apply !M! Weak. Retain. NL Exhaust."
   },
   "theUnchainedMod:GlimpseIntoFuture": {
     "NAME": "Glimpse into Future",
