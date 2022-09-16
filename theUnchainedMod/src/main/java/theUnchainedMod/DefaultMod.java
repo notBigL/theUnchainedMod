@@ -23,6 +23,7 @@ import org.apache.logging.log4j.Logger;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.events.IdentityCrisisEvent;
+import theUnchainedMod.potions.DancePotion;
 import theUnchainedMod.potions.FinisherPotion;
 import theUnchainedMod.potions.PlaceholderPotion;
 import theUnchainedMod.relics.*;
@@ -91,7 +92,7 @@ public class DefaultMod implements
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
     public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
     public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
-    public static final Color FINISHER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
+    public static final Color FINISHER_POTION_LIQUID = CardHelper.getColor(255.0f, 173.0f, 48.0f); // Orange-ish Red
     public static final Color FINISHER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
     public static final Color FINISHER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
@@ -351,6 +352,7 @@ public class DefaultMod implements
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
         BaseMod.addPotion(FinisherPotion.class, FINISHER_POTION_LIQUID, FINISHER_POTION_HYBRID, FINISHER_POTION_SPOTS, FinisherPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(DancePotion.class, FINISHER_POTION_LIQUID, FINISHER_POTION_HYBRID, FINISHER_POTION_SPOTS, DancePotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
 
 
         logger.info("Done editing potions");

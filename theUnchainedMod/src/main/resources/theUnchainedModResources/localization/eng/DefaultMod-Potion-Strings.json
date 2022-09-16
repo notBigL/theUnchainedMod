@@ -6,5 +6,9 @@
         "theUnchainedMod:FinisherPotion": {
                 "NAME": "Finisher Potion",
                 "DESCRIPTIONS": ["Add a Liberation into your hand. It costs zero this turn."]
+        },
+        "theUnchainedMod:DancePotion": {
+                "NAME": "Dance Potion",
+                "DESCRIPTIONS": ["Add 2 Swirls into your hand."]
         }
 }
