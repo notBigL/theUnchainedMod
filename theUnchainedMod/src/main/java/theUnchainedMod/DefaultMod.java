@@ -1,8 +1,6 @@
 package theUnchainedMod;
 
 import basemod.*;
-import basemod.eventUtil.AddEventParams;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -13,7 +11,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -22,10 +19,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.events.IdentityCrisisEvent;
 import theUnchainedMod.potions.DancePotion;
 import theUnchainedMod.potions.FinisherPotion;
-import theUnchainedMod.potions.PlaceholderPotion;
 import theUnchainedMod.relics.*;
 import theUnchainedMod.util.IDCheckDontTouchPls;
 import theUnchainedMod.util.TextureLoader;
@@ -103,16 +98,16 @@ public class DefaultMod implements
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
 
     // Card backgrounds - The actual rectangular card.
-    private static final String ATTACK_DEFAULT_GRAY = "theUnchainedModResources/images/512/bg_attack_default_gray.png";
-    private static final String SKILL_DEFAULT_GRAY = "theUnchainedModResources/images/512/bg_skill_default_gray.png";
-    private static final String POWER_DEFAULT_GRAY = "theUnchainedModResources/images/512/bg_power_default_gray.png";
+    private static final String ATTACK_DEFAULT_GRAY = "theUnchainedModResources/images/512/bg_attack_unchained_small.png";
+    private static final String SKILL_DEFAULT_GRAY = "theUnchainedModResources/images/512/bg_skill_unchained_small.png";
+    private static final String POWER_DEFAULT_GRAY = "theUnchainedModResources/images/512/bg_power_unchained_small.png";
 
     private static final String ENERGY_ORB_DEFAULT_GRAY = "theUnchainedModResources/images/512/card_default_gray_orb.png";
     private static final String CARD_ENERGY_ORB = "theUnchainedModResources/images/512/card_small_orb.png";
 
-    private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/bg_attack_default_gray.png";
-    private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/bg_skill_default_gray.png";
-    private static final String POWER_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/bg_power_default_gray.png";
+    private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/bg_attack_unchained_big.png";
+    private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/bg_skill_unchained_big.png";
+    private static final String POWER_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/bg_power_unchained_big.png";
     private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/card_default_gray_orb.png";
 
     // Character assets
@@ -379,7 +374,7 @@ public class DefaultMod implements
         //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new OiledChains(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BootKnife(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new BalletShoes(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new Carabiner(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new PolishedChains(), TheDefault.Enums.COLOR_GRAY);
@@ -392,7 +387,7 @@ public class DefaultMod implements
         // If you don't have this it won't be visible in the compendium until you see them in game
         // (the others are all starters so they're marked as seen in the character file)
         UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
-        UnlockTracker.markRelicAsSeen(BootKnife.ID);
+        UnlockTracker.markRelicAsSeen(BalletShoes.ID);
         UnlockTracker.markRelicAsSeen(HeartOfTheUnderdog.ID);
         UnlockTracker.markRelicAsSeen(Carabiner.ID);
         UnlockTracker.markRelicAsSeen(PolishedChains.ID);
