@@ -117,7 +117,7 @@ public class DefaultMod implements
 
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "theUnchainedModResources/images/charSelect/UnchainedCharacterButton.png";
-    private static final String THE_DEFAULT_PORTRAIT = "theUnchainedModResources/images/charSelect/DefaultCharacterPortraitBG.png";
+    private static final String THE_DEFAULT_PORTRAIT = "theUnchainedModResources/images/charSelect/UnchainedSplashArt.png";
     public static final String THE_DEFAULT_CHARACTER = "theUnchainedModResources/images/char/defaultCharacter/Side_View_tmp_Unchained.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "theUnchainedModResources/images/char/defaultCharacter/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "theUnchainedModResources/images/char/defaultCharacter/shoulder2.png";
