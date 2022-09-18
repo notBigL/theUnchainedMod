@@ -12,7 +12,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 
 public class TradeOffer extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID(TradeOffer.class.getSimpleName());
-    public static final String IMG = makeCardPath("Wink.png");
+    public static final String IMG = makeCardPath("TradeOffer.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
