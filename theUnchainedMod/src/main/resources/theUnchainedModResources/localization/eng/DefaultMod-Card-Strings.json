@@ -382,5 +382,10 @@
     "NAME": "Haste",
     "DESCRIPTION": "Draw !M! card, if it gives you theunchainedmod:Momentum, draw another card. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum.",
     "UPGRADE_DESCRIPTION": "Draw !M! card, if it gives you theunchainedmod:Momentum, play it and draw another card. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum."
+  },
+  "theUnchainedMod:RoyalGift": {
+    "NAME": "Royal Gift",
+    "DESCRIPTION": "Apply !M! times X Block to EVERYONE.",
+    "UPGRADE_DESCRIPTION": "Apply !M! times (X + 1) Block to EVERYONE."
   }
 }
