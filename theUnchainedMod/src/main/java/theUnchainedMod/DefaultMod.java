@@ -102,13 +102,13 @@ public class DefaultMod implements
     private static final String SKILL_DEFAULT_GRAY = "theUnchainedModResources/images/512/bg_skill_unchained_small.png";
     private static final String POWER_DEFAULT_GRAY = "theUnchainedModResources/images/512/bg_power_unchained_small.png";
 
-    private static final String ENERGY_ORB_DEFAULT_GRAY = "theUnchainedModResources/images/512/card_default_gray_orb.png";
+    private static final String ENERGY_ORB_DEFAULT_GRAY = "theUnchainedModResources/images/512/card_unchained_orb.png";
     private static final String CARD_ENERGY_ORB = "theUnchainedModResources/images/512/card_small_orb.png";
 
     private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/bg_attack_unchained_big.png";
     private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/bg_skill_unchained_big.png";
     private static final String POWER_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/bg_power_unchained_big.png";
-    private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/card_default_gray_orb.png";
+    private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "theUnchainedModResources/images/1024/card_unchained_orb_big.png";
 
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "theUnchainedModResources/images/charSelect/UnchainedCharacterButton.png";
@@ -373,7 +373,7 @@ public class DefaultMod implements
         //BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new OiledChains(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new RustedChains(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new BalletShoes(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new Carabiner(), TheDefault.Enums.COLOR_GRAY);

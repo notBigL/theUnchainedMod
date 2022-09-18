@@ -12,14 +12,14 @@ import theUnchainedMod.util.TextureLoader;
 import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;
 import static theUnchainedMod.DefaultMod.makeRelicPath;
 
-public class BootKnife extends CustomRelic {
+public class BalletShoes extends CustomRelic {
 
-    public static final String ID = DefaultMod.makeID("BootKnife");
+    public static final String ID = DefaultMod.makeID("BalletShoes");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BootKnife_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BootKnife_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BalletShoes_relic.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BalletShoes_relic.png"));
 
-    public BootKnife() {
+    public BalletShoes() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.CLINK);
     }
 

@@ -6,9 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.powers.OiledChainsPower;
 import theUnchainedMod.util.TextureLoader;
@@ -16,14 +14,14 @@ import theUnchainedMod.util.TextureLoader;
 import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;
 import static theUnchainedMod.DefaultMod.makeRelicPath;
 
-public class OiledChains extends CustomRelic {
+public class RustedChains extends CustomRelic {
 
-    public static final String ID = DefaultMod.makeID("OiledChains");
+    public static final String ID = DefaultMod.makeID("RustedChains");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("OiledChains_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("OiledChains_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("RustedChains_relic.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("RustedChains_relic.png"));
 
-    public OiledChains() {
+    public RustedChains() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.CLINK);
     }
 

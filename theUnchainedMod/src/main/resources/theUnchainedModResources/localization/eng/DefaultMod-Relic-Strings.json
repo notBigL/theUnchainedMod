@@ -31,16 +31,16 @@
       "Select a card to bottle for "
     ]
   },
-  "theUnchainedMod:BootKnife": {
-    "NAME": "Boot Knife",
+  "theUnchainedMod:BalletShoes": {
+    "NAME": "Ballet Shoes",
     "FLAVOR": "It's handy. If you don't step into it.",
     "DESCRIPTIONS": [
       "At the start of combat, add a #ySwirl to your hand."
     ]
   },
-  "theUnchainedMod:OiledChains": {
-    "NAME": "Oiled Chains",
-    "FLAVOR": "Don't touch. Your hands won't be clean for a century.",
+  "theUnchainedMod:RustedChains": {
+    "NAME": "Rusted Chains",
+    "FLAVOR": "These used to hold you to a prison wall. Now they are handy tools.",
     "DESCRIPTIONS": [
       "The seventh card you play each combat costs zero."
     ]
@@ -54,16 +54,16 @@
   },
   "theUnchainedMod:Carabiner": {
     "NAME": "Carabiner",
-    "FLAVOR": "There is no better Tool for connecting Chains.",
+    "FLAVOR": "There is no better tool for connecting chains.",
     "DESCRIPTIONS": [
       "Chains no longer wear off at the end of turn."
     ]
   },
   "theUnchainedMod:PolishedChains": {
     "NAME": "Polished Chains",
-    "FLAVOR": "They are unbelievably soft.",
+    "FLAVOR": "They are unbelievably smooth.",
     "DESCRIPTIONS": [
-      "Replaces #yOiled #yChains. Every seventh card you play each combat costs zero."
+      "Replaces #yRusted #yChains. Every seventh card you play each combat costs zero."
     ]
   }
 }

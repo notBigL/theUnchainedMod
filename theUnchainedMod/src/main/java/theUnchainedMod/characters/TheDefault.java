@@ -1,11 +1,8 @@
 package theUnchainedMod.characters;
 
 import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.math.MathUtils;
-import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -23,10 +20,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.cards.*;
-import theUnchainedMod.relics.DefaultClickableRelic;
-import theUnchainedMod.relics.OiledChains;
-import theUnchainedMod.relics.PlaceholderRelic;
-import theUnchainedMod.relics.PlaceholderRelic2;
+import theUnchainedMod.relics.RustedChains;
 
 import java.util.ArrayList;
 
@@ -178,11 +172,11 @@ public class TheDefault extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-        retVal.add(OiledChains.ID);
+        retVal.add(RustedChains.ID);
 
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
-        UnlockTracker.markRelicAsSeen(OiledChains.ID);
+        UnlockTracker.markRelicAsSeen(RustedChains.ID);
 
         return retVal;
     }
