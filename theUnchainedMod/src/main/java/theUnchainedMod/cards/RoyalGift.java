@@ -22,12 +22,11 @@ public class RoyalGift extends AbstractDynamicCard {
 
 
     private static final int COST = -1;
-    private static final int MAGIC_NUMBER = 8;
+    private static final int MAGIC_NUMBER = 7;
 
     public RoyalGift() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        this.exhaust = true;
     }
 
     @Override

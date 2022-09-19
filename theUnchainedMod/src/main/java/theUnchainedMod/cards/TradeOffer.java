@@ -8,6 +8,7 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.WinkAction;
 import theUnchainedMod.characters.TheDefault;
 
+import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
 public class TradeOffer extends AbstractDynamicCard {
@@ -17,6 +18,7 @@ public class TradeOffer extends AbstractDynamicCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 0;
     private static final int MAGIC_NUMBER = 6;
@@ -32,12 +34,13 @@ public class TradeOffer extends AbstractDynamicCard {
 
     @Override
     public void upgrade() {
-        if(!upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
-
     }
 
     @Override
