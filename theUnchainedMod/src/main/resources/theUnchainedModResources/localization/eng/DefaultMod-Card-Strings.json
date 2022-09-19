@@ -375,8 +375,7 @@
   },
   "theUnchainedMod:Wit": {
     "NAME": "Wit",
-    "DESCRIPTION": "Draw !M! card, if it is a 2-cost card, draw another card.",
-    "UPGRADE_DESCRIPTION": "Draw !M! card, if it is a 2-cost card, play it and draw another card."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card, if it is a 2-cost card play it on the same enemy if possible."
   },
   "theUnchainedMod:Haste": {
     "NAME": "Haste",

@@ -5,16 +5,15 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.Iterator;
 
 public class WitAction extends AbstractGameAction {
 
-    private final boolean upgraded;
-
-    public WitAction(boolean upgraded) {
-        this.upgraded = upgraded;
+    public WitAction(AbstractCreature monster) {
+        this.target = monster;
     }
 
     @Override
@@ -26,10 +25,7 @@ public class WitAction extends AbstractGameAction {
             while (var1.hasNext()) {
                 AbstractCard c = (AbstractCard) var1.next();
                 if (c.cost == 2 || c.costForTurn == 2) {
-                    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
-                    if (upgraded) {
-                        AbstractDungeon.actionManager.addToTop(new NewQueueCardAction(c, true, false, true));
-                    }
+                    AbstractDungeon.actionManager.addToTop(new NewQueueCardAction(c, target, false, true));
                     break;
                 }
             }
