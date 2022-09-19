@@ -317,5 +317,11 @@
       "Loses #r",
       " HP everytime it gains Block."
     ]
+  },
+  "theUnchainedMod:TaxedPower": {
+    "NAME": "Taxed",
+    "DESCRIPTIONS": [
+      "This enemy is too poor to be taxed again."
+    ]
   }
 }

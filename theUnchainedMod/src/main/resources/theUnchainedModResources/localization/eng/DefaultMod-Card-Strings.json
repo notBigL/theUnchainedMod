@@ -386,5 +386,9 @@
     "NAME": "Royal Gift",
     "DESCRIPTION": "Apply !M! times X Block to EVERYONE.",
     "UPGRADE_DESCRIPTION": "Apply !M! times (X + 1) Block to EVERYONE."
+  },
+  "theUnchainedMod:Taxes": {
+    "NAME": "Taxes",
+    "DESCRIPTION": "Gain !M! Gold for every enemy."
   }
 }
