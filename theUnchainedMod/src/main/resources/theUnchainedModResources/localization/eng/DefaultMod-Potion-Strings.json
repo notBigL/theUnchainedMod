@@ -1,14 +1,28 @@
 {
-"theUnchainedMod:PlaceholderPotion": {
-        "NAME": "Placeholder Potion",
-        "DESCRIPTIONS": ["Gain ", " At the end of your turn, lose ", " Strength."]
-},
-        "theUnchainedMod:FinisherPotion": {
-                "NAME": "Finisher Potion",
-                "DESCRIPTIONS": ["Add a Liberation into your hand. It costs zero this turn."]
-        },
-        "theUnchainedMod:DancePotion": {
-                "NAME": "Dance Potion",
-                "DESCRIPTIONS": ["Add 2 Swirls into your hand."]
-        }
+  "theUnchainedMod:PlaceholderPotion": {
+    "NAME": "Placeholder Potion",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " At the end of your turn, lose ",
+      " Strength."
+    ]
+  },
+  "theUnchainedMod:FinisherPotion": {
+    "NAME": "Finisher Potion",
+    "DESCRIPTIONS": [
+      "Add a Liberation into your hand. It costs zero this turn."
+    ]
+  },
+  "theUnchainedMod:DancePotion": {
+    "NAME": "Dance Potion",
+    "DESCRIPTIONS": [
+      "Add ", " Swirls into your hand."
+    ]
+  },
+  "theUnchainedMod:SandPotion": {
+    "NAME": "Sand Potion",
+    "DESCRIPTIONS": [
+      "Apply ", " Dented Armor to ALL enemies."
+    ]
+  }
 }

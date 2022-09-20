@@ -6,6 +6,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -21,6 +22,7 @@ import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.potions.DancePotion;
 import theUnchainedMod.potions.FinisherPotion;
+import theUnchainedMod.potions.SandPotion;
 import theUnchainedMod.relics.*;
 import theUnchainedMod.util.IDCheckDontTouchPls;
 import theUnchainedMod.util.TextureLoader;
@@ -352,6 +354,7 @@ public class DefaultMod implements
         // Remember, you can press ctrl+P inside parentheses like addPotions)
         BaseMod.addPotion(FinisherPotion.class, FINISHER_POTION_LIQUID, FINISHER_POTION_HYBRID, FINISHER_POTION_SPOTS, FinisherPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
         BaseMod.addPotion(DancePotion.class, FINISHER_POTION_LIQUID, FINISHER_POTION_HYBRID, FINISHER_POTION_SPOTS, DancePotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(SandPotion.class, FINISHER_POTION_LIQUID, FINISHER_POTION_HYBRID, FINISHER_POTION_SPOTS, SandPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
 
 
         logger.info("Done editing potions");
