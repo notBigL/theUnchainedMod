@@ -39,6 +39,7 @@ public class SharePain extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.retain = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
@@ -68,10 +69,10 @@ public class SharePain extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.damage += this.magicNumber;
         this.calculateCardDamage(m);
-        if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(defaultSecondMagicNumber, m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
-        } else {
+        //if (this.upgraded) {
+        //    AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(defaultSecondMagicNumber, m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
+        //} else {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE, true));
-        }
+        //}
     }
 }

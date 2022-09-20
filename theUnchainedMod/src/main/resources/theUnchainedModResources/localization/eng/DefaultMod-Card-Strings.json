@@ -201,7 +201,7 @@
   "theUnchainedMod:SharePain": {
     "NAME": "Share Pain",
     "DESCRIPTION": "Deal !D! damage. NL Damage is equal to ALL theunchainedmod:Relayed_Damage you gained this combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage !theUnchainedMod:SecondMagic! times. NL Damage is equal to ALL theunchainedmod:Relayed_Damage you gained this combat."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Retain. NL Damage is equal to ALL theunchainedmod:Relayed_Damage you gained this combat."
   },
   "theUnchainedMod:Overexertion": {
     "NAME": "Overexertion",
