@@ -84,12 +84,12 @@ public class DefaultMod implements
     public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
 
     // Potion Colors in RGB
-    public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
-    public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
-    public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
-    public static final Color FINISHER_POTION_LIQUID = CardHelper.getColor(255.0f, 173.0f, 48.0f); // Orange-ish Red
-    public static final Color FINISHER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
-    public static final Color FINISHER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
+    public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f);
+    public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f);
+    public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f);
+    public static final Color FINISHER_POTION_LIQUID = CardHelper.getColor(255.0f, 173.0f, 48.0f);
+    public static final Color FINISHER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f);
+    public static final Color FINISHER_POTION_SPOTS = CardHelper.getColor(255.0f, 173.0f, 48.0f);
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
@@ -149,6 +149,10 @@ public class DefaultMod implements
 
     public static String makeEventPath(String resourcePath) {
         return getModID() + "Resources/images/events/" + resourcePath;
+    }
+
+    public static String makePotionPath(String resourcePath) {
+        return getModID() + "Resources/images/potion/" + resourcePath;
     }
 
     // =============== /MAKE IMAGE PATHS/ =================

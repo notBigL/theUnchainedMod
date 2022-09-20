@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theUnchainedMod.cards.Liberation;
 import theUnchainedMod.cards.Swirl;
+import theUnchainedMod.patches.SkirtPotionEnum;
 
 public class DancePotion extends CustomPotion {
 
@@ -23,7 +24,7 @@ public class DancePotion extends CustomPotion {
 
     public DancePotion() {
         // The bottle shape and inside is determined by potion size and color. The actual colors are the main DefaultMod.java
-        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.S, PotionColor.SMOKE);
+        super(NAME, POTION_ID, PotionRarity.RARE, SkirtPotionEnum.SKIRT, PotionColor.SMOKE);
         potency = getPotency();
         description = DESCRIPTIONS[0];
         isThrown = false;
