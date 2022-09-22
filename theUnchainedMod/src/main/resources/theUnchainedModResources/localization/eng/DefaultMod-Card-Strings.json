@@ -245,8 +245,8 @@
     "NAME": "Baguazhang",
     "DESCRIPTION": "If the enemy intents to do less than !M! damage, Block !B!."
   },
-  "theUnchainedMod:HeavyForm": {
-    "NAME": "Heavy Form",
+  "theUnchainedMod:MagusForm": {
+    "NAME": "Magus Form",
     "DESCRIPTION": "ALL 2-cost cards cost zero once per turn.",
     "UPGRADE_DESCRIPTION": "ALL 2-cost cards cost zero and are upgraded once per turn."
   },
@@ -259,8 +259,8 @@
     "DESCRIPTION": "Gain Block equal to the amount of Block ALL enemies have.",
     "UPGRADE_DESCRIPTION": "Gain Block equal to double the amount of Block ALL enemies have."
   },
-  "theUnchainedMod:LongerChains": {
-    "NAME": "Longer Chains",
+  "theUnchainedMod:ThePrincesGrace": {
+    "NAME": "The Prince's Grace",
     "DESCRIPTION": "At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn."
   },

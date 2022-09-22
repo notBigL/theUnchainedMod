@@ -12,10 +12,10 @@ import theUnchainedMod.powers.HeavyShacklesPower;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class HeavyForm extends AbstractDynamicCard {
+public class MagusForm extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(HeavyForm.class.getSimpleName());
-    public static final String IMG = makeCardPath("HeavyShackles.png");
+    public static final String ID = DefaultMod.makeID(MagusForm.class.getSimpleName());
+    public static final String IMG = makeCardPath("MagusForm.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
@@ -24,7 +24,7 @@ public class HeavyForm extends AbstractDynamicCard {
 
     private static final int COST = 3;
 
-    public HeavyForm() {
+    public MagusForm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         tags.add(BaseModCardTags.FORM);
     }

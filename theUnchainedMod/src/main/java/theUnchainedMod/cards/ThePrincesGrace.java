@@ -12,10 +12,10 @@ import theUnchainedMod.powers.LongerChainsPower;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class LongerChains extends AbstractDynamicCard {
+public class ThePrincesGrace extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(LongerChains.class.getSimpleName());
-    public static final String IMG = makeCardPath("LongerChains.png");
+    public static final String ID = DefaultMod.makeID(ThePrincesGrace.class.getSimpleName());
+    public static final String IMG = makeCardPath("ThePrince'sGrace.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
@@ -26,7 +26,7 @@ public class LongerChains extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 2;
     private static final int SECOND_MAGIC_NUMBER = 8;
 
-    public LongerChains() {
+    public ThePrincesGrace() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
