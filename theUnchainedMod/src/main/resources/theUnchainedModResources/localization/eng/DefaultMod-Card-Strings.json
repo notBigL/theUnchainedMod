@@ -100,8 +100,8 @@
     "NAME": "Half Swing",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Scry !M!."
   },
-  "theUnchainedMod:TieTogether": {
-    "NAME": "Tie Together",
+  "theUnchainedMod:SoulConjunction": {
+    "NAME": "Soul Conjunction",
     "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Whenever you take damage, the enemy loses HP equal to the same amount. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I cannot be tied to multiple enemies."

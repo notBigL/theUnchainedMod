@@ -13,9 +13,9 @@ import theUnchainedMod.powers.TiedToThePlayerPower;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class TieTogether extends AbstractDynamicCard {
+public class SoulConjunction extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(TieTogether.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(SoulConjunction.class.getSimpleName());
     public static final String IMG = makeCardPath("TieTogether.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF_AND_ENEMY;
@@ -26,7 +26,7 @@ public class TieTogether extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 10;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 4;
 
-    public TieTogether() {
+    public SoulConjunction() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         this.exhaust = true;

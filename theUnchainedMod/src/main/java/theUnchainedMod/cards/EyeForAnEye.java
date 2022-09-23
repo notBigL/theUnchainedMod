@@ -11,7 +11,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 
 public class EyeForAnEye extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID(EyeForAnEye.class.getSimpleName());
-    public static final String IMG = makeCardPath("PoeticJustice.png");
+    public static final String IMG = makeCardPath("EyeForAnEye.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;

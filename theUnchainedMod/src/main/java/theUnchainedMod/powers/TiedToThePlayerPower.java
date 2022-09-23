@@ -57,6 +57,12 @@ public class TiedToThePlayerPower extends AbstractPower {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(player, damageAmount, DamageInfo.DamageType.HP_LOSS)));
     }
 
+    public void onDeath() {
+        if (!AbstractDungeon.getCurrRoom().isBattleEnding()) {
+
+        }
+    }
+
     public void onRemove() {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.player, this.owner, "theUnchainedMod:TiedToAnEnemyPower"));
     }
