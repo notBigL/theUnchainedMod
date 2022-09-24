@@ -59,11 +59,17 @@ public class TiedToThePlayerPower extends AbstractPower {
 
     public void onDeath() {
         if (!AbstractDungeon.getCurrRoom().isBattleEnding()) {
-
+            if (player.hasPower("theUnchainedMod:TiedToAnEnemyPower")) {
+                TiedToAnEnemyPower playerPower = (TiedToAnEnemyPower) player.getPower("theUnchainedMod:TiedToAnEnemyPower");
+                playerPower.removeMe(this);
+            }
         }
     }
 
     public void onRemove() {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.player, this.owner, "theUnchainedMod:TiedToAnEnemyPower"));
+        if (player.hasPower("theUnchainedMod:TiedToAnEnemyPower")) {
+            TiedToAnEnemyPower playerPower = (TiedToAnEnemyPower) player.getPower("theUnchainedMod:TiedToAnEnemyPower");
+            playerPower.removeMe(this);
+        }
     }
 }

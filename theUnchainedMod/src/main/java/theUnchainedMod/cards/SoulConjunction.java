@@ -4,6 +4,8 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.powers.RelayPower;
@@ -40,26 +42,17 @@ public class SoulConjunction extends AbstractDynamicCard {
         }
     }
 
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean canUse = super.canUse(p, m);
-        if (!canUse) {
-            return false;
-        }
-        if (p.hasPower("theUnchainedMod:TiedToAnEnemyPower")) {
-            canUse = false;
-            this.cantUseMessage = languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[0];
-        }
-        return canUse;
-    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RelayPower(p, p, this.magicNumber)));
-        TiedToThePlayerPower tiedToThePlayerPower = new TiedToThePlayerPower(m, p, p, 1);
-        if (m.hasPower("Artifact")) {
+        if (m.hasPower("Artifact") && !m.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, 1, false)));
+        } else if (!m.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
+            TiedToThePlayerPower tiedToThePlayerPower = new TiedToThePlayerPower(m, p, p, 1);
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, tiedToThePlayerPower));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TiedToAnEnemyPower(p, p, tiedToThePlayerPower, m)));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, tiedToThePlayerPower));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TiedToAnEnemyPower(p, p, 1, tiedToThePlayerPower, m)));
+            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[0], true));
         }
     }
 }

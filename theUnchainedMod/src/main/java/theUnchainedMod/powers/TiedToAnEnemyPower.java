@@ -10,9 +10,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.patches.RelayedDamageField;
 import theUnchainedMod.util.TextureLoader;
+
+import java.util.ArrayList;
 
 public class TiedToAnEnemyPower extends AbstractPower {
     public AbstractCreature source;
@@ -21,23 +25,29 @@ public class TiedToAnEnemyPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    public final TiedToThePlayerPower tiedToThePlayerPower;
-    public final AbstractMonster monster;
-
+    public final ArrayList<TiedToThePlayerPower> tiedToThePlayerPowerList = new ArrayList<>();
+    private static final Logger logger = LogManager.getLogger(TiedToAnEnemyPower.class.getName());
     private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/TiedToAnEnemyPower_power48.png");
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/TiedToAnEnemyPower_power128.png");
 
-    public TiedToAnEnemyPower(final AbstractCreature owner, final AbstractCreature source, final int amount, TiedToThePlayerPower TttPP, AbstractMonster m) {
+    public TiedToAnEnemyPower(final AbstractCreature owner, final AbstractCreature source, TiedToThePlayerPower tiedToThePlayerPower, AbstractMonster m) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
-        this.amount = amount;
+        this.amount = -1;
         this.source = source;
         type = PowerType.BUFF;
         isTurnBased = false;
-        tiedToThePlayerPower = TttPP;
-        this.monster = m;
-
+        if(owner.hasPower("theUnchainedMod:TiedToAnEnemyPower")) {
+            TiedToAnEnemyPower ttAEP = (TiedToAnEnemyPower) owner.getPower("theUnchainedMod:TiedToAnEnemyPower");
+            ttAEP.tiedToThePlayerPowerList.add(tiedToThePlayerPower);
+            logger.info("I AM HERE");
+            logger.info(ttAEP.tiedToThePlayerPowerList.size());
+        } else {
+            tiedToThePlayerPowerList.add(tiedToThePlayerPower);
+            logger.info("First Application");
+            logger.info(tiedToThePlayerPowerList.size());
+        }
         this.region128 = new TextureAtlas.AtlasRegion(texture128, 0, 0, 128, 128);
         this.region48 = new TextureAtlas.AtlasRegion(texture48, 0, 0, 48, 48);
 
@@ -49,19 +59,22 @@ public class TiedToAnEnemyPower extends AbstractPower {
     }
 
     public void damageEnemyWhenHit(DamageInfo info, int damageAmount) {
-        if (tiedToThePlayerPower != null && !monster.isDead && monster.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
-            if (!RelayedDamageField.relayed.get(info)) {
-                tiedToThePlayerPower.damageEnemyWhenPlayerIsHit(damageAmount, this.owner);
+        for (TiedToThePlayerPower tttPP : tiedToThePlayerPowerList) {
+            if (!tttPP.owner.isDead && tttPP.owner.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
+                if (!RelayedDamageField.relayed.get(info)) {
+                    tttPP.damageEnemyWhenPlayerIsHit(damageAmount, this.owner);
+                }
+            } else {
+                tiedToThePlayerPowerList.remove(tttPP);
+                if(tiedToThePlayerPowerList.isEmpty()) {
+                    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+                }
             }
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }
 
-    public void atStartOfTurn() {
-        if (tiedToThePlayerPower == null || tiedToThePlayerPower.owner == null || tiedToThePlayerPower.owner.isDead || !monster.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        }
+    public void removeMe(TiedToThePlayerPower tttPP) {
+        tiedToThePlayerPowerList.remove(tttPP);
     }
 
 }
