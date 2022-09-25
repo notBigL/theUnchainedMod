@@ -11,10 +11,10 @@ import theUnchainedMod.powers.FluidMovementPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class Instincts extends AbstractDynamicCard {
+public class RelentlessMovements extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Instincts.class.getSimpleName());
-    public static final String IMG = makeCardPath("BattleScars.png");
+    public static final String ID = DefaultMod.makeID(RelentlessMovements.class.getSimpleName());
+    public static final String IMG = makeCardPath("RelentlessMovements.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
@@ -24,7 +24,7 @@ public class Instincts extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int MAGIC_NUMBER = 1;
 
-    public Instincts() {
+    public RelentlessMovements() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         tags.add(CustomTags.MOMENTUM);

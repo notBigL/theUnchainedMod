@@ -190,8 +190,8 @@
     "NAME": "Solar Plexus",
     "DESCRIPTION": "Deal !D! damage. NL !M! theunchainedmod:Chain: Stun. NL Exhaust."
   },
-  "theUnchainedMod:Instincts": {
-    "NAME": "Instincts",
+  "theUnchainedMod:RelentlessMovements": {
+    "NAME": "Relentless Movements",
     "DESCRIPTION": "Finishing a theunchainedmod:Chain gives !M! theunchainedmod:Momentum."
   },
   "theUnchainedMod:Burnish": {
@@ -250,8 +250,8 @@
     "DESCRIPTION": "ALL 2-cost cards cost zero once per turn.",
     "UPGRADE_DESCRIPTION": "ALL 2-cost cards cost zero and are upgraded once per turn."
   },
-  "theUnchainedMod:WreckingBall": {
-    "NAME": "Wrecking Ball",
+  "theUnchainedMod:TelekineticPulse": {
+    "NAME": "Telekinetic Pulse",
     "DESCRIPTION": "ALL enemies gain !theUnchainedMod:SecondMagic! Block. 2 theunchainedmod:Chain: ALL enemies lose !M! HP."
   },
   "theUnchainedMod:SwipeArmor": {
@@ -317,8 +317,8 @@
     "NAME": "Last Resort",
     "DESCRIPTION": "Draw !M! cards. NL Gain [E] [E]. !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Lose ALL your [E]. NL Exhaust."
   },
-  "theUnchainedMod:SnapInHalf": {
-    "NAME": "Snap In Half",
+  "theUnchainedMod:ChainSaw": {
+    "NAME": "Chain Saw",
     "DESCRIPTION": "Deal !D! damage. NL Delete ALL your active theunchainedmod:Chains."
   },
   "theUnchainedMod:ReinforcedElement": {

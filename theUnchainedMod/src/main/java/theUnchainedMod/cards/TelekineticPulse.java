@@ -12,10 +12,10 @@ import theUnchainedMod.powers.WreckingBallPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class WreckingBall extends AbstractDynamicCard {
+public class TelekineticPulse extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(WreckingBall.class.getSimpleName());
-    public static final String IMG = makeCardPath("WreckingBall.png");
+    public static final String ID = DefaultMod.makeID(TelekineticPulse.class.getSimpleName());
+    public static final String IMG = makeCardPath("TelekineticPulse.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
@@ -28,7 +28,7 @@ public class WreckingBall extends AbstractDynamicCard {
     private static final int SECOND_MAGIC_NUMBER = 7;
     private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 3;
 
-    public WreckingBall() {
+    public TelekineticPulse() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
