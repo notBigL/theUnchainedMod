@@ -178,8 +178,8 @@
     "NAME": "Royal Decree",
     "DESCRIPTION": "Add a random 2-cost card into your hand. It costs !M! this turn. NL Exhaust."
   },
-  "theUnchainedMod:TunnelVision": {
-    "NAME": "Tunnel Vision",
+  "theUnchainedMod:Claustrophobia": {
+    "NAME": "Claustrophobia",
     "DESCRIPTION": "At the start of your turn, apply !M! theunchainedmod:Dented_Armor to ALL enemies."
   },
   "theUnchainedMod:CautiousStrike": {

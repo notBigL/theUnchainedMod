@@ -6,14 +6,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.TunnelVisionChainPower;
 import theUnchainedMod.powers.TunnelVisionPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class TunnelVision extends AbstractDynamicCard {
+public class Claustrophobia extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(TunnelVision.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(Claustrophobia.class.getSimpleName());
     public static final String IMG = makeCardPath("TunnelVision.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -24,7 +23,7 @@ public class TunnelVision extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 1;
 
 
-    public TunnelVision() {
+    public Claustrophobia() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
