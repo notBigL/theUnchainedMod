@@ -362,8 +362,8 @@
     "NAME": "Chase Destiny",
     "DESCRIPTION": "This turn, whenever you finish a theunchainedmod:Chain, gain [E]. Exhaust."
   },
-  "theUnchainedMod:Overview": {
-    "NAME": "Overview",
+  "theUnchainedMod:StareDown": {
+    "NAME": "Stare Down",
     "DESCRIPTION": "Gain !M! temporary Dexterity. 1 theunchainedmod:Chain: Apply !theUnchainedMod:SecondMagic! Weak to ALL enemies."
   },
   "theUnchainedMod:CrushPlates": {

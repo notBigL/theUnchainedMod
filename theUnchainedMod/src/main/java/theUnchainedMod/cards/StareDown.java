@@ -12,9 +12,9 @@ import theUnchainedMod.powers.OverviewPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class Overview extends AbstractDynamicCard {
+public class StareDown extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Overview.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(StareDown.class.getSimpleName());
     public static final String IMG = makeCardPath("Overview.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -30,7 +30,7 @@ public class Overview extends AbstractDynamicCard {
 
 
 
-    public Overview() {
+    public StareDown() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
