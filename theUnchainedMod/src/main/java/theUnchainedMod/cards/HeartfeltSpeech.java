@@ -11,9 +11,9 @@ import theUnchainedMod.powers.PlayDeadPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class PlayDead extends AbstractDynamicCard {
+public class HeartfeltSpeech extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(PlayDead.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(HeartfeltSpeech.class.getSimpleName());
     public static final String IMG = makeCardPath("PlayDead.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -26,7 +26,7 @@ public class PlayDead extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = -1;
 
 
-    public PlayDead() {
+    public HeartfeltSpeech() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;

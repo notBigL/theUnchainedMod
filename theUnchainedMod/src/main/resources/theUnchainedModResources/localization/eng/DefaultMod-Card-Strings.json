@@ -63,8 +63,8 @@
     "NAME": "Lash Out",
     "DESCRIPTION": "Deal !D! damage. NL 1 theunchainedmod:Chain: Gain [E]."
   },
-  "theUnchainedMod:PlayDead": {
-    "NAME": "Play Dead",
+  "theUnchainedMod:HeartfeltSpeech": {
+    "NAME": "Heartfelt Speech",
     "DESCRIPTION": "Gain !M! Vulnerable. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain 1 Intangible."
   },
   "theUnchainedMod:Postpone": {
@@ -228,8 +228,8 @@
     "NAME": "Figure Eight Knot",
     "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Lose !M! theunchainedmod:Relayed_Damage."
   },
-  "theUnchainedMod:StareDown": {
-    "NAME": "Stare Down",
+  "theUnchainedMod:RoyalAssessment": {
+    "NAME": "Royal Assessment",
     "DESCRIPTION": "Gain [E] for every enemy that is blocking.",
     "UPGRADE_DESCRIPTION": "Gain [E] if ALL enemies are blocking and [E] for every enemy that is blocking."
   },

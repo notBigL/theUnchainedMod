@@ -4,16 +4,15 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.LoseBlockAction;
 import theUnchainedMod.actions.StareDownAction;
 import theUnchainedMod.characters.TheDefault;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class StareDown extends AbstractDynamicCard {
+public class RoyalAssessment extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(StareDown.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(RoyalAssessment.class.getSimpleName());
     public static final String IMG = makeCardPath("StareDown.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -24,7 +23,7 @@ public class StareDown extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    public StareDown() {
+    public RoyalAssessment() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
     }
 
