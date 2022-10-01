@@ -11,9 +11,9 @@ import theUnchainedMod.powers.RelayPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class FigureEightKnot extends AbstractDynamicCard {
+public class Refresh extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(FigureEightKnot.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(Refresh.class.getSimpleName());
     public static final String IMG = makeCardPath("FigureEightKnot.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -25,7 +25,7 @@ public class FigureEightKnot extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 15;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
 
-    public FigureEightKnot() {
+    public Refresh() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }

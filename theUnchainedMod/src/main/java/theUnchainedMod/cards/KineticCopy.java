@@ -10,9 +10,9 @@ import theUnchainedMod.characters.TheDefault;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class SwipeArmor extends AbstractDynamicCard {
+public class KineticCopy extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(SwipeArmor.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(KineticCopy.class.getSimpleName());
     public static final String IMG = makeCardPath("SwipeArmor.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
@@ -22,7 +22,7 @@ public class SwipeArmor extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    public SwipeArmor() {
+    public KineticCopy() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
     }
 

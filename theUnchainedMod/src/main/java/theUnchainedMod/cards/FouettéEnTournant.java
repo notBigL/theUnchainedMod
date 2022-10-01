@@ -11,9 +11,9 @@ import theUnchainedMod.patches.CustomTags;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class EndlessSpin extends AbstractDynamicCard {
+public class FouettéEnTournant extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(EndlessSpin.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(FouettéEnTournant.class.getSimpleName());
     public static final String IMG = makeCardPath("Spin.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -24,7 +24,7 @@ public class EndlessSpin extends AbstractDynamicCard {
 
     private static final int COST = -1;
 
-    public EndlessSpin() {
+    public FouettéEnTournant() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         tags.add(CustomTags.MOMENTUM);
         this.exhaust = true;

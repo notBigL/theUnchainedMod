@@ -165,8 +165,8 @@
     "NAME": "Routine Dodge",
     "DESCRIPTION": "Gain !B! Block. NL theunchainedmod:Link."
   },
-  "theUnchainedMod:HookedChain": {
-    "NAME": "Hooked Chain",
+  "theUnchainedMod:Battement": {
+    "NAME": "Battement",
     "DESCRIPTION": "Deal !D! damage. Gain !M! theunchainedmod:Momentum."
   },
   "theUnchainedMod:Swirl": {
@@ -224,8 +224,8 @@
     "NAME": "Relentless Onslaught",
     "DESCRIPTION": "Deal !D! damage !M! times. NL 1 theunchainedmod:Chain: Deal !D! damage !M! times and reapply this theunchainedmod:Chain. NL Exhaust. "
   },
-  "theUnchainedMod:FigureEightKnot": {
-    "NAME": "Figure Eight Knot",
+  "theUnchainedMod:Refresh": {
+    "NAME": "Refresh",
     "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Lose !M! theunchainedmod:Relayed_Damage."
   },
   "theUnchainedMod:RoyalAssessment": {
@@ -254,8 +254,8 @@
     "NAME": "Telekinetic Pulse",
     "DESCRIPTION": "ALL enemies gain !theUnchainedMod:SecondMagic! Block. 2 theunchainedmod:Chain: ALL enemies lose !M! HP."
   },
-  "theUnchainedMod:SwipeArmor": {
-    "NAME": "Swipe Armor",
+  "theUnchainedMod:KineticCopy": {
+    "NAME": "Kinetic Copy",
     "DESCRIPTION": "Gain Block equal to the amount of Block ALL enemies have.",
     "UPGRADE_DESCRIPTION": "Gain Block equal to double the amount of Block ALL enemies have."
   },
@@ -287,8 +287,8 @@
     "DESCRIPTION": "Enemy gains !M! Block. NL Draw !theUnchainedMod:SecondMagic! card.",
     "UPGRADE_DESCRIPTION": "Enemy gains !M! Block. NL Draw !theUnchainedMod:SecondMagic! cards."
   },
-  "theUnchainedMod:EndlessSpin": {
-    "NAME": "Endless Spin",
+  "theUnchainedMod:FouettéEnTournant": {
+    "NAME": "Fouetté En Tournant",
     "DESCRIPTION": "Gain 2 theunchainedmod:Momentum X times. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain 2 theunchainedmod:Momentum (X + 1) times. NL Exhaust."
   },

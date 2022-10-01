@@ -3,9 +3,7 @@ package theUnchainedMod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,9 +14,9 @@ import theUnchainedMod.powers.MomentumPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class HookedChain extends AbstractDynamicCard {
+public class Battement extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(HookedChain.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(Battement.class.getSimpleName());
     public static final String IMG = makeCardPath("HookedChain.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -31,7 +29,7 @@ public class HookedChain extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
-    public HookedChain() {
+    public Battement() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;

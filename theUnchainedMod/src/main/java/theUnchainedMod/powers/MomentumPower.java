@@ -72,6 +72,9 @@ public class MomentumPower extends AbstractPower {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1, false));
 
         }
+        if(amount <= 0) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
+        }
         return amount;
     }
 
