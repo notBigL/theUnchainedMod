@@ -17,8 +17,8 @@ public class EndlessPatiencePower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/EndlessPatiencePower_power48.png");
-    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/EndlessPatiencePower_power128.png");
+    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/FractalShield_power48.png");
+    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/FractalShield_power128.png");
 
     public EndlessPatiencePower(final AbstractCreature owner, final AbstractCreature source) {
         name = NAME;

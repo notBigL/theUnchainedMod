@@ -19,8 +19,8 @@ public class PostponePower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/PostponePower_power48.png");
-    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/PostponePower_power128.png");
+    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ArcaneCharm_power48.png");
+    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ArcaneCharm_power128.png");
 
     public PostponePower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;

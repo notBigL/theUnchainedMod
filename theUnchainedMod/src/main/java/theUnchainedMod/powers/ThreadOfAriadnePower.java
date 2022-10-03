@@ -18,8 +18,8 @@ public class ThreadOfAriadnePower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ThreadOfAriadnePower_power48.png");
-    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ThreadOfAriadnePower_power128.png");
+    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ChaseDestiny_power48.png");
+    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ChaseDestiny_power128.png");
 
     public ThreadOfAriadnePower(final AbstractCreature owner, final int amount) {
         name = NAME;

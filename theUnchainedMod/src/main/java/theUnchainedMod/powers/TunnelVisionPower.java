@@ -30,8 +30,8 @@ public class TunnelVisionPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/TunnelVisionPower_power48.png");
-    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/TunnelVisionPower_power128.png");
+    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ClaustrophobiaPower_power48.png");
+    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ClaustrophobiaPower_power128.png");
 
     public TunnelVisionPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
