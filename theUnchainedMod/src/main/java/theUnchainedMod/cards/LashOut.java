@@ -17,7 +17,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class LashOut extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(LashOut.class.getSimpleName());
-    public static final String IMG = makeCardPath("BrassKnuckle.png");
+    public static final String IMG = makeCardPath("LashOut.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;

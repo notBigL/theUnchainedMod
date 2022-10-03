@@ -17,7 +17,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class Overexertion extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Overexertion.class.getSimpleName());
-    public static final String IMG = makeCardPath("DiveIntoFray.png");
+    public static final String IMG = makeCardPath("Overexertion.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;

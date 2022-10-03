@@ -67,8 +67,8 @@
     "NAME": "Heartfelt Speech",
     "DESCRIPTION": "Gain !M! Vulnerable. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain 1 Intangible."
   },
-  "theUnchainedMod:Postpone": {
-    "NAME": "Postpone",
+  "theUnchainedMod:ArcaneCharm": {
+    "NAME": "Arcane Charm",
     "DESCRIPTION": "theunchainedmod:Relay !M! damage every turn."
   },
   "theUnchainedMod:DualBarrier": {

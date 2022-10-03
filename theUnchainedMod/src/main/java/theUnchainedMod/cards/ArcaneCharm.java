@@ -6,15 +6,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.PostponePower;
+import theUnchainedMod.powers.ArcaneCharmPower;
 import theUnchainedMod.powers.RelayPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class Postpone extends AbstractDynamicCard {
+public class ArcaneCharm extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Postpone.class.getSimpleName());
-    public static final String IMG = makeCardPath("Postpone.png");
+    public static final String ID = DefaultMod.makeID(ArcaneCharm.class.getSimpleName());
+    public static final String IMG = makeCardPath("ArcaneCharm.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
@@ -24,7 +24,7 @@ public class Postpone extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 7;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
 
-    public Postpone() {
+    public ArcaneCharm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
@@ -40,7 +40,7 @@ public class Postpone extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PostponePower(p, p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArcaneCharmPower(p, p, this.magicNumber)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RelayPower(p, p,  this.magicNumber)));
     }
 }

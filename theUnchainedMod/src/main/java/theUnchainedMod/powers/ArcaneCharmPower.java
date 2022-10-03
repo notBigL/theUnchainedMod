@@ -11,10 +11,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.util.TextureLoader;
 
-public class PostponePower extends AbstractPower {
+public class ArcaneCharmPower extends AbstractPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("PostponePower");
+    public static final String POWER_ID = DefaultMod.makeID("ArcaneCharmPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -22,7 +22,7 @@ public class PostponePower extends AbstractPower {
     private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ArcaneCharm_power48.png");
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ArcaneCharm_power128.png");
 
-    public PostponePower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public ArcaneCharmPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;

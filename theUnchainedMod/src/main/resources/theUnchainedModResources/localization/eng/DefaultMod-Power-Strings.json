@@ -62,8 +62,8 @@
       " damage."
     ]
   },
-  "theUnchainedMod:PostponePower": {
-    "NAME": "Postpone",
+  "theUnchainedMod:ArcaneCharmPower": {
+    "NAME": "Arcane Charm",
     "DESCRIPTIONS": [
       "Relay #y",
       " damage every turn."
