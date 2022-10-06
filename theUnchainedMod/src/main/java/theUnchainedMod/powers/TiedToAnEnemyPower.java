@@ -59,6 +59,9 @@ public class TiedToAnEnemyPower extends AbstractPower {
     }
 
     public void damageEnemyWhenHit(DamageInfo info, int damageAmount) {
+        if(tiedToThePlayerPowerList.isEmpty()) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
         for (TiedToThePlayerPower tttPP : tiedToThePlayerPowerList) {
             if (!tttPP.owner.isDead && tttPP.owner.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
                 if (!RelayedDamageField.relayed.get(info)) {
@@ -75,6 +78,9 @@ public class TiedToAnEnemyPower extends AbstractPower {
 
     public void removeMe(TiedToThePlayerPower tttPP) {
         tiedToThePlayerPowerList.remove(tttPP);
+        if(tiedToThePlayerPowerList.isEmpty()) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
     }
 
 }

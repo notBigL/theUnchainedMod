@@ -48,7 +48,7 @@ public class SoulConjunction extends AbstractDynamicCard {
         if (m.hasPower("Artifact") && !m.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, 1, false)));
         } else if (!m.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
-            TiedToThePlayerPower tiedToThePlayerPower = new TiedToThePlayerPower(m, p, p, 1);
+            TiedToThePlayerPower tiedToThePlayerPower = new TiedToThePlayerPower(m, p, p);
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, tiedToThePlayerPower));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TiedToAnEnemyPower(p, p, tiedToThePlayerPower, m)));
         } else {
