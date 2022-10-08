@@ -1,8 +1,11 @@
 package theUnchainedMod.characters;
 
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpineAnimation;
+import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,6 +13,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
@@ -23,6 +27,7 @@ import theUnchainedMod.cards.*;
 import theUnchainedMod.relics.RustedChains;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static theUnchainedMod.DefaultMod.*;
 import static theUnchainedMod.characters.TheDefault.Enums.COLOR_GRAY;
@@ -46,7 +51,8 @@ public class TheDefault extends CustomPlayer {
         public static AbstractPlayer.PlayerClass THE_DEFAULT;
         @SpireEnum(name = "DEFAULT_GRAY_COLOR") // These two HAVE to have the same absolutely identical name.
         public static AbstractCard.CardColor COLOR_GRAY;
-        @SpireEnum(name = "DEFAULT_GRAY_COLOR") @SuppressWarnings("unused")
+        @SpireEnum(name = "DEFAULT_GRAY_COLOR")
+        @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
@@ -96,8 +102,8 @@ public class TheDefault extends CustomPlayer {
 
     public TheDefault(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "theUnchainedModResources/images/char/defaultCharacter/orb/vfx.png", (String)null,
-                (String)null);
+                "theUnchainedModResources/images/char/defaultCharacter/orb/vfx.png",
+                new SpineAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
@@ -112,19 +118,11 @@ public class TheDefault extends CustomPlayer {
         // =============== /TEXTURES, ENERGY, LOADOUT/ =================
 
 
-        // =============== ANIMATIONS =================  
+        // =============== ANIMATIONS =================
 
-        //Stuff that is used for the Animation. Kommt dahin wo jetzt die beiden (String) null im super Aufruf von TheDefault sind.
-        //"theUnchainedModResources/images/char/defaultCharacter/orb/vfx.png", null,
-        //        new SpriterAnimation(
-        //                "theUnchainedModResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
-
-        //loadAnimation(
-        //        THE_DEFAULT_SKELETON_ATLAS,
-        //        THE_DEFAULT_SKELETON_JSON,
-        //        1.0f);
-        //AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
-        //e.setTime(e.getEndTime() * MathUtils.random());
+        loadAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f);
+        AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
+        e.setTimeScale(1.0f);
 
         // =============== /ANIMATIONS/ =================
 
@@ -179,6 +177,15 @@ public class TheDefault extends CustomPlayer {
         UnlockTracker.markRelicAsSeen(RustedChains.ID);
 
         return retVal;
+    }
+
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        List<CutscenePanel> panels = new ArrayList();
+        panels.add(new CutscenePanel(makeComicPath("Unchained_comic_1.png")));
+        panels.add(new CutscenePanel(makeComicPath("Unchained_comic_2.png")));
+        panels.add(new CutscenePanel(makeComicPath("Unchained_comic_3.png")));
+        return panels;
     }
 
     // character Select screen effect

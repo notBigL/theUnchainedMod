@@ -124,8 +124,8 @@ public class DefaultMod implements
     public static final String BADGE_IMAGE = "theUnchainedModResources/images/Badge.png";
 
     // Atlas and JSON files for the Animations
-    public static final String THE_DEFAULT_SKELETON_ATLAS = "theUnchainedModResources/images/char/defaultCharacter/skeleton.atlas";
-    public static final String THE_DEFAULT_SKELETON_JSON = "theUnchainedModResources/images/char/defaultCharacter/skeleton.json";
+    public static final String THE_UNCHAINED_SKELETON_ATLAS = "theUnchainedModResources/images/char/defaultCharacter/idle/skeleton.atlas";
+    public static final String THE_UNCHAINED_SKELETON_JSON = "theUnchainedModResources/images/char/defaultCharacter/idle/skeleton_Skeleton.json";
 
     // =============== MAKE IMAGE PATHS =================
 
@@ -155,6 +155,10 @@ public class DefaultMod implements
 
     public static String makePotionPath(String resourcePath) {
         return getModID() + "Resources/images/potion/" + resourcePath;
+    }
+
+    public static String makeComicPath(String resourcePath) {
+        return getModID() + "Resources/images/scenes/" + resourcePath;
     }
 
     // =============== /MAKE IMAGE PATHS/ =================
