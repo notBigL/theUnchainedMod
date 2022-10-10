@@ -49,7 +49,7 @@
     "NAME": "Heart of the Underdog",
     "FLAVOR": "Its beating is fragile, but something tells you it will not flatline.",
     "DESCRIPTIONS": [
-      "The first time you break the Block of an enemy each turn, gain 1 Energy."
+      "The first time you break the Block of an enemy each turn, gain [E] ."
     ]
   },
   "theUnchainedMod:Carabiner": {
