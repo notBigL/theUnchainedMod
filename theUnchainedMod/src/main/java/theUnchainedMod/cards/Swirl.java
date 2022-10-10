@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.FullSpinPower;
 import theUnchainedMod.powers.MomentumPower;
@@ -76,7 +77,7 @@ public class Swirl extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FullSpinPower(p)));
         if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p)));
+            AbstractDungeon.actionManager.addToBottom(new GainMomentumAction());
         }
     }
 }

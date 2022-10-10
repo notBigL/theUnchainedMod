@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.util.TextureLoader;
 
 public class GainMomentumEveryTurnPower extends AbstractPower {
@@ -42,6 +43,6 @@ public class GainMomentumEveryTurnPower extends AbstractPower {
     }
 
     public void atStartOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new MomentumPower(this.owner, this.amount)));
+        AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(this.amount));
     }
 }

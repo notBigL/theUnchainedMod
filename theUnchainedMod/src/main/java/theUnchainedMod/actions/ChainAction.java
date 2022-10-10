@@ -80,7 +80,7 @@ public class ChainAction extends AbstractGameAction {
         if (player.hasPower("theUnchainedMod:FluidMovementPower")) {
             int momentumAmount = player.getPower("theUnchainedMod:FluidMovementPower").amount;
             if (momentumAmount > 0) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, momentumAmount)));
+                AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(momentumAmount));
             }
         }
         if (player.hasPower("theUnchainedMod:ThreadOfAriadnePower")) {

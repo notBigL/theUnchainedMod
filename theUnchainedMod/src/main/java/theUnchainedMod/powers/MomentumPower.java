@@ -31,7 +31,7 @@ public class MomentumPower extends AbstractPower {
         ID = POWER_ID;
         this.owner = owner;
         momentumRequired = 3;
-        this.amount = checkForMomentumRequired(amount);
+        this.amount = amount;
         type = AbstractPower.PowerType.BUFF;
         isTurnBased = false;
 
@@ -50,35 +50,9 @@ public class MomentumPower extends AbstractPower {
     }
 
     public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
-        this.amount = checkForMomentumRequired(this.amount);
-        if (this.amount <= 0) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        }
+        this.amount = stackAmount;
     }
 
-    private int checkForMomentumRequired(int amount) {
-        Swirl card = new Swirl();
-        int amountOfSwirls = 0;
-        if (this.owner.hasPower("theUnchainedMod:FullSpinPower")) {
-            card.fullSpinApply(this.owner.getPower("theUnchainedMod:FullSpinPower").amount);
-        }
 
-        while (amount >= momentumRequired) {
-            amountOfSwirls++;
-            amount -= momentumRequired;
-        }
-        for(int i = amountOfSwirls; i > 0; i--) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1, false));
-
-        }
-        if(amount <= 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
-        }
-        return amount;
-    }
-
-    public void setMomentumRequired(int newMomentumRequired) {
-        this.momentumRequired = newMomentumRequired;
-    }
+    //public void setMomentumRequired(int newMomentumRequired) { this.momentumRequired = newMomentumRequired;}
 }

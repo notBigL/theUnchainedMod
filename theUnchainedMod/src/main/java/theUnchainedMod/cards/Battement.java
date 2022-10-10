@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.MomentumPower;
@@ -50,6 +51,6 @@ public class Battement extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p, magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(magicNumber));
     }
 }

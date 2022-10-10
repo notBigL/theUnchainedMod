@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.actions.PirouetteAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.patches.CustomTags;
@@ -51,7 +52,7 @@ public class Pirouette extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p, magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(magicNumber, true));
         AbstractDungeon.actionManager.addToBottom(new PirouetteAction());
     }
 }

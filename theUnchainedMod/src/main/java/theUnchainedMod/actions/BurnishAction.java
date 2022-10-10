@@ -30,7 +30,7 @@ public class BurnishAction extends AbstractGameAction {
                 this.isDone = true;
             } else if (this.player.hand.size() == 1) {
                 if (this.player.hand.getBottomCard().costForTurn > 0) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, this.player.hand.getBottomCard().costForTurn * 2)));
+                    AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(this.player.hand.getBottomCard().costForTurn * 2));
                 }
                 this.player.hand.moveToExhaustPile(this.player.hand.getBottomCard());
                 this.tickDuration();
