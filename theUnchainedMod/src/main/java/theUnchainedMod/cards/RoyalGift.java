@@ -22,11 +22,11 @@ public class RoyalGift extends AbstractDynamicCard {
 
 
     private static final int COST = -1;
-    private static final int MAGIC_NUMBER = 7;
+    private static final int BLOCK = 7;
 
     public RoyalGift() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        baseBlock = block = BLOCK;
     }
 
     @Override
@@ -40,6 +40,6 @@ public class RoyalGift extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new RoyalGiftAction(p, this.upgraded, this.freeToPlayOnce, this.energyOnUse, magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new RoyalGiftAction(p, this.upgraded, this.freeToPlayOnce, this.energyOnUse, block));
     }
 }
