@@ -11,9 +11,9 @@ import theUnchainedMod.powers.RelayPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class EnclosingSteel extends AbstractDynamicCard {
+public class LastingShell extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(EnclosingSteel.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(LastingShell.class.getSimpleName());
     public static final String IMG = makeCardPath("EnclosingSteel.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -21,11 +21,11 @@ public class EnclosingSteel extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 9;
+    private static final int MAGIC_NUMBER = 6;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
     private static final int SECOND_MAGIC_NUMBER = 1;
 
-    public EnclosingSteel() {
+    public LastingShell() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
