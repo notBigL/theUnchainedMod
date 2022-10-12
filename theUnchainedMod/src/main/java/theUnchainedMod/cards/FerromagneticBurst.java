@@ -12,9 +12,9 @@ import theUnchainedMod.powers.DentedArmorPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class KickRocks extends AbstractDynamicCard {
+public class FerromagneticBurst extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(KickRocks.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(FerromagneticBurst.class.getSimpleName());
     public static final String IMG = makeCardPath("KickRocks.png");
     private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.COMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
@@ -24,12 +24,12 @@ public class KickRocks extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int MAGIC_NUMBER = 4;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
-    private static final int SECOND_MAGIC_NUMBER = 1;
+    private static final int SECOND_MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 1;
 
 
 
-    public KickRocks() {
+    public FerromagneticBurst() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;

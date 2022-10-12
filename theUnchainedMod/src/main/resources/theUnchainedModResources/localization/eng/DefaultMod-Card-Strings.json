@@ -152,8 +152,8 @@
     "NAME": "Reschedule",
     "DESCRIPTION": "Remove ALL theunchainedmod:Relayed_Damage you would take next turn. ALL theunchainedmod:Relayed_Damage you would take this turn, is dealt to you next turn."
   },
-  "theUnchainedMod:EndlessPatience": {
-    "NAME": "Endless Patience",
+  "theUnchainedMod:FractalShield": {
+    "NAME": "Fractal Shield",
     "DESCRIPTION": "theunchainedmod:Relay !M! damage. theunchainedmod:Relayed_Damage can be theunchainedmod:relayed again.",
     "UPGRADE_DESCRIPTION": "Innate. NL theunchainedmod:Relay !M! damage. theunchainedmod:Relayed_Damage can be theunchainedmod:relayed again."
   },
@@ -370,8 +370,8 @@
     "NAME": "Crush Plates",
     "DESCRIPTION": "Deal !D! damage. Apply theunchainedmod:Dented_Armor for ALL damage that was blocked."
   },
-  "theUnchainedMod:KickRocks": {
-    "NAME": "Kick Rocks",
+  "theUnchainedMod:FerromagneticBurst": {
+    "NAME": "Ferromagnetic Burst",
     "DESCRIPTION": "Apply !M! theunchainedmod:Dented_Armor. Apply !theUnchainedMod:SecondMagic! Weak. Exhaust."
   },
   "theUnchainedMod:Wit": {

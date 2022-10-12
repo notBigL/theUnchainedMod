@@ -12,9 +12,9 @@ import theUnchainedMod.powers.RelayPower;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class EndlessPatience extends AbstractDynamicCard {
+public class FractalShield extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(EndlessPatience.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(FractalShield.class.getSimpleName());
     public static final String IMG = makeCardPath("EndlessPatience.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -25,7 +25,7 @@ public class EndlessPatience extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int MAGIC_NUMBER = 9;
 
-    public EndlessPatience() {
+    public FractalShield() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
