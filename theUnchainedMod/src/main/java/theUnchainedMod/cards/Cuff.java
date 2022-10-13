@@ -7,8 +7,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.powers.HobblesPower;
@@ -16,9 +14,9 @@ import theUnchainedMod.powers.HobblesPower;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class Hobbles extends AbstractDynamicCard {
+public class Cuff extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Hobbles.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(Cuff.class.getSimpleName());
     public static final String IMG = makeCardPath("Hobbles.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -33,7 +31,7 @@ public class Hobbles extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
     private static final int SECOND_MAGIC_NUMBER = 1;
 
-    public Hobbles() {
+    public Cuff() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;

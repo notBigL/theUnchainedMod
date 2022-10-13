@@ -13,9 +13,9 @@ import theUnchainedMod.patches.CustomTags;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class ShatteringSwing extends AbstractDynamicCard {
+public class GraspIntoFuture extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(ShatteringSwing.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(GraspIntoFuture.class.getSimpleName());
     public static final String IMG = makeCardPath("ShatteringSwing.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -27,7 +27,7 @@ public class ShatteringSwing extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_DMG = 3;
     private static final int MAGIC_NUMBER = 1;
 
-    public ShatteringSwing() {
+    public GraspIntoFuture() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;

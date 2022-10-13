@@ -264,8 +264,8 @@
     "DESCRIPTION": "At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn."
   },
-  "theUnchainedMod:Hobbles": {
-    "NAME": "Hobbles",
+  "theUnchainedMod:Cuff": {
+    "NAME": "Cuff",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Apply !M! Weak. Retain. NL Exhaust."
   },
   "theUnchainedMod:GlimpseIntoFuture": {
@@ -338,8 +338,8 @@
     "NAME": "Glare",
     "DESCRIPTION": "Gain !B! Block. ALL enemies lose !M! Strength. Exhaust."
   },
-  "theUnchainedMod:ShatteringSwing": {
-    "NAME": "Shattering Swing",
+  "theUnchainedMod:GraspIntoFuture": {
+    "NAME": "Grasp Into Future",
     "DESCRIPTION": "Deal !D! damage. Put !M! card from your draw pile to the top of your draw pile."
   },
   "theUnchainedMod:DoubleDown": {
