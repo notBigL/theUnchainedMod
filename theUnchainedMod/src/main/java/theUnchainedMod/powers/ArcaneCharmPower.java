@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.util.TextureLoader;
 
 public class ArcaneCharmPower extends AbstractPower {
@@ -42,6 +43,6 @@ public class ArcaneCharmPower extends AbstractPower {
     }
 
     public void atStartOfTurnPostDraw() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new RelayPower(this.owner, this.owner, this.amount)));
+        AbstractDungeon.actionManager.addToBottom(new GainRelayAction(owner, amount));
     }
 }

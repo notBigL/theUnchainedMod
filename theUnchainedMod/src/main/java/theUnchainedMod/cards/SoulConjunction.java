@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.powers.RelayPower;
 import theUnchainedMod.powers.TiedToAnEnemyPower;
@@ -44,7 +45,7 @@ public class SoulConjunction extends AbstractDynamicCard {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RelayPower(p, p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new GainRelayAction(p, magicNumber));
         if (m.hasPower("Artifact") && !m.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, 1, false)));
         } else if (!m.hasPower("theUnchainedMod:TiedToThePlayerPower")) {

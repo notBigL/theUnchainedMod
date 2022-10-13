@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.powers.RelayPower;
 
@@ -44,6 +45,6 @@ public class DualBarrier extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RelayPower(p, p, magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new GainRelayAction(p, magicNumber));
     }
 }

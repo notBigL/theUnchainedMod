@@ -21,8 +21,7 @@ public class PeaceOfferingAction extends AbstractGameAction {
     public void update() {
         AbstractPlayer player = AbstractDungeon.player;
         if (this.amount > 0) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new RelayPower(player, player, this.amount)));
-        }
+            AbstractDungeon.actionManager.addToBottom(new GainRelayAction(player, this.amount));        }
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (mo.currentBlock > 0 && !mo.isDead) {
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(mo, mo.currentBlock));
