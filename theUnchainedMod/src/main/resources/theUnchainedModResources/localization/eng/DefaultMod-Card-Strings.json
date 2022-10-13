@@ -385,8 +385,8 @@
   },
   "theUnchainedMod:RoyalGift": {
     "NAME": "Royal Gift",
-    "DESCRIPTION": "Apply !M! Block X times to EVERYONE.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Block (X + 1) times to EVERYONE."
+    "DESCRIPTION": "Apply !B! Block X times to EVERYONE.",
+    "UPGRADE_DESCRIPTION": "Apply !B! Block (X + 1) times to EVERYONE."
   },
   "theUnchainedMod:Taxes": {
     "NAME": "Taxes",
