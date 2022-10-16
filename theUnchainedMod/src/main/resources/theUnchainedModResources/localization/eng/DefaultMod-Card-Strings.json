@@ -96,13 +96,13 @@
     "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you have no Block, gain [E].",
     "UPGRADE_DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you have no Block, gain [E] [E]."
   },
-  "theUnchainedMod:HalfSwing": {
-    "NAME": "Half Swing",
+  "theUnchainedMod:PropheticSwing": {
+    "NAME": "Prophetic Swing",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Scry !M!."
   },
   "theUnchainedMod:SoulConjunction": {
     "NAME": "Soul Conjunction",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Whenever you take damage, the enemy loses HP equal to the same amount. NL Exhaust.",
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Enemy loses HP equal to ALL damage done to HP and theunchainedmod:Relay. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I am already tied to this enemy."
     ]
@@ -111,9 +111,9 @@
     "NAME": "Liberation",
     "DESCRIPTION": "Gain !B! Block. NL Finish all your active theunchainedmod:Chains. Exhaust."
   },
-  "theUnchainedMod:MorningStar": {
-    "NAME": "Morning Star",
-    "DESCRIPTION": "Costs 1 less [E] for every 2-cost card played this combat. Enemy loses !M! HP. NL Set Cost to 4 after playing."
+  "theUnchainedMod:ChainFlourish": {
+    "NAME": "Chain Flourish",
+    "DESCRIPTION": "Playing 2-cost cards reduce the cost of this card by [E]. Enemy loses !M! HP. NL Set Cost to 4 after playing."
   },
   "theUnchainedMod:Cruiserweight": {
     "NAME": "Cruiserweight",
@@ -130,7 +130,7 @@
   },
   "theUnchainedMod:Kusarigama": {
     "NAME": "Kusarigama",
-    "DESCRIPTION": "Can only be played if it would finish an Attack theunchainedmod:Chain. Deal !D! damage to ALL enemies.",
+    "DESCRIPTION": "Can only be played if it finishes an Attack theunchainedmod:Chain. Deal !D! damage to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       "I need to finish an Attack Chain with this."
     ]
@@ -154,12 +154,12 @@
   },
   "theUnchainedMod:FractalShield": {
     "NAME": "Fractal Shield",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. theunchainedmod:Relayed_Damage can be theunchainedmod:relayed again.",
-    "UPGRADE_DESCRIPTION": "Innate. NL theunchainedmod:Relay !M! damage. theunchainedmod:Relayed_Damage can be theunchainedmod:relayed again."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. theunchainedmod:Relayed_Damage hits theunchainedmod:Relay before HP.",
+    "UPGRADE_DESCRIPTION": "Innate. NL theunchainedmod:Relay !M! damage. theunchainedmod:Relayed_Damage hits theunchainedmod:Relay before HP."
   },
-  "theUnchainedMod:WindUp": {
-    "NAME": "Wind Up",
-    "DESCRIPTION": "Apply !M! Vulnerable. !theUnchainedMod:SecondMagic! Chain: Add a random common Attack to your hand. NL It exhausts. It costs zero this turn."
+  "theUnchainedMod:Windup": {
+    "NAME": "Windup",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random common Attack to your hand. NL It exhausts. It costs zero this turn."
   },
   "theUnchainedMod:RoutineDodge": {
     "NAME": "Routine Dodge",
@@ -200,8 +200,8 @@
   },
   "theUnchainedMod:SharePain": {
     "NAME": "Share Pain",
-    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to ALL theunchainedmod:Relayed_Damage you gained this combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Retain. NL Damage is equal to ALL theunchainedmod:Relayed_Damage you gained this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Damage is equal to ALL theunchainedmod:Relayed_Damage you have gained this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Retain. NL Damage is equal to ALL theunchainedmod:Relayed_Damage you have gained this combat."
   },
   "theUnchainedMod:Overexertion": {
     "NAME": "Overexertion",
@@ -210,7 +210,7 @@
   },
   "theUnchainedMod:Ballet": {
     "NAME": "Ballet",
-    "DESCRIPTION": "At the start of your turn, gain !M! theunchainedmod:Momentum. NL Swirls hit ALL enemies."
+    "DESCRIPTION": "At the start of your turn, gain !M! theunchainedmod:Momentum. NL Swirls now hit ALL enemies."
   },
   "theUnchainedMod:OverHeadSwing": {
     "NAME": "Over Head Swing",
@@ -237,13 +237,13 @@
     "NAME": "Lasting Shell",
     "DESCRIPTION": "theunchainedmod:Relay !M! damage. Your theunchainedmod:Relay does not wear off at the start of next turn."
   },
-  "theUnchainedMod:BloodySwing": {
-    "NAME": "Bloody Swing",
+  "theUnchainedMod:PsychicSwing": {
+    "NAME": "Psychic Swing",
     "DESCRIPTION": "Deal !D! damage. Remove up to !M! theunchainedmod:Relayed_Damage and deal damage equal to the amount you removed."
   },
   "theUnchainedMod:Baguazhang": {
     "NAME": "Baguazhang",
-    "DESCRIPTION": "If the enemy intents to do less than !M! damage, Block !B!."
+    "DESCRIPTION": "If the enemy intends to do less than !M! damage, Block !B!."
   },
   "theUnchainedMod:MagusForm": {
     "NAME": "Magus Form",
@@ -268,8 +268,8 @@
     "NAME": "Cuff",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Apply !M! Weak. Retain. NL Exhaust."
   },
-  "theUnchainedMod:GlimpseIntoFuture": {
-    "NAME": "Glimpse into Future",
+  "theUnchainedMod:GlimpseFuture": {
+    "NAME": "Glimpse Future",
     "DESCRIPTION": "Gain !B! Block. NL If you end this turn on 0 [E] , gain [E] [E] next turn.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you end this turn on 0 [E] , gain NL [E] [E] [E] next turn."
   },
@@ -299,7 +299,7 @@
   },
   "theUnchainedMod:Suffocate": {
     "NAME": "Suffocate",
-    "DESCRIPTION": "Enemy loses HP equal to double his Block."
+    "DESCRIPTION": "Enemy loses HP equal to double their Block."
   },
   "theUnchainedMod:ThreadOfAriadne": {
     "NAME": "Thread Of Ariadne",
@@ -321,14 +321,14 @@
     "NAME": "Chain Saw",
     "DESCRIPTION": "Deal !D! damage. NL Delete ALL your active theunchainedmod:Chains."
   },
-  "theUnchainedMod:ReinforcedElement": {
-    "NAME": "Reinforced Element",
+  "theUnchainedMod:ReinforcedLink": {
+    "NAME": "Reinforced Link",
     "DESCRIPTION": "Gain !B! Block. If you have an active theunchainedmod:Chain, gain [E] and draw 1 card."
   },
   "theUnchainedMod:Prophecy": {
     "NAME": "Prophecy",
     "DESCRIPTION": "Copy a card and put the copy on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Copy a card two times and put the copies on top of your draw pile. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Copy a card twice and put both copies on top of your draw pile. NL Exhaust."
   },
   "theUnchainedMod:Riposte": {
     "NAME": "Riposte",
@@ -340,7 +340,7 @@
   },
   "theUnchainedMod:GraspIntoFuture": {
     "NAME": "Grasp Into Future",
-    "DESCRIPTION": "Deal !D! damage. Put !M! card from your draw pile to the top of your draw pile."
+    "DESCRIPTION": "Deal !D! damage. Put !M! card from your draw pile on top of your draw pile."
   },
   "theUnchainedMod:DoubleDown": {
     "NAME": "Double Down",
@@ -354,9 +354,9 @@
     "NAME": "Eye For An Eye",
     "DESCRIPTION": "Remove up to !M! theunchainedmod:Relayed_Damage. Gain Vigor equal to the amount you removed."
   },
-  "theUnchainedMod:Compounding": {
-    "NAME": "Compounding",
-    "DESCRIPTION": "Gain !B! Block. Make a card in your hand cost [E] less once this turn."
+  "theUnchainedMod:DefensiveLink": {
+    "NAME": "Defensive Link",
+    "DESCRIPTION": "Gain !B! Block. Reduce the cost of a card by 1 this turn."
   },
   "theUnchainedMod:ChaseDestiny": {
     "NAME": "Chase Destiny",

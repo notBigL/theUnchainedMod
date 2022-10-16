@@ -11,9 +11,9 @@ import theUnchainedMod.powers.RandomCommonAttackChainPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class WindUp extends AbstractDynamicCard {
+public class Windup extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(WindUp.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(Windup.class.getSimpleName());
     public static final String IMG = makeCardPath("RoutinePunch.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -25,7 +25,7 @@ public class WindUp extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
     private static final int SECOND_MAGIC_NUMBER = 1;
 
-    public WindUp() {
+    public Windup() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;

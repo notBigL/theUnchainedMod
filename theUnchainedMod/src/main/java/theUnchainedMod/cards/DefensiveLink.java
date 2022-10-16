@@ -1,6 +1,5 @@
 package theUnchainedMod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,13 +7,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.CompoundAction;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.RelayPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class Compounding extends AbstractDynamicCard {
+public class DefensiveLink extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Compounding.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(DefensiveLink.class.getSimpleName());
     public static final String IMG = makeCardPath("Compounding.png");
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -27,7 +25,7 @@ public class Compounding extends AbstractDynamicCard {
 
 
 
-    public Compounding() {
+    public DefensiveLink() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = block = BLOCK;
     }

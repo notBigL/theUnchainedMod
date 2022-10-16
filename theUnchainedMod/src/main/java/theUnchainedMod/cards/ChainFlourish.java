@@ -2,7 +2,6 @@ package theUnchainedMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,8 +12,8 @@ import theUnchainedMod.characters.TheDefault;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class MorningStar extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(MorningStar.class.getSimpleName());
+public class ChainFlourish extends AbstractDynamicCard {
+    public static final String ID = DefaultMod.makeID(ChainFlourish.class.getSimpleName());
     public static final String IMG = makeCardPath("MorningStar.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -25,7 +24,7 @@ public class MorningStar extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 40;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 10;
 
-    public MorningStar() {
+    public ChainFlourish() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
@@ -51,3 +50,5 @@ public class MorningStar extends AbstractDynamicCard {
         }
     }
 }
+
+// Alter Text von MonringStar:     "DESCRIPTION": "Costs 1 less [E] for every 2-cost card played this combat. Enemy loses !M! HP. NL Set Cost to 4 after playing."

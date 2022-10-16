@@ -15,9 +15,9 @@ import java.util.Iterator;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class ReinforcedElement extends AbstractDynamicCard {
+public class ReinforcedLink extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(ReinforcedElement.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(ReinforcedLink.class.getSimpleName());
     public static final String IMG = makeCardPath("ReinforcedElement.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -28,7 +28,7 @@ public class ReinforcedElement extends AbstractDynamicCard {
     private static final int BLOCK = 4;
     private static final int UPGRADE_PLUS_BLOCK = 2;
 
-    public ReinforcedElement() {
+    public ReinforcedLink() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = block = BLOCK;
     }
