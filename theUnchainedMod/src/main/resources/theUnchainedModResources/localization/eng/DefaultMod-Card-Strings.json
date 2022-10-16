@@ -157,9 +157,9 @@
     "DESCRIPTION": "theunchainedmod:Relay !M! damage. theunchainedmod:Relayed_Damage can be theunchainedmod:relayed again.",
     "UPGRADE_DESCRIPTION": "Innate. NL theunchainedmod:Relay !M! damage. theunchainedmod:Relayed_Damage can be theunchainedmod:relayed again."
   },
-  "theUnchainedMod:RoutinePunch": {
-    "NAME": "Routine Punch",
-    "DESCRIPTION": "Deal !D! damage. NL theunchainedmod:Link."
+  "theUnchainedMod:WindUp": {
+    "NAME": "Wind Up",
+    "DESCRIPTION": "Apply !M! Vulnerable. !theUnchainedMod:SecondMagic! Chain: Add a random common Attack to your hand. NL It exhausts. It costs zero this turn."
   },
   "theUnchainedMod:RoutineDodge": {
     "NAME": "Routine Dodge",

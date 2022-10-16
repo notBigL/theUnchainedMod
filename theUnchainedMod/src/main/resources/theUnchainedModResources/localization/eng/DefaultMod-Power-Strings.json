@@ -323,5 +323,13 @@
     "DESCRIPTIONS": [
       "This enemy is too poor to be taxed again."
     ]
+  },
+  "theUnchainedMod:RandomCommonAttackChainPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this Turn, add a random common Attack to your hand.",
+      "If you play #b",
+      " more Attacks this Turn, add a random common Attack to your hand."
+    ]
   }
 }
