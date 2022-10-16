@@ -69,12 +69,12 @@ public class Swirl extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, block));
         if (p.hasPower("theUnchainedMod:SwirlsHitAllEnemiesPower")) {
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         } else {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FullSpinPower(p)));
         if (this.upgraded) {
             AbstractDungeon.actionManager.addToBottom(new GainMomentumAction());
