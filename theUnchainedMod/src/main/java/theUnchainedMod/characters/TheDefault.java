@@ -2,7 +2,6 @@ package theUnchainedMod.characters;
 
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.esotericsoftware.spine.AnimationState;
@@ -162,7 +161,7 @@ public class TheDefault extends CustomPlayer {
         retVal.add(BasicDefend.ID);
         retVal.add(BasicDefend.ID);
         retVal.add(Whiplash.ID);
-        retVal.add(Compounding.ID);
+        retVal.add(DefensiveLink.ID);
         return retVal;
     }
 
@@ -237,7 +236,7 @@ public class TheDefault extends CustomPlayer {
     //Which card should be obtainable from the Match and Keep event?
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new Compounding();
+        return new DefensiveLink();
     }
 
     // The class name as it appears next to your player name in-game
