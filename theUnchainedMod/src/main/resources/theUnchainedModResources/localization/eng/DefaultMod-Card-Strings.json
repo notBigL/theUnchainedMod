@@ -233,8 +233,8 @@
     "DESCRIPTION": "Gain [E] for every enemy that is blocking.",
     "UPGRADE_DESCRIPTION": "Gain [E] if ALL enemies are blocking and [E] for every enemy that is blocking."
   },
-  "theUnchainedMod:LastingShell": {
-    "NAME": "Lasting Shell",
+  "theUnchainedMod:Cocoon": {
+    "NAME": "Cocoon",
     "DESCRIPTION": "theunchainedmod:Relay !M! damage. Your theunchainedmod:Relay does not wear off at the start of next turn."
   },
   "theUnchainedMod:PsychicSwing": {
