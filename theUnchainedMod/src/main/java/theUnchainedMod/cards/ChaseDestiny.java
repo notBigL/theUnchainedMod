@@ -13,7 +13,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class ChaseDestiny extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(ChaseDestiny.class.getSimpleName());
-    public static final String IMG = makeCardPath("ThreadOfAriadne.png");
+    public static final String IMG = makeCardPath("ChaseDestiny.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
