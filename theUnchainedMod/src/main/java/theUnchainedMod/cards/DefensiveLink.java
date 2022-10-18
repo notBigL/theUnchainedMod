@@ -13,7 +13,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class DefensiveLink extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(DefensiveLink.class.getSimpleName());
-    public static final String IMG = makeCardPath("Compounding.png");
+    public static final String IMG = makeCardPath("DefensiveLink.png");
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
