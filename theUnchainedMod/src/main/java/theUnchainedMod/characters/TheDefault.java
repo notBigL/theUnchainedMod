@@ -24,7 +24,6 @@ import org.apache.logging.log4j.Logger;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.relics.RustedChains;
-import theUnchainedMod.util.EnergyOrbOrange;
 
 import java.util.ArrayList;
 import java.util.List;
