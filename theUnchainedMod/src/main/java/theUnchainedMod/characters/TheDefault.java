@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.relics.RustedChains;
+import theUnchainedMod.util.EnergyOrbOrange;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -101,7 +102,7 @@ public class TheDefault extends CustomPlayer {
 
     public TheDefault(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "theUnchainedModResources/images/char/defaultCharacter/orb/vfx.png",
+                "theUnchainedModResources/images/char/defaultCharacter/orb/vfx.png", new float[]{-20.0F, 20.0F, -40.0F, 40.0F, 0.0F},
                 new SpineAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f));
 
 

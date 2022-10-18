@@ -161,6 +161,10 @@ public class DefaultMod implements
         return getModID() + "Resources/images/scenes/" + resourcePath;
     }
 
+    public static String makeEnergyOrbLayerPath(String resourcePath) {
+        return getModID() + "Resources/char/defaultCharacter/orb/" + resourcePath;
+    }
+
     // =============== /MAKE IMAGE PATHS/ =================
 
     // =============== /INPUT TEXTURE LOCATION/ =================
