@@ -1,7 +1,6 @@
 package theUnchainedMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -12,12 +11,11 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.patches.CustomTags;
-import theUnchainedMod.powers.MomentumPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class ThreeSixty extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(ThreeSixty.class.getSimpleName());
+public class FullSwing extends AbstractDynamicCard {
+    public static final String ID = DefaultMod.makeID(FullSwing.class.getSimpleName());
     public static final String IMG = makeCardPath("ThreeSixty.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -29,7 +27,7 @@ public class ThreeSixty extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 1;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
-    public ThreeSixty() {
+    public FullSwing() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;

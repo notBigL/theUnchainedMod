@@ -79,7 +79,7 @@
     "NAME": "Reckless Swing",
     "DESCRIPTION": "Deal !D! damage. Gain !M! theunchainedmod:Relayed_Damage."
   },
-  "theUnchainedMod:ThreeSixty": {
+  "theUnchainedMod:FullSwing": {
     "NAME": "Full Swing",
     "DESCRIPTION": "Deal !D! damage. Deal !D! damage to ALL enemies. NL Gain !M! theunchainedmod:Momentum."
   },
