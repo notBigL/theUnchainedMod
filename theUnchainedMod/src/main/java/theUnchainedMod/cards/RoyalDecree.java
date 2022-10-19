@@ -14,7 +14,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class RoyalDecree extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(RoyalDecree.class.getSimpleName());
-    public static final String IMG = makeCardPath("PerfectExecution.png");
+    public static final String IMG = makeCardPath("RoyalDecree.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;

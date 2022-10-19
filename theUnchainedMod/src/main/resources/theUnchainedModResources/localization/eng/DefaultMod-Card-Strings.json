@@ -370,8 +370,8 @@
     "NAME": "Crush Plates",
     "DESCRIPTION": "Deal !D! damage. Apply theunchainedmod:Dented_Armor for ALL damage that was blocked."
   },
-  "theUnchainedMod:FerromagneticBurst": {
-    "NAME": "Ferromagnetic Burst",
+  "theUnchainedMod:Cripple": {
+    "NAME": "Cripple",
     "DESCRIPTION": "Apply !M! theunchainedmod:Dented_Armor. Apply !theUnchainedMod:SecondMagic! Weak. Exhaust."
   },
   "theUnchainedMod:Wit": {
