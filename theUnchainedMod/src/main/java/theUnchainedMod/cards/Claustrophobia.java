@@ -13,7 +13,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class Claustrophobia extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Claustrophobia.class.getSimpleName());
-    public static final String IMG = makeCardPath("TunnelVision.png");
+    public static final String IMG = makeCardPath("Claustrophobia.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;

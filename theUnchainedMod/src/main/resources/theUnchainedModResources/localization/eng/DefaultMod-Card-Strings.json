@@ -109,7 +109,7 @@
   },
   "theUnchainedMod:Liberation": {
     "NAME": "Liberation",
-    "DESCRIPTION": "Gain !B! Block. NL Finish all your active theunchainedmod:Chains. Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Finish ALL your active theunchainedmod:Chains. NL Remove ALL theunchainedmod:Relayed_Damage. Exhaust."
   },
   "theUnchainedMod:ChainFlourish": {
     "NAME": "Chain Flourish",
@@ -159,7 +159,8 @@
   },
   "theUnchainedMod:Windup": {
     "NAME": "Windup",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random common Attack to your hand. NL It exhausts. It costs zero this turn."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random common Attack to your hand. NL It exhausts. It costs zero this turn.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random upgraded common Attack to your hand. NL It exhausts. It costs zero this turn."
   },
   "theUnchainedMod:RoutineDodge": {
     "NAME": "Routine Dodge",

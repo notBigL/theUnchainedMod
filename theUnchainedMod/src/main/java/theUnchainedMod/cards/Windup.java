@@ -9,6 +9,7 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.powers.RandomCommonAttackChainPower;
 
+import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
 public class Windup extends AbstractDynamicCard {
@@ -19,10 +20,11 @@ public class Windup extends AbstractDynamicCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
+
 
     private static final int COST = 1;
     private static final int MAGIC_NUMBER = 1;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
     private static final int SECOND_MAGIC_NUMBER = 1;
 
     public Windup() {
@@ -35,7 +37,8 @@ public class Windup extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
 
     }
