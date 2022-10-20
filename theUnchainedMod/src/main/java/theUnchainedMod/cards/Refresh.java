@@ -15,7 +15,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class Refresh extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Refresh.class.getSimpleName());
-    public static final String IMG = makeCardPath("FigureEightKnot.png");
+    public static final String IMG = makeCardPath("Refresh.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;

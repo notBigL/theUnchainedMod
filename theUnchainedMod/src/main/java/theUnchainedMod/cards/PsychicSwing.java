@@ -16,7 +16,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class PsychicSwing extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(PsychicSwing.class.getSimpleName());
-    public static final String IMG = makeCardPath("BloodySwing.png");
+    public static final String IMG = makeCardPath("PsychicSwing.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
