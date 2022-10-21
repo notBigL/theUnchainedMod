@@ -361,7 +361,7 @@ public class DefaultMod implements
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
         BaseMod.addPotion(FinisherPotion.class, FINISHER_POTION_LIQUID, FINISHER_POTION_HYBRID, FINISHER_POTION_SPOTS, FinisherPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
-        //BaseMod.addPotion(DancePotion.class, FINISHER_POTION_LIQUID, FINISHER_POTION_HYBRID, FINISHER_POTION_SPOTS, DancePotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(DancePotion.class, FINISHER_POTION_LIQUID, FINISHER_POTION_HYBRID, FINISHER_POTION_SPOTS, DancePotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
         BaseMod.addPotion(SandPotion.class, FINISHER_POTION_LIQUID, FINISHER_POTION_HYBRID, FINISHER_POTION_SPOTS, SandPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
 
 
