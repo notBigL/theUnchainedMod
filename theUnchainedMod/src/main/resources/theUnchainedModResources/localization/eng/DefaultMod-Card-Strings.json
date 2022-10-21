@@ -375,8 +375,8 @@
     "NAME": "Cripple",
     "DESCRIPTION": "Apply !M! theunchainedmod:Dented_Armor. Apply !theUnchainedMod:SecondMagic! Weak. Exhaust."
   },
-  "theUnchainedMod:Wit": {
-    "NAME": "Wit",
+  "theUnchainedMod:OffhandedSwing": {
+    "NAME": "Offhanded Swing",
     "DESCRIPTION": "Deal !D! damage. NL Draw !M! card, if it is a 2-cost card play it on the same enemy if possible."
   },
   "theUnchainedMod:Haste": {
