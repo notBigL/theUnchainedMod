@@ -331,5 +331,12 @@
       "If you play #b",
       " more Attacks this Turn, add a random common Attack to your hand."
     ]
+  },
+  "theUnchainedMod:GainMomentumNextTurnPower": {
+    "NAME": "Momentum Soon",
+    "DESCRIPTIONS": [
+      "Next Turn, gain #y",
+      " Momentum."
+    ]
   }
 }
