@@ -386,11 +386,15 @@
   },
   "theUnchainedMod:RoyalGift": {
     "NAME": "Royal Gift",
-    "DESCRIPTION": "Apply !B! Block X times to EVERYONE.",
-    "UPGRADE_DESCRIPTION": "Apply !B! Block (X + 1) times to EVERYONE."
+    "DESCRIPTION": "EVERYONE gains !B! Block X times .",
+    "UPGRADE_DESCRIPTION": "EVERYONE gains !B! Block (X + 1) times."
   },
   "theUnchainedMod:Taxes": {
     "NAME": "Taxes",
     "DESCRIPTION": "Gain !M! Gold for every enemy."
+  },
+  "theUnchainedMod:PerfectStep": {
+    "NAME": "Perfect Step",
+    "DESCRIPTION": "Gain !B! Block. NL Retain. Gain 1 theunchainedmod:Full_Spin. Exhaust."
   }
 }

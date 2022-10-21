@@ -18,7 +18,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class Battement extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Battement.class.getSimpleName());
-    public static final String IMG = makeCardPath("HookedChain.png");
+    public static final String IMG = makeCardPath("Battement.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;

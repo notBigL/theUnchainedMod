@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.cards.Swirl;
+import theUnchainedMod.cards.PerfectStep;
 import theUnchainedMod.util.TextureLoader;
 
 import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;
@@ -26,7 +26,7 @@ public class BalletShoes extends CustomRelic {
     @Override
     public void atBattleStartPreDraw() {
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        this.addToBot(new MakeTempCardInHandAction(new Swirl(), 1, false));
+        this.addToBot(new MakeTempCardInHandAction(new PerfectStep(), 1, false));
         this.flash();
     }
 

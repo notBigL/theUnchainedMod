@@ -45,7 +45,6 @@ public class TwirlAway extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, this.block));
         AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(magicNumber));
-        //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new GainMomentumNextTurnPower(p, magicNumber, p)));
     }
 }
