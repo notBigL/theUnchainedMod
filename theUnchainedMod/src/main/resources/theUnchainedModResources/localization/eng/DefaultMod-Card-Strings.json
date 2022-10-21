@@ -144,8 +144,8 @@
     "DESCRIPTION": "This turn, your next 2-cost card is played twice.",
     "UPGRADE_DESCRIPTION": "This turn, your next 2 2-cost cards are played twice."
   },
-  "theUnchainedMod:SliceThrough": {
-    "NAME": "Slice Through",
+  "theUnchainedMod:RazorChain": {
+    "NAME": "Razor Chain",
     "DESCRIPTION": "Deal !D! damage. Ignores enemy Block."
   },
   "theUnchainedMod:Reschedule": {
@@ -269,8 +269,8 @@
     "NAME": "Cuff",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Apply !M! Weak. Retain. NL Exhaust."
   },
-  "theUnchainedMod:GlimpseFuture": {
-    "NAME": "Glimpse Future",
+  "theUnchainedMod:Premonition": {
+    "NAME": "Premonition",
     "DESCRIPTION": "Gain !B! Block. NL If you end this turn on 0 [E] , gain [E] [E] next turn.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you end this turn on 0 [E] , gain NL [E] [E] [E] next turn."
   },

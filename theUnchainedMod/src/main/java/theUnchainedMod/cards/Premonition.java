@@ -12,9 +12,9 @@ import theUnchainedMod.powers.GlimpseIntoFuturePower;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class GlimpseFuture extends AbstractDynamicCard {
+public class Premonition extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(GlimpseFuture.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(Premonition.class.getSimpleName());
     public static final String IMG = makeCardPath("GlimpseIntoFuture.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -29,7 +29,7 @@ public class GlimpseFuture extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
-    public GlimpseFuture() {
+    public Premonition() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;

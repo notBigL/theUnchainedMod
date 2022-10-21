@@ -11,9 +11,9 @@ import theUnchainedMod.characters.TheDefault;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class SliceThrough extends AbstractDynamicCard {
+public class RazorChain extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(SliceThrough.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(RazorChain.class.getSimpleName());
     public static final String IMG = makeCardPath("SliceThrough.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -21,10 +21,10 @@ public class SliceThrough extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 10;
     private static final int UPGRADE_PLUS_DMG = 5;
 
-    public SliceThrough() {
+    public RazorChain() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
     }
