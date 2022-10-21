@@ -162,8 +162,8 @@
     "DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random common Attack to your hand. NL It exhausts. It costs zero this turn.",
     "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random upgraded common Attack to your hand. NL It exhausts. It costs zero this turn."
   },
-  "theUnchainedMod:TwirlAway": {
-    "NAME": "Twirl Away",
+  "theUnchainedMod:Aplomb": {
+    "NAME": "Aplomb",
     "DESCRIPTION": "Gain !B! Block. Gain !M! theunchainedmod:Momentum. NL Next Turn, gain !M! theunchainedmod:Momentum."
   },
   "theUnchainedMod:Battement": {

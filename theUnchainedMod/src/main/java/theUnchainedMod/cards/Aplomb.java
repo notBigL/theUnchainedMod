@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.characters.TheDefault;
@@ -13,9 +12,9 @@ import theUnchainedMod.powers.GainMomentumNextTurnPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class TwirlAway extends AbstractDynamicCard {
+public class Aplomb extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(TwirlAway.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(Aplomb.class.getSimpleName());
     public static final String IMG = makeCardPath("RoutineDodge.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -27,7 +26,7 @@ public class TwirlAway extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_BLOCK = 3;
     private static final int MAGIC_NUMBER = 2;
 
-    public TwirlAway() {
+    public Aplomb() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
