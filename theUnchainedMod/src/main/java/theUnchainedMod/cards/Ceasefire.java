@@ -13,7 +13,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class Ceasefire extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Ceasefire.class.getSimpleName());
-    public static final String IMG = makeCardPath("PeaceOffering.png");
+    public static final String IMG = makeCardPath("Ceasefire.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL;
     private static final CardType TYPE = CardType.SKILL;
