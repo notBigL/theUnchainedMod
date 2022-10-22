@@ -385,8 +385,8 @@
   },
   "theUnchainedMod:RoyalGift": {
     "NAME": "Royal Gift",
-    "DESCRIPTION": "EVERYONE gains !B! Block X times .",
-    "UPGRADE_DESCRIPTION": "EVERYONE gains !B! Block (X + 1) times."
+    "DESCRIPTION": "Gain !B! Block X times. Enemy gains !B! Block X times.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block (X + 1) times. Enemy gains !B! Block (X + 1) times."
   },
   "theUnchainedMod:Taxes": {
     "NAME": "Taxes",

@@ -15,7 +15,7 @@ public class RoyalGift extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID(RoyalGift.class.getSimpleName());
     public static final String IMG = makeCardPath("InfiniteChain.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ALL;
+    private static final CardTarget TARGET = CardTarget.SELF_AND_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
@@ -40,6 +40,6 @@ public class RoyalGift extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new RoyalGiftAction(p, this.upgraded, this.freeToPlayOnce, this.energyOnUse, block));
+        AbstractDungeon.actionManager.addToBottom(new RoyalGiftAction(p, m, this.upgraded, this.freeToPlayOnce, this.energyOnUse, block));
     }
 }
