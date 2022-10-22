@@ -211,11 +211,11 @@
       " turns."
     ]
   },
-  "theUnchainedMod:HeavyShacklesPower": {
+  "theUnchainedMod:MagusFormPower": {
     "NAME": "Magus Form",
     "DESCRIPTIONS": [
-      "All 2-cost cards are free once every turn.",
-      "All 2-cost cards are free once every turn and are upgraded for the rest of combat."
+      "Whenever you play a 2-cost card, gain #y",
+      " Energy."
     ]
   },
   "theUnchainedMod:WreckingBallPower": {

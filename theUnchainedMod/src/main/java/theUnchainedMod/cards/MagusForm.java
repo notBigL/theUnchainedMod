@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.HeavyShacklesPower;
+import theUnchainedMod.powers.MagusFormPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -23,23 +23,25 @@ public class MagusForm extends AbstractDynamicCard {
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 3;
+    private static final int MAGIC_NUMBER = 1;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
     public MagusForm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        baseMagicNumber = magicNumber = MAGIC_NUMBER;
         tags.add(BaseModCardTags.FORM);
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
 
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HeavyShacklesPower(p, this.upgraded)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MagusFormPower(p, magicNumber)));
     }
 }

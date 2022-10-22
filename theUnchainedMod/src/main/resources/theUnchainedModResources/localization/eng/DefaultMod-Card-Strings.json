@@ -248,8 +248,7 @@
   },
   "theUnchainedMod:MagusForm": {
     "NAME": "Magus Form",
-    "DESCRIPTION": "ALL 2-cost cards cost zero once per turn.",
-    "UPGRADE_DESCRIPTION": "ALL 2-cost cards cost zero and are upgraded once per turn."
+    "DESCRIPTION": "Gain !M! Energy whenever you play a 2-cost card."
   },
   "theUnchainedMod:TelekineticPulse": {
     "NAME": "Telekinetic Pulse",
