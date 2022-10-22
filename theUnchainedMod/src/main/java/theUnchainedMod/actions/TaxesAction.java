@@ -19,9 +19,8 @@ public class TaxesAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        AbstractDungeon.actionManager.addToBottom(new GainGoldAction(amount));
         for (AbstractCreature m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (!m.hasPower("theUnchainedMod:TaxedPower")) {
+            if (!m.isDeadOrEscaped() && !m.hasPower("theUnchainedMod:TaxedPower")) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player, new TaxedPower(m)));
                 AbstractDungeon.actionManager.addToBottom(new GainGoldAction(amount));
                 for (int i = 0; i < this.amount; ++i) {
