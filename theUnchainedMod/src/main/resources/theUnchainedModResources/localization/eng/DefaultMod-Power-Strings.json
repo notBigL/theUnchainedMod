@@ -333,10 +333,26 @@
     ]
   },
   "theUnchainedMod:GainMomentumNextTurnPower": {
-    "NAME": "Momentum Soon",
+    "NAME": "Carried Momentum",
     "DESCRIPTIONS": [
       "Next Turn, gain #y",
       " Momentum."
+    ]
+  },
+  "theUnchainedMod:WeldingPower": {
+    "NAME": "Welding",
+    "DESCRIPTIONS": [
+      "The first Chain you start each turn, is finished instantly.",
+      "The first #y",
+      " Chains you start each turn, are finished instantly."
+    ]
+  },
+  "theUnchainedMod:FuseChainPower": {
+    "NAME": "Fuse Chains",
+    "DESCRIPTIONS": [
+      "The next Chain you start, is finished instantly.",
+      "The next #y",
+      " Chains you start, are finished instantly."
     ]
   }
 }

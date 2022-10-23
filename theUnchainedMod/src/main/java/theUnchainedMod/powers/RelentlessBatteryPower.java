@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.MultiAttackAction;
 import theUnchainedMod.actions.RelentlessBatteryAction;
 
 public class RelentlessBatteryPower extends AbstractChainPower {

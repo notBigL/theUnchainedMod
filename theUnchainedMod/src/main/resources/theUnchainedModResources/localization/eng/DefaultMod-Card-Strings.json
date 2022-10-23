@@ -148,9 +148,10 @@
     "NAME": "Razor Chain",
     "DESCRIPTION": "Deal !D! damage. Ignores enemy Block."
   },
-  "theUnchainedMod:Reschedule": {
-    "NAME": "Reschedule",
-    "DESCRIPTION": "Remove ALL theunchainedmod:Relayed_Damage you would take next turn. ALL theunchainedmod:Relayed_Damage you would take this turn, is dealt to you next turn."
+  "theUnchainedMod:Welding": {
+    "NAME": "Welding",
+    "DESCRIPTION": "Ethereal. NL The first Chain you play each turn is finished instantly.",
+    "UPGRADE_DESCRIPTION": "The first Chain you play each turn is finished instantly."
   },
   "theUnchainedMod:FractalShield": {
     "NAME": "Fractal Shield",
