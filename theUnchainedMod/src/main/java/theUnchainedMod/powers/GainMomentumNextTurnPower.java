@@ -20,8 +20,8 @@ public class GainMomentumNextTurnPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/LongGamePower_power48.png");
-    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/LongGamePower_power128.png");
+    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/CarriedMomentumPower_power48.png");
+    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/CarriedMomentumPower_power128.png");
 
     public GainMomentumNextTurnPower(final AbstractCreature owner, final int amount, final AbstractCreature source) {
         name = NAME;
