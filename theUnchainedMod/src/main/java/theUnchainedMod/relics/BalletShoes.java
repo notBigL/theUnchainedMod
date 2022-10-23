@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.cards.PerfectStep;
 import theUnchainedMod.util.TextureLoader;
 
@@ -20,14 +21,17 @@ public class BalletShoes extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BalletShoes_relic.png"));
 
     public BalletShoes() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
     }
 
     @Override
-    public void atBattleStartPreDraw() {
-        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        this.addToBot(new MakeTempCardInHandAction(new PerfectStep(), 1, false));
-        this.flash();
+    public void onPlayerEndTurn() {
+        if (AbstractDungeon.player.hasPower("theUnchainedMod:MomentumPower")) {
+            int momentumAmount = AbstractDungeon.player.getPower("theUnchainedMod:MomentumPower").amount;
+            AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(3 - momentumAmount));
+            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            this.flash();
+        }
     }
 
     @Override

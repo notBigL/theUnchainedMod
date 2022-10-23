@@ -35,7 +35,7 @@
     "NAME": "Ballet Shoes",
     "FLAVOR": "Impossible to cut a bad figure with these.",
     "DESCRIPTIONS": [
-      "At the start of combat, add a #yPerfectStep to your hand."
+      "If you end your turn with Momentum, gain enough Momentum for the next Swirl."
     ]
   },
   "theUnchainedMod:RustedChains": {
