@@ -6,7 +6,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -21,8 +20,8 @@ import org.apache.logging.log4j.Logger;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.potions.DancePotion;
-import theUnchainedMod.potions.FinisherPotion;
-import theUnchainedMod.potions.SandPotion;
+import theUnchainedMod.potions.ChainGrease;
+import theUnchainedMod.potions.CrushingElixir;
 import theUnchainedMod.relics.*;
 import theUnchainedMod.util.IDCheckDontTouchPls;
 import theUnchainedMod.util.TextureLoader;
@@ -86,12 +85,15 @@ public class DefaultMod implements
     public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
 
     // Potion Colors in RGB
-    public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f);
-    public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f);
-    public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f);
-    public static final Color FINISHER_POTION_LIQUID = CardHelper.getColor(255.0f, 173.0f, 48.0f);
-    public static final Color FINISHER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f);
-    public static final Color FINISHER_POTION_SPOTS = CardHelper.getColor(255.0f, 173.0f, 48.0f);
+    public static final Color LINK_POTION_LIQUID = CardHelper.getColor(142.0f, 95.0f, 0.0f);
+    public static final Color LINK_POTION_HYBRID = CardHelper.getColor(112.0f, 76.0f, 2.0f);
+    public static final Color LINK_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f);
+    public static final Color DANCE_POTION_LIQUID = CardHelper.getColor(255.0f, 173.0f, 48.0f);
+    public static final Color DANCE_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f);
+    public static final Color DANCE_POTION_SPOTS = CardHelper.getColor(255.0f, 173.0f, 48.0f);
+    public static final Color CRUSH_POTION_LIQUID = CardHelper.getColor(115.0f, 180.0f, 223.0f);
+    public static final Color CRUSH_POTION_HYBRID = CardHelper.getColor(68.0f, 108.0f, 134.0f);
+    public static final Color CRUSH_POTION_SPOTS = CardHelper.getColor(255.0f, 173.0f, 48.0f);
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
@@ -154,7 +156,7 @@ public class DefaultMod implements
     }
 
     public static String makePotionPath(String resourcePath) {
-        return getModID() + "Resources/images/potion/" + resourcePath;
+        return getModID() + "Resources/images/potions/" + resourcePath;
     }
 
     public static String makeComicPath(String resourcePath) {
@@ -360,9 +362,9 @@ public class DefaultMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(FinisherPotion.class, FINISHER_POTION_LIQUID, FINISHER_POTION_HYBRID, FINISHER_POTION_SPOTS, FinisherPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
-        BaseMod.addPotion(DancePotion.class, FINISHER_POTION_LIQUID, FINISHER_POTION_HYBRID, FINISHER_POTION_SPOTS, DancePotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
-        BaseMod.addPotion(SandPotion.class, FINISHER_POTION_LIQUID, FINISHER_POTION_HYBRID, FINISHER_POTION_SPOTS, SandPotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(ChainGrease.class, LINK_POTION_LIQUID, LINK_POTION_HYBRID, LINK_POTION_SPOTS, ChainGrease.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(DancePotion.class, DANCE_POTION_LIQUID, DANCE_POTION_HYBRID, DANCE_POTION_SPOTS, DancePotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(CrushingElixir.class, CRUSH_POTION_LIQUID, CRUSH_POTION_HYBRID, CRUSH_POTION_SPOTS, CrushingElixir.POTION_ID, TheDefault.Enums.THE_DEFAULT);
 
 
         logger.info("Done editing potions");

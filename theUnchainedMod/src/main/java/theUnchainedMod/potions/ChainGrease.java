@@ -10,20 +10,20 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import theUnchainedMod.actions.ChainAction;
 import theUnchainedMod.cards.Liberation;
+import theUnchainedMod.patches.CustomPotionEnums;
 
-public class FinisherPotion extends CustomPotion {
+public class ChainGrease extends CustomPotion {
 
-    public static final String POTION_ID = theUnchainedMod.DefaultMod.makeID("FinisherPotion");
+    public static final String POTION_ID = theUnchainedMod.DefaultMod.makeID("ChainGrease");
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
 
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
-    public FinisherPotion() {
+    public ChainGrease() {
         // The bottle shape and inside is determined by potion size and color. The actual colors are the main DefaultMod.java
-        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.CARD, PotionColor.SMOKE);
+        super(NAME, POTION_ID, PotionRarity.COMMON, CustomPotionEnums.LINK, PotionColor.SMOKE);
         potency = getPotency();
         description = DESCRIPTIONS[0];
         isThrown = false;
@@ -42,7 +42,7 @@ public class FinisherPotion extends CustomPotion {
 
     @Override
     public AbstractPotion makeCopy() {
-        return new FinisherPotion();
+        return new ChainGrease();
     }
 
     @Override

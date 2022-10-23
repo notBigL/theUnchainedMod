@@ -7,8 +7,8 @@
       " Strength."
     ]
   },
-  "theUnchainedMod:FinisherPotion": {
-    "NAME": "Finisher Potion",
+  "theUnchainedMod:ChainGrease": {
+    "NAME": "Chain Grease",
     "DESCRIPTIONS": [
       "Add a Liberation into your hand. It costs zero this turn."
     ]
@@ -19,8 +19,8 @@
       "Add ", " Swirls into your hand."
     ]
   },
-  "theUnchainedMod:SandPotion": {
-    "NAME": "Sand Potion",
+  "theUnchainedMod:CrushingElixir": {
+    "NAME": "Crushing Elixir",
     "DESCRIPTIONS": [
       "Apply ", " Dented Armor to ALL enemies."
     ]
