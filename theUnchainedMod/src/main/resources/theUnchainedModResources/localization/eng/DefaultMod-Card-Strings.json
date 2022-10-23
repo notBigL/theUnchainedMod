@@ -89,7 +89,9 @@
   },
   "theUnchainedMod:StepBack": {
     "NAME": "Step Back",
-    "DESCRIPTION": "Draw !M! cards. NL 1 theunchainedmod:Chain: Gain !B! Block."
+    "DESCRIPTION": "Draw !M! card. NL 1 theunchainedmod:Chain: Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL 1 theunchainedmod:Chain: Gain !B! Block."
+
   },
   "theUnchainedMod:MakeRoom": {
     "NAME": "Make Room",
