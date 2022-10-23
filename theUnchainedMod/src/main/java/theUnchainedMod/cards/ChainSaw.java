@@ -20,9 +20,9 @@ public class ChainSaw extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
-    private static final int DAMAGE = 25;
-    private static final int UPGRADE_PLUS_DMG = 8;
+    private static final int COST = 1;
+    private static final int DAMAGE = 15;
+    private static final int UPGRADE_PLUS_DMG = 5;
 
     public ChainSaw() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
