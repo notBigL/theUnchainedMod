@@ -361,7 +361,8 @@
   },
   "theUnchainedMod:ChaseDestiny": {
     "NAME": "Chase Destiny",
-    "DESCRIPTION": "This turn, whenever you finish a theunchainedmod:Chain, gain [E]. Exhaust."
+    "DESCRIPTION": "This turn, whenever you finish a theunchainedmod:Chain, gain [E]. Exhaust.",
+    "UPGRADE_DESCRIPTION": "This and next turn, whenever you finish a theunchainedmod:Chain, gain [E]. Exhaust."
   },
   "theUnchainedMod:StareDown": {
     "NAME": "Stare Down",

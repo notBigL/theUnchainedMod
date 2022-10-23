@@ -83,8 +83,8 @@ public class ChainAction extends AbstractGameAction {
                 AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(momentumAmount));
             }
         }
-        if (player.hasPower("theUnchainedMod:ThreadOfAriadnePower")) {
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(player.getPower("theUnchainedMod:ThreadOfAriadnePower").amount));
+        if (player.hasPower("theUnchainedMod:ChaseDestinyPower")) {
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
         }
     }
 }

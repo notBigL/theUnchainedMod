@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.util.TextureLoader;
 
-public class ThreadOfAriadnePower extends AbstractPower {
+public class ChaseDestinyPower extends AbstractPower {
 
-    public static final String POWER_ID = DefaultMod.makeID("ThreadOfAriadnePower");
+    public static final String POWER_ID = DefaultMod.makeID("ChaseDestinyPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -21,7 +21,7 @@ public class ThreadOfAriadnePower extends AbstractPower {
     private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ChaseDestiny_power48.png");
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ChaseDestiny_power128.png");
 
-    public ThreadOfAriadnePower(final AbstractCreature owner, final int amount) {
+    public ChaseDestinyPower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
@@ -35,19 +35,24 @@ public class ThreadOfAriadnePower extends AbstractPower {
         updateDescription();
     }
 
-    public ThreadOfAriadnePower(final AbstractCreature owner) {
-        this(owner, 1);
-    }
-
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            this.amount--;
+            if (this.amount < 1) {
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            }
+            updateDescription();
         }
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0];
+        } else if (this.amount == 2) {
+            this.description = DESCRIPTIONS[1];
+        } else {
+            this.description = DESCRIPTIONS[2] + (this.amount - 1) + DESCRIPTIONS[3];
+        }
     }
-
 }

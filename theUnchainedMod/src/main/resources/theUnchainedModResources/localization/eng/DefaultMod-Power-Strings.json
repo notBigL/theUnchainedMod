@@ -295,11 +295,13 @@
       " more damage this combat."
     ]
   },
-  "theUnchainedMod:ThreadOfAriadnePower": {
-    "NAME": "Thread of Ariadne",
+  "theUnchainedMod:ChaseDestinyPower": {
+    "NAME": "Path to Destiny",
     "DESCRIPTIONS": [
-      "This turn gain #y",
-      " Energy everytime you finish a Chain."
+      "This turn, gain 1 Energy everytime you finish a Chain.",
+      "This and next turn, gain 1 Energy everytime you finish a Chain.",
+      "Gain 1 Energy for the next #y",
+      " turns, everytime you finish a Chain."
     ]
   },
   "theUnchainedMod:OverviewPower": {
