@@ -26,7 +26,6 @@ public class TiedToAnEnemyPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     public final ArrayList<TiedToThePlayerPower> tiedToThePlayerPowerList = new ArrayList<>();
-    private static final Logger logger = LogManager.getLogger(TiedToAnEnemyPower.class.getName());
     private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/TiedToAnEnemyPower_power48.png");
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/TiedToAnEnemyPower_power128.png");
 
@@ -38,15 +37,11 @@ public class TiedToAnEnemyPower extends AbstractPower {
         this.source = source;
         type = PowerType.BUFF;
         isTurnBased = false;
-        if(owner.hasPower("theUnchainedMod:TiedToAnEnemyPower")) {
+        if (owner.hasPower("theUnchainedMod:TiedToAnEnemyPower")) {
             TiedToAnEnemyPower ttAEP = (TiedToAnEnemyPower) owner.getPower("theUnchainedMod:TiedToAnEnemyPower");
             ttAEP.tiedToThePlayerPowerList.add(tiedToThePlayerPower);
-            logger.info("I AM HERE");
-            logger.info(ttAEP.tiedToThePlayerPowerList.size());
         } else {
             tiedToThePlayerPowerList.add(tiedToThePlayerPower);
-            logger.info("First Application");
-            logger.info(tiedToThePlayerPowerList.size());
         }
         this.region128 = new TextureAtlas.AtlasRegion(texture128, 0, 0, 128, 128);
         this.region48 = new TextureAtlas.AtlasRegion(texture48, 0, 0, 48, 48);
@@ -59,26 +54,33 @@ public class TiedToAnEnemyPower extends AbstractPower {
     }
 
     public void damageEnemyWhenHit(DamageInfo info, int damageAmount) {
-        if(tiedToThePlayerPowerList.isEmpty()) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        if (tiedToThePlayerPowerList.isEmpty()) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
+            return;
         }
+
+        ArrayList<TiedToThePlayerPower> removeList = new ArrayList<>();
         for (TiedToThePlayerPower tttPP : tiedToThePlayerPowerList) {
-            if (!tttPP.owner.isDead && tttPP.owner.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
+            if (!tttPP.owner.isDeadOrEscaped() && tttPP.owner.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
                 if (!RelayedDamageField.relayed.get(info)) {
                     tttPP.damageEnemyWhenPlayerIsHit(damageAmount, this.owner);
                 }
             } else {
-                tiedToThePlayerPowerList.remove(tttPP);
-                if(tiedToThePlayerPowerList.isEmpty()) {
+                removeList.add(tttPP);
+                if (tiedToThePlayerPowerList.size() == removeList.size()) {
                     AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+                    return;
                 }
             }
+        }
+        for (TiedToThePlayerPower tttPP : removeList) {
+            tiedToThePlayerPowerList.remove(tttPP);
         }
     }
 
     public void removeMe(TiedToThePlayerPower tttPP) {
         tiedToThePlayerPowerList.remove(tttPP);
-        if(tiedToThePlayerPowerList.isEmpty()) {
+        if (tiedToThePlayerPowerList.isEmpty()) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }
