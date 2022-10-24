@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.WitAction;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.patches.CustomTags;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -33,6 +34,7 @@ public class OffhandedSwing extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = damage = DAMAGE;
         this.baseMagicNumber = this.magicNumber = MAGIC_NUMBER;
+        tags.add(CustomTags.SWING);
     }
 
     @Override
