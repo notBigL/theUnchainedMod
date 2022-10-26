@@ -137,8 +137,8 @@
       " damage."
     ]
   },
-  "theUnchainedMod:EndlessPatiencePower": {
-    "NAME": "Endless Patience",
+  "theUnchainedMod:FractalShieldPower": {
+    "NAME": "Fractal Shield",
     "DESCRIPTIONS": [
       "Relayed damage can be relayed again."
     ]
@@ -147,7 +147,7 @@
     "NAME": "Claustrophobia",
     "DESCRIPTIONS": [
       "At the start of your turn, apply #b",
-      " Dented Armor to ALL enemies."
+      " Crushed Armor to ALL enemies."
     ]
   },
   "theUnchainedMod:SolarPlexusPower": {
@@ -313,8 +313,8 @@
       " Weak."
     ]
   },
-  "theUnchainedMod:DentedArmorPower": {
-    "NAME": "Dented Armor",
+  "theUnchainedMod:CrushedArmorPower": {
+    "NAME": "Crushed Armor",
     "DESCRIPTIONS": [
       "Loses #r",
       " HP everytime it gains Block."

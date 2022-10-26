@@ -54,10 +54,10 @@
     "DESCRIPTION": "Doubles the damage and Block of Swirls this turn."
   },
   {
-    "PROPER_NAME": "Dented Armor",
+    "PROPER_NAME": "Crushed Armor",
     "NAMES": [
-      "Dented Armor",
-      "dented_armor"
+      "Crushed Armor",
+      "crushed_armor"
     ],
     "DESCRIPTION": "Creatures lose HP everytime they gain Block."
   }

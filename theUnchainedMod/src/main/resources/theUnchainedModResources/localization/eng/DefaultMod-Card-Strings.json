@@ -183,7 +183,7 @@
   },
   "theUnchainedMod:Claustrophobia": {
     "NAME": "Claustrophobia",
-    "DESCRIPTION": "At the start of your turn, apply !M! theunchainedmod:Dented_Armor to ALL enemies."
+    "DESCRIPTION": "At the start of your turn, apply !M! theunchainedmod:Crushed_Armor to ALL enemies."
   },
   "theUnchainedMod:CautiousStrike": {
     "NAME": "Cautious Strike",
@@ -370,11 +370,11 @@
   },
   "theUnchainedMod:CrushPlates": {
     "NAME": "Crush Plates",
-    "DESCRIPTION": "Deal !D! damage. Apply theunchainedmod:Dented_Armor for ALL damage that was blocked."
+    "DESCRIPTION": "Deal !D! damage. Apply theunchainedmod:Crushed_Armor for ALL damage that was blocked."
   },
   "theUnchainedMod:Cripple": {
     "NAME": "Cripple",
-    "DESCRIPTION": "Apply !M! theunchainedmod:Dented_Armor. Apply !theUnchainedMod:SecondMagic! Weak. Exhaust."
+    "DESCRIPTION": "Apply !M! theunchainedmod:Crushed_Armor. Apply !theUnchainedMod:SecondMagic! Weak. Exhaust."
   },
   "theUnchainedMod:OffhandedSwing": {
     "NAME": "Offhanded Swing",

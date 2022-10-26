@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theUnchainedMod.powers.DentedArmorPower;
+import theUnchainedMod.powers.CrushedArmorPower;
 
 public class CrushPlatesAction extends AbstractGameAction {
 
@@ -28,7 +28,7 @@ public class CrushPlatesAction extends AbstractGameAction {
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, info, AttackEffect.BLUNT_HEAVY));
         if (dentArmorAmount > 0) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new DentedArmorPower(target, AbstractDungeon.player, dentArmorAmount)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new CrushedArmorPower(target, AbstractDungeon.player, dentArmorAmount)));
         }
         this.isDone = true;
     }

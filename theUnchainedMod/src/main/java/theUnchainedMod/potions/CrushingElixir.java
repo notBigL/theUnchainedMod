@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import theUnchainedMod.patches.CustomPotionEnums;
-import theUnchainedMod.powers.DentedArmorPower;
+import theUnchainedMod.powers.CrushedArmorPower;
 
 public class CrushingElixir extends CustomPotion {
 
@@ -32,7 +32,7 @@ public class CrushingElixir extends CustomPotion {
     @Override
     public void use(AbstractCreature target) {
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new DentedArmorPower(mo, AbstractDungeon.player, potency)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, AbstractDungeon.player, new CrushedArmorPower(mo, AbstractDungeon.player, potency)));
         }
     }
 

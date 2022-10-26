@@ -13,10 +13,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.util.TextureLoader;
 
-public class DentedArmorPower extends AbstractPower {
+public class CrushedArmorPower extends AbstractPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("DentedArmorPower");
+    public static final String POWER_ID = DefaultMod.makeID("CrushedArmorPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -24,7 +24,7 @@ public class DentedArmorPower extends AbstractPower {
     private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/DentedArmorPower_power48.png");
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/DentedArmorPower_power128.png");
 
-    public DentedArmorPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public CrushedArmorPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
