@@ -150,10 +150,9 @@
     "NAME": "Razor Chain",
     "DESCRIPTION": "Deal !D! damage. Ignores enemy Block."
   },
-  "theUnchainedMod:Welding": {
-    "NAME": "Welding",
-    "DESCRIPTION": "Ethereal. NL The first Chain you play each turn is finished instantly.",
-    "UPGRADE_DESCRIPTION": "The first Chain you play each turn is finished instantly."
+  "theUnchainedMod:GuardedPosture": {
+    "NAME": "Guarded Posture",
+    "DESCRIPTION": "Whenever you finish a Chain, gain !M! Block."
   },
   "theUnchainedMod:FractalShield": {
     "NAME": "Fractal Shield",
@@ -165,8 +164,8 @@
     "DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random common Attack to your hand. NL It exhausts. It costs zero this turn.",
     "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random upgraded common Attack to your hand. NL It exhausts. It costs zero this turn."
   },
-  "theUnchainedMod:Aplomb": {
-    "NAME": "Aplomb",
+  "theUnchainedMod:APlomb": {
+    "NAME": "À Plomb",
     "DESCRIPTION": "Gain !B! Block. Gain !M! theunchainedmod:Momentum. NL Next Turn, gain !M! theunchainedmod:Momentum."
   },
   "theUnchainedMod:Battement": {

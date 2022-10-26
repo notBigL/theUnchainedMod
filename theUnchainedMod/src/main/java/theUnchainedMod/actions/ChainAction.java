@@ -2,6 +2,7 @@ package theUnchainedMod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -85,6 +86,9 @@ public class ChainAction extends AbstractGameAction {
         }
         if (player.hasPower("theUnchainedMod:ChaseDestinyPower")) {
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+        }
+        if (player.hasPower("theUnchainedMod:GuardedPosturePower")) {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player.getPower("theUnchainedMod:GuardedPosturePower").amount));
         }
     }
 }

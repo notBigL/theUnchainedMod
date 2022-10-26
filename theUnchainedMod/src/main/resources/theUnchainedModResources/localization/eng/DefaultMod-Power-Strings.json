@@ -364,5 +364,12 @@
       " Strength.",
       "At the end of its next turn, gains #b"
     ]
+  },
+  "theUnchainedMod:GuardedPosturePower": {
+    "NAME": "Guarded Posture",
+    "DESCRIPTIONS": [
+      "Whenever a Chain is finished, gain #b",
+      " Block."
+    ]
   }
 }
