@@ -257,10 +257,9 @@
     "NAME": "Telekinetic Pulse",
     "DESCRIPTION": "ALL enemies gain !theUnchainedMod:SecondMagic! Block. 2 theunchainedmod:Chain: ALL enemies lose !M! HP."
   },
-  "theUnchainedMod:KineticCopy": {
-    "NAME": "Kinetic Copy",
-    "DESCRIPTION": "Gain Block equal to the amount of Block ALL enemies have.",
-    "UPGRADE_DESCRIPTION": "Gain Block equal to double the amount of Block ALL enemies have."
+  "theUnchainedMod:TieDown": {
+    "NAME": "Tie Down",
+    "DESCRIPTION": "Enemy loses !M! Strength this and next turn. Exhaust."
   },
   "theUnchainedMod:ThePrincesGrace": {
     "NAME": "The Prince's Grace",

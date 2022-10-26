@@ -356,5 +356,13 @@
       "The next #y",
       " Chains you start, are finished instantly."
     ]
+  },
+  "theUnchainedMod:TiedDownPower": {
+    "NAME": "Tied Down",
+    "DESCRIPTIONS": [
+      "At the end of its turn, gains #b",
+      " Strength.",
+      "At the end of its next turn, gains #b"
+    ]
   }
 }
