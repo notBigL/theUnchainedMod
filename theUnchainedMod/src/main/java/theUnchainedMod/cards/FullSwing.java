@@ -29,18 +29,15 @@ public class FullSwing extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 5;
+    private static final int UPGRADE_PLUS_DAMAGE = 1;
     private static final int MAGIC_NUMBER = 5;
-    private static final int SECOND_MAGIC_NUMBER = 1;
-    private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 1;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
     public FullSwing() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
-        tags.add(CustomTags.SWING);
         tags.add(CustomTags.MOMENTUM);
-        this.cardsToPreview = new Swirl();
         this.isMultiDamage = true;
     }
 
@@ -48,7 +45,8 @@ public class FullSwing extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
+            upgradeDamage(UPGRADE_PLUS_DAMAGE);
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
     }
 
@@ -149,6 +147,5 @@ public class FullSwing extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.magicNumber, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(defaultSecondMagicNumber));
     }
 }

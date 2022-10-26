@@ -81,7 +81,7 @@
   },
   "theUnchainedMod:FullSwing": {
     "NAME": "Full Swing",
-    "DESCRIPTION": "Deal !M! damage. Deal !D! damage to ALL enemies. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum."
+    "DESCRIPTION": "Deal !M! damage. Deal !D! damage to ALL enemies."
   },
   "theUnchainedMod:QuickSwing": {
     "NAME": "Quick Swing",

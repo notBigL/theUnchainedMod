@@ -29,7 +29,7 @@ public class Pirouette extends AbstractDynamicCard {
 
 
     private static final int COST = 0;
-    private static final int MAGIC_NUMBER = 4;
+    private static final int MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
 
     public Pirouette() {
