@@ -14,7 +14,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class FouettéEnTournant extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(FouettéEnTournant.class.getSimpleName());
-    public static final String IMG = makeCardPath("Spin.png");
+    public static final String IMG = makeCardPath("FouetteEnTournant.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;

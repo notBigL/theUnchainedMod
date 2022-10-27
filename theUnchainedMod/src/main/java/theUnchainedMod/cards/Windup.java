@@ -15,7 +15,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class Windup extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Windup.class.getSimpleName());
-    public static final String IMG = makeCardPath("RoutinePunch.png");
+    public static final String IMG = makeCardPath("Windup.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;

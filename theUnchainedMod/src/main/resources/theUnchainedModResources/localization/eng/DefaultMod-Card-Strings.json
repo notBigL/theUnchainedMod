@@ -166,7 +166,7 @@
   },
   "theUnchainedMod:APlomb": {
     "NAME": "À Plomb",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! theunchainedmod:Momentum. NL Next Turn, gain !M! theunchainedmod:Momentum."
+    "DESCRIPTION": "Gain !B! Block. Gain !M! theunchainedmod:Momentum. NL Next Turn, gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum."
   },
   "theUnchainedMod:Battement": {
     "NAME": "Battement",
