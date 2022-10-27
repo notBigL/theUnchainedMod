@@ -14,7 +14,7 @@ public class KeepDistance extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(KeepDistance.class.getSimpleName());
     public static final String IMG = makeCardPath("KeepDistance.png");
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
