@@ -15,7 +15,7 @@ public class KeepDistance extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID(KeepDistance.class.getSimpleName());
     public static final String IMG = makeCardPath("KeepDistance.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ALL;
+    private static final CardTarget TARGET = CardTarget.SELF_AND_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
@@ -41,6 +41,6 @@ public class KeepDistance extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new AllEnemiesGainBlockAction(this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(m, magicNumber));
     }
 }

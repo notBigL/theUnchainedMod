@@ -139,7 +139,7 @@
   },
   "theUnchainedMod:KeepDistance": {
     "NAME": "Keep Distance",
-    "DESCRIPTION": "Gain !B! Block. ALL enemies gain !M! Block."
+    "DESCRIPTION": "Gain !B! Block. Enemy gains !M! Block."
   },
   "theUnchainedMod:MuscleMemory": {
     "NAME": "Muscle Memory",
