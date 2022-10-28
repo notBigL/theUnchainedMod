@@ -229,7 +229,7 @@
   },
   "theUnchainedMod:Refresh": {
     "NAME": "Refresh",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Lose !M! theunchainedmod:Relayed_Damage."
+    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Lose up to !M! theunchainedmod:Relayed_Damage and gain Block equal to the amount you removed."
   },
   "theUnchainedMod:RoyalAssessment": {
     "NAME": "Royal Assessment",
