@@ -24,7 +24,6 @@ public class MagusForm extends AbstractDynamicCard {
 
     private static final int COST = 3;
     private static final int MAGIC_NUMBER = 1;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
     public MagusForm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -35,7 +34,7 @@ public class MagusForm extends AbstractDynamicCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
+            updateCost(2);
         }
 
     }
