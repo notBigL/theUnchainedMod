@@ -250,7 +250,7 @@
   },
   "theUnchainedMod:MagusForm": {
     "NAME": "Magus Form",
-    "DESCRIPTION": "Gain !M! Energy whenever you play a 2-cost card."
+    "DESCRIPTION": "Gain [E] whenever you play a 2-cost card."
   },
   "theUnchainedMod:TelekineticPulse": {
     "NAME": "Telekinetic Pulse",
