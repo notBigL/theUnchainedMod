@@ -37,6 +37,14 @@ public class CrushingElixir extends CustomPotion {
     }
 
     @Override
+    public void initializeData() {
+        potency = getPotency();
+        description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
+        tips.clear();
+        tips.add(new PowerTip(name, description));
+    }
+
+    @Override
     public AbstractPotion makeCopy() {
         return new CrushingElixir();
     }
@@ -44,11 +52,5 @@ public class CrushingElixir extends CustomPotion {
     @Override
     public int getPotency(final int potency) {
         return 10;
-    }
-
-    public void upgradePotion() {
-        potency += 10;
-        tips.clear();
-        tips.add(new PowerTip(name, description));
     }
 }

@@ -24,10 +24,7 @@ public class ChainGrease extends CustomPotion {
     public ChainGrease() {
         // The bottle shape and inside is determined by potion size and color. The actual colors are the main DefaultMod.java
         super(NAME, POTION_ID, PotionRarity.COMMON, CustomPotionEnums.LINK, PotionColor.SMOKE);
-        potency = getPotency();
-        description = DESCRIPTIONS[0];
         isThrown = false;
-        tips.add(new PowerTip(name, description));
     }
 
     @Override
@@ -41,6 +38,18 @@ public class ChainGrease extends CustomPotion {
     }
 
     @Override
+    public void initializeData() {
+        potency = getPotency();
+        if (potency == 1) {
+            description = DESCRIPTIONS[0];
+        } else {
+            description = DESCRIPTIONS[1] + potency + DESCRIPTIONS[2];
+        }
+        tips.clear();
+        tips.add(new PowerTip(name, description));
+    }
+
+    @Override
     public AbstractPotion makeCopy() {
         return new ChainGrease();
     }
@@ -50,9 +59,4 @@ public class ChainGrease extends CustomPotion {
         return 1;
     }
 
-    public void upgradePotion() {
-        potency += 1;
-        tips.clear();
-        tips.add(new PowerTip(name, description));
-    }
 }

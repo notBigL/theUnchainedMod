@@ -42,6 +42,14 @@ public class DancePotion extends CustomPotion {
     }
 
     @Override
+    public void initializeData() {
+        potency = getPotency();
+        description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
+        tips.clear();
+        tips.add(new PowerTip(name, description));
+    }
+
+    @Override
     public AbstractPotion makeCopy() {
         return new DancePotion();
     }
@@ -51,9 +59,4 @@ public class DancePotion extends CustomPotion {
         return 2;
     }
 
-    public void upgradePotion() {
-        potency += 2;
-        tips.clear();
-        tips.add(new PowerTip(name, description));
-    }
 }
