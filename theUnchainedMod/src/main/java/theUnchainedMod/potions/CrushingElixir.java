@@ -38,7 +38,7 @@ public class CrushingElixir extends CustomPotion {
 
     @Override
     public AbstractPotion makeCopy() {
-        return new ChainGrease();
+        return new CrushingElixir();
     }
 
     @Override
