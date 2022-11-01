@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theUnchainedMod.powers.MomentumPower;
 
 import java.util.Iterator;
@@ -31,6 +32,9 @@ public class BurnishAction extends AbstractGameAction {
             } else if (this.player.hand.size() == 1) {
                 if (this.player.hand.getBottomCard().costForTurn > 0) {
                     AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(this.player.hand.getBottomCard().costForTurn * 2));
+                } else if(this.player.hand.getBottomCard().costForTurn == -1) {
+                    AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(EnergyPanel.totalCount * 2));
+
                 }
                 this.player.hand.moveToExhaustPile(this.player.hand.getBottomCard());
                 this.tickDuration();
@@ -45,6 +49,8 @@ public class BurnishAction extends AbstractGameAction {
                     c = (AbstractCard) var1.next();
                     if (c.costForTurn > 0) {
                         AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(c.costForTurn * 2));
+                    } else if(c.costForTurn == -1) {
+                        AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(EnergyPanel.totalCount * 2));
                     }
                 }
                 AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
