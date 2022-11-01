@@ -102,8 +102,8 @@
     "NAME": "Prophetic Swing",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Scry !M!."
   },
-  "theUnchainedMod:SoulConjunction": {
-    "NAME": "Soul Conjunction",
+  "theUnchainedMod:TetheredMind": {
+    "NAME": "Tethered Mind",
     "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Enemy loses HP equal to ALL damage done to HP and theunchainedmod:Relay. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I am already tied to this enemy."
