@@ -6,6 +6,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -64,6 +65,7 @@ public class DefaultMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
+        AddAudioSubscriber,
         PostInitializeSubscriber {
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
     private static String modID;
@@ -165,6 +167,10 @@ public class DefaultMod implements
 
     public static String makeEnergyOrbLayerPath(String resourcePath) {
         return getModID() + "Resources/char/defaultCharacter/orb/" + resourcePath;
+    }
+
+    public static String makeAudioPath(String resourcePath) {
+        return getModID() + "Resources/audio/" + resourcePath;
     }
 
     // =============== /MAKE IMAGE PATHS/ =================
@@ -517,6 +523,14 @@ public class DefaultMod implements
             }
         }
     }
+
+    @Override
+    public void receiveAddAudio() {
+        logger.info("Adding audios");
+        BaseMod.addAudio("tryMe",makeAudioPath("hallö.ogg"));
+        logger.info("Done adding audios");
+    }
+
 
     // ================ /LOAD THE KEYWORDS/ ===================    
 
