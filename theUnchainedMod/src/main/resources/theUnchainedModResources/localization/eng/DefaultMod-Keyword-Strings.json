@@ -8,7 +8,7 @@
       "chain:",
       "chain."
     ],
-    "DESCRIPTION": "Playing enough Cards with the same Type will finish the Chain and unlock the specified Effect. Chains wear off at the end of turn."
+    "DESCRIPTION": "Playing enough Cards with the same Type as this card will finish the Chain and unlock the specified Effect. Chains wear off at the end of turn."
   },
   {
     "PROPER_NAME": "Relay",
@@ -18,16 +18,7 @@
       "relayed",
       "relaying"
     ],
-    "DESCRIPTION": "Damage taken after Block is reduced. NL Half of the Reduced damage is dealt at the end of the turn after next turn."
-  },
-  {
-    "PROPER_NAME": "Link",
-    "NAMES": [
-      "Link",
-      "link",
-      "link."
-    ],
-    "DESCRIPTION": "Cards that count as any card type for finishing a Chain."
+    "DESCRIPTION": "Prevents damage taken after Block. NL Half of the prevented damage is dealt at the end of the turn after next turn."
   },
   {
     "PROPER_NAME": "Relayed Damage",
