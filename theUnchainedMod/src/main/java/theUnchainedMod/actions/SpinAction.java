@@ -36,7 +36,7 @@ public class SpinAction extends AbstractGameAction {
         }
         effect *= 2;
         if (effect > 0) {
-            AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(effect));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, effect)));
         }
 
         if (!this.freeToPlayOnce) {

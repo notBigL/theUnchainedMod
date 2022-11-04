@@ -77,7 +77,7 @@ public class Swirl extends AbstractDynamicCard {
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FullSpinPower(p)));
         if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new GainMomentumAction());
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p)));
         }
     }
 }

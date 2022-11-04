@@ -2,6 +2,7 @@ package theUnchainedMod.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -40,7 +41,7 @@ public class GainMomentumNextTurnPower extends AbstractPower {
 
     public void atStartOfTurn() {
         this.flash();
-        AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(this.amount));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new MomentumPower(owner, amount)));
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 

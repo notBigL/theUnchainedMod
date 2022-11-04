@@ -39,7 +39,7 @@ public class AbstractChainPower extends AbstractPower {
         this.cardType = cardType;
         loadTextures(this.cardType);
         this.powerIdWithoutOffset = powerID;
-        instantFinishCheck();
+        //instantFinishCheck();
 
     }
 
@@ -81,7 +81,7 @@ public class AbstractChainPower extends AbstractPower {
         }
     }
 
-    private void instantFinishCheck() {
+/*    private void instantFinishCheck() {
         AbstractPlayer player = (AbstractPlayer) owner;
         String fuseChainID = "theUnchainedMod:FuseChainPower";
         if (player.hasPower(fuseChainID)) {
@@ -102,4 +102,6 @@ public class AbstractChainPower extends AbstractPower {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, this));
         }
     }
+
+ */
 }

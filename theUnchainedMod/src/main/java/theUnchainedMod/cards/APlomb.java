@@ -9,6 +9,7 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.powers.GainMomentumNextTurnPower;
+import theUnchainedMod.powers.MomentumPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -45,7 +46,7 @@ public class APlomb extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p, magicNumber)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new GainMomentumNextTurnPower(p, defaultSecondMagicNumber, p)));
     }
 }

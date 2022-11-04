@@ -31,9 +31,9 @@ public class BurnishAction extends AbstractGameAction {
                 this.isDone = true;
             } else if (this.player.hand.size() == 1) {
                 if (this.player.hand.getBottomCard().costForTurn > 0) {
-                    AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(this.player.hand.getBottomCard().costForTurn * 2));
-                } else if(this.player.hand.getBottomCard().costForTurn == -1) {
-                    AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(EnergyPanel.totalCount * 2));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, this.player.hand.getBottomCard().costForTurn * 2)));
+                } else if (this.player.hand.getBottomCard().costForTurn == -1) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, EnergyPanel.totalCount * 2)));
 
                 }
                 this.player.hand.moveToExhaustPile(this.player.hand.getBottomCard());
@@ -48,9 +48,9 @@ public class BurnishAction extends AbstractGameAction {
                 for (Iterator var1 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator(); var1.hasNext(); this.player.hand.moveToExhaustPile(c)) {
                     c = (AbstractCard) var1.next();
                     if (c.costForTurn > 0) {
-                        AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(c.costForTurn * 2));
-                    } else if(c.costForTurn == -1) {
-                        AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(EnergyPanel.totalCount * 2));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, c.costForTurn * 2)));
+                    } else if (c.costForTurn == -1) {
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, EnergyPanel.totalCount * 2)));
                     }
                 }
                 AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;

@@ -43,6 +43,6 @@ public class GainMomentumEveryTurnPower extends AbstractPower {
     }
 
     public void atStartOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(this.amount));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new MomentumPower(owner, amount)));
     }
 }

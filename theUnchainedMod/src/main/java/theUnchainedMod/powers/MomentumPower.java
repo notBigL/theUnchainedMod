@@ -50,7 +50,32 @@ public class MomentumPower extends AbstractPower {
     }
 
     public void stackPower(int stackAmount) {
-        this.amount = stackAmount;
+        this.fontScale = 8.0F;
+        this.amount = checkForMomentumRequired(this.amount + stackAmount);
+    }
+
+    @Override
+    public void onInitialApplication() {
+        this.amount = checkForMomentumRequired(this.amount);
+    }
+
+    private int checkForMomentumRequired(int amount) {
+        Swirl card = new Swirl();
+        int amountOfSwirls = 0;
+        if (this.owner.hasPower("theUnchainedMod:FullSpinPower")) {
+            card.fullSpinApply(this.owner.getPower("theUnchainedMod:FullSpinPower").amount);
+        }
+        while (amount >= momentumRequired) {
+            amountOfSwirls++;
+            amount -= momentumRequired;
+        }
+        for (int i = amountOfSwirls; i > 0; i--) {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1, false));
+        }
+        if (amount <= 0) {
+            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+        }
+        return amount;
     }
 
 

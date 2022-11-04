@@ -52,7 +52,7 @@ public class Pirouette extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(magicNumber, true));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p, magicNumber)));
         AbstractDungeon.actionManager.addToBottom(new PirouetteAction());
     }
 }
