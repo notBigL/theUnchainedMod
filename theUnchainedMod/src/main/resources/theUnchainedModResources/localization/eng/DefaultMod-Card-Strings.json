@@ -276,7 +276,8 @@
   },
   "theUnchainedMod:Pirouette": {
     "NAME": "Pirouette",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Momentum. NL Upgrade ALL Swirls in your hand. Exhaust."
+    "DESCRIPTION": "Add a Swirl+ into your hand. NL Upgrade ALL Swirls in your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a Swirl+ into your hand. NL Upgrade ALL Swirls in your hand."
   },
   "theUnchainedMod:InfiniteChain": {
     "NAME": "Infinite Chain",

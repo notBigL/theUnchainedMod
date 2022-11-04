@@ -29,12 +29,9 @@ public class Pirouette extends AbstractDynamicCard {
 
 
     private static final int COST = 0;
-    private static final int MAGIC_NUMBER = 2;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
 
     public Pirouette() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = MAGIC_NUMBER;
         tags.add(CustomTags.MOMENTUM);
         AbstractCard previewCard = new Swirl();
         previewCard.upgrade();
@@ -46,13 +43,20 @@ public class Pirouette extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
+            this.exhaust = false;
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p, magicNumber)));
+        Swirl card = new Swirl();
+        card.upgrade();
+        if (p.hasPower("theUnchainedMod:FullSpinPower")) {
+            card.fullSpinApply(p.getPower("theUnchainedMod:FullSpinPower").amount);
+        }
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1, false));
         AbstractDungeon.actionManager.addToBottom(new PirouetteAction());
     }
 }
