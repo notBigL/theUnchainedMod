@@ -34,7 +34,7 @@ public class MagusForm extends AbstractDynamicCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            updateCost(2);
+            upgradeBaseCost(2);
         }
 
     }
