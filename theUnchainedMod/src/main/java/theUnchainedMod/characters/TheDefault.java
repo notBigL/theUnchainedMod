@@ -3,6 +3,7 @@ package theUnchainedMod.characters;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -28,6 +30,7 @@ import theUnchainedMod.relics.RustedChains;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
 import static theUnchainedMod.DefaultMod.*;
 import static theUnchainedMod.characters.TheDefault.Enums.COLOR_GRAY;
 
@@ -183,6 +186,12 @@ public class TheDefault extends CustomPlayer {
         panels.add(new CutscenePanel(makeComicPath("Unchained_comic_3.png")));
         return panels;
     }
+
+    @Override
+    public Texture getCutsceneBg() {
+        return loadImage(makeComicPath("Unchained_comic_bg.png"));
+    }
+
 
     // character Select screen effect
     @Override
