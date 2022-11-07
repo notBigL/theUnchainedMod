@@ -51,7 +51,7 @@ public class RelayPower extends AbstractPower {
     }
 
     public int relayDamageWhenAttacked(DamageInfo info, int damageAmount) {
-        if (damageAmount > 0 && (!RelayedDamageField.relayed.get(info) || this.owner.hasPower("theUnchainedMod:EndlessPatiencePower"))) {
+        if (damageAmount > 0 && (!RelayedDamageField.relayed.get(info) || this.owner.hasPower("theUnchainedMod:FractalShieldPower"))) {
             int relayedDamage;
             if (this.amount >= damageAmount) {
                 this.amount -= damageAmount;
