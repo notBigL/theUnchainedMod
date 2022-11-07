@@ -38,6 +38,7 @@ public class FullSwing extends AbstractDynamicCard {
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         tags.add(CustomTags.MOMENTUM);
+        tags.add(CustomTags.SWING);
         this.isMultiDamage = true;
     }
 

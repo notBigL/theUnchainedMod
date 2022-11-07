@@ -62,10 +62,13 @@ public class SwingingPower extends AbstractPower {
 
     private void iterateThroughCardGroup(Iterator cardGroup, int additionalDamage) {
         AbstractCard c;
-        while(cardGroup.hasNext()) {
-            c = (AbstractCard)cardGroup.next();
+        while (cardGroup.hasNext()) {
+            c = (AbstractCard) cardGroup.next();
             if (c.tags.contains(CustomTags.SWING)) {
-                    c.baseDamage += additionalDamage;
+                c.baseDamage += additionalDamage;
+                if (c.cardID.equals("theUnchainedMod:FullSwing")) {
+                    c.baseMagicNumber += additionalDamage;
+                }
             }
         }
     }
