@@ -216,8 +216,8 @@
     "NAME": "Ballet",
     "DESCRIPTION": "At the start of your turn, gain !M! theunchainedmod:Momentum. NL Swirls now hit ALL enemies."
   },
-  "theUnchainedMod:OverHeadSwing": {
-    "NAME": "Over Head Swing",
+  "theUnchainedMod:WideSwing": {
+    "NAME": "Wide Swing",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you have an active theunchainedmod:Chain end your turn."
   },
   "theUnchainedMod:SingleOut": {

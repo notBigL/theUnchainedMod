@@ -12,8 +12,8 @@ import theUnchainedMod.patches.CustomTags;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class OverHeadSwing extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(OverHeadSwing.class.getSimpleName());
+public class WideSwing extends AbstractDynamicCard {
+    public static final String ID = DefaultMod.makeID(WideSwing.class.getSimpleName());
     public static final String IMG = makeCardPath("OverHeadSwing.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
@@ -24,7 +24,7 @@ public class OverHeadSwing extends AbstractDynamicCard {
     private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 3;
 
-    public OverHeadSwing() {
+    public WideSwing() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         this.isMultiDamage = true;
