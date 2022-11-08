@@ -14,6 +14,7 @@ import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.FullSpinPower;
 import theUnchainedMod.powers.MomentumPower;
+import theUnchainedMod.powers.SwirlsHitAllEnemiesPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -70,7 +71,7 @@ public class Swirl extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, block));
-        if (p.hasPower("theUnchainedMod:SwirlsHitAllEnemiesPower")) {
+        if (p.hasPower(SwirlsHitAllEnemiesPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         } else {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));

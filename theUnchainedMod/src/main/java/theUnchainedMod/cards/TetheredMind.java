@@ -45,9 +45,9 @@ public class TetheredMind extends AbstractDynamicCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainRelayAction(p, magicNumber));
-        if (m.hasPower("Artifact") && !m.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
+        if (m.hasPower("Artifact") && !m.hasPower(TiedToThePlayerPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, 1, false)));
-        } else if (!m.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
+        } else if (!m.hasPower(TiedToThePlayerPower.POWER_ID)) {
             TiedToThePlayerPower tiedToThePlayerPower = new TiedToThePlayerPower(m, p, p);
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, tiedToThePlayerPower));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TiedToAnEnemyPower(p, p, tiedToThePlayerPower, m)));

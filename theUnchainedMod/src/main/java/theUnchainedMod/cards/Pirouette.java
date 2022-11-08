@@ -12,6 +12,7 @@ import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.actions.PirouetteAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.patches.CustomTags;
+import theUnchainedMod.powers.FullSpinPower;
 import theUnchainedMod.powers.MomentumPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
@@ -53,8 +54,8 @@ public class Pirouette extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         Swirl card = new Swirl();
         card.upgrade();
-        if (p.hasPower("theUnchainedMod:FullSpinPower")) {
-            card.fullSpinApply(p.getPower("theUnchainedMod:FullSpinPower").amount);
+        if (p.hasPower(FullSpinPower.POWER_ID)) {
+            card.fullSpinApply(p.getPower(FullSpinPower.POWER_ID).amount);
         }
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1, false));
         AbstractDungeon.actionManager.addToBottom(new PirouetteAction());
