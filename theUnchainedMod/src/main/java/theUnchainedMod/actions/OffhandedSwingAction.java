@@ -10,9 +10,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.Iterator;
 
-public class WitAction extends AbstractGameAction {
+public class OffhandedSwingAction extends AbstractGameAction {
 
-    public WitAction(AbstractCreature monster) {
+    public OffhandedSwingAction(AbstractCreature monster) {
         this.target = monster;
     }
 
@@ -25,7 +25,11 @@ public class WitAction extends AbstractGameAction {
             while (var1.hasNext()) {
                 AbstractCard c = (AbstractCard) var1.next();
                 if (c.cost == 2 || c.costForTurn == 2) {
-                    AbstractDungeon.actionManager.addToTop(new NewQueueCardAction(c, target, false, true));
+                    if (!target.isDeadOrEscaped()) {
+                        AbstractDungeon.actionManager.addToTop(new NewQueueCardAction(c, target, false, true));
+                    } else {
+                        AbstractDungeon.actionManager.addToTop(new NewQueueCardAction(c, true, false, true));
+                    }
                     break;
                 }
             }
