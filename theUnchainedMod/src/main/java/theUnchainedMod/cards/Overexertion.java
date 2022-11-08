@@ -1,6 +1,5 @@
 package theUnchainedMod.cards;
 
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,8 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.patches.RelayedDmgSum;
-import theUnchainedMod.powers.RelayedDamagePower;
+import theUnchainedMod.powers.NextTurnRelayedDamagePower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -25,8 +23,8 @@ public class Overexertion extends AbstractDynamicCard {
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 0;
-    private static final int MAGIC_NUMBER = 6;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = -1;
+    private static final int MAGIC_NUMBER = 14;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = -3;
     private static final int SECOND_MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 1;
 
@@ -52,8 +50,6 @@ public class Overexertion extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(defaultSecondMagicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RelayedDamagePower(p, p, magicNumber)));
-        GameActionManager actionManager = AbstractDungeon.actionManager;
-        RelayedDmgSum.relayedDamageSum.set(actionManager, RelayedDmgSum.relayedDamageSum.get(actionManager) + magicNumber);
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnRelayedDamagePower(p, p, magicNumber)));
     }
 }
