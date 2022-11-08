@@ -156,8 +156,8 @@
   },
   "theUnchainedMod:FractalShield": {
     "NAME": "Fractal Shield",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relayed_Damage hits theunchainedmod:Relay before HP.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! theunchainedmod:Relay. theunchainedmod:Relayed_Damage hits theunchainedmod:Relay before HP."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relayed_Damage can be theunchainedmod:Relayed again.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! theunchainedmod:Relay. theunchainedmod:Relayed_Damage can be theunchainedmod:Relayed again."
   },
   "theUnchainedMod:Windup": {
     "NAME": "Windup",
@@ -341,8 +341,8 @@
     "NAME": "Glare",
     "DESCRIPTION": "Gain !B! Block. ALL enemies lose !M! Strength. Exhaust."
   },
-  "theUnchainedMod:GraspIntoFuture": {
-    "NAME": "Grasp Into Future",
+  "theUnchainedMod:GraspFuture": {
+    "NAME": "Grasp Future",
     "DESCRIPTION": "Deal !D! damage. Put !M! card from your draw pile on top of your draw pile."
   },
   "theUnchainedMod:DoubleDown": {

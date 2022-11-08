@@ -9,13 +9,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.ShatteringSwingAction;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.patches.CustomTags;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class GraspIntoFuture extends AbstractDynamicCard {
+public class GraspFuture extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(GraspIntoFuture.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(GraspFuture.class.getSimpleName());
     public static final String IMG = makeCardPath("ShatteringSwing.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -27,7 +26,7 @@ public class GraspIntoFuture extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_DMG = 3;
     private static final int MAGIC_NUMBER = 1;
 
-    public GraspIntoFuture() {
+    public GraspFuture() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;

@@ -43,7 +43,7 @@ public class FractalShield extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainRelayAction(p, magicNumber));
-        if (!p.hasPower("theUnchainedMod:EndlessPatiencePower")) {
+        if (!p.hasPower(FractalShieldPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FractalShieldPower(p, p)));
         }
     }
