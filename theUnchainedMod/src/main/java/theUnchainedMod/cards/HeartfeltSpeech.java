@@ -22,7 +22,7 @@ public class HeartfeltSpeech extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int MAGIC_NUMBER = 2;
-    private static final int SECOND_MAGIC_NUMBER = 3;
+    private static final int SECOND_MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = -1;
 
 
@@ -30,6 +30,7 @@ public class HeartfeltSpeech extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
+        this.exhaust = true;
     }
 
     @Override

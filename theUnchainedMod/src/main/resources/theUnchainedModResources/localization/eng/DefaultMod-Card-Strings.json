@@ -65,7 +65,7 @@
   },
   "theUnchainedMod:HeartfeltSpeech": {
     "NAME": "Heartfelt Speech",
-    "DESCRIPTION": "Gain !M! Vulnerable. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain 1 Intangible."
+    "DESCRIPTION": "Gain !M! Vulnerable. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Gain 1 Intangible. Exhaust."
   },
   "theUnchainedMod:ArcaneCharm": {
     "NAME": "Arcane Charm",
