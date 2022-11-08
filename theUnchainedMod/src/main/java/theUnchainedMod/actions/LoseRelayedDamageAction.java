@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
+import theUnchainedMod.powers.NextTurnRelayedDamagePower;
+import theUnchainedMod.powers.RelayedDamagePower;
 
 public class LoseRelayedDamageAction extends AbstractGameAction {
 
@@ -17,8 +19,8 @@ public class LoseRelayedDamageAction extends AbstractGameAction {
     public void update() {
         AbstractPlayer player = AbstractDungeon.player;
         int restAmount = this.amount;
-        if (player.hasPower("theUnchainedMod:RelayedDamagePower")) {
-            AbstractPower relayedDamagePower = player.getPower("theUnchainedMod:RelayedDamagePower");
+        if (player.hasPower(RelayedDamagePower.POWER_ID)) {
+            AbstractPower relayedDamagePower = player.getPower(RelayedDamagePower.POWER_ID);
             if (this.amount < relayedDamagePower.amount) {
                 relayedDamagePower.reducePower(this.amount);
                 restAmount = 0;
@@ -27,8 +29,8 @@ public class LoseRelayedDamageAction extends AbstractGameAction {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, relayedDamagePower));
             }
         }
-        if (restAmount > 0 && player.hasPower("theUnchainedMod:NextTurnRelayedDamagePower")) {
-            AbstractPower nextTurnRelayedDamagePower = player.getPower("theUnchainedMod:NextTurnRelayedDamagePower");
+        if (restAmount > 0 && player.hasPower(NextTurnRelayedDamagePower.POWER_ID)) {
+            AbstractPower nextTurnRelayedDamagePower = player.getPower(NextTurnRelayedDamagePower.POWER_ID);
             if (restAmount < nextTurnRelayedDamagePower.amount) {
                 nextTurnRelayedDamagePower.reducePower(restAmount);
             } else {

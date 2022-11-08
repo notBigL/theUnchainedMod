@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theUnchainedMod.powers.MomentumPower;
+import theUnchainedMod.powers.*;
 
 public class ChainAction extends AbstractGameAction {
     private final AbstractCreature player;
@@ -75,20 +75,20 @@ public class ChainAction extends AbstractGameAction {
 
 
     private void checkForFinishers() {
-        if (player.hasPower("theUnchainedMod:AccelerationPower")) {
-            player.getPower("theUnchainedMod:AccelerationPower").onSpecificTrigger();
+        if (player.hasPower(AccelerationPower.POWER_ID)) {
+            player.getPower(AccelerationPower.POWER_ID).onSpecificTrigger();
         }
-        if (player.hasPower("theUnchainedMod:FluidMovementPower")) {
-            int momentumAmount = player.getPower("theUnchainedMod:FluidMovementPower").amount;
+        if (player.hasPower(FluidMovementPower.POWER_ID)) {
+            int momentumAmount = player.getPower(FluidMovementPower.POWER_ID).amount;
             if (momentumAmount > 0) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, momentumAmount)));
             }
         }
-        if (player.hasPower("theUnchainedMod:ChaseDestinyPower")) {
+        if (player.hasPower(ChaseDestinyPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
         }
-        if (player.hasPower("theUnchainedMod:GuardedPosturePower")) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player.getPower("theUnchainedMod:GuardedPosturePower").amount));
+        if (player.hasPower(GuardedPosturePower.POWER_ID)) {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player.getPower(GuardedPosturePower.POWER_ID).amount));
         }
     }
 }

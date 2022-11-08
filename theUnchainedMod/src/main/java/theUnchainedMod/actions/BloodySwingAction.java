@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import theUnchainedMod.powers.NextTurnRelayedDamagePower;
+import theUnchainedMod.powers.RelayedDamagePower;
 
 public class BloodySwingAction extends AbstractGameAction {
 
@@ -24,8 +26,8 @@ public class BloodySwingAction extends AbstractGameAction {
     public void update() {
         int damage = 0;
         int restAmount = this.amount;
-        if (player.hasPower("theUnchainedMod:RelayedDamagePower")) {
-            AbstractPower relayedDamage = player.getPower("theUnchainedMod:RelayedDamagePower");
+        if (player.hasPower(RelayedDamagePower.POWER_ID)) {
+            AbstractPower relayedDamage = player.getPower(RelayedDamagePower.POWER_ID);
             if (this.amount < relayedDamage.amount) {
                 relayedDamage.reducePower(this.amount);
                 damage = this.amount;
@@ -36,8 +38,8 @@ public class BloodySwingAction extends AbstractGameAction {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, relayedDamage));
             }
         }
-        if (restAmount > 0 && player.hasPower("theUnchainedMod:NextTurnRelayedDamagePower")) {
-            AbstractPower nextTurnRelayedDamage = player.getPower("theUnchainedMod:NextTurnRelayedDamagePower");
+        if (restAmount > 0 && player.hasPower(NextTurnRelayedDamagePower.POWER_ID)) {
+            AbstractPower nextTurnRelayedDamage = player.getPower(NextTurnRelayedDamagePower.POWER_ID);
             if (restAmount < nextTurnRelayedDamage.amount) {
                 nextTurnRelayedDamage.reducePower(restAmount);
                 damage = this.amount;

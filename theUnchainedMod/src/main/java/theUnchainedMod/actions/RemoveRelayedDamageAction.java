@@ -4,10 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import theUnchainedMod.powers.NextTurnRelayedDamagePower;
+import theUnchainedMod.powers.RelayedDamagePower;
 
 public class RemoveRelayedDamageAction extends AbstractGameAction {
-    private static final String relayedDamage = "theUnchainedMod:RelayedDamagePower";
-    private static final String nextTurnRelayedDamage = "theUnchainedMod:NextTurnRelayedDamagePower";
     private final AbstractPlayer player;
 
     public RemoveRelayedDamageAction(AbstractPlayer p) {
@@ -16,11 +16,11 @@ public class RemoveRelayedDamageAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (player.hasPower(nextTurnRelayedDamage)) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, nextTurnRelayedDamage));
+        if (player.hasPower(NextTurnRelayedDamagePower.POWER_ID)) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, NextTurnRelayedDamagePower.POWER_ID));
         }
-        if (player.hasPower(relayedDamage)) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, relayedDamage));
+        if (player.hasPower(RelayedDamagePower.POWER_ID)) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, RelayedDamagePower.POWER_ID));
         }
         this.isDone = true;
     }

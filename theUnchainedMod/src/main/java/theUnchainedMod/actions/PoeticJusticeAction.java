@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import theUnchainedMod.powers.NextTurnRelayedDamagePower;
+import theUnchainedMod.powers.RelayedDamagePower;
 
 public class PoeticJusticeAction extends AbstractGameAction {
 
@@ -18,8 +20,8 @@ public class PoeticJusticeAction extends AbstractGameAction {
     public void update() {
         int vigor = 0;
         int restAmount = this.amount;
-        if (this.target.hasPower("theUnchainedMod:RelayedDamagePower")) {
-            AbstractPower relayedDamage = this.target.getPower("theUnchainedMod:RelayedDamagePower");
+        if (this.target.hasPower(RelayedDamagePower.POWER_ID)) {
+            AbstractPower relayedDamage = this.target.getPower(RelayedDamagePower.POWER_ID);
             if (this.amount < relayedDamage.amount) {
                 relayedDamage.reducePower(this.amount);
                 vigor = this.amount;
@@ -30,8 +32,8 @@ public class PoeticJusticeAction extends AbstractGameAction {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.target, this.target, relayedDamage));
             }
         }
-        if (restAmount > 0 && this.target.hasPower("theUnchainedMod:NextTurnRelayedDamagePower")) {
-            AbstractPower nextTurnRelayedDamage = this.target.getPower("theUnchainedMod:NextTurnRelayedDamagePower");
+        if (restAmount > 0 && this.target.hasPower(NextTurnRelayedDamagePower.POWER_ID)) {
+            AbstractPower nextTurnRelayedDamage = this.target.getPower(NextTurnRelayedDamagePower.POWER_ID);
             if (restAmount < nextTurnRelayedDamage.amount) {
                 nextTurnRelayedDamage.reducePower(restAmount);
                 vigor = this.amount;

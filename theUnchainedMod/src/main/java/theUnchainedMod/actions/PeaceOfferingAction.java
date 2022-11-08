@@ -7,13 +7,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.powers.RelayPower;
+import theUnchainedMod.powers.RelayedDamagePower;
 
 public class PeaceOfferingAction extends AbstractGameAction {
 
     public PeaceOfferingAction() {
         this.amount = 0;
-        if (AbstractDungeon.player.hasPower("theUnchainedMod:RelayPower")) {
-            this.amount = AbstractDungeon.player.getPower("theUnchainedMod:RelayPower").amount;
+        if (AbstractDungeon.player.hasPower(RelayedDamagePower.POWER_ID)) {
+            this.amount = AbstractDungeon.player.getPower(RelayedDamagePower.POWER_ID).amount;
         }
     }
 
