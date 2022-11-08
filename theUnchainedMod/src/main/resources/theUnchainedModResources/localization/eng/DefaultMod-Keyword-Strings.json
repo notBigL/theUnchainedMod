@@ -16,7 +16,8 @@
       "Relay",
       "relay",
       "relayed",
-      "relaying"
+      "relaying",
+      "relay."
     ],
     "DESCRIPTION": "Prevents damage taken after Block. NL Half of the prevented damage is dealt at the end of the turn after next turn."
   },

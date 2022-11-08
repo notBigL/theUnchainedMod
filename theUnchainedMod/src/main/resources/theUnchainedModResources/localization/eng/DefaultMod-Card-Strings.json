@@ -69,11 +69,11 @@
   },
   "theUnchainedMod:ArcaneCharm": {
     "NAME": "Arcane Charm",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage every turn."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay every turn."
   },
   "theUnchainedMod:DualBarrier": {
     "NAME": "Dual Barrier",
-    "DESCRIPTION": "Gain !B! Block. theunchainedmod:Relay !M! damage."
+    "DESCRIPTION": "Gain !B! Block. Gain !M! theunchainedmod:Relay."
   },
   "theUnchainedMod:RecklessSwing": {
     "NAME": "Reckless Swing",
@@ -95,8 +95,8 @@
   },
   "theUnchainedMod:MakeRoom": {
     "NAME": "Make Room",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you have no Block, gain [E].",
-    "UPGRADE_DESCRIPTION": "theunchainedmod:Relay !M! damage. NL If you have no Block, gain [E] [E]."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL If you have no Block, gain [E].",
+    "UPGRADE_DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL If you have no Block, gain [E] [E]."
   },
   "theUnchainedMod:PropheticSwing": {
     "NAME": "Prophetic Swing",
@@ -104,7 +104,7 @@
   },
   "theUnchainedMod:TetheredMind": {
     "NAME": "Tethered Mind",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Enemy loses HP equal to ALL damage done to HP and theunchainedmod:Relay. NL Exhaust.",
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL Enemy loses HP equal to ALL damage done to HP and theunchainedmod:Relay. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "I am already tied to this enemy."
     ]
@@ -156,8 +156,8 @@
   },
   "theUnchainedMod:FractalShield": {
     "NAME": "Fractal Shield",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. theunchainedmod:Relayed_Damage hits theunchainedmod:Relay before HP.",
-    "UPGRADE_DESCRIPTION": "Innate. NL theunchainedmod:Relay !M! damage. theunchainedmod:Relayed_Damage hits theunchainedmod:Relay before HP."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relayed_Damage hits theunchainedmod:Relay before HP.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! theunchainedmod:Relay. theunchainedmod:Relayed_Damage hits theunchainedmod:Relay before HP."
   },
   "theUnchainedMod:Windup": {
     "NAME": "Windup",
@@ -187,7 +187,7 @@
   },
   "theUnchainedMod:ArcaneStrike": {
     "NAME": "Arcane Strike",
-    "DESCRIPTION": "Deal !D! damage 2 times. theunchainedmod:Relay !M! damage."
+    "DESCRIPTION": "Deal !D! damage 2 times. Gain !M! theunchainedmod:Relay."
   },
   "theUnchainedMod:SolarPlexus": {
     "NAME": "Solar Plexus",
@@ -229,7 +229,7 @@
   },
   "theUnchainedMod:Refresh": {
     "NAME": "Refresh",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. NL Lose up to !M! theunchainedmod:Relayed_Damage and gain Block equal to the amount you removed."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL Lose up to !M! theunchainedmod:Relayed_Damage and gain Block equal to the amount you removed."
   },
   "theUnchainedMod:RoyalAssessment": {
     "NAME": "Royal Assessment",
@@ -238,7 +238,7 @@
   },
   "theUnchainedMod:Cocoon": {
     "NAME": "Cocoon",
-    "DESCRIPTION": "theunchainedmod:Relay !M! damage. Your theunchainedmod:Relay does not wear off at the start of next turn."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. Your theunchainedmod:Relay does not wear off at the start of next turn."
   },
   "theUnchainedMod:PsychicSwing": {
     "NAME": "Psychic Swing",
