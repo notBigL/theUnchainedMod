@@ -38,7 +38,6 @@ public class Cuff extends AbstractDynamicCard {
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
         this.isInnate = true;
         this.exhaust = true;
-        this.selfRetain = true;
     }
 
     @Override
