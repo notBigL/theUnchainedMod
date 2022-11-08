@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.cards.FullSwing;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.util.TextureLoader;
 
@@ -66,7 +67,7 @@ public class SwingingPower extends AbstractPower {
             c = (AbstractCard) cardGroup.next();
             if (c.tags.contains(CustomTags.SWING)) {
                 c.baseDamage += additionalDamage;
-                if (c.cardID.equals("theUnchainedMod:FullSwing")) {
+                if (c.cardID.equals(FullSwing.ID)) {
                     c.baseMagicNumber += additionalDamage;
                 }
             }
