@@ -183,7 +183,8 @@
   },
   "theUnchainedMod:Claustrophobia": {
     "NAME": "Claustrophobia",
-    "DESCRIPTION": "At the start of your turn, apply !M! theunchainedmod:Crushed_Armor to ALL enemies."
+    "DESCRIPTION": "At the start of your turn, apply !M! theunchainedmod:Crushed_Armor to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, apply !M! theunchainedmod:Crushed_Armor to ALL enemies."
   },
   "theUnchainedMod:ArcaneStrike": {
     "NAME": "Arcane Strike",
