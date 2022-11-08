@@ -143,7 +143,7 @@
       "Relayed damage can be relayed again."
     ]
   },
-  "theUnchainedMod:TunnelVisionPower": {
+  "theUnchainedMod:ClaustrophobiaPower": {
     "NAME": "Claustrophobia",
     "DESCRIPTIONS": [
       "At the start of your turn, apply #b",

@@ -62,8 +62,8 @@ public class MomentumPower extends AbstractPower {
     private int checkForMomentumRequired(int amount) {
         Swirl card = new Swirl();
         int amountOfSwirls = 0;
-        if (this.owner.hasPower("theUnchainedMod:FullSpinPower")) {
-            card.fullSpinApply(this.owner.getPower("theUnchainedMod:FullSpinPower").amount);
+        if (this.owner.hasPower(FullSpinPower.POWER_ID)) {
+            card.fullSpinApply(this.owner.getPower(FullSpinPower.POWER_ID).amount);
         }
         while (amount >= momentumRequired) {
             amountOfSwirls++;

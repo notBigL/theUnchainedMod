@@ -37,8 +37,8 @@ public class TiedToAnEnemyPower extends AbstractPower {
         this.source = source;
         type = PowerType.BUFF;
         isTurnBased = false;
-        if (owner.hasPower("theUnchainedMod:TiedToAnEnemyPower")) {
-            TiedToAnEnemyPower ttAEP = (TiedToAnEnemyPower) owner.getPower("theUnchainedMod:TiedToAnEnemyPower");
+        if (owner.hasPower(POWER_ID)) {
+            TiedToAnEnemyPower ttAEP = (TiedToAnEnemyPower) owner.getPower(POWER_ID);
             ttAEP.tiedToThePlayerPowerList.add(tiedToThePlayerPower);
         } else {
             tiedToThePlayerPowerList.add(tiedToThePlayerPower);
@@ -61,7 +61,7 @@ public class TiedToAnEnemyPower extends AbstractPower {
 
         ArrayList<TiedToThePlayerPower> removeList = new ArrayList<>();
         for (TiedToThePlayerPower tttPP : tiedToThePlayerPowerList) {
-            if (!tttPP.owner.isDeadOrEscaped() && tttPP.owner.hasPower("theUnchainedMod:TiedToThePlayerPower")) {
+            if (!tttPP.owner.isDeadOrEscaped() && tttPP.owner.hasPower(TiedToThePlayerPower.POWER_ID)) {
                 if (!RelayedDamageField.relayed.get(info)) {
                     tttPP.damageEnemyWhenPlayerIsHit(damageAmount, this.owner);
                 }

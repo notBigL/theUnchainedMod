@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import theUnchainedMod.DefaultMod;
 
 public class TunnelVisionChainPower extends AbstractChainPower {
@@ -21,7 +20,7 @@ public class TunnelVisionChainPower extends AbstractChainPower {
     private final int tunnelAmount;
 
     public TunnelVisionChainPower(AbstractCreature owner, int amount, int tunnelAmount, AbstractCard.CardType cardType) {
-        super(POWER_ID, owner, amount, new ApplyPowerAction(owner, owner, new TunnelVisionPower(owner, owner, tunnelAmount)), cardType);
+        super(POWER_ID, owner, amount, new ApplyPowerAction(owner, owner, new ClaustrophobiaPower(owner, owner, tunnelAmount)), cardType);
         this.name = NAME;
         this.type = POWER_TYPE;
         this.tunnelAmount = tunnelAmount;

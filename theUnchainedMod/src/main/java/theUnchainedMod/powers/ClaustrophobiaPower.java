@@ -14,7 +14,7 @@ import theUnchainedMod.util.TextureLoader;
 
 import java.util.Iterator;
 
-public class TunnelVisionPower extends AbstractPower {
+public class ClaustrophobiaPower extends AbstractPower {
     public AbstractCreature source;
 
     public static final String POWER_ID = DefaultMod.makeID("TunnelVisionPower");
@@ -25,7 +25,7 @@ public class TunnelVisionPower extends AbstractPower {
     private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ClaustrophobiaPower_power48.png");
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ClaustrophobiaPower_power128.png");
 
-    public TunnelVisionPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public ClaustrophobiaPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;

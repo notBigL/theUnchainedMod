@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.actions.ChainAction;
 import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.cards.Liberation;
+import theUnchainedMod.relics.Carabiner;
 import theUnchainedMod.util.TextureLoader;
 
 public class AbstractChainPower extends AbstractPower {
@@ -44,7 +45,7 @@ public class AbstractChainPower extends AbstractPower {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        if (!AbstractDungeon.player.hasRelic("theUnchainedMod:Carabiner")) {
+        if (!AbstractDungeon.player.hasRelic(Carabiner.ID)) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         }
     }

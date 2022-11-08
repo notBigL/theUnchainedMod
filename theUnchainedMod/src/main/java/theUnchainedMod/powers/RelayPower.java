@@ -45,13 +45,13 @@ public class RelayPower extends AbstractPower {
     }
 
     public void atStartOfTurn() {
-        if (!owner.hasPower("theUnchainedMod:EnclosingSteelPower")) {
+        if (!owner.hasPower(EnclosingSteelPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }
 
     public int relayDamageWhenAttacked(DamageInfo info, int damageAmount) {
-        if (damageAmount > 0 && (!RelayedDamageField.relayed.get(info) || this.owner.hasPower("theUnchainedMod:FractalShieldPower"))) {
+        if (damageAmount > 0 && (!RelayedDamageField.relayed.get(info) || this.owner.hasPower(FractalShieldPower.POWER_ID))) {
             int relayedDamage;
             if (this.amount >= damageAmount) {
                 this.amount -= damageAmount;
