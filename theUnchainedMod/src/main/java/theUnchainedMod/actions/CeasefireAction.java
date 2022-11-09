@@ -1,20 +1,18 @@
 package theUnchainedMod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.powers.RelayPower;
-import theUnchainedMod.powers.RelayedDamagePower;
 
-public class PeaceOfferingAction extends AbstractGameAction {
+public class CeasefireAction extends AbstractGameAction {
 
-    public PeaceOfferingAction() {
+    public CeasefireAction() {
         this.amount = 0;
-        if (AbstractDungeon.player.hasPower(RelayedDamagePower.POWER_ID)) {
-            this.amount = AbstractDungeon.player.getPower(RelayedDamagePower.POWER_ID).amount;
+        if (AbstractDungeon.player.hasPower(RelayPower.POWER_ID)) {
+            this.amount = AbstractDungeon.player.getPower(RelayPower.POWER_ID).amount;
         }
     }
 
@@ -24,7 +22,7 @@ public class PeaceOfferingAction extends AbstractGameAction {
         if (this.amount > 0) {
             AbstractDungeon.actionManager.addToBottom(new GainRelayAction(player, this.amount));        }
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (mo.currentBlock > 0 && !mo.isDead) {
+            if (mo.currentBlock > 0 && !mo.isDeadOrEscaped()) {
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(mo, mo.currentBlock));
             }
         }

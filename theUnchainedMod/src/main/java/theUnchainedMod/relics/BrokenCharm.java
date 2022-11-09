@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.powers.RelayPower;
 import theUnchainedMod.util.TextureLoader;
 
@@ -21,11 +22,9 @@ public class BrokenCharm extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BrokenCharm_relic.png"));
     private static final int RELAY = 5;
 
-    private final AbstractCreature player;
 
     public BrokenCharm() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.CLINK);
-        player = AbstractDungeon.player;
+        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.CLINK);
     }
 
     @Override
@@ -36,7 +35,7 @@ public class BrokenCharm extends CustomRelic {
         if (this.counter < 4) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new RelayPower(player, player, RELAY)));
+            AbstractDungeon.actionManager.addToBottom(new GainRelayAction(AbstractDungeon.player, RELAY));
         } else {
             this.counter = -1;
             this.grayscale = true;

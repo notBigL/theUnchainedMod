@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.PeaceOfferingAction;
+import theUnchainedMod.actions.CeasefireAction;
 import theUnchainedMod.characters.TheDefault;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
@@ -40,6 +40,6 @@ public class Ceasefire extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new PeaceOfferingAction());
+        AbstractDungeon.actionManager.addToBottom(new CeasefireAction());
     }
 }
