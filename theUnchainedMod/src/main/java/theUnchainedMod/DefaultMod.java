@@ -401,6 +401,9 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new BrokenCharm(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new Churros(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new Memento(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new TotemOfPain(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new DancingRibbons(), TheDefault.Enums.COLOR_GRAY);
+
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -416,6 +419,8 @@ public class DefaultMod implements
         UnlockTracker.markRelicAsSeen(BrokenCharm.ID);
         UnlockTracker.markRelicAsSeen(Churros.ID);
         UnlockTracker.markRelicAsSeen(Memento.ID);
+        UnlockTracker.markRelicAsSeen(TotemOfPain.ID);
+        UnlockTracker.markRelicAsSeen(DancingRibbons.ID);
         logger.info("Done adding relics!");
     }
 

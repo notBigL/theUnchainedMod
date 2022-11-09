@@ -87,5 +87,19 @@
     "DESCRIPTIONS": [
       "At the end of turn, gain 1 Strength if you do not have more block than ALL enemies."
     ]
+  },
+  "theUnchainedMod:TotemOfPain": {
+    "NAME": "Totem Of Pain",
+    "FLAVOR": "When you listen close, you can hear the demon whisper: 'Sharing is caring'.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, hit an enemy for ALL Relayed Damage that would hit you next turn."
+    ]
+  },
+  "theUnchainedMod:DancingRibbons": {
+    "NAME": "Dancing Ribbons",
+    "FLAVOR": "It reminds you of merry times spent dancing in the tavern hall",
+    "DESCRIPTIONS": [
+      "At the end of your turn add a Swirl into your hand, if you played more than one Swirl this turn."
+    ]
   }
 }
