@@ -393,15 +393,14 @@ public class DefaultMod implements
         // in order to automatically differentiate which pool to add the relic too.
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        //BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
-        //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new RustedChains(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new BalletShoes(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new Carabiner(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new PolishedChains(), TheDefault.Enums.COLOR_GRAY);
-
+        BaseMod.addRelicToCustomPool(new BrokenCharm(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new Churros(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new Memento(), TheDefault.Enums.COLOR_GRAY);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -414,6 +413,9 @@ public class DefaultMod implements
         UnlockTracker.markRelicAsSeen(HeartOfTheUnderdog.ID);
         UnlockTracker.markRelicAsSeen(Carabiner.ID);
         UnlockTracker.markRelicAsSeen(PolishedChains.ID);
+        UnlockTracker.markRelicAsSeen(BrokenCharm.ID);
+        UnlockTracker.markRelicAsSeen(Churros.ID);
+        UnlockTracker.markRelicAsSeen(Memento.ID);
         logger.info("Done adding relics!");
     }
 
@@ -527,7 +529,7 @@ public class DefaultMod implements
     @Override
     public void receiveAddAudio() {
         logger.info("Adding audios");
-        BaseMod.addAudio("tryMe",makeAudioPath("hallö.ogg"));
+        BaseMod.addAudio("tryMe", makeAudioPath("hallö.ogg"));
         logger.info("Done adding audios");
     }
 

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.HobblesPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
@@ -36,6 +37,7 @@ public class Cuff extends AbstractDynamicCard {
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
+        tags.add(CustomTags.CHAIN);
         this.isInnate = true;
         this.exhaust = true;
     }

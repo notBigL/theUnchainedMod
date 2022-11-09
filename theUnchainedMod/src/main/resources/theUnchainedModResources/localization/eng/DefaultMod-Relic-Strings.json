@@ -61,9 +61,31 @@
   },
   "theUnchainedMod:PolishedChains": {
     "NAME": "Polished Chains",
-    "FLAVOR": "They are unbelievably smooth.",
+    "FLAVOR": "You can see your own reflection in these.",
     "DESCRIPTIONS": [
       "Replaces #yRusted #yChains. Every seventh card you play each combat costs zero."
+    ]
+  },
+  "theUnchainedMod:BrokenCharm": {
+    "NAME": "Broken Charm",
+    "FLAVOR": "It does not make the most pleasant tones, but it holds emotional value.",
+    "DESCRIPTIONS": [
+      "At the start of your first 3 turns, gain #y",
+      " Relay."
+    ]
+  },
+  "theUnchainedMod:Churros": {
+    "NAME": "Churros",
+    "FLAVOR": "These tasty treats fill you with a burst of energy.",
+    "DESCRIPTIONS": [
+      "The first card that applies a Chain you play each combat, is played twice."
+    ]
+  },
+  "theUnchainedMod:Memento": {
+    "NAME": "Memento",
+    "FLAVOR": "A reminder so painful, ancient anger awakes in you.",
+    "DESCRIPTIONS": [
+      "At the end of turn, gain 1 Strength if you do not have more block than ALL enemies."
     ]
   }
 }

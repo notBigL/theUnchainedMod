@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.MultiAttackAction;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.SolarPlexusPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -33,6 +34,7 @@ public class SolarPlexus extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        tags.add(CustomTags.CHAIN);
         this.exhaust = true;
     }
 

@@ -8,6 +8,7 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.AllEnemiesGainBlockAction;
 import theUnchainedMod.actions.AllEnemiesLoseHPAction;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.WreckingBallPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -32,6 +33,7 @@ public class TelekineticPulse extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
+        tags.add(CustomTags.CHAIN);
         this.isMultiDamage = true;
     }
 
