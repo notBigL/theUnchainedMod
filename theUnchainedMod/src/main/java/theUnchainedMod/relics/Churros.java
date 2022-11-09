@@ -26,7 +26,7 @@ public class Churros extends CustomRelic {
     private boolean eaten = false;
 
     public Churros() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);
     }
 
 
@@ -34,6 +34,12 @@ public class Churros extends CustomRelic {
     public void atBattleStart() {
         eaten = false;
     }
+
+    @Override
+    public void atTurnStart() {
+        eaten = false;
+    }
+
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
