@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.ApplyCrushedArmorAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.powers.CrushedArmorPower;
 
@@ -47,7 +48,7 @@ public class Cripple extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new CrushedArmorPower(m, p, magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyCrushedArmorAction(m, magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, defaultSecondMagicNumber, false)));
     }
 }

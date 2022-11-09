@@ -28,7 +28,7 @@ public class CrushPlatesAction extends AbstractGameAction {
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, info, AttackEffect.BLUNT_HEAVY));
         if (dentArmorAmount > 0) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new CrushedArmorPower(target, AbstractDungeon.player, dentArmorAmount)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyCrushedArmorAction(target, dentArmorAmount));
         }
         this.isDone = true;
     }

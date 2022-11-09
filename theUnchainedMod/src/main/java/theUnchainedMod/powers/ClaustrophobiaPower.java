@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.ApplyCrushedArmorAction;
 import theUnchainedMod.util.TextureLoader;
 
 import java.util.Iterator;
@@ -52,7 +53,7 @@ public class ClaustrophobiaPower extends AbstractPower {
             while(var1.hasNext()) {
                 AbstractMonster m = (AbstractMonster)var1.next();
                 if (!m.isDead && !m.isDying) {
-                    this.addToBot(new ApplyPowerAction(m, this.owner, new CrushedArmorPower(m, this.owner, this.amount), this.amount));
+                    this.addToBot(new ApplyCrushedArmorAction(m, this.amount));
                 }
             }
         }

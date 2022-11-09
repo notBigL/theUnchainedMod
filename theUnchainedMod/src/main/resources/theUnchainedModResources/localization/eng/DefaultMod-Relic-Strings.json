@@ -101,5 +101,12 @@
     "DESCRIPTIONS": [
       "At the end of your turn add a Swirl into your hand, if you played more than one Swirl this turn."
     ]
+  },
+  "theUnchainedMod:Wrench": {
+    "NAME": "Wrench",
+    "FLAVOR": "You can never fasten your armor tight enough.",
+    "DESCRIPTIONS": [
+      "Whenever you apply Crushed Armor, the enemy loses HP equal to the amount applied."
+    ]
   }
 }
