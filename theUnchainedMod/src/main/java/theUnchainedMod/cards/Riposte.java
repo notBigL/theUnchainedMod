@@ -36,7 +36,6 @@ public class Riposte extends AbstractDynamicCard {
         baseDamage = damage = DAMAGE;
         baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        tags.add(CustomTags.MOMENTUM);
         this.cardsToPreview = new Swirl();
     }
 

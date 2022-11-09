@@ -30,7 +30,6 @@ public class Ballet extends AbstractDynamicCard {
     public Ballet() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        tags.add(CustomTags.MOMENTUM);
         this.cardsToPreview = new Swirl();
     }
 

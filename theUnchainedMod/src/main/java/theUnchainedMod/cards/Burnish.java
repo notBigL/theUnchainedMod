@@ -23,7 +23,6 @@ public class Burnish extends AbstractDynamicCard {
 
     public Burnish() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        tags.add(CustomTags.MOMENTUM);
         this.cardsToPreview = new Swirl();
     }
 

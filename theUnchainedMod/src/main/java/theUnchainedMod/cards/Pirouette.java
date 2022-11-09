@@ -33,7 +33,6 @@ public class Pirouette extends AbstractDynamicCard {
 
     public Pirouette() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        tags.add(CustomTags.MOMENTUM);
         AbstractCard previewCard = new Swirl();
         previewCard.upgrade();
         this.cardsToPreview = previewCard;

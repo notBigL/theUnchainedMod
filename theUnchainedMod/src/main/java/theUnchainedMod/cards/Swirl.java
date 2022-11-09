@@ -42,7 +42,6 @@ public class Swirl extends AbstractDynamicCard {
         realBaseBlock = BLOCK;
         baseDamage = damage = DAMAGE;
         baseBlock = block = BLOCK;
-        tags.add(CustomTags.MOMENTUM);
         this.isMultiDamage = true;
         this.exhaust = true;
         this.selfRetain = true;

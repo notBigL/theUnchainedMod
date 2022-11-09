@@ -26,7 +26,6 @@ public class FouettéEnTournant extends AbstractDynamicCard {
 
     public FouettéEnTournant() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        tags.add(CustomTags.MOMENTUM);
         this.exhaust = true;
     }
 
