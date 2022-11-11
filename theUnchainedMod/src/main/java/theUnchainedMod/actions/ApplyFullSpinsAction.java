@@ -48,6 +48,17 @@ public class ApplyFullSpinsAction extends AbstractGameAction {
             }
         }
 
+        var1 = AbstractDungeon.player.exhaustPile.group.iterator();
+
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
+            if (c instanceof Swirl) {
+                Swirl currentCard = (Swirl) c;
+                currentCard.fullSpinApply(this.amount);
+                currentCard.applyPowers();
+            }
+        }
+
         this.isDone = true;
     }
 }

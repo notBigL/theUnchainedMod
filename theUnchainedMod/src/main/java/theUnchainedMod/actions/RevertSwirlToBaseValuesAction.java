@@ -44,6 +44,17 @@ public class RevertSwirlToBaseValuesAction extends AbstractGameAction {
             }
         }
 
+        var1 = AbstractDungeon.player.exhaustPile.group.iterator();
+
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
+            if (c instanceof Swirl) {
+                Swirl currentCard = (Swirl) c;
+                currentCard.revertToBaseValues();
+                currentCard.applyPowers();
+            }
+        }
+
         this.isDone = true;
     }
 }
