@@ -83,7 +83,7 @@ public class DefaultMod implements
 
     // Colors (RGB)
     // Character Color
-    public static final Color UNCHAINED_YELLOW = CardHelper.getColor(255.0f, 170.0f, 17.0f);
+    public static final Color UNCHAINED_ORANGE = CardHelper.getColor(255.0f, 170.0f, 17.0f);
 
     // Potion Colors in RGB
     public static final Color LINK_POTION_LIQUID = CardHelper.getColor(142.0f, 95.0f, 0.0f);
@@ -200,8 +200,8 @@ public class DefaultMod implements
 
         logger.info("Creating the color " + TheDefault.Enums.COLOR_GRAY.toString());
 
-        BaseMod.addColor(TheDefault.Enums.COLOR_GRAY, UNCHAINED_YELLOW, UNCHAINED_YELLOW, UNCHAINED_YELLOW,
-                UNCHAINED_YELLOW, UNCHAINED_YELLOW, UNCHAINED_YELLOW, UNCHAINED_YELLOW,
+        BaseMod.addColor(TheDefault.Enums.COLOR_GRAY, UNCHAINED_ORANGE, UNCHAINED_ORANGE, UNCHAINED_ORANGE,
+                UNCHAINED_ORANGE, UNCHAINED_ORANGE, UNCHAINED_ORANGE, UNCHAINED_ORANGE,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
