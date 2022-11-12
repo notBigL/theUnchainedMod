@@ -21,7 +21,7 @@ public class ApplyCrushedArmorAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, source, new CrushedArmorPower(target, source, amount)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, source, new CrushedArmorPower(target, source, amount)));
         for (AbstractRelic r : AbstractDungeon.player.relics) {
             if (r instanceof Wrench) {
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(source, amount, DamageInfo.DamageType.HP_LOSS), AttackEffect.SLASH_HORIZONTAL));

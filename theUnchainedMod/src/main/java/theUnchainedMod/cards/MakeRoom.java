@@ -27,9 +27,8 @@ public class MakeRoom extends AbstractDynamicCard {
 
     private static final int COST = 2;
     private static final int MAGIC_NUMBER = 14;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
-    private static final int SECOND_MAGIC_NUMBER = 1;
-    private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 1;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 4;
+    private static final int SECOND_MAGIC_NUMBER = 2;
 
 
 
@@ -44,9 +43,6 @@ public class MakeRoom extends AbstractDynamicCard {
         if(!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
-            upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            this.initializeDescription();
         }
     }
 

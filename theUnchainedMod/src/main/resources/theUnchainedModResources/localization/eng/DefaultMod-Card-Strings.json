@@ -95,8 +95,7 @@
   },
   "theUnchainedMod:MakeRoom": {
     "NAME": "Make Room",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL If you have no Block, gain [E].",
-    "UPGRADE_DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL If you have no Block, gain [E] [E]."
+    "DESCRIPTION": "If you have theunchainedmod:Relay, draw !theUnchainedMod:SecondMagic! cards. NL Gain !M! theunchainedmod:Relay."
   },
   "theUnchainedMod:PropheticSwing": {
     "NAME": "Prophetic Swing",
@@ -387,10 +386,9 @@
     "DESCRIPTION": "Draw !M! card, if it gives you theunchainedmod:Momentum, draw another card. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum.",
     "UPGRADE_DESCRIPTION": "Draw !M! card, if it gives you theunchainedmod:Momentum, play it and draw another card. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum."
   },
-  "theUnchainedMod:RoyalGift": {
-    "NAME": "Royal Gift",
-    "DESCRIPTION": "Gain !B! Block X times. Enemy gains !B! Block X times.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block (X + 1) times. Enemy gains !B! Block (X + 1) times."
+  "theUnchainedMod:Implode": {
+    "NAME": "Implode",
+    "DESCRIPTION": "Apply !M! theunchainedmod:Crushed_Armor. ALL enemies lose HP equal to their theunchainedmod:Crushed_Armor."
   },
   "theUnchainedMod:Taxes": {
     "NAME": "Taxes",
