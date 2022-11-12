@@ -22,10 +22,9 @@ public class Baguazhang extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BLOCK = 14;
+    private static final int BLOCK = 15;
     private static final int UPGRADE_PLUS_BLOCK = 5;
-    private static final int MAGIC_NUMBER = 7;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
+    private static final int MAGIC_NUMBER = 10;
 
     public Baguazhang() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -38,7 +37,6 @@ public class Baguazhang extends AbstractDynamicCard {
         if(!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
     }
 
