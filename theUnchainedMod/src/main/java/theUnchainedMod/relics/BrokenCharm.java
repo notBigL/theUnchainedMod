@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.powers.RelayPower;
@@ -31,15 +32,21 @@ public class BrokenCharm extends CustomRelic {
     public void atTurnStart() {
         if (!this.grayscale) {
             ++this.counter;
+            if (this.counter < 4) {
+                this.flash();
+                AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                AbstractDungeon.actionManager.addToBottom(new GainRelayAction(AbstractDungeon.player, RELAY));
+            } else {
+                this.counter = -1;
+                this.grayscale = true;
+            }
         }
-        if (this.counter < 4) {
-            this.flash();
-            AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractDungeon.actionManager.addToBottom(new GainRelayAction(AbstractDungeon.player, RELAY));
-        } else {
-            this.counter = -1;
-            this.grayscale = true;
-        }
+
+    }
+
+    @Override
+    public void justEnteredRoom(AbstractRoom room) {
+        this.grayscale = false;
     }
 
     @Override
@@ -47,6 +54,11 @@ public class BrokenCharm extends CustomRelic {
         this.counter = 0;
     }
 
+    @Override
+    public void onVictory() {
+        this.counter = -1;
+        this.stopPulse();
+    }
 
     @Override
     public String getUpdatedDescription() {
