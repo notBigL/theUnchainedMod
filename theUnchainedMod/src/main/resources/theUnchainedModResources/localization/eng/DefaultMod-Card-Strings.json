@@ -91,11 +91,10 @@
     "NAME": "Step Back",
     "DESCRIPTION": "Draw !M! card. NL 1 theunchainedmod:Chain: Gain !B! Block.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL 1 theunchainedmod:Chain: Gain !B! Block."
-
   },
   "theUnchainedMod:MakeRoom": {
     "NAME": "Make Room",
-    "DESCRIPTION": "If you have theunchainedmod:Relay, draw !theUnchainedMod:SecondMagic! cards. NL Gain !M! theunchainedmod:Relay."
+    "DESCRIPTION": "If you have theunchainedmod:Relay, draw !theUnchainedMod:SecondMagic! cards. Gain !M! theunchainedmod:Relay."
   },
   "theUnchainedMod:PropheticSwing": {
     "NAME": "Prophetic Swing",
@@ -112,9 +111,9 @@
     "NAME": "Liberation",
     "DESCRIPTION": "Gain !B! Block. NL Finish ALL your active theunchainedmod:Chains. NL Remove ALL theunchainedmod:Relayed_Damage. Exhaust."
   },
-  "theUnchainedMod:ChainFlourish": {
-    "NAME": "Chain Flourish",
-    "DESCRIPTION": "Playing 2-cost cards reduce the cost of this card by [E]. Enemy loses !M! HP. NL Set Cost to 4 after playing."
+  "theUnchainedMod:GlyphBeam": {
+    "NAME": "Glyph Beam",
+    "DESCRIPTION": "Deal !D! damage. Whenever you gain theunchainedmod:Relay this turn, the enemy takes !D! damage."
   },
   "theUnchainedMod:Cruiserweight": {
     "NAME": "Cruiserweight",

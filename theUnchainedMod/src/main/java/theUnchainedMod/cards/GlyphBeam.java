@@ -1,6 +1,7 @@
 package theUnchainedMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -9,46 +10,39 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.powers.GlyphBrandPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class ChainFlourish extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(ChainFlourish.class.getSimpleName());
+public class GlyphBeam extends AbstractDynamicCard {
+    public static final String ID = DefaultMod.makeID(GlyphBeam.class.getSimpleName());
     public static final String IMG = makeCardPath("MorningStar.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 4;
-    private static final int MAGIC_NUMBER = 40;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 10;
+    private static final int COST = 1;
+    private static final int DAMAGE = 8;
+    private static final int UPGRADE_PLUS_DAMAGE = 2;
 
-    public ChainFlourish() {
+    public GlyphBeam() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        baseDamage = damage = DAMAGE;
     }
 
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
+            upgradeDamage(UPGRADE_PLUS_DAMAGE);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.magicNumber, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        this.cost = 4;
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new GlyphBrandPower(m, p, damage)));
     }
 
-    @Override
-    public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (c.cost == 2 && !c.uuid.equals(this.uuid)) {
-            this.updateCost(-1);
-        }
-    }
 }
-
-// Alter Text von MonringStar:     "DESCRIPTION": "Costs 1 less [E] for every 2-cost card played this combat. Enemy loses !M! HP. NL Set Cost to 4 after playing."
