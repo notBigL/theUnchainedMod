@@ -2,14 +2,11 @@ package theUnchainedMod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.GainRelayAction;
-import theUnchainedMod.powers.RelayPower;
 import theUnchainedMod.util.TextureLoader;
 
 import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;
@@ -57,7 +54,6 @@ public class BrokenCharm extends CustomRelic {
     @Override
     public void onVictory() {
         this.counter = -1;
-        this.stopPulse();
     }
 
     @Override
