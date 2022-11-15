@@ -23,10 +23,11 @@ public class RelayIconRenderPatch {
             int relayAmount = RelayHelpers.currentRelay.get(creature);
             float x = ___hb.cX - ___hb.width / 2.0F;
             float y = ___hb.cY - ___hb.height / 2.0F + ___hbYOffset;
-            sb.setColor(1F,1F,1F,1F);
-            sb.draw(relayIcon, x + ___BLOCK_ICON_X - 32.0F, y + ___BLOCK_ICON_Y + 15.0F + ___blockOffset,
-                    32.0F, 32.0F, 64.0F, 64.0F, Settings.scale, Settings.scale, 0.0F, 0, 0, 64, 64, false, false);
-            FontHelper.renderFontCentered(sb, FontHelper.blockInfoFont, Integer.toString(relayAmount), x + ___BLOCK_ICON_X, y + 30.0F * Settings.scale, ___blockTextColor, ___blockScale);
+            sb.setColor(RelayHelpers.relayColor.get(creature));
+            sb.draw(relayIcon, x + ___BLOCK_ICON_X - 32.0F, y + ___BLOCK_ICON_Y + 15.0F,
+                    32.0F, 32.0F, 64.0F, 64.0F, Settings.scale, Settings.scale,
+                    0.0F, 0, 0, 64, 64, false, false);
+            FontHelper.renderFontCentered(sb, FontHelper.blockInfoFont, Integer.toString(relayAmount), x + ___BLOCK_ICON_X, y + 30.0F * Settings.scale, RelayHelpers.relayTextColor.get(creature), RelayHelpers.relayScale.get(creature));
         }
     }
 }
