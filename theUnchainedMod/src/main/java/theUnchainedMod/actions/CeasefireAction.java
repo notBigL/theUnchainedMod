@@ -5,14 +5,15 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theUnchainedMod.patches.RelayHelpers;
 import theUnchainedMod.powers.RelayPower;
 
 public class CeasefireAction extends AbstractGameAction {
 
     public CeasefireAction() {
         this.amount = 0;
-        if (AbstractDungeon.player.hasPower(RelayPower.POWER_ID)) {
-            this.amount = AbstractDungeon.player.getPower(RelayPower.POWER_ID).amount;
+        if (RelayHelpers.currentRelay.get(AbstractDungeon.player) > 0) {
+            this.amount = RelayHelpers.currentRelay.get(AbstractDungeon.player);
         }
     }
 

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import theUnchainedMod.patches.RelayHelpers;
 import theUnchainedMod.powers.RelayPower;
 
 public class MakeRoomAction extends AbstractGameAction {
@@ -16,7 +17,7 @@ public class MakeRoomAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if(target.hasPower(RelayPower.POWER_ID)) {
+        if(RelayHelpers.currentRelay.get(target) > 0) {
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(amount));
         }
         this.isDone = true;

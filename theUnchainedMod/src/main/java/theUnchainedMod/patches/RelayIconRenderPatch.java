@@ -19,8 +19,8 @@ public class RelayIconRenderPatch {
 
     @SpirePostfixPatch
     public static void renderRelayIconAndValue(AbstractCreature creature, SpriteBatch sb, float ___BLOCK_ICON_X, float ___BLOCK_ICON_Y, float ___blockOffset, Hitbox ___hb, float ___hbYOffset, Color ___blockTextColor, float ___blockScale) {
-        if(!Settings.hideCombatElements && creature.hasPower("theUnchainedMod:RelayPower")) {
-            int relayAmount = creature.getPower("theUnchainedMod:RelayPower").amount;
+        if(!Settings.hideCombatElements && RelayHelpers.currentRelay.get(creature) > 0) {
+            int relayAmount = RelayHelpers.currentRelay.get(creature);
             float x = ___hb.cX - ___hb.width / 2.0F;
             float y = ___hb.cY - ___hb.height / 2.0F + ___hbYOffset;
             sb.setColor(1F,1F,1F,1F);

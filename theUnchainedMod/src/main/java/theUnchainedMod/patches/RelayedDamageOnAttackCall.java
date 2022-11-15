@@ -11,15 +11,14 @@ import theUnchainedMod.powers.TiedToAnEnemyPower;
 public class RelayedDamageOnAttackCall {
 
     @SpirePostfixPatch()
-    public static int relayedDmgOnAttCall(int damage, AbstractCreature player, DamageInfo info, int damageAmount) {
-        if (player.hasPower("theUnchainedMod:TiedToAnEnemyPower") && damageAmount > 0) {
-            TiedToAnEnemyPower tTAEP = (TiedToAnEnemyPower) player.getPower("theUnchainedMod:TiedToAnEnemyPower");
+    public static int relayedDmgOnAttCall(int damage, AbstractCreature creature, DamageInfo info, int damageAmount) {
+        if (creature.hasPower("theUnchainedMod:TiedToAnEnemyPower") && damageAmount > 0) {
+            TiedToAnEnemyPower tTAEP = (TiedToAnEnemyPower) creature.getPower("theUnchainedMod:TiedToAnEnemyPower");
             tTAEP.damageEnemyWhenHit(info, damageAmount);
         }
 
-        if (player.hasPower("theUnchainedMod:RelayPower")) {
-            RelayPower relayPower = (RelayPower) player.getPower("theUnchainedMod:RelayPower");
-            damage = relayPower.relayDamageWhenAttacked(info, damage);
+        if (RelayHelpers.currentRelay.get(creature) > 0) {
+            damage = RelayHelpers.relayDamageWhenAttacked(info, damage, creature);
         }
         return damage;
     }
