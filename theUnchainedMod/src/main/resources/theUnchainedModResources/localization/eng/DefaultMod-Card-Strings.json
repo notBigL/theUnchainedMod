@@ -94,7 +94,7 @@
   },
   "theUnchainedMod:MakeRoom": {
     "NAME": "Make Room",
-    "DESCRIPTION": "If you have theunchainedmod:Relay, draw !theUnchainedMod:SecondMagic! cards. Gain !M! theunchainedmod:Relay."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. If you do not have Block, gain !M! theunchainedmod:Relay again."
   },
   "theUnchainedMod:PropheticSwing": {
     "NAME": "Prophetic Swing",

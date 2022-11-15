@@ -10,15 +10,15 @@ import theUnchainedMod.powers.RelayPower;
 
 public class MakeRoomAction extends AbstractGameAction {
 
-    public MakeRoomAction(AbstractPlayer player, int drawAmount) {
+    public MakeRoomAction(AbstractPlayer player, int relayAmount) {
         this.target = player;
-        this.amount = drawAmount;
+        this.amount = relayAmount;
     }
 
     @Override
     public void update() {
-        if(RelayHelpers.currentRelay.get(target) > 0) {
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(amount));
+        if (target.currentBlock == 0) {
+            AbstractDungeon.actionManager.addToBottom(new GainRelayAction(target, amount));
         }
         this.isDone = true;
     }
