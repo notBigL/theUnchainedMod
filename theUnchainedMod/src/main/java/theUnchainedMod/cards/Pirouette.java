@@ -29,7 +29,7 @@ public class Pirouette extends AbstractDynamicCard {
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
 
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     public Pirouette() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -43,9 +43,7 @@ public class Pirouette extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.exhaust = false;
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            upgradeBaseCost(0);
         }
     }
 

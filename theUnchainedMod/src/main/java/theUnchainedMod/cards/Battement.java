@@ -27,7 +27,7 @@ public class Battement extends AbstractDynamicCard {
     private static final int COST = 2;
     private static final int DAMAGE = 14;
     private static final int UPGRADE_PLUS_DMG = 4;
-    private static final int MAGIC_NUMBER = 3;
+    private static final int MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
     public Battement() {
