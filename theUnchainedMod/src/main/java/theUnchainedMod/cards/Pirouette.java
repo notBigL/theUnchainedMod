@@ -1,19 +1,14 @@
 package theUnchainedMod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.actions.PirouetteAction;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.FullSpinPower;
-import theUnchainedMod.powers.MomentumPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
