@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
+import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import theUnchainedMod.powers.FractalShieldPower;
 import theUnchainedMod.powers.NextTurnRelayedDamagePower;
 
@@ -29,6 +30,8 @@ public class RelayHelpers {
     public static SpireField<Float> relayAnimTimer = new SpireField<>(() -> 0.0F);
     public static SpireField<Float> relayScale = new SpireField<>(() -> 1.0F);
 
+    public static final float RELAY_ICON_X = -14.0F * Settings.scale;
+    public static final float RELAY_ICON_Y = Settings.scale;
 
     public static void addRelay(int relayAmount, AbstractCreature creature) {
         float tmp = (float) relayAmount;
@@ -71,9 +74,9 @@ public class RelayHelpers {
         }
 
         if (RelayHelpers.currentRelay.get(creature) == 0 && effect) {
-            /*if (!noAnimation) {
-                AbstractDungeon.effectList.add(new HbBlockBrokenEffect(this.hb.cX - this.hb.width / 2.0F + BLOCK_ICON_X, this.hb.cY - this.hb.height / 2.0F + BLOCK_ICON_Y));
-            }*/
+            if (!noAnimation) {
+                AbstractDungeon.effectList.add(new HbBlockBrokenEffect(creature.hb.cX - creature.hb.width / 2.0F + RELAY_ICON_X, creature.hb.cY - creature.hb.height / 2.0F + RELAY_ICON_Y));
+            }
         } else if (RelayHelpers.currentRelay.get(creature) > 0 && amount > 0) {
             Color tmp = Color.SCARLET.cpy();
             tmp.a = RelayHelpers.relayTextColor.get(creature).a;
