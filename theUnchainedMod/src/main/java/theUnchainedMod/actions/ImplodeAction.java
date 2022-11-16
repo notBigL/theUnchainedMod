@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.powers.CrushedArmorPower;
@@ -20,7 +21,8 @@ public class ImplodeAction extends AbstractGameAction {
                 if (!mo.isDeadOrEscaped() && mo.hasPower(CrushedArmorPower.POWER_ID)) {
                     int crushedArmorAmount = mo.getPower(CrushedArmorPower.POWER_ID).amount;
                     if (crushedArmorAmount > 0) {
-                        AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, new DamageInfo(AbstractDungeon.player, crushedArmorAmount, DamageInfo.DamageType.HP_LOSS), AttackEffect.FIRE));
+                        AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, new DamageInfo(AbstractDungeon.player, crushedArmorAmount, DamageInfo.DamageType.HP_LOSS), AttackEffect.FIRE, false, true));
+                        CardCrawlGame.sound.play("crushedArmorHit");
                     }
                 }
             }

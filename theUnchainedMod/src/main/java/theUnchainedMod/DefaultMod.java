@@ -534,7 +534,14 @@ public class DefaultMod implements
     @Override
     public void receiveAddAudio() {
         logger.info("Adding audios");
-        BaseMod.addAudio("tryMe", makeAudioPath("hallö.ogg"));
+        BaseMod.addAudio("swingAttack", makeAudioPath("swingAttacks.ogg"));
+        BaseMod.addAudio("chainExtension", makeAudioPath("chainExtension.ogg"));
+        BaseMod.addAudio("crushedArmorHit", makeAudioPath("crushedArmorHit.ogg"));
+        BaseMod.addAudio("relayApply", makeAudioPath("relayApply.ogg"));
+        BaseMod.addAudio("relayBreak", makeAudioPath("relayBreak.ogg"));
+        BaseMod.addAudio("unchainedSelect", makeAudioPath("unchainedSelect.ogg"));
+        BaseMod.addAudio("normalChainAttack", makeAudioPath("normalChainAttack.ogg"));
+
         logger.info("Done adding audios");
     }
 

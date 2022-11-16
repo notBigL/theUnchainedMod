@@ -43,6 +43,11 @@ public class OiledChainsPower extends AbstractPower {
         this.description = DESCRIPTIONS[0];
     }
 
+    @Override
+    public void playApplyPowerSfx() {
+        CardCrawlGame.sound.play("chainExtension", 0.05F);
+    }
+
     public void onUseCard(AbstractCard card, UseCardAction action) {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }

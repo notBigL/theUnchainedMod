@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.CrushedArmorHitAction;
 import theUnchainedMod.util.TextureLoader;
 
 public class CrushedArmorPower extends AbstractPower {
@@ -44,7 +45,7 @@ public class CrushedArmorPower extends AbstractPower {
     }
 
     public void onSpecificTrigger() {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        AbstractDungeon.actionManager.addToBottom(new CrushedArmorHitAction(owner, source, amount));
     }
 
 }

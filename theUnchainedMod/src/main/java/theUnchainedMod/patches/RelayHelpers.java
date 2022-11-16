@@ -9,6 +9,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
@@ -75,6 +76,7 @@ public class RelayHelpers {
 
         if (RelayHelpers.currentRelay.get(creature) == 0 && effect) {
             if (!noAnimation) {
+                CardCrawlGame.sound.play("relayBreak");
                 AbstractDungeon.effectList.add(new HbBlockBrokenEffect(creature.hb.cX - creature.hb.width / 2.0F + RELAY_ICON_X, creature.hb.cY - creature.hb.height / 2.0F + RELAY_ICON_Y));
             }
         } else if (RelayHelpers.currentRelay.get(creature) > 0 && amount > 0) {
