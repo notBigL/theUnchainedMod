@@ -1,5 +1,6 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -45,6 +46,6 @@ public class BasicStrike extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT, false, true));
-        CardCrawlGame.sound.play("normalChainAttack");
+        CardCrawlGame.sound.playA("normalChainAttack", MathUtils.random(-0.2F, 0.2F));
     }
 }
