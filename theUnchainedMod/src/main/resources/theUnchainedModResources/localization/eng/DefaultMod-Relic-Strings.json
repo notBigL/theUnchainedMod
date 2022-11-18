@@ -33,7 +33,7 @@
   },
   "theUnchainedMod:BalletShoes": {
     "NAME": "Ballet Shoes",
-    "FLAVOR": "Impossible to cut a bad figure with these.",
+    "FLAVOR": "Impossible to strike a bad pose with these.",
     "DESCRIPTIONS": [
       "If you end your turn with Momentum, gain enough Momentum for the next Swirl."
     ]
@@ -47,9 +47,9 @@
   },
   "theUnchainedMod:HeartOfTheUnderdog": {
     "NAME": "Heart of the Underdog",
-    "FLAVOR": "Its beating is fragile, but something tells you it will not flatline.",
+    "FLAVOR": "You feel it beat stronger whenever the odds are stacked against you.",
     "DESCRIPTIONS": [
-      "The first time you break the Block of an enemy each turn, gain [E] ."
+      "At the end of turn, gain 1 Strength if you do not have more block than ALL enemies.."
     ]
   },
   "theUnchainedMod:Carabiner": {
@@ -68,7 +68,7 @@
   },
   "theUnchainedMod:BrokenCharm": {
     "NAME": "Broken Charm",
-    "FLAVOR": "It does not make the most pleasant tones, but it holds emotional value.",
+    "FLAVOR": "Ringing it doesnt make the most pleasant of sounds, but it has emotional value.",
     "DESCRIPTIONS": [
       "At the start of your first 3 turns, gain #y",
       " Relay."
@@ -83,9 +83,9 @@
   },
   "theUnchainedMod:Memento": {
     "NAME": "Memento",
-    "FLAVOR": "A reminder so painful, ancient anger awakes in you.",
+    "FLAVOR": "The demon awakens when the tide of battle turns.",
     "DESCRIPTIONS": [
-      "At the end of turn, gain 1 Strength if you do not have more block than ALL enemies."
+      "The first time the block of an enemy is broken each turn, gain [E]."
     ]
   },
   "theUnchainedMod:TotemOfPain": {

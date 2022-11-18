@@ -394,12 +394,12 @@ public class DefaultMod implements
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new RustedChains(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new BalletShoes(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new Memento(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new Carabiner(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new PolishedChains(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new BrokenCharm(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new Churros(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new Memento(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new TotemOfPain(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new DancingRibbons(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new Wrench(), TheDefault.Enums.COLOR_GRAY);
@@ -412,12 +412,12 @@ public class DefaultMod implements
         // (the others are all starters so they're marked as seen in the character file)
         UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
         UnlockTracker.markRelicAsSeen(BalletShoes.ID);
-        UnlockTracker.markRelicAsSeen(HeartOfTheUnderdog.ID);
+        UnlockTracker.markRelicAsSeen(Memento.ID);
         UnlockTracker.markRelicAsSeen(Carabiner.ID);
         UnlockTracker.markRelicAsSeen(PolishedChains.ID);
         UnlockTracker.markRelicAsSeen(BrokenCharm.ID);
         UnlockTracker.markRelicAsSeen(Churros.ID);
-        UnlockTracker.markRelicAsSeen(Memento.ID);
+        UnlockTracker.markRelicAsSeen(HeartOfTheUnderdog.ID);
         UnlockTracker.markRelicAsSeen(TotemOfPain.ID);
         UnlockTracker.markRelicAsSeen(DancingRibbons.ID);
         UnlockTracker.markRelicAsSeen(Wrench.ID);
