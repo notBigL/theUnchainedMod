@@ -11,16 +11,14 @@ public class AllEnemiesLoseHPAction extends AbstractGameAction {
 
     public AllEnemiesLoseHPAction(int damageAmount) {
         this.amount = damageAmount;
-
     }
 
     @Override
     public void update() {
         DamageInfo info = new DamageInfo(AbstractDungeon.player, this.amount, DamageInfo.DamageType.HP_LOSS);
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, info, AttackEffect.SLASH_HEAVY));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, info, AttackEffect.FIRE));
         }
-
         this.isDone = true;
     }
 }
