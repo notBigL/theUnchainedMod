@@ -71,7 +71,7 @@
     "NAME": "Memento",
     "FLAVOR": "The demon awakens when the tide of battle turns.",
     "DESCRIPTIONS": [
-      "The first time the block of an enemy is broken each turn, gain [E]."
+      "The first time the block of an enemy is broken each turn, gain [E] ."
     ]
   },
   "theUnchainedMod:TotemOfPain": {
