@@ -51,6 +51,6 @@
       "Crushed Armor",
       "crushed_armor"
     ],
-    "DESCRIPTION": "Creatures lose HP everytime they gain Block."
+    "DESCRIPTION": "Enemies lose HP everytime they gain Block."
   }
 ]
