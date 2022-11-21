@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import theUnchainedMod.patches.RelayHelpers;
 import theUnchainedMod.powers.NextTurnRelayedDamagePower;
 import theUnchainedMod.powers.RelayedDamagePower;
 
@@ -26,28 +27,26 @@ public class BloodySwingAction extends AbstractGameAction {
     public void update() {
         int damage = 0;
         int restAmount = this.amount;
-        if (player.hasPower(RelayedDamagePower.POWER_ID)) {
-            AbstractPower relayedDamage = player.getPower(RelayedDamagePower.POWER_ID);
-            if (this.amount < relayedDamage.amount) {
-                relayedDamage.reducePower(this.amount);
-                damage = this.amount;
-                restAmount = 0;
-            } else {
-                damage = relayedDamage.amount;
-                restAmount -= relayedDamage.amount;
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, relayedDamage));
-            }
+        if (RelayHelpers.thisTurnRelayedDamage.get(player) > amount) {
+            RelayHelpers.loseThisTurnRelayedDamage(amount, false, player);
+            damage = this.amount;
+            restAmount = 0;
+        } else {
+            damage = RelayHelpers.thisTurnRelayedDamage.get(player);
+            restAmount -= RelayHelpers.thisTurnRelayedDamage.get(player);
+            RelayHelpers.loseThisTurnRelayedDamage(false, player);
         }
-        if (restAmount > 0 && player.hasPower(NextTurnRelayedDamagePower.POWER_ID)) {
-            AbstractPower nextTurnRelayedDamage = player.getPower(NextTurnRelayedDamagePower.POWER_ID);
-            if (restAmount < nextTurnRelayedDamage.amount) {
-                nextTurnRelayedDamage.reducePower(restAmount);
+
+        if (restAmount > 0) {
+            if (RelayHelpers.nextTurnRelayedDamage.get(player) > restAmount) {
+                RelayHelpers.loseNextTurnRelayedDamage(restAmount, false, player);
                 damage = this.amount;
             } else {
-                damage += nextTurnRelayedDamage.amount;
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, nextTurnRelayedDamage));
+                damage += RelayHelpers.nextTurnRelayedDamage.get(player);
+                RelayHelpers.loseNextTurnRelayedDamage(false, player);
             }
         }
+
         if (damage > 0) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(player, damage, DamageInfo.DamageType.NORMAL), AttackEffect.FIRE));
         }

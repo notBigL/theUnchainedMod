@@ -36,6 +36,6 @@ public class EyeForAnEye extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new PoeticJusticeAction(magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new PoeticJusticeAction(magicNumber, p));
     }
 }

@@ -3,16 +3,21 @@ package theUnchainedMod.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import theUnchainedMod.patches.RelayHelpers;
 import theUnchainedMod.powers.NextTurnRelayedDamagePower;
 import theUnchainedMod.powers.RelayedDamagePower;
 
 public class PoeticJusticeAction extends AbstractGameAction {
 
-    public PoeticJusticeAction(int amount) {
+    private AbstractCreature player;
+
+    public PoeticJusticeAction(int amount, AbstractCreature p) {
         this.amount = amount;
+        this.player = p;
         this.target = AbstractDungeon.player;
     }
 
@@ -20,26 +25,23 @@ public class PoeticJusticeAction extends AbstractGameAction {
     public void update() {
         int vigor = 0;
         int restAmount = this.amount;
-        if (this.target.hasPower(RelayedDamagePower.POWER_ID)) {
-            AbstractPower relayedDamage = this.target.getPower(RelayedDamagePower.POWER_ID);
-            if (this.amount < relayedDamage.amount) {
-                relayedDamage.reducePower(this.amount);
-                vigor = this.amount;
-                restAmount = 0;
-            } else {
-                vigor = relayedDamage.amount;
-                restAmount -= relayedDamage.amount;
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.target, this.target, relayedDamage));
-            }
+        if (RelayHelpers.thisTurnRelayedDamage.get(player) > amount) {
+            RelayHelpers.loseThisTurnRelayedDamage(amount, false, player);
+            vigor = this.amount;
+            restAmount = 0;
+        } else {
+            vigor = RelayHelpers.thisTurnRelayedDamage.get(player);
+            restAmount -= RelayHelpers.thisTurnRelayedDamage.get(player);
+            RelayHelpers.loseThisTurnRelayedDamage(false, player);
         }
-        if (restAmount > 0 && this.target.hasPower(NextTurnRelayedDamagePower.POWER_ID)) {
-            AbstractPower nextTurnRelayedDamage = this.target.getPower(NextTurnRelayedDamagePower.POWER_ID);
-            if (restAmount < nextTurnRelayedDamage.amount) {
-                nextTurnRelayedDamage.reducePower(restAmount);
+
+        if (restAmount > 0) {
+            if (RelayHelpers.nextTurnRelayedDamage.get(player) > restAmount) {
+                RelayHelpers.loseNextTurnRelayedDamage(restAmount, false, player);
                 vigor = this.amount;
             } else {
-                vigor += nextTurnRelayedDamage.amount;
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.target, this.target, nextTurnRelayedDamage));
+                vigor += RelayHelpers.nextTurnRelayedDamage.get(player);
+                RelayHelpers.loseNextTurnRelayedDamage(false, player);
             }
         }
         if (vigor > 0) {

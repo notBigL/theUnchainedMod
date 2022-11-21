@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import theUnchainedMod.patches.RelayHelpers;
 import theUnchainedMod.powers.NextTurnRelayedDamagePower;
 import theUnchainedMod.powers.RelayedDamagePower;
 
@@ -23,26 +24,23 @@ public class RefreshAction extends AbstractGameAction {
     public void update() {
         int block = 0;
         int restAmount = this.amount;
-        if (player.hasPower(RelayedDamagePower.POWER_ID)) {
-            AbstractPower relayedDamage = player.getPower(RelayedDamagePower.POWER_ID);
-            if (this.amount < relayedDamage.amount) {
-                relayedDamage.reducePower(this.amount);
-                block = this.amount;
-                restAmount = 0;
-            } else {
-                block = relayedDamage.amount;
-                restAmount -= relayedDamage.amount;
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, relayedDamage));
-            }
+        if (RelayHelpers.thisTurnRelayedDamage.get(player) > amount) {
+            RelayHelpers.loseThisTurnRelayedDamage(amount, false, player);
+            block = this.amount;
+            restAmount = 0;
+        } else {
+            block = RelayHelpers.thisTurnRelayedDamage.get(player);
+            restAmount -= RelayHelpers.thisTurnRelayedDamage.get(player);
+            RelayHelpers.loseThisTurnRelayedDamage(false, player);
         }
-        if (restAmount > 0 && player.hasPower(NextTurnRelayedDamagePower.POWER_ID)) {
-            AbstractPower nextTurnRelayedDamage = player.getPower(NextTurnRelayedDamagePower.POWER_ID);
-            if (restAmount < nextTurnRelayedDamage.amount) {
-                nextTurnRelayedDamage.reducePower(restAmount);
+
+        if (restAmount > 0) {
+            if (RelayHelpers.nextTurnRelayedDamage.get(player) > restAmount) {
+                RelayHelpers.loseNextTurnRelayedDamage(restAmount, false, player);
                 block = this.amount;
             } else {
-                block += nextTurnRelayedDamage.amount;
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, nextTurnRelayedDamage));
+                block += RelayHelpers.nextTurnRelayedDamage.get(player);
+                RelayHelpers.loseNextTurnRelayedDamage(false, player);
             }
         }
         if (block > 0) {
