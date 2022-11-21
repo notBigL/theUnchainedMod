@@ -18,7 +18,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class Cuff extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Cuff.class.getSimpleName());
-    public static final String IMG = makeCardPath("Hobbles.png");
+    public static final String IMG = makeCardPath("Cuff.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
