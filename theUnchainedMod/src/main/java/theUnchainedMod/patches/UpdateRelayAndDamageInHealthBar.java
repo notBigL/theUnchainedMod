@@ -8,11 +8,13 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
         clz = AbstractCreature.class,
         method = "updateHealthBar"
 )
-public class UpdateRelayInHealthBar {
+public class UpdateRelayAndDamageInHealthBar {
 
 
     @SpirePostfixPatch
     public static void updateRelayWithHealthBarUpdate(AbstractCreature creature) {
         RelayHelpers.updateRelayAnimations(creature);
+        RelayHelpers.updateNextTurnRelayedDamageAnimations(creature);
+        RelayHelpers.updateThisTurnRelayedDamageAnimations(creature);
     }
 }

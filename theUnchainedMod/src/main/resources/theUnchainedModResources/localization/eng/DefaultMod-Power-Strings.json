@@ -378,5 +378,21 @@
       "Whenever you gain Relay this turn, this enemy takes #y",
       " damage."
     ]
+  },
+  "theUnchainedMod:NextTurnRelayedDamage": {
+    "NAME": "Relayed Damage",
+    "DESCRIPTIONS": [
+      "Your ",
+      " Relayed Damage will hit you next turn for #y",
+      " damage."
+    ]
+  },
+  "theUnchainedMod:ThisTurnRelayedDamage": {
+    "NAME": "Relayed Damage",
+    "DESCRIPTIONS": [
+      "Your ",
+      " Relayed Damage will hit you this turn for #r",
+      " damage."
+    ]
   }
 }

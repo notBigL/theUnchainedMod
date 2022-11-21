@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.ApplyRelayedDamageAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.NextTurnRelayedDamagePower;
@@ -39,7 +40,7 @@ public class RecklessSwing extends AbstractDynamicCard {
 
     @Override
     public void upgrade() {
-        if(!upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
@@ -50,6 +51,6 @@ public class RecklessSwing extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardCrawlGame.sound.playA("swingAttack", MathUtils.random(-0.2F, 0.2F));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, false, true));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnRelayedDamagePower(p, p, magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyRelayedDamageAction(p, magicNumber));
     }
 }

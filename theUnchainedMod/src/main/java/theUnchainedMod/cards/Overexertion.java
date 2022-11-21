@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.ApplyRelayedDamageAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.powers.NextTurnRelayedDamagePower;
 
@@ -50,6 +51,6 @@ public class Overexertion extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(defaultSecondMagicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnRelayedDamagePower(p, p, magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyRelayedDamageAction(p, magicNumber));
     }
 }
