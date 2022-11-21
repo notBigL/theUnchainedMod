@@ -18,7 +18,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class ReinforcedLink extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(ReinforcedLink.class.getSimpleName());
-    public static final String IMG = makeCardPath("ReinforcedElement.png");
+    public static final String IMG = makeCardPath("ReinforcedLink.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
