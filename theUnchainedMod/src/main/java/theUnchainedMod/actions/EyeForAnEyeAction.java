@@ -2,20 +2,16 @@ package theUnchainedMod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import theUnchainedMod.patches.RelayHelpers;
-import theUnchainedMod.powers.NextTurnRelayedDamagePower;
-import theUnchainedMod.powers.RelayedDamagePower;
 
-public class PoeticJusticeAction extends AbstractGameAction {
+public class EyeForAnEyeAction extends AbstractGameAction {
 
-    private AbstractCreature player;
+    private final AbstractCreature player;
 
-    public PoeticJusticeAction(int amount, AbstractCreature p) {
+    public EyeForAnEyeAction(int amount, AbstractCreature p) {
         this.amount = amount;
         this.player = p;
         this.target = AbstractDungeon.player;

@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.PoeticJusticeAction;
+import theUnchainedMod.actions.EyeForAnEyeAction;
 import theUnchainedMod.characters.TheDefault;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -36,6 +36,6 @@ public class EyeForAnEye extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new PoeticJusticeAction(magicNumber, p));
+        AbstractDungeon.actionManager.addToBottom(new EyeForAnEyeAction(magicNumber, p));
     }
 }
