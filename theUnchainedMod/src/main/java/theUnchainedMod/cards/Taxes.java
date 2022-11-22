@@ -13,7 +13,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class Taxes extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Taxes.class.getSimpleName());
-    public static final String IMG = makeCardPath("Haste.png");
+    public static final String IMG = makeCardPath("Taxes.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.POWER;
