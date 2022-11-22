@@ -11,5 +11,7 @@ public class EndOfCombatRelayExpire {
     @SpirePostfixPatch
     public static void clearCurrentRelay(GameActionManager gAM) {
         RelayHelpers.currentRelay.set(AbstractDungeon.player, 0);
+        RelayHelpers.nextTurnRelayedDamage.set(AbstractDungeon.player, 0);
+        RelayHelpers.thisTurnRelayedDamage.set(AbstractDungeon.player, 0);
     }
 }
