@@ -19,7 +19,7 @@
       "relaying",
       "relay."
     ],
-    "DESCRIPTION": "Prevents damage after Block. NL Half of it is dealt to the Player in 2 turns as Relayed Damage. Relayed Damage cannot be relayed again."
+    "DESCRIPTION": "Prevents damage after Block. NL Half of it is dealt to the Player in 2 turns as Relayed Damage. Relayed Damage cannot be blocked by Relay."
   },
   {
     "PROPER_NAME": "Relayed Damage",
@@ -35,7 +35,7 @@
       "Momentum",
       "momentum"
     ],
-    "DESCRIPTION": "When you obtain 3 Momentum, add a Swirl into your hand."
+    "DESCRIPTION": "When you obtain 3 Momentum, add a Swirl into your hand. Swirls are attacks that double their strength for every other Swirl played in the same turn."
   },
   {
     "PROPER_NAME": "Full Spin",
