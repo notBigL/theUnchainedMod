@@ -33,14 +33,14 @@ public class RelayHelpers {
     public static SpireField<Float> relayScale = new SpireField<>(() -> 1.0F);
 
     public static SpireField<Color> nextTurnRelayedDamageColor = new SpireField<>(() -> new Color(1.0F, 1.0F, 1.0F, 0.0F));
-    public static SpireField<Color> nextTurnRelayedActualDamageTextColor = new SpireField<>(() -> Color.SCARLET);
+    public static SpireField<Color> nextTurnRelayedActualDamageTextColor = new SpireField<>(() -> new Color(1.0F, 0.0F, 0.0F, 1.0F));
     public static SpireField<Color> nextTurnRelayedDamageTextColor = new SpireField<>(() -> new Color(0.9F, 0.9F, 0.9F, 0.0F));
     public static SpireField<Color> nextTurnRelayedDamageOutlineColor = new SpireField<>(() -> new Color(0.6F, 0.93F, 0.98F, 0.0F));
     public static SpireField<Float> nextTurnRelayedDamageAnimTimer = new SpireField<>(() -> 0.0F);
     public static SpireField<Float> nextTurnRelayedDamageScale = new SpireField<>(() -> 1.0F);
 
     public static SpireField<Color> thisTurnRelayedDamageColor = new SpireField<>(() -> new Color(1.0F, 1.0F, 1.0F, 0.0F));
-    public static SpireField<Color> thisTurnRelayedActualDamageTextColor = new SpireField<>(() -> Color.SCARLET);
+    public static SpireField<Color> thisTurnRelayedActualDamageTextColor = new SpireField<>(() -> new Color(1.0F, 0.0F, 0.0F, 1.0F));
     public static SpireField<Color> thisTurnRelayedDamageTextColor = new SpireField<>(() -> new Color(0.9F, 0.9F, 0.9F, 0.0F));
     public static SpireField<Color> thisTurnRelayedDamageOutlineColor = new SpireField<>(() -> new Color(0.6F, 0.93F, 0.98F, 0.0F));
     public static SpireField<Float> thisTurnRelayedDamageAnimTimer = new SpireField<>(() -> 0.0F);
@@ -225,7 +225,7 @@ public class RelayHelpers {
         }
 
     }
-    
+
     private static void gainNextTurnRelayedDamageAnimation(AbstractCreature creature) {
         RelayHelpers.nextTurnRelayedDamageAnimTimer.set(creature, 0.7F);
         RelayHelpers.nextTurnRelayedDamageTextColor.get(creature).a = 0.0F;
@@ -261,8 +261,8 @@ public class RelayHelpers {
             if (RelayHelpers.nextTurnRelayedDamageTextColor.get(creature).b != 1.0F) {
                 RelayHelpers.nextTurnRelayedDamageTextColor.get(creature).b = MathHelper.slowColorLerpSnap(RelayHelpers.nextTurnRelayedDamageTextColor.get(creature).b, 1.0F);
             }
-            
-            
+
+
             if (RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).r != 1.0F) {
                 RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).r = MathHelper.slowColorLerpSnap(RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).r, 1.0F);
             }
@@ -330,7 +330,7 @@ public class RelayHelpers {
 
     }
 
-    
+
     public static int relayDamageWhenAttacked(DamageInfo info, int damageAmount, AbstractCreature creature) {
         if (damageAmount > 0 && (!RelayedDamageField.relayed.get(info) || creature.hasPower(FractalShieldPower.POWER_ID))) {
             int relayedDamage;
