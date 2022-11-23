@@ -14,7 +14,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class GuardedPosture extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(GuardedPosture.class.getSimpleName());
-    public static final String IMG = makeCardPath("Reschedule.png");
+    public static final String IMG = makeCardPath("GuardedPosture.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
