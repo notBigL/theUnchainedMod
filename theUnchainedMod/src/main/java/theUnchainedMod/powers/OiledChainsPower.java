@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.util.TextureLoader;
@@ -45,10 +46,12 @@ public class OiledChainsPower extends AbstractPower {
 
     @Override
     public void playApplyPowerSfx() {
-        CardCrawlGame.sound.play("chainExtension", 0.05F);
+        CardCrawlGame.sound.play("chainExtension", 0.1F);
     }
 
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        if (!card.purgeOnUse) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
     }
 }
