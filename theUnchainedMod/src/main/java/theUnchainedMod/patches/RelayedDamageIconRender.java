@@ -27,13 +27,13 @@ public class RelayedDamageIconRender {
             float y = ___hb.cY - ___hb.height / 2.0F + ___hbYOffset;
 
             sb.setColor(RelayHelpers.nextTurnRelayedDamageColor.get(creature));
-            sb.draw(nextTurnRelayedDamageIcon, x + RelayHelpers.RELAY_ICON_X - 32.0F, y + RelayHelpers.RELAY_ICON_Y + 140.0F,
+            sb.draw(nextTurnRelayedDamageIcon, x + RelayHelpers.RELAY_ICON_X - 32.0F, y + RelayHelpers.NEXT_TURN_RELAYED_DAMAGE_ICON_Y - 32.0F,
                     32.0F, 32.0F, 64.0F, 64.0F, Settings.scale, Settings.scale,
                     0.0F, 0, 0, 64, 64, false, false);
 
             FontHelper.blockInfoFont.getData().setScale(RelayHelpers.nextTurnRelayedDamageScale.get(creature));
-            FontHelper.renderFontRightAligned(sb, FontHelper.blockInfoFont, Integer.toString(nextTurnRelayedDamageAmount), x + ___BLOCK_ICON_X, y + 190.0F * Settings.scale, RelayHelpers.nextTurnRelayedDamageTextColor.get(creature));
-            FontHelper.renderFontRightAligned(sb, FontHelper.blockInfoFont, Integer.toString(actualNextTurnDamageAmount), x + ___BLOCK_ICON_X, y + 150.0F * Settings.scale, RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature));
+            FontHelper.renderFontRightAligned(sb, FontHelper.blockInfoFont, Integer.toString(nextTurnRelayedDamageAmount), x + ___BLOCK_ICON_X, y + 175.0F * Settings.scale, RelayHelpers.nextTurnRelayedDamageTextColor.get(creature));
+            FontHelper.renderFontRightAligned(sb, FontHelper.blockInfoFont, Integer.toString(actualNextTurnDamageAmount), x + ___BLOCK_ICON_X, y + 145.0F * Settings.scale, RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature));
             FontHelper.blockInfoFont.getData().setScale(1.0F);
         }
 
@@ -44,20 +44,20 @@ public class RelayedDamageIconRender {
             float y = ___hb.cY - ___hb.height / 2.0F + ___hbYOffset;
 
             sb.setColor(RelayHelpers.thisTurnRelayedDamageColor.get(creature));
-            sb.draw(thisTurnRelayedDamageIcon, x + RelayHelpers.RELAY_ICON_X - 32.0F, y + RelayHelpers.RELAY_ICON_Y + 70.0F,
+            sb.draw(thisTurnRelayedDamageIcon, x + RelayHelpers.RELAY_ICON_X - 32.0F, y + RelayHelpers.THIS_TURN_RELAYED_DAMAGE_ICON_Y - 32.0F,
                     32.0F, 32.0F, 64.0F, 64.0F, Settings.scale, Settings.scale,
                     0.0F, 0, 0, 64, 64, false, false);
 
             FontHelper.blockInfoFont.getData().setScale(RelayHelpers.thisTurnRelayedDamageScale.get(creature));
-            FontHelper.renderFontRightAligned(sb, FontHelper.blockInfoFont, Integer.toString(thisTurnRelayedDamageAmount), x + ___BLOCK_ICON_X, y + 120.0F * Settings.scale, RelayHelpers.thisTurnRelayedDamageTextColor.get(creature));
-            FontHelper.renderFontRightAligned(sb, FontHelper.blockInfoFont, Integer.toString(actualThisTurnDamageAmount), x + ___BLOCK_ICON_X, y + 80.0F * Settings.scale, RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature));
+            FontHelper.renderFontRightAligned(sb, FontHelper.blockInfoFont, Integer.toString(thisTurnRelayedDamageAmount), x + ___BLOCK_ICON_X, y + 111.0F * Settings.scale, RelayHelpers.thisTurnRelayedDamageTextColor.get(creature));
+            FontHelper.renderFontRightAligned(sb, FontHelper.blockInfoFont, Integer.toString(actualThisTurnDamageAmount), x + ___BLOCK_ICON_X, y + 81.0F * Settings.scale, RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature));
             FontHelper.blockInfoFont.getData().setScale(1.0F);
 
         } else if (!Settings.hideCombatElements && RelayHelpers.nextTurnRelayedDamage.get(creature) > 0) {
             float x = ___hb.cX - ___hb.width / 2.0F;
             float y = ___hb.cY - ___hb.height / 2.0F + ___hbYOffset;
             sb.setColor(new Color(1.0F, 1.0F, 1.0F, 0.5F));
-            sb.draw(thisTurnRelayedDamageIcon, x + RelayHelpers.RELAY_ICON_X - 32.0F, y + RelayHelpers.RELAY_ICON_Y + 70.0F,
+            sb.draw(thisTurnRelayedDamageIcon, x + RelayHelpers.RELAY_ICON_X - 32.0F, y + RelayHelpers.THIS_TURN_RELAYED_DAMAGE_ICON_Y - 32.0F,
                     32.0F, 32.0F, 64.0F, 64.0F, Settings.scale, Settings.scale,
                     0.0F, 0, 0, 64, 64, false, false);
         }

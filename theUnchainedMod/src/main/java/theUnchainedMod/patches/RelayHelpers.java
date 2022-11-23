@@ -47,7 +47,9 @@ public class RelayHelpers {
     public static SpireField<Float> thisTurnRelayedDamageScale = new SpireField<>(() -> 1.0F);
 
     public static final float RELAY_ICON_X = -14.0F * Settings.scale;
-    public static final float RELAY_ICON_Y = Settings.scale;
+    public static final float RELAY_ICON_Y = +32.0F * Settings.scale;
+    public static final float NEXT_TURN_RELAYED_DAMAGE_ICON_Y = 160.0F * Settings.scale;
+    public static final float THIS_TURN_RELAYED_DAMAGE_ICON_Y = 96.0F * Settings.scale;
 
     public static void addRelay(int relayAmount, AbstractCreature creature) {
         float tmp = (float) relayAmount;
