@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.patches.RelayHelpers;
 import theUnchainedMod.powers.NextTurnRelayedDamagePower;
 import theUnchainedMod.util.TextureLoader;
 
@@ -28,13 +29,12 @@ public class TotemOfPain extends CustomRelic {
 
     @Override
     public void atTurnStart() {
-        if (AbstractDungeon.player.hasPower(NextTurnRelayedDamagePower.POWER_ID) &&
-                AbstractDungeon.player.getPower(NextTurnRelayedDamagePower.POWER_ID).amount > 0) {
+        if (RelayHelpers.nextTurnRelayedDamage.get(AbstractDungeon.player) > 0) {
             AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
             if (target != null) {
                 this.flash();
                 AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(AbstractDungeon.player, AbstractDungeon.player.getPower(NextTurnRelayedDamagePower.POWER_ID).amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(AbstractDungeon.player, RelayHelpers.nextTurnRelayedDamage.get(AbstractDungeon.player), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
             }
         }
     }
