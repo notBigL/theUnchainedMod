@@ -15,7 +15,7 @@ public class renderHealthBarPink {
     @SpireInsertPatch(rloc = 5)
     public static void renderHealthBarPinkIfRelayIsThere(AbstractCreature creature, @ByRef SpriteBatch[] sb, float x, float y) {
         if(RelayHelpers.currentRelay.get(creature) > 0 && creature.currentBlock == 0) {
-            sb[0].setColor(1.0F, 0.2F, 0.6F, 1.0F);
+            sb[0].setColor(0.913F, 0.3F, 0.46F, 1.0F);
         }
     }
 }
