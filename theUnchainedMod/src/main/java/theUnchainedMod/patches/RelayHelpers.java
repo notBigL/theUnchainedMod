@@ -129,7 +129,6 @@ public class RelayHelpers {
         if (RelayHelpers.currentRelay.get(creature) == 0 && effect) {
             if (!noAnimation) {
                 CardCrawlGame.sound.play("relayBreak");
-                AbstractDungeon.effectList.add(new HbBlockBrokenEffect(creature.hb.cX - creature.hb.width / 2.0F + RELAY_ICON_X, creature.hb.cY - creature.hb.height / 2.0F + RELAY_ICON_Y));
             }
         } else if (RelayHelpers.currentRelay.get(creature) > 0 && amount > 0) {
             Color tmp = Color.SCARLET.cpy();
