@@ -54,13 +54,13 @@ public class PolishedChains extends CustomRelic {
 
     @Override
     public boolean canSpawn() {
-        return AbstractDungeon.player.hasRelic("theUnchainedMod:OiledChains");
+        return AbstractDungeon.player.hasRelic("theUnchainedMod:RustedChains");
     }
 
     public void obtain() {
-        if (AbstractDungeon.player.hasRelic("theUnchainedMod:OiledChains")) {
+        if (AbstractDungeon.player.hasRelic("theUnchainedMod:RustedChains")) {
             for(int i = 0; i < AbstractDungeon.player.relics.size(); ++i) {
-                if (AbstractDungeon.player.relics.get(i).relicId.equals("theUnchainedMod:OiledChains")) {
+                if (AbstractDungeon.player.relics.get(i).relicId.equals("theUnchainedMod:RustedChains")) {
                     this.instantObtain(AbstractDungeon.player, i, true);
                     break;
                 }
