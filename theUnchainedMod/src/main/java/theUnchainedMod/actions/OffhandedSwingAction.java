@@ -24,7 +24,7 @@ public class OffhandedSwingAction extends AbstractGameAction {
             Iterator var1 = DrawCardAction.drawnCards.iterator();
             while (var1.hasNext()) {
                 AbstractCard c = (AbstractCard) var1.next();
-                if (c.cost == 2 || c.costForTurn == 2) {
+                if (c.cost == 2 || c.costForTurn == 2 || (c.cost == -1 && c.energyOnUse == 2)) {
                     if (!target.isDeadOrEscaped()) {
                         AbstractDungeon.actionManager.addToTop(new NewQueueCardAction(c, target, false, true));
                     } else {

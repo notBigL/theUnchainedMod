@@ -49,7 +49,7 @@ public class CruiserweightPower extends AbstractPower {
     }
 
     public void onCardDraw(AbstractCard card) {
-        if (card.cost == 2 || card.costForTurn == 2) {
+        if (card.cost == 2 || card.costForTurn == 2 || (card.cost == -1 && card.energyOnUse == 2)) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, this.amount));
         }

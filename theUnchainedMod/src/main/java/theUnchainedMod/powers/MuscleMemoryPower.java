@@ -52,7 +52,7 @@ public class MuscleMemoryPower extends AbstractPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && (card.cost == 2 || card.costForTurn == 2) && this.amount > 0) {
+        if (!card.purgeOnUse && (card.cost == 2 || card.costForTurn == 2 || (card.cost == -1 && card.energyOnUse == 2)) && this.amount > 0) {
             this.flash();
             AbstractMonster m = null;
             if (action.target != null) {
