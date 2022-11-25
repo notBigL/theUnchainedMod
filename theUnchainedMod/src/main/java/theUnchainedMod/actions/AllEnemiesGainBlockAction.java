@@ -16,7 +16,9 @@ public class AllEnemiesGainBlockAction extends AbstractGameAction {
     public void update() {
         {
             for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(mo, this.amount));
+                if (mo != null && !mo.isDeadOrEscaped()) {
+                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(mo, this.amount));
+                }
             }
         }
         this.isDone = true;
