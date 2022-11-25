@@ -34,9 +34,7 @@ public class ThreadOfAriadne extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.exhaust = false;
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            upgradeBaseCost(1);
         }
     }
 

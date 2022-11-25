@@ -304,7 +304,6 @@
   "theUnchainedMod:ThreadOfAriadne": {
     "NAME": "Thread Of Ariadne",
     "DESCRIPTION": "If you have an active Chain, take an extra turn after this turn. End your turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "If you have an active Chain, take an extra turn after this turn. End your turn.",
     "EXTENDED_DESCRIPTION": [
       "I need an active Chain to play this."
     ]
