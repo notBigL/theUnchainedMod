@@ -154,8 +154,8 @@
   },
   "theUnchainedMod:FractalShield": {
     "NAME": "Fractal Shield",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relayed_Damage can be theunchainedmod:Relayed again.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! theunchainedmod:Relay. theunchainedmod:Relayed_Damage can be theunchainedmod:Relayed again."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage."
   },
   "theUnchainedMod:Windup": {
     "NAME": "Windup",

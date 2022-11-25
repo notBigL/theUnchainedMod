@@ -140,7 +140,7 @@
   "theUnchainedMod:FractalShieldPower": {
     "NAME": "Fractal Shield",
     "DESCRIPTIONS": [
-      "Relayed damage can be relayed again."
+      "Relay blocks Relayed Damage."
     ]
   },
   "theUnchainedMod:ClaustrophobiaPower": {
