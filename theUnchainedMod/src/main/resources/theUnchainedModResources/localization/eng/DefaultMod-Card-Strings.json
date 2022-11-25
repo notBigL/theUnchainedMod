@@ -69,7 +69,7 @@
   },
   "theUnchainedMod:ArcaneCharm": {
     "NAME": "Arcane Charm",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay every turn."
+    "DESCRIPTION": "At the start of your turn, gain !M! theunchainedmod:Relay."
   },
   "theUnchainedMod:DualBarrier": {
     "NAME": "Dual Barrier",

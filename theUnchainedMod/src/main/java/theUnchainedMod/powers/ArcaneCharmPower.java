@@ -42,7 +42,7 @@ public class ArcaneCharmPower extends AbstractPower {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
-    public void atStartOfTurnPostDraw() {
+    public void atStartOfTurn() {
         AbstractDungeon.actionManager.addToBottom(new GainRelayAction(owner, amount));
     }
 }

@@ -65,8 +65,8 @@
   "theUnchainedMod:ArcaneCharmPower": {
     "NAME": "Arcane Charm",
     "DESCRIPTIONS": [
-      "Relay #y",
-      " damage every turn."
+      "Gain #y",
+      " Relay at the start of your turn."
     ]
   },
   "theUnchainedMod:QuickSwingPower": {

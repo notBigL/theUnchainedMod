@@ -42,6 +42,5 @@ public class ArcaneCharm extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArcaneCharmPower(p, p, this.magicNumber)));
-        AbstractDungeon.actionManager.addToBottom(new GainRelayAction(p, magicNumber));
     }
 }
