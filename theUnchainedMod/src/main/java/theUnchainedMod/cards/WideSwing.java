@@ -1,18 +1,23 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.OverHeadSwingEndTurnAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.patches.CustomTags;
+import theUnchainedMod.powers.AbstractChainPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -42,6 +47,17 @@ public class WideSwing extends AbstractDynamicCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
 
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof AbstractChainPower) {
+                this.glowColor = Color.SCARLET;
+                return;
+            }
+        }
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
     }
 
     @Override
