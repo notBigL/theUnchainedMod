@@ -190,7 +190,7 @@
   },
   "theUnchainedMod:SolarPlexus": {
     "NAME": "Solar Plexus",
-    "DESCRIPTION": "Deal !D! damage. NL !M! theunchainedmod:Chain: Stun. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL !M! theunchainedmod:Chain: theunchainedmod:Stun the same enemy. NL Exhaust."
   },
   "theUnchainedMod:RelentlessMovements": {
     "NAME": "Relentless Movements",

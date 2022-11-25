@@ -52,5 +52,13 @@
       "crushed_armor"
     ],
     "DESCRIPTION": "Enemies lose HP everytime they gain Block."
+  },
+  {
+    "PROPER_NAME": "Stun",
+    "NAMES": [
+      "Stun",
+      "stun"
+    ],
+    "DESCRIPTION": "Enemy does nothing this turn."
   }
 ]
