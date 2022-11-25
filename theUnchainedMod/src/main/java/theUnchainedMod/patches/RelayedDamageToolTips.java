@@ -20,11 +20,11 @@ public class RelayedDamageToolTips {
 
     private static final PowerStrings nextTurnRelayedDamageStrings = CardCrawlGame.languagePack.getPowerStrings("theUnchainedMod:NextTurnRelayedDamage");
     private static final String[] NEXT_TURN_DESCRIPTIONS = nextTurnRelayedDamageStrings.DESCRIPTIONS;
-    private static final Texture nextTurnTexture = TextureLoader.getTexture("theUnchainedModResources/images/powers/NextTurnRelayedDamagePower_power48.png");
+    private static final Texture nextTurnTexture = TextureLoader.getTexture("theUnchainedModResources/images/ui/NextTurnRelayedDamageUIIcon_Centered.png");
     private static final TextureAtlas.AtlasRegion nextTurnTexture48 = new TextureAtlas.AtlasRegion(nextTurnTexture, 0, 0, 48, 48);
     private static final PowerStrings thisTurnRelayedDamageStrings = CardCrawlGame.languagePack.getPowerStrings("theUnchainedMod:ThisTurnRelayedDamage");
     private static final String[] THIS_TURN_DESCRIPTIONS = thisTurnRelayedDamageStrings.DESCRIPTIONS;
-    private static final Texture thisTurnTexture = TextureLoader.getTexture("theUnchainedModResources/images/powers/RelayedDamagePower_power48.png");
+    private static final Texture thisTurnTexture = TextureLoader.getTexture("theUnchainedModResources/images/ui/ThisTurnRelayedDamageUIIcon_Centered.png");
     private static final TextureAtlas.AtlasRegion thisTurnTexture48 = new TextureAtlas.AtlasRegion(thisTurnTexture, 0, 0, 48, 48);
 
 
