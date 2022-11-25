@@ -31,6 +31,7 @@ public class RelayHelpers {
     public static SpireField<Color> relayOutlineColor = new SpireField<>(() -> new Color(0.6F, 0.93F, 0.98F, 0.0F));
     public static SpireField<Float> relayAnimTimer = new SpireField<>(() -> 0.0F);
     public static SpireField<Float> relayScale = new SpireField<>(() -> 1.0F);
+    public static SpireField<Float> relayRotation = new SpireField<>(() -> 0.0F);
 
     public static SpireField<Color> nextTurnRelayedDamageColor = new SpireField<>(() -> new Color(1.0F, 1.0F, 1.0F, 0.0F));
     public static SpireField<Color> nextTurnRelayedActualDamageTextColor = new SpireField<>(() -> new Color(1.0F, 0.0F, 0.0F, 1.0F));
@@ -202,7 +203,7 @@ public class RelayHelpers {
                     RelayHelpers.relayAnimTimer.set(creature, 0.0F);
                 }
 
-                //this.blockOffset = Interpolation.swingOut.apply(BLOCK_OFFSET_DIST * 3.0F, 0.0F, 1.0F - this.blockAnimTimer / 0.7F);
+                RelayHelpers.relayRotation.set(creature, Interpolation.pow3Out.apply(360.0F, 0.0F, 1.0F - RelayHelpers.relayAnimTimer.get(creature) / 0.7F));
                 RelayHelpers.relayScale.set(creature, Interpolation.pow3In.apply(3.0F, 1.0F, 1.0F - RelayHelpers.relayAnimTimer.get(creature) / 0.7F));
                 RelayHelpers.relayColor.get(creature).a = Interpolation.pow2Out.apply(0.0F, 1.0F, 1.0F - RelayHelpers.relayAnimTimer.get(creature) / 0.7F);
                 RelayHelpers.relayTextColor.get(creature).a = Interpolation.pow5In.apply(0.0F, 1.0F, 1.0F - RelayHelpers.relayAnimTimer.get(creature) / 0.7F);
