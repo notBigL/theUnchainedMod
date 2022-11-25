@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
@@ -25,7 +26,7 @@ public class SolarPlexus extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int DAMAGE = 5;
-    private static final int UPGRADE_PLUS_DAMAGE = 5;
+    private static final int UPGRADE_PLUS_DAMAGE = 2;
     private static final int MAGIC_NUMBER = 3;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = -1;
 
@@ -49,7 +50,8 @@ public class SolarPlexus extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY, false, true));
+        CardCrawlGame.sound.play("normalChainAttack");
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new SolarPlexusPower(p, magicNumber, m, CardType.ATTACK)));
     }
 }
