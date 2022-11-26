@@ -26,7 +26,7 @@ public class Churros extends CustomRelic {
     private boolean eaten = false;
 
     public Churros() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
     }
 
 
