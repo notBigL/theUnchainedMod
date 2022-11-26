@@ -53,7 +53,7 @@ public class WideSwing extends AbstractDynamicCard {
     public void triggerOnGlowCheck() {
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof AbstractChainPower) {
-                this.glowColor = Color.RED;
+                this.glowColor = new Color(1.0F, 0.0F, 0.0F, 1.0F);
                 return;
             }
         }
