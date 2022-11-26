@@ -16,7 +16,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class RelentlessOnslaught extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(RelentlessOnslaught.class.getSimpleName());
-    public static final String IMG = makeCardPath("RelentlessBattery.png");
+    public static final String IMG = makeCardPath("RelentlessOnslaught.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
