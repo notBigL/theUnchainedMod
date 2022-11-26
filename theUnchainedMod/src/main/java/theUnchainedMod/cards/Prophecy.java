@@ -13,7 +13,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class Prophecy extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Prophecy.class.getSimpleName());
-    public static final String IMG = makeCardPath("WeatherbeatenSkin.png");
+    public static final String IMG = makeCardPath("Prophecy.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;

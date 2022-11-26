@@ -15,7 +15,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class HeartfeltSpeech extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(HeartfeltSpeech.class.getSimpleName());
-    public static final String IMG = makeCardPath("PlayDead.png");
+    public static final String IMG = makeCardPath("HeartfeltSpeech.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
