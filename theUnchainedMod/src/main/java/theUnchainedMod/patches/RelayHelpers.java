@@ -12,9 +12,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
-import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import theUnchainedMod.actions.ApplyRelayedDamageAction;
 import theUnchainedMod.powers.FractalShieldPower;
+import theUnchainedMod.vfx.HBRelayBrokenEffect;
 
 
 @SpirePatch(
@@ -130,6 +130,7 @@ public class RelayHelpers {
         if (RelayHelpers.currentRelay.get(creature) == 0 && effect) {
             if (!noAnimation) {
                 CardCrawlGame.sound.play("relayBreak");
+                AbstractDungeon.effectList.add(new HBRelayBrokenEffect(creature.hb.cX - creature.hb.width / 2.0F + RELAY_ICON_X, creature.hb.cY - creature.hb.height / 2.0F + RELAY_ICON_Y));
             }
         } else if (RelayHelpers.currentRelay.get(creature) > 0 && amount > 0) {
             Color tmp = Color.SCARLET.cpy();
