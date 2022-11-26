@@ -86,8 +86,8 @@ public class DefaultMod implements
     public static final Color UNCHAINED_ORANGE = CardHelper.getColor(255.0f, 170.0f, 17.0f);
 
     // Potion Colors in RGB
-    public static final Color LINK_POTION_LIQUID = CardHelper.getColor(142.0f, 95.0f, 0.0f);
-    public static final Color LINK_POTION_HYBRID = CardHelper.getColor(112.0f, 76.0f, 2.0f);
+    public static final Color LINK_POTION_LIQUID = CardHelper.getColor(220.0F, 170.0f, 71.0f);
+    public static final Color LINK_POTION_HYBRID = CardHelper.getColor(155.0F, 87.0f, 24.0f);
     public static final Color LINK_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f);
     public static final Color DANCE_POTION_LIQUID = CardHelper.getColor(255.0f, 173.0f, 48.0f);
     public static final Color DANCE_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f);
