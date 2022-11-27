@@ -8,7 +8,7 @@
       "chain:",
       "chain."
     ],
-    "DESCRIPTION": "Playing enough Cards with the same Type as this card will finish the Chain and unlock the specified Effect. Chains wear off at the end of turn."
+    "DESCRIPTION": "Playing enough cards with the same type as this card will finish the Chain and unlock the specified effect. Chains wear off at the end of turn."
   },
   {
     "PROPER_NAME": "Relay",
@@ -27,7 +27,7 @@
       "Relayed Damage",
       "relayed_damage"
     ],
-    "DESCRIPTION": "Damage that was relayed. Half of it (rounded down) is dealt to the Player at the end of the next turn. Is not blocked by Relay."
+    "DESCRIPTION": "Damage that has been relayed. Half of it is dealt to the Player at the end of the next turn. Is not blocked by Relay."
   },
   {
     "PROPER_NAME": "Momentum",
@@ -35,7 +35,7 @@
       "Momentum",
       "momentum"
     ],
-    "DESCRIPTION": "When you obtain 3 Momentum, add a Swirl into your hand. Swirls are attacks that double their strength for every other Swirl played in the same turn."
+    "DESCRIPTION": "When you obtain 3 Momentum, add a Swirl into your hand. Swirls double their strength for each Swirl played in the same turn."
   },
   {
     "PROPER_NAME": "Full Spin",
