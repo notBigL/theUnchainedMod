@@ -177,40 +177,40 @@ public class HBRelayBrokenEffect extends AbstractGameEffect {
     }
 
     static {
-        DEST_X_OUTSIDE_1 = -20.0F * Settings.scale;
-        DEST_Y_OUTSIDE_1 = 20.0F * Settings.scale;
+        DEST_X_OUTSIDE_1 = -30.0F * Settings.scale;
+        DEST_Y_OUTSIDE_1 = 30.0F * Settings.scale;
 
         DEST_X_OUTSIDE_2 = 0.0F * Settings.scale;
-        DEST_Y_OUTSIDE_2 = 20.0F * Settings.scale;
+        DEST_Y_OUTSIDE_2 = 30.0F * Settings.scale;
 
-        DEST_X_OUTSIDE_3 = 20.0F * Settings.scale;
-        DEST_Y_OUTSIDE_3 = 20.0F * Settings.scale;
+        DEST_X_OUTSIDE_3 = 30.0F * Settings.scale;
+        DEST_Y_OUTSIDE_3 = 30.0F * Settings.scale;
 
-        DEST_X_OUTSIDE_4 = 20.0F * Settings.scale;
+        DEST_X_OUTSIDE_4 = 30.0F * Settings.scale;
         DEST_Y_OUTSIDE_4 = 0.0F * Settings.scale;
 
-        DEST_X_OUTSIDE_5 = 20.0F * Settings.scale;
-        DEST_Y_OUTSIDE_5 = -20.0F * Settings.scale;
+        DEST_X_OUTSIDE_5 = 30.0F * Settings.scale;
+        DEST_Y_OUTSIDE_5 = -30.0F * Settings.scale;
 
         DEST_X_OUTSIDE_6 = 0.0F * Settings.scale;
-        DEST_Y_OUTSIDE_6 = -20.0F * Settings.scale;
+        DEST_Y_OUTSIDE_6 = -30.0F * Settings.scale;
 
-        DEST_X_OUTSIDE_7 = -20.0F * Settings.scale;
-        DEST_Y_OUTSIDE_7 = -20.0F * Settings.scale;
+        DEST_X_OUTSIDE_7 = -30.0F * Settings.scale;
+        DEST_Y_OUTSIDE_7 = -30.0F * Settings.scale;
 
-        DEST_X_OUTSIDE_8 = -20.0F * Settings.scale;
+        DEST_X_OUTSIDE_8 = -30.0F * Settings.scale;
         DEST_Y_OUTSIDE_8 = 0.0F * Settings.scale;
 
-        DEST_X_OUTSIDE_9 = -20.0F * Settings.scale;
-        DEST_Y_OUTSIDE_9 = 5.0F * Settings.scale;
+        DEST_X_OUTSIDE_9 = -30.0F * Settings.scale;
+        DEST_Y_OUTSIDE_9 = 15.0F * Settings.scale;
 
         DEST_X_INSIDE_1 = 0.0F * Settings.scale;
-        DEST_Y_INSIDE_1 = 10.0F * Settings.scale;
+        DEST_Y_INSIDE_1 = 15.0F * Settings.scale;
 
-        DEST_X_INSIDE_2 = 10.0F * Settings.scale;
-        DEST_Y_INSIDE_2 = -10.0F * Settings.scale;
+        DEST_X_INSIDE_2 = 15.0F * Settings.scale;
+        DEST_Y_INSIDE_2 = -15.0F * Settings.scale;
 
-        DEST_X_INSIDE_3 = -10.0F * Settings.scale;
+        DEST_X_INSIDE_3 = -15.0F * Settings.scale;
         DEST_Y_INSIDE_3 = 0.0F * Settings.scale;
 
     }
