@@ -15,7 +15,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class ThreadOfAriadne extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(ThreadOfAriadne.class.getSimpleName());
-    public static final String IMG = makeCardPath("EscapeRope.png");
+    public static final String IMG = makeCardPath("ThreadOfAriadne.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
