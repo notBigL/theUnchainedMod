@@ -14,7 +14,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class TargetJoints extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(TargetJoints.class.getSimpleName());
-    public static final String IMG = makeCardPath("InfiniteChain.png");
+    public static final String IMG = makeCardPath("TargetJoints.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;

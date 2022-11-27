@@ -17,7 +17,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class TieDown extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(TieDown.class.getSimpleName());
-    public static final String IMG = makeCardPath("SwipeArmor.png");
+    public static final String IMG = makeCardPath("TieDown.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
