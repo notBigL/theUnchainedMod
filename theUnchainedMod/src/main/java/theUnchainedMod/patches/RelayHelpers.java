@@ -264,15 +264,15 @@ public class RelayHelpers {
             }
 
 
-            if (RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).r != 1.0F) {
+            if (RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).r != Color.SCARLET.r) {
                 RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).r = MathHelper.slowColorLerpSnap(RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).r, 1.0F);
             }
 
-            if (RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).g != 0.0F) {
+            if (RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).g != Color.SCARLET.g) {
                 RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).g = MathHelper.slowColorLerpSnap(RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).g, 0.0F);
             }
 
-            if (RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).b != 0.0F) {
+            if (RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).b != Color.SCARLET.b) {
                 RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).b = MathHelper.slowColorLerpSnap(RelayHelpers.nextTurnRelayedActualDamageTextColor.get(creature).b, 0.0F);
             }
         }
@@ -316,15 +316,15 @@ public class RelayHelpers {
             }
 
 
-            if (RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature).r != 1.0F) {
+            if (RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature).r != Color.SCARLET.r) {
                 RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature).r = MathHelper.slowColorLerpSnap(RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature).r, 1.0F);
             }
 
-            if (RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature).g != 0.0F) {
+            if (RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature).g != Color.SCARLET.g) {
                 RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature).g = MathHelper.slowColorLerpSnap(RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature).g, 0.0F);
             }
 
-            if (RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature).b != 0.0F) {
+            if (RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature).b != Color.SCARLET.b) {
                 RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature).b = MathHelper.slowColorLerpSnap(RelayHelpers.thisTurnRelayedActualDamageTextColor.get(creature).b, 0.0F);
             }
         }
