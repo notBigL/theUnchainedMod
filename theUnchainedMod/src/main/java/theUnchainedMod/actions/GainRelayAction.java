@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import theUnchainedMod.patches.RelayHelpers;
 import theUnchainedMod.powers.GlyphBrandPower;
@@ -26,7 +27,6 @@ public class GainRelayAction extends AbstractGameAction {
         if (!target.isDying && !target.isDead) {
             RelayHelpers.addRelay(amount, target);
             CardCrawlGame.sound.playA("relayApply", MathUtils.random(-0.2F, 0.2F));
-            //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new RelayPower(target, target, amount)));
 
             if (target instanceof AbstractPlayer) {
                 for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {

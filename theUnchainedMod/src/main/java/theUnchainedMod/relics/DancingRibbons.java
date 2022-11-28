@@ -22,7 +22,7 @@ public class DancingRibbons extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("DancingRibbons_relic.png"));
 
     public DancingRibbons() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.CLINK);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class DancingRibbons extends CustomRelic {
         if (c instanceof Swirl) {
             counter++;
         }
-        if (counter > 1) {
+        if (counter > 0) {
             this.beginLongPulse();
         }
     }

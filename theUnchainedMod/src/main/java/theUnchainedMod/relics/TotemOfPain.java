@@ -24,19 +24,34 @@ public class TotemOfPain extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("TotemOfPain_relic.png"));
 
     public TotemOfPain() {
-        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
     @Override
-    public void atTurnStart() {
-        if (RelayHelpers.nextTurnRelayedDamage.get(AbstractDungeon.player) > 0) {
+    public void onPlayerEndTurn() {
+        if (counter > 0) {
             AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
             if (target != null) {
                 this.flash();
                 AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(AbstractDungeon.player, RelayHelpers.nextTurnRelayedDamage.get(AbstractDungeon.player), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(AbstractDungeon.player, counter, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
             }
         }
+        counter = 0;
+    }
+
+    public void onEquip() {
+        counter = 0;
+    }
+
+    @Override
+    public void onVictory() {
+        counter = 0;
+    }
+
+    @Override
+    public void atBattleStart() {
+        counter = 0;
     }
 
     @Override

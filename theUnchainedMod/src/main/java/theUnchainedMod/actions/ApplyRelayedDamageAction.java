@@ -1,6 +1,7 @@
 package theUnchainedMod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theUnchainedMod.patches.RelayHelpers;
@@ -19,6 +20,12 @@ public class ApplyRelayedDamageAction extends AbstractGameAction {
             RelayedDmgSum.relayedDamageSum.set(AbstractDungeon.actionManager, RelayedDmgSum.relayedDamageSum.get(AbstractDungeon.actionManager) + amount);
             RelayHelpers.addNextTurnRelayedDamage(amount, target);
         }
+        if (target instanceof AbstractPlayer) {
+            if (((AbstractPlayer) target).hasRelic("theUnchainedMod:TotemOfPain")) {
+                ((AbstractPlayer) target).getRelic("theUnchainedMod:TotemOfPain").counter += amount;
+            }
+        }
+
         isDone = true;
     }
 }
