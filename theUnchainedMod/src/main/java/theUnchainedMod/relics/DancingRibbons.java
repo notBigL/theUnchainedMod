@@ -37,6 +37,16 @@ public class DancingRibbons extends CustomRelic {
 
 
     @Override
+    public void atBattleStart() {
+        counter = 0;
+    }
+
+    public void onVictory() {
+        this.stopPulse();
+        counter = 0;
+    }
+
+    @Override
     public void onPlayerEndTurn() {
         if (counter > 1) {
             this.flash();
