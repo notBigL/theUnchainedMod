@@ -26,7 +26,7 @@ public class StepBack extends AbstractDynamicCard {
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 1;
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 9;
     private static final int MAGIC_NUMBER = 1;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
     private static final int SECOND_MAGIC_NUMBER = 1;
