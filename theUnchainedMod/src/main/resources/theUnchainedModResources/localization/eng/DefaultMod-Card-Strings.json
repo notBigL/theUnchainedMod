@@ -383,9 +383,9 @@
     "DESCRIPTION": "Draw !M! card, if it gives you theunchainedmod:Momentum, draw another card. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum.",
     "UPGRADE_DESCRIPTION": "Draw !M! card, if it gives you theunchainedmod:Momentum, play it and draw another card. NL Gain !theUnchainedMod:SecondMagic! theunchainedmod:Momentum."
   },
-  "theUnchainedMod:TargetJoints": {
-    "NAME": "Target Joints",
-    "DESCRIPTION": "Apply !M! theunchainedmod:Crushed_Armor. If the enemy intends to attack, apply !M! theunchainedmod:Crushed_Armor again."
+  "theUnchainedMod:ImmovableObject": {
+    "NAME": "Immovable Object",
+    "DESCRIPTION": "Gain !B! Block. Whenever you are attacked this turn, the attacking enemy gains !M! theunchainedmod:Crushed_Armor."
   },
   "theUnchainedMod:Taxes": {
     "NAME": "Taxes",

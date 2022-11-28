@@ -394,5 +394,12 @@
       " Relayed Damage will hit you this turn for #r",
       " damage."
     ]
+  },
+  "theUnchainedMod:ImmovableObjectPower": {
+    "NAME": "Immovable Object",
+    "DESCRIPTIONS": [
+      "When attacked, attacking enemy gains #y",
+      " Crushed Armor."
+    ]
   }
 }
