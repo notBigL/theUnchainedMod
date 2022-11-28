@@ -25,7 +25,7 @@ public class Refresh extends AbstractDynamicCard {
 
     private static final int COST = 2;
     private static final int MAGIC_NUMBER = 10;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 4;
 
     public Refresh() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

@@ -25,7 +25,7 @@ public class DualBarrier extends AbstractDynamicCard {
     private static final int BLOCK = 3;
     private static final int UPGRADE_PLUS_BLOCK = 2;
     private static final int MAGIC_NUMBER = 8;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
 
     public DualBarrier() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
