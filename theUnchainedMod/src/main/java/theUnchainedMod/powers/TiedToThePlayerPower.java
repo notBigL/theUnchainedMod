@@ -50,7 +50,7 @@ public class TiedToThePlayerPower extends AbstractPower {
     }
 
     public void damageEnemyWhenPlayerIsHit(int damageAmount, AbstractCreature player) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(player, damageAmount, DamageInfo.DamageType.HP_LOSS)));
+        AbstractDungeon.actionManager.addToTop(new DamageAction(this.owner, new DamageInfo(player, damageAmount, DamageInfo.DamageType.HP_LOSS)));
     }
 
     public void onDeath() {
