@@ -16,7 +16,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class StareDown extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(StareDown.class.getSimpleName());
-    public static final String IMG = makeCardPath("Overview.png");
+    public static final String IMG = makeCardPath("StareDown.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;

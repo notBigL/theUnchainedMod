@@ -23,7 +23,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 
 public class WideSwing extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID(WideSwing.class.getSimpleName());
-    public static final String IMG = makeCardPath("OverHeadSwing.png");
+    public static final String IMG = makeCardPath("WideSwing.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
