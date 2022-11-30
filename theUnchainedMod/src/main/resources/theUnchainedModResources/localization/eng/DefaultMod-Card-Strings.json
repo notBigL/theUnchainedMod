@@ -92,8 +92,8 @@
     "DESCRIPTION": "Draw !M! card. NL 1 theunchainedmod:Chain: Gain !B! Block.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL 1 theunchainedmod:Chain: Gain !B! Block."
   },
-  "theUnchainedMod:MakeRoom": {
-    "NAME": "Make Room",
+  "theUnchainedMod:MasterworkGlyph": {
+    "NAME": "Masterwork Glyph",
     "DESCRIPTION": "Gain !M! theunchainedmod:Relay. If you do not have Block, gain !M! theunchainedmod:Relay again."
   },
   "theUnchainedMod:PropheticSwing": {

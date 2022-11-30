@@ -1,7 +1,5 @@
 package theUnchainedMod.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -9,16 +7,14 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.actions.MakeRoomAction;
 import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.MakeRoomPower;
-import theUnchainedMod.powers.RelayPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class MakeRoom extends AbstractDynamicCard {
+public class MasterworkGlyph extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(MakeRoom.class.getSimpleName());
-    public static final String IMG = makeCardPath("MakeRoom.png");
+    public static final String ID = DefaultMod.makeID(MasterworkGlyph.class.getSimpleName());
+    public static final String IMG = makeCardPath("MasterworkGlyph.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
@@ -30,7 +26,7 @@ public class MakeRoom extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
 
 
-    public MakeRoom() {
+    public MasterworkGlyph() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
