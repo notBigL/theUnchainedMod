@@ -19,7 +19,7 @@ public class ReinforcedLink extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(ReinforcedLink.class.getSimpleName());
     public static final String IMG = makeCardPath("ReinforcedLink.png");
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
