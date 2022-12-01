@@ -92,7 +92,7 @@
     "NAME": "Wrench",
     "FLAVOR": "You can never fasten your armor tight enough.",
     "DESCRIPTIONS": [
-      "Whenever you apply Crushed Armor, the enemy loses #y6 HP."
+      "Whenever you apply Crushed Armor, the enemy loses #y5 HP."
     ]
   }
 }
