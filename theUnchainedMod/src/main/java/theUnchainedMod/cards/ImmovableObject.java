@@ -15,7 +15,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class ImmovableObject extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(ImmovableObject.class.getSimpleName());
-    public static final String IMG = makeCardPath("TargetJoints.png");
+    public static final String IMG = makeCardPath("ImmovableObject.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
