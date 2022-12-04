@@ -6,12 +6,13 @@ import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 @SpirePatch(clz = GameActionManager.class, method = "clear")
-public class EndOfCombatRelayExpire {
+public class EndOfCombatExpirePatch {
 
     @SpirePostfixPatch
     public static void clearCurrentRelay(GameActionManager gAM) {
         RelayHelpers.currentRelay.set(AbstractDungeon.player, 0);
         RelayHelpers.nextTurnRelayedDamage.set(AbstractDungeon.player, 0);
         RelayHelpers.thisTurnRelayedDamage.set(AbstractDungeon.player, 0);
+        RelayedDmgSum.relayedDamageSum.set(gAM, 0);
     }
 }
