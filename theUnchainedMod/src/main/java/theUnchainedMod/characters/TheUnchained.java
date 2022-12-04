@@ -32,13 +32,13 @@ import java.util.List;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
 import static theUnchainedMod.DefaultMod.*;
-import static theUnchainedMod.characters.TheDefault.Enums.COLOR_GRAY;
+import static theUnchainedMod.characters.TheUnchained.Enums.COLOR_GRAY;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
 //and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
 //All text (starting description and loadout, anything labeled TEXT[]) can be found in DefaultMod-character-Strings.json in the resources
 
-public class TheDefault extends CustomPlayer {
+public class TheUnchained extends CustomPlayer {
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
 
     // =============== CHARACTER ENUMERATORS =================
@@ -102,7 +102,7 @@ public class TheDefault extends CustomPlayer {
 
     // =============== CHARACTER CLASS START =================
 
-    public TheDefault(String name, PlayerClass setClass) {
+    public TheUnchained(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
                 "theUnchainedModResources/images/char/defaultCharacter/orb/vfx.png", new float[]{-20.0F, 20.0F, -40.0F, 40.0F, 0.0F},
                 new SpineAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f));
@@ -254,7 +254,7 @@ public class TheDefault extends CustomPlayer {
     // Should return a new instance of your character, sending name as its name parameter.
     @Override
     public AbstractPlayer newInstance() {
-        return new TheDefault(name, chosenClass);
+        return new TheUnchained(name, chosenClass);
     }
 
     // Should return a Color object to be used to color the miniature card images in run history.

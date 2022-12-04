@@ -8,8 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.ApplyCrushedArmorAction;
-import theUnchainedMod.characters.TheDefault;
-import theUnchainedMod.powers.CrushedArmorPower;
+import theUnchainedMod.characters.TheUnchained;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -20,7 +19,7 @@ public class Cripple extends AbstractDynamicCard {
     private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.COMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.SKILL;
-    public static final AbstractCard.CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final AbstractCard.CardColor COLOR = TheUnchained.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
     private static final int MAGIC_NUMBER = 4;

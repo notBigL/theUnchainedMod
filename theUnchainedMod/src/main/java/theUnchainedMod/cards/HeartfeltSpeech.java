@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.PlayDeadPower;
 
@@ -19,7 +19,7 @@ public class HeartfeltSpeech extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheUnchained.Enums.COLOR_GRAY;
 
     private static final int COST = 0;
     private static final int MAGIC_NUMBER = 2;

@@ -14,8 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.GainMomentumAction;
-import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 
 import java.util.Iterator;
@@ -28,7 +27,7 @@ public class FullSwing extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheUnchained.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
     private static final int DAMAGE = 5;

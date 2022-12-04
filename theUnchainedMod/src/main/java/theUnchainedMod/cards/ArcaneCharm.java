@@ -5,10 +5,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.GainRelayAction;
-import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.ArcaneCharmPower;
-import theUnchainedMod.powers.RelayPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -19,7 +17,7 @@ public class ArcaneCharm extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheUnchained.Enums.COLOR_GRAY;
 
     private static final int COST = 2;
     private static final int MAGIC_NUMBER = 7;

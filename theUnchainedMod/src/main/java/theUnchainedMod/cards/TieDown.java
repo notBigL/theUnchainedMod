@@ -4,14 +4,11 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.SwipeArmorAction;
-import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.TiedDownPower;
 
-import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
 public class TieDown extends AbstractDynamicCard {
@@ -21,7 +18,7 @@ public class TieDown extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheUnchained.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
     private static final int MAGIC_NUMBER = 4;

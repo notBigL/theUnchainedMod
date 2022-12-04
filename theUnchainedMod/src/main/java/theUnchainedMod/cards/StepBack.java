@@ -5,11 +5,9 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
-import theUnchainedMod.powers.PlayDeadPower;
 import theUnchainedMod.powers.StepBackPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
@@ -22,7 +20,7 @@ public class StepBack extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheUnchained.Enums.COLOR_GRAY;
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 1;

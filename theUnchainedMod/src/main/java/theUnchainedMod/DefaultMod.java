@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theUnchainedMod.cards.*;
-import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.potions.DancePotion;
 import theUnchainedMod.potions.ChainGrease;
 import theUnchainedMod.potions.CrushingElixir;
@@ -202,9 +202,9 @@ public class DefaultMod implements
 
         logger.info("Done subscribing");
 
-        logger.info("Creating the color " + TheDefault.Enums.COLOR_GRAY.toString());
+        logger.info("Creating the color " + TheUnchained.Enums.COLOR_GRAY.toString());
 
-        BaseMod.addColor(TheDefault.Enums.COLOR_GRAY, UNCHAINED_ORANGE, UNCHAINED_ORANGE, UNCHAINED_ORANGE,
+        BaseMod.addColor(TheUnchained.Enums.COLOR_GRAY, UNCHAINED_ORANGE, UNCHAINED_ORANGE, UNCHAINED_ORANGE,
                 UNCHAINED_ORANGE, UNCHAINED_ORANGE, UNCHAINED_ORANGE, UNCHAINED_ORANGE,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
@@ -286,13 +286,13 @@ public class DefaultMod implements
 
     @Override
     public void receiveEditCharacters() {
-        logger.info("Beginning to edit characters. " + "Add " + TheDefault.Enums.THE_DEFAULT.toString());
+        logger.info("Beginning to edit characters. " + "Add " + TheUnchained.Enums.THE_DEFAULT.toString());
 
-        BaseMod.addCharacter(new TheDefault("the Default", TheDefault.Enums.THE_DEFAULT),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addCharacter(new TheUnchained("the Default", TheUnchained.Enums.THE_DEFAULT),
+                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheUnchained.Enums.THE_DEFAULT);
 
         receiveEditPotions();
-        logger.info("Added " + TheDefault.Enums.THE_DEFAULT.toString());
+        logger.info("Added " + TheUnchained.Enums.THE_DEFAULT.toString());
     }
 
     // =============== /LOAD THE CHARACTER/ =================
@@ -371,9 +371,9 @@ public class DefaultMod implements
         // Class Specific Potion. If you want your potion to not be class-specific,
         // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
         // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(ChainGrease.class, LINK_POTION_LIQUID, LINK_POTION_HYBRID, LINK_POTION_SPOTS, ChainGrease.POTION_ID, TheDefault.Enums.THE_DEFAULT);
-        BaseMod.addPotion(DancePotion.class, DANCE_POTION_LIQUID, DANCE_POTION_HYBRID, DANCE_POTION_SPOTS, DancePotion.POTION_ID, TheDefault.Enums.THE_DEFAULT);
-        BaseMod.addPotion(CrushingElixir.class, CRUSH_POTION_LIQUID, CRUSH_POTION_HYBRID, CRUSH_POTION_SPOTS, CrushingElixir.POTION_ID, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addPotion(ChainGrease.class, LINK_POTION_LIQUID, LINK_POTION_HYBRID, LINK_POTION_SPOTS, ChainGrease.POTION_ID, TheUnchained.Enums.THE_DEFAULT);
+        BaseMod.addPotion(DancePotion.class, DANCE_POTION_LIQUID, DANCE_POTION_HYBRID, DANCE_POTION_SPOTS, DancePotion.POTION_ID, TheUnchained.Enums.THE_DEFAULT);
+        BaseMod.addPotion(CrushingElixir.class, CRUSH_POTION_LIQUID, CRUSH_POTION_HYBRID, CRUSH_POTION_SPOTS, CrushingElixir.POTION_ID, TheUnchained.Enums.THE_DEFAULT);
 
 
         logger.info("Done editing potions");
@@ -396,17 +396,17 @@ public class DefaultMod implements
         // in order to automatically differentiate which pool to add the relic too.
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new RustedChains(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BalletShoes(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new Memento(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new Carabiner(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new PolishedChains(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BrokenCharm(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new Churros(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new TotemOfPain(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new DancingRibbons(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new Wrench(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new RustedChains(), TheUnchained.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new BalletShoes(), TheUnchained.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new Memento(), TheUnchained.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new Carabiner(), TheUnchained.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new PolishedChains(), TheUnchained.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new BrokenCharm(), TheUnchained.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new Churros(), TheUnchained.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheUnchained.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new TotemOfPain(), TheUnchained.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new DancingRibbons(), TheUnchained.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new Wrench(), TheUnchained.Enums.COLOR_GRAY);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);

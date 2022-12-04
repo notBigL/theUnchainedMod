@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.AllEnemiesLoseStrengthAction;
-import theUnchainedMod.characters.TheDefault;
+import theUnchainedMod.characters.TheUnchained;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -18,7 +18,7 @@ public class Glare extends AbstractDynamicCard{
     private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.SKILL;
-    public static final AbstractCard.CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final AbstractCard.CardColor COLOR = TheUnchained.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
     private static final int BLOCK = 5;
