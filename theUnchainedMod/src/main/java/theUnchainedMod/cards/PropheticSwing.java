@@ -17,7 +17,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class PropheticSwing extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(PropheticSwing.class.getSimpleName());
-    public static final String IMG = makeCardPath("HalfSwing.png");
+    public static final String IMG = makeCardPath("PropheticSwing.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;

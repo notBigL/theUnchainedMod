@@ -15,7 +15,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class GraspFuture extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(GraspFuture.class.getSimpleName());
-    public static final String IMG = makeCardPath("ShatteringSwing.png");
+    public static final String IMG = makeCardPath("GraspFuture.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
