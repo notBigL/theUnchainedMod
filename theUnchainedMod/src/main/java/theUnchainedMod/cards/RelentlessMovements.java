@@ -22,6 +22,7 @@ public class RelentlessMovements extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int MAGIC_NUMBER = 1;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
     public RelentlessMovements() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -33,7 +34,7 @@ public class RelentlessMovements extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
     }
 
