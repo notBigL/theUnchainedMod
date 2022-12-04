@@ -2,6 +2,7 @@ package theUnchainedMod.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.InvisiblePower;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,7 +14,7 @@ import theUnchainedMod.actions.ApplyFullSpinsAction;
 import theUnchainedMod.actions.RevertSwirlToBaseValuesAction;
 import theUnchainedMod.util.TextureLoader;
 
-public class FullSpinPower extends AbstractPower {
+public class FullSpinPower extends AbstractPower implements InvisiblePower {
 
     public static final String POWER_ID = DefaultMod.makeID("FullSpinPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);

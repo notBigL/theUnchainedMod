@@ -5,7 +5,6 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.OverHeadSwingEndTurnAction;
+import theUnchainedMod.actions.WideSwingEndTurnAction;
 import theUnchainedMod.characters.TheDefault;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.AbstractChainPower;
@@ -65,6 +64,6 @@ public class WideSwing extends AbstractDynamicCard {
         CardCrawlGame.sound.playA("swingAttack", MathUtils.random(-0.2F, 0.2F));
         this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new OverHeadSwingEndTurnAction(p));
+        AbstractDungeon.actionManager.addToBottom(new WideSwingEndTurnAction(p));
     }
 }
