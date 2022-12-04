@@ -7,11 +7,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.powers.AbstractChainPower;
 
-public class OverHeadSwingEndTurnAction extends AbstractGameAction {
+public class WideSwingEndTurnAction extends AbstractGameAction {
 
     private final AbstractPlayer player;
 
-    public OverHeadSwingEndTurnAction(AbstractPlayer p) {
+    public WideSwingEndTurnAction(AbstractPlayer p) {
         player = p;
     }
 
