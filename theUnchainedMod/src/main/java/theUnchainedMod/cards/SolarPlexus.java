@@ -21,7 +21,7 @@ public class SolarPlexus extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheUnchained.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
     private static final int COST = 0;
     private static final int DAMAGE = 5;

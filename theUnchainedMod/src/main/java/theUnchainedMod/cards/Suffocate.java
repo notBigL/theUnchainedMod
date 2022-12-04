@@ -16,7 +16,7 @@ public class Suffocate extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheUnchained.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
     private static final int MAGIC_NUMBER = 1;

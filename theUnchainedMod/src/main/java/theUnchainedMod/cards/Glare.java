@@ -18,7 +18,7 @@ public class Glare extends AbstractDynamicCard{
     private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.SKILL;
-    public static final AbstractCard.CardColor COLOR = TheUnchained.Enums.COLOR_GRAY;
+    public static final AbstractCard.CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
     private static final int BLOCK = 5;

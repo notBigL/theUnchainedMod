@@ -32,7 +32,7 @@ import java.util.List;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
 import static theUnchainedMod.DefaultMod.*;
-import static theUnchainedMod.characters.TheUnchained.Enums.COLOR_GRAY;
+import static theUnchainedMod.characters.TheUnchained.Enums.COLOR_ORANGE;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
 //and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
@@ -50,10 +50,10 @@ public class TheUnchained extends CustomPlayer {
 
     public static class Enums {
         @SpireEnum
-        public static AbstractPlayer.PlayerClass THE_DEFAULT;
-        @SpireEnum(name = "DEFAULT_GRAY_COLOR") // These two HAVE to have the same absolutely identical name.
-        public static AbstractCard.CardColor COLOR_GRAY;
-        @SpireEnum(name = "DEFAULT_GRAY_COLOR")
+        public static AbstractPlayer.PlayerClass THE_UNCHAINED;
+        @SpireEnum(name = "UNCHAINED_ORANGE_COLOR") // These two HAVE to have the same absolutely identical name.
+        public static AbstractCard.CardColor COLOR_ORANGE;
+        @SpireEnum(name = "UNCHAINED_ORANGE_COLOR")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
@@ -75,7 +75,7 @@ public class TheUnchained extends CustomPlayer {
 
     // =============== STRINGS =================
 
-    private static final String ID = makeID("DefaultCharacter");
+    private static final String ID = makeID("UnchainedCharacter");
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
@@ -217,7 +217,7 @@ public class TheUnchained extends CustomPlayer {
     // Should return the card color enum to be associated with your character.
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return COLOR_GRAY;
+        return COLOR_ORANGE;
     }
 
     // Should return a color object to be used to color the trail of moving cards
