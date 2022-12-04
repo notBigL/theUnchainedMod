@@ -28,13 +28,16 @@ public class MagusForm extends AbstractDynamicCard {
     public MagusForm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        this.isEthereal = true;
         tags.add(BaseModCardTags.FORM);
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            upgradeBaseCost(2);
+            isEthereal = false;
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
 
     }
