@@ -11,14 +11,14 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class CompoundAction extends AbstractGameAction {
+public class MakeHandCardCostLessAction extends AbstractGameAction {
 
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
     private ArrayList<AbstractCard> cannotBeMadeCheaper = new ArrayList();
 
-    public CompoundAction() {
+    public MakeHandCardCostLessAction() {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.p = AbstractDungeon.player;
         this.duration = Settings.ACTION_DUR_FAST;
@@ -110,7 +110,7 @@ public class CompoundAction extends AbstractGameAction {
     }
 
     static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("ArmamentsAction");
+        uiStrings = CardCrawlGame.languagePack.getUIString("theUnchainedMod:MakeHandCardCostLessAction");
         TEXT = uiStrings.TEXT;
     }
 }
