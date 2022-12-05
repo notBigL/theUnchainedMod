@@ -38,14 +38,19 @@ public class Churros extends CustomRelic {
     @Override
     public void atTurnStart() {
         eaten = false;
+        this.beginLongPulse();
     }
 
+    public void onVictory() {
+        this.stopPulse();
+    }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.tags.contains(CustomTags.CHAIN) && !this.eaten) {
             this.eaten = true;
             this.flash();
+            this.stopPulse();
             AbstractMonster m = null;
             if (action.target != null) {
                 m = (AbstractMonster)action.target;
