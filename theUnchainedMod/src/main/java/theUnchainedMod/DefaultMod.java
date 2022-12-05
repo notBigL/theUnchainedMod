@@ -75,9 +75,9 @@ public class DefaultMod implements
     public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
 
     //This is for the in-game mod settings panel.
-    private static final String MODNAME = "Default Mod";
-    private static final String AUTHOR = "Gremious"; // And pretty soon - You!
-    private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Default.";
+    private static final String MODNAME = "The Unchained Mod";
+    private static final String AUTHOR = "Mezix & BigL"; // And pretty soon - You!
+    private static final String DESCRIPTION = "A new Character with 75+ new cards, 10+ new Relics, 3 new Potions and 3+ fun archetypes you can play around with and have a lil fun!";
 
     // =============== INPUT TEXTURE LOCATION =================
 
