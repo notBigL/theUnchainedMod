@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
@@ -66,6 +67,8 @@ public class HBRelayBrokenEffect extends AbstractGameEffect {
     private final float x;
     private final float y;
 
+    private final float randomize;
+
     private float offsetXOutside1;
     private float offsetYOutside1;
 
@@ -107,6 +110,7 @@ public class HBRelayBrokenEffect extends AbstractGameEffect {
         this.duration = EFFECT_DUR;
         this.x = x;
         this.y = y;
+        randomize = MathUtils.random(0.6F, 1.4F);
     }
 
     public void update() {
@@ -117,41 +121,41 @@ public class HBRelayBrokenEffect extends AbstractGameEffect {
 
         this.color.a = Interpolation.fade.apply(1.0F, 0.0F, 1.0F - this.duration / EFFECT_DUR);
 
-        this.offsetXOutside1 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_1, 1.0F - this.duration / EFFECT_DUR);
-        this.offsetYOutside1 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_1, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetXOutside1 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_1 * randomize, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetYOutside1 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_1 * randomize, 1.0F - this.duration / EFFECT_DUR);
 
-        this.offsetXOutside2 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_2, 1.0F - this.duration / EFFECT_DUR);
-        this.offsetYOutside2 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_2, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetXOutside2 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_2 * randomize, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetYOutside2 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_2 * randomize, 1.0F - this.duration / EFFECT_DUR);
 
-        this.offsetXOutside3 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_3, 1.0F - this.duration / EFFECT_DUR);
-        this.offsetYOutside3 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_3, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetXOutside3 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_3 * randomize, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetYOutside3 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_3 * randomize, 1.0F - this.duration / EFFECT_DUR);
 
-        this.offsetXOutside4 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_4, 1.0F - this.duration / EFFECT_DUR);
-        this.offsetYOutside4 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_4, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetXOutside4 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_4 * randomize, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetYOutside4 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_4 * randomize, 1.0F - this.duration / EFFECT_DUR);
 
-        this.offsetXOutside5 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_5, 1.0F - this.duration / EFFECT_DUR);
-        this.offsetYOutside5 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_5, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetXOutside5 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_5 * randomize, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetYOutside5 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_5 * randomize, 1.0F - this.duration / EFFECT_DUR);
 
-        this.offsetXOutside6 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_6, 1.0F - this.duration / EFFECT_DUR);
-        this.offsetYOutside6 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_6, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetXOutside6 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_6 * randomize, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetYOutside6 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_6 * randomize, 1.0F - this.duration / EFFECT_DUR);
 
-        this.offsetXOutside7 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_7, 1.0F - this.duration / EFFECT_DUR);
-        this.offsetYOutside7 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_7, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetXOutside7 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_7 * randomize, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetYOutside7 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_7 * randomize, 1.0F - this.duration / EFFECT_DUR);
 
-        this.offsetXOutside8 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_8, 1.0F - this.duration / EFFECT_DUR);
-        this.offsetYOutside8 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_8, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetXOutside8 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_8 * randomize, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetYOutside8 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_8 * randomize, 1.0F - this.duration / EFFECT_DUR);
 
-        this.offsetXOutside9 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_9, 1.0F - this.duration / EFFECT_DUR);
-        this.offsetYOutside9 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_9, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetXOutside9 = Interpolation.pow3Out.apply(0.0F, DEST_X_OUTSIDE_9 * randomize, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetYOutside9 = Interpolation.pow3Out.apply(0.0F, DEST_Y_OUTSIDE_9 * randomize, 1.0F - this.duration / EFFECT_DUR);
 
-        this.offsetXInside1 = Interpolation.pow2Out.apply(0.0F, DEST_X_INSIDE_1, 1.0F - this.duration / EFFECT_DUR);
-        this.offsetYInside1 = Interpolation.pow2Out.apply(0.0F, DEST_Y_INSIDE_1, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetXInside1 = Interpolation.pow2Out.apply(0.0F, DEST_X_INSIDE_1 * randomize, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetYInside1 = Interpolation.pow2Out.apply(0.0F, DEST_Y_INSIDE_1 * randomize, 1.0F - this.duration / EFFECT_DUR);
 
-        this.offsetXInside2 = Interpolation.pow2Out.apply(0.0F, DEST_X_INSIDE_2, 1.0F - this.duration / EFFECT_DUR);
-        this.offsetYInside2 = Interpolation.pow2Out.apply(0.0F, DEST_Y_INSIDE_2, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetXInside2 = Interpolation.pow2Out.apply(0.0F, DEST_X_INSIDE_2 * randomize, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetYInside2 = Interpolation.pow2Out.apply(0.0F, DEST_Y_INSIDE_2 * randomize, 1.0F - this.duration / EFFECT_DUR);
 
-        this.offsetXInside3 = Interpolation.pow2Out.apply(0.0F, DEST_X_INSIDE_3, 1.0F - this.duration / EFFECT_DUR);
-        this.offsetYInside3 = Interpolation.pow2Out.apply(0.0F, DEST_Y_INSIDE_3, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetXInside3 = Interpolation.pow2Out.apply(0.0F, DEST_X_INSIDE_3 * randomize, 1.0F - this.duration / EFFECT_DUR);
+        this.offsetYInside3 = Interpolation.pow2Out.apply(0.0F, DEST_Y_INSIDE_3 * randomize, 1.0F - this.duration / EFFECT_DUR);
 
     }
 
