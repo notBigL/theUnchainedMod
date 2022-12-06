@@ -3,6 +3,7 @@ package theUnchainedMod.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.util.TextureLoader;
+import theUnchainedMod.vfx.SmallLaserDifferentColorEffect;
 
 public class GlyphBrandPower extends AbstractPower {
     public AbstractCreature source;
@@ -45,7 +47,8 @@ public class GlyphBrandPower extends AbstractPower {
     }
 
     public void onSpecificTrigger() {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserDifferentColorEffect(owner.hb.cX, owner.hb.cY, source.hb.cX, source.hb.cY), 0.1F));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
     }
 
 

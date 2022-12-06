@@ -1,6 +1,7 @@
 package theUnchainedMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.GlyphBrandPower;
+import theUnchainedMod.vfx.SmallLaserDifferentColorEffect;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -40,7 +42,8 @@ public class GlyphBeam extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserDifferentColorEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.1F));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new GlyphBrandPower(m, p, damage)));
     }
 
