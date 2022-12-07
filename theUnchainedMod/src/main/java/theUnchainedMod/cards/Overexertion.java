@@ -1,9 +1,13 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
+import com.megacrit.cardcrawl.vfx.combat.VerticalImpactEffect;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.ApplyRelayedDamageAction;
 import theUnchainedMod.characters.TheUnchained;
@@ -48,6 +52,7 @@ public class Overexertion extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new VerticalAuraEffect(Color.PINK, p.hb.cX, p.hb.cY)));
         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(defaultSecondMagicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyRelayedDamageAction(p, magicNumber));
     }
