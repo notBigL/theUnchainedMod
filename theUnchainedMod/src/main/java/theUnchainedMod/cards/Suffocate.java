@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.CullArmorAction;
+import theUnchainedMod.actions.SuffocateAction;
 import theUnchainedMod.characters.TheUnchained;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -37,6 +37,6 @@ public class Suffocate extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new CullArmorAction(m));
+        AbstractDungeon.actionManager.addToBottom(new SuffocateAction(m));
     }
 }
