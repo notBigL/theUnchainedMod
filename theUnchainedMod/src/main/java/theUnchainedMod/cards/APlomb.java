@@ -1,14 +1,18 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.GainMomentumNextTurnPower;
 import theUnchainedMod.powers.MomentumPower;
+import theUnchainedMod.vfx.APlombWindyEffect;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -44,6 +48,7 @@ public class APlomb extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new VFXAction(new APlombWindyEffect(new Color(0.95F, 0.67F, 0.26F, 1.0F))));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MomentumPower(p, magicNumber)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new GainMomentumNextTurnPower(p, defaultSecondMagicNumber, p)));
