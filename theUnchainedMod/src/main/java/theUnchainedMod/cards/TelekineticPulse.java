@@ -1,7 +1,10 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
@@ -10,6 +13,7 @@ import theUnchainedMod.actions.AllEnemiesLoseHPAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.WreckingBallPower;
+import theUnchainedMod.vfx.TelekineticPulseWaveEffect;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -48,6 +52,7 @@ public class TelekineticPulse extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new TelekineticPulseWaveEffect(p.hb.cX, p.hb.cY, 1000.0F * Settings.scale)));
         AbstractDungeon.actionManager.addToBottom(new AllEnemiesGainBlockAction(defaultSecondMagicNumber));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new WreckingBallPower(p, CHAIN_LENGTH, new AllEnemiesLoseHPAction(magicNumber), magicNumber, TYPE)));
     }
