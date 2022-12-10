@@ -1,6 +1,8 @@
 package theUnchainedMod.cards;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -9,6 +11,7 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.RandomCommonAttackChainPower;
+import theUnchainedMod.vfx.WindupCrossHairEffect;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -47,6 +50,8 @@ public class Windup extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new WindupCrossHairEffect(m.hb.cX, m.hb.cY)));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RandomCommonAttackChainPower(p, defaultSecondMagicNumber, upgraded, TYPE)));
     }
