@@ -20,7 +20,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class TetheredMind extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(TetheredMind.class.getSimpleName());
-    public static final String IMG = makeCardPath("TieTogether.png");
+    public static final String IMG = makeCardPath("TetheredMind.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF_AND_ENEMY;
     private static final CardType TYPE = CardType.SKILL;

@@ -15,10 +15,10 @@ import theUnchainedMod.patches.CustomTags;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class PsychicSwing extends AbstractDynamicCard {
+public class GlyphSwing extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(PsychicSwing.class.getSimpleName());
-    public static final String IMG = makeCardPath("PsychicSwing.png");
+    public static final String ID = DefaultMod.makeID(GlyphSwing.class.getSimpleName());
+    public static final String IMG = makeCardPath("GlyphSwing.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
@@ -30,7 +30,7 @@ public class PsychicSwing extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 8;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
 
-    public PsychicSwing() {
+    public GlyphSwing() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;

@@ -239,8 +239,8 @@
     "NAME": "Cocoon",
     "DESCRIPTION": "Gain !M! theunchainedmod:Relay. Your theunchainedmod:Relay does not wear off at the start of next turn."
   },
-  "theUnchainedMod:PsychicSwing": {
-    "NAME": "Psychic Swing",
+  "theUnchainedMod:GlyphSwing": {
+    "NAME": "Glyph Swing",
     "DESCRIPTION": "Deal !D! damage. Remove up to !M! theunchainedmod:Relayed_Damage and deal damage equal to the amount you removed."
   },
   "theUnchainedMod:Baguazhang": {
