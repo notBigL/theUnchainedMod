@@ -1,5 +1,6 @@
 package theUnchainedMod.cards;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,6 +12,7 @@ import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.TiedToAnEnemyPower;
 import theUnchainedMod.powers.TiedToThePlayerPower;
+import theUnchainedMod.vfx.TetheredMindEffect;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -48,6 +50,7 @@ public class TetheredMind extends AbstractDynamicCard {
         if (m.hasPower("Artifact") && !m.hasPower(TiedToThePlayerPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, 1, false)));
         } else if (!m.hasPower(TiedToThePlayerPower.POWER_ID)) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new TetheredMindEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY)));
             TiedToThePlayerPower tiedToThePlayerPower = new TiedToThePlayerPower(m, p, p);
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, tiedToThePlayerPower));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TiedToAnEnemyPower(p, p, tiedToThePlayerPower, m)));

@@ -2,6 +2,7 @@ package theUnchainedMod.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -15,6 +16,7 @@ import org.apache.logging.log4j.Logger;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.patches.RelayedDamageField;
 import theUnchainedMod.util.TextureLoader;
+import theUnchainedMod.vfx.SmallLaserDifferentColorEffect;
 
 import java.util.ArrayList;
 
@@ -64,6 +66,7 @@ public class TiedToAnEnemyPower extends AbstractPower {
             if (!tttPP.owner.isDeadOrEscaped() && tttPP.owner.hasPower(TiedToThePlayerPower.POWER_ID)) {
                 if (!RelayedDamageField.relayed.get(info)) {
                     tttPP.damageEnemyWhenPlayerIsHit(damageAmount, this.owner);
+                    AbstractDungeon.actionManager.addToTop(new VFXAction(new SmallLaserDifferentColorEffect(owner.hb.cX, owner.hb.cY, tttPP.owner.hb.cX, tttPP.owner.hb.cY)));
                 }
             } else {
                 removeList.add(tttPP);
