@@ -22,7 +22,7 @@ public class SolarPlexusEffect extends AbstractGameEffect {
         this.x = x - (float)(this.img.packedWidth / 2);
         this.y = y - (float)(this.img.packedHeight / 2);
         this.color = Color.YELLOW.cpy();
-        this.duration = 0.5F;
+        this.duration = DUR;
         this.scale = 3.0F;
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
     }
