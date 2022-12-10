@@ -58,7 +58,7 @@ public class FullSpinPower extends AbstractPower implements InvisiblePower {
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
             AbstractDungeon.actionManager.addToBottom(new RevertSwirlToBaseValuesAction());
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            this.amount = 0;
         }
     }
 }
