@@ -50,6 +50,8 @@ public class Kusarigama extends AbstractDynamicCard {
     }
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if(!super.canUse(p, m)) return false;
+
         for (AbstractPower aP : p.powers) {
             if (aP.name.equals("Attack Chain") && aP.amount == 1) {
                 return true;
