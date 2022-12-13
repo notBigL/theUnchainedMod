@@ -168,6 +168,10 @@ public class DefaultMod implements
         return getModID() + "Resources/images/ui/" + resourcePath;
     }
 
+    public static String makeVFXPath(String resourcePath) {
+        return getModID() + "Resources/images/vfx/" + resourcePath;
+    }
+
     public static String makeEnergyOrbLayerPath(String resourcePath) {
         return getModID() + "Resources/char/defaultCharacter/orb/" + resourcePath;
     }

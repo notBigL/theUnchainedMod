@@ -8,20 +8,19 @@ import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
-import static theUnchainedMod.DefaultMod.makeUIPath;
+import static theUnchainedMod.DefaultMod.makeVFXPath;
 
 public class WindupCrossHairEffect extends AbstractGameEffect {
     private final float x;
     private final float y;
     private static final float DUR = 1.5F;
-    private static final Texture IMG = loadImage(makeUIPath("Windup_CrossHair.png"));
+    private static final Texture IMG = loadImage(makeVFXPath("Windup_Cross_Hair.png"));
 
 
     public WindupCrossHairEffect(float x, float y) {
-
         this.x = x;
         this.y = y;
-        this.color = new Color(1.0f, 0.4f, 0.96f, 1.0f);
+        this.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         this.startingDuration = this.duration = DUR;
     }
 
