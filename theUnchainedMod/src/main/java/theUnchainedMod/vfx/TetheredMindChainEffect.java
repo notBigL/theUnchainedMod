@@ -56,7 +56,7 @@ public class TetheredMindChainEffect extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         //sb.setBlendFunction(770, 1);
         sb.setColor(this.color);
-        sb.draw(IMG, this.x - (this.dst / 2), this.y - 56.5F, 465.0F, 56.5F, this.dst, 113.0F, this.scale, this.scale, this.rotation, 0, 0, 930, 113, false, false);
+        sb.draw(IMG, this.x - (this.dst / 2), this.y - 100.0F, 500.0F, 100.0F, this.dst, 200.0F, this.scale, this.scale, this.rotation, 0, 0, 1000, 200, false, false);
         //sb.setColor(new Color(1.F, 0.2F, 0.4F, this.color.a));
         //sb.draw(IMG,this.sX - 465.0F, this.sY - 56.5F, 465.0F, 56.5F, 930.0F, 113.0F, this.scale, this.scale, 0, 0, 0, 930, 113, false, false);
         //sb.setBlendFunction(770, 771);
