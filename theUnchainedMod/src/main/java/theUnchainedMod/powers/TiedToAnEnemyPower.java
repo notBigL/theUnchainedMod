@@ -65,10 +65,9 @@ public class TiedToAnEnemyPower extends AbstractPower {
         ArrayList<TiedToThePlayerPower> removeList = new ArrayList<>();
         for (TiedToThePlayerPower tttPP : tiedToThePlayerPowerList) {
             if (!tttPP.owner.isDeadOrEscaped() && tttPP.owner.hasPower(TiedToThePlayerPower.POWER_ID)) {
-                if (!RelayedDamageField.relayed.get(info)) {
-                    tttPP.damageEnemyWhenPlayerIsHit(damageAmount, this.owner);
-                    AbstractDungeon.actionManager.addToTop(new VFXAction(new TetheredMindChainEffect(owner.hb.cX, owner.hb.cY, tttPP.owner.hb.cX, tttPP.owner.hb.cY)));
-                }
+                tttPP.damageEnemyWhenPlayerIsHit(damageAmount, this.owner);
+                AbstractDungeon.actionManager.addToTop(new VFXAction(new TetheredMindChainEffect(owner.hb.cX, owner.hb.cY, tttPP.owner.hb.cX, tttPP.owner.hb.cY)));
+
             } else {
                 removeList.add(tttPP);
                 if (tiedToThePlayerPowerList.size() == removeList.size()) {
