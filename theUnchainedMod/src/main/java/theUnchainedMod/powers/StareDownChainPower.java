@@ -6,9 +6,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.AllEnemiesWeakAction;
+import theUnchainedMod.actions.StareDownFinishedChainAction;
 
-public class OverviewPower extends AbstractChainPower {
+public class StareDownChainPower extends AbstractChainPower {
     public AbstractCreature source;
 
     public static final String POWER_ID = DefaultMod.makeID("OverviewPower");
@@ -19,8 +19,8 @@ public class OverviewPower extends AbstractChainPower {
 
     private final int weakAmount;
 
-    public OverviewPower(AbstractCreature owner, int amount, int weakAmount, AbstractCard.CardType cardType) {
-        super(POWER_ID, owner, amount, new AllEnemiesWeakAction(weakAmount), cardType);
+    public StareDownChainPower(AbstractCreature owner, int amount, int weakAmount, AbstractCard.CardType cardType) {
+        super(POWER_ID, owner, amount, new StareDownFinishedChainAction(weakAmount), cardType);
         this.name = NAME;
         this.type = POWER_TYPE;
         this.weakAmount = weakAmount;

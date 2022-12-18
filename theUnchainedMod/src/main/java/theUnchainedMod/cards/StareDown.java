@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
-import theUnchainedMod.powers.OverviewPower;
+import theUnchainedMod.powers.StareDownChainPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -51,6 +51,6 @@ public class StareDown extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseDexterityPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new OverviewPower(p, CHAIN_LENGTH, defaultSecondMagicNumber, TYPE)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StareDownChainPower(p, CHAIN_LENGTH, defaultSecondMagicNumber, TYPE)));
     }
 }

@@ -1,10 +1,13 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.AllEnemiesLoseStrengthAction;
 import theUnchainedMod.characters.TheUnchained;
@@ -45,6 +48,7 @@ public class Glare extends AbstractDynamicCard{
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, block));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new GiantEyeEffect(p.hb.cX, p.hb.cY, new Color(0.18F, 0.87F, 0.69F, 1.0F))));
         AbstractDungeon.actionManager.addToBottom(new AllEnemiesLoseStrengthAction(magicNumber));
     }
 }
