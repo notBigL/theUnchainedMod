@@ -1,0 +1,132 @@
+
+ThePrinceUnbound.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Back Foot
+  rotate: false
+  xy: 119, 180
+  size: 20, 39
+  orig: 20, 40
+  offset: 0, 0
+  index: -1
+Front Foot
+  rotate: false
+  xy: 97, 180
+  size: 20, 39
+  orig: 21, 40
+  offset: 0, 0
+  index: -1
+Back Lower Leg
+  rotate: false
+  xy: 152, 1
+  size: 31, 52
+  orig: 32, 53
+  offset: 0, 0
+  index: -1
+Back Upper Leg
+  rotate: false
+  xy: 64, 200
+  size: 31, 39
+  orig: 31, 40
+  offset: 0, 1
+  index: -1
+Back Upper Arm
+  rotate: false
+  xy: 1, 205
+  size: 19, 41
+  orig: 19, 41
+  offset: 0, 0
+  index: -1
+Front Lower Leg
+  rotate: false
+  xy: 113, 116
+  size: 30, 62
+  orig: 31, 62
+  offset: 0, 0
+  index: -1
+Back Lower Arm
+  rotate: false
+  xy: 118, 1
+  size: 32, 65
+  orig: 33, 65
+  offset: 1, 0
+  index: -1
+Front Upper Leg
+  rotate: false
+  xy: 32, 158
+  size: 30, 43
+  orig: 30, 43
+  offset: 0, 0
+  index: -1
+Neck Area
+  rotate: false
+  xy: 130, 68
+  size: 52, 34
+  orig: 52, 34
+  offset: 0, 0
+  index: -1
+Neck
+  rotate: false
+  xy: 137, 221
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+Body
+  rotate: false
+  xy: 1, 1
+  size: 74, 127
+  orig: 74, 127
+  offset: 0, 0
+  index: -1
+Front Upper Arm
+  rotate: false
+  xy: 1, 158
+  size: 29, 45
+  orig: 29, 45
+  offset: 0, 0
+  index: -1
+Front Lower Arm
+  rotate: false
+  xy: 77, 1
+  size: 39, 67
+  orig: 39, 67
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 64, 158
+  size: 31, 40
+  orig: 31, 40
+  offset: 0, 0
+  index: -1
+Face BG
+  rotate: false
+  xy: 32, 203
+  size: 26, 33
+  orig: 26, 33
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 1, 130
+  size: 110, 26
+  orig: 110, 26
+  offset: 0, 0
+  index: -1
+Hair
+  rotate: false
+  xy: 77, 70
+  size: 51, 44
+  orig: 51, 44
+  offset: 0, 0
+  index: -1
+Crown
+  rotate: false
+  xy: 97, 221
+  size: 38, 20
+  orig: 40, 22
+  offset: 1, 2
+  index: -1
