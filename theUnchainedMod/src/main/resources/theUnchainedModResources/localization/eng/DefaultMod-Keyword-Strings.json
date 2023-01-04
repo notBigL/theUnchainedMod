@@ -60,5 +60,13 @@
       "stun"
     ],
     "DESCRIPTION": "Enemy does nothing this turn."
+  },
+  {
+    "PROPER_NAME": "Defenses",
+    "NAMES": [
+      "Defenses",
+      "defenses"
+    ],
+    "DESCRIPTION": "Block and ALL defensive Buffs that trigger when enemies are hit."
   }
 ]

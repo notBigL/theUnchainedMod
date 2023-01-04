@@ -146,7 +146,7 @@
   },
   "theUnchainedMod:RazorChain": {
     "NAME": "Razor Chain",
-    "DESCRIPTION": "Deal !D! damage. Ignores enemy Block."
+    "DESCRIPTION": "Deal !D! damage. Ignores theunchainedmod:Defenses."
   },
   "theUnchainedMod:GuardedPosture": {
     "NAME": "Guarded Posture",
