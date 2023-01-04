@@ -553,6 +553,9 @@ public class DefaultMod implements
         BaseMod.addAudio("relayBreak", makeAudioPath("relayBreak.ogg"));
         BaseMod.addAudio("unchainedSelect", makeAudioPath("unchainedSelect.ogg"));
         BaseMod.addAudio("normalChainAttack", makeAudioPath("normalChainAttack.ogg"));
+        BaseMod.addAudio("arcaneCharmApplication", makeAudioPath("arcaneCharmApplication.ogg"));
+        BaseMod.addAudio("glyphBeam", makeAudioPath("glyphBeam.ogg"));
+
 
         logger.info("Done adding audios");
     }

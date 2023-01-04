@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
@@ -43,6 +44,7 @@ public class ArcaneCharm extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new ArcaneCharmEffect(p.hb.cX, p.hb.cY)));
+        CardCrawlGame.sound.play("arcaneCharmApplication");
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArcaneCharmPower(p, p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.NONE));
     }
 }
