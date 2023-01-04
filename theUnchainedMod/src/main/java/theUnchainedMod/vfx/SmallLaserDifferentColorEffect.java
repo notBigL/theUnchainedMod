@@ -7,7 +7,9 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
@@ -39,6 +41,7 @@ public class SmallLaserDifferentColorEffect extends AbstractGameEffect {
     }
 
     public void update() {
+        if(this.duration == this.startingDuration) CardCrawlGame.sound.play("glyphBeam", 0.2F);
         this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration > this.startingDuration / 2.0F) {
             this.color.a = Interpolation.pow2In.apply(1.0F, 0.0F, (this.duration - 0.25F) * 4.0F);

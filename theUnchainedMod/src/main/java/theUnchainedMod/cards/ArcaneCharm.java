@@ -44,7 +44,7 @@ public class ArcaneCharm extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new ArcaneCharmEffect(p.hb.cX, p.hb.cY)));
-        CardCrawlGame.sound.play("arcaneCharmApplication");
+        CardCrawlGame.sound.play("arcaneCharmApplication", 0.2F);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArcaneCharmPower(p, p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.NONE));
     }
 }
