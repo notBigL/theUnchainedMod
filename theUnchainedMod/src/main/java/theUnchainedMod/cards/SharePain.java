@@ -1,6 +1,7 @@
 package theUnchainedMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.RelayedDmgSum;
+import theUnchainedMod.vfx.SharePainEffect;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -68,10 +70,9 @@ public class SharePain extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.damage += this.magicNumber;
         this.calculateCardDamage(m);
-        //if (this.upgraded) {
-        //    AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(defaultSecondMagicNumber, m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
-        //} else {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE, true));
-        //}
+        for (int i = 0; i < Math.min(this.damage, 200.0F); i += 5) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SharePainEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY)));
+        }
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE, true));
     }
 }
