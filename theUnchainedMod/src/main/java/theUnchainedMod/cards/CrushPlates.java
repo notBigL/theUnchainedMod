@@ -20,8 +20,8 @@ public class CrushPlates extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_PLUS_DAMAGE = 4;
+    private static final int DAMAGE = 10;
+    private static final int UPGRADE_PLUS_DAMAGE = 5;
 
     public CrushPlates() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
