@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.AllEnemiesLoseStrengthAction;
+import theUnchainedMod.actions.AllEnemiesVulnerableAction;
 import theUnchainedMod.characters.TheUnchained;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -24,10 +24,10 @@ public class Glare extends AbstractDynamicCard{
     public static final AbstractCard.CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
-    private static final int BLOCK = 5;
-    private static final int MAGIC_NUMBER = 1;
+    private static final int BLOCK = 7;
+    private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
-
 
 
     public Glare() {
@@ -41,6 +41,7 @@ public class Glare extends AbstractDynamicCard{
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
     }
@@ -49,6 +50,6 @@ public class Glare extends AbstractDynamicCard{
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, block));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new GiantEyeEffect(p.hb.cX, p.hb.cY, new Color(0.18F, 0.87F, 0.69F, 1.0F))));
-        AbstractDungeon.actionManager.addToBottom(new AllEnemiesLoseStrengthAction(magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new AllEnemiesVulnerableAction(magicNumber));
     }
 }

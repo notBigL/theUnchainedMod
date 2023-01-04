@@ -267,7 +267,7 @@
   },
   "theUnchainedMod:Cuff": {
     "NAME": "Cuff",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Apply !M! Weak. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Enemy loses !M! Strength. NL Exhaust."
   },
   "theUnchainedMod:Premonition": {
     "NAME": "Premonition",
@@ -336,7 +336,7 @@
   },
   "theUnchainedMod:Glare": {
     "NAME": "Glare",
-    "DESCRIPTION": "Gain !B! Block. ALL enemies lose !M! Strength. Exhaust."
+    "DESCRIPTION": "Gain !B! Block. Apply !M! Vulnerable to ALL enemies. Exhaust."
   },
   "theUnchainedMod:GraspFuture": {
     "NAME": "Grasp Future",
