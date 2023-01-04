@@ -39,14 +39,14 @@ public class PolishedChains extends CustomRelic {
             this.beginLongPulse();
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new OiledChainsPower(AbstractDungeon.player, AbstractDungeon.player,1)));
-        } else if (this.counter == 7) {
+        } else if (this.counter >= 7) {
             this.stopPulse();
             this.counter = 0;
         }
     }
 
     public void onVictory() {
-        this.counter = 0;
+        this.counter = -1;
         this.stopPulse();
         this.grayscale = false;
     }

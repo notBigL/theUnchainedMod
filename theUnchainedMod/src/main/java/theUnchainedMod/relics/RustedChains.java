@@ -44,7 +44,7 @@ public class RustedChains extends CustomRelic {
     }
 
     public void onVictory() {
-        this.counter = 0;
+        this.counter = -1;
         this.stopPulse();
         this.grayscale = false;
     }

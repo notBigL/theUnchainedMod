@@ -41,12 +41,12 @@ public class TotemOfPain extends CustomRelic {
     }
 
     public void onEquip() {
-        counter = 0;
+        counter = -1;
     }
 
     @Override
     public void onVictory() {
-        counter = 0;
+        counter = -1;
     }
 
     @Override

@@ -43,12 +43,12 @@ public class DancingRibbons extends CustomRelic {
 
     public void onVictory() {
         this.stopPulse();
-        counter = 0;
+        counter = -1;
     }
 
     @Override
     public void onPlayerEndTurn() {
-        if (counter > 1) {
+        if (counter > 0) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Swirl(), 1, false));
