@@ -77,7 +77,7 @@ public class DefaultMod implements
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "The Unchained Mod";
     private static final String AUTHOR = "Mezix & BigL"; // And pretty soon - You!
-    private static final String DESCRIPTION = "A new Character with 75+ new cards, 10+ new Relics, 3 new Potions and 3+ fun archetypes you can play around with and have a lil fun!";
+    private static final String DESCRIPTION = "A new Character with 75+ new cards, 10+ new Relics, 3 new Potions and 4 distinct archetypes you can play around with and have a lot of fun!";
 
     // =============== INPUT TEXTURE LOCATION =================
 
@@ -311,7 +311,7 @@ public class DefaultMod implements
         ModPanel settingsPanel = new ModPanel();
 
         // Create the on/off button:
-        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This is the text which goes next to the checkbox.",
+        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This does nothing except making a sound.",
                 350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
                 enablePlaceholder, // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
@@ -473,10 +473,6 @@ public class DefaultMod implements
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Character-Strings.json");
-
-        // OrbStrings
-        BaseMod.loadCustomStringsFile(OrbStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Orb-Strings.json");
 
         // UI Strings
         BaseMod.loadCustomStringsFile(UIStrings.class,
