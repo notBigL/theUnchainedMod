@@ -11,6 +11,8 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.RandomCommonAttackChainPower;
+import theUnchainedMod.powers.WhiplashPower;
+import theUnchainedMod.relics.Churros;
 import theUnchainedMod.vfx.WindupCrossHairEffect;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
@@ -54,5 +56,12 @@ public class Windup extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false)));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RandomCommonAttackChainPower(p, defaultSecondMagicNumber, upgraded, TYPE)));
+        if (p.hasRelic(Churros.ID)) {
+            Churros churros = (Churros) p.getRelic(Churros.ID);
+            if (!churros.isEaten()) {
+                churros.eat();
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RandomCommonAttackChainPower(p, defaultSecondMagicNumber, upgraded, TYPE)));
+            }
+        }
     }
 }

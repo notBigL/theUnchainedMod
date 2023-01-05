@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -17,6 +18,9 @@ import theUnchainedMod.actions.GainMomentumAction;
 import theUnchainedMod.cards.Liberation;
 import theUnchainedMod.relics.Carabiner;
 import theUnchainedMod.util.TextureLoader;
+import theUnchainedMod.util.UtilityClass;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
 public class AbstractChainPower extends AbstractPower {
     private static final Texture attackTexture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/AttackChain_power48.png");
@@ -40,7 +44,6 @@ public class AbstractChainPower extends AbstractPower {
         this.cardType = cardType;
         loadTextures(this.cardType);
         this.powerIdWithoutOffset = powerID;
-        //instantFinishCheck();
 
     }
 
@@ -57,11 +60,11 @@ public class AbstractChainPower extends AbstractPower {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
                 break;
             case "theUnchainedMod:Liberation":
-                AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID, "liberation"));
+                AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, this.ID, true));
                 this.flash();
                 break;
             default:
-                AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, finishedChainAction, this.ID));
+                AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, this.ID));
                 if (this.cardType == c.type) {
                     this.flash();
                 }
@@ -82,27 +85,29 @@ public class AbstractChainPower extends AbstractPower {
         }
     }
 
-/*    private void instantFinishCheck() {
-        AbstractPlayer player = (AbstractPlayer) owner;
-        String fuseChainID = "theUnchainedMod:FuseChainPower";
-        if (player.hasPower(fuseChainID)) {
-            player.getPower(fuseChainID).reducePower(1);
-            AbstractDungeon.actionManager.addToTop(this.finishedChainAction);
-            if (player.hasPower("theUnchainedMod:AccelerationPower")) {
-                player.getPower("theUnchainedMod:AccelerationPower").onSpecificTrigger();
+    public void finishMe() {
+        AbstractDungeon.actionManager.addToBottom(finishedChainAction);
+        checkForFinishers();
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+    }
+
+
+    private void checkForFinishers() {
+        if (player.hasPower(AccelerationPower.POWER_ID)) {
+            player.getPower(AccelerationPower.POWER_ID).onSpecificTrigger();
+        }
+        if (player.hasPower(FluidMovementPower.POWER_ID)) {
+            int momentumAmount = player.getPower(FluidMovementPower.POWER_ID).amount;
+            if (momentumAmount > 0) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(player, player, new MomentumPower(player, momentumAmount)));
             }
-            if (player.hasPower("theUnchainedMod:FluidMovementPower")) {
-                int momentumAmount = player.getPower("theUnchainedMod:FluidMovementPower").amount;
-                if (momentumAmount > 0) {
-                    AbstractDungeon.actionManager.addToBottom(new GainMomentumAction(momentumAmount));
-                }
-            }
-            if (player.hasPower("theUnchainedMod:ThreadOfAriadnePower")) {
-                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(player.getPower("theUnchainedMod:ThreadOfAriadnePower").amount));
-            }
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, this));
+        }
+        if (player.hasPower(ChaseDestinyPower.POWER_ID)) {
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+        }
+        if (player.hasPower(GuardedPosturePower.POWER_ID)) {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, player.getPower(GuardedPosturePower.POWER_ID).amount));
         }
     }
 
- */
 }

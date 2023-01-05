@@ -10,6 +10,8 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.StareDownChainPower;
+import theUnchainedMod.powers.WhiplashPower;
+import theUnchainedMod.relics.Churros;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -30,7 +32,6 @@ public class StareDown extends AbstractDynamicCard {
     private static final int CHAIN_LENGTH = 1;
 
 
-
     public StareDown() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
@@ -40,7 +41,7 @@ public class StareDown extends AbstractDynamicCard {
 
     @Override
     public void upgrade() {
-        if(!upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
@@ -52,5 +53,12 @@ public class StareDown extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseDexterityPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StareDownChainPower(p, CHAIN_LENGTH, defaultSecondMagicNumber, TYPE)));
+        if (p.hasRelic(Churros.ID)) {
+            Churros churros = (Churros) p.getRelic(Churros.ID);
+            if (!churros.isEaten()) {
+                churros.eat();
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StareDownChainPower(p, CHAIN_LENGTH, defaultSecondMagicNumber, TYPE)));
+            }
+        }
     }
 }

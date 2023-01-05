@@ -10,6 +10,8 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.LastResortPower;
+import theUnchainedMod.powers.WhiplashPower;
+import theUnchainedMod.relics.Churros;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -38,7 +40,7 @@ public class LastResort extends AbstractDynamicCard {
 
     @Override
     public void upgrade() {
-        if(!upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
         }
@@ -49,5 +51,12 @@ public class LastResort extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(magicNumber));
         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_GAIN));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LastResortPower(p, defaultSecondMagicNumber, TYPE)));
+        if (p.hasRelic(Churros.ID)) {
+            Churros churros = (Churros) p.getRelic(Churros.ID);
+            if (!churros.isEaten()) {
+                churros.eat();
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LastResortPower(p, defaultSecondMagicNumber, TYPE)));
+            }
+        }
     }
 }

@@ -9,6 +9,8 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.PlayDeadPower;
+import theUnchainedMod.powers.WhiplashPower;
+import theUnchainedMod.relics.Churros;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -37,7 +39,7 @@ public class HeartfeltSpeech extends AbstractDynamicCard {
 
     @Override
     public void upgrade() {
-        if(!upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
         }
@@ -47,5 +49,12 @@ public class HeartfeltSpeech extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VulnerablePower(p, this.magicNumber, false)));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PlayDeadPower(p, defaultSecondMagicNumber, TYPE)));
+        if (p.hasRelic(Churros.ID)) {
+            Churros churros = (Churros) p.getRelic(Churros.ID);
+            if (!churros.isEaten()) {
+                churros.eat();
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new PlayDeadPower(p, defaultSecondMagicNumber, TYPE)));
+            }
+        }
     }
 }

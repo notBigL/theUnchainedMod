@@ -9,6 +9,8 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.StepBackPower;
+import theUnchainedMod.powers.WhiplashPower;
+import theUnchainedMod.relics.Churros;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -40,7 +42,7 @@ public class StepBack extends AbstractDynamicCard {
 
     @Override
     public void upgrade() {
-        if(!upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
             this.rawDescription = UPGRADE_DESCRIPTION;
@@ -52,5 +54,12 @@ public class StepBack extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new StepBackPower(p, this.defaultSecondMagicNumber, this.block, TYPE)));
+        if (p.hasRelic(Churros.ID)) {
+            Churros churros = (Churros) p.getRelic(Churros.ID);
+            if (!churros.isEaten()) {
+                churros.eat();
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new StepBackPower(p, this.defaultSecondMagicNumber, this.block, TYPE)));
+            }
+        }
     }
 }

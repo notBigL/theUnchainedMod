@@ -13,6 +13,8 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.BrassKnucklePower;
+import theUnchainedMod.powers.WhiplashPower;
+import theUnchainedMod.relics.Churros;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -52,5 +54,12 @@ public class LashOut extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY, false, true));
         CardCrawlGame.sound.play("normalChainAttack");
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new BrassKnucklePower(p, CHAIN_LENGTH, new GainEnergyAction(baseMagicNumber), TYPE)));
+        if (p.hasRelic(Churros.ID)) {
+            Churros churros = (Churros) p.getRelic(Churros.ID);
+            if (!churros.isEaten()) {
+                churros.eat();
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new BrassKnucklePower(p, CHAIN_LENGTH, new GainEnergyAction(baseMagicNumber), TYPE)));
+            }
+        }
     }
 }

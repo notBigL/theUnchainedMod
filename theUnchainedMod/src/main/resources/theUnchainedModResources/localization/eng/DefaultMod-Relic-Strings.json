@@ -64,7 +64,7 @@
     "NAME": "Churros",
     "FLAVOR": "These tasty treats fill you with a burst of energy.",
     "DESCRIPTIONS": [
-      "The first card that applies a Chain you play each turn, is played twice."
+      "The first Chain you apply each turn, is applied twice."
     ]
   },
   "theUnchainedMod:Memento": {

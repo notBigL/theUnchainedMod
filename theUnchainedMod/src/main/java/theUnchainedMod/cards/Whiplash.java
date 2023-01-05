@@ -12,6 +12,7 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.WhiplashPower;
+import theUnchainedMod.relics.Churros;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -39,7 +40,7 @@ public class Whiplash extends AbstractDynamicCard {
 
     @Override
     public void upgrade() {
-        if(!upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeBaseCost(0);
         }
@@ -50,5 +51,12 @@ public class Whiplash extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL, false, true));
         CardCrawlGame.sound.play("normalChainAttack");
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new WhiplashPower(p, defaultSecondMagicNumber, m, this.magicNumber, TYPE)));
+        if (p.hasRelic(Churros.ID)) {
+            Churros churros = (Churros) p.getRelic(Churros.ID);
+            if (!churros.isEaten()) {
+                churros.eat();
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new WhiplashPower(p, defaultSecondMagicNumber, m, this.magicNumber, TYPE)));
+            }
+        }
     }
 }

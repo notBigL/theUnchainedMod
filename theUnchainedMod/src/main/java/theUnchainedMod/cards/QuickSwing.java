@@ -13,6 +13,8 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.QuickSwingPower;
+import theUnchainedMod.powers.WhiplashPower;
+import theUnchainedMod.relics.Churros;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -42,7 +44,7 @@ public class QuickSwing extends AbstractDynamicCard {
 
     @Override
     public void upgrade() {
-        if(!upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
@@ -54,5 +56,12 @@ public class QuickSwing extends AbstractDynamicCard {
         CardCrawlGame.sound.playA("swingAttack", MathUtils.random(-0.2F, 0.2F));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, false, true));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new QuickSwingPower(p, CHAIN_LENGTH, this.magicNumber, TYPE)));
+        if (p.hasRelic(Churros.ID)) {
+            Churros churros = (Churros) p.getRelic(Churros.ID);
+            if (!churros.isEaten()) {
+                churros.eat();
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new QuickSwingPower(p, CHAIN_LENGTH, this.magicNumber, TYPE)));
+            }
+        }
     }
 }

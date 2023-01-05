@@ -12,6 +12,8 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.CuffPower;
+import theUnchainedMod.powers.WhiplashPower;
+import theUnchainedMod.relics.Churros;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -56,6 +58,13 @@ public class Cuff extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL, false, true));
         CardCrawlGame.sound.play("normalChainAttack");
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CuffPower(p, defaultSecondMagicNumber, m, magicNumber, TYPE)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new CuffPower(p, defaultSecondMagicNumber, m, magicNumber, TYPE)));
+        if (p.hasRelic(Churros.ID)) {
+            Churros churros = (Churros) p.getRelic(Churros.ID);
+            if (!churros.isEaten()) {
+                churros.eat();
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new CuffPower(p, defaultSecondMagicNumber, m, magicNumber, TYPE)));
+            }
+        }
     }
 }

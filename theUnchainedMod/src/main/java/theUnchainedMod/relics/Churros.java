@@ -23,10 +23,11 @@ public class Churros extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Churros_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Churros_relic.png"));
 
-    private boolean eaten = false;
+    private boolean eaten;
 
     public Churros() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
+        eaten = false;
     }
 
 
@@ -41,34 +42,20 @@ public class Churros extends CustomRelic {
         this.beginLongPulse();
     }
 
+    public boolean isEaten() {
+        return eaten;
+    }
+
     public void onVictory() {
+        eaten = false;
         this.stopPulse();
     }
 
-    @Override
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.tags.contains(CustomTags.CHAIN) && !this.eaten) {
-            this.eaten = true;
-            this.flash();
-            this.stopPulse();
-            AbstractMonster m = null;
-            if (action.target != null) {
-                m = (AbstractMonster)action.target;
-            }
-
-            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractCard tmp = card.makeSameInstanceOf();
-            tmp.current_x = card.current_x;
-            tmp.current_y = card.current_y;
-            tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-            tmp.target_y = (float)Settings.HEIGHT / 2.0F;
-            tmp.applyPowers();
-            tmp.purgeOnUse = true;
-            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
-            this.pulse = false;
-        }
-
+    public void eat() {
+        eaten = true;
+        this.stopPulse();
     }
+
 
     @Override
     public String getUpdatedDescription() {
