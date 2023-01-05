@@ -10,9 +10,8 @@
   "theUnchainedMod:ChainGrease": {
     "NAME": "Chain Grease",
     "DESCRIPTIONS": [
-      "Add a Liberation into your hand. It costs zero this turn.",
-      "Add ",
-      " Liberations into your hand. They cost zero this turn."
+      "Gain ",
+      " Block. Remove ALL Relayed Damage. Finish ALL your active Chains."
     ]
   },
   "theUnchainedMod:DancePotion": {
