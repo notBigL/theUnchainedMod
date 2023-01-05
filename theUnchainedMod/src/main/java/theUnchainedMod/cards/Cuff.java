@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
@@ -30,10 +31,10 @@ public class Cuff extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 3;
-    private static final int UPGRADE_PLUS_DMG = 2;
     private static final int MAGIC_NUMBER = 3;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
-    private static final int SECOND_MAGIC_NUMBER = 1;
+    private static final int SECOND_MAGIC_NUMBER = 2;
+    private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 1;
 
     public Cuff() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -49,21 +50,22 @@ public class Cuff extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
+            upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL, false, true));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, defaultSecondMagicNumber, false)));
         CardCrawlGame.sound.play("normalChainAttack");
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new CuffPower(p, defaultSecondMagicNumber, m, magicNumber, TYPE)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new CuffPower(p, 2, m, magicNumber, TYPE)));
         if (p.hasRelic(Churros.ID)) {
             Churros churros = (Churros) p.getRelic(Churros.ID);
             if (!churros.isEaten()) {
                 churros.eat();
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new CuffPower(p, defaultSecondMagicNumber, m, magicNumber, TYPE)));
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new CuffPower(p, 2, m, magicNumber, TYPE)));
             }
         }
     }

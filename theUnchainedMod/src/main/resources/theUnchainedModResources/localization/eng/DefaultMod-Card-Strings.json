@@ -267,7 +267,7 @@
   },
   "theUnchainedMod:Cuff": {
     "NAME": "Cuff",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Enemy loses !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Apply !theUnchainedMod:SecondMagic! Weak. NL 2 theunchainedmod:Chain: Enemy loses !M! Strength. NL Exhaust."
   },
   "theUnchainedMod:Premonition": {
     "NAME": "Premonition",

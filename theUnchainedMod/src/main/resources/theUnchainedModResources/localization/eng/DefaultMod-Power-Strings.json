@@ -282,10 +282,10 @@
   "theUnchainedMod:HobblesPower": {
     "NAME": "Attack Chain",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this Turn, apply #y",
-      " Weak to the enemy.",
+      "If you play #b1 more Attack this Turn, enemy loses #y",
+      " Strength.",
       "If you play #b",
-      " more Attacks this Turn, apply #y"
+      " more Attacks this Turn, enemy loses #y"
     ]
   },
   "theUnchainedMod:SwingingPower": {
