@@ -152,10 +152,6 @@ public class DefaultMod implements
         return getModID() + "Resources/images/powers/" + resourcePath;
     }
 
-    public static String makeEventPath(String resourcePath) {
-        return getModID() + "Resources/images/events/" + resourcePath;
-    }
-
     public static String makePotionPath(String resourcePath) {
         return getModID() + "Resources/images/potions/" + resourcePath;
     }
@@ -338,30 +334,6 @@ public class DefaultMod implements
 
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
-
-        // =============== EVENTS =================
-        // https://github.com/daviscook477/BaseMod/wiki/Custom-Events
-
-        // You can add the event like so:
-        // BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
-        // Then, this event will be exclusive to the City (act 2), and will show up for all characters.
-        // If you want an event that's present at any part of the game, simply don't include the dungeon ID
-
-        // If you want to have more specific event spawning (e.g. character-specific or so)
-        // deffo take a look at that basemod wiki link as well, as it explains things very in-depth
-        // btw if you don't provide event type, normal is assumed by default
-
-        // Create a new event builder
-        // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
-        //AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
-        //        .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
-        //        .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
-        //        .create();
-
-        // Add the event
-        //BaseMod.addEvent(eventParams);
-
-        // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
     }
 
@@ -493,10 +465,6 @@ public class DefaultMod implements
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Relic-Strings.json");
-
-        // Event Strings
-        BaseMod.loadCustomStringsFile(EventStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Event-Strings.json");
 
         // PotionStrings
         BaseMod.loadCustomStringsFile(PotionStrings.class,
