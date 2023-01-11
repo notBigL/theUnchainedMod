@@ -19,7 +19,7 @@
       "relaying",
       "relay."
     ],
-    "DESCRIPTION": "Prevents damage after Block. NL Half of it is dealt to the Player in 2 turns as Relayed Damage. Relayed Damage cannot be blocked by Relay."
+    "DESCRIPTION": "Prevents damage after Block. NL Half of the prevented damage is dealt to the Player in 2 turns as Relayed Damage. Relayed Damage cannot be blocked by Relay."
   },
   {
     "PROPER_NAME": "Relayed Damage",
@@ -27,7 +27,7 @@
       "Relayed Damage",
       "relayed_damage"
     ],
-    "DESCRIPTION": "Damage that has been relayed. Half of it is dealt to the Player at the end of the next turn. Is not blocked by Relay."
+    "DESCRIPTION": "Damage that was blocked by Relay. Half of it is dealt to the Player at the end of the next turn. Is not blocked by Relay."
   },
   {
     "PROPER_NAME": "Momentum",
