@@ -159,8 +159,8 @@
   },
   "theUnchainedMod:Windup": {
     "NAME": "Windup",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random common Attack to your hand. NL It exhausts. It costs zero this turn.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random upgraded common Attack to your hand. NL It exhausts. It costs zero this turn."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random common Attack to your hand. NL It exhausts. It costs 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random upgraded common Attack to your hand. NL It exhausts. It costs 0 this turn."
   },
   "theUnchainedMod:APlomb": {
     "NAME": "À Plomb",
