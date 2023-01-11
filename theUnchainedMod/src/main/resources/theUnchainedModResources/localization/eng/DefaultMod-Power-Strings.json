@@ -51,8 +51,8 @@
   "theUnchainedMod:RelayPower": {
     "NAME": "Relay",
     "DESCRIPTIONS": [
-      "ALL damage taken this turn is reduced by #b",
-      " NL The reduced amount is taken at the end of your next turn."
+      "Blocks #b",
+      " damage this turn. Blocked damage is gained as Relayed Damage."
     ]
   },
   "theUnchainedMod:RelayedDamagePower": {
