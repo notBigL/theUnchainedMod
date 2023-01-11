@@ -26,6 +26,7 @@ public class FouettéEnTournant extends AbstractDynamicCard {
     public FouettéEnTournant() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
+        this.cardsToPreview = new Swirl();
     }
 
     @Override

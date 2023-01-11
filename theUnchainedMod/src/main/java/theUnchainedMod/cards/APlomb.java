@@ -36,6 +36,7 @@ public class APlomb extends AbstractDynamicCard {
         baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
+        this.cardsToPreview = new Swirl();
     }
 
     @Override
