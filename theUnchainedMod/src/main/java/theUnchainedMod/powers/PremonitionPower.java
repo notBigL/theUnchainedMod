@@ -13,9 +13,9 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.util.TextureLoader;
 
-public class GlimpseIntoFuturePower extends AbstractPower {
+public class PremonitionPower extends AbstractPower {
 
-    public static final String POWER_ID = DefaultMod.makeID("GlimpseIntoFuturePower");
+    public static final String POWER_ID = DefaultMod.makeID("PremonitionPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -25,7 +25,7 @@ public class GlimpseIntoFuturePower extends AbstractPower {
 
     private boolean energyDepleted;
 
-    public GlimpseIntoFuturePower(final AbstractCreature owner, final int amount) {
+    public PremonitionPower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;

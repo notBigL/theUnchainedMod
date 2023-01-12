@@ -234,8 +234,8 @@
       " Block."
     ]
   },
-  "theUnchainedMod:GlimpseIntoFuturePower": {
-    "NAME": "A Glimpse into the Future",
+  "theUnchainedMod:PremonitionPower": {
+    "NAME": "Premonition",
     "DESCRIPTIONS": [
       "If you end your turn with 0 Energy, gain #y",
       " Energy next turn.",
