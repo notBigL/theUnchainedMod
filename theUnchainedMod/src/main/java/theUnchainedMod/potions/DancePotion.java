@@ -23,10 +23,7 @@ public class DancePotion extends CustomPotion {
     public DancePotion() {
         // The bottle shape and inside is determined by potion size and color. The actual colors are the main DefaultMod.java
         super(NAME, POTION_ID, PotionRarity.RARE, CustomPotionEnums.DANCE, PotionColor.SMOKE);
-        potency = getPotency();
-        description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
         isThrown = false;
-        tips.add(new PowerTip(name, description));
     }
 
     @Override

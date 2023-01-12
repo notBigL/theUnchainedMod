@@ -23,10 +23,7 @@ public class CrushingElixir extends CustomPotion {
     public CrushingElixir() {
         // The bottle shape and inside is determined by potion size and color. The actual colors are the main DefaultMod.java
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, CustomPotionEnums.CRUSH, PotionColor.ANCIENT);
-        potency = getPotency();
-        description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
         isThrown = false;
-        tips.add(new PowerTip(name, description));
     }
 
     @Override

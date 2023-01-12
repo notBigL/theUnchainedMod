@@ -24,20 +24,20 @@ public class ChainGrease extends CustomPotion {
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
 
     public static final String NAME = potionStrings.NAME;
-            public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
+    public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public ChainGrease() {
-                super(NAME, POTION_ID, PotionRarity.COMMON, CustomPotionEnums.LINK, PotionColor.SMOKE);
-                isThrown = false;
-            }
+        super(NAME, POTION_ID, PotionRarity.COMMON, CustomPotionEnums.LINK, PotionColor.SMOKE);
+        isThrown = false;
+    }
 
-            @Override
-            public void use(AbstractCreature target) {
-                target = AbstractDungeon.player;
-                if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-                    AbstractDungeon.actionManager.addToBottom(new GainBlockAction(target, potency));
-                    AbstractDungeon.actionManager.addToBottom(new RemoveRelayedDamageAction((AbstractPlayer) target));
-                    for (AbstractPower power : target.powers) {
+    @Override
+    public void use(AbstractCreature target) {
+        target = AbstractDungeon.player;
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(target, potency));
+            AbstractDungeon.actionManager.addToBottom(new RemoveRelayedDamageAction((AbstractPlayer) target));
+            for (AbstractPower power : target.powers) {
                 if (power instanceof AbstractChainPower) {
                     ((AbstractChainPower) power).finishMe();
                 }
