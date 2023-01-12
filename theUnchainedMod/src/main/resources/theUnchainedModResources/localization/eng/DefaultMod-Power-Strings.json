@@ -105,13 +105,15 @@
   "theUnchainedMod:TiedToThePlayerPower": {
     "NAME": "Tied to the Player",
     "DESCRIPTIONS": [
-      "This enemy loses HP everytime the player takes damage."
+      "This enemy loses HP #y",
+      " times",
+      " everytime the player takes damage."
     ]
   },
   "theUnchainedMod:TiedToAnEnemyPower": {
     "NAME": "Tied to an enemy",
     "DESCRIPTIONS": [
-      "This unit is tied to an enemy."
+      "Your mind is tied to an enemy."
     ]
   },
   "theUnchainedMod:CruiserweightPower": {

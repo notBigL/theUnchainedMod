@@ -102,10 +102,7 @@
   },
   "theUnchainedMod:TetheredMind": {
     "NAME": "Tethered Mind",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL Enemy loses HP equal to ALL damage done to HP and theunchainedmod:Relay. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "I am already tied to this enemy."
-    ]
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL Whenever you take damage or damage is blocked by relay, the enemy loses the same amount of HP. NL Exhaust."
   },
   "theUnchainedMod:Liberation": {
     "NAME": "Liberation",

@@ -81,6 +81,14 @@ public class TiedToAnEnemyPower extends AbstractPower {
         }
     }
 
+    @Override
+    public void atStartOfTurn() {
+        tiedToThePlayerPowerList.removeIf(tttPP -> tttPP.owner.isDeadOrEscaped() || !tttPP.owner.hasPower(TiedToThePlayerPower.POWER_ID));
+        if (tiedToThePlayerPowerList.isEmpty()) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
+    }
+
     public void removeMe(TiedToThePlayerPower tttPP) {
         tiedToThePlayerPowerList.remove(tttPP);
         if (tiedToThePlayerPowerList.isEmpty()) {

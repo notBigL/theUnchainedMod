@@ -29,11 +29,11 @@ public class TiedToThePlayerPower extends AbstractPower {
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/TiedToThePlayerPower_power128.png");
     private final AbstractPlayer player;
 
-    public TiedToThePlayerPower(final AbstractCreature owner, final AbstractCreature source, AbstractPlayer player) {
+    public TiedToThePlayerPower(final AbstractCreature owner, final AbstractCreature source, AbstractPlayer player, final int amount) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
-        this.amount = -1;
+        this.amount = amount;
         this.source = source;
         type = PowerType.DEBUFF;
         isTurnBased = false;
@@ -46,10 +46,15 @@ public class TiedToThePlayerPower extends AbstractPower {
     }
 
     public void updateDescription() {
-            this.description = DESCRIPTIONS[0];
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0] + DESCRIPTIONS[2];
+        } else {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[2];
+        }
     }
 
     public void damageEnemyWhenPlayerIsHit(int damageAmount, AbstractCreature player) {
+        //int realDamageAmount = damageAmount * this.amount;
         AbstractDungeon.actionManager.addToTop(new DamageAction(this.owner, new DamageInfo(player, damageAmount, DamageInfo.DamageType.HP_LOSS)));
     }
 

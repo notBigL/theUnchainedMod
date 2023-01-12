@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import theUnchainedMod.DefaultMod;
@@ -47,15 +48,13 @@ public class TetheredMind extends AbstractDynamicCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainRelayAction(p, magicNumber));
-        if (m.hasPower("Artifact") && !m.hasPower(TiedToThePlayerPower.POWER_ID)) {
+        if (m.hasPower(ArtifactPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, 1, false)));
-        } else if (!m.hasPower(TiedToThePlayerPower.POWER_ID)) {
+        } else {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new TetheredMindEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY)));
-            TiedToThePlayerPower tiedToThePlayerPower = new TiedToThePlayerPower(m, p, p);
+            TiedToThePlayerPower tiedToThePlayerPower = new TiedToThePlayerPower(m, p, p, 1);
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, tiedToThePlayerPower));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TiedToAnEnemyPower(p, p, tiedToThePlayerPower, m)));
-        } else {
-            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[0], true));
         }
     }
 }
