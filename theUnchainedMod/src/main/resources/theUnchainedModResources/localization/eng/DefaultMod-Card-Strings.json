@@ -143,7 +143,7 @@
   },
   "theUnchainedMod:RazorChain": {
     "NAME": "Razor Chain",
-    "DESCRIPTION": "Deal !D! damage. Ignores theunchainedmod:Defenses."
+    "DESCRIPTION": "Enemy loses !D! HP. HP loss is affected by theunchainedmod:Damage_Modifiers."
   },
   "theUnchainedMod:GuardedPosture": {
     "NAME": "Guarded Posture",

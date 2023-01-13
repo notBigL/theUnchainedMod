@@ -62,11 +62,11 @@
     "DESCRIPTION": "Enemy does nothing this turn."
   },
   {
-    "PROPER_NAME": "Defenses",
+    "PROPER_NAME": "Damage Modifiers",
     "NAMES": [
-      "Defenses",
-      "defenses"
+      "Damage Modifiers",
+      "damage_modifiers"
     ],
-    "DESCRIPTION": "Block and ALL defensive Buffs that trigger when enemies are hit."
+    "DESCRIPTION": "All effects that influence Attack Damage."
   }
 ]
