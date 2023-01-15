@@ -349,7 +349,7 @@
   },
   "theUnchainedMod:EyeForAnEye": {
     "NAME": "Eye For An Eye",
-    "DESCRIPTION": "Remove up to !M! theunchainedmod:Relayed_Damage. Gain Vigor equal to the amount you removed."
+    "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Vigor. NL Remove up to !M! theunchainedmod:Relayed_Damage. NL Gain Vigor equal to the amount you removed."
   },
   "theUnchainedMod:DefensiveLink": {
     "NAME": "Defensive Link",
