@@ -46,10 +46,8 @@ public class ThreadOfAriadne extends AbstractDynamicCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean canUse = super.canUse(p, m);
-        if (!canUse) {
-            return false;
-        }
+        if(!super.canUse(p, m)) return false;
+
         for (AbstractPower po : p.powers) {
             if (po instanceof AbstractChainPower) {
                 return true;
