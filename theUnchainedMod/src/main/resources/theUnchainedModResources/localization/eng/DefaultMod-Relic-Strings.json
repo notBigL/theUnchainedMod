@@ -78,7 +78,7 @@
     "NAME": "Totem Of Pain",
     "FLAVOR": "When you listen close, you can hear the demon whisper: 'Sharing is caring'.",
     "DESCRIPTIONS": [
-      "At the end of your turn, hit an enemy for ALL Relayed Damage you gained since last turn."
+      "At the end of your turn, hit a random enemy for ALL Relayed Damage you gained since last turn."
     ]
   },
   "theUnchainedMod:DancingRibbons": {
