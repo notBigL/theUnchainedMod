@@ -35,7 +35,7 @@
     "NAME": "Heart of the Underdog",
     "FLAVOR": "You feel it beat stronger whenever the odds are stacked against you.",
     "DESCRIPTIONS": [
-      "At the end of turn, gain 1 Strength if you do not have more block than ALL enemies.."
+      "At the end of turn, gain 1 Strength if you do not have more block than ALL enemies."
     ]
   },
   "theUnchainedMod:Carabiner": {
@@ -49,7 +49,7 @@
     "NAME": "Polished Chains",
     "FLAVOR": "You can see your own reflection in these.",
     "DESCRIPTIONS": [
-      "Replaces #yRusted #yChains. Every seventh card you play each combat costs zero."
+      "Replaces #yRusted #yChains. EVERY seventh card you play each combat costs zero."
     ]
   },
   "theUnchainedMod:BrokenCharm": {
