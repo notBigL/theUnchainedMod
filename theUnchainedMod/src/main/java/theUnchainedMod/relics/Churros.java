@@ -53,6 +53,8 @@ public class Churros extends CustomRelic {
 
     public void eat() {
         eaten = true;
+        this.flash();
+        AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         this.stopPulse();
     }
 
