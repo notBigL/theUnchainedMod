@@ -31,9 +31,9 @@ public class FullSwing extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 5;
-    private static final int UPGRADE_PLUS_DAMAGE = 1;
+    private static final int UPGRADE_PLUS_DAMAGE = 2;
     private static final int MAGIC_NUMBER = 5;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
 
     public FullSwing() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
