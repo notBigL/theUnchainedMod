@@ -6,7 +6,7 @@
     <groupId>theunchainedmod</groupId>
     <artifactId>TheUnchainedMod</artifactId> <!--Keep a note of this one: this is the ID used in the "auto add cards" method-->
     <name>The Unchained Mod</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <description>A new Character with 75+ new cards, 10 new Relics, 3 new Potions and 4 distinct archetypes you can play around with and have a lot of fun!</description>
 
     <properties>
