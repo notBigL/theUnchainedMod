@@ -331,9 +331,9 @@
     "NAME": "Riposte",
     "DESCRIPTION": "Gain !B! Block. Deal !D! damage. NL Gain !M! theunchainedmod:Momentum."
   },
-  "theUnchainedMod:Glare": {
-    "NAME": "Glare",
-    "DESCRIPTION": "Gain !B! Block. Apply !M! Vulnerable to ALL enemies. Exhaust."
+  "theUnchainedMod:HeavyHitter": {
+    "NAME": "Heavy Hitter",
+    "DESCRIPTION": "Gain !M! temporary Strength. Whenever you hit an enemy this turn, apply !theUnchainedMod:SecondMagic! theunchainedmod:Crushed_Armor."
   },
   "theUnchainedMod:GraspFuture": {
     "NAME": "Grasp Future",

@@ -403,5 +403,12 @@
       "When attacked, attacking enemy gains #y",
       " Crushed Armor."
     ]
+  },
+  "theUnchainedMod:HeavyHitPower": {
+    "NAME": "Heavy Hits",
+    "DESCRIPTIONS": [
+      "This turn, hitting an enemy applies #y",
+      " Crushed Armor."
+    ]
   }
 }
