@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.powers.HeavyHitPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -41,5 +42,9 @@ public class RazorChain extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        if (p.hasPower(HeavyHitPower.POWER_ID)) {
+            HeavyHitPower hhP = (HeavyHitPower) p.getPower(HeavyHitPower.POWER_ID);
+            hhP.triggerForRazorChain(m);
+        }
     }
 }

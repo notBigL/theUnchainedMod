@@ -48,6 +48,11 @@ public class HeavyHitPower extends AbstractPower {
         }
     }
 
+    public void triggerForRazorChain(AbstractCreature target) {
+        this.flash();
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, owner, new CrushedArmorPower(target, owner, amount)));
+    }
+
     public void atEndOfTurn(boolean isPlayer) {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
