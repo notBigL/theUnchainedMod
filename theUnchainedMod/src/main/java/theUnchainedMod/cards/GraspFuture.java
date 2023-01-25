@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.ShatteringSwingAction;
+import theUnchainedMod.actions.GraspFutureAction;
 import theUnchainedMod.characters.TheUnchained;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -44,6 +44,6 @@ public class GraspFuture extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        AbstractDungeon.actionManager.addToBottom(new ShatteringSwingAction(magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new GraspFutureAction(magicNumber));
     }
 }
