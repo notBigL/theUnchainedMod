@@ -64,7 +64,7 @@
     "NAME": "Churros",
     "FLAVOR": "These tasty treats fill you with a burst of energy.",
     "DESCRIPTIONS": [
-      "The first Chain you apply each turn, is applied twice."
+      "The first Chain you start each turn, is copied."
     ]
   },
   "theUnchainedMod:Memento": {
