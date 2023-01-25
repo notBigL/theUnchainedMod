@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.StareDownAction;
+import theUnchainedMod.actions.RoyalAssessmentAction;
 import theUnchainedMod.characters.TheUnchained;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
@@ -38,6 +38,6 @@ public class RoyalAssessment extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new StareDownAction(upgraded));
+        AbstractDungeon.actionManager.addToBottom(new RoyalAssessmentAction(upgraded));
     }
 }

@@ -5,11 +5,11 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class StareDownAction extends AbstractGameAction {
+public class RoyalAssessmentAction extends AbstractGameAction {
 
     private final boolean upgraded;
 
-    public StareDownAction(boolean upgraded) {
+    public RoyalAssessmentAction(boolean upgraded) {
         this.upgraded = upgraded;
     }
 
@@ -18,9 +18,9 @@ public class StareDownAction extends AbstractGameAction {
         int energyGain = 0;
         boolean allEnemiesBlocking = true;
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (mo.currentBlock > 0) {
+            if (!mo.isDeadOrEscaped() && mo.currentBlock > 0) {
                 energyGain++;
-            } else if (!mo.isDead) {
+            } else if (!mo.isDeadOrEscaped()) {
                 allEnemiesBlocking = false;
             }
         }
