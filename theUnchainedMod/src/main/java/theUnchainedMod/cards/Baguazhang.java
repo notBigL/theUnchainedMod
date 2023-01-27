@@ -1,9 +1,13 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.BaguazhangAction;
 import theUnchainedMod.characters.TheUnchained;
@@ -22,22 +26,51 @@ public class Baguazhang extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
-    private static final int BLOCK = 15;
-    private static final int UPGRADE_PLUS_BLOCK = 5;
+    private static final int BLOCK = 5;
     private static final int MAGIC_NUMBER = 10;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 5;
+    private static final int SECOND_MAGIC_NUMBER = 10;
 
     public Baguazhang() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
     }
 
     @Override
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
+    }
+
+    @Override
+    protected void applyPowersToBlock() {
+        super.applyPowersToBlock();
+        this.isMagicNumberModified = false;
+        float tmp = (float)this.baseMagicNumber;
+
+        Iterator var2;
+        AbstractPower p;
+        for(var2 = AbstractDungeon.player.powers.iterator(); var2.hasNext(); tmp = p.modifyBlock(tmp, this)) {
+            p = (AbstractPower)var2.next();
+        }
+
+        for(var2 = AbstractDungeon.player.powers.iterator(); var2.hasNext(); tmp = p.modifyBlockLast(tmp)) {
+            p = (AbstractPower)var2.next();
+        }
+
+        if (this.baseMagicNumber != MathUtils.floor(tmp)) {
+            this.isMagicNumberModified = true;
+        }
+
+        if (tmp < 0.0F) {
+            tmp = 0.0F;
+        }
+
+        this.magicNumber = MathUtils.floor(tmp);
     }
 
     @Override
@@ -63,6 +96,7 @@ public class Baguazhang extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new BaguazhangAction(p, m, block, magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, block));
+        AbstractDungeon.actionManager.addToBottom(new BaguazhangAction(p, m, magicNumber, defaultSecondMagicNumber));
     }
 }

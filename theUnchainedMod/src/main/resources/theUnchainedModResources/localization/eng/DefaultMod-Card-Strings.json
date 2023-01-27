@@ -242,7 +242,7 @@
   },
   "theUnchainedMod:Baguazhang": {
     "NAME": "Baguazhang",
-    "DESCRIPTION": "If the enemy intends to do less than !M! damage (per hit), gain !B! Block. If not, deal !D! damage."
+    "DESCRIPTION": "Gain !B! Block. NL If the enemy intends to do less than !theUnchainedMod:SecondMagic! damage (per hit), gain !M! Block."
   },
   "theUnchainedMod:MagusForm": {
     "NAME": "Magus Form",
