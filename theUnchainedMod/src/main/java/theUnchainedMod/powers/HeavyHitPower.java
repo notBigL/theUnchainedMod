@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.ApplyCrushedArmorAction;
 import theUnchainedMod.util.TextureLoader;
 
 public class HeavyHitPower extends AbstractPower {
@@ -44,13 +45,13 @@ public class HeavyHitPower extends AbstractPower {
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         if (target != this.owner && info.type == DamageInfo.DamageType.NORMAL) {
             this.flash();
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, owner, new CrushedArmorPower(target, owner, amount)));
+            AbstractDungeon.actionManager.addToTop(new ApplyCrushedArmorAction(target, amount));
         }
     }
 
     public void triggerForRazorChain(AbstractCreature target) {
         this.flash();
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, owner, new CrushedArmorPower(target, owner, amount)));
+        AbstractDungeon.actionManager.addToTop(new ApplyCrushedArmorAction(target, amount));
     }
 
     public void atEndOfTurn(boolean isPlayer) {
