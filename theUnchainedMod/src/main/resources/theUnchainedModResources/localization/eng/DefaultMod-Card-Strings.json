@@ -364,9 +364,9 @@
     "NAME": "Stare Down",
     "DESCRIPTION": "Gain !M! temporary Dexterity. 1 theunchainedmod:Chain: Apply !theUnchainedMod:SecondMagic! Weak to ALL enemies."
   },
-  "theUnchainedMod:CrushPlates": {
-    "NAME": "Crush Plates",
-    "DESCRIPTION": "Deal !D! damage. Apply theunchainedmod:Crushed_Armor for ALL damage that was blocked."
+  "theUnchainedMod:ArcanePlating": {
+    "NAME": "Arcane Plating",
+    "DESCRIPTION": "Whenever an enemy gains Block, gain !M! theunchainedmod:Relay."
   },
   "theUnchainedMod:Cripple": {
     "NAME": "Cripple",

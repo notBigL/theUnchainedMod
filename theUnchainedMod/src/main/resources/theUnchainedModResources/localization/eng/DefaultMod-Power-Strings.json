@@ -410,5 +410,12 @@
       "This turn, hitting an enemy applies #y",
       " Crushed Armor."
     ]
+  },
+  "theUnchainedMod:ArcanePlatingPower": {
+    "NAME": "Arcane Plating",
+    "DESCRIPTIONS": [
+      "Gain #y",
+      " Relay, everytime an enemy gains Block."
+    ]
   }
 }
