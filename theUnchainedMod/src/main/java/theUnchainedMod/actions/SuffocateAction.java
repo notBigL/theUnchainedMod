@@ -3,6 +3,7 @@ package theUnchainedMod.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,8 +21,9 @@ public class SuffocateAction extends AbstractGameAction {
     @Override
     public void update() {
         AbstractPlayer player = AbstractDungeon.player;
-        int hpLossForEnemy = target.currentBlock * 2;
+        int hpLossForEnemy = target.currentBlock;
         if (hpLossForEnemy > 0) {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(player, hpLossForEnemy));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new SuffocateViceCrushEffect(target.hb.cX, target.hb.cY), 0.1F));
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5f));
             AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(player, hpLossForEnemy, DamageInfo.DamageType.HP_LOSS), AttackEffect.NONE));
