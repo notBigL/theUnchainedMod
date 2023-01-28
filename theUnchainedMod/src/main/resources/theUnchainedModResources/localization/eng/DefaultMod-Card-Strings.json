@@ -364,8 +364,8 @@
     "NAME": "Stare Down",
     "DESCRIPTION": "Gain !M! temporary Dexterity. 1 theunchainedmod:Chain: Apply !theUnchainedMod:SecondMagic! Weak to ALL enemies."
   },
-  "theUnchainedMod:ArcanePlating": {
-    "NAME": "Arcane Plating",
+  "theUnchainedMod:ArcaneTransmutation": {
+    "NAME": "Arcane Transmutation",
     "DESCRIPTION": "Whenever an enemy gains Block, gain !M! theunchainedmod:Relay."
   },
   "theUnchainedMod:Cripple": {

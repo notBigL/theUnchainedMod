@@ -6,13 +6,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
-import theUnchainedMod.powers.ArcanePlatingPower;
+import theUnchainedMod.powers.ArcaneTransmutationPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class ArcanePlating extends AbstractDynamicCard {
+public class ArcaneTransmutation extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(ArcanePlating.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(ArcaneTransmutation.class.getSimpleName());
     public static final String IMG = makeCardPath("CrushPlates.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -23,7 +23,7 @@ public class ArcanePlating extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 5;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
 
-    public ArcanePlating() {
+    public ArcaneTransmutation() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
@@ -39,6 +39,6 @@ public class ArcanePlating extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArcanePlatingPower(p, magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArcaneTransmutationPower(p, magicNumber)));
     }
 }

@@ -11,17 +11,17 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.util.TextureLoader;
 
-public class ArcanePlatingPower extends AbstractPower {
+public class ArcaneTransmutationPower extends AbstractPower {
 
-    public static final String POWER_ID = DefaultMod.makeID("ArcanePlatingPower");
+    public static final String POWER_ID = DefaultMod.makeID("ArcaneTransmutationPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ArcanePlatingPower_power48.png");
-    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ArcanePlatingPower_power128.png");
+    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ArcaneTransmutationPower_power48.png");
+    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ArcaneTransmutationPower_power128.png");
 
-    public ArcanePlatingPower(final AbstractCreature owner, final int amount) {
+    public ArcaneTransmutationPower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;

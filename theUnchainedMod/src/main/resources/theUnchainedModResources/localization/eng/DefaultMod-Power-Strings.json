@@ -411,8 +411,8 @@
       " Crushed Armor."
     ]
   },
-  "theUnchainedMod:ArcanePlatingPower": {
-    "NAME": "Arcane Plating",
+  "theUnchainedMod:ArcaneTransmutationPower": {
+    "NAME": "Transmute Armor",
     "DESCRIPTIONS": [
       "Gain #y",
       " Relay, everytime an enemy gains Block."
