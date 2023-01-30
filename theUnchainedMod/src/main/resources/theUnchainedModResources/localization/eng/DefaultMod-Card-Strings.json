@@ -268,8 +268,8 @@
   },
   "theUnchainedMod:Premonition": {
     "NAME": "Premonition",
-    "DESCRIPTION": "Gain !B! Block. NL If you end this turn on 0 [E] , gain [E] [E] next turn.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you end this turn on 0 [E] , gain NL [E] [E] [E] next turn."
+    "DESCRIPTION": "Gain !B! Block. NL If you have spent ALL your [E] at the end of this turn, gain [E] [E] next turn.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If you have spent ALL your [E] at the end of this turn, gain NL [E] [E] [E] next turn."
   },
   "theUnchainedMod:Pirouette": {
     "NAME": "Pirouette",
