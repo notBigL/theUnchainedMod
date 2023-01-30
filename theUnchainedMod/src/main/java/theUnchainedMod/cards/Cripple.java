@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.ApplyCrushedArmorAction;
@@ -16,7 +17,7 @@ public class Cripple extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Cripple.class.getSimpleName());
     public static final String IMG = makeCardPath("Cripple.png");
-    private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.COMMON;
+    private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.ENEMY;
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.SKILL;
     public static final AbstractCard.CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
@@ -49,5 +50,6 @@ public class Cripple extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyCrushedArmorAction(m, magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, defaultSecondMagicNumber, false)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, defaultSecondMagicNumber, false)));
     }
 }
