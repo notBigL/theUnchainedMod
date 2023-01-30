@@ -45,7 +45,6 @@ public class Pirouette extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         Swirl card = new Swirl();
-        card.upgrade();
         if (p.hasPower(FullSpinPower.POWER_ID)) {
             card.fullSpinApply(p.getPower(FullSpinPower.POWER_ID).amount);
         }
