@@ -1,12 +1,15 @@
 package theUnchainedMod.cards;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.RemoveRelayedDamageAction;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.powers.AbstractChainPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -20,8 +23,8 @@ public class Liberation extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_PLUS_BLOCK = 4;
+    private static final int BLOCK = 7;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public Liberation() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -31,9 +34,18 @@ public class Liberation extends AbstractDynamicCard {
 
     @Override
     public void upgrade() {
-        if(!upgraded) {
+        if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
+        }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        for (AbstractPower po : AbstractDungeon.player.powers) {
+            if (po instanceof AbstractChainPower) this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+            return;
         }
 
     }
