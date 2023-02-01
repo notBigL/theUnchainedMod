@@ -11,32 +11,32 @@ public class ChainAction extends AbstractGameAction {
     private final AbstractCard card;
     private final AbstractCard.CardType cardType;
     private final String ChainPowerID;
-    private final boolean liberation;
+    private final String special;
 
     public ChainAction(AbstractCreature p, AbstractCard c, AbstractCard.CardType cT, String iD) {
         player = p;
         card = c;
         cardType = cT;
         ChainPowerID = iD;
-        this.liberation = false;
+        this.special = "";
     }
 
-    public ChainAction(AbstractCreature p, AbstractCard c, AbstractCard.CardType cT, String iD, boolean liberation) {
+    public ChainAction(AbstractCreature p, AbstractCard c, AbstractCard.CardType cT, String iD, String special) {
         player = p;
         card = c;
         cardType = cT;
         ChainPowerID = iD;
-        this.liberation = liberation;
+        this.special = special;
     }
 
     @Override
     public void update() {
         AbstractChainPower chainPower = (AbstractChainPower) player.getPower(ChainPowerID);
         if (chainPower != null) {
-            if (liberation) {
+            if (special.equals("liberation")) {
                 chainPower.finishMe();
             } else {
-                if (cardType == card.type) {
+                if (cardType == card.type || special.equals("link")) {
                     --chainPower.amount;
                 }
                 if (chainPower.amount == 0) {

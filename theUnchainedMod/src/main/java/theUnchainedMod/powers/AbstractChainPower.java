@@ -9,16 +9,12 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.actions.ChainAction;
-import theUnchainedMod.actions.GainMomentumAction;
-import theUnchainedMod.cards.Liberation;
 import theUnchainedMod.relics.Carabiner;
 import theUnchainedMod.util.TextureLoader;
-import theUnchainedMod.util.UtilityClass;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
@@ -60,7 +56,11 @@ public class AbstractChainPower extends AbstractPower {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
                 break;
             case "theUnchainedMod:Liberation":
-                AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, this.ID, true));
+                AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, this.ID, "liberation"));
+                this.flash();
+                break;
+            case "theUnchainedMod:DoubleDown":
+                AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, this.ID, "link"));
                 this.flash();
                 break;
             default:
