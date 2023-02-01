@@ -97,6 +97,7 @@ public class Baguazhang extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, block));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(m, 5));
         AbstractDungeon.actionManager.addToBottom(new BaguazhangAction(p, m, magicNumber, defaultSecondMagicNumber));
     }
 }
