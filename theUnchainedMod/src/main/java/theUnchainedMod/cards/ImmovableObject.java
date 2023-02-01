@@ -16,7 +16,7 @@ public class ImmovableObject extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(ImmovableObject.class.getSimpleName());
     public static final String IMG = makeCardPath("ImmovableObject.png");
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
