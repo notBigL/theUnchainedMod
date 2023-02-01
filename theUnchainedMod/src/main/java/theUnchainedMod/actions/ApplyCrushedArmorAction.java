@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theUnchainedMod.powers.CrushedArmorPower;
 import theUnchainedMod.relics.Wrench;
@@ -21,9 +22,10 @@ public class ApplyCrushedArmorAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        boolean hasArtifact = target.hasPower(ArtifactPower.POWER_ID);
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, source, new CrushedArmorPower(target, source, amount)));
         for (AbstractRelic r : AbstractDungeon.player.relics) {
-            if (r instanceof Wrench) {
+            if (r instanceof Wrench && !hasArtifact) {
                 AbstractDungeon.actionManager.addToTop(new DamageAction(target, new DamageInfo(source, 5, DamageInfo.DamageType.HP_LOSS), AttackEffect.SLASH_HORIZONTAL));
                 r.flash();
                 break;
