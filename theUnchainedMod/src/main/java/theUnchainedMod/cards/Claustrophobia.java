@@ -23,7 +23,7 @@ public class Claustrophobia extends AbstractDynamicCard {
 
 
     private static final int COST = 0;
-    private static final int MAGIC_NUMBER = 3;
+    private static final int MAGIC_NUMBER = 2;
 
 
     public Claustrophobia() {
