@@ -3,8 +3,10 @@ package theUnchainedMod.cards;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.actions.RandomTwoCostCardAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.util.UtilityClass;
 
@@ -26,7 +28,6 @@ public class RoyalDecree extends AbstractDynamicCard {
     public RoyalDecree() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        this.exhaust = true;
     }
 
     @Override
@@ -39,8 +40,6 @@ public class RoyalDecree extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard c = UtilityClass.returnTrulyRandomTwoCostCardInCombat();
-        c.setCostForTurn(magicNumber);
-        this.addToBot(new MakeTempCardInHandAction(c, true));
+        AbstractDungeon.actionManager.addToBottom(new RandomTwoCostCardAction(magicNumber));
     }
 }

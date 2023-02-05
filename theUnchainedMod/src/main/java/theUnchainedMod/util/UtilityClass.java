@@ -3,6 +3,7 @@ package theUnchainedMod.util;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.green.Neutralize;
 import com.megacrit.cardcrawl.cards.purple.Eruption;
+import com.megacrit.cardcrawl.cards.purple.Vigilance;
 import com.megacrit.cardcrawl.cards.red.Bash;
 import com.megacrit.cardcrawl.characters.Ironclad;
 import com.megacrit.cardcrawl.characters.TheSilent;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.characters.Watcher;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import theUnchainedMod.cards.DefensiveLink;
 import theUnchainedMod.cards.Whiplash;
 import theUnchainedMod.characters.TheUnchained;
 
@@ -54,6 +56,12 @@ public final class UtilityClass {
             }
         }
 
+        if (player instanceof TheUnchained) list.add(new DefensiveLink());
+        else if (player instanceof Ironclad) list.add(new Bash());
+        else if (player instanceof Watcher) {
+            list.add(new Eruption());
+            list.add(new Vigilance());
+        }
         return (AbstractCard) list.get(cardRandomRng.random(list.size() - 1));
     }
 
