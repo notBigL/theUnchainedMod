@@ -2,6 +2,7 @@ package theUnchainedMod.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -40,14 +41,19 @@ public class MagusFormPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+        } else {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[3];
+        }
     }
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-        if(card.cost == 2 || card.costForTurn == 2 || (card.cost == -1 && card.energyOnUse == 2)) {
+        if (card.cost == 2 || card.costForTurn == 2 || (card.cost == -1 && card.energyOnUse == 2)) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.amount));
         }
     }
 
