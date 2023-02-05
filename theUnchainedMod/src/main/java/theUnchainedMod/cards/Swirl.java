@@ -42,7 +42,9 @@ public class Swirl extends AbstractDynamicCard {
         realBaseBlock = BLOCK;
         baseDamage = damage = DAMAGE;
         baseBlock = block = BLOCK;
-        this.isMultiDamage = true;
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(SwirlsHitAllEnemiesPower.POWER_ID)) {
+            this.isMultiDamage = true;
+        }
         this.exhaust = true;
         this.selfRetain = true;
     }
@@ -65,6 +67,13 @@ public class Swirl extends AbstractDynamicCard {
     public void revertToBaseValues() {
         this.baseDamage = this.damage = realBaseDamage;
         this.baseBlock = this.block = realBaseBlock;
+    }
+
+    public void makeMeAOE() {
+        if (!isMultiDamage) {
+            isMultiDamage = true;
+            applyPowers();
+        }
     }
 
     @Override

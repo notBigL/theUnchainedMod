@@ -2,12 +2,17 @@ package theUnchainedMod.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
+import theUnchainedMod.cards.Swirl;
 import theUnchainedMod.util.TextureLoader;
+
+import java.util.Iterator;
 
 public class SwirlsHitAllEnemiesPower extends AbstractPower {
     public AbstractCreature source;
@@ -33,6 +38,50 @@ public class SwirlsHitAllEnemiesPower extends AbstractPower {
         this.region48 = new TextureAtlas.AtlasRegion(texture48, 0, 0, 48, 48);
 
         updateDescription();
+    }
+
+    public void onInitialApplication() {
+        Iterator var1 = AbstractDungeon.player.discardPile.group.iterator();
+
+        AbstractCard c;
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
+            if (c instanceof Swirl) {
+                Swirl currentCard = (Swirl) c;
+                currentCard.makeMeAOE();
+            }
+        }
+
+        var1 = AbstractDungeon.player.drawPile.group.iterator();
+
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
+            if (c instanceof Swirl) {
+                Swirl currentCard = (Swirl) c;
+                currentCard.makeMeAOE();
+            }
+        }
+
+        var1 = AbstractDungeon.player.hand.group.iterator();
+
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
+            if (c instanceof Swirl) {
+                Swirl currentCard = (Swirl) c;
+                currentCard.makeMeAOE();
+            }
+        }
+
+        var1 = AbstractDungeon.player.exhaustPile.group.iterator();
+
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
+            if (c instanceof Swirl) {
+                Swirl currentCard = (Swirl) c;
+                currentCard.makeMeAOE();
+            }
+        }
+
     }
 
     public void updateDescription() {
