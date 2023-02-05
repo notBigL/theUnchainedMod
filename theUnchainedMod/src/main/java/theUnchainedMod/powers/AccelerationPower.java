@@ -23,6 +23,7 @@ public class AccelerationPower extends AbstractPower {
 
     private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/AccelerationPower_power48.png");
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/AccelerationPower_power128.png");
+    private boolean alreadyTriggeredThisTurn;
 
     public AccelerationPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
@@ -44,7 +45,19 @@ public class AccelerationPower extends AbstractPower {
     }
 
     public void onSpecificTrigger() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, this.amount), this.amount));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
+        if (!alreadyTriggeredThisTurn) {
+            alreadyTriggeredThisTurn = true;
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, this.amount), this.amount));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
+            if (owner.hasPower(LawOfInertiaPower.POWER_ID)) {
+                LawOfInertiaPower lawOfInertiaPower = (LawOfInertiaPower) owner.getPower(LawOfInertiaPower.POWER_ID);
+                lawOfInertiaPower.finishedAChain(amount);
+            }
+        }
+    }
+
+    public void atStartOfTurn() {
+        alreadyTriggeredThisTurn = false;
     }
 }

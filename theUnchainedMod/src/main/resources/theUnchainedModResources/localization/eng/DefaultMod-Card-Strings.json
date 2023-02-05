@@ -308,7 +308,7 @@
   },
   "theUnchainedMod:LawOfInertia": {
     "NAME": "Law Of Inertia",
-    "DESCRIPTION": "At the start of each turn, lose !M! Strength and Dexterity. Whenever you finish a theunchainedmod:Chain gain !theUnchainedMod:SecondMagic! Strength and Dexterity."
+    "DESCRIPTION": "The first time you finish a theunchainedmod:Chain each turn, gain !M! Strength and Dexterity. At the end of turn, lose !M! Strength and Dexterity if you did not finish a theunchainedmod:Chain. You cannot lose more Strength and Dexterity than you gained."
   },
   "theUnchainedMod:LastResort": {
     "NAME": "Last Resort",
