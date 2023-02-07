@@ -13,14 +13,14 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class ArcaneTransmutation extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(ArcaneTransmutation.class.getSimpleName());
-    public static final String IMG = makeCardPath("CrushPlates.png");
+    public static final String IMG = makeCardPath("ArcaneTransmutation.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 5;
+    private static final int MAGIC_NUMBER = 4;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
 
     public ArcaneTransmutation() {
