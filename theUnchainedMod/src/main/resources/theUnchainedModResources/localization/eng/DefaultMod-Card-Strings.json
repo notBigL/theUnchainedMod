@@ -156,8 +156,8 @@
   },
   "theUnchainedMod:Windup": {
     "NAME": "Windup",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random common Attack to your hand. NL It exhausts. It costs 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random upgraded common Attack to your hand. NL It exhausts. It costs 0 this turn."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random common Attack to your hand. NL It costs 0 this turn and exhausts.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random upgraded common Attack to your hand. NL It costs 0 this turn and exhausts."
   },
   "theUnchainedMod:APlomb": {
     "NAME": "À Plomb",
@@ -174,7 +174,7 @@
   },
   "theUnchainedMod:RoyalDecree": {
     "NAME": "Royal Decree",
-    "DESCRIPTION": "Add a random 2-cost card into your hand. NL It Exhausts. It costs !M! this turn."
+    "DESCRIPTION": "Add a random 2-cost card into your hand. NL It costs !M! this turn and exhausts."
   },
   "theUnchainedMod:Claustrophobia": {
     "NAME": "Claustrophobia",
