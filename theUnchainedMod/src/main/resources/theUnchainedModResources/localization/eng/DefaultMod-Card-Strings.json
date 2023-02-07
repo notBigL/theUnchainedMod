@@ -169,8 +169,8 @@
   },
   "theUnchainedMod:Swirl": {
     "NAME": "Swirl",
-    "DESCRIPTION": "Retain. Gain !B! Block. NL Deal !D! damage. Double the damage and Block of ALL Swirls this turn. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. Gain !B! Block. NL Deal !D! damage. Double the damage and Block of ALL Swirls this turn. Gain 1 theunchainedmod:Momentum. Exhaust."
+    "DESCRIPTION": "Retain. Gain !B! Block. NL Deal !D! damage. Double the base damage and Block of ALL Swirls this turn. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. Gain !B! Block. NL Deal !D! damage. Double the base damage and Block of ALL Swirls this turn. Gain 1 theunchainedmod:Momentum. Exhaust."
   },
   "theUnchainedMod:RoyalDecree": {
     "NAME": "Royal Decree",
