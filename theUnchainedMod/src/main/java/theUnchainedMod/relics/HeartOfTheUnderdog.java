@@ -21,7 +21,7 @@ public class HeartOfTheUnderdog extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("HeartOfTheUnderdog_relic.png"));
 
     public HeartOfTheUnderdog() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.CLINK);
     }
 
     @Override

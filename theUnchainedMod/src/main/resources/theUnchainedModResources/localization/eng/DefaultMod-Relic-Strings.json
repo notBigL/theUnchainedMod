@@ -35,7 +35,7 @@
     "NAME": "Heart of the Underdog",
     "FLAVOR": "You feel it beat stronger whenever the odds are stacked against you.",
     "DESCRIPTIONS": [
-      "At the end of turn, gain 1 Strength if you do not have more block than ALL enemies."
+      "At the end of turn, gain 1 Strength if you do not have more block than ALL enemies combined."
     ]
   },
   "theUnchainedMod:Carabiner": {
