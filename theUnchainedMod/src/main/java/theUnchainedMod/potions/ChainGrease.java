@@ -60,7 +60,7 @@ public class ChainGrease extends CustomPotion {
 
     @Override
     public int getPotency(final int potency) {
-        return 8;
+        return 7;
     }
 
 }
