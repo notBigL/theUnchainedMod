@@ -52,6 +52,7 @@ public class WindupCrossHairEffect extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);
         sb.draw(IMG_CIRCLE, this.x - 128.0F, this.y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, Settings.scale, Settings.scale, rotation, 0, 0, 256, 256, false, false);
+        sb.setColor(this.crossColor);
         sb.draw(IMG_CROSS, this.x - 128.0F, this.y - 128.0F, 128.0F, 128.0F, 256.0F, 256.0F, this.scale, this.scale, 0, 0, 0, 256, 256, false, false);
     }
 
