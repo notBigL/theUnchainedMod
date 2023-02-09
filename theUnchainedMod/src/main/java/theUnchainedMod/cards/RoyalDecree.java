@@ -1,5 +1,6 @@
 package theUnchainedMod.cards;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,6 +10,8 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.RandomTwoCostCardAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.util.UtilityClass;
+import theUnchainedMod.vfx.RoyalDecreeEffect;
+import theUnchainedMod.vfx.WindupCrossHairEffect;
 
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -40,6 +43,7 @@ public class RoyalDecree extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new RoyalDecreeEffect(p.hb.cX, p.hb.cY)));
         AbstractDungeon.actionManager.addToBottom(new RandomTwoCostCardAction(magicNumber));
     }
 }
