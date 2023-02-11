@@ -28,8 +28,8 @@ public class LashOut extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 15;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int DAMAGE = 13;
+    private static final int UPGRADE_PLUS_DMG = 4;
     private static final int CHAIN_LENGTH = 1;
     private static final int MAGIC_NUMBER = 1;
 
