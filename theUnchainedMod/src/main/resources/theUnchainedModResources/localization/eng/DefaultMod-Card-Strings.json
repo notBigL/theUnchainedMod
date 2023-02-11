@@ -246,8 +246,8 @@
   },
   "theUnchainedMod:MagusForm": {
     "NAME": "Magus Form",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a 2-cost card, draw a card and gain [E].",
-    "UPGRADE_DESCRIPTION": "Whenever you play a 2-cost card, draw a card and gain [E]."
+    "DESCRIPTION": "Ethereal. NL Whenever you play a 2-cost card, gain [E].",
+    "UPGRADE_DESCRIPTION": "Whenever you play a 2-cost card, gain [E]."
   },
   "theUnchainedMod:TelekineticPulse": {
     "NAME": "Telekinetic Pulse",
