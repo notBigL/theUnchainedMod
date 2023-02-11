@@ -29,6 +29,7 @@ public class Taxes extends AbstractDynamicCard {
     public Taxes() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = this.magicNumber = MAGIC_NUMBER;
+        this.tags.add(CardTags.HEALING);
     }
 
     @Override
