@@ -15,9 +15,10 @@ import static theUnchainedMod.DefaultMod.makeVFXPath;
 
 public class RoyalDecreeEffect extends AbstractGameEffect {
     private final float x;
+    private final float sealYOffset;
     private final float y;
     private final float rotation;
-    private float textScale;
+    //private float textScale;
     private Color backgroundColor;
     private Color sealColor;
     private boolean alreadyExhausted;
@@ -30,9 +31,10 @@ public class RoyalDecreeEffect extends AbstractGameEffect {
     public RoyalDecreeEffect(float x, float y) {
         this.x = x + (100 * Settings.scale);
         this.y = y;
+        this.sealYOffset = (35 * Settings.scale);
         this.rotation = 0.0F;
         this.scale = 5.0F;
-        this.textScale = 2.5F;
+        //this.textScale = 2.5F;
         this.backgroundColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         this.sealColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         this.startingDuration = this.duration = DUR;
@@ -56,7 +58,7 @@ public class RoyalDecreeEffect extends AbstractGameEffect {
             }
         }
         this.scale = Interpolation.exp10Out.apply(6.5F, 0.8F, 1.0F - this.duration / DUR);
-        this.textScale = Interpolation.exp10Out.apply(2.5F, 0.8F, 1.0F - this.duration / DUR);
+        //this.textScale = Interpolation.exp10Out.apply(2.5F, 0.8F, 1.0F - this.duration / DUR);
 
         if (this.duration < 0.0F) {
             this.isDone = true;
@@ -67,9 +69,9 @@ public class RoyalDecreeEffect extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setColor(this.backgroundColor);
         sb.draw(IMG_BACKGROUND, this.x - 64.0F, this.y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, Settings.scale, Settings.scale, rotation, 0, 0, 128, 128, false, false);
-        sb.draw(IMG_TEXT, this.x - 64.0F, this.y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, this.textScale, this.textScale, rotation, 0, 0, 128, 128, false, false);
+        sb.draw(IMG_TEXT, this.x - 64.0F, this.y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, Settings.scale, Settings.scale, rotation, 0, 0, 128, 128, false, false);
         sb.setColor(this.sealColor);
-        sb.draw(IMG_SEAL, this.x - 64.0F, this.y - 64.0F, 64.0F, 64.0F, 128.0F, 128.0F, this.scale, this.scale, rotation, 0, 0, 128, 128, false, false);
+        sb.draw(IMG_SEAL, this.x - 14.0F, this.y - 14.0F - sealYOffset, 14.0F, 14.0F, 28.0F, 28.0F, this.scale, this.scale, rotation, 0, 0, 28, 28, false, false);
     }
 
     public void dispose() {
