@@ -53,7 +53,6 @@ public class MagusFormPower extends AbstractPower {
         if (card.cost == 2 || card.costForTurn == 2 || (card.cost == -1 && card.energyOnUse == 2)) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.amount));
         }
     }
 
