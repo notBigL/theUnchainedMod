@@ -48,10 +48,12 @@ public class LawOfInertiaPower extends AbstractPower {
         chainThisTurn = true;
     }
 
-    public void atEndOfTurn() {
-        if (!chainThisTurn && amountGainedCounter > 0) {
+    public void atEndOfTurn(boolean isPlayer) {
+        if (isPlayer && !chainThisTurn && amountGainedCounter > 0) {
             int amountToLose = this.amount;
-            if (amountToLose > amountGainedCounter) amountToLose = amountGainedCounter;
+            if (amountToLose > amountGainedCounter) {
+                amountToLose = amountGainedCounter;
+            }
             amountGainedCounter -= this.amount;
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, -amountToLose), -amountToLose));
@@ -59,5 +61,4 @@ public class LawOfInertiaPower extends AbstractPower {
         }
         chainThisTurn = false;
     }
-
 }
