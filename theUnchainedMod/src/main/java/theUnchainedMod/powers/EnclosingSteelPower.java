@@ -2,6 +2,7 @@ package theUnchainedMod.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,7 +28,7 @@ public class EnclosingSteelPower extends AbstractPower {
         this.owner = owner;
         this.amount = amount;
         type = AbstractPower.PowerType.BUFF;
-        isTurnBased = false;
+        isTurnBased = true;
 
         this.region128 = new TextureAtlas.AtlasRegion(texture128, 0, 0, 128, 128);
         this.region48 = new TextureAtlas.AtlasRegion(texture48, 0, 0, 48, 48);
@@ -46,7 +47,7 @@ public class EnclosingSteelPower extends AbstractPower {
     @Override
     public void atStartOfTurnPostDraw() {
         if(this.amount > 1) {
-            this.amount--;
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, EnclosingSteelPower.POWER_ID, 1));
         } else {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
