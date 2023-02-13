@@ -1,5 +1,7 @@
 package theUnchainedMod.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,6 +11,8 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.PirouetteAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.FullSpinPower;
+import theUnchainedMod.powers.MomentumPower;
+import theUnchainedMod.relics.BalletShoes;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -44,11 +48,14 @@ public class Pirouette extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Swirl card = new Swirl();
-        if (p.hasPower(FullSpinPower.POWER_ID)) {
-            card.fullSpinApply(p.getPower(FullSpinPower.POWER_ID).amount);
+        if (p.hasPower(MomentumPower.POWER_ID)) {
+            TwoAmountPower momentumPower = (TwoAmountPower) p.getPower(MomentumPower.POWER_ID);
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new MomentumPower(p, momentumPower.amount2)));
+        } else {
+            if (p.hasRelic(BalletShoes.ID))
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new MomentumPower(p, 1)));
+            else AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new MomentumPower(p, 2)));
         }
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1, false));
         AbstractDungeon.actionManager.addToBottom(new PirouetteAction());
     }
 }

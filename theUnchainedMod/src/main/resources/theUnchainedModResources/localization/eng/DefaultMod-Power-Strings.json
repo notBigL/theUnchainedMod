@@ -163,7 +163,8 @@
   "theUnchainedMod:MomentumPower": {
     "NAME": "Momentum",
     "DESCRIPTIONS": [
-      "When you obtain #b",
+      "You have #g",
+      " Momentum. When you obtain #b",
       " Momentum, add a Swirl into your hand."
     ]
   },

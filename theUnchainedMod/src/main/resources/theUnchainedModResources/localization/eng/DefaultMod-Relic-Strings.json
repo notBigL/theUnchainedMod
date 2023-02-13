@@ -21,7 +21,7 @@
     "NAME": "Ballet Shoes",
     "FLAVOR": "Impossible to strike a bad pose with these.",
     "DESCRIPTIONS": [
-      "If you end your turn with Momentum, gain enough Momentum for the next Swirl."
+      "The Momentum required for the next Swirl is always one less."
     ]
   },
   "theUnchainedMod:RustedChains": {
