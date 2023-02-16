@@ -217,8 +217,7 @@
   "theUnchainedMod:MagusFormPower": {
     "NAME": "Magus Form",
     "DESCRIPTIONS": [
-      "Whenever you play a 2-cost card, gain #y",
-      " Energy and draw #y",
+      "Whenever you play a 2-cost card, draw #y",
       " card.",
       " cards."
     ]
