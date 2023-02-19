@@ -80,7 +80,7 @@ public class Baguazhang extends AbstractDynamicCard {
 
         while(var1.hasNext()) {
             AbstractMonster m = (AbstractMonster)var1.next();
-            if (m != null && !m.isDeadOrEscaped() && (m.getIntentDmg() < magicNumber || m.intent == AbstractMonster.Intent.BUFF ||
+            if (m != null && !m.isDeadOrEscaped() && (m.getIntentDmg() < defaultSecondMagicNumber || m.intent == AbstractMonster.Intent.BUFF ||
                     m.intent == AbstractMonster.Intent.DEBUFF || m.intent == AbstractMonster.Intent.STRONG_DEBUFF ||
                     m.intent == AbstractMonster.Intent.DEBUG || m.intent == AbstractMonster.Intent.DEFEND ||
                     m.intent == AbstractMonster.Intent.DEFEND_DEBUFF || m.intent == AbstractMonster.Intent.DEFEND_BUFF ||
