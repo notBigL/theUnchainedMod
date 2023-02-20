@@ -26,9 +26,9 @@ public class Riposte extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 5;
-    private static final int UPGRADE_PLUS_DAMAGE = 2;
+    private static final int UPGRADE_PLUS_DAMAGE = 1;
     private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int UPGRADE_PLUS_BLOCK = 1;
     private static final int MAGIC_NUMBER = 1;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
