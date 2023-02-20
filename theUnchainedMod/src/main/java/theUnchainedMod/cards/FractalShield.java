@@ -23,7 +23,8 @@ public class FractalShield extends AbstractDynamicCard {
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 9;
+    private static final int MAGIC_NUMBER = 6;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 4;
 
     public FractalShield() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -34,9 +35,7 @@ public class FractalShield extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.isInnate = true;
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
     }
 
