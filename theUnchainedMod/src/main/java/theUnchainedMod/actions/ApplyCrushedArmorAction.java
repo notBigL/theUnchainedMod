@@ -24,11 +24,13 @@ public class ApplyCrushedArmorAction extends AbstractGameAction {
     public void update() {
         boolean hasArtifact = target.hasPower(ArtifactPower.POWER_ID);
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, source, new CrushedArmorPower(target, source, amount)));
-        for (AbstractRelic r : AbstractDungeon.player.relics) {
-            if (r instanceof Wrench && !hasArtifact) {
-                AbstractDungeon.actionManager.addToTop(new DamageAction(target, new DamageInfo(source, 4, DamageInfo.DamageType.HP_LOSS), AttackEffect.SLASH_HORIZONTAL));
-                r.flash();
-                break;
+        if (!hasArtifact) {
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                if (r instanceof Wrench) {
+                    AbstractDungeon.actionManager.addToTop(new DamageAction(target, new DamageInfo(source, 4, DamageInfo.DamageType.HP_LOSS), AttackEffect.SLASH_HORIZONTAL));
+                    r.flash();
+                    break;
+                }
             }
         }
         this.isDone = true;
