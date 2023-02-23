@@ -12,6 +12,7 @@ import theUnchainedMod.actions.AllEnemiesGainBlockAction;
 import theUnchainedMod.actions.AllEnemiesLoseHPAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
+import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.powers.WhiplashPower;
 import theUnchainedMod.powers.WreckingBallPower;
 import theUnchainedMod.relics.Churros;
@@ -57,12 +58,9 @@ public class TelekineticPulse extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new TelekineticPulseWaveEffect(p.hb.cX, p.hb.cY, 1000.0F * Settings.scale)));
         AbstractDungeon.actionManager.addToBottom(new AllEnemiesGainBlockAction(defaultSecondMagicNumber));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new WreckingBallPower(p, CHAIN_LENGTH, new AllEnemiesLoseHPAction(magicNumber), magicNumber, TYPE)));
-        if (p.hasRelic(Churros.ID)) {
-            Churros churros = (Churros) p.getRelic(Churros.ID);
-            if (!churros.isEaten()) {
-                churros.eat();
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new WreckingBallPower(p, CHAIN_LENGTH, new AllEnemiesLoseHPAction(magicNumber), magicNumber, TYPE)));
-            }
+        if (p.hasPower(DeliciousChurroPower.POWER_ID)) {
+            p.getPower(DeliciousChurroPower.POWER_ID).onSpecificTrigger();
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new WreckingBallPower(p, CHAIN_LENGTH, new AllEnemiesLoseHPAction(magicNumber), magicNumber, TYPE)));
         }
     }
 }

@@ -9,6 +9,7 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.MultiAttackAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
+import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.powers.RelentlessBatteryPower;
 import theUnchainedMod.powers.WhiplashPower;
 import theUnchainedMod.relics.Churros;
@@ -52,12 +53,9 @@ public class RelentlessOnslaught extends AbstractDynamicCard {
         DamageInfo info = new DamageInfo(p, this.damage, this.damageTypeForTurn);
         AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(magicNumber, m, info));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessBatteryPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
-        if (p.hasRelic(Churros.ID)) {
-            Churros churros = (Churros) p.getRelic(Churros.ID);
-            if (!churros.isEaten()) {
-                churros.eat();
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessBatteryPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
-            }
+        if (p.hasPower(DeliciousChurroPower.POWER_ID)) {
+            p.getPower(DeliciousChurroPower.POWER_ID).onSpecificTrigger();
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessBatteryPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
         }
     }
 }

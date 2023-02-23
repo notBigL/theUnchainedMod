@@ -2,6 +2,7 @@ package theUnchainedMod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.patches.CustomTags;
+import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.util.TextureLoader;
 
 import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;
@@ -23,41 +25,30 @@ public class Churros extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Churros_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Churros_relic.png"));
 
-    private boolean eaten;
-
     public Churros() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
-        eaten = false;
     }
 
-
     @Override
-    public void atBattleStart() {
-        eaten = false;
+    public void onEquip() {
+        this.counter = 0;
     }
 
     @Override
     public void atTurnStart() {
-        eaten = false;
-        this.beginLongPulse();
-    }
-
-    public boolean isEaten() {
-        return eaten;
+        counter++;
+        if (counter == 3) {
+            counter = 0;
+            this.flash();
+            this.beginLongPulse();
+            AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DeliciousChurroPower(AbstractDungeon.player)));
+        }
     }
 
     public void onVictory() {
-        eaten = false;
         this.stopPulse();
     }
-
-    public void eat() {
-        eaten = true;
-        this.flash();
-        AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        this.stopPulse();
-    }
-
 
     @Override
     public String getUpdatedDescription() {
