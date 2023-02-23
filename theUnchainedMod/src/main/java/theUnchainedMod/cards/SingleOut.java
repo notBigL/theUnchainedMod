@@ -21,7 +21,7 @@ public class SingleOut extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 11;
     private static final int UPGRADE_PLUS_DMG = 4;
     private static final int MAGIC_NUMBER = 3;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
