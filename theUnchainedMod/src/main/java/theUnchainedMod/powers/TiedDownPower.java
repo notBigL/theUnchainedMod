@@ -30,7 +30,7 @@ public class TiedDownPower extends AbstractPower {
         ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        type = PowerType.BUFF;
+        type = PowerType.DEBUFF;
         tiedDownUntil = 2;
         isTurnBased = false;
 
