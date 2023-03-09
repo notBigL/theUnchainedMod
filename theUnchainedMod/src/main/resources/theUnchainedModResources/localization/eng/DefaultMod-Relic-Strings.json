@@ -28,7 +28,7 @@
     "NAME": "Rusted Chains",
     "FLAVOR": "These used to hold you to a prison wall. Now they are handy tools.",
     "DESCRIPTIONS": [
-      "The seventh card you play each combat costs zero."
+      "The seventh card you play each combat costs zero and draws a card."
     ]
   },
   "theUnchainedMod:HeartOfTheUnderdog": {
@@ -49,7 +49,7 @@
     "NAME": "Polished Chains",
     "FLAVOR": "You can see your own reflection in these.",
     "DESCRIPTIONS": [
-      "Replaces #yRusted #yChains. EVERY seventh card you play each combat costs zero."
+      "Replaces #yRusted #yChains. EVERY seventh card you play each combat costs zero and draws a card."
     ]
   },
   "theUnchainedMod:BrokenCharm": {
