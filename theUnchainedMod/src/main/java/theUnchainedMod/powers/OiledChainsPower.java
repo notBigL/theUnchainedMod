@@ -53,7 +53,6 @@ public class OiledChainsPower extends AbstractPower {
 
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         if (!card.purgeOnUse || !card.isInAutoplay) {
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }

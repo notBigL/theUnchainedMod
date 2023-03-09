@@ -99,7 +99,7 @@
   "theUnchainedMod:OiledChainsPower": {
     "NAME": "Chain extension",
     "DESCRIPTIONS": [
-      "The next card you play is free and draws a card."
+      "The next card you play is free."
     ]
   },
   "theUnchainedMod:TiedToThePlayerPower": {
