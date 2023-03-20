@@ -52,4 +52,8 @@ public class DeliciousChurroPower extends AbstractPower {
         }
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
     }
+
+    public void atEndOfTurn(boolean isPlayer) {
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+    }
 }
