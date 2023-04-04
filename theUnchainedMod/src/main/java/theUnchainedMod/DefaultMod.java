@@ -362,7 +362,7 @@ public class DefaultMod implements
 
     @Override
     public void receiveEditRelics() {
-        logger.info("Adding relics");
+        logger.info("Adding relics");)
 
         // Take a look at https://github.com/daviscook477/BaseMod/wiki/AutoAdd
         // as well as
@@ -379,7 +379,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new PolishedChains(), TheUnchained.Enums.COLOR_ORANGE);
         BaseMod.addRelicToCustomPool(new BrokenCharm(), TheUnchained.Enums.COLOR_ORANGE);
         BaseMod.addRelicToCustomPool(new Churros(), TheUnchained.Enums.COLOR_ORANGE);
-        BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheUnchained.Enums.COLOR_ORANGE);
+        BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheUnchained.Enums.COLOR_ORANGE;
         BaseMod.addRelicToCustomPool(new TotemOfPain(), TheUnchained.Enums.COLOR_ORANGE);
         BaseMod.addRelicToCustomPool(new DancingRibbons(), TheUnchained.Enums.COLOR_ORANGE);
         BaseMod.addRelicToCustomPool(new Wrench(), TheUnchained.Enums.COLOR_ORANGE);
