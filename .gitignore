@@ -5,6 +5,9 @@
 out/
 *.iml
 
+# Added so the steam path can be different for diff people
+/theUnchainedMod/pom.xml
+
 # Eclipse
 .classpath
 .project
