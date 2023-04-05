@@ -404,5 +404,9 @@
   "theUnchainedMod:MagicMecha": {
     "NAME": "Magic Mecha",
     "DESCRIPTION": "!M! theunchainedmod:Master_Chain: Gain !theUnchainedMod:SecondMagic! Strength, !theUnchainedMod:SecondMagic! Dexterity and !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
+  },
+  "theUnchainedMod:BarbedWireChains": {
+    "NAME": "Barbed Wire Chains",
+    "DESCRIPTION": "Deal !D! damage to ALL Enemies for each chain not finished at the end of your turn."
   }
 }

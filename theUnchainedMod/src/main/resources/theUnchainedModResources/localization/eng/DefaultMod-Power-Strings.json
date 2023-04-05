@@ -437,5 +437,12 @@
     "DESCRIPTIONS": [
       "Increase all Relay gained by cards this combat by #b"
     ]
+  },
+  "theUnchainedMod:BarbedWireChainsPower": {
+    "NAME": "Barbed Wire Chains",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " to ALL enemies for each chain not finished at the end of your turn."
+    ]
   }
 }
