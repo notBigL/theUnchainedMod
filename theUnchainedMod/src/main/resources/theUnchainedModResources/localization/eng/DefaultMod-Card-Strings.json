@@ -396,5 +396,9 @@
   "theUnchainedMod:RetreatingSwing": {
     "NAME": "Retreating Swing",
     "DESCRIPTION": "Deal !D! damage. Gain Block equal to unblocked damage dealt."
+  },
+  "theUnchainedMod:MakeHaste": {
+    "NAME": "Make Haste",
+    "DESCRIPTION": "Exhaust all swirls in your hand and play that many cards from your draw pile. Exhaust."
   }
 }
