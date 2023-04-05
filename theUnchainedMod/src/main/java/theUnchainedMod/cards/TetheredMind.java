@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.TiedToAnEnemyPower;
 import theUnchainedMod.powers.TiedToThePlayerPower;
 import theUnchainedMod.vfx.TetheredMindEffect;
@@ -18,7 +19,7 @@ import theUnchainedMod.vfx.TetheredMindEffect;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class TetheredMind extends AbstractDynamicCard {
+public class TetheredMind extends AbstractDynamicRelayCard {
 
     public static final String ID = DefaultMod.makeID(TetheredMind.class.getSimpleName());
     public static final String IMG = makeCardPath("TetheredMind.png");

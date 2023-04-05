@@ -435,7 +435,7 @@
   "theUnchainedMod:ArcaneMasteryPower": {
     "NAME": "Arcane Mastery",
     "DESCRIPTIONS": [
-      "Increase all Relay gained this combat by #b"
+      "Increase all Relay gained by cards this combat by #b"
     ]
   }
 }

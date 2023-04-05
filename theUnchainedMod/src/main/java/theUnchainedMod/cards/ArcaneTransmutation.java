@@ -6,11 +6,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.ArcaneTransmutationPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class ArcaneTransmutation extends AbstractDynamicCard {
+public class ArcaneTransmutation extends AbstractDynamicCard{
 
     public static final String ID = DefaultMod.makeID(ArcaneTransmutation.class.getSimpleName());
     public static final String IMG = makeCardPath("ArcaneTransmutation.png");

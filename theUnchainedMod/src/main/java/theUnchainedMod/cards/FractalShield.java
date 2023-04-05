@@ -7,12 +7,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.FractalShieldPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class FractalShield extends AbstractDynamicCard {
+public class FractalShield extends AbstractDynamicRelayCard {
 
     public static final String ID = DefaultMod.makeID(FractalShield.class.getSimpleName());
     public static final String IMG = makeCardPath("FractalShield.png");

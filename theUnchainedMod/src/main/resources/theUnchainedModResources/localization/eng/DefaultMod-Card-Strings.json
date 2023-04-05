@@ -225,7 +225,7 @@
   },
   "theUnchainedMod:Refresh": {
     "NAME": "Refresh",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL Lose up to !M! theunchainedmod:Relayed_Damage and gain Block equal to the amount you removed."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL Lose up to !theUnchainedMod:SecondMagic! theunchainedmod:Relayed_Damage and gain Block equal to the amount you removed."
   },
   "theUnchainedMod:RoyalAssessment": {
     "NAME": "Royal Assessment",

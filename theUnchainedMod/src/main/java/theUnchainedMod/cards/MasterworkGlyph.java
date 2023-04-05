@@ -7,11 +7,12 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.actions.MakeRoomAction;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.patches.CustomTags;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class MasterworkGlyph extends AbstractDynamicCard {
+public class MasterworkGlyph extends AbstractDynamicRelayCard {
 
     public static final String ID = DefaultMod.makeID(MasterworkGlyph.class.getSimpleName());
     public static final String IMG = makeCardPath("MasterworkGlyph.png");
