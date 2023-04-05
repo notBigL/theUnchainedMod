@@ -30,12 +30,7 @@ public abstract class AbstractDynamicRelayCard extends AbstractDynamicCard {
         }
 
         if (this.baseMagicNumber != MathUtils.floor(tmp)) {
-            this.isMagicNumberModified = true;
-        }
-        System.out.println("temp: " + tmp);
-        System.out.println("base: " + baseMagicNumber);
-        System.out.println("magicnr: " + magicNumber);
-        System.out.println("modified: " + isMagicNumberModified);
+            this.isMagicNumberModified = true;}
 
         if (tmp < 0.0F) {
             tmp = 0.0F;
