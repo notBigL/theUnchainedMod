@@ -400,5 +400,9 @@
   "theUnchainedMod:MakeHaste": {
     "NAME": "Make Haste",
     "DESCRIPTION": "Exhaust all swirls in your hand and play that many cards from your draw pile. Exhaust."
+  },
+  "theUnchainedMod:MagicMecha": {
+    "NAME": "Magic Mecha",
+    "DESCRIPTION": "!M! theunchainedmod:Master_Chain: Gain !theUnchainedMod:SecondMagic! Strength, !theUnchainedMod:SecondMagic! Dexterity and !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
   }
 }

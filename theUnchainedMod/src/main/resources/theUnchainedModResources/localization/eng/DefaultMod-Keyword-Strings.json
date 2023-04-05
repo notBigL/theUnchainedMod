@@ -9,7 +9,14 @@
       "chain."
     ],
     "DESCRIPTION": "Playing enough cards with the same type as this card will finish the Chain and unlock the specified effect. Chains wear off at the end of turn."
-  },
+  },{
+  "PROPER_NAME": "Master Chain",
+  "NAMES": [
+    "Master Chain",
+    "master_chain"
+  ],
+  "DESCRIPTION": "Playing 1 Power, 1 Skill and 1 Attack will finish this Chain. Cannot be finished by Liberation or Double Down. Does not wear off at the end of turn."
+},
   {
     "PROPER_NAME": "Relay",
     "NAMES": [
@@ -20,6 +27,14 @@
       "relay."
     ],
     "DESCRIPTION": "Until next turn, prevents damage after Block. NL Half of the damage prevented by Relay is dealt to the Player in 2 turns as Relayed Damage. Relayed Damage cannot be blocked by Relay."
+  },
+  {
+    "PROPER_NAME": "Arcane Mastery",
+    "NAMES": [
+      "Arcane Mastery",
+      "arcane_mastery"
+    ],
+    "DESCRIPTION": "Arcane Mastery improves ALL Relay gained."
   },
   {
     "PROPER_NAME": "Relayed Damage",

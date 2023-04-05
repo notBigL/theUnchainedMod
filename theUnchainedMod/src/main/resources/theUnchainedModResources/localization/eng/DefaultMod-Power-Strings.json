@@ -419,5 +419,23 @@
       "Gain #y",
       " Relay, everytime an enemy gains Block."
     ]
+  },
+  "theUnchainedMod:MagicMechaPower": {
+    "NAME": "Magic Mecha",
+    "DESCRIPTIONS": [
+      "If you play",
+      " #b",
+      " more Attack,",
+      " more Skill and",
+      " more Power, ",
+      " gain #y",
+      " Strength, Dexterity and #yArcane #yMastery"
+    ]
+  },
+  "theUnchainedMod:ArcaneMasteryPower": {
+    "NAME": "Arcane Mastery",
+    "DESCRIPTIONS": [
+      "Increase all Relay gained this combat by #b"
+    ]
   }
 }
