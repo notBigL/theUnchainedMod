@@ -14,7 +14,7 @@ import theUnchainedMod.patches.RelayHelpers;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class ArcaneArtillery extends AbstractDynamicRelayCard {
+public class ArcaneArtillery extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(ArcaneArtillery.class.getSimpleName());
     public static final String IMG = makeCardPath("ArcaneArtillery.png");

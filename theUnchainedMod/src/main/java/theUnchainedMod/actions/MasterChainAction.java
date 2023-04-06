@@ -33,8 +33,6 @@ public class MasterChainAction extends AbstractGameAction {
             masterChainPower.loadTextures();
             masterChainPower.updateDescription();
 
-            //TODO:  update texture
-
             //  Check if the master chain has been completed!
             if (masterChainPower.attacksRequired == 0 && masterChainPower.skillsRequired == 0 && masterChainPower.powersRequired == 0)
                 masterChainPower.finishMe();

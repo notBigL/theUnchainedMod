@@ -412,5 +412,9 @@
   "theUnchainedMod:ArcaneArtillery": {
     "NAME": "Arcane Artillery",
     "DESCRIPTION": "Deal !D! damage equal to your Relay. Lose all your Relay."
+  },
+  "theUnchainedMod:ChainFlourish": {
+    "NAME": "Chain Flourish",
+    "DESCRIPTION": "Deal !D! damage for each theunchainedmod:Chain you have finished this turn."
   }
 }
