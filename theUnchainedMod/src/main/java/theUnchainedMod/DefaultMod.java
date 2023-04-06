@@ -33,10 +33,6 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
 // Please don't just mass replace "theDefault" with "yourMod" everywhere.
 // It'll be a bigger pain for you. You only need to replace it in 4 places.
 // I comment those places below, under the place where you set your ID.
@@ -129,6 +125,8 @@ public class DefaultMod implements
     // Atlas and JSON files for the Animations
     public static final String THE_UNCHAINED_SKELETON_ATLAS = "theUnchainedModResources/images/char/defaultCharacter/idle/skeleton.atlas";
     public static final String THE_UNCHAINED_SKELETON_JSON = "theUnchainedModResources/images/char/defaultCharacter/idle/skeleton_Skeleton.json";
+    public static final String THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS = "theUnchainedModResources/images/char/defaultCharacter/idle/princeUnboundSkeleton.atlas";
+    public static final String THE_UNCHAINED_PRINCE_UNBOUND_JSON = "theUnchainedModResources/images/char/defaultCharacter/idle/princeUnboundSkeleton_Skeleton.json";
 
     // =============== MAKE IMAGE PATHS =================
 
@@ -311,26 +309,52 @@ public class DefaultMod implements
         ModPanel settingsPanel = new ModPanel();
 
         // Create the on/off button:
-        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This does nothing except making a sound.",
+        ModLabeledToggleButton ThePrinceSkinButton = new ModLabeledToggleButton("Enables the optional 'Prince Unbound' Skin.",
                 350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
                 enablePlaceholder, // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
                 (label) -> {
                 }, // thing??????? idk
                 (button) -> { // The actual button:
-
                     enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
                     try {
                         // And based on that boolean, set the settings and save them
                         SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
+                        TheUnchained.PRINCE_UNBOUND_SKIN_ACTIVATED = enablePlaceholder;
                         config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
                         config.save();
+
+                        //TODO: add button functionality to prince skin
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 });
 
-        settingsPanel.addUIElement(enableNormalsButton); // Add the button to the settings panel. Button is a go.
+        // Create the on/off button:
+        ModLabeledToggleButton OptionalBoosterPackButton = new ModLabeledToggleButton("Enables the optional 10 Card Booster Pack.",
+                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
+                enablePlaceholder, // Boolean it uses
+                settingsPanel, // The mod panel in which this button will be in
+                (label) -> {
+                }, // thing??????? idk
+                (button) -> { // The actual button:
+                    enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
+                    try {
+                        // And based on that boolean, set the settings and save them
+                        SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
+                        TheUnchained.PRINCE_UNBOUND_SKIN_ACTIVATED = enablePlaceholder;
+                        config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
+                        config.save();
+
+                        //TODO: add button functionality to prince skin
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+
+        //TODO: add a button for the optional booster pack
+
+        settingsPanel.addUIElement(ThePrinceSkinButton); // Add the button to the settings panel. Button is a go.
 
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
