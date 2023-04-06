@@ -54,7 +54,7 @@ public class BarbedWireChainsPower extends AbstractPower {
         AbstractPower currentPower;
         while (var1.hasNext()) {
             currentPower = (AbstractPower) var1.next();
-            if (currentPower instanceof AbstractChainPower) unfinishedChains++;
+            if (currentPower instanceof AbstractChainPower || currentPower instanceof AbstractMasterChainPower) unfinishedChains++;
         }
         if (unfinishedChains > 0) {
             this.flash();

@@ -407,6 +407,10 @@
   },
   "theUnchainedMod:BarbedWireChains": {
     "NAME": "Barbed Wire Chains",
-    "DESCRIPTION": "Deal !D! damage to ALL Enemies for each chain not finished at the end of your turn."
+    "DESCRIPTION": "Deal !M! damage to ALL Enemies for each chain not finished at the end of your turn."
+  },
+  "theUnchainedMod:ArcaneArtillery": {
+    "NAME": "Arcane Artillery",
+    "DESCRIPTION": "Deal !D! damage equal to your Relay. Lose all your Relay."
   }
 }

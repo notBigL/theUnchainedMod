@@ -26,9 +26,6 @@ public class GainRelayAction extends AbstractGameAction {
     @Override
     public void update() {
         if (!target.isDying && !target.isDead) {
-
-            //if(target.hasPower(ArcaneMasteryPower.POWER_ID)) amount += target.getPower(ArcaneMasteryPower.POWER_ID).amount;
-
             RelayHelpers.addRelay(amount, target);
             CardCrawlGame.sound.playA("relayApply", MathUtils.random(-0.2F, 0.2F));
 
