@@ -30,6 +30,7 @@ public class MasterChainAction extends AbstractGameAction {
             if (card.type == AbstractCard.CardType.POWER && masterChainPower.powersRequired > 0)   masterChainPower.powersRequired--;
             if (card.type == AbstractCard.CardType.SKILL && masterChainPower.skillsRequired > 0)   masterChainPower.skillsRequired--;
 
+            masterChainPower.loadTextures();
             masterChainPower.updateDescription();
 
             //TODO:  update texture

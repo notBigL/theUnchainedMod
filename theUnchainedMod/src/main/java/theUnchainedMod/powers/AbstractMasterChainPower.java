@@ -20,12 +20,22 @@ import theUnchainedMod.util.TextureLoader;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
 public class AbstractMasterChainPower extends AbstractPower {
-    private static final Texture attackTexture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/AttackChain_power48.png");
-    private static final Texture attackTexture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/AttackChain_power128.png");
-    private static final Texture skillTexture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/SkillChain_power48.png");
-    private static final Texture skillTexture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/SkillChain_power128.png");
-    private static final Texture powerTexture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/PowerChain_power48.png");
-    private static final Texture powerTexture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/PowerChain_power128.png");
+    private static final Texture Texture48_111 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/111_48.png");
+    private static final Texture Texture128_111 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/111_128.png");
+    private static final Texture Texture48_110 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/110_48.png");
+    private static final Texture Texture128_110 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/110_128.png");
+    private static final Texture Texture48_101 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/101_48.png");
+    private static final Texture Texture128_101 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/101_128.png");
+    private static final Texture Texture48_100 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/100_48.png");
+    private static final Texture Texture128_100 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/100_128.png");
+    private static final Texture Texture48_011 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/011_48.png");
+    private static final Texture Texture128_011 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/011_128.png");
+    private static final Texture Texture48_010 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/010_48.png");
+    private static final Texture Texture128_010 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/010_128.png");
+    private static final Texture Texture48_001 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/001_48.png");
+    private static final Texture Texture128_001 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/001_128.png");
+    private static final Texture Texture48_000 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/000_48.png");
+    private static final Texture Texture128_000 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MasterChain/000_128.png");
     private static int chainIdOffset;
     public final AbstractGameAction finishedChainAction;
     public final AbstractCard.CardType cardType;
@@ -42,9 +52,10 @@ public class AbstractMasterChainPower extends AbstractPower {
         this.powersRequired = this.skillsRequired = this.attacksRequired = this.amount = chainLength;
         this.finishedChainAction = finishedChainAction;
         this.cardType = cardType;
-        loadTextures(true, true, true);
+        loadTextures();
         this.powerIdWithoutOffset = powerID;
     }
+
     public void atEndOfTurn(boolean isPlayer) {
     }
 
@@ -60,13 +71,69 @@ public class AbstractMasterChainPower extends AbstractPower {
         }
     }
 
-    private void loadTextures(boolean attacks, boolean skills, boolean powers) {
+    public void loadTextures() {
 
         //TODO depending on what kind of chains we have to go
-
-        this.region128 = new TextureAtlas.AtlasRegion(attackTexture128, 0, 0, 128, 128);
-        this.region48 = new TextureAtlas.AtlasRegion(attackTexture48, 0, 0, 48, 48);
+        if (attacksRequired > 0)
+        {
+            if (skillsRequired > 0)
+            {
+                if (powersRequired > 0)
+                {
+                    this.region48 = new TextureAtlas.AtlasRegion(Texture48_111, 0, 0, 48, 48);
+                    this.region128 = new TextureAtlas.AtlasRegion(Texture128_111, 0, 0, 128, 128);
+                }
+                else
+                {
+                    this.region48 = new TextureAtlas.AtlasRegion(Texture48_110, 0, 0, 48, 48);
+                    this.region128 = new TextureAtlas.AtlasRegion(Texture128_110, 0, 0, 128, 128);
+                }
+            }
+            else
+            {
+                if (powersRequired > 0)
+                {
+                    this.region48 = new TextureAtlas.AtlasRegion(Texture48_101, 0, 0, 48, 48);
+                    this.region128 = new TextureAtlas.AtlasRegion(Texture128_101, 0, 0, 128, 128);
+            }
+                else
+                {
+                    this.region48 = new TextureAtlas.AtlasRegion(Texture48_100, 0, 0, 48, 48);
+                    this.region128 = new TextureAtlas.AtlasRegion(Texture128_100, 0, 0, 128, 128);
+                }
+            }
+        }
+        else
+        {
+            if (skillsRequired > 0)
+            {
+                if (powersRequired > 0)
+                {
+                    this.region48 = new TextureAtlas.AtlasRegion(Texture48_011, 0, 0, 48, 48);
+                    this.region128 = new TextureAtlas.AtlasRegion(Texture128_011, 0, 0, 128, 128);
+                }
+                else
+                {
+                    this.region48 = new TextureAtlas.AtlasRegion(Texture48_010, 0, 0, 48, 48);
+                    this.region128 = new TextureAtlas.AtlasRegion(Texture128_010, 0, 0, 128, 128);
+                }
+            }
+            else
+            {
+                if (powersRequired > 0)
+                {
+                    this.region48 = new TextureAtlas.AtlasRegion(Texture48_001, 0, 0, 48, 48);
+                    this.region128 = new TextureAtlas.AtlasRegion(Texture128_001, 0, 0, 128, 128);
+                }
+                else
+                {
+                    this.region48 = new TextureAtlas.AtlasRegion(Texture48_000, 0, 0, 48, 48);
+                    this.region128 = new TextureAtlas.AtlasRegion(Texture128_000, 0, 0, 128, 128);
+                }
+            }
+        }
     }
+
 
     public void finishMe() {
         AbstractDungeon.actionManager.addToBottom(finishedChainAction);
