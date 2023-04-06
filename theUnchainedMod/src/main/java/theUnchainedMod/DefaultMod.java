@@ -323,8 +323,6 @@ public class DefaultMod implements
                         TheUnchained.PRINCE_UNBOUND_SKIN_ACTIVATED = enablePlaceholder;
                         config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
                         config.save();
-
-                        //TODO: add button functionality to prince skin
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -332,7 +330,7 @@ public class DefaultMod implements
 
         // Create the on/off button:
         ModLabeledToggleButton OptionalBoosterPackButton = new ModLabeledToggleButton("Enables the optional 10 Card Booster Pack.",
-                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
+                350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
                 enablePlaceholder, // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
                 (label) -> {
@@ -342,19 +340,16 @@ public class DefaultMod implements
                     try {
                         // And based on that boolean, set the settings and save them
                         SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
-                        TheUnchained.PRINCE_UNBOUND_SKIN_ACTIVATED = enablePlaceholder;
+                        TheUnchained.BOOSTER_PACK_ACTIVATED = enablePlaceholder;
                         config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
                         config.save();
-
-                        //TODO: add button functionality to prince skin
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 });
 
-        //TODO: add a button for the optional booster pack
-
         settingsPanel.addUIElement(ThePrinceSkinButton); // Add the button to the settings panel. Button is a go.
+        settingsPanel.addUIElement(OptionalBoosterPackButton); // Add the button to the settings panel. Button is a go.
 
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 

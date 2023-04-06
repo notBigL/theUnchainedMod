@@ -81,6 +81,7 @@ public class TheUnchained extends CustomPlayer {
     private static final String[] TEXT = characterStrings.TEXT;
 
     public static boolean PRINCE_UNBOUND_SKIN_ACTIVATED = false;
+    public static boolean BOOSTER_PACK_ACTIVATED = false;
 
     // =============== /STRINGS/ =================
 
