@@ -56,6 +56,11 @@ public class TheUnchained extends CustomPlayer {
         @SpireEnum(name = "UNCHAINED_ORANGE_COLOR")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
+        @SpireEnum(name = "UNCHAINED_BOOSTER_COLOR") // These two HAVE to have the same absolutely identical name.
+        public static AbstractCard.CardColor COLOR_BOOSTER;
+        @SpireEnum(name = "UNCHAINED_BOOSTER_COLOR")
+        @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_BOOSTER_COLOR;
     }
 
     // =============== CHARACTER ENUMERATORS  =================

@@ -1,20 +1,15 @@
-package theUnchainedMod.cards;
+package theUnchainedMod.booster_pack_cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.unique.DamagePerAttackPlayedAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.DamagePerChainFinishedAction;
-import theUnchainedMod.actions.GainRelayAction;
+import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.ChainsFinishedThisTurnPower;
-
-import java.util.Iterator;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -25,7 +20,7 @@ public class ChainFlourish extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
+    public static final CardColor COLOR = TheUnchained.Enums.COLOR_BOOSTER;
 
     private static final int COST = 0;
     private static final int DAMAGE = 5;

@@ -1,16 +1,13 @@
-package theUnchainedMod.cards;
+package theUnchainedMod.booster_pack_cards;
 
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.ApplyRelayedDamageAction;
+import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 
@@ -23,7 +20,7 @@ public class RetreatingSwing extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF_AND_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
+    public static final CardColor COLOR = TheUnchained.Enums.COLOR_BOOSTER;
 
     private static final int COST = 1;
     private static final int DAMAGE = 7;
