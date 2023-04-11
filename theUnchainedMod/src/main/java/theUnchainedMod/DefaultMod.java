@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import theUnchainedMod.booster_pack_cards.ArcaneArtillery;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.potions.DancePotion;
@@ -465,7 +466,10 @@ public class DefaultMod implements
                 .packageFilter(AbstractDefaultCard.class) // filters to any class in the same package as AbstractDefaultCard, nested packages included
                 .setDefaultSeen(true)
                 .cards();
-
+        new AutoAdd("TheUnchainedMod") // ${project.artifactId}
+                .packageFilter(ArcaneArtillery.class) // search in booster pack folder by finding the arcane artillery class
+                .setDefaultSeen(true)
+                .cards();
         // .setDefaultSeen(true) unlocks the cards
         // This is so that they are all "seen" in the library,
         // for people who like to look at the card list before playing your mod
