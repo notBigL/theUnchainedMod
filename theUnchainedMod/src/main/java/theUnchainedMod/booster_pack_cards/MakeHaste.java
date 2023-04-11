@@ -14,7 +14,7 @@ public class MakeHaste extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(MakeHaste.class.getSimpleName());
     public static final String IMG = makeCardPath("MakeHaste.png");
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_BOOSTER;

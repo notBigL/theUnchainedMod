@@ -16,12 +16,11 @@ import java.util.ArrayList;
 
 @SpirePatch(clz = ColorTabBarFix.Render.class, method = "Insert")
 public class BoosterPackCompendiumNamePatch {
-    private static final String[] TEXT = {"Booster Pack"};
+    private static final String[] TEXT = {"The Unchained \n Booster Pack"};
 
     @SpireInsertPatch(locator = Locator.class)
     public static void Insert(ColorTabBar __instance, SpriteBatch sb, float y, ColorTabBar.CurrentTab curTab, @ByRef String[] ___tabName, int ___i) {
         ArrayList<ColorTabBarFix.ModColorTab> modTabs = ReflectionHacks.getPrivateStatic(ColorTabBarFix.Fields.class, "modTabs");
-        Object CorruptedCardColor = null;
         if (modTabs.get(___i).color.equals(TheUnchained.Enums.COLOR_BOOSTER)) {
             ___tabName[0] = TEXT[0];
         }

@@ -399,7 +399,7 @@
   },
   "theUnchainedMod:MakeHaste": {
     "NAME": "Make Haste",
-    "DESCRIPTION": "Exhaust all swirls in your hand and play that many cards from your draw pile. Exhaust."
+    "DESCRIPTION": "Play as many cards from your draw pile as you have Swirls. Exhaust."
   },
   "theUnchainedMod:MagicMecha": {
     "NAME": "Magic Mecha",
@@ -411,15 +411,19 @@
   },
   "theUnchainedMod:ArcaneArtillery": {
     "NAME": "Arcane Artillery",
-    "DESCRIPTION": "Deal !D! damage equal to your Relay. Lose all your Relay."
+    "DESCRIPTION": "Deal damage equal to your Relay.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to your Relay to ALL Enemies.",
+    "EXTENDED_DESCRIPTION": [ " NL (Deal !D! damage)."]
   },
   "theUnchainedMod:ChainFlourish": {
     "NAME": "Chain Flourish",
-    "DESCRIPTION": "Deal !D! damage for each theunchainedmod:Chain you have finished this turn."
+    "DESCRIPTION": "Deal !D! damage for each theunchainedmod:Chain you have finished this turn.",
+    "EXTENDED_DESCRIPTION": [ " NL (1 Chain finished this turn)" ,
+                              " NL (!M! Chains finished this turn)"]
   },
   "theUnchainedMod:CrushPlates": {
     "NAME": "Crush Plates",
-    "DESCRIPTION": "Deal as much damage as the enemy has theunchainedmod:Crushed_Armor + !M!.",
+    "DESCRIPTION": "Double the Enemy's theunchainedmod:Crushed_Armor then deal as much damage as the Enemy has theunchainedmod:Crushed_Armor.",
     "EXTENDED_DESCRIPTION": [ " NL (Deal !D! damage)."]
   }
 }

@@ -3,7 +3,9 @@ package theUnchainedMod.booster_pack_cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.DamagePerChainFinishedAction;
@@ -24,11 +26,14 @@ public class ChainFlourish extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int DAMAGE = 5;
+    private static final int MAGIC_NUMBER = 5;
     private static final int UPGRADE_PLUS_DMG = 3;
+    private static final CardStrings STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public ChainFlourish() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }
 
     @Override
@@ -46,15 +51,16 @@ public class ChainFlourish extends AbstractDynamicCard {
             count = AbstractDungeon.player.getPower(ChainsFinishedThisTurnPower.POWER_ID).amount;
         }
         if (count == 1) {
-            this.rawDescription = "Deal !D! damage for each theunchainedmod:Chain you have finished this turn.\n (" + count + " Chain finished this turn";
+            this.rawDescription = STRINGS.DESCRIPTION + STRINGS.EXTENDED_DESCRIPTION[0];
         } else {
-            this.rawDescription = "Deal !D! damage for each theunchainedmod:Chain you have finished this turn.\n (" + count + " Chains finished this turn";
+            this.rawDescription = STRINGS.DESCRIPTION + STRINGS.EXTENDED_DESCRIPTION[1];
         }
+        magicNumber = count;
         this.initializeDescription();
     }
 
     public void onMoveToDiscard() {
-        this.rawDescription = "Deal !D! damage for each theunchainedmod:Chain you have finished this turn.";
+        this.rawDescription = STRINGS.DESCRIPTION;
         this.initializeDescription();
     }
     @Override
