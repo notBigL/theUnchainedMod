@@ -44,7 +44,7 @@ public class ChainAction extends AbstractGameAction {
                 }
                 chainPower.updateDescription();
             }
-            this.isDone = true;
         }
+        this.isDone = true;
     }
 }
