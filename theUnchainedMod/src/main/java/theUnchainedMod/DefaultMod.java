@@ -84,11 +84,19 @@ public class DefaultMod implements
     // TODO: add button that unlocks all optional content immediately (useful for future expansions too!)
 
     public static Properties theUnchainedDefaultSettings = new Properties();
-    //  Prince Unbound Button
+
+        //  Unlock all Optional Content
+        public static final String UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY = "PrinceUnboundSkinUnlocked";
+        public static boolean UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = false;
+        //  Prince Unbound Skin
+        public static final String UNCHAINED_SKIN_UNLOCKED_PROPERTY = "PrinceUnboundSkinUnlocked";
+        public static boolean UNCHAINED_SKIN_UNLOCKED = false;
         public static final String UNCHAINED_SKIN_ACTIVATED_PROPERTY = "PrinceUnboundSkinActivated";
         public static boolean UNCHAINED_SKIN_ACTIVATED = false;
 
-        //  Booster Pack Button
+        //  Booster Pack
+        public static final String UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY = "BoosterPackUnlocked";
+        public static boolean UNCHAINED_BOOSTER_PACK_UNLOCKED = false;
         public static final String UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY = "BoosterPackActivated";
         public static boolean UNCHAINED_BOOSTER_PACK_ACTIVATED = false;
 
@@ -237,16 +245,19 @@ public class DefaultMod implements
 
         logger.info("Done creating the color");
 
-
         logger.info("Adding mod settings");
+
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_ACTIVATED_PROPERTY, "FALSE"); // This is the default setting. It's actually set...
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, "FALSE"); // This is the default setting. It's actually set...
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY, "FALSE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_ACTIVATED_PROPERTY, "FALSE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_UNLOCKED_PROPERTY, "FALSE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, "FALSE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, "FALSE");
         try {
-            //SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theUnchainedDefaultSettings); // ...right here
-            // the "fileName" parameter is the name of the file MTS will create where it will save our setting.
             unchainedConfig.load(); // Load the setting and set the boolean to equal it
+
+            UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = unchainedConfig.getBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY);
             UNCHAINED_SKIN_ACTIVATED = unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY);
             UNCHAINED_BOOSTER_PACK_ACTIVATED = unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY);
         } catch (Exception e) {
@@ -338,48 +349,28 @@ public class DefaultMod implements
         ModPanel settingsPanel = new ModPanel();
 
 
-        // PRINCE UNBOUND SKIN
+        // Unlock all optional Content
 
-        ModLabeledToggleButton ThePrinceSkinButton = new ModLabeledToggleButton("Enables the optional 'Prince Unbound' Skin.",
+        ModLabeledToggleButton unlockAllOptionalContentButton = new ModLabeledToggleButton("Unlocks all optional content so it can be used whenever you want to.",
                 350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
-                UNCHAINED_SKIN_ACTIVATED, // Boolean it uses
+                UNCHAINED_OPTIONAL_CONTENT_UNLOCKED, // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
                 (label) -> {
                 }, // thing??????? idk
                 (button) -> { // The actual button:
-                    UNCHAINED_SKIN_ACTIVATED = button.enabled; // The boolean true/false will be whether the button is enabled or not
+                    UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = button.enabled; // The boolean true/false will be whether the button is enabled or not
                     try {
                         // And based on that boolean, set the settings and save them
                         //SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theUnchainedDefaultSettings);
-                        unchainedConfig.setBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY, UNCHAINED_SKIN_ACTIVATED);
+                        unchainedConfig.setBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY, UNCHAINED_OPTIONAL_CONTENT_UNLOCKED);
                         unchainedConfig.save();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 });
 
-        // BOOSTER PACK
 
-        ModLabeledToggleButton OptionalBoosterPackButton = new ModLabeledToggleButton("Enables the optional 10 Card Booster Pack.",
-                350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
-                UNCHAINED_BOOSTER_PACK_ACTIVATED, // Boolean it uses
-                settingsPanel, // The mod panel in which this button will be in
-                (label) -> {
-                }, // thing??????? idk
-                (button) -> { // The actual button:
-                    UNCHAINED_BOOSTER_PACK_ACTIVATED = button.enabled; // The boolean true/false will be whether the button is enabled or not
-                    try {
-                        // And based on that boolean, set the settings and save them
-                        //SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theUnchainedDefaultSettings);
-                        unchainedConfig.setBool(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, UNCHAINED_BOOSTER_PACK_ACTIVATED);
-                        unchainedConfig.save();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                });
-
-        //settingsPanel.addUIElement(ThePrinceSkinButton); // Add the button to the settings panel. Button is a go.
-        //settingsPanel.addUIElement(OptionalBoosterPackButton); // Add the button to the settings panel. Button is a go.
+        settingsPanel.addUIElement(unlockAllOptionalContentButton); // Add the button to the settings panel. Button is a go.
 
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
