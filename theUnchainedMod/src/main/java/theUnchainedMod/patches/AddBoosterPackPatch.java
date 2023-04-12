@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import theUnchainedMod.DefaultMod;
 import theUnchainedMod.booster_pack_cards.*;
 import theUnchainedMod.characters.TheUnchained;
 
@@ -27,7 +28,7 @@ public class AddBoosterPackPatch {
 
     @SpirePostfixPatch
     public static void AddBoosterPack(AbstractDungeon dungeon) {
-        if(!TheUnchained.BOOSTER_PACK_ACTIVATED) return;
+        if(!DefaultMod.UNCHAINED_BOOSTER_PACK_ACTIVATED) return;
 
         Iterator var4 = boosterPackCards.iterator();
         AbstractCard c;

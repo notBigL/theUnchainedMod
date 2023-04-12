@@ -29,6 +29,7 @@ import theUnchainedMod.util.TextureLoader;
 import theUnchainedMod.variables.DefaultCustomVariable;
 import theUnchainedMod.variables.DefaultSecondMagicNumber;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
@@ -65,16 +66,31 @@ public class DefaultMod implements
         PostInitializeSubscriber {
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
     private static String modID;
-
-    // Mod-settings settings. This is if you want an on/off savable button
-    public static Properties theDefaultDefaultSettings = new Properties();
-    public static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
-    public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
-
-    //This is for the in-game mod settings panel.
     private static final String MODNAME = "The Unchained Mod";
     private static final String AUTHOR = "Mezix & BigL"; // And pretty soon - You!
     private static final String DESCRIPTION = "A new Character with 75+ new cards, 10+ new Relics, 3 new Potions and 4 distinct archetypes you can play around with and have a lot of fun!";
+
+
+    // CONFIG
+    public static SpireConfig unchainedConfig; //have this somewhere better, not in this class
+    static {
+        try {
+            unchainedConfig = new SpireConfig("The Unchained", "config");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    // TODO: add button that unlocks all optional content immediately (useful for future expansions too!)
+
+    public static Properties theUnchainedDefaultSettings = new Properties();
+    //  Prince Unbound Button
+        public static final String UNCHAINED_SKIN_ACTIVATED_PROPERTY = "PrinceUnboundSkinActivated";
+        public static boolean UNCHAINED_SKIN_ACTIVATED = false;
+
+        //  Booster Pack Button
+        public static final String UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY = "BoosterPackActivated";
+        public static boolean UNCHAINED_BOOSTER_PACK_ACTIVATED = false;
 
     // =============== INPUT TEXTURE LOCATION =================
 
@@ -225,12 +241,14 @@ public class DefaultMod implements
         logger.info("Adding mod settings");
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
-        theDefaultDefaultSettings.setProperty(ENABLE_PLACEHOLDER_SETTINGS, "FALSE"); // This is the default setting. It's actually set...
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_ACTIVATED_PROPERTY, "FALSE"); // This is the default setting. It's actually set...
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, "FALSE"); // This is the default setting. It's actually set...
         try {
-            SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings); // ...right here
+            //SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theUnchainedDefaultSettings); // ...right here
             // the "fileName" parameter is the name of the file MTS will create where it will save our setting.
-            config.load(); // Load the setting and set the boolean to equal it
-            enablePlaceholder = config.getBool(ENABLE_PLACEHOLDER_SETTINGS);
+            unchainedConfig.load(); // Load the setting and set the boolean to equal it
+            UNCHAINED_SKIN_ACTIVATED = unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY);
+            UNCHAINED_BOOSTER_PACK_ACTIVATED = unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -319,48 +337,49 @@ public class DefaultMod implements
         // Create the Mod Menu
         ModPanel settingsPanel = new ModPanel();
 
-        // Create the on/off button:
+
+        // PRINCE UNBOUND SKIN
+
         ModLabeledToggleButton ThePrinceSkinButton = new ModLabeledToggleButton("Enables the optional 'Prince Unbound' Skin.",
                 350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
-                enablePlaceholder, // Boolean it uses
+                UNCHAINED_SKIN_ACTIVATED, // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
                 (label) -> {
                 }, // thing??????? idk
                 (button) -> { // The actual button:
-                    enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
+                    UNCHAINED_SKIN_ACTIVATED = button.enabled; // The boolean true/false will be whether the button is enabled or not
                     try {
                         // And based on that boolean, set the settings and save them
-                        SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
-                        TheUnchained.PRINCE_UNBOUND_SKIN_ACTIVATED = enablePlaceholder;
-                        config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
-                        config.save();
+                        //SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theUnchainedDefaultSettings);
+                        unchainedConfig.setBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY, UNCHAINED_SKIN_ACTIVATED);
+                        unchainedConfig.save();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 });
 
-        // Create the on/off button:
+        // BOOSTER PACK
+
         ModLabeledToggleButton OptionalBoosterPackButton = new ModLabeledToggleButton("Enables the optional 10 Card Booster Pack.",
                 350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
-                enablePlaceholder, // Boolean it uses
+                UNCHAINED_BOOSTER_PACK_ACTIVATED, // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
                 (label) -> {
                 }, // thing??????? idk
                 (button) -> { // The actual button:
-                    enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
+                    UNCHAINED_BOOSTER_PACK_ACTIVATED = button.enabled; // The boolean true/false will be whether the button is enabled or not
                     try {
                         // And based on that boolean, set the settings and save them
-                        SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
-                        TheUnchained.BOOSTER_PACK_ACTIVATED = enablePlaceholder;
-                        config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
-                        config.save();
+                        //SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theUnchainedDefaultSettings);
+                        unchainedConfig.setBool(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, UNCHAINED_BOOSTER_PACK_ACTIVATED);
+                        unchainedConfig.save();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 });
 
-        settingsPanel.addUIElement(ThePrinceSkinButton); // Add the button to the settings panel. Button is a go.
-        settingsPanel.addUIElement(OptionalBoosterPackButton); // Add the button to the settings panel. Button is a go.
+        //settingsPanel.addUIElement(ThePrinceSkinButton); // Add the button to the settings panel. Button is a go.
+        //settingsPanel.addUIElement(OptionalBoosterPackButton); // Add the button to the settings panel. Button is a go.
 
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 

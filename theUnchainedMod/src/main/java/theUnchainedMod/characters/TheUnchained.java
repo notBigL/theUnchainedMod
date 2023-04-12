@@ -85,9 +85,6 @@ public class TheUnchained extends CustomPlayer {
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
-    public static boolean PRINCE_UNBOUND_SKIN_ACTIVATED = false;
-    public static boolean BOOSTER_PACK_ACTIVATED = false;
-
     // =============== /STRINGS/ =================
 
 
@@ -130,8 +127,8 @@ public class TheUnchained extends CustomPlayer {
 
         // =============== ANIMATIONS =================
 
-        if(PRINCE_UNBOUND_SKIN_ACTIVATED) loadAnimation(THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS, THE_UNCHAINED_PRINCE_UNBOUND_JSON, 1.0f);
-        else                              loadAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f);
+        if(UNCHAINED_SKIN_ACTIVATED) loadAnimation(THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS, THE_UNCHAINED_PRINCE_UNBOUND_JSON, 1.0f);
+        else                         loadAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f);
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         e.setTimeScale(1.0f);
 
