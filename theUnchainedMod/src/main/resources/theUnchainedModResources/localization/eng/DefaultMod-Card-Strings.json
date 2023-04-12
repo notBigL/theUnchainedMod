@@ -345,7 +345,7 @@
   },
   "theUnchainedMod:KeepSwinging": {
     "NAME": "Keep Swinging",
-    "DESCRIPTION": "All Cards with \"Swing\" in their name deal !M! additional damage."
+    "DESCRIPTION": "Cards containing \"Swing\" deal !M! additional damage."
   },
   "theUnchainedMod:EyeForAnEye": {
     "NAME": "Eye For An Eye",

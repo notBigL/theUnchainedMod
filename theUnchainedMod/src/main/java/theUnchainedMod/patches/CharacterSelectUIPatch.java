@@ -48,9 +48,15 @@ public class CharacterSelectUIPatch {
     public static class OpenPatch{
         public static void Prefix(){
             UI_CURRENT_BUTTON_Y = UI_FIRST_BUTTON_DEFAULT_Y;
-            pu_hitbox = new Hitbox(pu_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, pu_width * Settings.scale, pu_height * Settings.scale);
-            UI_CURRENT_BUTTON_Y -= SPACING_BETWEEN_BUTTONS;
-            booster_hitbox = new Hitbox(booster_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, booster_width * Settings.scale, booster_height * Settings.scale);
+
+            if(princeUnboundUnlocked || DefaultMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED) {
+                pu_hitbox = new Hitbox(pu_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, pu_width * Settings.scale, pu_height * Settings.scale);
+                UI_CURRENT_BUTTON_Y -= SPACING_BETWEEN_BUTTONS;
+            }
+            if(boosterPackUnlocked || DefaultMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED) {
+                booster_hitbox = new Hitbox(booster_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, booster_width * Settings.scale, booster_height * Settings.scale);
+                UI_CURRENT_BUTTON_Y -= SPACING_BETWEEN_BUTTONS;
+            }
         }
     }
 
@@ -97,7 +103,6 @@ public class CharacterSelectUIPatch {
                                     DefaultMod.unchainedConfig.setBool(DefaultMod.UNCHAINED_SKIN_ACTIVATED_PROPERTY, princeUnboundButtonStatus);
                                     DefaultMod.PRINCE_UNBOUND_SKIN_ACTIVATED = princeUnboundButtonStatus;
 
-                                    //TODO: update splash on button press
                                     if(princeUnboundButtonStatus) {
                                         __instance.bgCharImg = TextureLoader.getTexture(DefaultMod.PRINCE_UNBOUND_PORTRAIT);
                                         BaseMod.playerPortraitMap.put(TheUnchained.Enums.THE_UNCHAINED, DefaultMod.PRINCE_UNBOUND_PORTRAIT);
