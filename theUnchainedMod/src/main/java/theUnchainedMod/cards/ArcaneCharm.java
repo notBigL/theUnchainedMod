@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.ArcaneCharmPower;
 import theUnchainedMod.vfx.ArcaneCharmEffect;
 

@@ -224,7 +224,7 @@
   },
   "theUnchainedMod:Refresh": {
     "NAME": "Refresh",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL Lose up to !M! theunchainedmod:Relayed_Damage and gain Block equal to the amount you removed."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL Lose up to !theUnchainedMod:SecondMagic! theunchainedmod:Relayed_Damage and gain Block equal to the amount you removed."
   },
   "theUnchainedMod:RoyalAssessment": {
     "NAME": "Royal Assessment",
@@ -343,7 +343,7 @@
   },
   "theUnchainedMod:KeepSwinging": {
     "NAME": "Keep Swinging",
-    "DESCRIPTION": "All Cards with \"Swing\" in their name deal !M! additional damage."
+    "DESCRIPTION": "Cards containing \"Swing\" deal !M! additional damage."
   },
   "theUnchainedMod:EyeForAnEye": {
     "NAME": "Eye For An Eye",
@@ -390,5 +390,38 @@
   "theUnchainedMod:PerfectStep": {
     "NAME": "Perfect Step",
     "DESCRIPTION": "Gain !B! Block. NL Retain. Gain 1 theunchainedmod:Full_Spin. Exhaust."
+  },
+  "theUnchainedMod:RetreatingSwing": {
+    "NAME": "Retreating Swing",
+    "DESCRIPTION": "Deal !D! damage. Gain Block equal to unblocked damage dealt."
+  },
+  "theUnchainedMod:MakeHaste": {
+    "NAME": "Make Haste",
+    "DESCRIPTION": "Play as many cards from your draw pile as you have Swirls. Exhaust."
+  },
+  "theUnchainedMod:MagicMecha": {
+    "NAME": "Magic Mecha",
+    "DESCRIPTION": "!M! theunchainedmod:Master_Chain: Gain !theUnchainedMod:SecondMagic! Strength, !theUnchainedMod:SecondMagic! Dexterity and !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
+  },
+  "theUnchainedMod:BarbedWireChains": {
+    "NAME": "Barbed Wire Chains",
+    "DESCRIPTION": "Deal !M! damage to ALL Enemies for each chain not finished at the end of your turn."
+  },
+  "theUnchainedMod:ArcaneArtillery": {
+    "NAME": "Arcane Artillery",
+    "DESCRIPTION": "Deal damage equal to your Relay.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to your Relay to ALL Enemies.",
+    "EXTENDED_DESCRIPTION": [ " NL (Deal !D! damage)."]
+  },
+  "theUnchainedMod:ChainFlourish": {
+    "NAME": "Chain Flourish",
+    "DESCRIPTION": "Deal !D! damage for each theunchainedmod:Chain you have finished this turn.",
+    "EXTENDED_DESCRIPTION": [ " NL (1 Chain finished this turn)" ,
+                              " NL ( !M! Chains finished this turn)"]
+  },
+  "theUnchainedMod:CrushPlates": {
+    "NAME": "Crush Plates",
+    "DESCRIPTION": "Double the Enemy's theunchainedmod:Crushed_Armor then deal as much damage as the Enemy has theunchainedmod:Crushed_Armor.",
+    "EXTENDED_DESCRIPTION": [ " NL (Deal !D! damage)."]
   }
 }

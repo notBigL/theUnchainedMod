@@ -7,11 +7,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.EnclosingSteelPower;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class Cocoon extends AbstractDynamicCard {
+public class Cocoon extends AbstractDynamicRelayCard {
 
     public static final String ID = DefaultMod.makeID(Cocoon.class.getSimpleName());
     public static final String IMG = makeCardPath("Cocoon.png");

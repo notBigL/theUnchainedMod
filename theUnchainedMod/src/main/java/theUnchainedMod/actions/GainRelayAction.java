@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import theUnchainedMod.patches.RelayHelpers;
+import theUnchainedMod.powers.ArcaneMasteryPower;
 import theUnchainedMod.powers.GlyphBrandPower;
 import theUnchainedMod.powers.RelayPower;
 

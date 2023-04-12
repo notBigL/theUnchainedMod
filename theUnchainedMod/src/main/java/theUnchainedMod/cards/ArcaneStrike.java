@@ -9,10 +9,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.patches.CustomTags;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class ArcaneStrike extends AbstractDynamicCard {
+public class ArcaneStrike extends AbstractDynamicRelayCard {
 
     public static final String ID = DefaultMod.makeID(ArcaneStrike.class.getSimpleName());
     public static final String IMG = makeCardPath("ArcaneStrike.png");

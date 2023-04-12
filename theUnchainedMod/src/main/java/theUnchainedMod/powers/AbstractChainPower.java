@@ -89,6 +89,7 @@ public class AbstractChainPower extends AbstractPower {
     public void finishMe() {
         AbstractDungeon.actionManager.addToBottom(finishedChainAction);
         checkForFinishers();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ChainsFinishedThisTurnPower(this.owner, 1)));
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
     }
 
