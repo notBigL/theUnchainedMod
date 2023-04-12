@@ -21,7 +21,7 @@ public class Cocoon extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 8;
+    private static final int MAGIC_NUMBER = 6;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 3;
     private static final int SECOND_MAGIC_NUMBER = 1;
 

@@ -41,11 +41,7 @@ public class MagusFormPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[3];
-        }
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override
@@ -53,7 +49,6 @@ public class MagusFormPower extends AbstractPower {
         if (card.cost == 2 || card.costForTurn == 2 || (card.cost == -1 && card.energyOnUse == 2)) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.amount));
         }
     }
 

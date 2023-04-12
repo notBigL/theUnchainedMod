@@ -30,7 +30,6 @@ public class Riposte extends AbstractDynamicCard {
     private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 2;
     private static final int MAGIC_NUMBER = 1;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
 
     public Riposte() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -46,7 +45,6 @@ public class Riposte extends AbstractDynamicCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DAMAGE);
             upgradeBlock(UPGRADE_PLUS_BLOCK);
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
         }
 
     }

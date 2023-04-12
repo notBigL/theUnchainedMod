@@ -151,13 +151,12 @@
   },
   "theUnchainedMod:FractalShield": {
     "NAME": "Fractal Shield",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage."
   },
   "theUnchainedMod:Windup": {
     "NAME": "Windup",
-    "DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random common Attack to your hand. NL It costs 0 this turn NL and exhausts.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! Chain: Add a random upgraded common Attack to your hand. NL It costs 0 this turn NL and exhausts."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Add a random common Attack to your hand. NL It costs 0 this turn NL and exhausts.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: Add a random upgraded common Attack to your hand. NL It costs 0 this turn NL and exhausts."
   },
   "theUnchainedMod:APlomb": {
     "NAME": "À Plomb",
@@ -183,7 +182,7 @@
   },
   "theUnchainedMod:ArcaneStrike": {
     "NAME": "Arcane Strike",
-    "DESCRIPTION": "Deal !D! damage 2 times. Gain !M! theunchainedmod:Relay."
+    "DESCRIPTION": "Deal !D! damage twice. Gain !M! theunchainedmod:Relay."
   },
   "theUnchainedMod:SolarPlexus": {
     "NAME": "Solar Plexus",
@@ -229,8 +228,8 @@
   },
   "theUnchainedMod:RoyalAssessment": {
     "NAME": "Royal Assessment",
-    "DESCRIPTION": "Gain [E] for every enemy that is blocking.",
-    "UPGRADE_DESCRIPTION": "Gain [E] if ALL enemies are blocking and [E] for every enemy that is blocking."
+    "DESCRIPTION": "Gain [E] for every enemy that has Block.",
+    "UPGRADE_DESCRIPTION": "Gain [E] if ALL enemies have Block and [E] for every enemy that has Block."
   },
   "theUnchainedMod:Cocoon": {
     "NAME": "Cocoon",
@@ -246,8 +245,8 @@
   },
   "theUnchainedMod:MagusForm": {
     "NAME": "Magus Form",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a 2-cost card, draw a card and gain [E].",
-    "UPGRADE_DESCRIPTION": "Whenever you play a 2-cost card, draw a card and gain [E]."
+    "DESCRIPTION": "Ethereal. NL Whenever you play a 2-cost card, gain [E].",
+    "UPGRADE_DESCRIPTION": "Whenever you play a 2-cost card, gain [E]."
   },
   "theUnchainedMod:TelekineticPulse": {
     "NAME": "Telekinetic Pulse",
@@ -259,8 +258,7 @@
   },
   "theUnchainedMod:ThePrincesGrace": {
     "NAME": "The Prince's Grace",
-    "DESCRIPTION": "At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn."
+    "DESCRIPTION": "At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn."
   },
   "theUnchainedMod:Cuff": {
     "NAME": "Cuff",
@@ -308,7 +306,7 @@
   },
   "theUnchainedMod:LawOfInertia": {
     "NAME": "Law Of Inertia",
-    "DESCRIPTION": "The first time you finish a theunchainedmod:Chain each turn, gain !M! Strength and Dexterity. If you did not finish a theunchainedmod:Chain by the end of turn, lose !M! Strength and Dexterity. You cannot lose more than the amount you gained."
+    "DESCRIPTION": "The first time you finish a theunchainedmod:Chain each turn, gain !M! Strength and Dexterity. If you did not finish a theunchainedmod:Chain by the end of turn, lose !M! Strength and Dexterity."
   },
   "theUnchainedMod:LastResort": {
     "NAME": "Last Resort",
@@ -324,8 +322,8 @@
   },
   "theUnchainedMod:Prophecy": {
     "NAME": "Prophecy",
-    "DESCRIPTION": "Copy a card and put the copy on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Copy a card twice and put both copies on top of your draw pile. NL Exhaust."
+    "DESCRIPTION": "Copy a card in your hand and put the copy on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Copy a card in your hand twice and put both copies on top of your draw pile. NL Exhaust."
   },
   "theUnchainedMod:Riposte": {
     "NAME": "Riposte",
@@ -353,7 +351,7 @@
   },
   "theUnchainedMod:DefensiveLink": {
     "NAME": "Defensive Link",
-    "DESCRIPTION": "Gain !B! Block. Reduce the cost of a card by 1 this turn."
+    "DESCRIPTION": "Gain !B! Block. Reduce the cost of a card in your hand by 1 this turn."
   },
   "theUnchainedMod:ChaseDestiny": {
     "NAME": "Chase Destiny",

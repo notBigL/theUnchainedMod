@@ -25,16 +25,6 @@ public class BalletShoes extends CustomRelic {
     }
 
     @Override
-    public void onPlayerEndTurn() {
-        if (AbstractDungeon.player.hasPower("theUnchainedMod:MomentumPower")) {
-            int momentumAmount = AbstractDungeon.player.getPower("theUnchainedMod:MomentumPower").amount;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new MomentumPower(AbstractDungeon.player, 3 - momentumAmount)));
-            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.flash();
-        }
-    }
-
-    @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

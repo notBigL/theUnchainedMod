@@ -2,9 +2,11 @@ package theUnchainedMod.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,16 +14,19 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.cards.Swirl;
+import theUnchainedMod.relics.BalletShoes;
 import theUnchainedMod.util.TextureLoader;
 
-public class MomentumPower extends AbstractPower {
+import java.util.Iterator;
+
+public class MomentumPower extends TwoAmountPower {
 
     public static final String POWER_ID = DefaultMod.makeID("MomentumPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private int momentumRequired;
+    private int standardMomentumRequired;
 
     private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MomentumPower_power48.png");
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/MomentumPower_power128.png");
@@ -30,7 +35,6 @@ public class MomentumPower extends AbstractPower {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
-        momentumRequired = 3;
         this.amount = amount;
         type = AbstractPower.PowerType.BUFF;
         isTurnBased = false;
@@ -46,7 +50,7 @@ public class MomentumPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.momentumRequired + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount2 + DESCRIPTIONS[2];
     }
 
     public void stackPower(int stackAmount) {
@@ -55,8 +59,32 @@ public class MomentumPower extends AbstractPower {
     }
 
     @Override
-    public void onInitialApplication() {
+    public void atStartOfTurn() {
+        int costOfNextSwirl = standardMomentumRequired;
+        Iterator var1 = AbstractDungeon.player.hand.group.iterator();
+
+        while (var1.hasNext()) {
+            AbstractCard c = (AbstractCard) var1.next();
+            if (c instanceof Swirl) {
+                costOfNextSwirl++;
+            }
+        }
+        amount2 = costOfNextSwirl;
         this.amount = checkForMomentumRequired(this.amount);
+        updateDescription();
+    }
+
+    @Override
+    public void onInitialApplication() {
+        if (AbstractDungeon.player.hasRelic(BalletShoes.ID)) {
+            amount2 = 1;
+            standardMomentumRequired = 1;
+        } else {
+            amount2 = 2;
+            standardMomentumRequired = 2;
+        }
+        this.amount = checkForMomentumRequired(this.amount);
+        updateDescription();
     }
 
     private int checkForMomentumRequired(int amount) {
@@ -65,15 +93,13 @@ public class MomentumPower extends AbstractPower {
         if (this.owner.hasPower(FullSpinPower.POWER_ID)) {
             card.fullSpinApply(this.owner.getPower(FullSpinPower.POWER_ID).amount);
         }
-        while (amount >= momentumRequired) {
+        while (amount >= amount2) {
             amountOfSwirls++;
-            amount -= momentumRequired;
+            amount -= amount2;
+            amount2++;
         }
         for (int i = amountOfSwirls; i > 0; i--) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1, false));
-        }
-        if (amount <= 0) {
-            AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+            AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(card, 1, false));
         }
         return amount;
     }

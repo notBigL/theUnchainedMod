@@ -2,6 +2,7 @@ package theUnchainedMod.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.util.TextureLoader;
 
@@ -50,7 +52,7 @@ public class OiledChainsPower extends AbstractPower {
     }
 
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (!card.purgeOnUse) {
+        if (!card.purgeOnUse || !card.isInAutoplay) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }

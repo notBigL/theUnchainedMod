@@ -35,7 +35,7 @@
       "Momentum",
       "momentum"
     ],
-    "DESCRIPTION": "When you obtain 3 Momentum, add a Swirl into your hand."
+    "DESCRIPTION": "When you obtain enough Momentum, add a Swirl into your hand. The cost starts at 2 Momentum and goes up for each Swirl in your hand."
   },
   {
     "PROPER_NAME": "Full Spin",

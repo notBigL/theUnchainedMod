@@ -14,6 +14,7 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.SolarPlexusSoundAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
+import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.powers.SolarPlexusPower;
 import theUnchainedMod.powers.WhiplashPower;
 import theUnchainedMod.relics.Churros;
@@ -60,12 +61,9 @@ public class SolarPlexus extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new SolarPlexusSoundAction());
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY, false, true));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new SolarPlexusPower(p, magicNumber, m, CardType.ATTACK)));
-        if (p.hasRelic(Churros.ID)) {
-            Churros churros = (Churros) p.getRelic(Churros.ID);
-            if (!churros.isEaten()) {
-                churros.eat();
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new SolarPlexusPower(p, magicNumber, m, CardType.ATTACK)));
-            }
+        if (p.hasPower(DeliciousChurroPower.POWER_ID)) {
+            p.getPower(DeliciousChurroPower.POWER_ID).onSpecificTrigger();
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new SolarPlexusPower(p, magicNumber, m, CardType.ATTACK)));
         }
     }
 }

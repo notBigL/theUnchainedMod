@@ -163,7 +163,8 @@
   "theUnchainedMod:MomentumPower": {
     "NAME": "Momentum",
     "DESCRIPTIONS": [
-      "When you obtain #b",
+      "You have #g",
+      " Momentum. When you obtain #b",
       " Momentum, add a Swirl into your hand."
     ]
   },
@@ -217,9 +218,7 @@
     "NAME": "Magus Form",
     "DESCRIPTIONS": [
       "Whenever you play a 2-cost card, gain #y",
-      " Energy and draw #y",
-      " card.",
-      " cards."
+      " Energy."
     ]
   },
   "theUnchainedMod:WreckingBallPower": {
@@ -418,6 +417,12 @@
     "DESCRIPTIONS": [
       "Gain #y",
       " Relay, everytime an enemy gains Block."
+    ]
+  },
+  "theUnchainedMod:DeliciousChurroPower": {
+    "NAME": "Delicious Churro",
+    "DESCRIPTIONS": [
+      "This turn, the next Chain you start is copied."
     ]
   }
 }

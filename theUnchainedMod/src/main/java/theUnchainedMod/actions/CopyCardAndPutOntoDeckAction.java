@@ -34,7 +34,7 @@ public class CopyCardAndPutOntoDeckAction extends AbstractGameAction {
                 if (upgraded) {
                     this.p.hand.moveToDeck(c.makeStatEquivalentCopy(), false);
                 }
-                this.tickDuration();
+                this.isDone = true;
             } else {
                 AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false);
                 this.tickDuration();
