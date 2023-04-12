@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.util.TextureLoader;
 

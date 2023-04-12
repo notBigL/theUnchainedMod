@@ -423,6 +423,8 @@
     "NAME": "Delicious Churro",
     "DESCRIPTIONS": [
       "This turn, the next Chain you start is copied."
+      ]
+    },
   "theUnchainedMod:MagicMechaPower": {
     "NAME": "Magic Mecha",
     "DESCRIPTIONS": [
@@ -446,7 +448,6 @@
     "DESCRIPTIONS": [
       "Deal #b",
       " to ALL enemies for each chain not finished at the end of your turn."
->>>>>>> Felix
     ]
   }
 }

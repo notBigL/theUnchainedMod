@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.powers.MagicMechaPower;
 import theUnchainedMod.relics.Churros;
 
@@ -33,7 +34,6 @@ public class MagicMecha extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
-        tags.add(BaseModCardTags.FORM);
     }
 
     public void upgrade() {
@@ -46,12 +46,9 @@ public class MagicMecha extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new MagicMechaPower(p, magicNumber, defaultSecondMagicNumber, TYPE)));
 
-        if (p.hasRelic(Churros.ID)) {
-            Churros churros = (Churros) p.getRelic(Churros.ID);
-            if (!churros.isEaten()) {
-                churros.eat();
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new MagicMechaPower(p, magicNumber, defaultSecondMagicNumber, TYPE)));
-            }
+        if(p.hasPower(DeliciousChurroPower.POWER_ID)) {
+            p.getPower(DeliciousChurroPower.POWER_ID).onSpecificTrigger();
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new MagicMechaPower(p, magicNumber, defaultSecondMagicNumber, TYPE)));
         }
     }
 }
