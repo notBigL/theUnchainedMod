@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import theUnchainedMod.booster_pack_cards.ArcaneArtillery;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.potions.DancePotion;
@@ -28,15 +29,12 @@ import theUnchainedMod.util.TextureLoader;
 import theUnchainedMod.variables.DefaultCustomVariable;
 import theUnchainedMod.variables.DefaultSecondMagicNumber;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
-//TODO: DON'T MASS RENAME/REFACTOR
 // Please don't just mass replace "theDefault" with "yourMod" everywhere.
 // It'll be a bigger pain for you. You only need to replace it in 4 places.
 // I comment those places below, under the place where you set your ID.
@@ -68,22 +66,46 @@ public class DefaultMod implements
         PostInitializeSubscriber {
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
     private static String modID;
-
-    // Mod-settings settings. This is if you want an on/off savable button
-    public static Properties theDefaultDefaultSettings = new Properties();
-    public static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
-    public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
-
-    //This is for the in-game mod settings panel.
     private static final String MODNAME = "The Unchained Mod";
     private static final String AUTHOR = "Mezix & BigL"; // And pretty soon - You!
     private static final String DESCRIPTION = "A new Character with 75+ new cards, 10+ new Relics, 3 new Potions and 4 distinct archetypes you can play around with and have a lot of fun!";
+
+
+    // CONFIG
+    public static SpireConfig unchainedConfig; //have this somewhere better, not in this class
+    static {
+        try {
+            unchainedConfig = new SpireConfig("The Unchained", "config");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    // TODO: add button that unlocks all optional content immediately (useful for future expansions too!)
+
+    public static Properties theUnchainedDefaultSettings = new Properties();
+
+        //  Unlock all Optional Content
+        public static final String UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY = "PrinceUnboundSkinUnlocked";
+        public static boolean UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = false;
+        //  Prince Unbound Skin
+        public static final String UNCHAINED_SKIN_UNLOCKED_PROPERTY = "PrinceUnboundSkinUnlocked";
+        public static boolean UNCHAINED_SKIN_UNLOCKED = false;
+        public static final String UNCHAINED_SKIN_ACTIVATED_PROPERTY = "PrinceUnboundSkinActivated";
+        public static boolean PRINCE_UNBOUND_SKIN_ACTIVATED = false;
+
+        //  Booster Pack
+        public static final String UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY = "BoosterPackUnlocked";
+        public static boolean UNCHAINED_BOOSTER_PACK_UNLOCKED = false;
+        public static final String UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY = "BoosterPackActivated";
+        public static boolean UNCHAINED_BOOSTER_PACK_ACTIVATED = false;
 
     // =============== INPUT TEXTURE LOCATION =================
 
     // Colors (RGB)
     // Character Color
     public static final Color UNCHAINED_ORANGE = CardHelper.getColor(255.0f, 170.0f, 17.0f);
+    public static final Color UNCHAINED_BOOSTER_COLOR = CardHelper.getColor(255.0f, 170.0f, 17.0f);
 
     // Potion Colors in RGB
     public static final Color LINK_POTION_LIQUID = CardHelper.getColor(220.0F, 170.0f, 71.0f);
@@ -117,11 +139,20 @@ public class DefaultMod implements
 
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "theUnchainedModResources/images/charSelect/UnchainedCharacterButton.png";
-    private static final String THE_DEFAULT_PORTRAIT = "theUnchainedModResources/images/charSelect/UnchainedSplashArt.png";
+
+    //  UNCHAINED DEFAULT
+    public static final String THE_DEFAULT_PORTRAIT = "theUnchainedModResources/images/charSelect/UnchainedSplashArt.png";
     public static final String THE_DEFAULT_CHARACTER = "theUnchainedModResources/images/char/defaultCharacter/Side_View_tmp_Unchained.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "theUnchainedModResources/images/char/defaultCharacter/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "theUnchainedModResources/images/char/defaultCharacter/shoulder2.png";
     public static final String THE_DEFAULT_CORPSE = "theUnchainedModResources/images/char/defaultCharacter/corpse.png";
+
+    //  UNCHAINED DEFAULT
+    public static final String PRINCE_UNBOUND_PORTRAIT = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PUSplashArt.png";
+    public static final String PRINCE_UNBOUND_CHARACTER = "theUnchainedModResources/images/char/defaultCharacter/Side_View_tmp_Unchained.png";
+    public static final String PRINCE_UNBOUND_SHOULDER_1 = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PU_Shoulder1.png";
+    public static final String PRINCE_UNBOUND_SHOULDER_2 = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PU_Shoulder2.png";
+    public static final String PRINCE_UNBOUND_CORPSE = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PU_corpse.png";
 
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
     public static final String BADGE_IMAGE = "theUnchainedModResources/images/Badge.png";
@@ -129,6 +160,8 @@ public class DefaultMod implements
     // Atlas and JSON files for the Animations
     public static final String THE_UNCHAINED_SKELETON_ATLAS = "theUnchainedModResources/images/char/defaultCharacter/idle/skeleton.atlas";
     public static final String THE_UNCHAINED_SKELETON_JSON = "theUnchainedModResources/images/char/defaultCharacter/idle/skeleton_Skeleton.json";
+    public static final String THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/princeUnboundSkeleton.atlas";
+    public static final String THE_UNCHAINED_PRINCE_UNBOUND_JSON = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/princeUnboundSkeleton_Skeleton.json";
 
     // =============== MAKE IMAGE PATHS =================
 
@@ -204,24 +237,38 @@ public class DefaultMod implements
 
         logger.info("Creating the color " + TheUnchained.Enums.COLOR_ORANGE.toString());
 
+
+        // THE UNCHAINED DEFAULT CARDS
         BaseMod.addColor(TheUnchained.Enums.COLOR_ORANGE, UNCHAINED_ORANGE, UNCHAINED_ORANGE, UNCHAINED_ORANGE,
                 UNCHAINED_ORANGE, UNCHAINED_ORANGE, UNCHAINED_ORANGE, UNCHAINED_ORANGE,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
 
+        // THE UNCHAINED BOOSTER PACK CARDS
+        BaseMod.addColor(TheUnchained.Enums.COLOR_BOOSTER, UNCHAINED_BOOSTER_COLOR, UNCHAINED_BOOSTER_COLOR, UNCHAINED_BOOSTER_COLOR,
+                UNCHAINED_BOOSTER_COLOR, UNCHAINED_BOOSTER_COLOR, UNCHAINED_BOOSTER_COLOR, UNCHAINED_BOOSTER_COLOR,
+                ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
+                ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
+                ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
+
         logger.info("Done creating the color");
 
-
         logger.info("Adding mod settings");
+
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
-        theDefaultDefaultSettings.setProperty(ENABLE_PLACEHOLDER_SETTINGS, "FALSE"); // This is the default setting. It's actually set...
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY, "FALSE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_ACTIVATED_PROPERTY, "FALSE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_UNLOCKED_PROPERTY, "FALSE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, "FALSE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, "FALSE");
         try {
-            SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings); // ...right here
-            // the "fileName" parameter is the name of the file MTS will create where it will save our setting.
-            config.load(); // Load the setting and set the boolean to equal it
-            enablePlaceholder = config.getBool(ENABLE_PLACEHOLDER_SETTINGS);
+            unchainedConfig.load(); // Load the setting and set the boolean to equal it
+
+            UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = unchainedConfig.getBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY);
+            PRINCE_UNBOUND_SKIN_ACTIVATED = unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY);
+            UNCHAINED_BOOSTER_PACK_ACTIVATED = unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -287,9 +334,15 @@ public class DefaultMod implements
     @Override
     public void receiveEditCharacters() {
         logger.info("Beginning to edit characters. " + "Add " + TheUnchained.Enums.THE_UNCHAINED.toString());
-
-        BaseMod.addCharacter(new TheUnchained("the Default", TheUnchained.Enums.THE_UNCHAINED),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheUnchained.Enums.THE_UNCHAINED);
+        if(!PRINCE_UNBOUND_SKIN_ACTIVATED) {
+            BaseMod.addCharacter(new TheUnchained("the Default", TheUnchained.Enums.THE_UNCHAINED),
+                    THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheUnchained.Enums.THE_UNCHAINED);
+        }
+        else
+        {
+            BaseMod.addCharacter(new TheUnchained("the Default", TheUnchained.Enums.THE_UNCHAINED),
+                    THE_DEFAULT_BUTTON, PRINCE_UNBOUND_PORTRAIT, TheUnchained.Enums.THE_UNCHAINED);
+        }
 
         receiveEditPotions();
         logger.info("Added " + TheUnchained.Enums.THE_UNCHAINED.toString());
@@ -310,27 +363,29 @@ public class DefaultMod implements
         // Create the Mod Menu
         ModPanel settingsPanel = new ModPanel();
 
-        // Create the on/off button:
-        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This does nothing except making a sound.",
+
+        // Unlock all optional Content
+
+        ModLabeledToggleButton unlockAllOptionalContentButton = new ModLabeledToggleButton("Unlocks all optional content so it can be used whenever you want to.",
                 350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
-                enablePlaceholder, // Boolean it uses
+                UNCHAINED_OPTIONAL_CONTENT_UNLOCKED, // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
                 (label) -> {
                 }, // thing??????? idk
                 (button) -> { // The actual button:
-
-                    enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
+                    UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = button.enabled; // The boolean true/false will be whether the button is enabled or not
                     try {
                         // And based on that boolean, set the settings and save them
-                        SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
-                        config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
-                        config.save();
+                        //SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theUnchainedDefaultSettings);
+                        unchainedConfig.setBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY, UNCHAINED_OPTIONAL_CONTENT_UNLOCKED);
+                        unchainedConfig.save();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 });
 
-        settingsPanel.addUIElement(enableNormalsButton); // Add the button to the settings panel. Button is a go.
+
+        settingsPanel.addUIElement(unlockAllOptionalContentButton); // Add the button to the settings panel. Button is a go.
 
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
@@ -436,7 +491,10 @@ public class DefaultMod implements
                 .packageFilter(AbstractDefaultCard.class) // filters to any class in the same package as AbstractDefaultCard, nested packages included
                 .setDefaultSeen(true)
                 .cards();
-
+        new AutoAdd("TheUnchainedMod") // ${project.artifactId}
+                .packageFilter(ArcaneArtillery.class) // search in booster pack folder by finding the arcane artillery class
+                .setDefaultSeen(true)
+                .cards();
         // .setDefaultSeen(true) unlocks the cards
         // This is so that they are all "seen" in the library,
         // for people who like to look at the card list before playing your mod

@@ -56,6 +56,11 @@ public class TheUnchained extends CustomPlayer {
         @SpireEnum(name = "UNCHAINED_ORANGE_COLOR")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
+        @SpireEnum(name = "UNCHAINED_BOOSTER_COLOR") // These two HAVE to have the same absolutely identical name.
+        public static AbstractCard.CardColor COLOR_BOOSTER;
+        @SpireEnum(name = "UNCHAINED_BOOSTER_COLOR")
+        @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_BOOSTER_COLOR;
     }
 
     // =============== CHARACTER ENUMERATORS  =================
@@ -109,20 +114,31 @@ public class TheUnchained extends CustomPlayer {
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
-
-        initializeClass(THE_DEFAULT_CHARACTER, // required call to load textures and setup energy/loadout.
+        if(!PRINCE_UNBOUND_SKIN_ACTIVATED) {
+            initializeClass(THE_DEFAULT_CHARACTER, // required call to load textures and setup energy/loadout.
+                    // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
+                    THE_DEFAULT_SHOULDER_2, // campfire pose
+                    THE_DEFAULT_SHOULDER_1, // another campfire pose
+                    THE_DEFAULT_CORPSE, // dead corpse
+                    getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN)); // energy manager
+        }
+        else {
+            initializeClass(PRINCE_UNBOUND_CHARACTER, // required call to load textures and setup energy/loadout.
                 // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
-                THE_DEFAULT_SHOULDER_2, // campfire pose
-                THE_DEFAULT_SHOULDER_1, // another campfire pose
-                THE_DEFAULT_CORPSE, // dead corpse
+                PRINCE_UNBOUND_SHOULDER_2, // campfire pose
+                PRINCE_UNBOUND_SHOULDER_1, // another campfire pose
+                PRINCE_UNBOUND_CORPSE, // dead corpse
                 getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN)); // energy manager
+
+        }
 
         // =============== /TEXTURES, ENERGY, LOADOUT/ =================
 
 
         // =============== ANIMATIONS =================
 
-        loadAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f);
+        if(PRINCE_UNBOUND_SKIN_ACTIVATED) loadAnimation(THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS, THE_UNCHAINED_PRINCE_UNBOUND_JSON, 1.0f);
+        else                         loadAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f);
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         e.setTimeScale(1.0f);
 

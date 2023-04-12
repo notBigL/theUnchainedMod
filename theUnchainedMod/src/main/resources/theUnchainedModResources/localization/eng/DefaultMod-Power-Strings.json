@@ -423,6 +423,30 @@
     "NAME": "Delicious Churro",
     "DESCRIPTIONS": [
       "This turn, the next Chain you start is copied."
+  "theUnchainedMod:MagicMechaPower": {
+    "NAME": "Magic Mecha",
+    "DESCRIPTIONS": [
+      "If you play",
+      " #b",
+      " more Attack,",
+      " more Skill and",
+      " more Power, ",
+      " gain #y",
+      " Strength, Dexterity and #yArcane #yMastery"
+    ]
+  },
+  "theUnchainedMod:ArcaneMasteryPower": {
+    "NAME": "Arcane Mastery",
+    "DESCRIPTIONS": [
+      "Increase all Relay gained by cards this combat by #b"
+    ]
+  },
+  "theUnchainedMod:BarbedWireChainsPower": {
+    "NAME": "Barbed Wire Chains",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " to ALL enemies for each chain not finished at the end of your turn."
+>>>>>>> Felix
     ]
   }
 }
