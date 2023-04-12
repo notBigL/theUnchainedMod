@@ -322,8 +322,8 @@
   },
   "theUnchainedMod:Prophecy": {
     "NAME": "Prophecy",
-    "DESCRIPTION": "Copy a card and put the copy on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Copy a card twice and put both copies on top of your draw pile. NL Exhaust."
+    "DESCRIPTION": "Copy a card in your hand and put the copy on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Copy a card in your hand twice and put both copies on top of your draw pile. NL Exhaust."
   },
   "theUnchainedMod:Riposte": {
     "NAME": "Riposte",
