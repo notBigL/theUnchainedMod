@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.actions.ChainAction;
 import theUnchainedMod.relics.Carabiner;
+import theUnchainedMod.relics.Churros;
 import theUnchainedMod.util.TextureLoader;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
@@ -40,7 +41,7 @@ public class AbstractChainPower extends AbstractPower {
         this.cardType = cardType;
         loadTextures(this.cardType);
         this.powerIdWithoutOffset = powerID;
-
+        churroIncrement();
     }
 
     public void atEndOfTurn(boolean isPlayer) {
@@ -110,4 +111,10 @@ public class AbstractChainPower extends AbstractPower {
         }
     }
 
+    private void churroIncrement() {
+        if (player.hasRelic(Churros.ID)) {
+            Churros churros = (Churros) player.getRelic(Churros.ID);
+            churros.onSpecificTrigger();
+        }
+    }
 }

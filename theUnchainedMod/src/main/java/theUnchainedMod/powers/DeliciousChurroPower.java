@@ -2,18 +2,13 @@ package theUnchainedMod.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theUnchainedMod.DefaultMod;
-import theUnchainedMod.relics.Churros;
 import theUnchainedMod.util.TextureLoader;
 
 public class DeliciousChurroPower extends AbstractPower {
@@ -45,11 +40,6 @@ public class DeliciousChurroPower extends AbstractPower {
     }
 
     public void onSpecificTrigger() {
-        if(AbstractDungeon.player.hasRelic(Churros.ID)){
-            AbstractRelic churros = AbstractDungeon.player.getRelic(Churros.ID);
-            churros.flash();
-            churros.stopPulse();
-        }
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, this));
     }
 

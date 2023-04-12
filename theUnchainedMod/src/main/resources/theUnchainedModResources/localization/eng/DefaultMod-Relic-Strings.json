@@ -64,7 +64,7 @@
     "NAME": "Churros",
     "FLAVOR": "These tasty treats fill you with a burst of energy.",
     "DESCRIPTIONS": [
-      "Every #b3 turns, the first Chain you start is copied."
+      "Every 7th Chain you start is copied."
     ]
   },
   "theUnchainedMod:Memento": {
