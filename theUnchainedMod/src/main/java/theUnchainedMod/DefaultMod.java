@@ -92,7 +92,7 @@ public class DefaultMod implements
         public static final String UNCHAINED_SKIN_UNLOCKED_PROPERTY = "PrinceUnboundSkinUnlocked";
         public static boolean UNCHAINED_SKIN_UNLOCKED = false;
         public static final String UNCHAINED_SKIN_ACTIVATED_PROPERTY = "PrinceUnboundSkinActivated";
-        public static boolean UNCHAINED_SKIN_ACTIVATED = false;
+        public static boolean PRINCE_UNBOUND_SKIN_ACTIVATED = false;
 
         //  Booster Pack
         public static final String UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY = "BoosterPackUnlocked";
@@ -139,11 +139,20 @@ public class DefaultMod implements
 
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "theUnchainedModResources/images/charSelect/UnchainedCharacterButton.png";
+
+    //  UNCHAINED DEFAULT
     private static final String THE_DEFAULT_PORTRAIT = "theUnchainedModResources/images/charSelect/UnchainedSplashArt.png";
     public static final String THE_DEFAULT_CHARACTER = "theUnchainedModResources/images/char/defaultCharacter/Side_View_tmp_Unchained.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "theUnchainedModResources/images/char/defaultCharacter/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "theUnchainedModResources/images/char/defaultCharacter/shoulder2.png";
     public static final String THE_DEFAULT_CORPSE = "theUnchainedModResources/images/char/defaultCharacter/corpse.png";
+
+    //  UNCHAINED DEFAULT
+    private static final String PRINCE_UNBOUND_PORTRAIT = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PUSplashArt.png";
+    public static final String PRINCE_UNBOUND_CHARACTER = "theUnchainedModResources/images/char/defaultCharacter/Side_View_tmp_Unchained.png";
+    public static final String PRINCE_UNBOUND_SHOULDER_1 = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PU_shoulder1.png";
+    public static final String PRINCE_UNBOUND_SHOULDER_2 = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PU_shoulder2.png";
+    public static final String PRINCE_UNBOUND_CORPSE = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PU_corpse.png";
 
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
     public static final String BADGE_IMAGE = "theUnchainedModResources/images/Badge.png";
@@ -151,8 +160,8 @@ public class DefaultMod implements
     // Atlas and JSON files for the Animations
     public static final String THE_UNCHAINED_SKELETON_ATLAS = "theUnchainedModResources/images/char/defaultCharacter/idle/skeleton.atlas";
     public static final String THE_UNCHAINED_SKELETON_JSON = "theUnchainedModResources/images/char/defaultCharacter/idle/skeleton_Skeleton.json";
-    public static final String THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS = "theUnchainedModResources/images/char/defaultCharacter/idle/princeUnboundSkeleton.atlas";
-    public static final String THE_UNCHAINED_PRINCE_UNBOUND_JSON = "theUnchainedModResources/images/char/defaultCharacter/idle/princeUnboundSkeleton_Skeleton.json";
+    public static final String THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/princeUnboundSkeleton.atlas";
+    public static final String THE_UNCHAINED_PRINCE_UNBOUND_JSON = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/princeUnboundSkeleton_Skeleton.json";
 
     // =============== MAKE IMAGE PATHS =================
 
@@ -258,7 +267,7 @@ public class DefaultMod implements
             unchainedConfig.load(); // Load the setting and set the boolean to equal it
 
             UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = unchainedConfig.getBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY);
-            UNCHAINED_SKIN_ACTIVATED = unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY);
+            PRINCE_UNBOUND_SKIN_ACTIVATED = unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY);
             UNCHAINED_BOOSTER_PACK_ACTIVATED = unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY);
         } catch (Exception e) {
             e.printStackTrace();
@@ -325,9 +334,15 @@ public class DefaultMod implements
     @Override
     public void receiveEditCharacters() {
         logger.info("Beginning to edit characters. " + "Add " + TheUnchained.Enums.THE_UNCHAINED.toString());
-
-        BaseMod.addCharacter(new TheUnchained("the Default", TheUnchained.Enums.THE_UNCHAINED),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheUnchained.Enums.THE_UNCHAINED);
+        if(!PRINCE_UNBOUND_SKIN_ACTIVATED) {
+            BaseMod.addCharacter(new TheUnchained("the Default", TheUnchained.Enums.THE_UNCHAINED),
+                    THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheUnchained.Enums.THE_UNCHAINED);
+        }
+        else
+        {
+            BaseMod.addCharacter(new TheUnchained("the Default", TheUnchained.Enums.THE_UNCHAINED),
+                    THE_DEFAULT_BUTTON, PRINCE_UNBOUND_PORTRAIT, TheUnchained.Enums.THE_UNCHAINED);
+        }
 
         receiveEditPotions();
         logger.info("Added " + TheUnchained.Enums.THE_UNCHAINED.toString());
