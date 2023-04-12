@@ -306,7 +306,7 @@
   },
   "theUnchainedMod:LawOfInertia": {
     "NAME": "Law Of Inertia",
-    "DESCRIPTION": "The first time you finish a theunchainedmod:Chain each turn, gain !M! Strength and Dexterity. If you did not finish a theunchainedmod:Chain by the end of turn, lose !M! Strength and Dexterity. You cannot lose more than the amount you gained."
+    "DESCRIPTION": "The first time you finish a theunchainedmod:Chain each turn, gain !M! Strength and Dexterity. If you did not finish a theunchainedmod:Chain by the end of turn, lose !M! Strength and Dexterity."
   },
   "theUnchainedMod:LastResort": {
     "NAME": "Last Resort",
@@ -351,7 +351,7 @@
   },
   "theUnchainedMod:DefensiveLink": {
     "NAME": "Defensive Link",
-    "DESCRIPTION": "Gain !B! Block. Reduce the cost of a card by 1 this turn."
+    "DESCRIPTION": "Gain !B! Block. Reduce the cost of a card in your hand by 1 this turn."
   },
   "theUnchainedMod:ChaseDestiny": {
     "NAME": "Chase Destiny",
