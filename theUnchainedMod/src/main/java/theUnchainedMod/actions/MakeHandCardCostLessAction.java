@@ -35,7 +35,7 @@ public class MakeHandCardCostLessAction extends AbstractGameAction {
 
             while(var1.hasNext()) {
                 c = (AbstractCard)var1.next();
-                if (c.costForTurn == 0 || c.cost == -2) {
+                if (c.costForTurn == 0 || c.cost == -2 || c.cost == -1) {
                     this.cannotBeMadeCheaper.add(c);
                 }
             }
