@@ -182,7 +182,7 @@
   },
   "theUnchainedMod:ArcaneStrike": {
     "NAME": "Arcane Strike",
-    "DESCRIPTION": "Deal !D! damage 2 times. Gain !M! theunchainedmod:Relay."
+    "DESCRIPTION": "Deal !D! damage twice. Gain !M! theunchainedmod:Relay."
   },
   "theUnchainedMod:SolarPlexus": {
     "NAME": "Solar Plexus",
