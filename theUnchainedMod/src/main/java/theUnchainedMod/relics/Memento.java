@@ -4,7 +4,9 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.util.TextureLoader;
 
@@ -31,6 +33,15 @@ public class Memento extends CustomRelic {
         if (!alreadyBroken) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(m, this));
+            this.addToBot(new GainEnergyAction(1));
+            alreadyBroken = true;
+        }
+    }
+
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        if (target instanceof AbstractMonster && target.currentBlock > 0 && !alreadyBroken) {
+            this.flash();
+            this.addToBot(new RelicAboveCreatureAction(target, this));
             this.addToBot(new GainEnergyAction(1));
             alreadyBroken = true;
         }
