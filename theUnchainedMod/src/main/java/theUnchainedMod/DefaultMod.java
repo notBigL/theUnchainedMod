@@ -141,17 +141,17 @@ public class DefaultMod implements
     private static final String THE_DEFAULT_BUTTON = "theUnchainedModResources/images/charSelect/UnchainedCharacterButton.png";
 
     //  UNCHAINED DEFAULT
-    private static final String THE_DEFAULT_PORTRAIT = "theUnchainedModResources/images/charSelect/UnchainedSplashArt.png";
+    public static final String THE_DEFAULT_PORTRAIT = "theUnchainedModResources/images/charSelect/UnchainedSplashArt.png";
     public static final String THE_DEFAULT_CHARACTER = "theUnchainedModResources/images/char/defaultCharacter/Side_View_tmp_Unchained.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "theUnchainedModResources/images/char/defaultCharacter/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "theUnchainedModResources/images/char/defaultCharacter/shoulder2.png";
     public static final String THE_DEFAULT_CORPSE = "theUnchainedModResources/images/char/defaultCharacter/corpse.png";
 
     //  UNCHAINED DEFAULT
-    private static final String PRINCE_UNBOUND_PORTRAIT = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PUSplashArt.png";
+    public static final String PRINCE_UNBOUND_PORTRAIT = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PUSplashArt.png";
     public static final String PRINCE_UNBOUND_CHARACTER = "theUnchainedModResources/images/char/defaultCharacter/Side_View_tmp_Unchained.png";
-    public static final String PRINCE_UNBOUND_SHOULDER_1 = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PU_shoulder1.png";
-    public static final String PRINCE_UNBOUND_SHOULDER_2 = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PU_shoulder2.png";
+    public static final String PRINCE_UNBOUND_SHOULDER_1 = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PU_Shoulder1.png";
+    public static final String PRINCE_UNBOUND_SHOULDER_2 = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PU_Shoulder2.png";
     public static final String PRINCE_UNBOUND_CORPSE = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/PU_corpse.png";
 
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.

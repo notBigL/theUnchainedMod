@@ -419,7 +419,7 @@
     "NAME": "Chain Flourish",
     "DESCRIPTION": "Deal !D! damage for each theunchainedmod:Chain you have finished this turn.",
     "EXTENDED_DESCRIPTION": [ " NL (1 Chain finished this turn)" ,
-                              " NL (!M! Chains finished this turn)"]
+                              " NL ( !M! Chains finished this turn)"]
   },
   "theUnchainedMod:CrushPlates": {
     "NAME": "Crush Plates",

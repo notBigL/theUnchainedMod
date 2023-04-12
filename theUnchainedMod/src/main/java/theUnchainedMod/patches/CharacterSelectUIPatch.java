@@ -1,7 +1,9 @@
 package theUnchainedMod.patches;
 
+import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -12,6 +14,7 @@ import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.util.TextureLoader;
 
 public class CharacterSelectUIPatch {
     private static float UI_TEXT_SCALE = 0.6f;
@@ -70,7 +73,7 @@ public class CharacterSelectUIPatch {
                         {
                             sb.draw(ImageMaster.CHECKBOX, booster_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, booster_width * Settings.scale, booster_height * Settings.scale);
                             if (boosterPackButtonStatus) sb.draw(ImageMaster.TICK, booster_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, booster_width * Settings.scale, booster_height * Settings.scale);
-                            FontHelper.renderSmartText(sb, FontHelper.menuBannerFont, "Activate the optional Booster Pack (Cards in Compendium).", (booster_xPos + booster_width + 5) * Settings.scale,(UI_CURRENT_BUTTON_Y + booster_height) * Settings.scale, UI_MAX_LINE_WIDTH, UI_LINE_SPACING, (booster_hitbox.hovered ? Color.GOLD : Color.WHITE), UI_TEXT_SCALE);
+                            FontHelper.renderSmartText(sb, FontHelper.menuBannerFont, "Activate the optional Booster Pack (Check Compendium for Booster Pack Cards).", (booster_xPos + booster_width + 5) * Settings.scale,(UI_CURRENT_BUTTON_Y + booster_height) * Settings.scale, UI_MAX_LINE_WIDTH, UI_LINE_SPACING, (booster_hitbox.hovered ? Color.GOLD : Color.WHITE), UI_TEXT_SCALE);
                             booster_hitbox.render(sb);
                             UI_CURRENT_BUTTON_Y -= SPACING_BETWEEN_BUTTONS;
                         }
@@ -95,7 +98,15 @@ public class CharacterSelectUIPatch {
                                     DefaultMod.PRINCE_UNBOUND_SKIN_ACTIVATED = princeUnboundButtonStatus;
 
                                     //TODO: update splash on button press
-
+                                    if(princeUnboundButtonStatus) {
+                                        __instance.bgCharImg = TextureLoader.getTexture(DefaultMod.PRINCE_UNBOUND_PORTRAIT);
+                                        BaseMod.playerPortraitMap.put(TheUnchained.Enums.THE_UNCHAINED, DefaultMod.PRINCE_UNBOUND_PORTRAIT);
+                                    }
+                                    else
+                                    {
+                                        __instance.bgCharImg = TextureLoader.getTexture(DefaultMod.THE_DEFAULT_PORTRAIT);
+                                        BaseMod.playerPortraitMap.put(TheUnchained.Enums.THE_UNCHAINED, DefaultMod.THE_DEFAULT_PORTRAIT);
+                                    }
                                     DefaultMod.unchainedConfig.save();
                                 } catch (Exception e) {
                                     e.printStackTrace();

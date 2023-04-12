@@ -26,8 +26,8 @@ public class ChainFlourish extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int DAMAGE = 5;
-    private static final int MAGIC_NUMBER = 5;
     private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int MAGIC_NUMBER = 0;
     private static final CardStrings STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public ChainFlourish() {
@@ -65,6 +65,7 @@ public class ChainFlourish extends AbstractDynamicCard {
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        //TODO: Check all chains finished this turn and finish them and add them to the count
         this.addToBot(new DamagePerChainFinishedAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 }
