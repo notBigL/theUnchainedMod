@@ -21,7 +21,7 @@ public class ArcaneArtillery extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(ArcaneArtillery.class.getSimpleName());
     public static final String IMG = makeCardPath("ArcaneArtillery.png");
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_BOOSTER;

@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.actions.ChainAction;
 import theUnchainedMod.actions.MasterChainAction;
+import theUnchainedMod.patches.ChainsFinishedThisCombat;
 import theUnchainedMod.relics.Carabiner;
 import theUnchainedMod.util.TextureLoader;
 
@@ -137,7 +138,7 @@ public class AbstractMasterChainPower extends AbstractPower {
     public void finishMe() {
         AbstractDungeon.actionManager.addToBottom(finishedChainAction);
         checkForFinishers();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ChainsFinishedThisTurnPower(this.owner, 1)));
+        ChainsFinishedThisCombat.IncreaseChainsFinishedThisCombat(1);
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
     }
 
