@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.relics.CrushingGauntlets;
 import theUnchainedMod.util.TextureLoader;
 
 public class CharacterSelectUIPatch {
@@ -125,6 +127,16 @@ public class CharacterSelectUIPatch {
                                     boosterPackButtonStatus = !boosterPackButtonStatus;
                                     DefaultMod.unchainedConfig.setBool(DefaultMod.UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, boosterPackButtonStatus);
                                     DefaultMod.UNCHAINED_BOOSTER_PACK_ACTIVATED = boosterPackButtonStatus;
+
+                                    if(boosterPackButtonStatus) {
+                                        if (!BaseMod.getRelicsInCustomPool(TheUnchained.Enums.COLOR_ORANGE).containsKey(CrushingGauntlets.ID))
+                                            BaseMod.addRelicToCustomPool(new CrushingGauntlets(), TheUnchained.Enums.COLOR_ORANGE);
+                                    }
+                                    else
+                                    {
+                                        if (BaseMod.getRelicsInCustomPool(TheUnchained.Enums.COLOR_ORANGE).containsKey(CrushingGauntlets.ID))
+                                            BaseMod.removeRelicFromCustomPool(BaseMod.getRelicsInCustomPool(TheUnchained.Enums.COLOR_ORANGE).get(CrushingGauntlets.ID), TheUnchained.Enums.COLOR_ORANGE);
+                                    }
                                     DefaultMod.unchainedConfig.save();
                                 } catch (Exception e) {
                                     e.printStackTrace();
