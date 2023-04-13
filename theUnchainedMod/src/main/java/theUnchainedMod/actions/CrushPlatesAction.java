@@ -20,15 +20,15 @@ public class CrushPlatesAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        int dentArmorAmount;
+        int crushedArmorAmount;
         if (target.currentBlock > this.amount) {
-            dentArmorAmount = this.amount;
+            crushedArmorAmount = this.amount;
         } else {
-            dentArmorAmount = this.amount - (this.amount - target.currentBlock);
+            crushedArmorAmount = this.amount - (this.amount - target.currentBlock);
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(this.target, info, AttackEffect.BLUNT_HEAVY));
-        if (dentArmorAmount > 0) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyCrushedArmorAction(target, dentArmorAmount));
+        if (crushedArmorAmount > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyCrushedArmorAction(target, crushedArmorAmount));
         }
         this.isDone = true;
     }

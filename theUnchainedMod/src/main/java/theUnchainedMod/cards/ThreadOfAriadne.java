@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.AbstractChainPower;
+import theUnchainedMod.powers.AbstractMasterChainPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
@@ -49,7 +50,7 @@ public class ThreadOfAriadne extends AbstractDynamicCard {
         if(!super.canUse(p, m)) return false;
 
         for (AbstractPower po : p.powers) {
-            if (po instanceof AbstractChainPower) {
+            if (po instanceof AbstractChainPower || po instanceof AbstractMasterChainPower) {
                 return true;
             }
         }

@@ -25,7 +25,7 @@ public class MagicMecha extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_BOOSTER;
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
-    private static final int COST = 3;
+    private static final int COST = 1;
     private static final int MAGIC_NUMBER = 1;
     private static final int SECOND_MAGIC_NUMBER = 3;
     private static final int UPGRADE_PLUS_BUFF = 2;
@@ -35,7 +35,7 @@ public class MagicMecha extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
     }
-
+// TODO
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();

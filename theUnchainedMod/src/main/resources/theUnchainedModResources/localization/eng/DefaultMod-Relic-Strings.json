@@ -85,7 +85,7 @@
     "NAME": "Dancing Ribbons",
     "FLAVOR": "It reminds you of merry times spent dancing in the tavern hall",
     "DESCRIPTIONS": [
-      "At the end of your turn add a Swirl into your hand, if you played a Swirl this turn."
+      "Swirls count as any card for a Chain."
     ]
   },
   "theUnchainedMod:Wrench": {
@@ -93,6 +93,13 @@
     "FLAVOR": "You can never fasten your armor tight enough.",
     "DESCRIPTIONS": [
       "Whenever you apply Crushed Armor, the enemy loses #y4 HP."
+    ]
+  },
+  "theUnchainedMod:CrushingGauntlets": {
+    "NAME": "Crushing Gauntlets",
+    "FLAVOR": "Why stop at crushing their armor when you could instead crush THEM.",
+    "DESCRIPTIONS": [
+      "You can no longer apply Crushed Armor, instead you deal triple the amount directly to their HP."
     ]
   }
 }

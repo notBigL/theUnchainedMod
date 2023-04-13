@@ -25,7 +25,7 @@ public class DancingRibbons extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.CLINK);
     }
 
-    @Override
+   /* @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
         if (c instanceof Swirl) {
             counter++;
@@ -33,7 +33,7 @@ public class DancingRibbons extends CustomRelic {
         if (counter > 0) {
             this.beginLongPulse();
         }
-    }
+    }*/
 
 
     @Override
