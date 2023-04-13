@@ -397,7 +397,7 @@
   },
   "theUnchainedMod:MakeHaste": {
     "NAME": "Make Haste",
-    "DESCRIPTION": "Play as many cards from your draw pile as you have Swirls. Exhaust."
+    "DESCRIPTION": "Play as many cards from the top of your draw pile as you have Swirls. Exhaust."
   },
   "theUnchainedMod:MagicMecha": {
     "NAME": "Magic Mecha",
@@ -415,13 +415,12 @@
   },
   "theUnchainedMod:ChainFlourish": {
     "NAME": "Chain Flourish",
-    "DESCRIPTION": "Deal !D! damage for each theunchainedmod:Chain you have finished this turn.",
-    "EXTENDED_DESCRIPTION": [ " NL (1 Chain finished this turn)" ,
-                              " NL ( !M! Chains finished this turn)"]
+    "DESCRIPTION": "Deal !D! damage for each theunchainedmod:Chain you have finished this combat.",
+    "EXTENDED_DESCRIPTION": [ " NL (1 Chain finished this combat)" ,
+                              " NL ( !M! Chains finished this combat)"]
   },
   "theUnchainedMod:CrushPlates": {
     "NAME": "Crush Plates",
-    "DESCRIPTION": "Double the Enemy's theunchainedmod:Crushed_Armor then deal as much damage as the Enemy has theunchainedmod:Crushed_Armor.",
-    "EXTENDED_DESCRIPTION": [ " NL (Deal !D! damage)."]
+    "DESCRIPTION": "Deal !D! damage. NL Apply as much theunchainedmod:Crushed_Armor as was blocked by the Enemy."
   }
 }

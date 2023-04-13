@@ -16,5 +16,6 @@ public class EndOfCombatExpirePatch {
             RelayHelpers.thisTurnRelayedDamage.set(AbstractDungeon.player, 0);
         }
         RelayedDmgSum.relayedDamageSum.set(gAM, 0);
+        ChainsFinishedThisCombat.chainsFinishedThisCombat.set(gAM, 0);
     }
 }

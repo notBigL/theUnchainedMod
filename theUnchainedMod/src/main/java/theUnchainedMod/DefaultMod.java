@@ -436,8 +436,9 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new Churros(), TheUnchained.Enums.COLOR_ORANGE);
         BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheUnchained.Enums.COLOR_ORANGE);
         BaseMod.addRelicToCustomPool(new TotemOfPain(), TheUnchained.Enums.COLOR_ORANGE);
-        //BaseMod.addRelicToCustomPool(new DancingRibbons(), TheUnchained.Enums.COLOR_ORANGE);
+        BaseMod.addRelicToCustomPool(new DancingRibbons(), TheUnchained.Enums.COLOR_ORANGE);
         BaseMod.addRelicToCustomPool(new Wrench(), TheUnchained.Enums.COLOR_ORANGE);
+        BaseMod.addRelicToCustomPool(new CrushingGauntlets(), TheUnchained.Enums.COLOR_ORANGE);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -456,6 +457,7 @@ public class DefaultMod implements
         UnlockTracker.markRelicAsSeen(TotemOfPain.ID);
         UnlockTracker.markRelicAsSeen(DancingRibbons.ID);
         UnlockTracker.markRelicAsSeen(Wrench.ID);
+        UnlockTracker.markRelicAsSeen(CrushingGauntlets.ID);
         logger.info("Done adding relics!");
     }
 

@@ -11,7 +11,7 @@ import theUnchainedMod.DefaultMod;
 import theUnchainedMod.actions.DamagePerChainFinishedAction;
 import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
-import theUnchainedMod.powers.ChainsFinishedThisTurnPower;
+import theUnchainedMod.patches.ChainsFinishedThisCombat;
 
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
@@ -19,14 +19,14 @@ public class ChainFlourish extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(ChainFlourish.class.getSimpleName());
     public static final String IMG = makeCardPath("ChainFlourish.png");
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_BOOSTER;
 
-    private static final int COST = 0;
+    private static final int COST = 2;
     private static final int DAMAGE = 5;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int UPGRADE_PLUS_DMG = 2;
     private static final int MAGIC_NUMBER = 0;
     private static final CardStrings STRINGS = CardCrawlGame.languagePack.getCardStrings(ID);
 
@@ -46,16 +46,13 @@ public class ChainFlourish extends AbstractDynamicCard {
 
     public void applyPowers() {
         super.applyPowers();
-        int count = 0;
-        if (AbstractDungeon.player.hasPower(ChainsFinishedThisTurnPower.POWER_ID)) {
-            count = AbstractDungeon.player.getPower(ChainsFinishedThisTurnPower.POWER_ID).amount;
-        }
+        int count = ChainsFinishedThisCombat.chainsFinishedThisCombat.get(AbstractDungeon.actionManager);
         if (count == 1) {
             this.rawDescription = STRINGS.DESCRIPTION + STRINGS.EXTENDED_DESCRIPTION[0];
         } else {
             this.rawDescription = STRINGS.DESCRIPTION + STRINGS.EXTENDED_DESCRIPTION[1];
         }
-        magicNumber = count;
+        baseMagicNumber = magicNumber = count;
         this.initializeDescription();
     }
 
@@ -65,7 +62,6 @@ public class ChainFlourish extends AbstractDynamicCard {
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO: Check all chains finished this turn and finish them and add them to the count
-        this.addToBot(new DamagePerChainFinishedAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        this.addToBot(new DamagePerChainFinishedAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), magicNumber, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 }
