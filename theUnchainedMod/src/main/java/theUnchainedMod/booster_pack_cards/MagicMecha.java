@@ -35,7 +35,7 @@ public class MagicMecha extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
     }
-
+// TODO
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
