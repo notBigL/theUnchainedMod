@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theUnchainedMod.DefaultMod;
 import theUnchainedMod.booster_pack_cards.*;
+import theUnchainedMod.booster_pack_cards.SwordOfDamocles;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,12 +16,13 @@ import java.util.Iterator;
 public class AddBoosterPackCardsPatch {
     private static ArrayList<AbstractCard> boosterPackCards = new ArrayList<>(Arrays.asList(
             new ArcaneArtillery(),
-            new BarbedWireChains(),
+            new BarbedWire(),
             new ChainFlourish(),
             new CrushPlates(),
             new MagicMecha(),
             new MakeHaste(),
-            new RetreatingSwing()
+            new RetreatingSwing(),
+            new SwordOfDamocles()
     ));
 
     @SpirePostfixPatch

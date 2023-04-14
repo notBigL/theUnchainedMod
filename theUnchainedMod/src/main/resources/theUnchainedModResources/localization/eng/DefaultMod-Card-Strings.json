@@ -403,8 +403,8 @@
     "NAME": "Magic Mecha",
     "DESCRIPTION": "!M! theunchainedmod:Master_Chain: Gain !theUnchainedMod:SecondMagic! Strength, !theUnchainedMod:SecondMagic! Dexterity and !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
   },
-  "theUnchainedMod:BarbedWireChains": {
-    "NAME": "Barbed Wire Chains",
+  "theUnchainedMod:BarbedWire": {
+    "NAME": "Barbed Wire",
     "DESCRIPTION": "Deal !M! damage to ALL Enemies for each chain not finished at the end of your turn."
   },
   "theUnchainedMod:ArcaneArtillery": {
@@ -422,5 +422,9 @@
   "theUnchainedMod:CrushPlates": {
     "NAME": "Crush Plates",
     "DESCRIPTION": "Deal !D! damage. NL Apply as much theunchainedmod:Crushed_Armor as was blocked by the Enemy."
+  },
+  "theUnchainedMod:SwordOfDamocles": {
+    "NAME": "Sword Of Damocles",
+    "DESCRIPTION": "Gain !M! Strength. NL 1 theunchainedmod:Master_Chain: Take !theUnchainedMod:SecondMagic! Damage and lose !M! Strength. "
   }
 }

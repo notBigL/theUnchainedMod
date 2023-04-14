@@ -11,7 +11,7 @@ import theUnchainedMod.actions.StareDownFinishedChainAction;
 public class StareDownChainPower extends AbstractChainPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("OverviewPower");
+    public static final String POWER_ID = DefaultMod.makeID("StareDownPower");
     private static final PowerStrings powerstrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerstrings.NAME;
     public static final String[] DESCRIPTIONS = powerstrings.DESCRIPTIONS;
