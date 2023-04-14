@@ -14,7 +14,7 @@ public class FouettéEnTournant extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(FouettéEnTournant.class.getSimpleName());
     public static final String IMG = makeCardPath("FouetteEnTournant.png");
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;

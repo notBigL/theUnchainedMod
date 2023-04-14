@@ -31,6 +31,7 @@ public class RoyalDecree extends AbstractDynamicCard {
     public RoyalDecree() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
+        this.exhaust = true;
     }
 
     @Override

@@ -173,7 +173,7 @@
   },
   "theUnchainedMod:RoyalDecree": {
     "NAME": "Royal Decree",
-    "DESCRIPTION": "Add a random 2-cost card into your hand. NL It costs !M! this turn NL and exhausts."
+    "DESCRIPTION": "Add a random 2-cost card into your hand. NL It costs !M! this turn. NL Exhaust."
   },
   "theUnchainedMod:Claustrophobia": {
     "NAME": "Claustrophobia",
@@ -404,14 +404,14 @@
     "NAME": "Magic Mecha",
     "DESCRIPTION": "!M! theunchainedmod:Master_Chain: Gain !theUnchainedMod:SecondMagic! Strength, !theUnchainedMod:SecondMagic! Dexterity and !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
   },
-  "theUnchainedMod:BarbedWireChains": {
-    "NAME": "Barbed Wire Chains",
+  "theUnchainedMod:BarbedWire": {
+    "NAME": "Barbed Wire",
     "DESCRIPTION": "Deal !M! damage to ALL Enemies for each chain not finished at the end of your turn."
   },
   "theUnchainedMod:ArcaneArtillery": {
     "NAME": "Arcane Artillery",
     "DESCRIPTION": "Deal damage equal to your Relay.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to your Relay to ALL Enemies.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to your theunchainedmod:Relay to ALL Enemies.",
     "EXTENDED_DESCRIPTION": [ " NL (Deal !D! damage)."]
   },
   "theUnchainedMod:ChainFlourish": {

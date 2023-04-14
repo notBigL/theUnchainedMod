@@ -12,9 +12,9 @@ import theUnchainedMod.powers.BarbedWireChainsPower;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.DefaultMod.makeCardPath;
 
-public class BarbedWireChains extends AbstractDynamicCard {
+public class BarbedWire extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(BarbedWireChains.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(BarbedWire.class.getSimpleName());
     public static final String IMG = makeCardPath("BarbedWireChains.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -26,7 +26,7 @@ public class BarbedWireChains extends AbstractDynamicCard {
     private static final int MAGIC_NUMBER = 10;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 5;
 
-    public BarbedWireChains() {
+    public BarbedWire() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
     }

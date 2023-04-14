@@ -15,7 +15,7 @@ import java.util.Iterator;
 public class AddBoosterPackCardsPatch {
     private static ArrayList<AbstractCard> boosterPackCards = new ArrayList<>(Arrays.asList(
             new ArcaneArtillery(),
-            new BarbedWireChains(),
+            new BarbedWire(),
             new ChainFlourish(),
             new CrushPlates(),
             new MagicMecha(),
