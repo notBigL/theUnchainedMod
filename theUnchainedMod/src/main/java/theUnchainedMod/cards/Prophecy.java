@@ -20,7 +20,6 @@ public class Prophecy extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
-
     private static final int COST = 2;
 
     public Prophecy() {

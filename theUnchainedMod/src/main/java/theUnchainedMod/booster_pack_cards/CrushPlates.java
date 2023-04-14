@@ -47,7 +47,6 @@ public class CrushPlates extends AbstractDynamicCard {
     @Override
     public void applyPowers() { //your own powers
         super.applyPowers();
-        this.rawDescription = STRINGS.DESCRIPTION + STRINGS.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
     @Override

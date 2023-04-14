@@ -81,7 +81,7 @@ public class CharacterSelectUIPatch {
                         {
                             sb.draw(ImageMaster.CHECKBOX, booster_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, booster_width * Settings.scale, booster_height * Settings.scale);
                             if (boosterPackButtonStatus) sb.draw(ImageMaster.TICK, booster_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, booster_width * Settings.scale, booster_height * Settings.scale);
-                            FontHelper.renderSmartText(sb, FontHelper.menuBannerFont, "Activate the optional Booster Pack (Check Compendium for Booster Pack Cards).", (booster_xPos + booster_width + 5) * Settings.scale,(UI_CURRENT_BUTTON_Y + booster_height) * Settings.scale, UI_MAX_LINE_WIDTH, UI_LINE_SPACING, (booster_hitbox.hovered ? Color.GOLD : Color.WHITE), UI_TEXT_SCALE);
+                            FontHelper.renderSmartText(sb, FontHelper.menuBannerFont, "Activate the optional Booster Pack (Check Compendium for Cards and Relics).", (booster_xPos + booster_width + 5) * Settings.scale,(UI_CURRENT_BUTTON_Y + booster_height) * Settings.scale, UI_MAX_LINE_WIDTH, UI_LINE_SPACING, (booster_hitbox.hovered ? Color.GOLD : Color.WHITE), UI_TEXT_SCALE);
                             booster_hitbox.render(sb);
                             UI_CURRENT_BUTTON_Y -= SPACING_BETWEEN_BUTTONS;
                         }
