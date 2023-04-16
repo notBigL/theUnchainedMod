@@ -1,0 +1,87 @@
+[
+  {
+    "PROPER_NAME": "Chain",
+    "NAMES": [
+      "Chain",
+      "chain",
+      "chains",
+      "chain:",
+      "chain."
+    ],
+    "DESCRIPTION": "Playing enough cards with the same type as this card will finish the Chain and unlock the specified effect. Chains wear off at the end of turn."
+  },{
+  "PROPER_NAME": "Master Chain",
+  "NAMES": [
+    "Master Chain",
+    "master_chain"
+  ],
+  "DESCRIPTION": "Playing 1 Power, 1 Skill and 1 Attack will finish this Chain. Cannot be finished by Liberation or Double Down. Does not wear off at the end of turn."
+},
+  {
+    "PROPER_NAME": "Relay",
+    "NAMES": [
+      "Relay",
+      "relay",
+      "relayed",
+      "relaying",
+      "relay."
+    ],
+    "DESCRIPTION": "Until next turn, prevents damage after Block. NL Half of the damage prevented by Relay is dealt to the Player in 2 turns as Relayed Damage. Relayed Damage cannot be blocked by Relay."
+  },
+  {
+    "PROPER_NAME": "Arcane Mastery",
+    "NAMES": [
+      "Arcane Mastery",
+      "arcane_mastery"
+    ],
+    "DESCRIPTION": "Arcane Mastery improves Relay gained by cards."
+  },
+  {
+    "PROPER_NAME": "Relayed Damage",
+    "NAMES": [
+      "Relayed Damage",
+      "relayed_damage"
+    ],
+    "DESCRIPTION": "Damage that was prevented by Relay. Half of it is dealt to the Player at the end of the next turn. Is not blocked by Relay."
+  },
+  {
+    "PROPER_NAME": "Momentum",
+    "NAMES": [
+      "Momentum",
+      "momentum"
+    ],
+    "DESCRIPTION": "When you obtain enough Momentum, add a Swirl into your hand. The cost starts at 2 Momentum and goes up for each Swirl in your hand."
+  },
+  {
+    "PROPER_NAME": "Full Spin",
+    "NAMES": [
+      "Full Spin",
+      "full_spin"
+    ],
+    "DESCRIPTION": "Doubles the damage and Block of Swirls this turn."
+  },
+  {
+    "PROPER_NAME": "Crushed Armor",
+    "NAMES": [
+      "Crushed Armor",
+      "crushed_armor"
+    ],
+    "DESCRIPTION": "Enemies lose HP everytime they gain Block."
+  },
+  {
+    "PROPER_NAME": "Stun",
+    "NAMES": [
+      "Stun",
+      "stun"
+    ],
+    "DESCRIPTION": "Enemy does nothing this turn."
+  },
+  {
+    "PROPER_NAME": "Damage Modifiers",
+    "NAMES": [
+      "Damage Modifiers",
+      "damage_modifiers"
+    ],
+    "DESCRIPTION": "All effects that influence Attack Damage."
+  }
+]

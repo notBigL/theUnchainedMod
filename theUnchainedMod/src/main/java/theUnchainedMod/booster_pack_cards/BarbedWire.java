@@ -15,7 +15,7 @@ import static theUnchainedMod.DefaultMod.makeCardPath;
 public class BarbedWire extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(BarbedWire.class.getSimpleName());
-    public static final String IMG = makeCardPath("BarbedWireChains.png");
+    public static final String IMG = makeCardPath("BarbedWire.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;

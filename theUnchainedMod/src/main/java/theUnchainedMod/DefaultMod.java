@@ -71,6 +71,13 @@ public class DefaultMod implements
     private static final String DESCRIPTION = "A new Character with 75+ new cards, 10+ new Relics, 3 new Potions and 4 distinct archetypes you can play around with and have a lot of fun!";
 
 
+    public static Settings.GameLanguage[] SupportedLanguages = {
+            Settings.GameLanguage.ENG,
+            Settings.GameLanguage.SPA,
+            Settings.GameLanguage.DEU
+    };
+
+
     // CONFIG
     public static SpireConfig unchainedConfig; //have this somewhere better, not in this class
     static {
@@ -80,8 +87,6 @@ public class DefaultMod implements
             throw new RuntimeException(e);
         }
     }
-
-    // TODO: add button that unlocks all optional content immediately (useful for future expansions too!)
 
     public static Properties theUnchainedDefaultSettings = new Properties();
 
@@ -510,6 +515,14 @@ public class DefaultMod implements
 
 
     // ================ LOAD THE TEXT ===================
+    private String getLangString() {
+        for (Settings.GameLanguage lang : SupportedLanguages) {
+            if (lang.equals(Settings.language)) {
+                return Settings.language.name().toLowerCase();
+            }
+        }
+        return "eng";
+    }
 
     @Override
     public void receiveEditStrings() {
@@ -518,29 +531,29 @@ public class DefaultMod implements
 
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Card-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-Card-Strings.json");
 
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Power-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-Power-Strings.json");
 
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Relic-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-Relic-Strings.json");
 
         // PotionStrings
         BaseMod.loadCustomStringsFile(PotionStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Potion-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-Potion-Strings.json");
 
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Character-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-Character-Strings.json");
 
         // UI Strings
         BaseMod.loadCustomStringsFile(UIStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-UI-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-UI-Strings.json");
 
-        logger.info("Done edittting strings");
+        logger.info("Done editing strings");
     }
 
     // ================ /LOAD THE TEXT/ ===================
@@ -558,7 +571,7 @@ public class DefaultMod implements
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
 
         Gson gson = new Gson();
-        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/DefaultMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String json = Gdx.files.internal(getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
 
         if (keywords != null) {

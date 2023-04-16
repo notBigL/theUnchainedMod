@@ -1,0 +1,87 @@
+[
+  {
+    "PROPER_NAME": "Cadena",
+    "NAMES": [
+      "Cadena",
+      "cadena",
+      "cadenas"
+    ],
+    "DESCRIPTION": "Jugar suficientes cartas del mismo tipo que esta carta completará la Cadena y desbloqueará el efecto especificado. Las Cadenas se desactivan al final del turno."
+  },{
+  "PROPER_NAME": "Cadena Maestra",
+  "NAMES": [
+    "Cadena Maestra",
+    "cadena_maestra"
+  ],
+  "DESCRIPTION": "Jugar 1 Poder, 1 Habilidad y 1 Ataque terminará esta Cadena. No se puede completar con Liberación o Doble Apuesta. No se desactiva al final del turno."
+},
+  {
+    "PROPER_NAME": "Relevo",
+    "NAMES": [
+      "Relevo",
+      "relevo",
+      "relayed",
+      "relaying",
+      "relevo."
+    ],
+    "DESCRIPTION": "Hasta el próximo turno, previene el daño después de Bloquear. La mitad del daño prevenido por Relevo se inflige al jugador en 2 turnos como Daño Colateral. El Daño Colateral no puede ser bloqueado por Relevo."
+  },
+  {
+    "PROPER_NAME": "Maestría Arcana",
+    "NAMES": [
+      "Maestría Arcana",
+      "maestría_arcana"
+    ],
+    "DESCRIPTION": "La Maestría Arcana mejora el Relevo ganado por cartas."
+  },
+  {
+    "PROPER_NAME": "Daño Colateral",
+    "NAMES": [
+	  "Daño Colateral",
+      "Daño_Colateral",
+      "daño_colateral"
+    ],
+    "DESCRIPTION": "El daño que fue prevenido por Relevo. La mitad de este se le inflige al jugador al final del próximo turno. No es bloqueado por Relay."
+  },
+  {
+    "PROPER_NAME": "Impulso",
+    "NAMES": [
+      "Impulso",
+      "impulso"
+    ],
+    "DESCRIPTION": "Cuando obtienes suficiente Impulso, agrega un Remolino a tu mano. El costo comienza en 2 Impulso y aumenta por cada Remolino en tu mano."
+  },
+  {
+    "PROPER_NAME": "Vuelta Completa",
+    "NAMES": [
+      "Vuelta Completa",
+      "vuelta_completa"
+    ],
+    "DESCRIPTION": "Duplica el Daño y el Bloqueo de los Remolinos de este turno."
+  },
+  {
+    "PROPER_NAME": "Armadura Aplastada",
+    "NAMES": [
+      "Armadura Aplastada",
+      "Armadura_Aplastada",
+	  "armadura_aplastada"
+    ],
+    "DESCRIPTION": "Los enemigos pierden HP cada vez que ganan Bloqueo."
+  },
+  {
+    "PROPER_NAME": "Aturde",
+    "NAMES": [
+      "Aturde",
+      "aturde"
+    ],
+    "DESCRIPTION": "El enemigo no hace nada este turno."
+  },
+  {
+    "PROPER_NAME": "Modificadores de Daño",
+    "NAMES": [
+      "Modificadores de Daño",
+      "modificadores_de_daño"
+    ],
+    "DESCRIPTION": "Todos los efectos que influyen en el Daño del Ataque."
+  }
+]

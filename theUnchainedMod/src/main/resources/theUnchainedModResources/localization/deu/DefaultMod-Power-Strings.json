@@ -1,0 +1,466 @@
+{
+  "theUnchainedMod:CommonPower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "You applied #b",
+      " keyword.",
+      " keywords."
+    ]
+  },
+  "theUnchainedMod:RarePower": {
+    "NAME": "Placeholder Power",
+    "DESCRIPTIONS": [
+      "At the start of your turn, TOUCH #b",
+      " enemy.",
+      " enemies."
+    ]
+  },
+  "theUnchainedMod:UnshacklingPower": {
+    "NAME": "Unshackling",
+    "DESCRIPTIONS": [
+      "After playing a Card, upgrade it.",
+      "After playing a Card, upgrade it #b",
+      " times."
+    ]
+  },
+  "theUnchainedMod:BrassKnucklePower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this Turn, gain #y1 Energy.",
+      "If you play #b",
+      " more Attacks this Turn, gain #y1 Energy."
+    ]
+  },
+  "theUnchainedMod:WhiplashPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this Turn, enemy loses #r",
+      " health.",
+      "If you play #b",
+      " more Attacks this Turn, enemy loses #r"
+    ]
+  },
+  "theUnchainedMod:PlayDeadPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this Turn, gain #y1 Intangible.",
+      "If you play #b",
+      " more Skills this Turn, gain #y1 Intangible."
+    ]
+  },
+  "theUnchainedMod:RelayPower": {
+    "NAME": "Relay",
+    "DESCRIPTIONS": [
+      "Blocks #b",
+      " damage this turn. Blocked damage is gained as Relayed Damage."
+    ]
+  },
+  "theUnchainedMod:RelayedDamagePower": {
+    "NAME": "Relayed Damage",
+    "DESCRIPTIONS": [
+      "At the end of this turn, take #r",
+      " damage."
+    ]
+  },
+  "theUnchainedMod:ArcaneCharmPower": {
+    "NAME": "Arcane Charm",
+    "DESCRIPTIONS": [
+      "Gain #y",
+      " Relay at the start of your turn."
+    ]
+  },
+  "theUnchainedMod:QuickSwingPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this turn, draw #y2 cards.",
+      "If you play #b",
+      " more Attacks this Turn, draw #y2 cards.",
+      "If you play #b1 more Attack this turn, draw #y3 cards.",
+      " more Attacks this Turn, draw #y3 cards."
+    ]
+  },
+  "theUnchainedMod:StepBackPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this turn, gain #b",
+      " Block.",
+      "If you play #b",
+      " more Skills this turn, gain #b"
+    ]
+  },
+  "theUnchainedMod:MakeRoomPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this turn, gain #y2 Energy.",
+      "If you play #b",
+      " more Skills this turn, gain #y2 Energy."
+    ]
+  },
+  "theUnchainedMod:OiledChainsPower": {
+    "NAME": "Chain extension",
+    "DESCRIPTIONS": [
+      "The next card you play is free."
+    ]
+  },
+  "theUnchainedMod:TiedToThePlayerPower": {
+    "NAME": "Tied to the Player",
+    "DESCRIPTIONS": [
+      "This enemy loses HP #y",
+      " times",
+      " everytime the player takes damage."
+    ]
+  },
+  "theUnchainedMod:TiedToAnEnemyPower": {
+    "NAME": "Tied to an enemy",
+    "DESCRIPTIONS": [
+      "Your mind is tied to an enemy."
+    ]
+  },
+  "theUnchainedMod:CruiserweightPower": {
+    "NAME": "Cruiserweight",
+    "DESCRIPTIONS": [
+      "Everytime you draw a 2-cost card. Draw #y",
+      " card.",
+      " cards."
+    ]
+  },
+  "theUnchainedMod:MuscleMemoryPower": {
+    "NAME": "Muscle Memory",
+    "DESCRIPTIONS": [
+      "The next 2-cost card you play is played twice.",
+      "The next #b",
+      " 2-cost cards you play are played twice."
+    ]
+  },
+  "theUnchainedMod:NextTurnRelayedDamagePower": {
+    "NAME": "Next Turn Damage",
+    "DESCRIPTIONS": [
+      "At the end of next turn, take #r",
+      " damage."
+    ]
+  },
+  "theUnchainedMod:FractalShieldPower": {
+    "NAME": "Fractal Shield",
+    "DESCRIPTIONS": [
+      "Relay blocks Relayed Damage."
+    ]
+  },
+  "theUnchainedMod:ClaustrophobiaPower": {
+    "NAME": "Claustrophobia",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b",
+      " Crushed Armor to ALL enemies."
+    ]
+  },
+  "theUnchainedMod:SolarPlexusPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this turn, Stun the enemy.",
+      "If you play #b",
+      " more Attacks this turn, Stun the enemy."
+    ]
+  },
+  "theUnchainedMod:MomentumPower": {
+    "NAME": "Momentum",
+    "DESCRIPTIONS": [
+      "You have #g",
+      " Momentum. When you obtain #b",
+      " Momentum, add a Swirl into your hand."
+    ]
+  },
+  "theUnchainedMod:FullSpinPower": {
+    "NAME": "Full Spins",
+    "DESCRIPTIONS": [
+      "You have done #b",
+      " full spins this turn.",
+      " full spin this turn."
+    ]
+  },
+  "theUnchainedMod:GainMomentumEveryTurnPower": {
+    "NAME": "Perfect Balance",
+    "DESCRIPTIONS": [
+      "Gain #y",
+      " Momentum every turn."
+    ]
+  },
+  "theUnchainedMod:SwirlsHitAllEnemiesPower": {
+    "NAME": "Large Radius",
+    "DESCRIPTIONS": [
+      "Swirls hit ALL enemies."
+    ]
+  },
+  "theUnchainedMod:RelentlessBatteryPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this Turn, deal #y",
+      " damage #y",
+      " times, and reapply this Chain."
+    ]
+  },
+  "theUnchainedMod:TunnelVisionChainPower": {
+    "NAME": "Power Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Power this Turn, gain #y",
+      " TunnelVision.",
+      "If you play #b",
+      " more Powers this Turn, gain #y"
+    ]
+  },
+  "theUnchainedMod:EnclosingSteelPower": {
+    "NAME": "Hugged by Chains",
+    "DESCRIPTIONS": [
+      "Dont lose your Relay at the start of next turn.",
+      "Dont lose your Relay at the start of the next #b",
+      " turns."
+    ]
+  },
+  "theUnchainedMod:MagusFormPower": {
+    "NAME": "Magus Form",
+    "DESCRIPTIONS": [
+      "Whenever you play a 2-cost card, gain #y",
+      " Energy."
+    ]
+  },
+  "theUnchainedMod:WreckingBallPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this turn, ALL enemies lose #y",
+      " HP.",
+      "If you play #b",
+      " more Skills this turn, ALL enemies lose #y"
+    ]
+  },
+  "theUnchainedMod:LongerChainsPower": {
+    "NAME": "Grace Of The Prince",
+    "DESCRIPTIONS": [
+      "At the start of each turn, ALL enemies gain #y",
+      " Block."
+    ]
+  },
+  "theUnchainedMod:PremonitionPower": {
+    "NAME": "Premonition",
+    "DESCRIPTIONS": [
+      "If you end your turn with 0 Energy, gain #y",
+      " Energy next turn.",
+      "Next turn gain #y",
+      " Energy."
+    ]
+  },
+  "theUnchainedMod:InfiniteChainPower": {
+    "NAME": "Infinite Chain",
+    "DESCRIPTIONS": [
+      "Next turn, add ",
+      " Infinite Chain into your hand."
+    ]
+  },
+  "theUnchainedMod:LawOfInertiaPower": {
+    "NAME": "Inertia",
+    "DESCRIPTIONS": [
+      "At the start of turn, lose ",
+      " Strength and Dexterity, if you did not finish a Chain the turn before."
+    ]
+  },
+  "theUnchainedMod:AccelerationPower": {
+    "NAME": "Accelerate",
+    "DESCRIPTIONS": [
+      " The first time you finish a Chain each turn, gain ",
+      " Strength and Dexterity."
+    ]
+  },
+  "theUnchainedMod:LastResortPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this turn, lose ALL your Energy.",
+      "If you play #b",
+      " more Skills this turn, lose ALL your Energy."
+    ]
+  },
+  "theUnchainedMod:FluidMovementPower": {
+    "NAME": "Fluid Movement",
+    "DESCRIPTIONS": [
+      "Everytime you finish a Chain, gain #y",
+      " Momentum."
+    ]
+  },
+  "theUnchainedMod:HobblesPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this Turn, enemy loses #y",
+      " Strength.",
+      "If you play #b",
+      " more Attacks this Turn, enemy loses #y"
+    ]
+  },
+  "theUnchainedMod:SwingingPower": {
+    "NAME": "Keep on Swinging",
+    "DESCRIPTIONS": [
+      "ALL Swing Cards deal #b",
+      " more damage this combat."
+    ]
+  },
+  "theUnchainedMod:ChaseDestinyPower": {
+    "NAME": "Path to Destiny",
+    "DESCRIPTIONS": [
+      "This turn, gain 1 Energy everytime you finish a Chain.",
+      "This and next turn, gain 1 Energy everytime you finish a Chain.",
+      "Gain 1 Energy for the next #y",
+      " turns, everytime you finish a Chain."
+    ]
+  },
+  "theUnchainedMod:StareDownPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this Turn, ALL enemies gain #b",
+      "If you play #b",
+      " more Skills this Turn, ALL enemies gain #b",
+      " Weak."
+    ]
+  },
+  "theUnchainedMod:CrushedArmorPower": {
+    "NAME": "Crushed Armor",
+    "DESCRIPTIONS": [
+      "Loses #r",
+      " HP everytime it gains Block."
+    ]
+  },
+  "theUnchainedMod:TaxedPower": {
+    "NAME": "Taxed",
+    "DESCRIPTIONS": [
+      "This enemy is too poor to be taxed again."
+    ]
+  },
+  "theUnchainedMod:RandomCommonAttackChainPower": {
+    "NAME": "Attack Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Attack this Turn, add a random common Attack to your hand.",
+      "If you play #b",
+      " more Attacks this Turn, add a random common Attack to your hand."
+    ]
+  },
+  "theUnchainedMod:GainMomentumNextTurnPower": {
+    "NAME": "Carried Momentum",
+    "DESCRIPTIONS": [
+      "Next Turn, gain #y",
+      " Momentum."
+    ]
+  },
+  "theUnchainedMod:WeldingPower": {
+    "NAME": "Welding",
+    "DESCRIPTIONS": [
+      "The first Chain you start each turn, is finished instantly.",
+      "The first #y",
+      " Chains you start each turn, are finished instantly."
+    ]
+  },
+  "theUnchainedMod:FuseChainPower": {
+    "NAME": "Fuse Chains",
+    "DESCRIPTIONS": [
+      "The next Chain you start, is finished instantly.",
+      "The next #y",
+      " Chains you start, are finished instantly."
+    ]
+  },
+  "theUnchainedMod:TiedDownPower": {
+    "NAME": "Tied Down",
+    "DESCRIPTIONS": [
+      "At the end of its turn, gains #b",
+      " Strength.",
+      "At the end of its next turn, gains #b"
+    ]
+  },
+  "theUnchainedMod:GuardedPosturePower": {
+    "NAME": "Guarded Posture",
+    "DESCRIPTIONS": [
+      "Whenever a Chain is finished, gain #b",
+      " Block."
+    ]
+  },
+  "theUnchainedMod:GlyphBrandPower": {
+    "NAME": "Branded",
+    "DESCRIPTIONS": [
+      "Whenever you gain Relay this turn, this enemy takes #y",
+      " damage."
+    ]
+  },
+  "theUnchainedMod:NextTurnRelayedDamage": {
+    "NAME": "Relayed Damage",
+    "DESCRIPTIONS": [
+      "Your ",
+      " Relayed Damage will hit you next turn for #y",
+      " damage."
+    ]
+  },
+  "theUnchainedMod:ThisTurnRelayedDamage": {
+    "NAME": "Relayed Damage",
+    "DESCRIPTIONS": [
+      "Your ",
+      " Relayed Damage will hit you this turn for #r",
+      " damage."
+    ]
+  },
+  "theUnchainedMod:ImmovableObjectPower": {
+    "NAME": "Immovable Object",
+    "DESCRIPTIONS": [
+      "When attacked, attacking enemy gains #y",
+      " Crushed Armor."
+    ]
+  },
+  "theUnchainedMod:HeavyHitPower": {
+    "NAME": "Heavy Hits",
+    "DESCRIPTIONS": [
+      "This turn, hitting an enemy applies #y",
+      " Crushed Armor."
+    ]
+  },
+  "theUnchainedMod:ArcaneTransmutationPower": {
+    "NAME": "Transmute Armor",
+    "DESCRIPTIONS": [
+      "Gain #y",
+      " Relay, everytime an enemy gains Block."
+    ]
+  },
+  "theUnchainedMod:DeliciousChurroPower": {
+    "NAME": "Delicious Churro",
+    "DESCRIPTIONS": [
+      "This turn, the next Chain you start is copied."
+      ]
+    },
+  "theUnchainedMod:MagicMechaPower": {
+    "NAME": "Magic Mecha",
+    "DESCRIPTIONS": [
+      "If you play",
+      " #b",
+      " more Attack,",
+      " more Skill and",
+      " more Power, ",
+      " gain #y",
+      " Strength, Dexterity and #yArcane #yMastery"
+    ]
+  },
+  "theUnchainedMod:ArcaneMasteryPower": {
+    "NAME": "Arcane Mastery",
+    "DESCRIPTIONS": [
+      "Increase all Relay gained by cards this combat by #b"
+    ]
+  },
+  "theUnchainedMod:BarbedWireChainsPower": {
+    "NAME": "Barbed Wire",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " to ALL enemies for each chain not finished at the end of your turn."
+    ]
+  },
+  "theUnchainedMod:DamoclesChainPower": {
+    "NAME": "Sword of Damocles",
+    "DESCRIPTIONS": [
+      "If you play",
+      " #b",
+      " more Attack,",
+      " more Skill and",
+      " more Power, ",
+      " this Turn, take #b",
+      " damage and lose #b",
+      " Strength."
+    ]
+  }
+}
