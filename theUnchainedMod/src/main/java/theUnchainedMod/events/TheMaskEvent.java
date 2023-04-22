@@ -59,62 +59,54 @@ public class TheMaskEvent extends AbstractImageEvent {
     protected void buttonEffect(int i) {
         switch (screenNum) {
             case 0: // running through Exordium
+
+                imageEventText.loadImage("theDefaultResources/images/events/IdentityCrisisEvent2.png"); // Change the shown image to image of mask
+                CardCrawlGame.sound.play("unchainedSelect"); // Play a hit sound
+
+                this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
+
+                imageEventText.clearAllDialogs();
+                imageEventText.setDialogOption(OPTIONS[1] + healthdamage + OPTIONS[2], new CrushingGauntlets()); // Crushing Gauntlets - take damage
+                imageEventText.setDialogOption(OPTIONS[0] , new Writhe(), new CrushingGauntlets()); // Arcane Amplifier, gain a writhe.
+                imageEventText.setDialogOption(OPTIONS[3]); // Tell him to shove it
+                screenNum = 1;
+                break;
+            case 1:
                 switch (i) {
-                    case 0: // If you press button the first button (Button at index 0), in this case: Inspiration.
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[0]); // Update the text of the event
-                        this.imageEventText.updateDialogOption(0, OPTIONS[4]); // 1. Change the first button to the [Leave] button
-                        this.imageEventText.clearRemainingOptions(); // 2. and remove all others
-
-                        break; // Onto screen 1 we go.
-                    case 1: // Mask talks to u
-                        imageEventText.loadImage("theDefaultResources/images/events/IdentityCrisisEvent2.png"); // Change the shown image to image of mask
-
-                        CardCrawlGame.sound.play("unchainedSelect"); // Play a hit sound
-
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        imageEventText.setDialogOption(OPTIONS[0] , new Writhe(), new CrushingGauntlets()); // Arcane Amplifier, gain a writhe.
-                        imageEventText.setDialogOption(OPTIONS[1] + healthdamage + OPTIONS[2], new CrushingGauntlets()); // Crushing Gauntlets - take damage
-                        imageEventText.setDialogOption(OPTIONS[3]); // Leave
-                        this.imageEventText.clearRemainingOptions();
-                        screenNum = 1;
-
-                        break;
-                    case 2: // Crushing gauntlets
+                    case 0: // Crushing gauntlets
                         CardCrawlGame.sound.play("ATTACK_HEAVY");
                         AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, healthdamage));
 
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[3]);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3]);
+                        this.imageEventText.updateDialogOption(0, OPTIONS[5]);
                         this.imageEventText.clearRemainingOptions();
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new CrushingGauntlets());
 
-                        screenNum = 1;
+                        screenNum = 2;
                         break;
-                    case 3: // Arcane Amplified
+                    case 1: // Arcane Amplifier
 
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[4]);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3]);
+                        this.imageEventText.updateDialogOption(0, OPTIONS[5]);
                         this.imageEventText.clearRemainingOptions();
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new CrushingGauntlets());
 
-                        screenNum = 1;
+                        screenNum = 2;
                         AbstractCard c = new Writhe().makeCopy();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
 
                         break;
 
-                    case 4: // Leave and the next fights you are weak
+                    case 2: // Leave and the next fights you are weak
                         this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3]);
+                        this.imageEventText.updateDialogOption(0, OPTIONS[5]);
                         this.imageEventText.clearRemainingOptions();
-                }
-                break;
-            case 1: // Welcome to screenNum = 1;
-                switch (i) {
-                    case 0: // If you press the first (and this should be the only) button,
-                        openMap(); // You'll open the map and end the event.
+                        screenNum = 2;
                         break;
                 }
+                break;
+            case 2:
+                openMap(); // You'll open the map and end the event
                 break;
         }
     }
