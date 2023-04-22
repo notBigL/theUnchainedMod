@@ -430,6 +430,14 @@
   },
   "theUnchainedMod:SwordOfDamocles": {
     "NAME": "Sword Of Damocles",
-    "DESCRIPTION": "Gain !M! Strength. NL 1 theunchainedmod:Cadena_Maestra: Take !theUnchainedMod:SecondMagic! Damage and lose !M! Strength. "
+    "DESCRIPTION": "Gain !M! Strength. NL 1 theunchainedmod:Master_Chain: Lose !theUnchainedMod:SecondMagic! HP and !M! Strength. NL Exhaust. "
+  },
+  "theUnchainedMod:MeltingHex": {
+    "NAME": "Melting Hex",
+    "DESCRIPTION": "Apply !M! theunchainedmod:Malleable. NL Exhaust."
+  },
+  "theUnchainedMod:ArcaneLink": {
+    "NAME": "Arcane Link",
+    "DESCRIPTION": "Gain !M! Relay. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
   }
 }

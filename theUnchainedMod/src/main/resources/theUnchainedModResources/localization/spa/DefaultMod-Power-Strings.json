@@ -449,5 +449,27 @@
       "inflige #b",
       " a TODOS los enemigos por cada Cadena no terminada al final de tu turno."
     ]
+  },
+  "theUnchainedMod:DamoclesChainPower": {
+    "NAME": "Sword of Damocles",
+    "DESCRIPTIONS": [
+      "If you play",
+      " #b",
+      " more Attack,",
+      " more Skill and",
+      " more Power, ",
+      " this Turn, take #b",
+      " damage and lose #b",
+      " Strength."
+    ]
+  },
+  "theUnchainedMod:ArcaneLinkPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this turn, gain #b",
+      " Arcane Mastery.",
+      "If you play #b",
+      " more Skills this turn, gain #b"
+    ]
   }
 }

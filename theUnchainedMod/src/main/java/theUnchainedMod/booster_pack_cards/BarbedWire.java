@@ -23,8 +23,8 @@ public class BarbedWire extends AbstractDynamicCard {
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 10;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 5;
+    private static final int MAGIC_NUMBER = 14;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 7;
 
     public BarbedWire() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

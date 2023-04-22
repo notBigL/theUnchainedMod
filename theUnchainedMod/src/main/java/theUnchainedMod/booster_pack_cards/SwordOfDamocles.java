@@ -33,6 +33,7 @@ public class SwordOfDamocles extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
+        this.exhaust = true;
         tags.add(CustomTags.CHAIN);
     }
 

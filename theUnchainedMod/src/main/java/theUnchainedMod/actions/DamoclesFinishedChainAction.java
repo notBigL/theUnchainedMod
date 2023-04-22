@@ -22,12 +22,8 @@ public class DamoclesFinishedChainAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (!mo.isDeadOrEscaped()) {
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player,  amount)));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -strengthLoss), -this.strengthLoss));
-            }
-        }
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player,  amount, DamageInfo.DamageType.HP_LOSS)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -strengthLoss), -this.strengthLoss));
         this.isDone = true;
     }
 }

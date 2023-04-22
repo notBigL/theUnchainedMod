@@ -175,6 +175,7 @@ public class TheUnchained extends CustomPlayer {
         retVal.add(BasicStrike.ID);
         retVal.add(BasicStrike.ID);
         retVal.add(BasicStrike.ID);
+        retVal.add(BasicStrike.ID);
         retVal.add(BasicDefend.ID);
         retVal.add(BasicDefend.ID);
         retVal.add(BasicDefend.ID);

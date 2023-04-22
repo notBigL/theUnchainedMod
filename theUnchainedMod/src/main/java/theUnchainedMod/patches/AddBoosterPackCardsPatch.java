@@ -22,7 +22,9 @@ public class AddBoosterPackCardsPatch {
             new MagicMecha(),
             new MakeHaste(),
             new RetreatingSwing(),
-            new SwordOfDamocles()
+            new SwordOfDamocles(),
+            new MeltingHex(),
+            new ArcaneLink()
     ));
 
     @SpirePostfixPatch

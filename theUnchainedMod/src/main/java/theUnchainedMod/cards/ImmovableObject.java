@@ -24,8 +24,8 @@ public class ImmovableObject extends AbstractDynamicCard {
     private static final int COST = 2;
     private static final int BLOCK = 11;
     private static final int UPGRADE_PLUS_BLOCK = 2;
-    private static final int MAGIC_NUMBER = 4;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
+    private static final int MAGIC_NUMBER = 3;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
 
     public ImmovableObject() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
