@@ -1,6 +1,7 @@
 package theUnchainedMod;
 
 import basemod.*;
+import basemod.eventUtil.AddEventParams;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -13,6 +14,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.Prefs;
@@ -24,6 +26,7 @@ import org.apache.logging.log4j.Logger;
 import theUnchainedMod.booster_pack_cards.ArcaneArtillery;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.events.TheMaskEvent;
 import theUnchainedMod.potions.DancePotion;
 import theUnchainedMod.potions.ChainGrease;
 import theUnchainedMod.potions.CrushingElixir;
@@ -195,6 +198,9 @@ public class TheUnchainedMod implements
         return getModID() + "Resources/images/powers/" + resourcePath;
     }
 
+    public static String makeEventPath(String resourcePath) {
+        return getModID() + "Resources/images/events/" + resourcePath;
+    }
     public static String makePotionPath(String resourcePath) {
         return getModID() + "Resources/images/potions/" + resourcePath;
     }
@@ -417,6 +423,14 @@ public class TheUnchainedMod implements
 
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
+        AddEventParams eventParams = new AddEventParams.Builder(TheMaskEvent.ID, TheMaskEvent.class) // for this specific event
+                .dungeonID(Exordium.ID) // The dungeon (act) this event will appear in
+                .playerClass(TheUnchained.Enums.THE_UNCHAINED) // Character specific event
+                .create();
+
+        // Add the event
+        BaseMod.addEvent(eventParams);
+
         logger.info("Done loading badge Image and mod options");
     }
 
@@ -554,27 +568,31 @@ public class TheUnchainedMod implements
 
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
-                getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-Card-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Card-Strings.json");
 
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
-                getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-Power-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Power-Strings.json");
 
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,
-                getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-Relic-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Relic-Strings.json");
 
         // PotionStrings
         BaseMod.loadCustomStringsFile(PotionStrings.class,
-                getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-Potion-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Potion-Strings.json");
 
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
-                getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-Character-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Character-Strings.json");
 
         // UI Strings
         BaseMod.loadCustomStringsFile(UIStrings.class,
-                getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-UI-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-UI-Strings.json");
+
+        // Event Strings
+        BaseMod.loadCustomStringsFile(EventStrings.class,
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Event-Strings.json");
 
         logger.info("Done editing strings");
     }
@@ -594,7 +612,7 @@ public class TheUnchainedMod implements
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
 
         Gson gson = new Gson();
-        String json = Gdx.files.internal(getModID() + "Resources/localization/" + getLangString() + "/DefaultMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String json = Gdx.files.internal(getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
 
         if (keywords != null) {
