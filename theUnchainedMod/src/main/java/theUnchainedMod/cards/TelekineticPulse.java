@@ -1,28 +1,25 @@
 package theUnchainedMod.cards;
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.AllEnemiesGainBlockAction;
 import theUnchainedMod.actions.AllEnemiesLoseHPAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.DeliciousChurroPower;
-import theUnchainedMod.powers.WhiplashPower;
 import theUnchainedMod.powers.WreckingBallPower;
-import theUnchainedMod.relics.Churros;
 import theUnchainedMod.vfx.TelekineticPulseWaveEffect;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class TelekineticPulse extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(TelekineticPulse.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(TelekineticPulse.class.getSimpleName());
     public static final String IMG = makeCardPath("TelekineticPulse.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;

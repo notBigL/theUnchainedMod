@@ -23,7 +23,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.relics.RustedChains;
 
@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
-import static theUnchainedMod.DefaultMod.*;
+import static theUnchainedMod.TheUnchainedMod.*;
 import static theUnchainedMod.characters.TheUnchained.Enums.COLOR_ORANGE;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
@@ -39,7 +39,7 @@ import static theUnchainedMod.characters.TheUnchained.Enums.COLOR_ORANGE;
 //All text (starting description and loadout, anything labeled TEXT[]) can be found in DefaultMod-character-Strings.json in the resources
 
 public class TheUnchained extends CustomPlayer {
-    public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
+    public static final Logger logger = LogManager.getLogger(TheUnchainedMod.class.getName());
 
     // =============== CHARACTER ENUMERATORS =================
     // These are enums for your Characters color (both general color and for the card library) as well as
@@ -239,7 +239,7 @@ public class TheUnchained extends CustomPlayer {
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {
-        return theUnchainedMod.DefaultMod.UNCHAINED_ORANGE;
+        return TheUnchainedMod.UNCHAINED_ORANGE;
     }
 
     // Should return a BitmapFont object that you can use to customize how your
@@ -276,14 +276,14 @@ public class TheUnchained extends CustomPlayer {
     // Should return a Color object to be used to color the miniature card images in run history.
     @Override
     public Color getCardRenderColor() {
-        return theUnchainedMod.DefaultMod.UNCHAINED_ORANGE;
+        return TheUnchainedMod.UNCHAINED_ORANGE;
     }
 
     // Should return a Color object to be used as screen tint effect when your
     // character attacks the heart.
     @Override
     public Color getSlashAttackColor() {
-        return theUnchainedMod.DefaultMod.UNCHAINED_ORANGE;
+        return TheUnchainedMod.UNCHAINED_ORANGE;
     }
 
     // Should return an AttackEffect array of any size greater than 0. These effects

@@ -10,7 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
-import static theUnchainedMod.DefaultMod.makePotionPath;
+import static theUnchainedMod.TheUnchainedMod.makePotionPath;
 
 @SpirePatch(clz = AbstractPotion.class, method = "initializeImage"
 )

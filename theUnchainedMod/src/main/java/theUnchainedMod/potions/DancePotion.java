@@ -9,12 +9,13 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.Swirl;
 import theUnchainedMod.patches.CustomPotionEnums;
 
 public class DancePotion extends CustomPotion {
 
-    public static final String POTION_ID = theUnchainedMod.DefaultMod.makeID("DancePotion");
+    public static final String POTION_ID = TheUnchainedMod.makeID("DancePotion");
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
 
     public static final String NAME = potionStrings.NAME;

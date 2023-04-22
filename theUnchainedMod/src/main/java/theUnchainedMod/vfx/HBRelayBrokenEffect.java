@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
-import static theUnchainedMod.DefaultMod.makeUIPath;
+import static theUnchainedMod.TheUnchainedMod.makeUIPath;
 
 public class HBRelayBrokenEffect extends AbstractGameEffect {
     private static final float EFFECT_DUR = 1.0F;

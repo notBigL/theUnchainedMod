@@ -5,18 +5,18 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.DamoclesChainPower;
 import theUnchainedMod.powers.DeliciousChurroPower;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class SwordOfDamocles extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(SwordOfDamocles.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(SwordOfDamocles.class.getSimpleName());
     public static final String IMG = makeCardPath("SwordOfDamocles.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

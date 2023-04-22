@@ -9,17 +9,16 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.LoseRelayAction;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.RelayHelpers;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class ArcaneArtillery extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(ArcaneArtillery.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(ArcaneArtillery.class.getSimpleName());
     public static final String IMG = makeCardPath("ArcaneArtillery.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static CardTarget TARGET = CardTarget.ENEMY;

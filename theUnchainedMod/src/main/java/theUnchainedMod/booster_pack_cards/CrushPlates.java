@@ -1,25 +1,21 @@
 package theUnchainedMod.booster_pack_cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.ApplyCrushedArmorAction;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.CrushPlatesAction;
 import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
-import theUnchainedMod.powers.CrushedArmorPower;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class CrushPlates extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(CrushPlates.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(CrushPlates.class.getSimpleName());
     public static final String IMG = makeCardPath("CrushPlates.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

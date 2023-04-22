@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.vfx.FlashPotionEffect;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
-import static theUnchainedMod.DefaultMod.makePotionPath;
+import static theUnchainedMod.TheUnchainedMod.makePotionPath;
 
 @SpirePatch(clz = FlashPotionEffect.class, method = SpirePatch.CONSTRUCTOR)
 public class CustomPotionsFlashPatch {

@@ -2,8 +2,6 @@ package theUnchainedMod.potions;
 
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,14 +11,14 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.RemoveRelayedDamageAction;
-import theUnchainedMod.cards.Liberation;
 import theUnchainedMod.patches.CustomPotionEnums;
 import theUnchainedMod.powers.AbstractChainPower;
 
 public class ChainGrease extends CustomPotion {
 
-    public static final String POTION_ID = theUnchainedMod.DefaultMod.makeID("ChainGrease");
+    public static final String POTION_ID = TheUnchainedMod.makeID("ChainGrease");
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
 
     public static final String NAME = potionStrings.NAME;

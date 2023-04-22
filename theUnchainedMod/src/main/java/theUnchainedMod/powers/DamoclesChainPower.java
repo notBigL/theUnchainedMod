@@ -4,14 +4,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.DamoclesFinishedChainAction;
-import theUnchainedMod.actions.StareDownFinishedChainAction;
 
 public class DamoclesChainPower extends AbstractMasterChainPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("DamoclesChainPower");
+    public static final String POWER_ID = TheUnchainedMod.makeID("DamoclesChainPower");
     private static final PowerStrings powerstrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerstrings.NAME;
     public static final String[] DESCRIPTIONS = powerstrings.DESCRIPTIONS;
