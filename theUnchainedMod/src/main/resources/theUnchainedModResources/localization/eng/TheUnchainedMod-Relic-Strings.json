@@ -28,7 +28,7 @@
     "NAME": "Rusted Chains",
     "FLAVOR": "These used to hold you to a prison wall. Now they are handy tools.",
     "DESCRIPTIONS": [
-      "The sixth card you play each combat draws a card, the seventh card costs zero"
+      "The sixth card you play each combat draws a card, the next card costs zero"
     ]
   },
   "theUnchainedMod:HeartOfTheUnderdog": {
@@ -49,7 +49,7 @@
     "NAME": "Polished Chains",
     "FLAVOR": "You can see your own reflection in these.",
     "DESCRIPTIONS": [
-      "Replaces #yRusted #yChains. EVERY sixth card you play each combat draws a card, EVERY seventh card costs zero."
+      "Replaces #yRusted #yChains. EVERY sixth card you play each combat draws a card, the next card you play costs zero."
     ]
   },
   "theUnchainedMod:BrokenCharm": {
@@ -100,6 +100,13 @@
     "FLAVOR": "Why stop at crushing their armor when you could instead crush THEM.",
     "DESCRIPTIONS": [
       "You can no longer apply Crushed Armor, instead you deal triple the amount directly to their HP."
+    ]
+  },
+  "theUnchainedMod:ArcaneAmplifier": {
+    "NAME": "Arcane Amplifier",
+    "FLAVOR": "Like calls to like.",
+    "DESCRIPTIONS": [
+      "Every 3 times you gain Relay in a single turn, gain 1 theunchainedmod:Arcane_Mastery."
     ]
   }
 }

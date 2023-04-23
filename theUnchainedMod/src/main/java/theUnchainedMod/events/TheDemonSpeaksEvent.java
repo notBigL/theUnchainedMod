@@ -1,37 +1,30 @@
 package theUnchainedMod.events;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.colorless.Apotheosis;
 import com.megacrit.cardcrawl.cards.curses.Writhe;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.WarpedTongs;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import theUnchainedMod.TheUnchainedMod;
+import theUnchainedMod.relics.ArcaneAmplifier;
 import theUnchainedMod.relics.CrushingGauntlets;
 
 import static theUnchainedMod.TheUnchainedMod.makeEventPath;
 
-public class TheMaskEvent extends AbstractImageEvent {
+public class TheDemonSpeaksEvent extends AbstractImageEvent {
 
 
-    public static final String ID = TheUnchainedMod.makeID("TheMaskEvent");
+    public static final String ID = TheUnchainedMod.makeID("TheDemonSpeaks");
     private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString(ID);
 
     private static final String NAME = eventStrings.NAME;
     private static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
     private static final String[] OPTIONS = eventStrings.OPTIONS;
-    public static final String IMG = makeEventPath("IdentityCrisisEvent.png");
+    public static final String IMG = makeEventPath("TheDemonSpeaksEvent.png");
 
     private int screenNum = 0; // The initial screen we will see when encountering the event - screen 0;
 
@@ -40,7 +33,7 @@ public class TheMaskEvent extends AbstractImageEvent {
 
     private int healthdamage; //The actual number of how much Max HP we're going to lose.
 
-    public TheMaskEvent() {
+    public TheDemonSpeaksEvent() {
         super(NAME, DESCRIPTIONS[0], IMG);
 
         if (AbstractDungeon.ascensionLevel >= 15) { // If the player is ascension 15 or above, lose 5% max hp. Else, lose just 3%.
@@ -60,20 +53,21 @@ public class TheMaskEvent extends AbstractImageEvent {
         switch (screenNum) {
             case 0: // running through Exordium
 
-                imageEventText.loadImage("theDefaultResources/images/events/IdentityCrisisEvent2.png"); // Change the shown image to image of mask
+                imageEventText.loadImage("theUnchainedModResources/images/events/TheDemonSpeaksEvent2.png"); // Change the shown image to image of mask
                 CardCrawlGame.sound.play("unchainedSelect"); // Play a hit sound
 
                 this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
 
                 imageEventText.clearAllDialogs();
                 imageEventText.setDialogOption(OPTIONS[1] + healthdamage + OPTIONS[2], new CrushingGauntlets()); // Crushing Gauntlets - take damage
-                imageEventText.setDialogOption(OPTIONS[0] , new Writhe(), new CrushingGauntlets()); // Arcane Amplifier, gain a writhe.
+                imageEventText.setDialogOption(OPTIONS[0] , new Writhe(), new ArcaneAmplifier()); // Arcane Amplifier, gain a writhe.
                 imageEventText.setDialogOption(OPTIONS[3]); // Tell him to shove it
                 screenNum = 1;
                 break;
             case 1:
                 switch (i) {
                     case 0: // Crushing gauntlets
+                        imageEventText.loadImage("theUnchainedModResources/images/events/TheDemonSpeaksEvent3.png"); // Change the shown image to image of mask
                         CardCrawlGame.sound.play("ATTACK_HEAVY");
                         AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, healthdamage));
 
@@ -85,11 +79,12 @@ public class TheMaskEvent extends AbstractImageEvent {
                         screenNum = 2;
                         break;
                     case 1: // Arcane Amplifier
-
+                        imageEventText.loadImage("theUnchainedModResources/images/events/TheDemonSpeaksEvent3.png"); // Change the shown image to image of mask
+                        CardCrawlGame.sound.play("arcaneCharmApplication");
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[4]);
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);
                         this.imageEventText.clearRemainingOptions();
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new CrushingGauntlets());
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), new ArcaneAmplifier());
 
                         screenNum = 2;
                         AbstractCard c = new Writhe().makeCopy();
@@ -98,6 +93,7 @@ public class TheMaskEvent extends AbstractImageEvent {
                         break;
 
                     case 2: // Leave and the next fights you are weak
+                        imageEventText.loadImage("theUnchainedModResources/images/events/TheDemonSpeaksEvent4.png"); // Change the shown image to image of mask
                         this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);
                         this.imageEventText.clearRemainingOptions();

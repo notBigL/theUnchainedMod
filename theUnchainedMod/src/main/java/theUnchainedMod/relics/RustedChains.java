@@ -37,9 +37,9 @@ public class RustedChains extends CustomRelic {
         if (this.counter == 6) {
             this.beginLongPulse();
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new OiledChainsPower(AbstractDungeon.player, AbstractDungeon.player,1)));
         } else if (this.counter == 7) {
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
             this.stopPulse();
             this.grayscale = true;
         }

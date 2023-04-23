@@ -16,7 +16,7 @@ public class CrushingGauntlets extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Crushing_Gauntlets_relic.png"));
 
     public CrushingGauntlets() {
-        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.CLINK);
     }
 
     // Flash at the start of Battle.

@@ -11,22 +11,18 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.Prefs;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import com.sun.org.apache.bcel.internal.generic.FALOAD;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theUnchainedMod.booster_pack_cards.ArcaneArtillery;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheUnchained;
-import theUnchainedMod.events.TheMaskEvent;
+import theUnchainedMod.events.TheDemonSpeaksEvent;
 import theUnchainedMod.potions.DancePotion;
 import theUnchainedMod.potions.ChainGrease;
 import theUnchainedMod.potions.CrushingElixir;
@@ -423,7 +419,7 @@ public class TheUnchainedMod implements
 
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
-        AddEventParams eventParams = new AddEventParams.Builder(TheMaskEvent.ID, TheMaskEvent.class) // for this specific event
+        AddEventParams eventParams = new AddEventParams.Builder(TheDemonSpeaksEvent.ID, TheDemonSpeaksEvent.class) // for this specific event
                 .dungeonID(Exordium.ID) // The dungeon (act) this event will appear in
                 .playerClass(TheUnchained.Enums.THE_UNCHAINED) // Character specific event
                 .create();
@@ -483,6 +479,7 @@ public class TheUnchainedMod implements
 
         // Booster Pack Relics
         BaseMod.addRelicToCustomPool(new CrushingGauntlets(), TheUnchained.Enums.COLOR_BOOSTER);
+        BaseMod.addRelicToCustomPool(new ArcaneAmplifier(), TheUnchained.Enums.COLOR_BOOSTER);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -502,6 +499,7 @@ public class TheUnchainedMod implements
         UnlockTracker.markRelicAsSeen(DancingRibbons.ID);
         UnlockTracker.markRelicAsSeen(Wrench.ID);
         UnlockTracker.markRelicAsSeen(CrushingGauntlets.ID);
+        UnlockTracker.markRelicAsSeen(ArcaneAmplifier.ID);
         logger.info("Done adding relics!");
     }
 

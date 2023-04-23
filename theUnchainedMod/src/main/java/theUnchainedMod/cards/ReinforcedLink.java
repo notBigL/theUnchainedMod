@@ -10,6 +10,7 @@ import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.ReinforcedElementAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.AbstractChainPower;
+import theUnchainedMod.powers.AbstractMasterChainPower;
 
 import java.util.Iterator;
 
@@ -47,7 +48,7 @@ public class ReinforcedLink extends AbstractDynamicCard {
 
         while(var1.hasNext()) {
             AbstractPower power = (AbstractPower) var1.next();
-            if (power instanceof AbstractChainPower) {
+            if (power instanceof AbstractChainPower || power instanceof AbstractMasterChainPower) {
                 this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
             }
