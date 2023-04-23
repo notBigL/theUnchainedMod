@@ -1,7 +1,9 @@
 package theUnchainedMod.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.util.TextureLoader;
 
@@ -17,6 +19,10 @@ public class Wrench extends CustomRelic {
 
     public Wrench() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.CLINK);
+        tips.add(new PowerTip(
+                BaseMod.getKeywordTitle(DESCRIPTIONS[1].toLowerCase()),
+                BaseMod.getKeywordDescription(DESCRIPTIONS[1].toLowerCase())
+        ));
     }
 
     @Override

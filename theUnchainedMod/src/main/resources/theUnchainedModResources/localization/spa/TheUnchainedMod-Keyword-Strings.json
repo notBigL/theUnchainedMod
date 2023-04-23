@@ -91,5 +91,13 @@
       "malleable"
     ],
     "DESCRIPTION": "Upon receiving attack damage, gains 1 Block. Block gain increases as Malleable is triggered. Resets to 1 at the start of your turn."
+  },
+  {
+    "PROPER_NAME": "Swirl",
+    "NAMES": [
+      "Swirl",
+      "swirl"
+    ],
+    "DESCRIPTION": "Swirls are #b0 cost attacks which Retain and Exhaust, but get stronger the more you play in a turn."
   }
 ]

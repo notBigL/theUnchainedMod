@@ -1,9 +1,11 @@
 package theUnchainedMod.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.GainRelayAction;
@@ -23,6 +25,10 @@ public class BrokenCharm extends CustomRelic {
 
     public BrokenCharm() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.CLINK);
+        tips.add(new PowerTip(
+                BaseMod.getKeywordTitle(DESCRIPTIONS[2].toLowerCase()),
+                BaseMod.getKeywordDescription(DESCRIPTIONS[2].toLowerCase())
+        ));
     }
 
     @Override
