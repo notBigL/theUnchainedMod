@@ -1,5 +1,6 @@
 package theUnchainedMod.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -7,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.util.TextureLoader;
@@ -23,6 +25,10 @@ public class TotemOfPain extends CustomRelic {
 
     public TotemOfPain() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        tips.add(new PowerTip(
+                BaseMod.getKeywordTitle(DESCRIPTIONS[1].toLowerCase()),
+                BaseMod.getKeywordDescription(DESCRIPTIONS[1].toLowerCase())
+        ));
     }
 
     @Override

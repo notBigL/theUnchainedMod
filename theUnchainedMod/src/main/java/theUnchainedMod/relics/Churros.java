@@ -1,10 +1,12 @@
 package theUnchainedMod.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.util.TextureLoader;
@@ -21,6 +23,10 @@ public class Churros extends CustomRelic {
 
     public Churros() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
+        tips.add(new PowerTip(
+                BaseMod.getKeywordTitle(DESCRIPTIONS[1].toLowerCase()),
+                BaseMod.getKeywordDescription(DESCRIPTIONS[1].toLowerCase())
+        ));
     }
 
     @Override

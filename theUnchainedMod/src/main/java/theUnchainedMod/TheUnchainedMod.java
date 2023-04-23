@@ -284,14 +284,14 @@ public class TheUnchainedMod implements
         if(playerPrefs.getBoolean("basemod:HEART_KILL", false)) heartKillBoolString = "TRUE";
 
 */
-        String heartKillBoolString = "FALSE";
+        String heartKillBoolString = "TRUE";
 
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY, "FALSE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY, heartKillBoolString);
         theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_ACTIVATED_PROPERTY, "FALSE");
         theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_UNLOCKED_PROPERTY, heartKillBoolString);
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, "FALSE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, heartKillBoolString);
         theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, heartKillBoolString);
         try {
             unchainedConfig.load(); // Load the setting and set the boolean to equal it
@@ -487,7 +487,6 @@ public class TheUnchainedMod implements
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
         // (the others are all starters so they're marked as seen in the character file)
-        UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
         UnlockTracker.markRelicAsSeen(BalletShoes.ID);
         UnlockTracker.markRelicAsSeen(Memento.ID);
         UnlockTracker.markRelicAsSeen(Carabiner.ID);

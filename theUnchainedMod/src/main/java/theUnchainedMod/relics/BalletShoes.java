@@ -1,7 +1,9 @@
 package theUnchainedMod.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.util.TextureLoader;
 
@@ -17,6 +19,14 @@ public class BalletShoes extends CustomRelic {
 
     public BalletShoes() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.FLAT);
+        tips.add(new PowerTip(
+                BaseMod.getKeywordTitle(DESCRIPTIONS[1].toLowerCase()),
+                BaseMod.getKeywordDescription(DESCRIPTIONS[1].toLowerCase())
+        ));
+        tips.add(new PowerTip(
+                BaseMod.getKeywordTitle(DESCRIPTIONS[2].toLowerCase()),
+                BaseMod.getKeywordDescription(DESCRIPTIONS[2].toLowerCase())
+        ));
     }
 
     @Override
