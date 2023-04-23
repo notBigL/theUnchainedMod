@@ -5,14 +5,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.EyeForAnEyeAction;
 import theUnchainedMod.characters.TheUnchained;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class EyeForAnEye extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(EyeForAnEye.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(EyeForAnEye.class.getSimpleName());
     public static final String IMG = makeCardPath("EyeForAnEye.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

@@ -5,20 +5,18 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.MultiAttackAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.powers.RelentlessBatteryPower;
-import theUnchainedMod.powers.WhiplashPower;
-import theUnchainedMod.relics.Churros;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class RelentlessOnslaught extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(RelentlessOnslaught.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(RelentlessOnslaught.class.getSimpleName());
     public static final String IMG = makeCardPath("RelentlessOnslaught.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;

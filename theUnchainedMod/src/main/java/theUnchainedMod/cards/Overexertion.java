@@ -7,17 +7,16 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
-import com.megacrit.cardcrawl.vfx.combat.VerticalImpactEffect;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.ApplyRelayedDamageAction;
 import theUnchainedMod.characters.TheUnchained;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class Overexertion extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Overexertion.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(Overexertion.class.getSimpleName());
     public static final String IMG = makeCardPath("Overexertion.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

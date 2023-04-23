@@ -4,7 +4,7 @@ import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import theUnchainedMod.cards.AbstractDefaultCard;
 
-import static theUnchainedMod.DefaultMod.makeID;
+import static theUnchainedMod.TheUnchainedMod.makeID;
 
 public class DefaultSecondMagicNumber extends DynamicVariable {
 

@@ -7,18 +7,17 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.GainMomentumNextTurnPower;
 import theUnchainedMod.powers.MomentumPower;
 import theUnchainedMod.vfx.APlombWindyEffect;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class APlomb extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(APlomb.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(APlomb.class.getSimpleName());
     public static final String IMG = makeCardPath("APlomb.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

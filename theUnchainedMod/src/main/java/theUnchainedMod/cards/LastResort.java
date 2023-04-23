@@ -6,19 +6,17 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.powers.LastResortPower;
-import theUnchainedMod.powers.WhiplashPower;
-import theUnchainedMod.relics.Churros;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class LastResort extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(LastResort.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(LastResort.class.getSimpleName());
     public static final String IMG = makeCardPath("LastResort.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;

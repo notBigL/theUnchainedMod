@@ -1,25 +1,16 @@
 package theUnchainedMod.powers;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.MagicMechaAction;
-import theUnchainedMod.actions.MasterChainAction;
-import theUnchainedMod.relics.Carabiner;
 
 public class MagicMechaPower extends AbstractMasterChainPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("MagicMechaPower");
+    public static final String POWER_ID = TheUnchainedMod.makeID("MagicMechaPower");
     private static final PowerStrings powerstrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerstrings.NAME;
     public static final String[] DESCRIPTIONS = powerstrings.DESCRIPTIONS;

@@ -8,13 +8,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.RelentlessBatteryAction;
 
 public class RelentlessBatteryPower extends AbstractChainPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("RelentlessBatteryPower");
+    public static final String POWER_ID = TheUnchainedMod.makeID("RelentlessBatteryPower");
     private static final PowerStrings powerstrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerstrings.NAME;
     public static final String[] DESCRIPTIONS = powerstrings.DESCRIPTIONS;

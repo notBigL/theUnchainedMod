@@ -1,0 +1,443 @@
+{
+  "theUnchainedMod:DefaultCommonAttack": {
+    "NAME": "Golpe",
+    "DESCRIPTION": "Inflige !D! de daño. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works. []"
+  },
+  "theUnchainedMod:DefaultCommonSkill": {
+    "NAME": "Defensa",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL theunchainedmod:Multiword_Keyword."
+  },
+  "theUnchainedMod:DefaultCommonPower": {
+    "NAME": "Mantener Posición",
+    "DESCRIPTION": "Gana !M! theunchainedmod:palabra clave.",
+    "UPGRADE_DESCRIPTION": "Gana !M! theunchainedmod:palabras claves."
+  },
+  "theUnchainedMod:DefaultUncommonAttack": {
+    "NAME": "Gran Bofetada",
+    "DESCRIPTION": "Inflige !D! de daño."
+  },
+  "theUnchainedMod:DefaultUncommonSkill": {
+    "NAME": "Una mejor Defensa",
+    "DESCRIPTION": "Gana !B! de Armadura plateada. Afectada por la Destreza."
+  },
+  "theUnchainedMod:DefaultUncommonPower": {
+    "NAME": "Rareza",
+    "DESCRIPTION": "Gana X theunchainedmod:palabra clave.",
+    "UPGRADE_DESCRIPTION": "Gana X +1 theunchainedmod:palabras claves."
+  },
+  "theUnchainedMod:DefaultRareAttack": {
+    "NAME": "TOQUE",
+    "DESCRIPTION": "Inflige !D! de daño."
+  },
+  "theUnchainedMod:DefaultRareSkill": {
+    "NAME": "Para cada Bucle x2",
+    "DESCRIPTION": "Aplica !M! de Vulnerable a todos los enemigos, 2 veces.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! de Vulnerable a todos los enemigos, 3 veces."
+  },
+  "theUnchainedMod:DefaultRarePower": {
+    "NAME": "Formulario en Curso",
+    "DESCRIPTION": "Al comienzo de tu turno, juega un TOQUE."
+  },
+  "theUnchainedMod:DefaultAttackWithVariable": {
+    "NAME": "Golpe Especial",
+    "DESCRIPTION": "Inflige !D! de daño [E] veces. NL (Inflige !theUnchainedMod:ENERGY_DAMAGE! de daño total.)"
+  },
+  "theUnchainedMod:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Aplica !M! de Vulnerable y !theUnchainedMod:SecondMagic! de veneno a un enemigo."
+  },
+  "theUnchainedMod:OrbSkill": {
+    "NAME": "Obtener Orbe",
+    "DESCRIPTION": "Canaliza 1 Orbe."
+  },
+  "theUnchainedMod:Unshackling": {
+    "NAME": "Desencadenado",
+    "DESCRIPTION": "Cada vez que juegues una carta, actualízala para el resto del combate.",
+    "UPGRADE_DESCRIPTION": "Innata. NL Cada vez que juegues una carta, actualízala para el resto del combate."
+  },
+  "theUnchainedMod:Whiplash": {
+    "NAME": "Latigazo",
+    "DESCRIPTION": "Inflige !D! de daño. NL !theUnchainedMod:SecondMagic! theunchainedmod:Cadena. El enemigo pierde !M! HP."
+  },
+  "theUnchainedMod:LashOut": {
+    "NAME": "Arremeter",
+    "DESCRIPTION": "Inflige !D! de daño. NL 1 theunchainedmod:Cadena. Gana [E]."
+  },
+  "theUnchainedMod:HeartfeltSpeech": {
+    "NAME": "Discurso sincero",
+    "DESCRIPTION": "Gana !M! de Vulnerable. NL !theUnchainedMod:SecondMagic! de theunchainedmod:Cadena. Gana 1 Intangible. Agota."
+  },
+  "theUnchainedMod:ArcaneCharm": {
+    "NAME": "Encanto Arcano",
+    "DESCRIPTION": "Al comienzo de tu turno, gana !M! de theunchainedmod:Relevo."
+  },
+  "theUnchainedMod:DualBarrier": {
+    "NAME": "Doble Barrera",
+    "DESCRIPTION": "Gana !B! de Bloqueo. Gana !M! de theunchainedmod:Relevo."
+  },
+  "theUnchainedMod:RecklessSwing": {
+    "NAME": "Swing Imprudente",
+    "DESCRIPTION": "Inflige !D! de daño. Gana !M! de theunchainedmod:Daño_Colateral."
+  },
+  "theUnchainedMod:FullSwing": {
+    "NAME": "Swing Completo",
+    "DESCRIPTION": "Inflige !M! de daño. Inflige !D! de daño a TODOS los enemigos."
+  },
+  "theUnchainedMod:QuickSwing": {
+    "NAME": "Swing Rápido",
+    "DESCRIPTION": "Inflige !D! de daño. NL 1 theunchainedmod:Cadena. Roba !M! cartas."
+  },
+  "theUnchainedMod:StepBack": {
+    "NAME": "Retroceder",
+    "DESCRIPTION": "Roba !M! carta. NL 1 theunchainedmod:Cadena. Gana !B! de Bloqueo.",
+    "UPGRADE_DESCRIPTION": "Roba !M! cartas. NL 1 theunchainedmod:Cadena. Gana !B! de Bloqueao."
+  },
+  "theUnchainedMod:MasterworkGlyph": {
+    "NAME": "Glifo de Excelencia",
+    "DESCRIPTION": "Gana !M! de theunchainedmod:Relevo. Si no tienes Bloqueo, gana !M! theunchainedmod:Relevo de nuevo."
+  },
+  "theUnchainedMod:PropheticSwing": {
+    "NAME": "Swing Profético",
+    "DESCRIPTION": "Inflige !D! de daño a un enemigo aleatorio. NL Adivina !M!."
+  },
+  "theUnchainedMod:TetheredMind": {
+    "NAME": "Mente Atada",
+    "DESCRIPTION": "Gana !M! de theunchainedmod:Relevo. NL Cada vez que recibes daño o el daño es bloqueado por el theunchainedmod:Relevo, el enemigo pierde la misma cantidad de HP. NL Agota."
+  },
+  "theUnchainedMod:Liberation": {
+    "NAME": "Liberación",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Termina TODAS tus theunchainedmod:Cadenas activas. NL Elimina TODO el theunchainedmod:Daño_Colateral. NL Agota."
+  },
+  "theUnchainedMod:GlyphBeam": {
+    "NAME": "Haz de Glifo",
+    "DESCRIPTION": "Inflige !D! de daño. Cada vez que ganes theunchainedmod:Relevo este turno, el enemigo gana !D! de daño."
+  },
+  "theUnchainedMod:Cruiserweight": {
+    "NAME": "Peso Ligero",
+    "DESCRIPTION": "Cada vez que robes una carta de coste 2, roba 1 carta.",
+    "UPGRADE_DESCRIPTION": "Cada vez que robes una carta de coste 2, roba 2 cartas."
+  },
+  "theUnchainedMod:BasicStrike": {
+    "NAME": "Golpe",
+    "DESCRIPTION": "Inflige !D! de daño."
+  },
+  "theUnchainedMod:BasicDefend": {
+    "NAME": "Defensa",
+    "DESCRIPTION": "Gana !B! de Bloqueo."
+  },
+  "theUnchainedMod:Kusarigama": {
+    "NAME": "Kusarigama",
+    "DESCRIPTION": "Sólo se puede jugar si finalizas un Ataque en theunchainedmod:Cadena. Inflige !D! de daño a TODOS los enemigos.",
+    "EXTENDED_DESCRIPTION": [
+      "Necesito terminar una cadena de ataque con esto."
+    ]
+  },
+  "theUnchainedMod:KeepDistance": {
+    "NAME": "Mantener Distancia",
+    "DESCRIPTION": "Gana !B! de Bloqueo. ¡El enemigo gana !M! de Bloqueo."
+  },
+  "theUnchainedMod:MuscleMemory": {
+    "NAME": "Memoria Muscular",
+    "DESCRIPTION": "Este turno, tu próxima carta de coste 2 se juega dos veces.",
+    "UPGRADE_DESCRIPTION": "Este turno, tus próximas 2 cartas de coste 2 se juegan dos veces."
+  },
+  "theUnchainedMod:RazorChain": {
+    "NAME": "Cadena de Afeitar",
+    "DESCRIPTION": "El enemigo pierde !D! de HP. NL HP se ve afectado por los theunchainedmod:Modificadores_de_Daño."
+  },
+  "theUnchainedMod:GuardedPosture": {
+    "NAME": "Postura Cautelosa",
+    "DESCRIPTION": "¡Cada vez que termines una Cadena, gana !M! de Bloqueo."
+  },
+  "theUnchainedMod:FractalShield": {
+    "NAME": "Escudo Fractal",
+    "DESCRIPTION": "Gana !M! de theunchainedmod:Relevo. El theunchainedmod:Relevo ahora bloquea theunchainedmod:Daño_Colateral."
+  },
+  "theUnchainedMod:Windup": {
+    "NAME": "Windup",
+    "DESCRIPTION": "Aplica !M! de Vulnerable. NL !theUnchainedMod:SecondMagic! theunchainedmod:Cadena. Añade un ataque común aleatorio a tu mano. NL Cuesta 0 este turno NL y agota.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! de Vulnerable. NL !theUnchainedMod:SecondMagic! theunchainedmod:Cadena. Añade un ataque común mejorado aleatorio a tu mano. NL Cuesta 0 este turno NL y agota."
+  },
+  "theUnchainedMod:APlomb": {
+    "NAME": "À Plomb",
+    "DESCRIPTION": "Gana !B! de Bloqueo. Gana !M! theunchainedmod:Impulso. NL Al siguiente turno, gana !theUnchainedMod:SecondMagic! de theunchainedmod:Impulso."
+  },
+  "theUnchainedMod:Battement": {
+    "NAME": "Battement",
+    "DESCRIPTION": "Inflige !D! de daño. Gana !M! de theunchainedmod:Impulso."
+  },
+  "theUnchainedMod:Swirl": {
+    "NAME": "Remolino",
+    "DESCRIPTION": "Retiene. Gana !B! de Bloqueo. NL Inflige !D! de daño. Duplica el daño base y el bloqueo de TODOS los remolinos este turno. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Retiene. ¡Gana !B! de Bloqueo. NL Inflige !D! de daño. Duplica el daño base y el bloqueo de TODOS los remolinos este turno. Gana 1 de theunchainedmod:Impulso. NL Agota."
+  },
+  "theUnchainedMod:RoyalDecree": {
+    "NAME": "Decreto Real",
+    "DESCRIPTION": "Agrega una carta aleatoria de coste 2 en tu mano. NL Cuesta !M! en este turno. NL Agota."
+  },
+  "theUnchainedMod:Claustrophobia": {
+    "NAME": "Claustrofobia",
+    "DESCRIPTION": "Al comienzo de tu turno, aplica !M! de theunchainedmod:Armadura_Aplastada a TODOS los enemigos.",
+    "UPGRADE_DESCRIPTION": "Innata. NL Al comienzo de tu turno, aplica !M! theunchainedmod:Armadura_Aplastada a TODOS los enemigos."
+  },
+  "theUnchainedMod:ArcaneStrike": {
+    "NAME": "Ataque Arcano",
+    "DESCRIPTION": "Inflige !D! de daño dos veces. Gana !M! de theunchainedmod:Relevo."
+  },
+  "theUnchainedMod:SolarPlexus": {
+    "NAME": "Plexo Solar",
+    "DESCRIPTION": "Inflige !D! de daño. NL !M! de theunchainedmod:Cadena theunchainedmod:Aturde al mismo enemigo. NL Agota."
+  },
+  "theUnchainedMod:RelentlessMovements": {
+    "NAME": "Mov. Implacables",
+    "DESCRIPTION": "Terminando una theunchainedmod:Cadena da !M! theunchainedmod:Impulso."
+  },
+  "theUnchainedMod:Burnish": {
+    "NAME": "Pulir",
+    "DESCRIPTION": "Agota una carta. Gana theunchainedmod:Impulso igual al doble de su costo."
+  },
+  "theUnchainedMod:SharePain": {
+    "NAME": "Compartir Dolor",
+    "DESCRIPTION": "Inflige !D! de daño. NL El daño es igual a TODO el theunchainedmod:Daño_Colateral ganado en este combate.",
+    "UPGRADE_DESCRIPTION": "Retiene. NL Inflige !D! de daño. NL El daño es igual a TODO el theunchainedmod:Daño_Colateral ganado en este combate."
+  },
+  "theUnchainedMod:Overexertion": {
+    "NAME": "Sobreexertarse",
+    "DESCRIPTION": "Gana [E] [E]. NL Gana !M! de theunchainedmod:Daño_Colateral. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Gana [E] [E] [E]. NL Gana !M! theunchainedmod:Daño_Colateral. Agota NL."
+  },
+  "theUnchainedMod:Ballet": {
+    "NAME": "Ballet",
+    "DESCRIPTION": "Al comienzo de tu turno, gana !M! de theunchainedmod:Impulso. NL Los Remolinos ahora golpean a TODOS los enemigos."
+  },
+  "theUnchainedMod:WideSwing": {
+    "NAME": "Swing Ancho",
+    "DESCRIPTION": "Inflige !D! de daño a TODOS los enemigos. NL Si tienes activa una theunchainedmod:Cadena termina tu turno."
+  },
+  "theUnchainedMod:SingleOut": {
+    "NAME": "Singularizar",
+    "DESCRIPTION": "Inflige !D! de daño. NL Un enemigo aleatorio gana !M! de Bloqueo."
+  },
+  "theUnchainedMod:RelentlessOnslaught": {
+    "NAME": "Ataque Implacable",
+    "DESCRIPTION": "Inflige !D! de daño !M! veces. NL 1 theunchainedmod:Cadena. Inflige !D! de daño !M! veces y vuelve a aplicar esta theunchainedmod:Cadena. NL Agota."
+  },
+  "theUnchainedMod:Refresh": {
+    "NAME": "Actualizar",
+    "DESCRIPTION": "Gana !M! theunchainedmod:Relevo. NL Pierdes hasta !theUnchainedMod:SecondMagic! de theunchainedmod:Daño_Colateral y gana Bloqueo igual a la cantidad eliminada."
+  },
+  "theUnchainedMod:RoyalAssessment": {
+    "NAME": "Valoración Real",
+    "DESCRIPTION": "Gana [E] por cada enemigo que tenga Bloqueo.",
+    "UPGRADE_DESCRIPTION": "Gana [E] si TODOS los enemigos tienen Bloqueo y [E] por cada enemigo que tiene Bloqueo."
+  },
+  "theUnchainedMod:Cocoon": {
+    "NAME": "Capullo",
+    "DESCRIPTION": "Gana !M! de theunchainedmod:Relevo. Tu theunchainedmod:Relevo no desaparece al comienzo del siguiente turno."
+  },
+  "theUnchainedMod:GlyphSwing": {
+    "NAME": "Swing de Glifo",
+    "DESCRIPTION": "Inflige !D! de daño. Elimina hasta !M! de Theunchainedmod:Daño_Colateral y reparte daño igual a la cantidad eliminada."
+  },
+  "theUnchainedMod:Baguazhang": {
+    "NAME": "Baguazhang",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL El enemigo gana 5 de bloqueo. NL Si el enemigo tiene la intención de hacer menos de !theUnchainedMod:SecondMagic! de daño (por golpe), gana !M! de Bloqueo."
+  },
+  "theUnchainedMod:MagusForm": {
+    "NAME": "Forma de Mago",
+    "DESCRIPTION": "Etérea. NL Siempre que juegues una carta de coste 2, gana [E].",
+    "UPGRADE_DESCRIPTION": "Siempre que juegues una carta de coste 2, gana [E]."
+  },
+  "theUnchainedMod:TelekineticPulse": {
+    "NAME": "Pulso Telequinético",
+    "DESCRIPTION": "¡TODOS los enemigos ganan !theUnchainedMod:SecondMagic! de Bloqueo. 2 de theunchainedmod:Cadena. TODOS los enemigos pierden !M! HP."
+  },
+  "theUnchainedMod:TieDown": {
+    "NAME": "Atado",
+    "DESCRIPTION": "¡El enemigo pierde !M! de Fuerza este y el próximo turno. NL Agota."
+  },
+  "theUnchainedMod:ThePrincesGrace": {
+    "NAME": "Gracia del Príncipe",
+    "DESCRIPTION": "Al comienzo del turno, roba !M! carta adicional. Todos los enemigos ganan !theUnchainedMod:SecondMagic! de Bloqueo cada turno.",
+    "UPGRADE_DESCRIPTION": "Al comienzo del turno, roba !M! cartas adicionales. Todos los enemigos ganan !theUnchainedMod:SecondMagic! de Bloqueo cada turno."
+  },
+  "theUnchainedMod:Cuff": {
+    "NAME": "Puño",
+    "DESCRIPTION": "Innata. NL Inflige !D! de daño. NL Aplica !theUnchainedMod:SecondMagic! de Débil. NL 2 de theunchainedmod:Cadena. El enemigo pierde !M! de Fuerza. NL Agota."
+  },
+  "theUnchainedMod:Premonition": {
+    "NAME": "Premonición",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Si has gastado TODA tu [E] al final de este turno, gana [E] [E] el siguiente turno.",
+    "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL Si has gastado TODA tu [E] al final de este turno, gana NL [E] [E] [E] el siguiente turno."
+  },
+  "theUnchainedMod:Pirouette": {
+    "NAME": "Pirouette",
+    "DESCRIPTION": "Añade un Remolino a tu mano. NL Actualiza TODOS los Remolinos en tu mano. NL Agota."
+  },
+  "theUnchainedMod:InfiniteChain": {
+    "NAME": "Cadena Infinita",
+    "DESCRIPTION": "Etérea. theunchainedmod:Link. NL A continuación, añade una Cadena Infinita a tu mano. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Innata. Etérea. theunchainedmod:Link. NL A continuación, añade una Cadena Infinita a tu mano. NL Agota."
+  },
+  "theUnchainedMod:TradeOffer": {
+    "NAME": "Oferta Comercial",
+    "DESCRIPTION": "¡El enemigo gana !M! de Bloqueo. NL Roba !theUnchainedMod:SecondMagic! carta.",
+    "UPGRADE_DESCRIPTION": "¡El enemigo gana !M! de Bloqueo. NL Roba !theUnchainedMod:SecondMagic! cartas."
+  },
+  "theUnchainedMod:FouettéEnTournant": {
+    "NAME": "Fouetté En Tournant",
+    "DESCRIPTION": "Gana 2 veces X de theunchainedmod:Impulso. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Gana 2 veces (X + 1) de theunchainedmod:Impulso. NL Agota."
+  },
+  "theUnchainedMod:Ceasefire": {
+    "NAME": "Alto al Fuego",
+    "DESCRIPTION": "Duplica tu theunchainedmod:Relevo. Duplica el Bloqueo de TODOS los enemigos. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Duplica tu theunchainedmod:Relevo. Duplica el bloqueo de TODOS los enemigos."
+  },
+  "theUnchainedMod:Suffocate": {
+    "NAME": "Sofocar",
+    "DESCRIPTION": "Gana Bloqueo igual al Bloqueo enemigo. NL El enemigo pierde HP igual a su Bloqueo."
+  },
+  "theUnchainedMod:ThreadOfAriadne": {
+    "NAME": "Hilo de Ariadna",
+    "DESCRIPTION": "Si tienes una Cadena activa, toma un turno extra después de este turno. Termina tu turno. NL Agota.",
+    "EXTENDED_DESCRIPTION": [
+      "Necesito una cadena activa para jugar esto."
+    ]
+  },
+  "theUnchainedMod:LawOfInertia": {
+    "NAME": "Ley de Inercia",
+    "DESCRIPTION": "La primera vez que termines una theunchainedmod:Cadena en cada turno, gana !M! de Fuerza y de Destreza. Si no terminaste una theunchainedmod:Cadena al final del turno, pierdes !M! de Fuerza y de Destreza."
+  },
+  "theUnchainedMod:LastResort": {
+    "NAME": "Último Recurso",
+    "DESCRIPTION": "Roba !M! cartas. NL Gana [E] [E]. !theUnchainedMod:SecondMagic! theunchainedmod:Cadena. Pierdes TODA tu [E]. NL Agota."
+  },
+  "theUnchainedMod:ChainSaw": {
+    "NAME": "Motosierra",
+    "DESCRIPTION": "Elimina TODAS tus theunchainedmod:Cadenas activas. Aumenta el daño de esta carta en !M! por cada theunchainedmod:Cadena eliminada en este combate. NL Inflige !D! de daño."
+  },
+  "theUnchainedMod:ReinforcedLink": {
+    "NAME": "Enlace Reforzado",
+    "DESCRIPTION": "Gana !B! de Bloqueo. Si tienes una theunchainedmod:Cadena activa, gana [E] y roba 1 carta."
+  },
+  "theUnchainedMod:Prophecy": {
+    "NAME": "Profecía",
+    "DESCRIPTION": "Copia una carta en tu mano y coloca la copia encima de tu pila de robo. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Copia una carta en tu mano dos veces y coloca ambas copias encima de tu pila de robo. NL Agota."
+  },
+  "theUnchainedMod:Riposte": {
+    "NAME": "Réplica",
+    "DESCRIPTION": "¡Gana !B! de Bloqueo. Inflige !D! de daño. NL Gana !M! de theunchainedmod:Impulso."
+  },
+  "theUnchainedMod:HeavyHitter": {
+    "NAME": "Golpeador Pesado",
+    "DESCRIPTION": "Gana !M! de Fuerza temporal. Cada vez que golpees a un enemigo este turno, aplica !theUnchainedMod:SecondMagic! de theunchainedmod:Armadura_Aplastada."
+  },
+  "theUnchainedMod:GraspFuture": {
+    "NAME": "Capturar el futuro",
+    "DESCRIPTION": "Inflige !D! de daño. Pone !M! carta de tu pila de robo encima de tu pila de robo."
+  },
+  "theUnchainedMod:DoubleDown": {
+    "NAME": "Doble Apuesta",
+    "DESCRIPTION": "Gana !B! de Bloqueo dos veces. NL Cuenta como una carta para cualquier theunchainedmod:Cadena."
+  },
+  "theUnchainedMod:KeepSwinging": {
+    "NAME": "Sigue Balanceándote",
+    "DESCRIPTION": "Las Cartas que contienen \"Remolinos\" inflingen !M! de daño adicional."
+  },
+  "theUnchainedMod:EyeForAnEye": {
+    "NAME": "Ojo por Ojo",
+    "DESCRIPTION": "Gana !theUnchainedMod:SecondMagic! de Fuerza. NL Elimina hasta !M! de theunchainedmod:Daño_Colateral. NL Gana Fuerza igual a la cantidad eliminada."
+  },
+  "theUnchainedMod:DefensiveLink": {
+    "NAME": "Enlace Defensivo",
+    "DESCRIPTION": "Gana !B! de Bloqueo. Reduce el costo de una carta de tu mano en 1 este turno."
+  },
+  "theUnchainedMod:ChaseDestiny": {
+    "NAME": "Camino al Destino",
+    "DESCRIPTION": "Este turno, cada vez que termines una theunchainedmod:Cadena, gana [E]. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Este y el siguiente turno, cada vez que termines una theunchainedmod:Cadena, gana [E]. NL Agota."
+  },
+  "theUnchainedMod:StareDown": {
+    "NAME": "Mira hacia Abajo",
+    "DESCRIPTION": "¡Gana !M! de Destreza temporal. 1 theunchainedmod:Cadena. Aplica !theUnchainedMod:SecondMagic! de Débil a TODOS los enemigos."
+  },
+  "theUnchainedMod:ArcaneTransmutation": {
+    "NAME": "Transmutación Arcana",
+    "DESCRIPTION": "¡Cada vez que un enemigo gana Bloqueo, gana !M! de theunchainedmod:Relevo."
+  },
+  "theUnchainedMod:Cripple": {
+    "NAME": "Lisiar",
+    "DESCRIPTION": "Aplica !M! de theunchainedmod:Armadura_Aplastada. Aplica !theUnchainedMod:SecondMagic! de Débil. Aplica !theUnchainedMod:SecondMagic! de Vulnerable. NL Agota."
+  },
+  "theUnchainedMod:OffhandedSwing": {
+    "NAME": "Swing Improvisado",
+    "DESCRIPTION": "Inflige !D! de daño. NL Roba !M! carta, si es una carta de coste 2, juéguala en el mismo enemigo si es posible."
+  },
+  "theUnchainedMod:Haste": {
+    "NAME": "Prisa",
+    "DESCRIPTION": "¡Roba !M! carta, si te da theunchainedmod:Impulso, roba otra carta. NL Gana !theUnchainedMod:SecondMagic! de theunchainedmod:Impulso.",
+    "UPGRADE_DESCRIPTION": "¡Roba !M! carta, si te da theunchainedmod:Impulso, juega y roba otra carta. NL Gana !theUnchainedMod:SecondMagic! de theunchainedmod:Impulso."
+  },
+  "theUnchainedMod:ImmovableObject": {
+    "NAME": "Objeto Inamovible",
+    "DESCRIPTION": "Gana !B! de Bloqueo. Cada vez que eres atacado en este turno, el enemigo atacante gana !M! de theunchainedmod:Armadura_Aplastada."
+  },
+  "theUnchainedMod:Taxes": {
+    "NAME": "Impuestos",
+    "DESCRIPTION": "Adquiere legítimamente !M! de Oro de cada enemigo."
+  },
+  "theUnchainedMod:PerfectStep": {
+    "NAME": "Paso Perfecto",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Retiene. Gana 1 theunchainedmod:Vuelta_Completa.  NL Agota."
+  },
+  "theUnchainedMod:RetreatingSwing": {
+    "NAME": "Swing de Retroceso",
+    "DESCRIPTION": "Inflige !D! de daño. Gana Bloqueo igual al daño desbloqueado infligido."
+  },
+  "theUnchainedMod:MakeHaste": {
+    "NAME": "Date Prisa",
+    "DESCRIPTION": "Juega tantas cartas desde la parte superior de tu pila de robo como tengas Remolinos. NL Agota."
+  },
+  "theUnchainedMod:MagicMecha": {
+    "NAME": "Mecha Mágica",
+    "DESCRIPTION": "!M! de theunchainedmod:Cadena_Maestra: Gana !theUnchainedMod:SecondMagic! de Fuerza, !theUnchainedMod:SecondMagic! de Destreza y !theUnchainedMod:SecondMagic! de theunchainedmod:Maestría_Arcana."
+  },
+  "theUnchainedMod:BarbedWire": {
+    "NAME": "Alambre de Púas",
+    "DESCRIPTION": "Inflige !M! de daño a TODOS los enemigos por cada Cadena no terminada al final de tu turno."
+  },
+  "theUnchainedMod:ArcaneArtillery": {
+    "NAME": "Artillería Arcana",
+    "DESCRIPTION": "Inflige un daño igual al de tu Relevo.",
+    "UPGRADE_DESCRIPTION": "Inflige daño igual al de tu theunchainedmod:Relevo a TODOS los enemigos.",
+    "EXTENDED_DESCRIPTION": [
+      "NL (Inflige !D! de daño)."
+    ]
+  },
+  "theUnchainedMod:ChainFlourish": {
+    "NAME": "Floritura de Cadena",
+    "DESCRIPTION": "Inflige !D! de daño por cada theunchainedmod:Cadena que hayas terminado en este combate.",
+    "EXTENDED_DESCRIPTION": [
+      "NL (1 Cadena terminada en este combate)",
+      "NL ( !M! Cadenas terminadas en este combate)"
+    ]
+  },
+  "theUnchainedMod:CrushPlates": {
+    "NAME": "Placas de Trituración",
+    "DESCRIPTION": "Inflige !D! de daño. NL Aplica tanta theunchainedmod:Armadura_Aplastada como la que fue bloqueada por el enemigo."
+  },
+  "theUnchainedMod:SwordOfDamocles": {
+    "NAME": "Sword Of Damocles",
+    "DESCRIPTION": "Gain !M! Strength. NL 1 theunchainedmod:Master_Chain: Lose !theUnchainedMod:SecondMagic! HP and !M! Strength. NL Exhaust. "
+  },
+  "theUnchainedMod:MeltingHex": {
+    "NAME": "Melting Hex",
+    "DESCRIPTION": "Apply !M! theunchainedmod:Malleable. NL Exhaust."
+  },
+  "theUnchainedMod:ArcaneLink": {
+    "NAME": "Arcane Link",
+    "DESCRIPTION": "Gain !M! Relay. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
+  }
+}

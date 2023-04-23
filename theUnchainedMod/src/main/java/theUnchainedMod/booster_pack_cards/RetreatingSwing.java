@@ -6,16 +6,16 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class RetreatingSwing extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(RetreatingSwing.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(RetreatingSwing.class.getSimpleName());
     public static final String IMG = makeCardPath("RetreatingSwing.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF_AND_ENEMY;

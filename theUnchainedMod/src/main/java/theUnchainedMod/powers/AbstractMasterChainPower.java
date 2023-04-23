@@ -67,7 +67,7 @@ public class AbstractMasterChainPower extends AbstractPower {
                 break;
             default:
                 AbstractDungeon.actionManager.addToBottom(new MasterChainAction(this.owner, c, this.ID, this));
-                this.flash();
+                //this.flash();
                 break;
         }
     }

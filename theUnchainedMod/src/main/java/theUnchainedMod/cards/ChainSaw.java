@@ -8,18 +8,17 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.ChainSawAction;
 import theUnchainedMod.characters.TheUnchained;
-import theUnchainedMod.patches.RelayedDmgSum;
 import theUnchainedMod.powers.AbstractChainPower;
 import theUnchainedMod.vfx.ChainSawAttackEffect;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class ChainSaw extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(ChainSaw.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(ChainSaw.class.getSimpleName());
     public static final String IMG = makeCardPath("ChainSaw.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;

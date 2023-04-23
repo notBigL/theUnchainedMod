@@ -1,17 +1,7 @@
 package theUnchainedMod.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theUnchainedMod.DefaultMod;
-import theUnchainedMod.booster_pack_cards.*;
-import theUnchainedMod.relics.CrushingGauntlets;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Iterator;
 
 @SpirePatch(clz= AbstractDungeon.class, method = "initializeRelicList")
 public class AddBoosterPackRelicsPatch {

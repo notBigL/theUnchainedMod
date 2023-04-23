@@ -9,19 +9,17 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
-import theUnchainedMod.actions.GainMomentumAction;
-import theUnchainedMod.patches.CustomTags;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.powers.FullSpinPower;
 import theUnchainedMod.powers.MomentumPower;
 import theUnchainedMod.powers.SwirlsHitAllEnemiesPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class Swirl extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Swirl.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(Swirl.class.getSimpleName());
     public static final String IMG = makeCardPath("Swirl.png");
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.ENEMY;

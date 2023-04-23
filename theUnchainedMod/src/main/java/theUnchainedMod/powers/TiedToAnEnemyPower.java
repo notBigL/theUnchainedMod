@@ -11,12 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import theUnchainedMod.DefaultMod;
-import theUnchainedMod.patches.RelayedDamageField;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.util.TextureLoader;
-import theUnchainedMod.vfx.SmallLaserDifferentColorEffect;
 import theUnchainedMod.vfx.TetheredMindChainEffect;
 
 import java.util.ArrayList;
@@ -24,7 +20,7 @@ import java.util.ArrayList;
 public class TiedToAnEnemyPower extends AbstractPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("TiedToAnEnemyPower");
+    public static final String POWER_ID = TheUnchainedMod.makeID("TiedToAnEnemyPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

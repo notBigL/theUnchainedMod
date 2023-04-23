@@ -1,6 +1,7 @@
 package theUnchainedMod;
 
 import basemod.*;
+import basemod.eventUtil.AddEventParams;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -11,6 +12,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -20,6 +22,7 @@ import org.apache.logging.log4j.Logger;
 import theUnchainedMod.booster_pack_cards.ArcaneArtillery;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.events.TheDemonSpeaksEvent;
 import theUnchainedMod.potions.DancePotion;
 import theUnchainedMod.potions.ChainGrease;
 import theUnchainedMod.potions.CrushingElixir;
@@ -56,7 +59,7 @@ import java.util.Properties;
  */
 
 @SpireInitializer
-public class DefaultMod implements
+public class TheUnchainedMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
         EditStringsSubscriber,
@@ -64,15 +67,23 @@ public class DefaultMod implements
         EditCharactersSubscriber,
         AddAudioSubscriber,
         PostInitializeSubscriber {
-    public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
+    public static final Logger logger = LogManager.getLogger(TheUnchainedMod.class.getName());
     private static String modID;
     private static final String MODNAME = "The Unchained Mod";
     private static final String AUTHOR = "Mezix & BigL"; // And pretty soon - You!
     private static final String DESCRIPTION = "A new Character with 75+ new cards, 10+ new Relics, 3 new Potions and 4 distinct archetypes you can play around with and have a lot of fun!";
 
 
+    public static Settings.GameLanguage[] SupportedLanguages = {
+            Settings.GameLanguage.ENG,
+            Settings.GameLanguage.SPA,
+            //TODO: Activate german language
+            // Settings.GameLanguage.DEU
+    };
+
+
     // CONFIG
-    public static SpireConfig unchainedConfig; //have this somewhere better, not in this class
+    public static SpireConfig unchainedConfig;
     static {
         try {
             unchainedConfig = new SpireConfig("The Unchained", "config");
@@ -80,8 +91,6 @@ public class DefaultMod implements
             throw new RuntimeException(e);
         }
     }
-
-    // TODO: add button that unlocks all optional content immediately (useful for future expansions too!)
 
     public static Properties theUnchainedDefaultSettings = new Properties();
 
@@ -185,6 +194,9 @@ public class DefaultMod implements
         return getModID() + "Resources/images/powers/" + resourcePath;
     }
 
+    public static String makeEventPath(String resourcePath) {
+        return getModID() + "Resources/images/events/" + resourcePath;
+    }
     public static String makePotionPath(String resourcePath) {
         return getModID() + "Resources/images/potions/" + resourcePath;
     }
@@ -216,7 +228,7 @@ public class DefaultMod implements
 
     // =============== SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE =================
 
-    public DefaultMod() {
+    public TheUnchainedMod() {
         logger.info("Subscribe to BaseMod hooks");
 
         BaseMod.subscribe(this);
@@ -256,13 +268,31 @@ public class DefaultMod implements
 
         logger.info("Adding mod settings");
 
+
+
+/*
+        AbstractPlayer unchainedChar = null;
+
+        for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters())
+        {
+            if (p.getCardColor() == TheUnchained.Enums.COLOR_ORANGE)  unchainedChar = p;
+        }
+        if(unchainedChar == null) return;
+        Prefs playerPrefs = unchainedChar.getPrefs();
+
+        String heartKillBoolString = "FALSE";
+        if(playerPrefs.getBoolean("basemod:HEART_KILL", false)) heartKillBoolString = "TRUE";
+
+*/
+        String heartKillBoolString = "FALSE";
+
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
         theUnchainedDefaultSettings.setProperty(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY, "FALSE");
         theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_ACTIVATED_PROPERTY, "FALSE");
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_UNLOCKED_PROPERTY, "FALSE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_UNLOCKED_PROPERTY, heartKillBoolString);
         theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, "FALSE");
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, "FALSE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, heartKillBoolString);
         try {
             unchainedConfig.load(); // Load the setting and set the boolean to equal it
 
@@ -283,7 +313,7 @@ public class DefaultMod implements
     public static void setModID(String ID) { // DON'T EDIT
         Gson coolG = new Gson(); // EY DON'T EDIT THIS
         //   String IDjson = Gdx.files.internal("IDCheckStringsDONT-EDIT-AT-ALL.json").readString(String.valueOf(StandardCharsets.UTF_8)); // i hate u Gdx.files
-        InputStream in = DefaultMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THIS ETHER
+        InputStream in = TheUnchainedMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THIS ETHER
         IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class); // OR THIS, DON'T EDIT IT
         logger.info("You are attempting to set your mod ID as: " + ID); // NO WHY
         if (ID.equals(EXCEPTION_STRINGS.DEFAULTID)) { // DO *NOT* CHANGE THIS ESPECIALLY, TO EDIT YOUR MOD ID, SCROLL UP JUST A LITTLE, IT'S JUST ABOVE
@@ -303,9 +333,9 @@ public class DefaultMod implements
     private static void pathCheck() { // ALSO NO
         Gson coolG = new Gson(); // NOPE DON'T EDIT THIS
         //   String IDjson = Gdx.files.internal("IDCheckStringsDONT-EDIT-AT-ALL.json").readString(String.valueOf(StandardCharsets.UTF_8)); // i still hate u btw Gdx.files
-        InputStream in = DefaultMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THISSSSS
+        InputStream in = TheUnchainedMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THISSSSS
         IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class); // NAH, NO EDIT
-        String packageName = DefaultMod.class.getPackage().getName(); // STILL NO EDIT ZONE
+        String packageName = TheUnchainedMod.class.getPackage().getName(); // STILL NO EDIT ZONE
         FileHandle resourcePathExists = Gdx.files.internal(getModID() + "Resources"); // PLEASE DON'T EDIT THINGS HERE, THANKS
         if (!modID.equals(EXCEPTION_STRINGS.DEVID)) { // LEAVE THIS EDIT-LESS
             if (!packageName.equals(getModID())) { // NOT HERE ETHER
@@ -322,7 +352,7 @@ public class DefaultMod implements
 
     public static void initialize() {
         logger.info("========================= Initializing Default Mod. Hi. =========================");
-        DefaultMod defaultmod = new DefaultMod();
+        TheUnchainedMod defaultmod = new TheUnchainedMod();
         logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
     }
 
@@ -389,6 +419,14 @@ public class DefaultMod implements
 
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
+        AddEventParams eventParams = new AddEventParams.Builder(TheDemonSpeaksEvent.ID, TheDemonSpeaksEvent.class) // for this specific event
+                .dungeonID(Exordium.ID) // The dungeon (act) this event will appear in
+                .playerClass(TheUnchained.Enums.THE_UNCHAINED) // Character specific event
+                .create();
+
+        // Add the event
+        BaseMod.addEvent(eventParams);
+
         logger.info("Done loading badge Image and mod options");
     }
 
@@ -441,6 +479,7 @@ public class DefaultMod implements
 
         // Booster Pack Relics
         BaseMod.addRelicToCustomPool(new CrushingGauntlets(), TheUnchained.Enums.COLOR_BOOSTER);
+        BaseMod.addRelicToCustomPool(new ArcaneAmplifier(), TheUnchained.Enums.COLOR_BOOSTER);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -460,6 +499,7 @@ public class DefaultMod implements
         UnlockTracker.markRelicAsSeen(DancingRibbons.ID);
         UnlockTracker.markRelicAsSeen(Wrench.ID);
         UnlockTracker.markRelicAsSeen(CrushingGauntlets.ID);
+        UnlockTracker.markRelicAsSeen(ArcaneAmplifier.ID);
         logger.info("Done adding relics!");
     }
 
@@ -510,6 +550,14 @@ public class DefaultMod implements
 
 
     // ================ LOAD THE TEXT ===================
+    private String getLangString() {
+        for (Settings.GameLanguage lang : SupportedLanguages) {
+            if (lang.equals(Settings.language)) {
+                return Settings.language.name().toLowerCase();
+            }
+        }
+        return "eng";
+    }
 
     @Override
     public void receiveEditStrings() {
@@ -518,29 +566,33 @@ public class DefaultMod implements
 
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Card-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Card-Strings.json");
 
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Power-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Power-Strings.json");
 
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Relic-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Relic-Strings.json");
 
         // PotionStrings
         BaseMod.loadCustomStringsFile(PotionStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Potion-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Potion-Strings.json");
 
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Character-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Character-Strings.json");
 
         // UI Strings
         BaseMod.loadCustomStringsFile(UIStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-UI-Strings.json");
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-UI-Strings.json");
 
-        logger.info("Done edittting strings");
+        // Event Strings
+        BaseMod.loadCustomStringsFile(EventStrings.class,
+                getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Event-Strings.json");
+
+        logger.info("Done editing strings");
     }
 
     // ================ /LOAD THE TEXT/ ===================
@@ -558,7 +610,7 @@ public class DefaultMod implements
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
 
         Gson gson = new Gson();
-        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/DefaultMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        String json = Gdx.files.internal(getModID() + "Resources/localization/" + getLangString() + "/TheUnchainedMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
 
         if (keywords != null) {

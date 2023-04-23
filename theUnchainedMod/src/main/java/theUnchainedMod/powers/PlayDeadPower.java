@@ -7,12 +7,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 
 public class PlayDeadPower extends AbstractChainPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("PlayDeadPower");
+    public static final String POWER_ID = TheUnchainedMod.makeID("PlayDeadPower");
     private static final PowerStrings powerstrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerstrings.NAME;
     public static final String[] DESCRIPTIONS = powerstrings.DESCRIPTIONS;

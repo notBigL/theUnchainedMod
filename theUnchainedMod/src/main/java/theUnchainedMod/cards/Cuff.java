@@ -8,22 +8,19 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.CuffPower;
 import theUnchainedMod.powers.DeliciousChurroPower;
-import theUnchainedMod.powers.WhiplashPower;
-import theUnchainedMod.relics.Churros;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class Cuff extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Cuff.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(Cuff.class.getSimpleName());
     public static final String IMG = makeCardPath("Cuff.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

@@ -4,8 +4,9 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.booster_pack_cards.*;
+import theUnchainedMod.booster_pack_cards.SwordOfDamocles;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,12 +21,15 @@ public class AddBoosterPackCardsPatch {
             new CrushPlates(),
             new MagicMecha(),
             new MakeHaste(),
-            new RetreatingSwing()
+            new RetreatingSwing(),
+            new SwordOfDamocles(),
+            new MeltingHex(),
+            new ArcaneLink()
     ));
 
     @SpirePostfixPatch
     public static void AddBoosterPackCards(AbstractDungeon dungeon) {
-        if(!DefaultMod.UNCHAINED_BOOSTER_PACK_ACTIVATED) return;
+        if(!TheUnchainedMod.UNCHAINED_BOOSTER_PACK_ACTIVATED) return;
 
         Iterator var4 = boosterPackCards.iterator();
         AbstractCard c;

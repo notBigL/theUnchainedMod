@@ -307,7 +307,7 @@
       " turns, everytime you finish a Chain."
     ]
   },
-  "theUnchainedMod:OverviewPower": {
+  "theUnchainedMod:StareDownPower": {
     "NAME": "Skill Chain",
     "DESCRIPTIONS": [
       "If you play #b1 more Skill this Turn, ALL enemies gain #b",
@@ -444,10 +444,32 @@
     ]
   },
   "theUnchainedMod:BarbedWireChainsPower": {
-    "NAME": "Barbed Wire Chains",
+    "NAME": "Barbed Wire",
     "DESCRIPTIONS": [
       "Deal #b",
       " to ALL enemies for each chain not finished at the end of your turn."
+    ]
+  },
+  "theUnchainedMod:DamoclesChainPower": {
+    "NAME": "Sword of Damocles",
+    "DESCRIPTIONS": [
+      "If you play",
+      " #b",
+      " more Attack,",
+      " more Skill and",
+      " more Power, ",
+      " this Turn, take #b",
+      " damage and lose #b",
+      " Strength."
+    ]
+  },
+  "theUnchainedMod:ArcaneLinkPower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this turn, gain #b",
+      " Arcane Mastery.",
+      "If you play #b",
+      " more Skills this turn, gain #b"
     ]
   }
 }

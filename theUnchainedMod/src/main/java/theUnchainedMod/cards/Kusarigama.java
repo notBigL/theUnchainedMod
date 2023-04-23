@@ -9,15 +9,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class Kusarigama extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Kusarigama.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(Kusarigama.class.getSimpleName());
     public static final String IMG = makeCardPath("Kusarigama.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;

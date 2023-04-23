@@ -6,18 +6,19 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.ReinforcedElementAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.AbstractChainPower;
+import theUnchainedMod.powers.AbstractMasterChainPower;
 
 import java.util.Iterator;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class ReinforcedLink extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(ReinforcedLink.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(ReinforcedLink.class.getSimpleName());
     public static final String IMG = makeCardPath("ReinforcedLink.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -47,7 +48,7 @@ public class ReinforcedLink extends AbstractDynamicCard {
 
         while(var1.hasNext()) {
             AbstractPower power = (AbstractPower) var1.next();
-            if (power instanceof AbstractChainPower) {
+            if (power instanceof AbstractChainPower || power instanceof AbstractMasterChainPower) {
                 this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
             }

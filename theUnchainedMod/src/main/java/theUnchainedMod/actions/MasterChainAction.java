@@ -22,13 +22,21 @@ public class MasterChainAction extends AbstractGameAction {
 
     @Override
     public void update() {
-
         if (masterChainPower != null)
         {
             //  reduce the individual parts of the master chain
-            if (card.type == AbstractCard.CardType.ATTACK && masterChainPower.attacksRequired > 0) masterChainPower.attacksRequired--;
-            if (card.type == AbstractCard.CardType.POWER && masterChainPower.powersRequired > 0)   masterChainPower.powersRequired--;
-            if (card.type == AbstractCard.CardType.SKILL && masterChainPower.skillsRequired > 0)   masterChainPower.skillsRequired--;
+            if (card.type == AbstractCard.CardType.ATTACK && masterChainPower.attacksRequired > 0) {
+                masterChainPower.attacksRequired--;
+                masterChainPower.flash();
+            }
+            if (card.type == AbstractCard.CardType.POWER && masterChainPower.powersRequired > 0) {
+                masterChainPower.powersRequired--;
+                masterChainPower.flash();
+            }
+            if (card.type == AbstractCard.CardType.SKILL && masterChainPower.skillsRequired > 0) {
+                masterChainPower.skillsRequired--;
+                masterChainPower.flash();
+            }
 
             masterChainPower.loadTextures();
             masterChainPower.updateDescription();

@@ -2,22 +2,21 @@ package theUnchainedMod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.util.TextureLoader;
 
-import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;
-import static theUnchainedMod.DefaultMod.makeRelicPath;
+import static theUnchainedMod.TheUnchainedMod.makeRelicOutlinePath;
+import static theUnchainedMod.TheUnchainedMod.makeRelicPath;
 
 public class CrushingGauntlets extends CustomRelic {
 
-    public static final String ID = DefaultMod.makeID("CrushingGauntlets");
+    public static final String ID = TheUnchainedMod.makeID("CrushingGauntlets");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Crushing_Gauntlets_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Crushing_Gauntlets_relic.png"));
 
     public CrushingGauntlets() {
-        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.CLINK);
     }
 
     // Flash at the start of Battle.

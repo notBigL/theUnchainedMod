@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
-import static theUnchainedMod.DefaultMod.makeVFXPath;
+import static theUnchainedMod.TheUnchainedMod.makeVFXPath;
 
 public class WindupCrossHairEffect extends AbstractGameEffect {
     private final float x;

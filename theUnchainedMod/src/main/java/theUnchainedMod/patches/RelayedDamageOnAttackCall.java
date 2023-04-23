@@ -17,7 +17,7 @@ public class RelayedDamageOnAttackCall {
             tTAEP.damageEnemyWhenHit(info, damageAmount);
         }
 
-        if (RelayHelpers.currentRelay.get(creature) > 0) {
+        if (RelayHelpers.currentRelay.get(creature) > 0 && info.type != DamageInfo.DamageType.HP_LOSS) {
             damage = RelayHelpers.relayDamageWhenAttacked(info, damage, creature);
         }
         return damage;
