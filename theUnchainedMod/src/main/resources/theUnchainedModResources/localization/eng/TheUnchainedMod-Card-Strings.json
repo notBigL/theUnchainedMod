@@ -173,7 +173,7 @@
   },
   "theUnchainedMod:RoyalDecree": {
     "NAME": "Royal Decree",
-    "DESCRIPTION": "Add a random 2-cost card into your hand. NL It costs !M! this turn NL and exhausts."
+    "DESCRIPTION": "Add a random 2-cost card into your hand. NL It costs !M! this turn. NL Exhaust."
   },
   "theUnchainedMod:Claustrophobia": {
     "NAME": "Claustrophobia",
@@ -258,7 +258,8 @@
   },
   "theUnchainedMod:ThePrincesGrace": {
     "NAME": "The Prince's Grace",
-    "DESCRIPTION": "At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn."
+    "DESCRIPTION": "At the start of turn, draw !M! additional card. All enemies gain !theUnchainedMod:SecondMagic! Block every turn.",
+    "UPGRADE_DESCRIPTION": "At the start of turn, draw !M! additional cards. All enemies gain !theUnchainedMod:SecondMagic! Block every turn."
   },
   "theUnchainedMod:Cuff": {
     "NAME": "Cuff",
