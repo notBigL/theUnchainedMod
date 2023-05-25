@@ -17,7 +17,6 @@ import static theUnchainedMod.TheUnchainedMod.makeEventPath;
 
 public class TheDemonSpeaksEvent extends AbstractImageEvent {
 
-
     public static final String ID = TheUnchainedMod.makeID("TheDemonSpeaks");
     private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString(ID);
 

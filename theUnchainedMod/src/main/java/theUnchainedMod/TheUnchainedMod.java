@@ -393,7 +393,6 @@ public class TheUnchainedMod implements
         // Create the Mod Menu
         ModPanel settingsPanel = new ModPanel();
 
-
         // Unlock all optional Content
 
         ModLabeledToggleButton unlockAllOptionalContentButton = new ModLabeledToggleButton("Unlocks all optional content so it can be used whenever you want to.",

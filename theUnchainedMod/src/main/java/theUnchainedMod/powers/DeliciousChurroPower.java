@@ -18,8 +18,8 @@ public class DeliciousChurroPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/DeliciousChurroPower_power48.png");
-    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/DeliciousChurroPower_power128.png");
+    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/DeliciousChurrosPower_power48.png");
+    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/DeliciousChurrosPower_power128.png");
 
     public DeliciousChurroPower(final AbstractCreature owner) {
         name = NAME;

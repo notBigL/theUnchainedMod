@@ -17,7 +17,7 @@ import theUnchainedMod.util.TextureLoader;
 
 import java.util.Iterator;
 
-public class MomentumPower extends TwoAmountPower {
+public class MomentumPower extends NewTwoAmountPower {
 
     public static final String POWER_ID = TheUnchainedMod.makeID("MomentumPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
