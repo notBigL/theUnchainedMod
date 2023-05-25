@@ -409,8 +409,8 @@
   },
   "theUnchainedMod:ArcaneArtillery": {
     "NAME": "Arcane Artillery",
-    "DESCRIPTION": "Deal damage equal to your Relay.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to your Relay to ALL Enemies.",
+    "DESCRIPTION": "Deal damage equal to your theunchainedmod:Relay.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to your theunchainedmod:Relay to ALL Enemies.",
     "EXTENDED_DESCRIPTION": [ " NL (Deal !D! damage)."]
   },
   "theUnchainedMod:ChainFlourish": {
@@ -433,6 +433,6 @@
   },
   "theUnchainedMod:ArcaneLink": {
     "NAME": "Arcane Link",
-    "DESCRIPTION": "Gain !M! Relay. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. If you have an active theunchainedmod:Chain, gain !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
   }
 }

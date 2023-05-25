@@ -462,14 +462,5 @@
       " damage and lose #b",
       " Strength."
     ]
-  },
-  "theUnchainedMod:ArcaneLinkPower": {
-    "NAME": "Skill Chain",
-    "DESCRIPTIONS": [
-      "If you play #b1 more Skill this turn, gain #b",
-      " Arcane Mastery.",
-      "If you play #b",
-      " more Skills this turn, gain #b"
-    ]
   }
 }

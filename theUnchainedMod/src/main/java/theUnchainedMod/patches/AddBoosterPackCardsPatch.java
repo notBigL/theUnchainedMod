@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.booster_pack_cards.*;
 import theUnchainedMod.booster_pack_cards.SwordOfDamocles;
+import theUnchainedMod.characters.TheUnchained;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,6 +30,7 @@ public class AddBoosterPackCardsPatch {
 
     @SpirePostfixPatch
     public static void AddBoosterPackCards(AbstractDungeon dungeon) {
+        if(!(AbstractDungeon.player instanceof TheUnchained)) return;
         if(!TheUnchainedMod.UNCHAINED_BOOSTER_PACK_ACTIVATED) return;
 
         Iterator var4 = boosterPackCards.iterator();

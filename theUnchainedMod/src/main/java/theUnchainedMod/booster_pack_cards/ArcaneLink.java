@@ -1,17 +1,21 @@
 package theUnchainedMod.booster_pack_cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.TheUnchainedMod;
+import theUnchainedMod.actions.ArcaneLinkAction;
 import theUnchainedMod.actions.GainRelayAction;
+import theUnchainedMod.actions.ReinforcedElementAction;
 import theUnchainedMod.cards.AbstractDynamicRelayCard;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
-import theUnchainedMod.powers.ArcaneLinkPower;
-import theUnchainedMod.powers.DeliciousChurroPower;
-import theUnchainedMod.powers.MagicMechaPower;
+import theUnchainedMod.powers.*;
+
+import java.util.Iterator;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
@@ -27,16 +31,14 @@ public class ArcaneLink extends AbstractDynamicRelayCard {
     private static final int COST = 1;
     private static final int MAGIC_NUMBER = 9;
     private static final int UPGRADE_MAGIC_NUMBER = 3;
-    private static final int SECOND_MAGIC_NUMBER = 2;
-    private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 1;
+    private static final int SECOND_MAGIC_NUMBER = 4;
+    private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 2;
     private static final int CHAIN_LENGTH = 1;
 
     public ArcaneLink() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
-
-        tags.add(CustomTags.CHAIN);
     }
     public void upgrade() {
         if (!this.upgraded) {
@@ -45,14 +47,21 @@ public class ArcaneLink extends AbstractDynamicRelayCard {
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
         }
     }
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        Iterator var1 = AbstractDungeon.player.powers.iterator();
+
+        while(var1.hasNext()) {
+            AbstractPower power = (AbstractPower) var1.next();
+            if (power instanceof AbstractChainPower || power instanceof AbstractMasterChainPower) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                break;
+            }
+        }
+    }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainRelayAction(p, magicNumber));
-
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new ArcaneLinkPower(p, CHAIN_LENGTH, defaultSecondMagicNumber, TYPE)));
-        if(p.hasPower(DeliciousChurroPower.POWER_ID)) {
-            p.getPower(DeliciousChurroPower.POWER_ID).onSpecificTrigger();
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new ArcaneLinkPower(p, CHAIN_LENGTH, defaultSecondMagicNumber, TYPE)));
-        }
+        AbstractDungeon.actionManager.addToBottom(new ArcaneLinkAction(defaultSecondMagicNumber));
     }
 }
