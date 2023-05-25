@@ -27,6 +27,10 @@ public class ArcaneAmplifier extends CustomRelic {
                 BaseMod.getKeywordTitle(DESCRIPTIONS[1].toLowerCase()),
                 BaseMod.getKeywordDescription(DESCRIPTIONS[1].toLowerCase())
         ));
+        tips.add(new PowerTip(
+                BaseMod.getKeywordTitle(DESCRIPTIONS[2].toLowerCase()),
+                BaseMod.getKeywordDescription(DESCRIPTIONS[2].toLowerCase())
+        ));
     }
 
     // Description

@@ -91,7 +91,7 @@
     "NAME": "Crushing Gauntlets",
     "FLAVOR": "Why stop at crushing their armor when you could instead crush THEM.",
     "DESCRIPTIONS": [
-      "You can no longer apply #yCrushed Armor, instead you deal triple the amount directly to their HP.",
+      "You can no longer apply #yCrushed #yArmor, instead you deal triple the amount directly to their HP.",
       "theunchainedmod:Crushed_Armor"
     ]
   },
