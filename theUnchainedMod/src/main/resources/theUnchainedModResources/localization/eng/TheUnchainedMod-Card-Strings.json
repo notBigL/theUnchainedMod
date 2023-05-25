@@ -315,7 +315,7 @@
   },
   "theUnchainedMod:ChainSaw": {
     "NAME": "Chain Saw",
-    "DESCRIPTION": "Delete ALL your active theunchainedmod:Chains. Increase this card's damage by !M! for every theunchainedmod:Chain deleted this combat. NL Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL Delete ALL your active theunchainedmod:Chains. Increase this card's damage by !M! for every theunchainedmod:Chain deleted this combat."
   },
   "theUnchainedMod:ReinforcedLink": {
     "NAME": "Reinforced Link",

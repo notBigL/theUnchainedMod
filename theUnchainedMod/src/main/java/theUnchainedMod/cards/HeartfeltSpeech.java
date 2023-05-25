@@ -1,15 +1,23 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
+import theUnchainedMod.powers.AbstractChainPower;
+import theUnchainedMod.powers.AbstractMasterChainPower;
 import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.powers.PlayDeadPower;
+import theUnchainedMod.util.UtilityClass;
+
+import java.util.Iterator;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
@@ -42,6 +50,11 @@ public class HeartfeltSpeech extends AbstractDynamicCard {
             upgradeName();
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
         }
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if(UtilityClass.ChurrosPowerActivated()) this.glowColor = Color.PURPLE;
     }
 
     @Override

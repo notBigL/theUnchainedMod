@@ -1,9 +1,11 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,6 +16,7 @@ import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.BrassKnucklePower;
 import theUnchainedMod.powers.DeliciousChurroPower;
+import theUnchainedMod.util.UtilityClass;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
@@ -45,7 +48,11 @@ public class LashOut extends AbstractDynamicCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
+    }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if(UtilityClass.ChurrosPowerActivated()) this.glowColor = Color.PURPLE;
     }
 
     @Override

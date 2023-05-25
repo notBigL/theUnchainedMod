@@ -1,7 +1,9 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,6 +15,7 @@ import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.powers.WreckingBallPower;
+import theUnchainedMod.util.UtilityClass;
 import theUnchainedMod.vfx.TelekineticPulseWaveEffect;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
@@ -49,7 +52,10 @@ public class TelekineticPulse extends AbstractDynamicCard {
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
         }
     }
-
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if(UtilityClass.ChurrosPowerActivated()) this.glowColor = Color.PURPLE;
+    }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new TelekineticPulseWaveEffect(p.hb.cX, p.hb.cY, 1000.0F * Settings.scale)));

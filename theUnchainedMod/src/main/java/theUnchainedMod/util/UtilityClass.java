@@ -10,10 +10,12 @@ import com.megacrit.cardcrawl.characters.TheSilent;
 import com.megacrit.cardcrawl.characters.Watcher;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theUnchainedMod.cards.DefensiveLink;
 import theUnchainedMod.cards.Whiplash;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.powers.DeliciousChurroPower;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -85,5 +87,19 @@ public final class UtilityClass {
 
         return (AbstractCard) list.get(cardRandomRng.random(list.size() - 1));
 
+    }
+
+    public static boolean ChurrosPowerActivated()
+    {
+        if(player == null) return false;
+
+        Iterator var1 = player.powers.iterator();
+        while(var1.hasNext()) {
+            AbstractPower power = (AbstractPower) var1.next();
+            if (power instanceof DeliciousChurroPower) {
+                return true;
+            }
+        }
+        return false;
     }
 }

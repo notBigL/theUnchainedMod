@@ -16,15 +16,15 @@ public class BarbedWire extends AbstractDynamicCard {
 
     public static final String ID = TheUnchainedMod.makeID(BarbedWire.class.getSimpleName());
     public static final String IMG = makeCardPath("BarbedWire.png");
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_BOOSTER;
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 14;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 7;
+    private static final int MAGIC_NUMBER = 10;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 5;
 
     public BarbedWire() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

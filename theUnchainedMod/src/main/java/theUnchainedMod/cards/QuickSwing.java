@@ -1,9 +1,11 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,6 +16,7 @@ import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.powers.QuickSwingPower;
+import theUnchainedMod.util.UtilityClass;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
@@ -50,6 +53,10 @@ public class QuickSwing extends AbstractDynamicCard {
         }
     }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if(UtilityClass.ChurrosPowerActivated()) this.glowColor = Color.PURPLE;
+    }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         CardCrawlGame.sound.playA("swingAttack", MathUtils.random(-0.2F, 0.2F));

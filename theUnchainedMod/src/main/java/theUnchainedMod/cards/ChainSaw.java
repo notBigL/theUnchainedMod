@@ -3,6 +3,7 @@ package theUnchainedMod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,7 +13,10 @@ import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.ChainSawAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.AbstractChainPower;
+import theUnchainedMod.powers.AbstractMasterChainPower;
 import theUnchainedMod.vfx.ChainSawAttackEffect;
+
+import java.util.Iterator;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
@@ -57,6 +61,18 @@ public class ChainSaw extends AbstractDynamicCard {
         this.isDamageModified = this.damage != this.baseDamage;
     }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        Iterator var1 = AbstractDungeon.player.powers.iterator();
+
+        while(var1.hasNext()) {
+            AbstractPower power = (AbstractPower) var1.next();
+            if (power instanceof AbstractChainPower || power instanceof AbstractMasterChainPower) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                break;
+            }
+        }
+    }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
