@@ -2,6 +2,7 @@ package theUnchainedMod.vfx;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.CatmullRomSpline;
@@ -10,8 +11,13 @@ import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import org.lwjgl.Sys;
 
 import java.util.ArrayList;
+import java.util.Random;
+
+import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
+import static theUnchainedMod.TheUnchainedMod.makeVFXPath;
 
 public class SharePainEffect extends AbstractGameEffect {
     private final TextureAtlas.AtlasRegion img;
@@ -31,6 +37,7 @@ public class SharePainEffect extends AbstractGameEffect {
     private boolean rotateClockwise = true;
     private boolean stopRotating = false;
     private float rotationRate;
+    private static Texture glyph;
 
     public SharePainEffect(float sX, float sY, float dX, float dY) {
         this.img = ImageMaster.GLOW_SPARK_2;
@@ -43,7 +50,10 @@ public class SharePainEffect extends AbstractGameEffect {
         this.rotationRate = MathUtils.random(300.0F, 350.0F) * Settings.scale;
         this.currentSpeed = START_VELOCITY * MathUtils.random(0.2F, 1.0F);
         this.color = new Color(0.9f, 0.3f, 0.86f, 1.0f);
+        //this.color = new Color(0.9f, 0.3f, 0.86f, 0.2f);
         this.duration = 1.3F;
+        int randomGlyphAmount = (int)(Math.random() * 8) + 1;
+        this.glyph = loadImage(makeVFXPath("glyphs/" + randomGlyphAmount + ".png"));
     }
 
     public void update() {
@@ -126,13 +136,20 @@ public class SharePainEffect extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         if (!this.isDone) {
-            sb.setBlendFunction(770, 1);
-            sb.setColor(this.color);
             float scale = Settings.scale * 1.5F;
 
+            //sb.setBlendFunction(770, 1);
             for(int i = this.points.length - 1; i > 0; --i) {
                 if (this.points[i] != null) {
+                    sb.setBlendFunction(770, 1);
+                    sb.setColor(this.color);
                     sb.draw(this.img, this.points[i].x - (float)(this.img.packedWidth / 2), this.points[i].y - (float)(this.img.packedHeight / 2), (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, scale, scale, this.rotation);
+
+                    //sb.setBlendFunction(770, 1);
+                    //sb.setColor(Color.WHITE);
+                    //sb.setColor(color);
+                    //sb.draw(glyph, this.points[i].x - (float)(this.img.packedWidth / 2), this.points[i].y - (float)(this.img.packedHeight / 2), (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, scale, scale, this.rotation, 0, 0, 128, 128, false, false);
+
                     scale *= 0.975F;
                 }
             }

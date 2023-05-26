@@ -43,7 +43,7 @@ public class ArcaneArtilleryEffect extends AbstractGameEffect {
         this.rotationRate = MathUtils.random(300.0F, 350.0F) * Settings.scale;
         this.currentSpeed = START_VELOCITY * MathUtils.random(0.2F, 1.0F);
         this.color = new Color(0.9f, 0.3f, 0.86f, 1.0f);
-        this.duration = 1.3F;
+        this.duration = 1.0F;
     }
 
     public void update() {

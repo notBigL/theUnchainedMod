@@ -16,8 +16,8 @@ public class ArcaneMasteryPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/RelayPower_power48.png");
-    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/RelayPower_power128.png");
+    private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ArcaneMastery_power48.png");
+    private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/ArcaneMastery_power128.png");
 
     public ArcaneMasteryPower(final AbstractCreature owner, final int amount) {
         name = NAME;
