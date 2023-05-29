@@ -17,6 +17,7 @@ import theUnchainedMod.actions.MasterChainAction;
 import theUnchainedMod.patches.ChainsFinishedThisCombat;
 import theUnchainedMod.relics.Carabiner;
 import theUnchainedMod.util.TextureLoader;
+import theUnchainedMod.vfx.SwordOfDamoclesEffect;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
 
@@ -64,6 +65,10 @@ public class AbstractMasterChainPower extends AbstractPower {
         switch (c.cardID) {
             case "theUnchainedMod:ChainSaw":
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+                if(this instanceof DamoclesChainPower)
+                {
+                    SwordOfDamoclesEffect.CutByChainSaw();
+                }
                 break;
             default:
                 AbstractDungeon.actionManager.addToBottom(new MasterChainAction(this.owner, c, this.ID, this));

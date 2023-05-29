@@ -21,15 +21,10 @@ public class SwordHangingEffect extends AbstractGameEffect {
     private float tY;
     private float scaleX;
     private float scaleY;
-    private float targetScale;
     private Color color2;
     private final static Texture IMG = loadImage(makeVFXPath("Sword_of_Damocles_Effect.png"));
 
     public SwordHangingEffect(float x, float y, float dX, float dY, float angle, Color color1, Color color2) {
-        this(x, y, dX, dY, angle, 2.0F, color1, color2);
-    }
-
-    public SwordHangingEffect(float x, float y, float dX, float dY, float angle, float targetScale, Color color1, Color color2) {
         this.x = x - 64.0F - dX / 2.0F * Settings.scale;
         this.y = y - 64.0F - dY / 2.0F * Settings.scale;
         this.sX = this.x;
@@ -41,38 +36,26 @@ public class SwordHangingEffect extends AbstractGameEffect {
         this.color.a = 0.0F;
         this.startingDuration = 0.4F;
         this.duration = this.startingDuration;
-        this.targetScale = targetScale;
         this.scaleX = 0.01F;
         this.scaleY = 0.01F;
-        this.rotation = -135.0F;
         this.rotation = angle;
     }
 
     public void update() {
-        /*if (this.duration > this.startingDuration / 2.0F) {
-            this.color.a = Interpolation.exp10In.apply(0.8F, 0.0F, (this.duration - this.startingDuration / 2.0F) / (this.startingDuration / 2.0F));
-            this.scaleX = Interpolation.exp10In.apply(this.targetScale, 0.1F, (this.duration - this.startingDuration / 2.0F) / (this.startingDuration / 2.0F));
-            this.scaleY = this.scaleX;
-            this.x = Interpolation.fade.apply(this.tX, this.sX, (this.duration - this.startingDuration / 2.0F) / (this.startingDuration / 2.0F));
-            this.y = Interpolation.fade.apply(this.tY, this.sY, (this.duration - this.startingDuration / 2.0F) / (this.startingDuration / 2.0F));
-        } else {
-            this.scaleX = Interpolation.pow2In.apply(0.5F, this.targetScale, this.duration / (this.startingDuration / 2.0F));
-            this.color.a = Interpolation.pow5In.apply(0.0F, 0.8F, this.duration / (this.startingDuration / 2.0F));
-        }
+        this.color.a = 1;
+        this.scaleX = 1;
+        this.scaleY = this.scaleX;
 
-        this.duration -= Gdx.graphics.getDeltaTime();
+        //this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration < 0.0F) {
             this.isDone = true;
         }
-*/
     }
 
     public void render(SpriteBatch sb) {
         sb.setColor(this.color2);
         sb.setBlendFunction(770, 1);
-        sb.draw(IMG, this.x, this.y, 64.0F, 64.0F, 128.0F, 128.0F, this.scaleX * 0.4F * MathUtils.random(0.95F, 1.05F) * Settings.scale, this.scaleY * 0.7F * MathUtils.random(0.95F, 1.05F) * Settings.scale, this.rotation, 0, 0, 128, 128, false, false);
-        sb.setColor(this.color);
-        sb.draw(IMG, this.x, this.y, 64.0F, 64.0F, 128.0F, 128.0F, this.scaleX * 0.7F * MathUtils.random(0.95F, 1.05F) * Settings.scale, this.scaleY * MathUtils.random(0.95F, 1.05F) * Settings.scale, this.rotation, 0, 0, 128, 128, false, false);
+        sb.draw(IMG, this.x - 15f, this.y, 64.0F, 64.0F, 128.0F, 368.0F, this.scaleX * Settings.scale, this.scaleY * Settings.scale, this.rotation, 0, 0, 128, 368, false, false);
         sb.setBlendFunction(770, 771);
     }
 
