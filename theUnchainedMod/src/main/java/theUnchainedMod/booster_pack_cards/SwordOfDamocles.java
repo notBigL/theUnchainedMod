@@ -11,6 +11,8 @@ import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.DamoclesChainPower;
 import theUnchainedMod.powers.DeliciousChurroPower;
+import theUnchainedMod.vfx.ArcaneArtilleryEffect;
+import theUnchainedMod.vfx.SwordOfDamoclesEffect;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
@@ -54,5 +56,6 @@ public class SwordOfDamocles extends AbstractDynamicCard {
             p.getPower(DeliciousChurroPower.POWER_ID).onSpecificTrigger();
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DamoclesChainPower(p, CHAIN_LENGTH, SECOND_MAGIC_NUMBER, magicNumber, TYPE)));
         }
+        AbstractDungeon.effectsQueue.add(new SwordOfDamoclesEffect(p.hb.cX, p.hb.cY));
     }
 }
