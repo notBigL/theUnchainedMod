@@ -71,7 +71,8 @@ public class SharePain extends AbstractDynamicCard {
         this.damage += this.magicNumber;
         this.calculateCardDamage(m);
         for (int i = 0; i < Math.min(this.damage, 200.0F); i += 5) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SharePainEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY)));
+            int randomGlyphAmount = (int)(Math.random() * 7) + 1;
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SharePainEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY, randomGlyphAmount)));
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE, true));
     }

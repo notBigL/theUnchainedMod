@@ -2,6 +2,7 @@ package theUnchainedMod.vfx;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -37,9 +38,11 @@ public class SharePainEffect extends AbstractGameEffect {
     private boolean rotateClockwise = true;
     private boolean stopRotating = false;
     private float rotationRate;
-    private static Texture glyph;
+    private Texture glyph;
+    private Texture glyphBG = loadImage(makeVFXPath("glyphs/BG_Glyph.png"));
+    private Color glyphColor;
 
-    public SharePainEffect(float sX, float sY, float dX, float dY) {
+    public SharePainEffect(float sX, float sY, float dX, float dY, int glyphNumber) {
         this.img = ImageMaster.GLOW_SPARK_2;
         this.pos = new Vector2(sX, sY);
         this.target = new Vector2(dX, dY);
@@ -49,11 +52,10 @@ public class SharePainEffect extends AbstractGameEffect {
         this.controlPoints.clear();
         this.rotationRate = MathUtils.random(300.0F, 350.0F) * Settings.scale;
         this.currentSpeed = START_VELOCITY * MathUtils.random(0.2F, 1.0F);
-        this.color = new Color(0.9f, 0.3f, 0.86f, 1.0f);
-        //this.color = new Color(0.9f, 0.3f, 0.86f, 0.2f);
+        this.color = new Color(0.9f, 0.3f, 0.86f, 0.1f); //share pain BG color
         this.duration = 1.3F;
-        int randomGlyphAmount = (int)(Math.random() * 8) + 1;
-        this.glyph = loadImage(makeVFXPath("glyphs/" + randomGlyphAmount + ".png"));
+        glyphColor = Color.GOLD.cpy();
+        this.glyph = loadImage(makeVFXPath("glyphs/" + glyphNumber + ".png"));
     }
 
     public void update() {
@@ -136,27 +138,45 @@ public class SharePainEffect extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         if (!this.isDone) {
-            float scale = Settings.scale * 1.5F;
+            sb.setBlendFunction(770, 1);
 
-            //sb.setBlendFunction(770, 1);
+            //  Render Trail
+            float orbScale = Settings.scale * 3F;
             for(int i = this.points.length - 1; i > 0; --i) {
-                if (this.points[i] != null) {
-                    sb.setBlendFunction(770, 1);
+                if (this.points[i] != null)
+                {
                     sb.setColor(this.color);
-                    sb.draw(this.img, this.points[i].x - (float)(this.img.packedWidth / 2), this.points[i].y - (float)(this.img.packedHeight / 2), (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, scale, scale, this.rotation);
+                    sb.draw(this.img, this.points[i].x, this.points[i].y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, orbScale, orbScale, this.rotation);
 
-                    //sb.setBlendFunction(770, 1);
-                    //sb.setColor(Color.WHITE);
-                    //sb.setColor(color);
-                    //sb.draw(glyph, this.points[i].x - (float)(this.img.packedWidth / 2), this.points[i].y - (float)(this.img.packedHeight / 2), (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, scale, scale, this.rotation, 0, 0, 128, 128, false, false);
-
-                    scale *= 0.975F;
+                    orbScale *= 0.975F;
                 }
             }
 
+
+            int glyphPos = 59;
+            sb.setBlendFunction(GL20.GL_SRC_COLOR, 1);
+            if (this.points[glyphPos] != null)
+            {
+                float glyphScale = Settings.scale * 0.5F;
+
+                // Render BG Glyph
+
+                sb.setColor(Color.PINK);
+                sb.draw(glyphBG, this.points[glyphPos].x, this.points[glyphPos].y,32,32, 64,64, glyphScale * 1.75f, glyphScale * 1.75f, this.rotation, 0, 0, 64, 64, false, false);
+
+                // Render Outline
+
+                sb.setColor(Color.PURPLE);
+                sb.draw(glyph, this.points[glyphPos].x, this.points[glyphPos].y,32,32, 64,64, glyphScale * 1.25f, glyphScale * 1.25f, this.rotation, 0, 0, 64, 64, false, false);
+                sb.draw(glyph, this.points[glyphPos].x, this.points[glyphPos].y,32,32, 64,64, glyphScale * 0.75f, glyphScale * 0.75f, this.rotation, 0, 0, 64, 64, false, false);
+
+                // Glyph
+                sb.setColor(glyphColor);
+                if (this.points[glyphPos] != null) sb.draw(glyph, this.points[glyphPos].x, this.points[glyphPos].y,32,32, 64,64, glyphScale, glyphScale, this.rotation, 0, 0, 64, 64, false, false);
+
+            }
             sb.setBlendFunction(770, 771);
         }
-
     }
 
     public void dispose() {
