@@ -20,7 +20,7 @@ public class SwordOfDamoclesEffect extends AbstractGameEffect {
     }
     public void update() {
         if(!SwordIsHanging) {
-            sword = new SwordHangingEffect(this.x, this.y - 30.0F * Settings.scale, 0.0F,-500.0F,0F, Color.GOLD, Color.GOLD);
+            sword = new SwordHangingEffect(this.x, this.y - 30.0F * Settings.scale, 0.0F,-500.0f, Color.GOLD, Color.GOLD);
             sword.isDone = false;
             AbstractDungeon.effectsQueue.add(sword); //TODO: this might not work? maybe its not actually creating the sword
             SwordIsHanging = true;
