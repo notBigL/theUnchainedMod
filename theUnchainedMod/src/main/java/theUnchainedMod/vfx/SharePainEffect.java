@@ -152,7 +152,6 @@ public class SharePainEffect extends AbstractGameEffect {
                 }
             }
 
-
             int glyphPos = 59;
             sb.setBlendFunction(GL20.GL_SRC_COLOR, 1);
             if (this.points[glyphPos] != null)

@@ -249,8 +249,8 @@
     "UPGRADE_DESCRIPTION": "Siempre que juegues una carta de coste 2, gana [E]."
   },
   "theUnchainedMod:TelekineticPulse": {
-    "NAME": "Pulso Telequinético",
-    "DESCRIPTION": "¡TODOS los enemigos ganan !theUnchainedMod:SecondMagic! de Bloqueo. 2 de theunchainedmod:Cadena. TODOS los enemigos pierden !M! HP."
+    "NAME": "Telekinetic Pulse",
+    "DESCRIPTION": "1 theunchainedmod:Chain: ALL enemies gain !theUnchainedMod:SecondMagic! Block, lose !M! HP and reapply this theunchainedmod:Chain."
   },
   "theUnchainedMod:TieDown": {
     "NAME": "Atado",

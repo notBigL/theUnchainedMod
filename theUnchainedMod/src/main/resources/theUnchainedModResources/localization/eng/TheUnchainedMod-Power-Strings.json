@@ -189,7 +189,7 @@
       "Swirls hit ALL enemies."
     ]
   },
-  "theUnchainedMod:RelentlessBatteryPower": {
+  "theUnchainedMod:RelentlessOnslaughtPower": {
     "NAME": "Attack Chain",
     "DESCRIPTIONS": [
       "If you play #b1 more Attack this Turn, deal #y",
@@ -221,13 +221,12 @@
       " Energy."
     ]
   },
-  "theUnchainedMod:WreckingBallPower": {
+  "theUnchainedMod:TelekineticPulsePower": {
     "NAME": "Skill Chain",
     "DESCRIPTIONS": [
-      "If you play #b1 more Skill this turn, ALL enemies lose #y",
-      " HP.",
-      "If you play #b",
-      " more Skills this turn, ALL enemies lose #y"
+      "If you play #b1 more Skill this turn, ALL enemies gain #y",
+      " Block and lose #y",
+      " HP."
     ]
   },
   "theUnchainedMod:LongerChainsPower": {

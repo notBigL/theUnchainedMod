@@ -12,7 +12,7 @@ import theUnchainedMod.actions.MultiAttackAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.DeliciousChurroPower;
-import theUnchainedMod.powers.RelentlessBatteryPower;
+import theUnchainedMod.powers.RelentlessOnslaughtPower;
 import theUnchainedMod.util.UtilityClass;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
@@ -56,10 +56,10 @@ public class RelentlessOnslaught extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         DamageInfo info = new DamageInfo(p, this.damage, this.damageTypeForTurn);
         AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(magicNumber, m, info));
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessBatteryPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessOnslaughtPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
         if (p.hasPower(DeliciousChurroPower.POWER_ID)) {
             p.getPower(DeliciousChurroPower.POWER_ID).onSpecificTrigger();
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessBatteryPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessOnslaughtPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
         }
     }
 }

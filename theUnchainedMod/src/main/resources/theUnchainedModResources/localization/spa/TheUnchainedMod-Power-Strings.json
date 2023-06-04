@@ -189,7 +189,7 @@
       "Los Remolinos golpean a TODOS los enemigos."
     ]
   },
-  "theUnchainedMod:RelentlessBatteryPower": {
+  "theUnchainedMod:RelentlessOnslaughtPower": {
     "NAME": "Cadena de Ataque",
     "DESCRIPTIONS": [
       "Si juegas #b1 más de Ataque en este turno, reparte #y",
@@ -221,13 +221,12 @@
       " de Energía."
     ]
   },
-  "theUnchainedMod:WreckingBallPower": {
-    "NAME": "Cadena de Habilidad",
+  "theUnchainedMod:TelekineticPulsePower": {
+    "NAME": "Skill Chain",
     "DESCRIPTIONS": [
-      "Si juegas #b1 más de Habilidad en este turno, TODOS los enemigos pierden #y",
-      " HP.",
-      "Si juegas #b",
-      " más de Habilidades en este turno, TODOS los enemigos pierden #y"
+      "If you play #b1 more Skill this turn, ALL enemies gain #y",
+      " Block and lose #y",
+      " HP."
     ]
   },
   "theUnchainedMod:LongerChainsPower": {

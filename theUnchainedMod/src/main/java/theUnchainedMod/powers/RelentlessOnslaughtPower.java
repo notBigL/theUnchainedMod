@@ -9,12 +9,12 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.TheUnchainedMod;
-import theUnchainedMod.actions.RelentlessBatteryAction;
+import theUnchainedMod.actions.RelentlessOnslaughtAction;
 
-public class RelentlessBatteryPower extends AbstractChainPower {
+public class RelentlessOnslaughtPower extends AbstractChainPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = TheUnchainedMod.makeID("RelentlessBatteryPower");
+    public static final String POWER_ID = TheUnchainedMod.makeID("RelentlessOnslaughtPower");
     private static final PowerStrings powerstrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerstrings.NAME;
     public static final String[] DESCRIPTIONS = powerstrings.DESCRIPTIONS;
@@ -24,8 +24,8 @@ public class RelentlessBatteryPower extends AbstractChainPower {
     private final int attackAmount;
 
 
-    public RelentlessBatteryPower(AbstractCreature owner, int amount, int damageAmount, int attackAmount, AbstractMonster monster, DamageInfo info, AbstractCard.CardType cardType) {
-        super(POWER_ID, owner, amount, new RelentlessBatteryAction(attackAmount, monster, info, damageAmount), cardType);
+    public RelentlessOnslaughtPower(AbstractCreature owner, int amount, int damageAmount, int attackAmount, AbstractMonster monster, DamageInfo info, AbstractCard.CardType cardType) {
+        super(POWER_ID, owner, amount, new RelentlessOnslaughtAction(attackAmount, monster, info, damageAmount), cardType);
         this.name = NAME;
         this.type = POWER_TYPE;
         this.damageAmount = damageAmount;
@@ -33,7 +33,7 @@ public class RelentlessBatteryPower extends AbstractChainPower {
         this.updateDescription();
     }
 
-    public RelentlessBatteryPower(AbstractCreature owner, int amount, AbstractGameAction finishedChainAction, int damageAmount, int attackAmount, AbstractCard.CardType cardType) {
+    public RelentlessOnslaughtPower(AbstractCreature owner, int amount, AbstractGameAction finishedChainAction, int damageAmount, int attackAmount, AbstractCard.CardType cardType) {
         super(POWER_ID, owner, amount, finishedChainAction, cardType);
         this.name = NAME;
         this.type = POWER_TYPE;

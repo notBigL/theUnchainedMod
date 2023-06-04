@@ -6,16 +6,16 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.powers.RelentlessBatteryPower;
+import theUnchainedMod.powers.RelentlessOnslaughtPower;
 
-public class RelentlessBatteryAction extends AbstractGameAction {
+public class RelentlessOnslaughtAction extends AbstractGameAction {
     private final int attackAmount;
     private final AbstractMonster monster;
     private final DamageInfo info;
     private final int damageAmount;
 
 
-    public RelentlessBatteryAction(int attackAmount, AbstractMonster monster, DamageInfo info, int damageAmount) {
+    public RelentlessOnslaughtAction(int attackAmount, AbstractMonster monster, DamageInfo info, int damageAmount) {
         this.attackAmount = attackAmount;
         this.monster = monster;
         this.info = info;
@@ -26,7 +26,7 @@ public class RelentlessBatteryAction extends AbstractGameAction {
     public void update() {
         AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(this.attackAmount, this.monster, this.info));
         if (!isDeadOrEscaped(monster)) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RelentlessBatteryPower(AbstractDungeon.player, 1, new RelentlessBatteryAction(this.attackAmount, this.monster, this.info, this.damageAmount), this.damageAmount, this.attackAmount, AbstractCard.CardType.ATTACK)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RelentlessOnslaughtPower(AbstractDungeon.player, 1, new RelentlessOnslaughtAction(this.attackAmount, this.monster, this.info, this.damageAmount), this.damageAmount, this.attackAmount, AbstractCard.CardType.ATTACK)));
         }
         this.isDone = true;
     }

@@ -250,7 +250,7 @@
   },
   "theUnchainedMod:TelekineticPulse": {
     "NAME": "Telekinetic Pulse",
-    "DESCRIPTION": "ALL enemies gain !theUnchainedMod:SecondMagic! Block. 2 theunchainedmod:Chain: ALL enemies lose !M! HP."
+    "DESCRIPTION": "1 theunchainedmod:Chain: ALL enemies gain !theUnchainedMod:SecondMagic! Block, lose !M! HP and reapply this theunchainedmod:Chain."
   },
   "theUnchainedMod:TieDown": {
     "NAME": "Tie Down",
@@ -430,10 +430,10 @@
   },
   "theUnchainedMod:MeltingHex": {
     "NAME": "Melting Hex",
-    "DESCRIPTION": "Apply !M! theunchainedmod:Malleable. NL Exhaust."
+    "DESCRIPTION": "Apply !M! theunchainedmod:Malleable and !theUnchainedMod:SecondMagic! theunchainedmod:Crushed_Armor. NL Exhaust."
   },
   "theUnchainedMod:ArcaneLink": {
     "NAME": "Arcane Link",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. If you have an active theunchainedmod:Chain, gain !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL If you have an active theunchainedmod:Chain, gain !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
   }
 }
