@@ -21,11 +21,14 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.relics.RustedChains;
+import theUnchainedMod.vfx.SwordHangingEffect;
+import theUnchainedMod.vfx.UnchainedVictoryVFX;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,6 +89,8 @@ public class TheUnchained extends CustomPlayer {
     private static final String[] TEXT = characterStrings.TEXT;
 
     // =============== /STRINGS/ =================
+
+    boolean endEffectStarted;
 
 
     // =============== TEXTURES OF BIG ENERGY ORB ===============
@@ -314,4 +319,12 @@ public class TheUnchained extends CustomPlayer {
         return TEXT[2];
     }
 
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+    if(!endEffectStarted)
+    {
+        effects.add(new UnchainedVictoryVFX());
+        endEffectStarted = true;
+    }
+    }
 }

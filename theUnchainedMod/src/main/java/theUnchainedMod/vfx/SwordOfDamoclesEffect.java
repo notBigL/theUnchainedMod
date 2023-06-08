@@ -19,10 +19,12 @@ public class SwordOfDamoclesEffect extends AbstractGameEffect {
         this.duration = this.startingDuration;
     }
     public void update() {
+        AbstractDungeon.effectsQueue.add(new UnchainedVictoryVFX());
         if(!SwordIsHanging) {
+
             sword = new SwordHangingEffect(this.x, this.y - 30.0F * Settings.scale, 0.0F,-500.0f, Color.GOLD, Color.GOLD);
             sword.isDone = false;
-            AbstractDungeon.effectsQueue.add(sword); //TODO: this might not work? maybe its not actually creating the sword
+            AbstractDungeon.effectsQueue.add(sword);
             SwordIsHanging = true;
         }
         this.isDone = true;

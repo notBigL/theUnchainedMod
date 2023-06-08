@@ -91,7 +91,7 @@ public class TheDemonSpeaksEvent extends AbstractImageEvent {
 
                         break;
 
-                    case 2: // Leave and the next fights you are weak
+                    case 2: // Leave without doing anything
                         imageEventText.loadImage("theUnchainedModResources/images/events/TheDemonSpeaksEvent4.png"); // Change the shown image to image of mask
                         this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);
