@@ -430,7 +430,7 @@
   },
   "theUnchainedMod:MeltingHex": {
     "NAME": "Melting Hex",
-    "DESCRIPTION": "Apply !theUnchainedMod:SecondMagic! theunchainedmod:Crushed_Armor!M! theunchainedmod:Malleable and . NL Exhaust."
+    "DESCRIPTION": "Apply !theUnchainedMod:SecondMagic! theunchainedmod:Crushed_Armor and !M! theunchainedmod:Malleable. NL Exhaust."
   },
   "theUnchainedMod:ArcaneLink": {
     "NAME": "Arcane Link",

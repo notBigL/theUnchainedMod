@@ -10,6 +10,7 @@ import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.PirouetteAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.MomentumPower;
+import theUnchainedMod.powers.NewTwoAmountPower;
 import theUnchainedMod.relics.BalletShoes;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
@@ -47,7 +48,7 @@ public class Pirouette extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (p.hasPower(MomentumPower.POWER_ID)) {
-            TwoAmountPower momentumPower = (TwoAmountPower) p.getPower(MomentumPower.POWER_ID);
+            NewTwoAmountPower momentumPower = (NewTwoAmountPower) p.getPower(MomentumPower.POWER_ID);
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new MomentumPower(p, momentumPower.amount2)));
         } else {
             if (p.hasRelic(BalletShoes.ID))
