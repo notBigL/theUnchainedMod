@@ -23,6 +23,7 @@ import theUnchainedMod.booster_pack_cards.ArcaneArtillery;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.events.TheDemonSpeaksEvent;
+import theUnchainedMod.patches.CharacterSelectUIPatch;
 import theUnchainedMod.potions.DancePotion;
 import theUnchainedMod.potions.ChainGrease;
 import theUnchainedMod.potions.CrushingElixir;
@@ -268,8 +269,6 @@ public class TheUnchainedMod implements
 
         logger.info("Adding mod settings");
 
-
-
 /*
         AbstractPlayer unchainedChar = null;
 
@@ -284,20 +283,21 @@ public class TheUnchainedMod implements
         if(playerPrefs.getBoolean("basemod:HEART_KILL", false)) heartKillBoolString = "TRUE";
 
 */
-        String heartKillBoolString = "TRUE";
+        //String heartKillBoolString = "TRUE";
 
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY, heartKillBoolString);
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_ACTIVATED_PROPERTY, "FALSE");
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_UNLOCKED_PROPERTY, heartKillBoolString);
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, heartKillBoolString);
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, heartKillBoolString);
+        //theUnchainedDefaultSettings.setProperty(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY, heartKillBoolString);
+        //theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_UNLOCKED_PROPERTY, "FALSE");
+        //theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, "FALSE");
+        //theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_UNLOCKED_PROPERTY, heartKillBoolString);
+        //theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, heartKillBoolString);
+        //theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, heartKillBoolString);
         try {
             unchainedConfig.load(); // Load the setting and set the boolean to equal it
 
-            UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = unchainedConfig.getBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY);
-            PRINCE_UNBOUND_SKIN_ACTIVATED = unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY);
+            CharacterSelectUIPatch.boosterPackUnlocked = UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = unchainedConfig.getBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY);
+            CharacterSelectUIPatch.princeUnboundUnlocked = PRINCE_UNBOUND_SKIN_ACTIVATED = unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY);
             UNCHAINED_BOOSTER_PACK_ACTIVATED = unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY);
         } catch (Exception e) {
             e.printStackTrace();

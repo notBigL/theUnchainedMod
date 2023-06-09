@@ -28,7 +28,7 @@ public class CharacterSelectUIPatch {
 
     //  Prince Unbound Button
     public static boolean princeUnboundButtonStatus = TheUnchainedMod.unchainedConfig.getBool(TheUnchainedMod.UNCHAINED_SKIN_ACTIVATED_PROPERTY);
-    public static boolean princeUnboundUnlocked = false; // TODO: tie to heart kill!
+    public static boolean princeUnboundUnlocked = false;
     private static final int pu_xPos = UI_BUTTON_DEFAULT_X;
     //private static final int pu_yPos = UI_FIRST_BUTTON_DEFAULT_Y;
     private static final int pu_width = 35;
@@ -37,7 +37,7 @@ public class CharacterSelectUIPatch {
 
     //  Booster Pack Button
     public static boolean boosterPackButtonStatus = TheUnchainedMod.unchainedConfig.getBool(TheUnchainedMod.UNCHAINED_SKIN_ACTIVATED_PROPERTY);
-    public static boolean boosterPackUnlocked = true; // TODO: tie to heart kill!
+    public static boolean boosterPackUnlocked = false;
     private static final int booster_xPos = UI_BUTTON_DEFAULT_X;
     //private static final int booster_yPos = pu_yPos - SPACING_BETWEEN_BUTTONS;
     private static final int booster_width = 35;

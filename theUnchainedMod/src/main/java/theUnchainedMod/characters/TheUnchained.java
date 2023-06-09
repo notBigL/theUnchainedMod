@@ -26,6 +26,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.*;
+import theUnchainedMod.patches.CharacterSelectUIPatch;
 import theUnchainedMod.relics.RustedChains;
 import theUnchainedMod.vfx.SwordHangingEffect;
 import theUnchainedMod.vfx.UnchainedVictoryVFX;
@@ -325,6 +326,16 @@ public class TheUnchained extends CustomPlayer {
     {
         effects.add(new UnchainedVictoryVFX());
         endEffectStarted = true;
+
+        if(!TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY))
+        {
+            //TODO: add the booster pack unlock here too!
+        }
+
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_UNLOCKED_PROPERTY, "TRUE");
+        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, "TRUE");
+        CharacterSelectUIPatch.princeUnboundUnlocked = TheUnchainedMod.UNCHAINED_SKIN_UNLOCKED = true;
+        CharacterSelectUIPatch.boosterPackUnlocked = TheUnchainedMod.UNCHAINED_BOOSTER_PACK_UNLOCKED = true;
     }
     }
 }
