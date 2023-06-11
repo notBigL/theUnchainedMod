@@ -25,20 +25,6 @@ public class CrushingGauntlets extends CustomRelic {
         ));
     }
 
-    // Flash at the start of Battle.
-    @Override
-    public void atBattleStartPreDraw() {
-        flash();
-    }
-
-    // Gain 1 energy on equip.
-    @Override
-    public void onEquip() {}
-
-    // Lose 1 energy on unequip.
-    @Override
-    public void onUnequip() {}
-
     // Description
     @Override
     public String getUpdatedDescription() {

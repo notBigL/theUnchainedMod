@@ -327,7 +327,7 @@ public class TheUnchained extends CustomPlayer {
         effects.add(new UnchainedVictoryVFX());
         endEffectStarted = true;
 
-        if(!TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY))
+        if(!TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY))
         {
             //TODO: add the booster pack unlock here too!
         }
