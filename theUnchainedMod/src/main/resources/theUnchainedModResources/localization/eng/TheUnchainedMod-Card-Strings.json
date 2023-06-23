@@ -1,55 +1,4 @@
 {
-  "theUnchainedMod:DefaultCommonAttack": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
-  },
-  "theUnchainedMod:DefaultCommonSkill": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block. NL theunchainedmod:Multiword_Keyword."
-  },
-  "theUnchainedMod:DefaultCommonPower": {
-    "NAME": "Hold Place",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Keyword.",
-    "UPGRADE_DESCRIPTION": "Gain !M! theunchainedmod:Keywords."
-  },
-  "theUnchainedMod:DefaultUncommonAttack": {
-    "NAME": "Big slap",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "theUnchainedMod:DefaultUncommonSkill": {
-    "NAME": "A Better Defend",
-    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
-  },
-  "theUnchainedMod:DefaultUncommonPower": {
-    "NAME": "Weirdness",
-    "DESCRIPTION": "Gain X theunchainedmod:Keywords.",
-    "UPGRADE_DESCRIPTION": "Gain X +1 theunchainedmod:Keywords."
-  },
-  "theUnchainedMod:DefaultRareAttack": {
-    "NAME": "TOUCH",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "theUnchainedMod:DefaultRareSkill": {
-    "NAME": "For Each Loop x2",
-    "DESCRIPTION": "Apply !M! Vulnerable to all enemies, 2 times.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies, 3 times."
-  },
-  "theUnchainedMod:DefaultRarePower": {
-    "NAME": "In-Progress Form",
-    "DESCRIPTION": "At the start of your turn, play a TOUCH."
-  },
-  "theUnchainedMod:DefaultAttackWithVariable": {
-    "NAME": "Special Strike",
-    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !theUnchainedMod:ENERGY_DAMAGE! damage total.)"
-  },
-  "theUnchainedMod:DefaultSecondMagicNumberSkill": {
-    "NAME": "Cool 2 Number Card",
-    "DESCRIPTION": "Apply !M! Vulnerable and !theUnchainedMod:SecondMagic! poison to an enemy."
-  },
-  "theUnchainedMod:OrbSkill": {
-    "NAME": "Get Orb",
-    "DESCRIPTION": "Channel 1 Default Orb."
-  },
   "theUnchainedMod:Unshackling": {
     "NAME": "Unshackling",
     "DESCRIPTION": "Whenever you play a card, Upgrade it for the rest of combat.",
@@ -151,7 +100,8 @@
   },
   "theUnchainedMod:FractalShield": {
     "NAME": "Fractal Shield",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage.",
+    "UPGRADE_DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage and HP Loss."
   },
   "theUnchainedMod:Windup": {
     "NAME": "Windup",
@@ -274,11 +224,6 @@
     "NAME": "Pirouette",
     "DESCRIPTION": "Add a Swirl into your hand. NL Upgrade ALL Swirls in your hand. Exhaust."
   },
-  "theUnchainedMod:InfiniteChain": {
-    "NAME": "Infinite Chain",
-    "DESCRIPTION": "Ethereal. theunchainedmod:Link. NL Next turn, add an Infinite Chain into your Hand. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. Ethereal. theunchainedmod:Link. NL Next turn, add an Infinite Chain into your Hand. Exhaust."
-  },
   "theUnchainedMod:TradeOffer": {
     "NAME": "Trade Offer",
     "DESCRIPTION": "Enemy gains !M! Block. NL Draw !theUnchainedMod:SecondMagic! card.",
@@ -387,10 +332,6 @@
   "theUnchainedMod:Taxes": {
     "NAME": "Taxes",
     "DESCRIPTION": "Rightfully acquire !M! Gold from every enemy."
-  },
-  "theUnchainedMod:PerfectStep": {
-    "NAME": "Perfect Step",
-    "DESCRIPTION": "Gain !B! Block. NL Retain. Gain 1 theunchainedmod:Full_Spin. Exhaust."
   },
   "theUnchainedMod:RetreatingSwing": {
     "NAME": "Retreating Swing",

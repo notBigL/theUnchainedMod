@@ -1,55 +1,4 @@
 {
-  "theUnchainedMod:DefaultCommonAttack": {
-    "NAME": "Golpe",
-    "DESCRIPTION": "Inflige !D! de daño. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works. []"
-  },
-  "theUnchainedMod:DefaultCommonSkill": {
-    "NAME": "Defensa",
-    "DESCRIPTION": "Gana !B! de Bloqueo. NL theunchainedmod:Multiword_Keyword."
-  },
-  "theUnchainedMod:DefaultCommonPower": {
-    "NAME": "Mantener Posición",
-    "DESCRIPTION": "Gana !M! theunchainedmod:palabra clave.",
-    "UPGRADE_DESCRIPTION": "Gana !M! theunchainedmod:palabras claves."
-  },
-  "theUnchainedMod:DefaultUncommonAttack": {
-    "NAME": "Gran Bofetada",
-    "DESCRIPTION": "Inflige !D! de daño."
-  },
-  "theUnchainedMod:DefaultUncommonSkill": {
-    "NAME": "Una mejor Defensa",
-    "DESCRIPTION": "Gana !B! de Armadura plateada. Afectada por la Destreza."
-  },
-  "theUnchainedMod:DefaultUncommonPower": {
-    "NAME": "Rareza",
-    "DESCRIPTION": "Gana X theunchainedmod:palabra clave.",
-    "UPGRADE_DESCRIPTION": "Gana X +1 theunchainedmod:palabras claves."
-  },
-  "theUnchainedMod:DefaultRareAttack": {
-    "NAME": "TOQUE",
-    "DESCRIPTION": "Inflige !D! de daño."
-  },
-  "theUnchainedMod:DefaultRareSkill": {
-    "NAME": "Para cada Bucle x2",
-    "DESCRIPTION": "Aplica !M! de Vulnerable a todos los enemigos, 2 veces.",
-    "UPGRADE_DESCRIPTION": "Aplica !M! de Vulnerable a todos los enemigos, 3 veces."
-  },
-  "theUnchainedMod:DefaultRarePower": {
-    "NAME": "Formulario en Curso",
-    "DESCRIPTION": "Al comienzo de tu turno, juega un TOQUE."
-  },
-  "theUnchainedMod:DefaultAttackWithVariable": {
-    "NAME": "Golpe Especial",
-    "DESCRIPTION": "Inflige !D! de daño [E] veces. NL (Inflige !theUnchainedMod:ENERGY_DAMAGE! de daño total.)"
-  },
-  "theUnchainedMod:DefaultSecondMagicNumberSkill": {
-    "NAME": "Cool 2 Number Card",
-    "DESCRIPTION": "Aplica !M! de Vulnerable y !theUnchainedMod:SecondMagic! de veneno a un enemigo."
-  },
-  "theUnchainedMod:OrbSkill": {
-    "NAME": "Obtener Orbe",
-    "DESCRIPTION": "Canaliza 1 Orbe."
-  },
   "theUnchainedMod:Unshackling": {
     "NAME": "Desencadenado",
     "DESCRIPTION": "Cada vez que juegues una carta, actualízala para el resto del combate.",
@@ -150,8 +99,9 @@
     "DESCRIPTION": "¡Cada vez que termines una Cadena, gana !M! de Bloqueo."
   },
   "theUnchainedMod:FractalShield": {
-    "NAME": "Escudo Fractal",
-    "DESCRIPTION": "Gana !M! de theunchainedmod:Relevo. El theunchainedmod:Relevo ahora bloquea theunchainedmod:Daño_Colateral."
+    "NAME": "Fractal Shield",
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage.",
+    "UPGRADE_DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage and HP Loss."
   },
   "theUnchainedMod:Windup": {
     "NAME": "Windup",
@@ -274,11 +224,6 @@
     "NAME": "Pirouette",
     "DESCRIPTION": "Añade un Remolino a tu mano. NL Actualiza TODOS los Remolinos en tu mano. NL Agota."
   },
-  "theUnchainedMod:InfiniteChain": {
-    "NAME": "Cadena Infinita",
-    "DESCRIPTION": "Etérea. theunchainedmod:Link. NL A continuación, añade una Cadena Infinita a tu mano. NL Agota.",
-    "UPGRADE_DESCRIPTION": "Innata. Etérea. theunchainedmod:Link. NL A continuación, añade una Cadena Infinita a tu mano. NL Agota."
-  },
   "theUnchainedMod:TradeOffer": {
     "NAME": "Oferta Comercial",
     "DESCRIPTION": "¡El enemigo gana !M! de Bloqueo. NL Roba !theUnchainedMod:SecondMagic! carta.",
@@ -387,10 +332,6 @@
   "theUnchainedMod:Taxes": {
     "NAME": "Impuestos",
     "DESCRIPTION": "Adquiere legítimamente !M! de Oro de cada enemigo."
-  },
-  "theUnchainedMod:PerfectStep": {
-    "NAME": "Paso Perfecto",
-    "DESCRIPTION": "Gana !B! de Bloqueo. NL Retiene. Gana 1 theunchainedmod:Vuelta_Completa.  NL Agota."
   },
   "theUnchainedMod:RetreatingSwing": {
     "NAME": "Swing de Retroceso",

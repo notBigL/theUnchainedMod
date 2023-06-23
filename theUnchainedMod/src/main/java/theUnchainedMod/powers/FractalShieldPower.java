@@ -16,7 +16,7 @@ public class FractalShieldPower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-
+    public boolean blocksAllDamage;
     private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/FractalShield_power48.png");
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/FractalShield_power128.png");
 

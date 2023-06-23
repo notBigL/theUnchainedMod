@@ -28,7 +28,6 @@ import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.patches.CharacterSelectUIPatch;
 import theUnchainedMod.relics.RustedChains;
-import theUnchainedMod.vfx.SwordHangingEffect;
 import theUnchainedMod.vfx.UnchainedVictoryVFX;
 
 import java.util.ArrayList;
@@ -120,7 +119,7 @@ public class TheUnchained extends CustomPlayer {
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
-        if(!PRINCE_UNBOUND_SKIN_ACTIVATED) {
+        if(!UNCHAINED_SKIN_ACTIVATED) {
             initializeClass(THE_DEFAULT_CHARACTER, // required call to load textures and setup energy/loadout.
                     // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
                     THE_DEFAULT_SHOULDER_2, // campfire pose
@@ -143,7 +142,7 @@ public class TheUnchained extends CustomPlayer {
 
         // =============== ANIMATIONS =================
 
-        if(PRINCE_UNBOUND_SKIN_ACTIVATED) loadAnimation(THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS, THE_UNCHAINED_PRINCE_UNBOUND_JSON, 1.0f);
+        if(UNCHAINED_SKIN_ACTIVATED) loadAnimation(THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS, THE_UNCHAINED_PRINCE_UNBOUND_JSON, 1.0f);
         else                         loadAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f);
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         e.setTimeScale(1.0f);
@@ -325,17 +324,27 @@ public class TheUnchained extends CustomPlayer {
     if(!endEffectStarted)
     {
         effects.add(new UnchainedVictoryVFX());
+
+        /*CardCrawlGame.sound.play("normalChainAttack"); //chain breaking sound effect
+        effects.add(new ChainAcrossScreenEffect(Color.WHITE, 0,Settings.HEIGHT * 0.72f, MathUtils.random(4, 6), MathUtils.random(55,75)));
+        effects.add(new ChainAcrossScreenEffect(Color.WHITE, Settings.WIDTH * 0.21f,Settings.HEIGHT, MathUtils.random(4, 6), MathUtils.random(230,250)));
+        effects.add(new ChainAcrossScreenEffect(Color.WHITE, Settings.WIDTH * 0.25f,0, MathUtils.random(4, 6), MathUtils.random(130,150)));
+        effects.add(new ChainAcrossScreenEffect(Color.WHITE, Settings.WIDTH * 0.83f,Settings.HEIGHT, MathUtils.random(4, 6), MathUtils.random(290,310)));
+        effects.add(new ChainAcrossScreenEffect(Color.WHITE, Settings.WIDTH * 0.86f,0, MathUtils.random(4, 6), MathUtils.random(45,65)));
+*/
         endEffectStarted = true;
 
-        if(!TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY))
+        unchainedConfig.setBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY, true);
+        unchainedConfig.setBool(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, true);
+        TheUnchainedMod.UNCHAINED_SKIN_UNLOCKED = true;
+        TheUnchainedMod.UNCHAINED_BOOSTER_PACK_UNLOCKED = true;
+        try
         {
-            //TODO: add the booster pack unlock here too!
+            TheUnchainedMod.unchainedConfig.save();
         }
-
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_UNLOCKED_PROPERTY, "TRUE");
-        theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, "TRUE");
-        CharacterSelectUIPatch.princeUnboundUnlocked = TheUnchainedMod.UNCHAINED_SKIN_UNLOCKED = true;
-        CharacterSelectUIPatch.boosterPackUnlocked = TheUnchainedMod.UNCHAINED_BOOSTER_PACK_UNLOCKED = true;
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     }
 }

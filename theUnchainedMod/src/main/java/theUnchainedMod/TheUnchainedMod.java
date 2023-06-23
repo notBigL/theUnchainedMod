@@ -19,11 +19,10 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theUnchainedMod.booster_pack_cards.ArcaneArtillery;
+import theUnchainedMod.booster_pack_cards.*;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.events.TheDemonSpeaksEvent;
-import theUnchainedMod.patches.CharacterSelectUIPatch;
 import theUnchainedMod.potions.DancePotion;
 import theUnchainedMod.potions.ChainGrease;
 import theUnchainedMod.potions.CrushingElixir;
@@ -96,13 +95,13 @@ public class TheUnchainedMod implements
     public static Properties theUnchainedDefaultSettings = new Properties();
 
         //  Unlock all Optional Content
-        public static final String UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY = "PrinceUnboundSkinUnlocked";
+        public static final String UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY = "AllOptionalContentUnlocked";
         public static boolean UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = false;
         //  Prince Unbound Skin
         public static final String UNCHAINED_SKIN_UNLOCKED_PROPERTY = "PrinceUnboundSkinUnlocked";
         public static boolean UNCHAINED_SKIN_UNLOCKED = false;
         public static final String UNCHAINED_SKIN_ACTIVATED_PROPERTY = "PrinceUnboundSkinActivated";
-        public static boolean PRINCE_UNBOUND_SKIN_ACTIVATED = false;
+        public static boolean UNCHAINED_SKIN_ACTIVATED = false;
 
         //  Booster Pack
         public static final String UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY = "BoosterPackUnlocked";
@@ -269,36 +268,23 @@ public class TheUnchainedMod implements
 
         logger.info("Adding mod settings");
 
-/*
-        AbstractPlayer unchainedChar = null;
+        //  Disables Unlocks for Testing
 
-        for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters())
-        {
-            if (p.getCardColor() == TheUnchained.Enums.COLOR_ORANGE)  unchainedChar = p;
-        }
-        if(unchainedChar == null) return;
-        Prefs playerPrefs = unchainedChar.getPrefs();
-
-        String heartKillBoolString = "FALSE";
-        if(playerPrefs.getBoolean("basemod:HEART_KILL", false)) heartKillBoolString = "TRUE";
-
-*/
-        //String heartKillBoolString = "TRUE";
-
+        //unchainedConfig.setBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY, false);
+        //unchainedConfig.setBool(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, false);
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
-        //theUnchainedDefaultSettings.setProperty(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY, heartKillBoolString);
-        //theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_UNLOCKED_PROPERTY, "FALSE");
-        //theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, "FALSE");
-        //theUnchainedDefaultSettings.setProperty(UNCHAINED_SKIN_UNLOCKED_PROPERTY, heartKillBoolString);
-        //theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY, heartKillBoolString);
-        //theUnchainedDefaultSettings.setProperty(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, heartKillBoolString);
+
         try {
             unchainedConfig.load(); // Load the setting and set the boolean to equal it
 
-            CharacterSelectUIPatch.boosterPackUnlocked = UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = unchainedConfig.getBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY);
-            CharacterSelectUIPatch.princeUnboundUnlocked = PRINCE_UNBOUND_SKIN_ACTIVATED = unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY);
+            UNCHAINED_BOOSTER_PACK_UNLOCKED = unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY);
             UNCHAINED_BOOSTER_PACK_ACTIVATED = unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY);
+
+            UNCHAINED_SKIN_UNLOCKED = unchainedConfig.getBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY);
+            UNCHAINED_SKIN_ACTIVATED = unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY);
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -364,7 +350,7 @@ public class TheUnchainedMod implements
     @Override
     public void receiveEditCharacters() {
         logger.info("Beginning to edit characters. " + "Add " + TheUnchained.Enums.THE_UNCHAINED.toString());
-        if(!PRINCE_UNBOUND_SKIN_ACTIVATED) {
+        if(!UNCHAINED_SKIN_ACTIVATED) {
             BaseMod.addCharacter(new TheUnchained("the Default", TheUnchained.Enums.THE_UNCHAINED),
                     THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheUnchained.Enums.THE_UNCHAINED);
         }
@@ -543,9 +529,6 @@ public class TheUnchainedMod implements
 
         logger.info("Done adding cards!");
     }
-
-    // ================ /ADD CARDS/ ===================
-
 
     // ================ LOAD THE TEXT ===================
     private String getLangString() {

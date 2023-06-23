@@ -53,7 +53,7 @@ public class ChainSaw extends AbstractDynamicCard {
         int amountToAdd = 0;
         int realBaseDamage = this.baseDamage;
         for (AbstractPower po : AbstractDungeon.player.powers) {
-            if (po instanceof AbstractChainPower) amountToAdd += magicNumber;
+            if (po instanceof AbstractChainPower || po instanceof AbstractMasterChainPower) amountToAdd += magicNumber;
         }
         this.baseDamage += amountToAdd;
         super.calculateCardDamage(mo);

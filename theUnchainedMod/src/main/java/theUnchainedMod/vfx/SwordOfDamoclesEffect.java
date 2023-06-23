@@ -19,10 +19,9 @@ public class SwordOfDamoclesEffect extends AbstractGameEffect {
         this.duration = this.startingDuration;
     }
     public void update() {
-        AbstractDungeon.effectsQueue.add(new UnchainedVictoryVFX());
+        //AbstractDungeon.effectsQueue.add(new UnchainedVictoryVFX());
         if(!SwordIsHanging) {
-
-            sword = new SwordHangingEffect(this.x, this.y - 30.0F * Settings.scale, 0.0F,-500.0f, Color.GOLD, Color.GOLD);
+            sword = new SwordHangingEffect(this.x, this.y - 30.0F * Settings.scale, 0.0F,-500.0f, Color.WHITE);
             sword.isDone = false;
             AbstractDungeon.effectsQueue.add(sword);
             SwordIsHanging = true;
@@ -31,7 +30,7 @@ public class SwordOfDamoclesEffect extends AbstractGameEffect {
     }
     public static void SwordFallsDown() {
         SwordIsHanging = false;
-        sword.isDone = true;
+        sword.InitiateFallDown();
     }
     public static void CutByChainSaw() {
         SwordIsHanging = false;

@@ -28,7 +28,7 @@ public class CharacterSelectUIPatch {
 
     //  Prince Unbound Button
     public static boolean princeUnboundButtonStatus = TheUnchainedMod.unchainedConfig.getBool(TheUnchainedMod.UNCHAINED_SKIN_ACTIVATED_PROPERTY);
-    public static boolean princeUnboundUnlocked = false;
+    //public static boolean princeUnboundUnlocked = false;
     private static final int pu_xPos = UI_BUTTON_DEFAULT_X;
     //private static final int pu_yPos = UI_FIRST_BUTTON_DEFAULT_Y;
     private static final int pu_width = 35;
@@ -37,7 +37,7 @@ public class CharacterSelectUIPatch {
 
     //  Booster Pack Button
     public static boolean boosterPackButtonStatus = TheUnchainedMod.unchainedConfig.getBool(TheUnchainedMod.UNCHAINED_SKIN_ACTIVATED_PROPERTY);
-    public static boolean boosterPackUnlocked = false;
+    //public static boolean boosterPackUnlocked = false;
     private static final int booster_xPos = UI_BUTTON_DEFAULT_X;
     //private static final int booster_yPos = pu_yPos - SPACING_BETWEEN_BUTTONS;
     private static final int booster_width = 35;
@@ -49,11 +49,11 @@ public class CharacterSelectUIPatch {
         public static void Prefix(){
             UI_CURRENT_BUTTON_Y = UI_FIRST_BUTTON_DEFAULT_Y;
 
-            if(princeUnboundUnlocked || TheUnchainedMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED) {
+            if(TheUnchainedMod.UNCHAINED_SKIN_UNLOCKED || TheUnchainedMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED) {
                 pu_hitbox = new Hitbox(pu_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, pu_width * Settings.scale, pu_height * Settings.scale);
                 UI_CURRENT_BUTTON_Y -= SPACING_BETWEEN_BUTTONS;
             }
-            if(boosterPackUnlocked || TheUnchainedMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED) {
+            if(TheUnchainedMod.UNCHAINED_BOOSTER_PACK_UNLOCKED || TheUnchainedMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED) {
                 booster_hitbox = new Hitbox(booster_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, booster_width * Settings.scale, booster_height * Settings.scale);
                 UI_CURRENT_BUTTON_Y -= SPACING_BETWEEN_BUTTONS;
             }
@@ -67,7 +67,7 @@ public class CharacterSelectUIPatch {
 
                 for(CharacterOption o : __instance.options){
                     if(o.selected && o.c.chosenClass.equals(TheUnchained.Enums.THE_UNCHAINED)){
-                        if(princeUnboundUnlocked || TheUnchainedMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED)
+                        if(TheUnchainedMod.UNCHAINED_SKIN_UNLOCKED || TheUnchainedMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED)
                         {
                             sb.draw(ImageMaster.CHECKBOX, pu_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, pu_width * Settings.scale, pu_height * Settings.scale);
                             if (princeUnboundButtonStatus) sb.draw(ImageMaster.TICK, pu_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, pu_width * Settings.scale, pu_height * Settings.scale);
@@ -75,7 +75,7 @@ public class CharacterSelectUIPatch {
                             pu_hitbox.render(sb);
                             UI_CURRENT_BUTTON_Y -= SPACING_BETWEEN_BUTTONS;
                         }
-                        if(boosterPackUnlocked || TheUnchainedMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED)
+                        if(TheUnchainedMod.UNCHAINED_BOOSTER_PACK_UNLOCKED || TheUnchainedMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED)
                         {
                             sb.draw(ImageMaster.CHECKBOX, booster_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, booster_width * Settings.scale, booster_height * Settings.scale);
                             if (boosterPackButtonStatus) sb.draw(ImageMaster.TICK, booster_xPos * Settings.scale, UI_CURRENT_BUTTON_Y * Settings.scale, booster_width * Settings.scale, booster_height * Settings.scale);
@@ -95,13 +95,13 @@ public class CharacterSelectUIPatch {
         public static void Postfix(CharacterSelectScreen __instance){
                 for(CharacterOption o : __instance.options){
                     if(o.selected && o.c.chosenClass.equals(TheUnchained.Enums.THE_UNCHAINED)){
-                        if(princeUnboundUnlocked || TheUnchainedMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED) {
+                        if(TheUnchainedMod.UNCHAINED_SKIN_UNLOCKED || TheUnchainedMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED) {
                             pu_hitbox.update();
                             if ((pu_hitbox.hovered || pu_hitbox.justHovered) && InputHelper.justClickedLeft) {
                                 try {
                                     princeUnboundButtonStatus = !princeUnboundButtonStatus;
                                     TheUnchainedMod.unchainedConfig.setBool(TheUnchainedMod.UNCHAINED_SKIN_ACTIVATED_PROPERTY, princeUnboundButtonStatus);
-                                    TheUnchainedMod.PRINCE_UNBOUND_SKIN_ACTIVATED = princeUnboundButtonStatus;
+                                    TheUnchainedMod.UNCHAINED_SKIN_ACTIVATED = princeUnboundButtonStatus;
 
                                     if(princeUnboundButtonStatus) {
                                         __instance.bgCharImg = TextureLoader.getTexture(TheUnchainedMod.PRINCE_UNBOUND_PORTRAIT);
@@ -118,7 +118,7 @@ public class CharacterSelectUIPatch {
                                 }
                             }
                         }
-                        if(boosterPackUnlocked || TheUnchainedMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED) {
+                        if(TheUnchainedMod.UNCHAINED_BOOSTER_PACK_UNLOCKED || TheUnchainedMod.UNCHAINED_OPTIONAL_CONTENT_UNLOCKED) {
                             booster_hitbox.update();
                             if ((booster_hitbox.hovered || booster_hitbox.justHovered) && InputHelper.justClickedLeft) {
                                 try {

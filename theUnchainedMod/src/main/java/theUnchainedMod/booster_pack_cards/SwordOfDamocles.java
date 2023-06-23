@@ -11,7 +11,6 @@ import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.DamoclesChainPower;
 import theUnchainedMod.powers.DeliciousChurroPower;
-import theUnchainedMod.vfx.ArcaneArtilleryEffect;
 import theUnchainedMod.vfx.SwordOfDamoclesEffect;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
