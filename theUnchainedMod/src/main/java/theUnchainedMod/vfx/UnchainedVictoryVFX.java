@@ -51,7 +51,7 @@ public class UnchainedVictoryVFX extends AbstractGameEffect {
         if(glowingEyeOpacity > 0)
         {
             glowingEyeOpacity -= Gdx.graphics.getDeltaTime();
-            if(glowingEyeOpacity < 0) {
+            if(glowingEyeOpacity <= 0) {
                 glowingEyeOpacity = 0;
                 CardCrawlGame.sound.play("unchainedSelect"); //chain breaking sound effect
                 //AbstractDungeon.effectsQueue.add(new ChainAcrossScreenEffect(Color.GOLD, 0,Settings.HEIGHT * 0.72f, MathUtils.random(4, 6), MathUtils.random(55,75)));
