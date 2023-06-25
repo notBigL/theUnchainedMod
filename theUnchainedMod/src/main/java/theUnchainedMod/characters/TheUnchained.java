@@ -28,6 +28,7 @@ import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.patches.CharacterSelectUIPatch;
 import theUnchainedMod.relics.RustedChains;
+import theUnchainedMod.vfx.ChainAcrossScreenEffect;
 import theUnchainedMod.vfx.UnchainedVictoryVFX;
 
 import java.util.ArrayList;
@@ -88,7 +89,7 @@ public class TheUnchained extends CustomPlayer {
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
-    // =============== /STRINGS/ =================
+    // =============== /END EFFECT/ =================
 
     boolean endEffectStarted;
 
@@ -325,13 +326,12 @@ public class TheUnchained extends CustomPlayer {
     {
         effects.add(new UnchainedVictoryVFX());
 
-        /*CardCrawlGame.sound.play("normalChainAttack"); //chain breaking sound effect
-        effects.add(new ChainAcrossScreenEffect(Color.WHITE, 0,Settings.HEIGHT * 0.72f, MathUtils.random(4, 6), MathUtils.random(55,75)));
-        effects.add(new ChainAcrossScreenEffect(Color.WHITE, Settings.WIDTH * 0.21f,Settings.HEIGHT, MathUtils.random(4, 6), MathUtils.random(230,250)));
-        effects.add(new ChainAcrossScreenEffect(Color.WHITE, Settings.WIDTH * 0.25f,0, MathUtils.random(4, 6), MathUtils.random(130,150)));
-        effects.add(new ChainAcrossScreenEffect(Color.WHITE, Settings.WIDTH * 0.83f,Settings.HEIGHT, MathUtils.random(4, 6), MathUtils.random(290,310)));
-        effects.add(new ChainAcrossScreenEffect(Color.WHITE, Settings.WIDTH * 0.86f,0, MathUtils.random(4, 6), MathUtils.random(45,65)));
-*/
+        effects.add(new ChainAcrossScreenEffect(Color.GOLD, 0,Settings.HEIGHT * 0.72f, MathUtils.random(4, 6), MathUtils.random(55,75)));
+        effects.add(new ChainAcrossScreenEffect(Color.GOLD, Settings.WIDTH * 0.21f, Settings.HEIGHT, MathUtils.random(4, 6), MathUtils.random(230,250)));
+        effects.add(new ChainAcrossScreenEffect(Color.GOLD, Settings.WIDTH * 0.25f,0, MathUtils.random(4, 6), MathUtils.random(130,150)));
+        effects.add(new ChainAcrossScreenEffect(Color.GOLD, Settings.WIDTH * 0.83f, Settings.HEIGHT, MathUtils.random(4, 6), MathUtils.random(290,310)));
+        effects.add(new ChainAcrossScreenEffect(Color.GOLD, Settings.WIDTH * 0.86f,0, MathUtils.random(4, 6), MathUtils.random(45,65)));
+
         endEffectStarted = true;
 
         unchainedConfig.setBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY, true);

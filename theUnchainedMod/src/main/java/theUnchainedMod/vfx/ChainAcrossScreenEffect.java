@@ -3,6 +3,7 @@ package theUnchainedMod.vfx;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -57,11 +58,13 @@ public class ChainAcrossScreenEffect extends AbstractGameEffect {
     }
 
     public void render(SpriteBatch sb) {
+        sb.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
         sb.setColor(this.color);
         for(int i = 0; i < 5; i++)
         {
             sb.draw(chainTexture, this.x - i * xChainOffset, this.y - i * yChainOffset, 512, 64, 1024, 128, scale, scale, this.rotation, 0, 0, 1024, 128, false, false);
         }
+        sb.setBlendFunction(770, 771);
     }
 
     public void dispose() {

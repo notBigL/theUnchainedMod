@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.powers.AbstractChainPower;
+import theUnchainedMod.powers.AbstractMasterChainPower;
 
 public class WideSwingEndTurnAction extends AbstractGameAction {
 
@@ -19,7 +20,7 @@ public class WideSwingEndTurnAction extends AbstractGameAction {
     public void update() {
 
         for (AbstractPower p : player.powers) {
-            if (p instanceof AbstractChainPower) {
+            if (p instanceof AbstractChainPower || p instanceof AbstractMasterChainPower) {
                 AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
                 break;
             }

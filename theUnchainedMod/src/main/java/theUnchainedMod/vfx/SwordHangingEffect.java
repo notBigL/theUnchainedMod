@@ -82,7 +82,7 @@ public class SwordHangingEffect extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         this.rotation = 0;
-        sb.setBlendFunction(GL20.GL_SRC_ALPHA, 1);
+        sb.setBlendFunction(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
         sb.setColor(this.color);
         sb.draw(DamoclesGlyph, this.x - 15f, this.y, 64.0F, 64.0F, 128.0F, 368.0F, this.scaleX * Settings.scale, this.scaleY * Settings.scale, this.rotation, 0, 0, 128, 368, false, false);
 

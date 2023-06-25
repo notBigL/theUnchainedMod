@@ -17,6 +17,7 @@ import theUnchainedMod.actions.WideSwingEndTurnAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.AbstractChainPower;
+import theUnchainedMod.powers.AbstractMasterChainPower;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
@@ -51,7 +52,7 @@ public class WideSwing extends AbstractDynamicCard {
     @Override
     public void triggerOnGlowCheck() {
         for (AbstractPower p : AbstractDungeon.player.powers) {
-            if (p instanceof AbstractChainPower) {
+            if (p instanceof AbstractChainPower || p instanceof AbstractMasterChainPower) {
                 this.glowColor = new Color(1.0F, 0.0F, 0.0F, 1.0F);
                 return;
             }
