@@ -30,6 +30,11 @@ public class CustomPotionsFlashPatch {
             ___liquidImg[0] = loadImage(makePotionPath("linkPotion/liquid.png"));
             ___hybridImg[0] = loadImage(makePotionPath("linkPotion/hybrid.png"));
             ___spotsImg[0] = loadImage(makePotionPath("linkPotion/spots.png"));
+        }else if(p.size == CustomPotionEnums.RELAY) {
+            ___containerImg[0] = loadImage(makePotionPath("relayPotion/body.png"));
+            ___liquidImg[0] = loadImage(makePotionPath("relayPotion/liquid.png"));
+            ___hybridImg[0] = loadImage(makePotionPath("relayPotion/hybrid.png"));
+            ___spotsImg[0] = loadImage(makePotionPath("relayPotion/spots.png"));
         }
     }
 }

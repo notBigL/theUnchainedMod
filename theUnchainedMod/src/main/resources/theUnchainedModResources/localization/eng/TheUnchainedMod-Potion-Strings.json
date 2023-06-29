@@ -25,5 +25,11 @@
     "DESCRIPTIONS": [
       "Apply ", " Crushed Armor to ALL enemies."
     ]
+  },
+  "theUnchainedMod:RelayPotion": {
+    "NAME": "Bottled Arcanum",
+    "DESCRIPTIONS": [
+      "Gain ", " Relay and ",  " Relayed Damage."
+    ]
   }
 }

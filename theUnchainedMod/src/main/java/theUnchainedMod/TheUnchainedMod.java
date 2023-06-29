@@ -26,6 +26,7 @@ import theUnchainedMod.events.TheDemonSpeaksEvent;
 import theUnchainedMod.potions.DancePotion;
 import theUnchainedMod.potions.ChainGrease;
 import theUnchainedMod.potions.CrushingElixir;
+import theUnchainedMod.potions.RelayPotion;
 import theUnchainedMod.relics.*;
 import theUnchainedMod.util.IDCheckDontTouchPls;
 import theUnchainedMod.util.TextureLoader;
@@ -126,6 +127,10 @@ public class TheUnchainedMod implements
     public static final Color CRUSH_POTION_LIQUID = CardHelper.getColor(115.0f, 180.0f, 223.0f);
     public static final Color CRUSH_POTION_HYBRID = CardHelper.getColor(68.0f, 108.0f, 134.0f);
     public static final Color CRUSH_POTION_SPOTS = CardHelper.getColor(255.0f, 173.0f, 48.0f);
+    public static final Color RELAY_POTION_LIQUID = CardHelper.getColor(210.0f, 60f, 80f);
+    public static final Color RELAY_POTION_HYBRID = CardHelper.getColor(150, 45, 60f);
+    public static final Color RELAY_POTION_SPOTS = CardHelper.getColor(255.0f, 150.0f, 150.0f);
+
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
@@ -428,7 +433,7 @@ public class TheUnchainedMod implements
         BaseMod.addPotion(ChainGrease.class, LINK_POTION_LIQUID, LINK_POTION_HYBRID, LINK_POTION_SPOTS, ChainGrease.POTION_ID, TheUnchained.Enums.THE_UNCHAINED);
         BaseMod.addPotion(DancePotion.class, DANCE_POTION_LIQUID, DANCE_POTION_HYBRID, DANCE_POTION_SPOTS, DancePotion.POTION_ID, TheUnchained.Enums.THE_UNCHAINED);
         BaseMod.addPotion(CrushingElixir.class, CRUSH_POTION_LIQUID, CRUSH_POTION_HYBRID, CRUSH_POTION_SPOTS, CrushingElixir.POTION_ID, TheUnchained.Enums.THE_UNCHAINED);
-
+        BaseMod.addPotion(RelayPotion.class, RELAY_POTION_LIQUID, RELAY_POTION_HYBRID, RELAY_POTION_SPOTS, RelayPotion.POTION_ID, TheUnchained.Enums.THE_UNCHAINED);
 
         logger.info("Done editing potions");
     }

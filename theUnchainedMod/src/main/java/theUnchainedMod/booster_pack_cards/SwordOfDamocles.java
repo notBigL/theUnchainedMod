@@ -23,17 +23,14 @@ public class SwordOfDamocles extends AbstractDynamicCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_BOOSTER;
-
     private static final int COST = 0;
     private static final int MAGIC_NUMBER = 6; // Temp Strength
     private static final int UPGRADE_MAGIC_NUMBER = 3;
     private static final int CHAIN_LENGTH = 1; //Chain Length
-    //private static final int SECOND_MAGIC_NUMBER = 8; // Self Damage
 
     public SwordOfDamocles() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        //defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
         this.exhaust = true;
         tags.add(CustomTags.CHAIN);
     }

@@ -25,5 +25,11 @@
     "DESCRIPTIONS": [
       "Aplica ", " de Armadura Aplastada para TODOS los enemigos."
     ]
+  },
+  "theUnchainedMod:RelayPotion": {
+    "NAME": "Bottled Arcanum",
+    "DESCRIPTIONS": [
+      "Gain ", " Relay and ",  " Relayed Damage."
+    ]
   }
 }

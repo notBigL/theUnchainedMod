@@ -39,6 +39,12 @@ public class CustomPotionAssets {
             ___hybridImg[0] = loadImage(makePotionPath("linkPotion/hybrid.png"));
             ___spotsImg[0] = loadImage(makePotionPath("linkPotion/empty.png"));
             ___outlineImg[0] = loadImage(makePotionPath("linkPotion/outline.png"));
+        }else if(potion.size == CustomPotionEnums.RELAY) {
+            ___containerImg[0] = loadImage(makePotionPath("relayPotion/body.png"));
+            ___liquidImg[0] = loadImage(makePotionPath("relayPotion/liquid.png"));
+            ___hybridImg[0] = loadImage(makePotionPath("relayPotion/hybrid.png"));
+            ___spotsImg[0] = loadImage(makePotionPath("relayPotion/spots.png"));
+            ___outlineImg[0] = loadImage(makePotionPath("relayPotion/outline.png"));
         }
     }
 }
