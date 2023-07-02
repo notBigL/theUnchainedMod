@@ -5,16 +5,15 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.ImmovableObjectPower;
 
-import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class ImmovableObject extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(ImmovableObject.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(ImmovableObject.class.getSimpleName());
     public static final String IMG = makeCardPath("ImmovableObject.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -25,8 +24,8 @@ public class ImmovableObject extends AbstractDynamicCard {
     private static final int COST = 2;
     private static final int BLOCK = 11;
     private static final int UPGRADE_PLUS_BLOCK = 2;
-    private static final int MAGIC_NUMBER = 4;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
+    private static final int MAGIC_NUMBER = 3;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
 
     public ImmovableObject() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

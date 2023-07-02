@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
 import theUnchainedMod.powers.NextTurnRelayedDamagePower;
 import theUnchainedMod.powers.RelayedDamagePower;
 

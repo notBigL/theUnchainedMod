@@ -7,17 +7,17 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.RelayedDmgSum;
 import theUnchainedMod.vfx.SharePainEffect;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class SharePain extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(SharePain.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(SharePain.class.getSimpleName());
     public static final String IMG = makeCardPath("SharePain.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -71,7 +71,8 @@ public class SharePain extends AbstractDynamicCard {
         this.damage += this.magicNumber;
         this.calculateCardDamage(m);
         for (int i = 0; i < Math.min(this.damage, 200.0F); i += 5) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SharePainEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY)));
+            int randomGlyphAmount = (int)(Math.random() * 7) + 1;
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SharePainEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY, randomGlyphAmount)));
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE, true));
     }

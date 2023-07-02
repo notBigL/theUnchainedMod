@@ -7,20 +7,18 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import com.megacrit.cardcrawl.vfx.ThoughtBubble;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.TiedToAnEnemyPower;
 import theUnchainedMod.powers.TiedToThePlayerPower;
 import theUnchainedMod.vfx.TetheredMindEffect;
 
-import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
-public class TetheredMind extends AbstractDynamicCard {
+public class TetheredMind extends AbstractDynamicRelayCard {
 
-    public static final String ID = DefaultMod.makeID(TetheredMind.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(TetheredMind.class.getSimpleName());
     public static final String IMG = makeCardPath("TetheredMind.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF_AND_ENEMY;

@@ -1,24 +1,25 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.powers.StareDownChainPower;
-import theUnchainedMod.powers.WhiplashPower;
-import theUnchainedMod.relics.Churros;
+import theUnchainedMod.util.UtilityClass;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class StareDown extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(StareDown.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(StareDown.class.getSimpleName());
     public static final String IMG = makeCardPath("StareDown.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -49,6 +50,10 @@ public class StareDown extends AbstractDynamicCard {
         }
     }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if(UtilityClass.ChurrosPowerActivated()) this.glowColor = Color.PURPLE;
+    }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));

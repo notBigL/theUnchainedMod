@@ -5,16 +5,17 @@ import com.megacrit.cardcrawl.actions.watcher.SkipEnemiesTurnAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.AbstractChainPower;
+import theUnchainedMod.powers.AbstractMasterChainPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class ThreadOfAriadne extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(ThreadOfAriadne.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(ThreadOfAriadne.class.getSimpleName());
     public static final String IMG = makeCardPath("ThreadOfAriadne.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -49,7 +50,7 @@ public class ThreadOfAriadne extends AbstractDynamicCard {
         if(!super.canUse(p, m)) return false;
 
         for (AbstractPower po : p.powers) {
-            if (po instanceof AbstractChainPower) {
+            if (po instanceof AbstractChainPower || po instanceof AbstractMasterChainPower) {
                 return true;
             }
         }

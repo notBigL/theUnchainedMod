@@ -1,5 +1,6 @@
 package theUnchainedMod.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -7,17 +8,16 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
-import theUnchainedMod.patches.RelayHelpers;
-import theUnchainedMod.powers.NextTurnRelayedDamagePower;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.util.TextureLoader;
 
-import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;
-import static theUnchainedMod.DefaultMod.makeRelicPath;
+import static theUnchainedMod.TheUnchainedMod.makeRelicOutlinePath;
+import static theUnchainedMod.TheUnchainedMod.makeRelicPath;
 
 public class TotemOfPain extends CustomRelic {
-    public static final String ID = DefaultMod.makeID("TotemOfPain");
+    public static final String ID = TheUnchainedMod.makeID("TotemOfPain");
 
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("TotemOfPain_relic.png"));
@@ -25,6 +25,10 @@ public class TotemOfPain extends CustomRelic {
 
     public TotemOfPain() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        tips.add(new PowerTip(
+                BaseMod.getKeywordTitle(DESCRIPTIONS[1].toLowerCase()),
+                BaseMod.getKeywordDescription(DESCRIPTIONS[1].toLowerCase())
+        ));
     }
 
     @Override

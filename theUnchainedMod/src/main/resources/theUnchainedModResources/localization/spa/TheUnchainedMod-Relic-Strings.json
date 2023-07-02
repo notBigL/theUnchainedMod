@@ -1,0 +1,107 @@
+{
+  "theUnchainedMod:BalletShoes": {
+    "NAME": "Zapatos de Ballet",
+    "FLAVOR": "Imposible hacer una mala pose con estos.",
+    "DESCRIPTIONS": [
+      "El #yImpulso requerido para el próximo remolino es siempre uno menos.",
+      "theunchainedmod:Momentum",
+      "theunchainedmod:Swirl"
+    ]
+  },
+  "theUnchainedMod:HeartOfTheUnderdog": {
+    "NAME": "Corazón del Desvalido",
+    "FLAVOR": "Sientes que late más fuerte cada vez que las probabilidades están en tu contra.",
+    "DESCRIPTIONS": [
+      "Al final del turno, gana 1 de Fuerza si no tienes más Bloqueo que TODOS los enemigos combinados."
+    ]
+  },
+  "theUnchainedMod:Carabiner": {
+    "NAME": "Mosquetón",
+    "FLAVOR": "No hay mejor herramienta para conectar Cadenas.",
+    "DESCRIPTIONS": [
+      "Las cadenas ya no se desgastan al final del turno.",
+      "theunchainedmod:Chain"
+    ]
+  },
+  "theUnchainedMod:BrokenCharm": {
+    "NAME": "Amuleto Roto",
+    "FLAVOR": "Hacerlo sonar no hace el más agradable de los sonidos, pero tiene valor emocional.",
+    "DESCRIPTIONS": [
+      "Al comienzo de tus primeros 3 turnos, gana #y",
+      " de Relevo.",
+      "theunchainedmod:Relay"
+    ]
+  },
+  "theUnchainedMod:Churros": {
+    "NAME": "Churros",
+    "FLAVOR": "Estas sabrosas golosinas te llenan de una explosión de energía.",
+    "DESCRIPTIONS": [
+      "Cada 7ª Cadena que comienzas se copia.",
+      "theunchainedmod:Chain"
+    ]
+  },
+  "theUnchainedMod:Memento": {
+    "NAME": "Recuerdo",
+    "FLAVOR": "El demonio despierta cuando la marea de la batalla cambia.",
+    "DESCRIPTIONS": [
+      "La primera vez que ataques a un enemigo con bloqueo en cada turno, gana [E] ."
+    ]
+  },
+  "theUnchainedMod:TotemOfPain": {
+    "NAME": "Tótem del Dolor",
+    "FLAVOR": "Cuando escuchas de cerca, puedes escuchar al demonio susurrar: 'Compartir es cuidar'.",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, golpea a un enemigo aleatorio por TODO el Daño Colateral que hayas ganado desde el último turno.",
+      "theunchainedmod:Relayed_Damage"
+    ]
+  },
+  "theUnchainedMod:DancingRibbons": {
+    "NAME": "Cintas Danzantes",
+    "FLAVOR": "Te recuerda los momentos felices que pasaste bailando en la taberna",
+    "DESCRIPTIONS": [
+      "Los Remolinos cuentan como cualquier carta para una Cadena.",
+      "theunchainedmod:Swirl",
+      "theunchainedmod:Chain"
+    ]
+  },
+  "theUnchainedMod:Wrench": {
+    "NAME": "Llave Inglesa",
+    "FLAVOR": "Nunca puedes mantener tu armadura lo suficientemente apretada.",
+    "DESCRIPTIONS": [
+      "Cada vez que aplicas Armadura Aplastada, el enemigo pierde #y4 HP.",
+      "theunchainedmod:Crushed_Armor"
+    ]
+  },
+  "theUnchainedMod:CrushingGauntlets": {
+    "NAME": "Guanteletes Aplastantes",
+    "FLAVOR": "¿Por qué detenerte en aplastar su armadura cuando en su lugar podrías aplastarlos?",
+    "DESCRIPTIONS": [
+      "Ya no puedes aplicar Armadura Aplastada, sino que repartes el triple de la cantidad directamente a su HP.",
+      "theunchainedmod:Crushed_Armor"
+    ]
+  },
+  "theUnchainedMod:ArcaneAmplifier": {
+    "NAME": "Arcane Amplifier",
+    "FLAVOR": "You feel in tune with the making at the heart of the world.",
+    "DESCRIPTIONS": [
+      "Every #b3 times you gain #yRelay in a single turn, gain #b1 #yArcane #yMastery.",
+      "theunchainedmod:Relay",
+      "theunchainedmod:Arcane_Mastery"
+    ]
+  },
+  "theUnchainedMod:RustedChains": {
+    "NAME": "Rusted Chains",
+    "FLAVOR": "These used to hold you to a prison wall. Now they are handy tools.",
+    "DESCRIPTIONS": [
+      "The #b6th card you play each combat draws a card, the next card costs #b0."
+    ]
+  },
+  "theUnchainedMod:PolishedChains": {
+    "NAME": "Polished Chains",
+    "FLAVOR": "You can see your own reflection in these.",
+    "DESCRIPTIONS": [
+      "Replaces #yRusted #yChains. EVERY #b6th card you play each combat draws a card, the next card you play costs #b0.",
+      "theunchainedmod:Chain"
+    ]
+  }
+}

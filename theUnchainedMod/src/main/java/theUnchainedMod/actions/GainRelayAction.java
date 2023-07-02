@@ -1,5 +1,6 @@
 package theUnchainedMod.actions;
 
+import basemod.devcommands.relic.Relic;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -12,8 +13,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import theUnchainedMod.patches.RelayHelpers;
+import theUnchainedMod.powers.ArcaneMasteryPower;
 import theUnchainedMod.powers.GlyphBrandPower;
 import theUnchainedMod.powers.RelayPower;
+import theUnchainedMod.relics.ArcaneAmplifier;
 
 public class GainRelayAction extends AbstractGameAction {
 
@@ -33,6 +36,11 @@ public class GainRelayAction extends AbstractGameAction {
                     if (!mo.isDeadOrEscaped() && mo.hasPower(GlyphBrandPower.POWER_ID)) {
                         mo.getPower(GlyphBrandPower.POWER_ID).onSpecificTrigger();
                     }
+                }
+
+                if(((AbstractPlayer) target).hasRelic(ArcaneAmplifier.ID))
+                {
+                    ((AbstractPlayer) target).getRelic(ArcaneAmplifier.ID).onTrigger();
                 }
             }
         }

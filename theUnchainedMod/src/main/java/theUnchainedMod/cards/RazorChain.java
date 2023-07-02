@@ -6,16 +6,16 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.HeavyHitPower;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class RazorChain extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(RazorChain.class.getSimpleName());
-    public static final String IMG = makeCardPath("SliceThrough.png");
+    public static final String ID = TheUnchainedMod.makeID(RazorChain.class.getSimpleName());
+    public static final String IMG = makeCardPath("RazorChain.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;

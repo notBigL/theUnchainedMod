@@ -13,4 +13,7 @@ public class CustomPotionEnums {
 
     @SpireEnum
     public static AbstractPotion.PotionSize LINK;
+
+    @SpireEnum
+    public static AbstractPotion.PotionSize RELAY;
 }

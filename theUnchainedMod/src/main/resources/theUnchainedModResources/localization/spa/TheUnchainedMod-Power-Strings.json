@@ -1,0 +1,467 @@
+{
+  "theUnchainedMod:CommonPower": {
+    "NAME": "Poder para Mantener Posición",
+    "DESCRIPTIONS": [
+      "Aplicaste #b",
+      "palabra clave.",
+      "palabras clave."
+    ]
+  },
+  "theUnchainedMod:RarePower": {
+    "NAME": "Poder para Mantener Posición",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, TOCA #b",
+      " enemigo.",
+      " enemigos."
+    ]
+  },
+  "theUnchainedMod:UnshacklingPower": {
+    "NAME": "Desencadenado",
+    "DESCRIPTIONS": [
+      "Después de jugar una carta, actualízala.",
+      "Después de jugar una carta, actualízala #b",
+      " veces."
+    ]
+  },
+  "theUnchainedMod:BrassKnucklePower": {
+    "NAME": "Cadena de Ataque",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más de Ataque en este turno, gana #y1 de energía.",
+      "Si juegas #b",
+      "más Ataques en este turno, gana #y1 de energía."
+    ]
+  },
+  "theUnchainedMod:WhiplashPower": {
+    "NAME": "Cadena de Ataque",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más de Ataque en este turno, el enemigo pierde #r",
+      " de Salud.",
+      "Si juegas #b",
+      " más de Ataque en este turno, el enemigo pierde #r"
+    ]
+  },
+  "theUnchainedMod:PlayDeadPower": {
+    "NAME": "Cadena de Habilidad",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más de Habilidad en este turno, gana #y1 intangible.",
+      "Si juegas #b",
+      " más de Habilidades en este Turno, gana #y1 Intangible."
+    ]
+  },
+  "theUnchainedMod:RelayPower": {
+    "NAME": "Relevo",
+    "DESCRIPTIONS": [
+      "Bloquea #b",
+      " de daño en este turno. El daño bloqueado se obtiene como Daño Colateral."
+    ]
+  },
+  "theUnchainedMod:RelayedDamagePower": {
+    "NAME": "Daño Colateral",
+    "DESCRIPTIONS": [
+      "Al final de este turno, toma #r",
+      " de daño."
+    ]
+  },
+  "theUnchainedMod:ArcaneCharmPower": {
+    "NAME": "Encanto Arcano",
+    "DESCRIPTIONS": [
+      "Obten #y",
+      " de Relevo al comienzo de tu turno."
+    ]
+  },
+  "theUnchainedMod:QuickSwingPower": {
+    "NAME": "Cadena de Ataque",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más de Ataque en este turno, roba #y2 cartas.",
+      "Si juegas #b",
+      " más de Ataque en este turno, roba #y2 cartas.",
+      "Si juegas #b1 más de Ataque en este turno, roba #y3 cartas.",
+      " más de Ataque en este turno, roba #y3 cartas."
+    ]
+  },
+  "theUnchainedMod:StepBackPower": {
+    "NAME": "Cadena de Habilidad",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más de Habilidad en este turno, gana #b",
+      " de Bloqueo.",
+      "Si juegas #b",
+      " más de Habilidades en este turno, gana #b"
+    ]
+  },
+  "theUnchainedMod:MakeRoomPower": {
+    "NAME": "Cadena de Habilidad",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más de Habilidad en este turno, gana #y2 de Energía.",
+      "Si juegas #b",
+      " más de Habilidad en este turno, gana #y2 de Energía."
+    ]
+  },
+  "theUnchainedMod:OiledChainsPower": {
+    "NAME": "Extensión de Cadena",
+    "DESCRIPTIONS": [
+      "La siguiente carta que juegues es gratis."
+    ]
+  },
+  "theUnchainedMod:TiedToThePlayerPower": {
+    "NAME": "Atado al Jugador",
+    "DESCRIPTIONS": [
+      "Este enemigo pierde HP #y",
+      " veces",
+      " cada vez que el jugador recibe daño."
+    ]
+  },
+  "theUnchainedMod:TiedToAnEnemyPower": {
+    "NAME": "Atado a un Enemigo",
+    "DESCRIPTIONS": [
+      "Tu mente está atada a un enemigo."
+    ]
+  },
+  "theUnchainedMod:CruiserweightPower": {
+    "NAME": "Peso Ligero",
+    "DESCRIPTIONS": [
+      "Cada vez que saques una carta de coste 2. Roba #y",
+      " carta.",
+      " cartas."
+    ]
+  },
+  "theUnchainedMod:MuscleMemoryPower": {
+    "NAME": "Memoria Muscular",
+    "DESCRIPTIONS": [
+      "La siguiente carta de coste 2 que juegues se juega dos veces.",
+      "La siguiente #b",
+      " cartas de coste 2 que juegas se juegan dos veces."
+    ]
+  },
+  "theUnchainedMod:NextTurnRelayedDamagePower": {
+    "NAME": "Daño en el siguiente turno",
+    "DESCRIPTIONS": [
+      "Al final del siguiente turno, toma #r",
+      " de daño."
+    ]
+  },
+  "theUnchainedMod:FractalShieldPower": {
+    "NAME": "Escudo Fractal",
+    "DESCRIPTIONS": [
+      "Relevo bloquea el Daño Colateral."
+    ]
+  },
+  "theUnchainedMod:ClaustrophobiaPower": {
+    "NAME": "Claustrofobia",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, aplica #b",
+      " de Armadura Aplastada a TODOS los enemigos."
+    ]
+  },
+  "theUnchainedMod:SolarPlexusPower": {
+    "NAME": "Cadena de Ataque",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más de Ataque en este turno, aturde al enemigo.",
+      "Si juegas #b",
+      " más de Ataque en este turno, aturde al enemigo."
+    ]
+  },
+  "theUnchainedMod:MomentumPower": {
+    "NAME": "Impulso",
+    "DESCRIPTIONS": [
+      "Tienes #g",
+      " de Impulso. Cuando obtengas #b",
+      " de Impulso, agrega un Remolino a tu mano."
+    ]
+  },
+  "theUnchainedMod:FullSpinPower": {
+    "NAME": "Vueltas Completas",
+    "DESCRIPTIONS": [
+      "Has hecho #b",
+      " Vueltas Completas este turno.",
+      " Vuelta Completa este turno."
+    ]
+  },
+  "theUnchainedMod:GainMomentumEveryTurnPower": {
+    "NAME": "Equilibrio Perfecto",
+    "DESCRIPTIONS": [
+      "Obten #y",
+      " de Impulso a cada paso."
+    ]
+  },
+  "theUnchainedMod:SwirlsHitAllEnemiesPower": {
+    "NAME": "Gran radio",
+    "DESCRIPTIONS": [
+      "Los Remolinos golpean a TODOS los enemigos."
+    ]
+  },
+  "theUnchainedMod:RelentlessOnslaughtPower": {
+    "NAME": "Cadena de Ataque",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más de Ataque en este turno, reparte #y",
+      " daña #y",
+      " veces, y vuelve a aplicar esta Cadena."
+    ]
+  },
+  "theUnchainedMod:TunnelVisionChainPower": {
+    "NAME": "Cadena de Poder",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más de Poder en este turno, gana #y",
+      " de Vision de Tunel.",
+      "Si juegas #b",
+      " más Poderes en este turno, gana #y"
+    ]
+  },
+  "theUnchainedMod:EnclosingSteelPower": {
+    "NAME": "Abrazado por Cadenas",
+    "DESCRIPTIONS": [
+      "No pierdes tu Relevo al comienzo del siguiente turno.",
+      "No pierdes tu Relevo al comienzo de los próximos #b",
+      " turnos."
+    ]
+  },
+  "theUnchainedMod:MagusFormPower": {
+    "NAME": "Forma de Mago",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta de coste 2, gana #y",
+      " de Energía."
+    ]
+  },
+  "theUnchainedMod:LongerChainsPower": {
+    "NAME": "Gracia del Príncipe",
+    "DESCRIPTIONS": [
+      "Al comienzo de cada turno, TODOS los enemigos ganan #y",
+      " de Bloqueo."
+    ]
+  },
+  "theUnchainedMod:PremonitionPower": {
+    "NAME": "Premonición",
+    "DESCRIPTIONS": [
+      "Si terminas tu turno con 0 de Energía, gana #y",
+      " de Energía al siguiente turno.",
+      "Siguiente turno ganas #y",
+      " de Energía."
+    ]
+  },
+  "theUnchainedMod:InfiniteChainPower": {
+    "NAME": "Cadena Infinita",
+    "DESCRIPTIONS": [
+      "Siguiente turno, agrega",
+      " Cadena Infinita en tu mano."
+    ]
+  },
+  "theUnchainedMod:LawOfInertiaPower": {
+    "NAME": "Inercia",
+    "DESCRIPTIONS": [
+      " Al comienzo del turno, pierdes",
+      " de Fuerza y de Destreza, si no terminaste una Cadena el turno anterior."
+    ]
+  },
+  "theUnchainedMod:AccelerationPower": {
+    "NAME": "Acelerar",
+    "DESCRIPTIONS": [
+      " La primera vez que termines una Cadena en cada turno, gana",
+      " de Fuerza y de Destreza."
+    ]
+  },
+  "theUnchainedMod:LastResortPower": {
+    "NAME": "Cadena de Habilidad",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más de Habilidad en este turno, pierdes TODA tu energía.",
+      "Si juegas #b",
+      " más de Habilidades en este turno, pierdes TODA tu energía."
+    ]
+  },
+  "theUnchainedMod:FluidMovementPower": {
+    "NAME": "Movimiento Fluido",
+    "DESCRIPTIONS": [
+      "Cada vez que termines una Cadena, gana #y",
+      " de Impulso."
+    ]
+  },
+  "theUnchainedMod:HobblesPower": {
+    "NAME": "Cadena de Ataque",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más Ataque en este turno, el enemigo pierde #y",
+      " de Fuerza.",
+      "Si juegas #b",
+      " más de Ataque en este turno, el enemigo pierde #y"
+    ]
+  },
+  "theUnchainedMod:SwingingPower": {
+    "NAME": "Sigue Balanceándote",
+    "DESCRIPTIONS": [
+      "TODAS las cartas de Remolinos infligen #b",
+      " más daño en este combate."
+    ]
+  },
+  "theUnchainedMod:ChaseDestinyPower": {
+    "NAME": "Camino al Destino",
+    "DESCRIPTIONS": [
+      "Este turno, gana 1 de Energía cada vez que termines una Cadena.",
+      "Este y el próximo turno, gana 1 de Energía cada vez que termines una Cadena.",
+      "Gana 1 de Energía para los próximos #y",
+      " turnos, cada vez que terminas una Cadena."
+    ]
+  },
+  "theUnchainedMod:OverviewPower": {
+    "NAME": "Cadena de Habilidad",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más de Habilidad este turno, TODOS los enemigos ganan #b",
+      "Si juegas #b",
+      " más de Habilidades en este turno, TODOS los enemigos ganan #b",
+      " de Débil."
+    ]
+  },
+  "theUnchainedMod:CrushedArmorPower": {
+    "NAME": "Armadura Aplastada",
+    "DESCRIPTIONS": [
+      "Pierde #r",
+      " HP cada vez que gana bloqueo."
+    ]
+  },
+  "theUnchainedMod:TaxedPower": {
+    "NAME": "Gravado",
+    "DESCRIPTIONS": [
+      "Este enemigo es demasiado pobre para ser gravado nuevamente."
+    ]
+  },
+  "theUnchainedMod:RandomCommonAttackChainPower": {
+    "NAME": "Cadena de Ataque",
+    "DESCRIPTIONS": [
+      "Si juegas #b1 más de Ataque en este turno, agrega un ataque común aleatorio a tu mano.",
+      "Si juegas #b",
+      " más de Ataques en este turno, agrega un Ataque común aleatorio a tu mano."
+    ]
+  },
+  "theUnchainedMod:GainMomentumNextTurnPower": {
+    "NAME": "Impulso Llevado",
+    "DESCRIPTIONS": [
+      "Siguiente turno, gana #y",
+      " de Impulso."
+    ]
+  },
+  "theUnchainedMod:WeldingPower": {
+    "NAME": "Soldadura",
+    "DESCRIPTIONS": [
+      "La primera Cadena que comienzas en cada turno, se termina al instante.",
+      "Las primeras #y",
+      " Cadenas que comienzas en cada turno, se terminan al instante."
+    ]
+  },
+  "theUnchainedMod:FuseChainPower": {
+    "NAME": "Cadenas Fusibles",
+    "DESCRIPTIONS": [
+      "La siguiente cadena que comienzas, se termina al instante.",
+      "Las siguientes #y",
+      " Cadenas que comienzas, se terminan al instante."
+    ]
+  },
+  "theUnchainedMod:TiedDownPower": {
+    "NAME": "Atado",
+    "DESCRIPTIONS": [
+      "Al final de su turno, gana #b",
+      " de Fuerza.",
+      "Al final de su siguiente turno, gana #b"
+    ]
+  },
+  "theUnchainedMod:GuardedPosturePower": {
+    "NAME": "Postura Cautelosa",
+    "DESCRIPTIONS": [
+      "Cada vez que se termina una Cadena, gana #b",
+      " de Bloqueo."
+    ]
+  },
+  "theUnchainedMod:GlyphBrandPower": {
+    "NAME": "Marca",
+    "DESCRIPTIONS": [
+      "Cada vez que ganas Relevo en este turno, este enemigo toma #y",
+      " de daño."
+    ]
+  },
+  "theUnchainedMod:NextTurnRelayedDamage": {
+    "NAME": "Daño Colateral",
+    "DESCRIPTIONS": [
+      "Tu ",
+      " de Daño Colateral te golpeará el próximo turno por #y",
+      " de daño."
+    ]
+  },
+  "theUnchainedMod:ThisTurnRelayedDamage": {
+    "NAME": "Daño Colateral",
+    "DESCRIPTIONS": [
+      "Tu ",
+      " de Daño Colateral te golpeará este turno por #r",
+      " de daño."
+    ]
+  },
+  "theUnchainedMod:ImmovableObjectPower": {
+    "NAME": "Objeto Inamovible",
+    "DESCRIPTIONS": [
+      "Cuando es atacado, atacar al enemigo gana #y",
+      " de Armadura Aplastada."
+    ]
+  },
+  "theUnchainedMod:HeavyHitPower": {
+    "NAME": "Golpes Fuertes",
+    "DESCRIPTIONS": [
+      "Este turno, golpear a un enemigo se aplica #y",
+      " de Armadura Aplastada."
+    ]
+  },
+  "theUnchainedMod:ArcaneTransmutationPower": {
+    "NAME": "Transmutar Armadura",
+    "DESCRIPTIONS": [
+      "Obten #y",
+      " de Relevo, cada vez que un enemigo gana Bloqueo."
+    ]
+  },
+  "theUnchainedMod:DeliciousChurroPower": {
+    "NAME": "Churro Delicioso",
+    "DESCRIPTIONS": [
+      "Este turno, se copia la siguiente Cadena que comienzas."
+    ]
+  },
+  "theUnchainedMod:MagicMechaPower": {
+    "NAME": "Mecha Mágica",
+    "DESCRIPTIONS": [
+      "Si juegas",
+      " #b",
+      " más de Ataque,",
+      " más de Habilidad y",
+      " más de Poder,",
+      " Obtienes #y",
+      " de Fuerza, Destreza y #yArcana #yMaestría"
+    ]
+  },
+  "theUnchainedMod:ArcaneMasteryPower": {
+    "NAME": "Maestría Arcana",
+    "DESCRIPTIONS": [
+      "Aumenta todos los Relevos ganados por cartas en este combate por #b"
+    ]
+  },
+  "theUnchainedMod:BarbedWireChainsPower": {
+    "NAME": "Cadenas de Alambre de Púas",
+    "DESCRIPTIONS": [
+      "inflige #b",
+      " a TODOS los enemigos por cada Cadena no terminada al final de tu turno."
+    ]
+  },
+
+  TODO
+  "theUnchainedMod:DamoclesChainPower": {
+    "NAME": "Sword of Damocles",
+    "DESCRIPTIONS": [
+      "If you play",
+      " #b",
+      " more Attack,",
+      " more Skill and",
+      " more Power, ",
+      " this Turn, take #b",
+      " damage and lose #b",
+      " Strength."
+    ]
+  },
+  "theUnchainedMod:TelekineticPulsePower": {
+    "NAME": "Skill Chain",
+    "DESCRIPTIONS": [
+      "If you play #b1 more Skill this turn, ALL enemies gain #y",
+      " Block and lose #y",
+      " HP."
+    ]
+  }
+}

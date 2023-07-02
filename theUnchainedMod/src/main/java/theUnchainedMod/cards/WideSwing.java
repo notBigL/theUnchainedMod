@@ -12,16 +12,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.WideSwingEndTurnAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.AbstractChainPower;
+import theUnchainedMod.powers.AbstractMasterChainPower;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class WideSwing extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(WideSwing.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(WideSwing.class.getSimpleName());
     public static final String IMG = makeCardPath("WideSwing.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
@@ -51,7 +52,7 @@ public class WideSwing extends AbstractDynamicCard {
     @Override
     public void triggerOnGlowCheck() {
         for (AbstractPower p : AbstractDungeon.player.powers) {
-            if (p instanceof AbstractChainPower) {
+            if (p instanceof AbstractChainPower || p instanceof AbstractMasterChainPower) {
                 this.glowColor = new Color(1.0F, 0.0F, 0.0F, 1.0F);
                 return;
             }

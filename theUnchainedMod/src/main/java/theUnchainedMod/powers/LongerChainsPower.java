@@ -7,14 +7,14 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.AllEnemiesGainBlockAction;
 import theUnchainedMod.util.TextureLoader;
 
 public class LongerChainsPower extends AbstractPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("LongerChainsPower");
+    public static final String POWER_ID = TheUnchainedMod.makeID("LongerChainsPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

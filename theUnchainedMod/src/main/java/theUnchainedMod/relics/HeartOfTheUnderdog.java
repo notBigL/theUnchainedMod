@@ -1,20 +1,22 @@
 package theUnchainedMod.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.util.TextureLoader;
 
-import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;
-import static theUnchainedMod.DefaultMod.makeRelicPath;
+import static theUnchainedMod.TheUnchainedMod.makeRelicOutlinePath;
+import static theUnchainedMod.TheUnchainedMod.makeRelicPath;
 
 public class HeartOfTheUnderdog extends CustomRelic {
-    public static final String ID = DefaultMod.makeID("HeartOfTheUnderdog");
+    public static final String ID = TheUnchainedMod.makeID("HeartOfTheUnderdog");
 
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("HeartOfTheUnderdog_relic.png"));

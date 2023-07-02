@@ -1,24 +1,25 @@
 package theUnchainedMod.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.MultiAttackAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.DeliciousChurroPower;
-import theUnchainedMod.powers.RelentlessBatteryPower;
-import theUnchainedMod.powers.WhiplashPower;
-import theUnchainedMod.relics.Churros;
+import theUnchainedMod.powers.RelentlessOnslaughtPower;
+import theUnchainedMod.util.UtilityClass;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class RelentlessOnslaught extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(RelentlessOnslaught.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(RelentlessOnslaught.class.getSimpleName());
     public static final String IMG = makeCardPath("RelentlessOnslaught.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -45,17 +46,20 @@ public class RelentlessOnslaught extends AbstractDynamicCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
         }
-
     }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if(UtilityClass.ChurrosPowerActivated()) this.glowColor = Color.PURPLE;
+    }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         DamageInfo info = new DamageInfo(p, this.damage, this.damageTypeForTurn);
         AbstractDungeon.actionManager.addToBottom(new MultiAttackAction(magicNumber, m, info));
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessBatteryPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessOnslaughtPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
         if (p.hasPower(DeliciousChurroPower.POWER_ID)) {
             p.getPower(DeliciousChurroPower.POWER_ID).onSpecificTrigger();
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessBatteryPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new RelentlessOnslaughtPower(p, CHAIN_LENGTH, this.damage, this.magicNumber, m, info, TYPE)));
         }
     }
 }

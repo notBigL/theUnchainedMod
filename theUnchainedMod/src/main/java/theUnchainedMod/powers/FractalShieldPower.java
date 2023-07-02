@@ -6,17 +6,17 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.util.TextureLoader;
 
 public class FractalShieldPower extends AbstractPower {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("FractalShieldPower");
+    public static final String POWER_ID = TheUnchainedMod.makeID("FractalShieldPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-
+    public boolean blocksAllDamage;
     private static final Texture texture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/FractalShield_power48.png");
     private static final Texture texture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/FractalShield_power128.png");
 

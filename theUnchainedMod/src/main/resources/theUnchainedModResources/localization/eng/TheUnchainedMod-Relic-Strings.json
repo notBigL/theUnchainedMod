@@ -1,0 +1,106 @@
+{
+  "theUnchainedMod:BalletShoes": {
+    "NAME": "Ballet Shoes",
+    "FLAVOR": "Impossible to strike a bad pose with these.",
+    "DESCRIPTIONS": [
+      "The #yMomentum required for the next #ySwirl is always #b1 less.",
+      "theunchainedmod:Momentum",
+      "theunchainedmod:Swirl"
+    ]
+  },
+  "theUnchainedMod:RustedChains": {
+    "NAME": "Rusted Chains",
+    "FLAVOR": "These used to hold you to a prison wall. Now they are handy tools.",
+    "DESCRIPTIONS": [
+      "The #b6th card you play each combat draws a card, the next card costs #b0."
+    ]
+  },
+  "theUnchainedMod:HeartOfTheUnderdog": {
+    "NAME": "Heart of the Underdog",
+    "FLAVOR": "You feel it beat stronger whenever the odds are stacked against you.",
+    "DESCRIPTIONS": [
+      "At the end of turn, gain #b1 #yStrength if you do not have more #yBlock than ALL enemies combined."
+    ]
+  },
+  "theUnchainedMod:Carabiner": {
+    "NAME": "Carabiner",
+    "FLAVOR": "There is no better tool for connecting chains.",
+    "DESCRIPTIONS": [
+      "#yChains no longer wear off at the end of turn.",
+      "theunchainedmod:Chain"
+    ]
+  },
+  "theUnchainedMod:PolishedChains": {
+    "NAME": "Polished Chains",
+    "FLAVOR": "You can see your own reflection in these.",
+    "DESCRIPTIONS": [
+      "Replaces #yRusted #yChains. EVERY #b6th card you play each combat draws a card, the next card you play costs #b0."
+    ]
+  },
+  "theUnchainedMod:BrokenCharm": {
+    "NAME": "Broken Charm",
+    "FLAVOR": "Ringing it doesnt make the most pleasant of sounds, but it has emotional value.",
+    "DESCRIPTIONS": [
+      "At the start of your first #b3 turns, gain #b",
+      " #yRelay.",
+      "theunchainedmod:Relay"
+    ]
+  },
+  "theUnchainedMod:Churros": {
+    "NAME": "Churros",
+    "FLAVOR": "These tasty treats fill you with a burst of energy.",
+    "DESCRIPTIONS": [
+      "Every #b7th #yChain you start is copied.",
+      "theunchainedmod:Chain"
+    ]
+  },
+  "theUnchainedMod:Memento": {
+    "NAME": "Memento",
+    "FLAVOR": "The demon awakens when the tide of battle turns.",
+    "DESCRIPTIONS": [
+      "The first time you attack an enemy with #yBlock each turn, gain [E] ."
+    ]
+  },
+  "theUnchainedMod:TotemOfPain": {
+    "NAME": "Totem Of Pain",
+    "FLAVOR": "When you listen close, you can hear the demon whisper: 'Sharing is caring'.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, hit a random enemy for ALL #yRelayed #yDamage you gained since last turn.",
+      "theunchainedmod:Relayed_Damage"
+    ]
+  },
+  "theUnchainedMod:DancingRibbons": {
+    "NAME": "Dancing Ribbons",
+    "FLAVOR": "It reminds you of merry times spent dancing in the tavern hall",
+    "DESCRIPTIONS": [
+      "#ySwirls count as any card for a #yChain.",
+      "theunchainedmod:Swirl",
+      "theunchainedmod:Chain"
+    ]
+  },
+  "theUnchainedMod:Wrench": {
+    "NAME": "Wrench",
+    "FLAVOR": "You can never fasten your armor tight enough.",
+    "DESCRIPTIONS": [
+      "Whenever you apply #yCrushed #yArmor, the enemy loses #b4 HP.",
+      "theunchainedmod:Crushed_Armor"
+    ]
+  },
+  "theUnchainedMod:CrushingGauntlets": {
+    "NAME": "Crushing Gauntlets",
+    "FLAVOR": "Why stop at crushing their armor when you could instead crush THEM.",
+    "DESCRIPTIONS": [
+      "You can no longer apply #yCrushed #yArmor, instead you deal triple the amount directly to their HP.",
+      "theunchainedmod:Crushed_Armor"
+    ]
+  },
+  "theUnchainedMod:ArcaneAmplifier": {
+    "NAME": "Arcane Amplifier",
+    "FLAVOR": "You feel in tune with the making at the heart of the world.",
+    "DESCRIPTIONS": [
+      "Every #b3 times you gain #yRelay in a single turn, gain #b1 #yArcane #yMastery.",
+      "theunchainedmod:Relay",
+      "theunchainedmod:Arcane_Mastery"
+    ]
+  }
+}

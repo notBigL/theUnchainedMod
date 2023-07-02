@@ -1,0 +1,35 @@
+{
+  "theUnchainedMod:PlaceholderPotion": {
+    "NAME": "Placeholder Potion",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " At the end of your turn, lose ",
+      " Strength."
+    ]
+  },
+  "theUnchainedMod:ChainGrease": {
+    "NAME": "Chain Grease",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " Block. Remove ALL Relayed Damage. Finish ALL your active Chains."
+    ]
+  },
+  "theUnchainedMod:DancePotion": {
+    "NAME": "Eau de Ballet",
+    "DESCRIPTIONS": [
+      "Add ", " Swirls into your hand."
+    ]
+  },
+  "theUnchainedMod:CrushingElixir": {
+    "NAME": "Crushing Elixir",
+    "DESCRIPTIONS": [
+      "Apply ", " Crushed Armor to ALL enemies."
+    ]
+  },
+  "theUnchainedMod:RelayPotion": {
+    "NAME": "Bottled Arcanum",
+    "DESCRIPTIONS": [
+      "Gain ", " Relay and ",  " Relayed Damage."
+    ]
+  }
+}

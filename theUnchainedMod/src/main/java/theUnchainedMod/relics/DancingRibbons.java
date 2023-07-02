@@ -1,21 +1,23 @@
 package theUnchainedMod.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.Swirl;
 import theUnchainedMod.util.TextureLoader;
 
-import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;
-import static theUnchainedMod.DefaultMod.makeRelicPath;
+import static theUnchainedMod.TheUnchainedMod.makeRelicOutlinePath;
+import static theUnchainedMod.TheUnchainedMod.makeRelicPath;
 
 public class DancingRibbons extends CustomRelic {
-    public static final String ID = DefaultMod.makeID("DancingRibbons");
+    public static final String ID = TheUnchainedMod.makeID("DancingRibbons");
 
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("DancingRibbons_relic.png"));
@@ -23,15 +25,21 @@ public class DancingRibbons extends CustomRelic {
 
     public DancingRibbons() {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.CLINK);
+        tips.add(new PowerTip(
+                BaseMod.getKeywordTitle(DESCRIPTIONS[1].toLowerCase()),
+                BaseMod.getKeywordDescription(DESCRIPTIONS[1].toLowerCase())
+        ));
+        tips.add(new PowerTip(
+                BaseMod.getKeywordTitle(DESCRIPTIONS[2].toLowerCase()),
+                BaseMod.getKeywordDescription(DESCRIPTIONS[2].toLowerCase())
+        ));
     }
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (c instanceof Swirl) {
-            counter++;
-        }
-        if (counter > 0) {
-            this.beginLongPulse();
+        if(c instanceof Swirl)
+        {
+            this.flash();
         }
     }
 

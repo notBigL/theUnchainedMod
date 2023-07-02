@@ -3,23 +3,26 @@ package theUnchainedMod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.ChainSawAction;
 import theUnchainedMod.characters.TheUnchained;
-import theUnchainedMod.patches.RelayedDmgSum;
 import theUnchainedMod.powers.AbstractChainPower;
+import theUnchainedMod.powers.AbstractMasterChainPower;
 import theUnchainedMod.vfx.ChainSawAttackEffect;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import java.util.Iterator;
+
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class ChainSaw extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(ChainSaw.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(ChainSaw.class.getSimpleName());
     public static final String IMG = makeCardPath("ChainSaw.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -50,7 +53,7 @@ public class ChainSaw extends AbstractDynamicCard {
         int amountToAdd = 0;
         int realBaseDamage = this.baseDamage;
         for (AbstractPower po : AbstractDungeon.player.powers) {
-            if (po instanceof AbstractChainPower) amountToAdd += magicNumber;
+            if (po instanceof AbstractChainPower || po instanceof AbstractMasterChainPower) amountToAdd += magicNumber;
         }
         this.baseDamage += amountToAdd;
         super.calculateCardDamage(mo);
@@ -58,6 +61,18 @@ public class ChainSaw extends AbstractDynamicCard {
         this.isDamageModified = this.damage != this.baseDamage;
     }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        Iterator var1 = AbstractDungeon.player.powers.iterator();
+
+        while(var1.hasNext()) {
+            AbstractPower power = (AbstractPower) var1.next();
+            if (power instanceof AbstractChainPower || power instanceof AbstractMasterChainPower) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                break;
+            }
+        }
+    }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

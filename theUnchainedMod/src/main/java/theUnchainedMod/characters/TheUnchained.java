@@ -21,17 +21,21 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.*;
+import theUnchainedMod.patches.CharacterSelectUIPatch;
 import theUnchainedMod.relics.RustedChains;
+import theUnchainedMod.vfx.ChainAcrossScreenEffect;
+import theUnchainedMod.vfx.UnchainedVictoryVFX;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
-import static theUnchainedMod.DefaultMod.*;
+import static theUnchainedMod.TheUnchainedMod.*;
 import static theUnchainedMod.characters.TheUnchained.Enums.COLOR_ORANGE;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
@@ -39,7 +43,7 @@ import static theUnchainedMod.characters.TheUnchained.Enums.COLOR_ORANGE;
 //All text (starting description and loadout, anything labeled TEXT[]) can be found in DefaultMod-character-Strings.json in the resources
 
 public class TheUnchained extends CustomPlayer {
-    public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
+    public static final Logger logger = LogManager.getLogger(TheUnchainedMod.class.getName());
 
     // =============== CHARACTER ENUMERATORS =================
     // These are enums for your Characters color (both general color and for the card library) as well as
@@ -56,6 +60,11 @@ public class TheUnchained extends CustomPlayer {
         @SpireEnum(name = "UNCHAINED_ORANGE_COLOR")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
+        @SpireEnum(name = "UNCHAINED_BOOSTER_COLOR") // These two HAVE to have the same absolutely identical name.
+        public static AbstractCard.CardColor COLOR_BOOSTER;
+        @SpireEnum(name = "UNCHAINED_BOOSTER_COLOR")
+        @SuppressWarnings("unused")
+        public static CardLibrary.LibraryType LIBRARY_BOOSTER_COLOR;
     }
 
     // =============== CHARACTER ENUMERATORS  =================
@@ -80,7 +89,9 @@ public class TheUnchained extends CustomPlayer {
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
-    // =============== /STRINGS/ =================
+    // =============== /END EFFECT/ =================
+
+    boolean endEffectStarted;
 
 
     // =============== TEXTURES OF BIG ENERGY ORB ===============
@@ -109,20 +120,31 @@ public class TheUnchained extends CustomPlayer {
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
-
-        initializeClass(THE_DEFAULT_CHARACTER, // required call to load textures and setup energy/loadout.
+        if(!UNCHAINED_SKIN_ACTIVATED) {
+            initializeClass(THE_DEFAULT_CHARACTER, // required call to load textures and setup energy/loadout.
+                    // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
+                    THE_DEFAULT_SHOULDER_2, // campfire pose
+                    THE_DEFAULT_SHOULDER_1, // another campfire pose
+                    THE_DEFAULT_CORPSE, // dead corpse
+                    getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN)); // energy manager
+        }
+        else {
+            initializeClass(PRINCE_UNBOUND_CHARACTER, // required call to load textures and setup energy/loadout.
                 // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
-                THE_DEFAULT_SHOULDER_2, // campfire pose
-                THE_DEFAULT_SHOULDER_1, // another campfire pose
-                THE_DEFAULT_CORPSE, // dead corpse
+                PRINCE_UNBOUND_SHOULDER_2, // campfire pose
+                PRINCE_UNBOUND_SHOULDER_1, // another campfire pose
+                PRINCE_UNBOUND_CORPSE, // dead corpse
                 getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN)); // energy manager
+
+        }
 
         // =============== /TEXTURES, ENERGY, LOADOUT/ =================
 
 
         // =============== ANIMATIONS =================
 
-        loadAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f);
+        if(UNCHAINED_SKIN_ACTIVATED) loadAnimation(THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS, THE_UNCHAINED_PRINCE_UNBOUND_JSON, 1.0f);
+        else                         loadAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f);
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         e.setTimeScale(1.0f);
 
@@ -155,6 +177,7 @@ public class TheUnchained extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
+        retVal.add(BasicStrike.ID);
         retVal.add(BasicStrike.ID);
         retVal.add(BasicStrike.ID);
         retVal.add(BasicStrike.ID);
@@ -223,7 +246,7 @@ public class TheUnchained extends CustomPlayer {
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {
-        return theUnchainedMod.DefaultMod.UNCHAINED_ORANGE;
+        return TheUnchainedMod.UNCHAINED_ORANGE;
     }
 
     // Should return a BitmapFont object that you can use to customize how your
@@ -260,14 +283,14 @@ public class TheUnchained extends CustomPlayer {
     // Should return a Color object to be used to color the miniature card images in run history.
     @Override
     public Color getCardRenderColor() {
-        return theUnchainedMod.DefaultMod.UNCHAINED_ORANGE;
+        return TheUnchainedMod.UNCHAINED_ORANGE;
     }
 
     // Should return a Color object to be used as screen tint effect when your
     // character attacks the heart.
     @Override
     public Color getSlashAttackColor() {
-        return theUnchainedMod.DefaultMod.UNCHAINED_ORANGE;
+        return TheUnchainedMod.UNCHAINED_ORANGE;
     }
 
     // Should return an AttackEffect array of any size greater than 0. These effects
@@ -297,4 +320,31 @@ public class TheUnchained extends CustomPlayer {
         return TEXT[2];
     }
 
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+    if(!endEffectStarted)
+    {
+        effects.add(new UnchainedVictoryVFX());
+
+        effects.add(new ChainAcrossScreenEffect(Color.GOLD, 0,Settings.HEIGHT * 0.72f, MathUtils.random(4, 6), MathUtils.random(55,75)));
+        effects.add(new ChainAcrossScreenEffect(Color.GOLD, Settings.WIDTH * 0.21f, Settings.HEIGHT, MathUtils.random(4, 6), MathUtils.random(230,250)));
+        effects.add(new ChainAcrossScreenEffect(Color.GOLD, Settings.WIDTH * 0.25f,0, MathUtils.random(4, 6), MathUtils.random(130,150)));
+        effects.add(new ChainAcrossScreenEffect(Color.GOLD, Settings.WIDTH * 0.83f, Settings.HEIGHT, MathUtils.random(4, 6), MathUtils.random(290,310)));
+        effects.add(new ChainAcrossScreenEffect(Color.GOLD, Settings.WIDTH * 0.86f,0, MathUtils.random(4, 6), MathUtils.random(45,65)));
+
+        endEffectStarted = true;
+
+        unchainedConfig.setBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY, true);
+        unchainedConfig.setBool(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, true);
+        TheUnchainedMod.UNCHAINED_SKIN_UNLOCKED = true;
+        TheUnchainedMod.UNCHAINED_BOOSTER_PACK_UNLOCKED = true;
+        try
+        {
+            TheUnchainedMod.unchainedConfig.save();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    }
 }

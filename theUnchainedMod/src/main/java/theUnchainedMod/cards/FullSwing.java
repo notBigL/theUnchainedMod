@@ -13,16 +13,16 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 
 import java.util.Iterator;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class FullSwing extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(FullSwing.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(FullSwing.class.getSimpleName());
     public static final String IMG = makeCardPath("FullSwing.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

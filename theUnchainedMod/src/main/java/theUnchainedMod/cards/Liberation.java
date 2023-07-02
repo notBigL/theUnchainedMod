@@ -6,16 +6,16 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.RemoveRelayedDamageAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.AbstractChainPower;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class Liberation extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(Liberation.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(Liberation.class.getSimpleName());
     public static final String IMG = makeCardPath("Liberation.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

@@ -60,18 +60,17 @@ public class RelayHelpers {
         RelayHelpers.currentRelay.set(creature, RelayHelpers.currentRelay.get(creature) + MathUtils.floor(tmp));
 
         if (RelayHelpers.currentRelay.get(creature) > 999) {
-            RelayHelpers.currentRelay.set(creature, 999);
-        }
-
-        if (effect && RelayHelpers.currentRelay.get(creature) > 0) {
-            RelayHelpers.gainRelayAnimation(creature);
-        } else if (relayAmount > 0) {
-            Color tmpCol = Settings.GOLD_COLOR.cpy();
-            tmpCol.a = RelayHelpers.relayTextColor.get(creature).a;
-            RelayHelpers.relayTextColor.set(creature, tmpCol);
-            RelayHelpers.relayScale.set(creature, 5.0F);
-        }
+        RelayHelpers.currentRelay.set(creature, 999);
     }
+        if (effect && RelayHelpers.currentRelay.get(creature) > 0) {
+        RelayHelpers.gainRelayAnimation(creature);
+    } else if (relayAmount > 0) {
+        Color tmpCol = Settings.GOLD_COLOR.cpy();
+        tmpCol.a = RelayHelpers.relayTextColor.get(creature).a;
+        RelayHelpers.relayTextColor.set(creature, tmpCol);
+        RelayHelpers.relayScale.set(creature, 5.0F);
+    }
+}
 
     public static void addNextTurnRelayedDamage(int relayedDamageAmount, AbstractCreature creature) {
         float tmp = (float) relayedDamageAmount;

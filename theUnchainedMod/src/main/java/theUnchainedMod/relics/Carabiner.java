@@ -1,16 +1,18 @@
 package theUnchainedMod.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import theUnchainedMod.DefaultMod;
+import com.megacrit.cardcrawl.helpers.PowerTip;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.util.TextureLoader;
 
-import static theUnchainedMod.DefaultMod.makeRelicOutlinePath;
-import static theUnchainedMod.DefaultMod.makeRelicPath;
+import static theUnchainedMod.TheUnchainedMod.makeRelicOutlinePath;
+import static theUnchainedMod.TheUnchainedMod.makeRelicPath;
 
 public class Carabiner extends CustomRelic {
 
-    public static final String ID = DefaultMod.makeID("Carabiner");
+    public static final String ID = TheUnchainedMod.makeID("Carabiner");
 
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Carabiner_relic.png"));
@@ -18,6 +20,10 @@ public class Carabiner extends CustomRelic {
 
     public Carabiner() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.CLINK);
+        tips.add(new PowerTip(
+                BaseMod.getKeywordTitle(DESCRIPTIONS[1].toLowerCase()),
+                BaseMod.getKeywordDescription(DESCRIPTIONS[1].toLowerCase())
+        ));
     }
 
 

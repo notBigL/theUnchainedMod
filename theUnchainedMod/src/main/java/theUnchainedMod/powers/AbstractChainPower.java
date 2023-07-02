@@ -13,8 +13,10 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.actions.ChainAction;
+import theUnchainedMod.patches.ChainsFinishedThisCombat;
 import theUnchainedMod.relics.Carabiner;
 import theUnchainedMod.relics.Churros;
+import theUnchainedMod.relics.DancingRibbons;
 import theUnchainedMod.util.TextureLoader;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.player;
@@ -64,6 +66,12 @@ public class AbstractChainPower extends AbstractPower {
                 AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, this.ID, "link"));
                 this.flash();
                 break;
+            case "theUnchainedMod:Swirl":
+                if(player.hasRelic(DancingRibbons.ID)) {
+                    AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, this.ID, "link"));
+                    this.flash();
+                    break;
+                }
             default:
                 AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, this.ID));
                 if (this.cardType == c.type) {
@@ -89,6 +97,7 @@ public class AbstractChainPower extends AbstractPower {
     public void finishMe() {
         AbstractDungeon.actionManager.addToBottom(finishedChainAction);
         checkForFinishers();
+        ChainsFinishedThisCombat.IncreaseChainsFinishedThisCombat(1);
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
     }
 

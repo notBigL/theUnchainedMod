@@ -4,15 +4,15 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theUnchainedMod.DefaultMod;
+import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.characters.TheUnchained;
 
-import static theUnchainedMod.DefaultMod.makeCardPath;
+import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
-public class DualBarrier extends AbstractDynamicCard {
+public class DualBarrier extends AbstractDynamicRelayCard {
 
-    public static final String ID = DefaultMod.makeID(DualBarrier.class.getSimpleName());
+    public static final String ID = TheUnchainedMod.makeID(DualBarrier.class.getSimpleName());
     public static final String IMG = makeCardPath("DualBarrier.png");
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

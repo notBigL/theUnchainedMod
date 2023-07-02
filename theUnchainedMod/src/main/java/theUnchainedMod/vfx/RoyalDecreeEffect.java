@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
-import static theUnchainedMod.DefaultMod.makeVFXPath;
+import static theUnchainedMod.TheUnchainedMod.makeVFXPath;
 
 public class RoyalDecreeEffect extends AbstractGameEffect {
     private final float x;

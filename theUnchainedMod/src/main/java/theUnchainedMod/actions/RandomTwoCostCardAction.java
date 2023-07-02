@@ -18,9 +18,9 @@ public class RandomTwoCostCardAction extends AbstractGameAction {
     public void update() {
         AbstractCard c = UtilityClass.returnTrulyRandomTwoCostCardInCombat();
         c.setCostForTurn(amount);
-        if (c.type != AbstractCard.CardType.POWER) {
+        /*if (c.type != AbstractCard.CardType.POWER) {
             CardModifierManager.addModifier(c, new ExhaustMod());
-        }
+        }*/
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, true));
         this.isDone = true;
     }
