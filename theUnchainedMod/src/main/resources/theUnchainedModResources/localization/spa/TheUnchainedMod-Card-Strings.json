@@ -98,11 +98,6 @@
     "NAME": "Postura Cautelosa",
     "DESCRIPTION": "¡Cada vez que termines una Cadena, gana !M! de Bloqueo."
   },
-  "theUnchainedMod:FractalShield": {
-    "NAME": "Fractal Shield",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage.",
-    "UPGRADE_DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage and HP Loss."
-  },
   "theUnchainedMod:Windup": {
     "NAME": "Windup",
     "DESCRIPTION": "Aplica !M! de Vulnerable. NL !theUnchainedMod:SecondMagic! theunchainedmod:Cadena. Añade un ataque común aleatorio a tu mano. NL Cuesta 0 este turno NL y agota.",
@@ -197,10 +192,6 @@
     "NAME": "Forma de Mago",
     "DESCRIPTION": "Etérea. NL Siempre que juegues una carta de coste 2, gana [E].",
     "UPGRADE_DESCRIPTION": "Siempre que juegues una carta de coste 2, gana [E]."
-  },
-  "theUnchainedMod:TelekineticPulse": {
-    "NAME": "Telekinetic Pulse",
-    "DESCRIPTION": "1 theunchainedmod:Chain: ALL enemies gain !theUnchainedMod:SecondMagic! Block, lose !M! HP and reapply this theunchainedmod:Chain."
   },
   "theUnchainedMod:TieDown": {
     "NAME": "Atado",
@@ -380,5 +371,14 @@
   "theUnchainedMod:ArcaneLink": {
     "NAME": "Arcane Link",
     "DESCRIPTION": "Gain !M! Relay. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
+  },
+  "theUnchainedMod:TelekineticPulse": {
+    "NAME": "Telekinetic Pulse",
+    "DESCRIPTION": "1 theunchainedmod:Chain: ALL enemies gain !theUnchainedMod:SecondMagic! Block, lose !M! HP and reapply this theunchainedmod:Chain."
+  },
+  "theUnchainedMod:FractalShield": {
+    "NAME": "Fractal Shield",
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage.",
+    "UPGRADE_DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage and HP Loss."
   }
 }

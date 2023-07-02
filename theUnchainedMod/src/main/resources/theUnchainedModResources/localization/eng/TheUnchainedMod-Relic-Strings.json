@@ -34,8 +34,7 @@
     "NAME": "Polished Chains",
     "FLAVOR": "You can see your own reflection in these.",
     "DESCRIPTIONS": [
-      "Replaces #yRusted #yChains. EVERY #b6th card you play each combat draws a card, the next card you play costs #b0.",
-      "theunchainedmod:Chain"
+      "Replaces #yRusted #yChains. EVERY #b6th card you play each combat draws a card, the next card you play costs #b0."
     ]
   },
   "theUnchainedMod:BrokenCharm": {
