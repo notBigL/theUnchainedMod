@@ -87,17 +87,17 @@
   {
     "PROPER_NAME": "Malleable",
     "NAMES": [
-      "Malleable",
-      "malleable"
+      "Maleable",
+      "maleable"
     ],
-    "DESCRIPTION": "Upon receiving attack damage, gains 1 Block. Block gain increases as Malleable is triggered. Resets to 1 at the start of your turn."
+    "DESCRIPTION": "Al recibir daño de ataque, gana 1 de Bloqueo. La ganancia de Bloqueo aumenta a medida que se activa Maleable. Se restablece a 1 al comienzo de tu turno."
   },
   {
-    "PROPER_NAME": "Swirl",
+    "PROPER_NAME": "Vórtice",
     "NAMES": [
-      "Swirl",
-      "swirl"
+      "Vórtice",
+      "vórtice"
     ],
-    "DESCRIPTION": "Swirls are #b0 cost attacks which Retain and Exhaust, but get stronger the more you play in a turn."
+    "DESCRIPTION": "Los Vórtices son ataques de costo #b0 que Retiene y Agota, pero se vuelven más fuertes cuanto más juegues en un turno."
   }
 ]

@@ -1,0 +1,21 @@
+{
+  "theUnchainedMod:TheDemonSpeaks": {
+    "NAME": "El Demonio Habla",
+    "DESCRIPTIONS": [
+      "Otro día en el Exordium. NL El pasillo está vacío y por fin estás solo con tus pensamientos. NL NL  ... NL NL  #p\"Psst...\"",
+      "~\"Oye~ ~niño.\"~ Es el demonio otra vez. Ha estado notablemente callado desde que entraste a la aguja, pero ahora puedes escuchar su risa carcajeante reverberando en tu cráneo. NL NL \"Mírate, #rpequeño #r@débil.@ No parece que puedas aguantar mucho más. Vas a necesitar mi ayuda #p~reaaaaaal~ pronto. NL NL ¿Qué tal si tú y yo... reconsideramos nuestro #r~acuerdo~ #r~anterior?~ \"",
+      "El demonio se ríe #r@manicalmente.@ NL \"Qué #p~bueeeeen~ pequeño príncipe eres.\" NL Un relicario comienza a tomar forma de la nada...",
+      " NL NL Te pones las guanteletes a regañadientes. NL Cuando intentas mover los dedos, de repente sientes #runa #rpunzada #r@doloroza@ que te atraviesa, pero luego se va. NL NL Se siente como si los guanteletes se hubieran fusionado con tus dedos.",
+      " NL NL Te pones el amplificador alrededor de la muñeca y se hunde en tu piel. NL NL El relicario está #bbrillando #bintensamente y comienzas a sentirte agotado. NL Tu espalda empieza a #pdoler. Se siente como si tuvieras #p@treinta@ años. NL NL #r@Esto@ #r@es@ #r@insoportable.@",
+      "#r@BIEN.@ NL #rHAZ#rME #rTU#rVILLANO. NL NL El demonio comienza a refunfuñar como un adolescente."
+    ],
+    "OPTIONS": [
+      "[Poder ilimitado] #gObtén #gAmplificador #gArcano. #rGana #ra #rRetorcimiento.",
+      "[Fuerza imparable] #gObtén #gGuanteletes #gGolpeadores. #rRecibe #r",
+      " #rDaño.",
+      "[Dile que se lo meta]",
+      "Oh, genial.",
+      "[Abandonar]"
+    ]
+  }
+}
