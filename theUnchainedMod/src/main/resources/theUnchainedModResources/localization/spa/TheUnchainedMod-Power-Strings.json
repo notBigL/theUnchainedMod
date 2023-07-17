@@ -441,27 +441,25 @@
       " a TODOS los enemigos por cada Cadena no terminada al final de tu turno."
     ]
   },
-
-  TODO
-  "theUnchainedMod:DamoclesChainPower": {
-    "NAME": "Sword of Damocles",
+"theUnchainedMod:DamoclesChainPower": {
+    "NAME": "Espada de Damocles",
     "DESCRIPTIONS": [
-      "If you play",
+      "Si juegas",
       " #b",
-      " more Attack,",
-      " more Skill and",
-      " more Power, ",
-      " this Turn, take #b",
-      " damage and lose #b",
-      " Strength."
+      " más Ataque,",
+      " más Habilidad y",
+      " más Poder, ",
+      " este Turno, recibes #b",
+      " de daño y pierdes #b",
+      " de Fuerza."
     ]
   },
   "theUnchainedMod:TelekineticPulsePower": {
-    "NAME": "Skill Chain",
+    "NAME": "Cadena de Habilidades",
     "DESCRIPTIONS": [
-      "If you play #b1 more Skill this turn, ALL enemies gain #y",
-      " Block and lose #y",
-      " HP."
+      "Si juegas #b1 Habilidad más este turno, TODOS los enemigos ganan #y",
+      " de Bloqueo y pierden #y",
+      " de HP."
     ]
   }
 }

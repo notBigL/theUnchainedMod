@@ -13,7 +13,6 @@ import static theUnchainedMod.TheUnchainedMod.makeRelicPath;
 public class BalletShoes extends CustomRelic {
 
     public static final String ID = TheUnchainedMod.makeID("BalletShoes");
-
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BalletShoes_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BalletShoes_relic.png"));
 
