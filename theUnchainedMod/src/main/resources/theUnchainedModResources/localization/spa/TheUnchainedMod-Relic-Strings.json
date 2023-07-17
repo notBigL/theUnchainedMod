@@ -4,8 +4,15 @@
     "FLAVOR": "Imposible hacer una mala pose con estos.",
     "DESCRIPTIONS": [
       "El #yImpulso requerido para el próximo remolino es siempre uno menos.",
-      "theunchainedmod:Momentum",
-      "theunchainedmod:Swirl"
+      "theunchainedmod:Impulso",
+      "theunchainedmod:Remolino"
+    ]
+  },
+  "theUnchainedMod:RustedChains": {
+    "NAME": "Cadenas Oxidadas",
+    "FLAVOR": "Éstas solían sujetarte a una pared de la prisión. Ahora son herramientas útiles.",
+    "DESCRIPTIONS": [
+      "Con la #b6ta carta que juegues en cada combate, robas una carta, la siguiente carta cuesta #b0."
     ]
   },
   "theUnchainedMod:HeartOfTheUnderdog": {
@@ -20,7 +27,15 @@
     "FLAVOR": "No hay mejor herramienta para conectar Cadenas.",
     "DESCRIPTIONS": [
       "Las cadenas ya no se desgastan al final del turno.",
-      "theunchainedmod:Chain"
+      "theunchainedmod:Cadena"
+    ]
+  },
+  "theUnchainedMod:PolishedChains": {
+    "NAME": "Cadenas Pulidas",
+    "FLAVOR": "Puedes ver tu propio reflejo en estas.",
+    "DESCRIPTIONS": [
+      "Reemplaza las #yCadenas #yOxidadas. CADA #b6ta carta que juegues en cada combate roba una carta, la siguiente carta que juegues cuesta #b0.",
+      "theunchainedmod:Cadena"
     ]
   },
   "theUnchainedMod:BrokenCharm": {
@@ -29,15 +44,15 @@
     "DESCRIPTIONS": [
       "Al comienzo de tus primeros 3 turnos, gana #y",
       " de Relevo.",
-      "theunchainedmod:Relay"
+      "theunchainedmod:Relevo"
     ]
   },
   "theUnchainedMod:Churros": {
     "NAME": "Churros",
     "FLAVOR": "Estas sabrosas golosinas te llenan de una explosión de energía.",
     "DESCRIPTIONS": [
-      "Cada 7ª Cadena que comienzas se copia.",
-      "theunchainedmod:Chain"
+      "Cada 7ta Cadena que comienzas se copia.",
+      "theunchainedmod:Cadena"
     ]
   },
   "theUnchainedMod:Memento": {
@@ -52,7 +67,7 @@
     "FLAVOR": "Cuando escuchas de cerca, puedes escuchar al demonio susurrar: 'Compartir es cuidar'.",
     "DESCRIPTIONS": [
       "Al final de tu turno, golpea a un enemigo aleatorio por TODO el Daño Colateral que hayas ganado desde el último turno.",
-      "theunchainedmod:Relayed_Damage"
+      "theunchainedmod:Daño_Colateral"
     ]
   },
   "theUnchainedMod:DancingRibbons": {
@@ -60,8 +75,8 @@
     "FLAVOR": "Te recuerda los momentos felices que pasaste bailando en la taberna",
     "DESCRIPTIONS": [
       "Los Remolinos cuentan como cualquier carta para una Cadena.",
-      "theunchainedmod:Swirl",
-      "theunchainedmod:Chain"
+      "theunchainedmod:Remolino",
+      "theunchainedmod:Cadena"
     ]
   },
   "theUnchainedMod:Wrench": {
@@ -69,7 +84,7 @@
     "FLAVOR": "Nunca puedes mantener tu armadura lo suficientemente apretada.",
     "DESCRIPTIONS": [
       "Cada vez que aplicas Armadura Aplastada, el enemigo pierde #y4 HP.",
-      "theunchainedmod:Crushed_Armor"
+      "theunchainedmod:Armadura_Aplastada"
     ]
   },
   "theUnchainedMod:CrushingGauntlets": {
@@ -77,31 +92,16 @@
     "FLAVOR": "¿Por qué detenerte en aplastar su armadura cuando en su lugar podrías aplastarlos?",
     "DESCRIPTIONS": [
       "Ya no puedes aplicar Armadura Aplastada, sino que repartes el triple de la cantidad directamente a su HP.",
-      "theunchainedmod:Crushed_Armor"
+      "theunchainedmod:Armadura_Aplastada"
     ]
   },
-  "theUnchainedMod:ArcaneAmplifier": {
-    "NAME": "Arcane Amplifier",
-    "FLAVOR": "You feel in tune with the making at the heart of the world.",
+"theUnchainedMod:ArcaneAmplifier": {
+    "NAME": "Amplificador Arcano",
+    "FLAVOR": "Te sientes en sintonía con la creación en el corazón del mundo.",
     "DESCRIPTIONS": [
-      "Every #b3 times you gain #yRelay in a single turn, gain #b1 #yArcane #yMastery.",
-      "theunchainedmod:Relay",
-      "theunchainedmod:Arcane_Mastery"
-    ]
-  },
-  "theUnchainedMod:RustedChains": {
-    "NAME": "Rusted Chains",
-    "FLAVOR": "These used to hold you to a prison wall. Now they are handy tools.",
-    "DESCRIPTIONS": [
-      "The #b6th card you play each combat draws a card, the next card costs #b0."
-    ]
-  },
-  "theUnchainedMod:PolishedChains": {
-    "NAME": "Polished Chains",
-    "FLAVOR": "You can see your own reflection in these.",
-    "DESCRIPTIONS": [
-      "Replaces #yRusted #yChains. EVERY #b6th card you play each combat draws a card, the next card you play costs #b0.",
-      "theunchainedmod:Chain"
+      "Cada #b3 veces que ganes #yRelevo en un solo turno, gana #b1 #yArcano #yMaestría.",
+      "theunchainedmod:Relevo",
+      "theunchainedmod:Maestría_Arcana"
     ]
   }
 }

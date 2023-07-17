@@ -26,10 +26,10 @@
       "Aplica ", " de Armadura Aplastada para TODOS los enemigos."
     ]
   },
-  "theUnchainedMod:RelayPotion": {
-    "NAME": "Bottled Arcanum",
+"theUnchainedMod:RelayPotion": {
+    "NAME": "Arcano Embotellado",
     "DESCRIPTIONS": [
-      "Gain ", " Relay and ",  " Relayed Damage."
+      "Gana ", " Relevo y ",  " Daño Colateral."
     ]
   }
 }

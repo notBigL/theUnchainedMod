@@ -280,7 +280,7 @@
   },
   "theUnchainedMod:KeepSwinging": {
     "NAME": "Sigue Balanceándote",
-    "DESCRIPTION": "Las Cartas que contienen \"Remolinos\" inflingen !M! de daño adicional."
+    "DESCRIPTION": "Las Cartas que contienen \"Swing\" inflingen !M! de daño adicional."
   },
   "theUnchainedMod:EyeForAnEye": {
     "NAME": "Ojo por Ojo",
@@ -338,11 +338,11 @@
   },
   "theUnchainedMod:BarbedWire": {
     "NAME": "Alambre de Púas",
-    "DESCRIPTION": "Inflige !M! de daño a TODOS los enemigos por cada Cadena no terminada al final de tu turno."
+    "DESCRIPTION": "Inflige !M! de daño a TODOS los enemigos por cada theunchainedmod:Cadena no terminada al final de tu turno."
   },
   "theUnchainedMod:ArcaneArtillery": {
     "NAME": "Artillería Arcana",
-    "DESCRIPTION": "Inflige un daño igual al de tu Relevo.",
+    "DESCRIPTION": "Inflige un daño igual al de tu theunchainedmod:Relevo.",
     "UPGRADE_DESCRIPTION": "Inflige daño igual al de tu theunchainedmod:Relevo a TODOS los enemigos.",
     "EXTENDED_DESCRIPTION": [
       "NL (Inflige !D! de daño)."
@@ -361,24 +361,24 @@
     "DESCRIPTION": "Inflige !D! de daño. NL Aplica tanta theunchainedmod:Armadura_Aplastada como la que fue bloqueada por el enemigo."
   },
   "theUnchainedMod:SwordOfDamocles": {
-    "NAME": "Sword Of Damocles",
-    "DESCRIPTION": "Gain !M! Strength. NL 1 theunchainedmod:Master_Chain: Lose !M! HP and !M! Strength. NL Exhaust. "
+    "NAME": "Espada de Damocles",
+    "DESCRIPTION": "Gana !M! de Fuerza. NL 1 theunchainedmod:Cadena_Maestra: Pierde !M! de HP y !M! de Fuerza. NL Agota. "
   },
   "theUnchainedMod:MeltingHex": {
-    "NAME": "Melting Hex",
-    "DESCRIPTION": "Apply !theUnchainedMod:SecondMagic! theunchainedmod:Crushed_Armor and !M! theunchainedmod:Malleable. NL Exhaust."
-  },
-  "theUnchainedMod:ArcaneLink": {
-    "NAME": "Arcane Link",
-    "DESCRIPTION": "Gain !M! Relay. NL 1 theunchainedmod:Chain: Gain !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
+    "NAME": "Maldición de Fusión",
+    "DESCRIPTION": "Aplica !theUnchainedMod:SecondMagic! de theunchainedmod:Armadura_Aplastada y !M! de theunchainedmod:Maleable. NL Agota."
   },
   "theUnchainedMod:TelekineticPulse": {
-    "NAME": "Telekinetic Pulse",
-    "DESCRIPTION": "1 theunchainedmod:Chain: ALL enemies gain !theUnchainedMod:SecondMagic! Block, lose !M! HP and reapply this theunchainedmod:Chain."
+    "NAME": "Pulso Telequinético",
+    "DESCRIPTION": "1 theunchainedmod:Cadena: TODOS los enemigos ganan !theUnchainedMod:SecondMagic! de Bloqueo, pierden !M! de HP y vuelven a aplicar este theunchainedmod:Cadena."
   },
   "theUnchainedMod:FractalShield": {
-    "NAME": "Fractal Shield",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage.",
-    "UPGRADE_DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage and HP Loss."
+    "NAME": "Escudo Fractal",
+    "DESCRIPTION": "Gana !M! de Relevo. theunchainedmod:Relevo ahora bloquea theunchainedmod:Daño_Colateral.",
+    "UPGRADE_DESCRIPTION": "Gana !M! de Relevo. theunchainedmod:Relevo ahora bloquea theunchainedmod:Daño_Colateral y la pérdida de HP."
+  },
+  "theUnchainedMod:ArcaneLink": {
+    "NAME": "Enlace Arcano",
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relevo. NL Si tienes una theunchainedmod:Cadena activa, gana !theUnchainedMod:SecondMagic! theunchainedmod:Maestría_Arcana."
   }
 }
