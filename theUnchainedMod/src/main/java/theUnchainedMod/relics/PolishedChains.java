@@ -34,6 +34,7 @@ public class PolishedChains extends CustomRelic {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
+        ++this.counter;
         if (this.counter == 6) {
             this.beginLongPulse();
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
@@ -43,7 +44,6 @@ public class PolishedChains extends CustomRelic {
             this.stopPulse();
             this.counter = 0;
         }
-        ++this.counter;
     }
 
     public void onVictory() {
