@@ -53,7 +53,7 @@ public class Kusarigama extends AbstractDynamicCard {
         if(!super.canUse(p, m)) return false;
 
         for (AbstractPower aP : p.powers) {
-            if (aP.name.equals("Attack Chain") && aP.amount == 1) {
+            if (aP.name != null && aP.name.equals("Attack Chain") && aP.amount == 1) {
                 return true;
             }
         }
