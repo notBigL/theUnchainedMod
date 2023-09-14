@@ -24,7 +24,7 @@ public class DancingRibbons extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("DancingRibbons_relic.png"));
 
     public DancingRibbons() {
-        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.FLAT);
         tips.add(new PowerTip(
                 BaseMod.getKeywordTitle(DESCRIPTIONS[1].toLowerCase()),
                 BaseMod.getKeywordDescription(DESCRIPTIONS[1].toLowerCase())
@@ -41,28 +41,6 @@ public class DancingRibbons extends CustomRelic {
         {
             this.flash();
         }
-    }
-
-
-    @Override
-    public void atBattleStart() {
-        counter = 0;
-    }
-
-    public void onVictory() {
-        this.stopPulse();
-        counter = -1;
-    }
-
-    @Override
-    public void onPlayerEndTurn() {
-        if (counter > 0) {
-            this.flash();
-            AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Swirl(), 1, false));
-        }
-        this.stopPulse();
-        counter = 0;
     }
 
 
