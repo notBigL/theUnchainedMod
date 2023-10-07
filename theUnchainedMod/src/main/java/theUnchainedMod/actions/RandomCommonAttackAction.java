@@ -18,7 +18,7 @@ public class RandomCommonAttackAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        AbstractCard c = UtilityClass.returnTrulyRandomCommonAttackCardInCombat();
+        AbstractCard c = UtilityClass.returnTrulyRandomCommonAttackCardInCombat().makeCopy();
         if(upgraded) {
             c.upgrade();
         }

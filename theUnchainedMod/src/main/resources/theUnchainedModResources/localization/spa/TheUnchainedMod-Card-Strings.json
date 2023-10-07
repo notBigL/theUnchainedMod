@@ -362,7 +362,7 @@
   },
   "theUnchainedMod:SwordOfDamocles": {
     "NAME": "Espada de Damocles",
-    "DESCRIPTION": "Gana !M! de Fuerza. NL 1 theunchainedmod:Cadena_Maestra: Pierde !M! de HP y !M! de Fuerza. NL Agota. "
+    "DESCRIPTION": "Gana !M! de Fuerza. NL 1 theunchainedmod:Cadena_Maestra: Pierde !theUnchainedMod:SecondMagic! de HP y !M! de Fuerza. NL Agota. "
   },
   "theUnchainedMod:MeltingHex": {
     "NAME": "Maldición de Fusión",

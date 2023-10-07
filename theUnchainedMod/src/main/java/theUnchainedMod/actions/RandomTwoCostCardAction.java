@@ -16,7 +16,7 @@ public class RandomTwoCostCardAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        AbstractCard c = UtilityClass.returnTrulyRandomTwoCostCardInCombat();
+        AbstractCard c = UtilityClass.returnTrulyRandomTwoCostCardInCombat().makeCopy();
         c.setCostForTurn(amount);
         /*if (c.type != AbstractCard.CardType.POWER) {
             CardModifierManager.addModifier(c, new ExhaustMod());

@@ -25,8 +25,8 @@ public class MagicMecha extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int MAGIC_NUMBER = 1;
-    private static final int SECOND_MAGIC_NUMBER = 3;
-    private static final int UPGRADE_PLUS_BUFF = 2;
+    private static final int SECOND_MAGIC_NUMBER = 2;
+    private static final int UPGRADE_PLUS_BUFF = 1;
 
     public MagicMecha() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

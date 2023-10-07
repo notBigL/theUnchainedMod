@@ -367,7 +367,7 @@
   },
   "theUnchainedMod:SwordOfDamocles": {
     "NAME": "Sword Of Damocles",
-    "DESCRIPTION": "Gain !M! Strength. NL 1 theunchainedmod:Master_Chain: Lose !M! HP and !M! Strength. NL Exhaust. "
+    "DESCRIPTION": "Gain !M! Strength. NL 1 theunchainedmod:Master_Chain: Lose !theUnchainedMod:SecondMagic! HP and !M! Strength. NL Exhaust. "
   },
   "theUnchainedMod:MeltingHex": {
     "NAME": "Melting Hex",
