@@ -92,7 +92,7 @@
   },
   "theUnchainedMod:RazorChain": {
     "NAME": "Cadena de Afeitar",
-    "DESCRIPTION": "El enemigo pierde !D! de HP. NL HP se ve afectado por los theunchainedmod:Modificadores_de_Daño."
+    "DESCRIPTION": "El enemigo pierde !D! de HP. Si el enemigo tiene Bloqueo, el enemigo pierde !D! HP otra vez. HP se ve afectado por los theunchainedmod:Modificadores_de_Daño."
   },
   "theUnchainedMod:GuardedPosture": {
     "NAME": "Postura Cautelosa",

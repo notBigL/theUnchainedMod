@@ -11,9 +11,11 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.helpers.CardHelper;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -98,6 +100,14 @@ public class TheUnchainedMod implements
         //  Unlock all Optional Content
         public static final String UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY = "AllOptionalContentUnlocked";
         public static boolean UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = false;
+
+        //  Replace Magus Form with Magnus Form
+
+
+        //  Magnus Form Selected
+        public static final String MAGNUS_FORM_SELECTED_PROPERTY = "MagnusFormSelected";
+        public static boolean MAGNUS_FORM_SELECTED = false;
+
         //  Prince Unbound Skin
         public static final String UNCHAINED_SKIN_UNLOCKED_PROPERTY = "PrinceUnboundSkinUnlocked";
         public static boolean UNCHAINED_SKIN_UNLOCKED = false;
@@ -289,6 +299,8 @@ public class TheUnchainedMod implements
             UNCHAINED_SKIN_UNLOCKED = unchainedConfig.getBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY);
             UNCHAINED_SKIN_ACTIVATED = unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY);
 
+            UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = unchainedConfig.getBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY);
+            MAGNUS_FORM_SELECTED = unchainedConfig.getBool(MAGNUS_FORM_SELECTED_PROPERTY);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -405,7 +417,31 @@ public class TheUnchainedMod implements
                 });
 
 
+        // Set Magnus Form
+        UpdateMagnusForm();
+        ModLabeledToggleButton magnusFormButton = new ModLabeledToggleButton("Replaces Magus Form with Magnus Form. \n We are not sure why we did this, but it was 2 AM and these things happen sometimes.",
+                350.0f, 600.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                MAGNUS_FORM_SELECTED, // Boolean it uses
+                settingsPanel,
+                (label) -> {
+                },
+                (button) -> { // The actual button:
+                    MAGNUS_FORM_SELECTED = button.enabled;
+                    try {
+                        unchainedConfig.setBool(MAGNUS_FORM_SELECTED_PROPERTY, MAGNUS_FORM_SELECTED);
+                        unchainedConfig.save();
+
+                        UpdateMagnusForm();
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+
+
+
         settingsPanel.addUIElement(unlockAllOptionalContentButton); // Add the button to the settings panel. Button is a go.
+        settingsPanel.addUIElement(magnusFormButton);
 
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
@@ -420,6 +456,22 @@ public class TheUnchainedMod implements
         logger.info("Done loading badge Image and mod options");
     }
 
+
+    public void UpdateMagnusForm()
+    {
+        MagusForm compendiumMagusForm = (MagusForm) CardLibrary.getCard(MagusForm.ID);
+        if(MAGNUS_FORM_SELECTED) {
+            compendiumMagusForm.name = "Magnus Form";
+            MagusForm.IMG = TheUnchainedMod.makeCardPath("MagnusForm.png");
+        }
+        else {
+            compendiumMagusForm.name = "Magus Form";
+            MagusForm.IMG = TheUnchainedMod.makeCardPath("MagusForm.png");
+        }
+
+        compendiumMagusForm.loadCardImage(MagusForm.IMG);
+        compendiumMagusForm.update();
+    }
     // =============== / POST-INITIALIZE/ =================
 
     // ================ ADD POTIONS ===================

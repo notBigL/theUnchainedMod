@@ -92,7 +92,7 @@
   },
   "theUnchainedMod:RazorChain": {
     "NAME": "Razor Chain",
-    "DESCRIPTION": "Enemy loses !D! HP. NL HP loss is affected by theunchainedmod:Damage_Modifiers."
+    "DESCRIPTION": "Enemy loses !D! HP. If the Enemy has Block, Enemy loses !D! HP again. HP loss is affected by theunchainedmod:Damage_Modifiers."
   },
   "theUnchainedMod:GuardedPosture": {
     "NAME": "Guarded Posture",

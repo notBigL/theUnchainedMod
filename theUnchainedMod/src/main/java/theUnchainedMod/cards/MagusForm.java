@@ -14,8 +14,8 @@ import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class MagusForm extends AbstractDynamicCard {
 
-    public static final String ID = TheUnchainedMod.makeID(MagusForm.class.getSimpleName());
-    public static final String IMG = makeCardPath("MagusForm.png");
+    public static String ID = TheUnchainedMod.makeID(MagusForm.class.getSimpleName());
+    public static String IMG = makeCardPath("MagusForm.png");
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
@@ -29,9 +29,15 @@ public class MagusForm extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         this.isEthereal = true;
+
+        if(TheUnchainedMod.MAGNUS_FORM_SELECTED) {
+            name = "Magnus Form";
+        }
+        else {
+            name = "Magus Form";
+        }
         tags.add(BaseModCardTags.FORM);
     }
-
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
