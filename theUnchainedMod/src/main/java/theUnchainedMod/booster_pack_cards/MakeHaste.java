@@ -30,7 +30,7 @@ public class MakeHaste extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber= defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
         this.cardsToPreview = new Swirl();
-        this.exhaust = true;
+        //this.exhaust = true;
     }
 
     @Override
