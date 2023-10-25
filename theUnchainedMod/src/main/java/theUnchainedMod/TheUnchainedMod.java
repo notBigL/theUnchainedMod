@@ -102,9 +102,6 @@ public class TheUnchainedMod implements
         public static boolean UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = false;
 
         //  Replace Magus Form with Magnus Form
-
-
-        //  Magnus Form Selected
         public static final String MAGNUS_FORM_SELECTED_PROPERTY = "MagnusFormSelected";
         public static boolean MAGNUS_FORM_SELECTED = false;
 
@@ -247,23 +244,12 @@ public class TheUnchainedMod implements
         logger.info("Subscribe to BaseMod hooks");
 
         BaseMod.subscribe(this);
-        
-      /*
-           (   ( /(  (     ( /( (            (  `   ( /( )\ )    )\ ))\ )
-           )\  )\()) )\    )\()))\ )   (     )\))(  )\()|()/(   (()/(()/(
-         (((_)((_)((((_)( ((_)\(()/(   )\   ((_)()\((_)\ /(_))   /(_))(_))
-         )\___ _((_)\ _ )\ _((_)/(_))_((_)  (_()((_) ((_|_))_  _(_))(_))_
-        ((/ __| || (_)_\(_) \| |/ __| __| |  \/  |/ _ \|   \  |_ _||   (_)
-         | (__| __ |/ _ \ | .` | (_ | _|  | |\/| | (_) | |) |  | | | |) |
-          \___|_||_/_/ \_\|_|\_|\___|___| |_|  |_|\___/|___/  |___||___(_)
-      */
 
         setModID("theUnchainedMod");
 
         logger.info("Done subscribing");
 
         logger.info("Creating the color " + TheUnchained.Enums.COLOR_ORANGE.toString());
-
 
         // THE UNCHAINED DEFAULT CARDS
         BaseMod.addColor(TheUnchained.Enums.COLOR_ORANGE, UNCHAINED_ORANGE.cpy(), UNCHAINED_ORANGE.cpy(), UNCHAINED_ORANGE.cpy(),

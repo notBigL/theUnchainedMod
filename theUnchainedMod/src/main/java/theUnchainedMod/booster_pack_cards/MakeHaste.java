@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.MakeHasteAction;
 import theUnchainedMod.cards.AbstractDynamicCard;
+import theUnchainedMod.cards.Swirl;
 import theUnchainedMod.characters.TheUnchained;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
@@ -28,6 +29,7 @@ public class MakeHaste extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber= defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
+        this.cardsToPreview = new Swirl();
         this.exhaust = true;
     }
 

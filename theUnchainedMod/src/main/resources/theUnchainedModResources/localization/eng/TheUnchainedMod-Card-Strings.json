@@ -118,8 +118,8 @@
   },
   "theUnchainedMod:Swirl": {
     "NAME": "Swirl",
-    "DESCRIPTION": "Retain. Gain !B! Block. NL Deal !D! damage. Double the base damage and Block of ALL Swirls this turn. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. Gain !B! Block. NL Deal !D! damage. Double the base damage and Block of ALL Swirls this turn. Gain 1 theunchainedmod:Momentum. Exhaust."
+    "DESCRIPTION": "Retain. Gain !B! Block. NL Deal !D! damage. Double the base damage and Block of ALL *Swirls this turn. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. Gain !B! Block. NL Deal !D! damage. Double the base damage and Block of ALL *Swirls this turn. Gain 1 theunchainedmod:Momentum. Exhaust."
   },
   "theUnchainedMod:RoyalDecree": {
     "NAME": "Royal Decree",
@@ -158,7 +158,7 @@
   },
   "theUnchainedMod:Ballet": {
     "NAME": "Ballet",
-    "DESCRIPTION": "At the start of your turn, gain !M! theunchainedmod:Momentum. NL Swirls now hit ALL enemies."
+    "DESCRIPTION": "At the start of your turn, gain !M! theunchainedmod:Momentum. NL *Swirls now hit ALL enemies."
   },
   "theUnchainedMod:WideSwing": {
     "NAME": "Wide Swing",
@@ -222,7 +222,7 @@
   },
   "theUnchainedMod:Pirouette": {
     "NAME": "Pirouette",
-    "DESCRIPTION": "Add a Swirl into your hand. NL Upgrade ALL Swirls in your hand. Exhaust."
+    "DESCRIPTION": "Add a *Swirl into your hand. NL Upgrade ALL *Swirls in your hand. Exhaust."
   },
   "theUnchainedMod:TradeOffer": {
     "NAME": "Trade Offer",
@@ -339,7 +339,7 @@
   },
   "theUnchainedMod:MakeHaste": {
     "NAME": "Make Haste",
-    "DESCRIPTION": "Play as many cards from the top of your draw pile as you have Swirls. Exhaust."
+    "DESCRIPTION": "Play as many cards from the top of your draw pile as you have *Swirls. Exhaust."
   },
   "theUnchainedMod:MagicMecha": {
     "NAME": "Magic Mecha",

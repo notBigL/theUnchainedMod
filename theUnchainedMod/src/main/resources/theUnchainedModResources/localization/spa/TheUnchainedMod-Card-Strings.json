@@ -113,8 +113,8 @@
   },
   "theUnchainedMod:Swirl": {
     "NAME": "Remolino",
-    "DESCRIPTION": "Retiene. Gana !B! de Bloqueo. NL Inflige !D! de daño. Duplica el daño base y el bloqueo de TODOS los remolinos este turno. NL Agota.",
-    "UPGRADE_DESCRIPTION": "Retiene. ¡Gana !B! de Bloqueo. NL Inflige !D! de daño. Duplica el daño base y el bloqueo de TODOS los remolinos este turno. Gana 1 de theunchainedmod:Impulso. NL Agota."
+    "DESCRIPTION": "Retiene. Gana !B! de Bloqueo. NL Inflige !D! de daño. Duplica el daño base y el bloqueo de TODOS los *remolinos este turno. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Retiene. ¡Gana !B! de Bloqueo. NL Inflige !D! de daño. Duplica el daño base y el bloqueo de TODOS los *remolinos este turno. Gana 1 de theunchainedmod:Impulso. NL Agota."
   },
   "theUnchainedMod:RoyalDecree": {
     "NAME": "Decreto Real",
@@ -153,7 +153,7 @@
   },
   "theUnchainedMod:Ballet": {
     "NAME": "Ballet",
-    "DESCRIPTION": "Al comienzo de tu turno, gana !M! de theunchainedmod:Impulso. NL Los Remolinos ahora golpean a TODOS los enemigos."
+    "DESCRIPTION": "Al comienzo de tu turno, gana !M! de theunchainedmod:Impulso. NL Los *Remolinos ahora golpean a TODOS los enemigos."
   },
   "theUnchainedMod:WideSwing": {
     "NAME": "Swing Ancho",
@@ -213,7 +213,7 @@
   },
   "theUnchainedMod:Pirouette": {
     "NAME": "Pirouette",
-    "DESCRIPTION": "Añade un Remolino a tu mano. NL Actualiza TODOS los Remolinos en tu mano. NL Agota."
+    "DESCRIPTION": "Añade un *Remolino a tu mano. NL Actualiza TODOS los *Remolinos en tu mano. NL Agota."
   },
   "theUnchainedMod:TradeOffer": {
     "NAME": "Oferta Comercial",
@@ -330,7 +330,7 @@
   },
   "theUnchainedMod:MakeHaste": {
     "NAME": "Date Prisa",
-    "DESCRIPTION": "Juega tantas cartas desde la parte superior de tu pila de robo como tengas Remolinos. NL Agota."
+    "DESCRIPTION": "Juega tantas cartas desde la parte superior de tu pila de robo como tengas *Remolinos. NL Agota."
   },
   "theUnchainedMod:MagicMecha": {
     "NAME": "Mecha Mágica",
