@@ -21,7 +21,7 @@ public class MakeHaste extends AbstractDynamicBoosterPackCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int MAGIC_NUMBER = 3;
     private static final int SECOND_MAGIC_NUMBER = 2;
 
@@ -31,14 +31,13 @@ public class MakeHaste extends AbstractDynamicBoosterPackCard {
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber= defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
         this.cardsToPreview = new Swirl();
-        //this.exhaust = true;
     }
 
     @Override
     public void upgrade() {
         if(!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            upgradeBaseCost(1);
         }
     }
 

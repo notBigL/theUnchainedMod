@@ -347,7 +347,7 @@
   },
   "theUnchainedMod:BarbedWire": {
     "NAME": "Barbed Wire",
-    "DESCRIPTION": "Deal !M! damage to ALL Enemies for each chain not finished at the end of your turn."
+    "DESCRIPTION": "Deal !M! damage to ALL Enemies for each theunchainedmod:Chain not finished at the end of your turn."
   },
   "theUnchainedMod:ArcaneArtillery": {
     "NAME": "Arcane Artillery",
