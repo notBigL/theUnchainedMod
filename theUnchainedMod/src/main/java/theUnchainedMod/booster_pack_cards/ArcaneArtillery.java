@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
+import theUnchainedMod.cards.AbstractDynamicBoosterPackCard;
 import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.RelayHelpers;
@@ -19,7 +20,7 @@ import java.util.Iterator;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
-public class ArcaneArtillery extends AbstractDynamicCard {
+public class ArcaneArtillery extends AbstractDynamicBoosterPackCard {
 
     public static final String ID = TheUnchainedMod.makeID(ArcaneArtillery.class.getSimpleName());
     public static final String IMG = makeCardPath("ArcaneArtillery.png");

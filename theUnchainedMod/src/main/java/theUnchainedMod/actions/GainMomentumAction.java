@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theUnchainedMod.cards.Swirl;
+import theUnchainedMod.patches.ChainsFinishedThisCombat;
+import theUnchainedMod.patches.SwirlsGeneratedThisCombat;
 import theUnchainedMod.powers.MomentumPower;
 
 public class GainMomentumAction extends AbstractGameAction {
@@ -50,7 +52,6 @@ public class GainMomentumAction extends AbstractGameAction {
         }
         for(int i = amountOfSwirls; i > 0; i--) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, 1, false));
-
         }
         if(tempAmount <= 0) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(player, player, "theUnchainedMod:MomentumPower"));

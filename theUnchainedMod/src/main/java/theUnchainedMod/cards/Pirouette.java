@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.PirouetteAction;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.patches.SwirlsGeneratedThisCombat;
 import theUnchainedMod.powers.MomentumPower;
 import theUnchainedMod.powers.NewTwoAmountPower;
 import theUnchainedMod.relics.BalletShoes;
@@ -55,6 +56,7 @@ public class Pirouette extends AbstractDynamicCard {
                 AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new MomentumPower(p, 1)));
             else AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new MomentumPower(p, 2)));
         }
+        //SwirlsGeneratedThisCombat.IncreaseSwirlsGeneratedThisCombat(1);
         AbstractDungeon.actionManager.addToBottom(new PirouetteAction());
     }
 }

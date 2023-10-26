@@ -10,6 +10,7 @@ import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.ArcaneLinkAction;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.actions.ReinforcedElementAction;
+import theUnchainedMod.cards.AbstractDynamicBoosterPackRelayCard;
 import theUnchainedMod.cards.AbstractDynamicRelayCard;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
@@ -19,7 +20,7 @@ import java.util.Iterator;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
-public class ArcaneLink extends AbstractDynamicRelayCard {
+public class ArcaneLink extends AbstractDynamicBoosterPackRelayCard {
 
     public static final String ID = TheUnchainedMod.makeID(ArcaneLink.class.getSimpleName());
     public static final String IMG = makeCardPath("ArcaneLink.png");

@@ -8,12 +8,13 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.CrushPlatesAction;
+import theUnchainedMod.cards.AbstractDynamicBoosterPackCard;
 import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
-public class CrushPlates extends AbstractDynamicCard {
+public class CrushPlates extends AbstractDynamicBoosterPackCard {
 
     public static final String ID = TheUnchainedMod.makeID(CrushPlates.class.getSimpleName());
     public static final String IMG = makeCardPath("CrushPlates.png");

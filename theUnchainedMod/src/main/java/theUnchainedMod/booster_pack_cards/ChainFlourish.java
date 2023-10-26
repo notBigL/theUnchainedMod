@@ -9,13 +9,14 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.DamagePerChainFinishedAction;
+import theUnchainedMod.cards.AbstractDynamicBoosterPackCard;
 import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.ChainsFinishedThisCombat;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
-public class ChainFlourish extends AbstractDynamicCard {
+public class ChainFlourish extends AbstractDynamicBoosterPackCard {
 
     public static final String ID = TheUnchainedMod.makeID(ChainFlourish.class.getSimpleName());
     public static final String IMG = makeCardPath("ChainFlourish.png");

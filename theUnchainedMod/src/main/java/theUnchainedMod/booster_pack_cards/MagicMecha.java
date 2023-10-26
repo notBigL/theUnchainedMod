@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
+import theUnchainedMod.cards.AbstractDynamicBoosterPackCard;
 import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.powers.DeliciousChurroPower;
@@ -13,7 +14,7 @@ import theUnchainedMod.powers.MagicMechaPower;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
-public class MagicMecha extends AbstractDynamicCard {
+public class MagicMecha extends AbstractDynamicBoosterPackCard {
 
     public static final String ID = TheUnchainedMod.makeID(MagicMecha.class.getSimpleName());
     public static final String IMG = makeCardPath("MagicMecha.png");

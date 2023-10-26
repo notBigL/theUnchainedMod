@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
+import theUnchainedMod.patches.SwirlsGeneratedThisCombat;
 import theUnchainedMod.powers.FullSpinPower;
 import theUnchainedMod.powers.MomentumPower;
 import theUnchainedMod.powers.SwirlsHitAllEnemiesPower;

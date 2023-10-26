@@ -5,13 +5,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.MakeHasteAction;
+import theUnchainedMod.cards.AbstractDynamicBoosterPackCard;
 import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.cards.Swirl;
 import theUnchainedMod.characters.TheUnchained;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
-public class MakeHaste extends AbstractDynamicCard {
+public class MakeHaste extends AbstractDynamicBoosterPackCard {
 
     public static final String ID = TheUnchainedMod.makeID(MakeHaste.class.getSimpleName());
     public static final String IMG = makeCardPath("MakeHaste.png");

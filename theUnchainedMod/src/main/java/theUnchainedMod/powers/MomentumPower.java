@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.Swirl;
+import theUnchainedMod.patches.SwirlsGeneratedThisCombat;
 import theUnchainedMod.relics.BalletShoes;
 import theUnchainedMod.util.TextureLoader;
 
@@ -98,6 +99,7 @@ public class MomentumPower extends NewTwoAmountPower {
         }
         for (int i = amountOfSwirls; i > 0; i--) {
             AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(card, 1, false));
+            SwirlsGeneratedThisCombat.IncreaseSwirlsGeneratedThisCombat(1);
         }
         return amount;
     }

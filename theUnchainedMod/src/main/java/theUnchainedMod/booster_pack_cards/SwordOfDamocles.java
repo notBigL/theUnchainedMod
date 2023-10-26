@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theUnchainedMod.TheUnchainedMod;
+import theUnchainedMod.cards.AbstractDynamicBoosterPackCard;
 import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
@@ -15,7 +16,7 @@ import theUnchainedMod.vfx.SwordOfDamoclesEffect;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
-public class SwordOfDamocles extends AbstractDynamicCard {
+public class SwordOfDamocles extends AbstractDynamicBoosterPackCard {
 
     public static final String ID = TheUnchainedMod.makeID(SwordOfDamocles.class.getSimpleName());
     public static final String IMG = makeCardPath("SwordOfDamocles.png");
