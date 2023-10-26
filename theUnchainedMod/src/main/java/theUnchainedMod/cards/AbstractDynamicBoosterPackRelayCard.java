@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.ArcaneMasteryPower;
 
-public abstract class AbstractDynamicBoosterPackRelayCard extends AbstractDynamicCard {
+public abstract class AbstractDynamicBoosterPackRelayCard extends AbstractDynamicRelayCard {
 
     public AbstractDynamicBoosterPackRelayCard(String id, String img, int cost, CardType type, CardColor color, CardRarity rarity, CardTarget target) {
         super(id, img, cost, type, color, rarity, target);

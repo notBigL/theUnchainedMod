@@ -17,7 +17,16 @@ import theUnchainedMod.characters.TheUnchained;
 public class BoosterPackBetaArtTogglePatch {
     @SpirePostfixPatch
     public static boolean otherCharacterCheck(boolean __result, SingleCardViewPopup __instance, AbstractCard ___card) {
-        if (___card != null && !__result && ___card.color == TheUnchained.Enums.COLOR_BOOSTER) { // Check if card is a booster pack card
+        /*if (___card != null && !__result && ___card.color == TheUnchained.Enums.COLOR_BOOSTER) { // Check if card is a booster pack card
+            for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
+                if (p.getCardColor() == TheUnchained.Enums.COLOR_ORANGE) { // Unchained Color
+                    Prefs playerPrefs = p.getPrefs();
+                    return playerPrefs != null && playerPrefs.getBoolean(TrackKilledHeart.HEART_KILL, false);
+                }
+            }
+        }
+        return __result;*/
+        if (___card != null && !__result) {
             for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
                 if (p.getCardColor() == TheUnchained.Enums.COLOR_ORANGE) { // Unchained Color
                     Prefs playerPrefs = p.getPrefs();

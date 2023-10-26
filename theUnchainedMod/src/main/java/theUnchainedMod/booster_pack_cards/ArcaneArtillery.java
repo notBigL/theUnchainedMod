@@ -27,7 +27,7 @@ public class ArcaneArtillery extends AbstractDynamicBoosterPackCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheUnchained.Enums.COLOR_BOOSTER;
+    public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
 
     private static final int COST = 1;
     private static final int DAMAGE = 0;

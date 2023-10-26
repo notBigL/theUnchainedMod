@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import theUnchainedMod.cards.AbstractDynamicBoosterPackCard;
+import theUnchainedMod.cards.AbstractDynamicBoosterPackRelayCard;
 import theUnchainedMod.util.TextureLoader;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
@@ -19,12 +20,18 @@ public class MPIconRendererPatch{
     private static Texture texture = TextureLoader.getTexture(makeCardPath("BoosterPackCardCorner.png"));
     public static TextureAtlas.AtlasRegion cardMpImage = new TextureAtlas.AtlasRegion(texture, 0, 0, texture.getHeight(), texture.getWidth());
     public static void Postfix(AbstractCard __instance, SpriteBatch sb){
-        if(__instance instanceof AbstractDynamicBoosterPackCard){
+        if(__instance instanceof AbstractDynamicBoosterPackCard || __instance instanceof AbstractDynamicBoosterPackRelayCard){
             if(CardCrawlGame.mainMenuScreen.screen == MainMenuScreen.CurScreen.CARD_LIBRARY){
                 if(cardMpImage != null){
                     sb.setColor(Color.WHITE.cpy());
-                    sb.draw(cardMpImage, __instance.current_x - (float)cardMpImage.originalWidth / 2.0F, __instance.current_y - (float)cardMpImage.originalHeight / 2.0F, (float)cardMpImage.originalWidth / 2.0F, (float)cardMpImage.originalHeight / 2.0F, (float)cardMpImage.originalWidth, (float)cardMpImage.originalHeight, __instance.drawScale * Settings.scale, __instance.drawScale * Settings.scale, __instance.angle);
-                }
+                    sb.setColor(Color.WHITE.cpy());
+                    sb.draw(cardMpImage,
+                            __instance.current_x - (float)cardMpImage.originalWidth / 2.0F,
+                            __instance.current_y - (float)cardMpImage.originalHeight / 2.0F,
+                            (float)cardMpImage.originalWidth / 2.0F, (float)cardMpImage.originalHeight / 2.0F, (float)cardMpImage.originalWidth, (float)cardMpImage.originalHeight,
+                            __instance.drawScale * Settings.scale,
+                            __instance.drawScale * Settings.scale,
+                            __instance.angle);}
             }
         }
     }
