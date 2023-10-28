@@ -16,19 +16,19 @@ import theUnchainedMod.util.TextureLoader;
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 @SpirePatch2(clz = AbstractCard.class, method = "renderImage")
-public class MPIconRendererPatch{
-    private static Texture texture = TextureLoader.getTexture(makeCardPath("BoosterPackCardCorner.png"));
-    public static TextureAtlas.AtlasRegion cardMpImage = new TextureAtlas.AtlasRegion(texture, 0, 0, texture.getHeight(), texture.getWidth());
+public class BoosterPackIconRendererPatch {
+    private static final Texture texture = TextureLoader.getTexture(makeCardPath("BoosterPackCardCorner.png"));
+    public static TextureAtlas.AtlasRegion boosterPackImage = new TextureAtlas.AtlasRegion(texture, 0, 0, texture.getHeight(), texture.getWidth());
     public static void Postfix(AbstractCard __instance, SpriteBatch sb){
         if(__instance instanceof AbstractDynamicBoosterPackCard || __instance instanceof AbstractDynamicBoosterPackRelayCard){
             if(CardCrawlGame.mainMenuScreen.screen == MainMenuScreen.CurScreen.CARD_LIBRARY){
-                if(cardMpImage != null){
+                if(boosterPackImage != null){
                     sb.setColor(Color.WHITE.cpy());
                     sb.setColor(Color.WHITE.cpy());
-                    sb.draw(cardMpImage,
-                            __instance.current_x - (float)cardMpImage.originalWidth / 2.0F,
-                            __instance.current_y - (float)cardMpImage.originalHeight / 2.0F,
-                            (float)cardMpImage.originalWidth / 2.0F, (float)cardMpImage.originalHeight / 2.0F, (float)cardMpImage.originalWidth, (float)cardMpImage.originalHeight,
+                    sb.draw(boosterPackImage,
+                            __instance.current_x - (float) boosterPackImage.originalWidth / 2.0F,
+                            __instance.current_y - (float) boosterPackImage.originalHeight / 2.0F,
+                            (float) boosterPackImage.originalWidth / 2.0F, (float) boosterPackImage.originalHeight / 2.0F, (float) boosterPackImage.originalWidth, (float) boosterPackImage.originalHeight,
                             __instance.drawScale * Settings.scale,
                             __instance.drawScale * Settings.scale,
                             __instance.angle);}

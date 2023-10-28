@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import spireTogether.SpireTogetherMod;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.AbstractDynamicBoosterPackCard;
 import theUnchainedMod.cards.AbstractDynamicBoosterPackRelayCard;
@@ -15,16 +16,17 @@ import java.util.Iterator;
 public class RemoveBoosterPackCardsFromPoolPatch {
     public static void Postfix(){
 
-        if(!(AbstractDungeon.player instanceof TheUnchained)) return;
-        if(TheUnchainedMod.UNCHAINED_BOOSTER_PACK_ACTIVATED) return;
-        PurgeCardsFromPool(AbstractDungeon.commonCardPool);
-        PurgeCardsFromPool(AbstractDungeon.uncommonCardPool);
-        PurgeCardsFromPool(AbstractDungeon.rareCardPool);
-        PurgeCardsFromPool(AbstractDungeon.colorlessCardPool);
-        PurgeCardsFromPool(AbstractDungeon.curseCardPool);
+        if(AbstractDungeon.player instanceof TheUnchained)
+            if(!TheUnchainedMod.UNCHAINED_BOOSTER_PACK_ACTIVATED || SpireTogetherMod.isConnected) {
+                RemoveBoosterPackCardsFromPool(AbstractDungeon.commonCardPool);
+                RemoveBoosterPackCardsFromPool(AbstractDungeon.uncommonCardPool);
+                RemoveBoosterPackCardsFromPool(AbstractDungeon.rareCardPool);
+                RemoveBoosterPackCardsFromPool(AbstractDungeon.colorlessCardPool);
+                RemoveBoosterPackCardsFromPool(AbstractDungeon.curseCardPool);
+        }
     }
 
-    public static void PurgeCardsFromPool(CardGroup g){
+    public static void RemoveBoosterPackCardsFromPool(CardGroup g){
         Iterator i = g.group.iterator();
 
         while(i.hasNext()){

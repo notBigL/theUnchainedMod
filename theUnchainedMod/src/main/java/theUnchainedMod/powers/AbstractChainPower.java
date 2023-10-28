@@ -28,7 +28,7 @@ public class AbstractChainPower extends AbstractPower {
     private static final Texture skillTexture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/SkillChain_power128.png");
     private static final Texture powerTexture48 = TextureLoader.getTexture("theUnchainedModResources/images/powers/PowerChain_power48.png");
     private static final Texture powerTexture128 = TextureLoader.getTexture("theUnchainedModResources/images/powers/PowerChain_power128.png");
-    private static int chainIdOffset;
+    public static int chainIdOffset;
     public final AbstractGameAction finishedChainAction;
     public final AbstractCard.CardType cardType;
     private final String powerIdWithoutOffset;
