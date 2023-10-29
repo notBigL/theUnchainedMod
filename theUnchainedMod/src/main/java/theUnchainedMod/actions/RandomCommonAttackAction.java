@@ -10,7 +10,7 @@ import theUnchainedMod.util.UtilityClass;
 
 public class RandomCommonAttackAction extends AbstractGameAction {
 
-    private final boolean upgraded;
+    public final boolean upgraded;
 
     public RandomCommonAttackAction(boolean upgraded) {
         this.upgraded = upgraded;
