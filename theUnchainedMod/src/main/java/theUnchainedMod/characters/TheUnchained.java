@@ -26,7 +26,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.*;
-import theUnchainedMod.patches.CharacterSelectUIPatch;
 import theUnchainedMod.relics.RustedChains;
 import theUnchainedMod.vfx.ChainAcrossScreenEffect;
 import theUnchainedMod.vfx.UnchainedVictoryVFX;
@@ -36,7 +35,7 @@ import java.util.List;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
 import static theUnchainedMod.TheUnchainedMod.*;
-import static theUnchainedMod.characters.TheUnchained.Enums.COLOR_ORANGE;
+import static theUnchainedMod.characters.TheUnchained.Enums.UNCHAINED_COLOR;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
 //and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
@@ -56,15 +55,10 @@ public class TheUnchained extends CustomPlayer {
         @SpireEnum
         public static AbstractPlayer.PlayerClass THE_UNCHAINED;
         @SpireEnum(name = "UNCHAINED_ORANGE_COLOR") // These two HAVE to have the same absolutely identical name.
-        public static AbstractCard.CardColor COLOR_ORANGE;
+        public static AbstractCard.CardColor UNCHAINED_COLOR;
         @SpireEnum(name = "UNCHAINED_ORANGE_COLOR")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
-        @SpireEnum(name = "UNCHAINED_BOOSTER_COLOR") // These two HAVE to have the same absolutely identical name.
-        public static AbstractCard.CardColor COLOR_BOOSTER;
-        @SpireEnum(name = "UNCHAINED_BOOSTER_COLOR")
-        @SuppressWarnings("unused")
-        public static CardLibrary.LibraryType LIBRARY_BOOSTER_COLOR;
     }
 
     // =============== CHARACTER ENUMERATORS  =================
@@ -240,7 +234,7 @@ public class TheUnchained extends CustomPlayer {
     // Should return the card color enum to be associated with your character.
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return COLOR_ORANGE;
+        return UNCHAINED_COLOR;
     }
 
     // Should return a color object to be used to color the trail of moving cards

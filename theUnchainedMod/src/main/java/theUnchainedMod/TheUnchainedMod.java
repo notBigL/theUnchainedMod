@@ -11,7 +11,6 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -249,10 +248,10 @@ public class TheUnchainedMod implements
 
         logger.info("Done subscribing");
 
-        logger.info("Creating the color " + TheUnchained.Enums.COLOR_ORANGE.toString());
+        logger.info("Creating the color " + TheUnchained.Enums.UNCHAINED_COLOR.toString());
 
         // THE UNCHAINED DEFAULT CARDS
-        BaseMod.addColor(TheUnchained.Enums.COLOR_ORANGE, UNCHAINED_ORANGE.cpy(), UNCHAINED_ORANGE.cpy(), UNCHAINED_ORANGE.cpy(),
+        BaseMod.addColor(TheUnchained.Enums.UNCHAINED_COLOR, UNCHAINED_ORANGE.cpy(), UNCHAINED_ORANGE.cpy(), UNCHAINED_ORANGE.cpy(),
                 UNCHAINED_ORANGE.cpy(), UNCHAINED_ORANGE.cpy(), UNCHAINED_ORANGE.cpy(), UNCHAINED_ORANGE.cpy(),
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
@@ -273,6 +272,7 @@ public class TheUnchainedMod implements
 
         //unchainedConfig.setBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY, false);
         //unchainedConfig.setBool(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, false);
+
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
 
@@ -493,21 +493,21 @@ public class TheUnchainedMod implements
         // in order to automatically differentiate which pool to add the relic too.
 
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-        BaseMod.addRelicToCustomPool(new RustedChains(), TheUnchained.Enums.COLOR_ORANGE);
-        BaseMod.addRelicToCustomPool(new BalletShoes(), TheUnchained.Enums.COLOR_ORANGE);
-        BaseMod.addRelicToCustomPool(new Memento(), TheUnchained.Enums.COLOR_ORANGE);
-        BaseMod.addRelicToCustomPool(new Carabiner(), TheUnchained.Enums.COLOR_ORANGE);
-        BaseMod.addRelicToCustomPool(new PolishedChains(), TheUnchained.Enums.COLOR_ORANGE);
-        BaseMod.addRelicToCustomPool(new BrokenCharm(), TheUnchained.Enums.COLOR_ORANGE);
-        BaseMod.addRelicToCustomPool(new Churros(), TheUnchained.Enums.COLOR_ORANGE);
-        BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheUnchained.Enums.COLOR_ORANGE);
-        BaseMod.addRelicToCustomPool(new TotemOfPain(), TheUnchained.Enums.COLOR_ORANGE);
-        BaseMod.addRelicToCustomPool(new DancingRibbons(), TheUnchained.Enums.COLOR_ORANGE);
-        BaseMod.addRelicToCustomPool(new Wrench(), TheUnchained.Enums.COLOR_ORANGE);
+        BaseMod.addRelicToCustomPool(new RustedChains(), TheUnchained.Enums.UNCHAINED_COLOR);
+        BaseMod.addRelicToCustomPool(new BalletShoes(), TheUnchained.Enums.UNCHAINED_COLOR);
+        BaseMod.addRelicToCustomPool(new Memento(), TheUnchained.Enums.UNCHAINED_COLOR);
+        BaseMod.addRelicToCustomPool(new Carabiner(), TheUnchained.Enums.UNCHAINED_COLOR);
+        BaseMod.addRelicToCustomPool(new PolishedChains(), TheUnchained.Enums.UNCHAINED_COLOR);
+        BaseMod.addRelicToCustomPool(new BrokenCharm(), TheUnchained.Enums.UNCHAINED_COLOR);
+        BaseMod.addRelicToCustomPool(new Churros(), TheUnchained.Enums.UNCHAINED_COLOR);
+        BaseMod.addRelicToCustomPool(new HeartOfTheUnderdog(), TheUnchained.Enums.UNCHAINED_COLOR);
+        BaseMod.addRelicToCustomPool(new TotemOfPain(), TheUnchained.Enums.UNCHAINED_COLOR);
+        BaseMod.addRelicToCustomPool(new DancingRibbons(), TheUnchained.Enums.UNCHAINED_COLOR);
+        BaseMod.addRelicToCustomPool(new Wrench(), TheUnchained.Enums.UNCHAINED_COLOR);
 
         // Booster Pack Relics
-        BaseMod.addRelicToCustomPool(new CrushingGauntlets(), TheUnchained.Enums.COLOR_BOOSTER);
-        BaseMod.addRelicToCustomPool(new ArcaneAmplifier(), TheUnchained.Enums.COLOR_BOOSTER);
+        BaseMod.addRelicToCustomPool(new CrushingGauntlets(), TheUnchained.Enums.UNCHAINED_COLOR);
+        BaseMod.addRelicToCustomPool(new ArcaneAmplifier(), TheUnchained.Enums.UNCHAINED_COLOR);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);

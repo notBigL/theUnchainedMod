@@ -26,7 +26,7 @@ public class Whiplash extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
+    public static final CardColor COLOR = TheUnchained.Enums.UNCHAINED_COLOR;
 
     private static final int COST = 1;
     private static final int DAMAGE = 4;

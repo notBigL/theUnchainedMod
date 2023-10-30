@@ -5,15 +5,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MalleablePower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.AbstractDynamicBoosterPackCard;
-import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
-import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.CrushedArmorPower;
-import theUnchainedMod.powers.DamoclesChainPower;
-import theUnchainedMod.powers.DeliciousChurroPower;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
@@ -24,7 +19,7 @@ public class MeltingHex extends AbstractDynamicBoosterPackCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
+    public static final CardColor COLOR = TheUnchained.Enums.UNCHAINED_COLOR;
 
     private static final int COST = 2;
     private static final int MAGIC_NUMBER = 1; // Malleable Initial Amount

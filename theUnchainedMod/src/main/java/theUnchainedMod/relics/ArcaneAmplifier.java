@@ -17,7 +17,6 @@ import static theUnchainedMod.TheUnchainedMod.makeRelicPath;
 public class ArcaneAmplifier extends CustomRelic {
 
     public static final String ID = TheUnchainedMod.makeID("ArcaneAmplifier");
-
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Arcane_Amplifier_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Arcane_Amplifier_relic.png"));
 

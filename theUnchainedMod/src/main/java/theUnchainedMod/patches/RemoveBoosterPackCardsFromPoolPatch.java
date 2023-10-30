@@ -1,5 +1,6 @@
 package theUnchainedMod.patches;
 
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch2;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -16,14 +17,33 @@ import java.util.Iterator;
 public class RemoveBoosterPackCardsFromPoolPatch {
     public static void Postfix(){
 
-        if(AbstractDungeon.player instanceof TheUnchained)
-            if(!TheUnchainedMod.UNCHAINED_BOOSTER_PACK_ACTIVATED || SpireTogetherMod.isConnected) {
-                RemoveBoosterPackCardsFromPool(AbstractDungeon.commonCardPool);
-                RemoveBoosterPackCardsFromPool(AbstractDungeon.uncommonCardPool);
-                RemoveBoosterPackCardsFromPool(AbstractDungeon.rareCardPool);
-                RemoveBoosterPackCardsFromPool(AbstractDungeon.colorlessCardPool);
-                RemoveBoosterPackCardsFromPool(AbstractDungeon.curseCardPool);
+        if(AbstractDungeon.player instanceof TheUnchained) {
+            boolean cardsHaveBeenRemoved = false;
+            if (!TheUnchainedMod.UNCHAINED_BOOSTER_PACK_ACTIVATED)
+            {
+                RemoveAllCards();
+                cardsHaveBeenRemoved = true;
+            }
+            if(Loader.isModLoaded("spireTogether"))
+            {
+                if (SpireTogetherMod.isConnected && !cardsHaveBeenRemoved)
+                    RemoveAllCards();
+            }
         }
+    }
+    public static void RemoveAllCards()
+    {
+        RemoveBoosterPackCardsFromPool(AbstractDungeon.commonCardPool);
+        RemoveBoosterPackCardsFromPool(AbstractDungeon.uncommonCardPool);
+        RemoveBoosterPackCardsFromPool(AbstractDungeon.rareCardPool);
+        RemoveBoosterPackCardsFromPool(AbstractDungeon.colorlessCardPool);
+        RemoveBoosterPackCardsFromPool(AbstractDungeon.curseCardPool);
+
+        RemoveBoosterPackCardsFromPool(AbstractDungeon.srcCommonCardPool);
+        RemoveBoosterPackCardsFromPool(AbstractDungeon.srcUncommonCardPool);
+        RemoveBoosterPackCardsFromPool(AbstractDungeon.srcRareCardPool);
+        RemoveBoosterPackCardsFromPool(AbstractDungeon.srcColorlessCardPool);
+        RemoveBoosterPackCardsFromPool(AbstractDungeon.srcCurseCardPool);
     }
 
     public static void RemoveBoosterPackCardsFromPool(CardGroup g){

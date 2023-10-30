@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.CrushPlatesAction;
 import theUnchainedMod.cards.AbstractDynamicBoosterPackCard;
-import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.characters.TheUnchained;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
@@ -21,7 +20,7 @@ public class CrushPlates extends AbstractDynamicBoosterPackCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
+    public static final CardColor COLOR = TheUnchained.Enums.UNCHAINED_COLOR;
 
     private static final int COST = 1;
     private static final int DAMAGE = 8;

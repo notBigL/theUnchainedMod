@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.MakeHasteAction;
 import theUnchainedMod.cards.AbstractDynamicBoosterPackCard;
-import theUnchainedMod.cards.AbstractDynamicCard;
 import theUnchainedMod.cards.Swirl;
 import theUnchainedMod.characters.TheUnchained;
 
@@ -19,7 +18,7 @@ public class MakeHaste extends AbstractDynamicBoosterPackCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
+    public static final CardColor COLOR = TheUnchained.Enums.UNCHAINED_COLOR;
 
     private static final int COST = 2;
     private static final int MAGIC_NUMBER = 3;

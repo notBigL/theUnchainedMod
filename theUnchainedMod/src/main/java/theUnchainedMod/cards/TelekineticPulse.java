@@ -1,23 +1,18 @@
 package theUnchainedMod.cards;
 
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
-import theUnchainedMod.actions.AllEnemiesGainBlockAction;
-import theUnchainedMod.actions.AllEnemiesLoseHPAction;
 import theUnchainedMod.actions.TelekineticPulseAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.DeliciousChurroPower;
 import theUnchainedMod.powers.TelekineticPulsePower;
 import theUnchainedMod.util.UtilityClass;
-import theUnchainedMod.vfx.TelekineticPulseWaveEffect;
 
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
@@ -28,7 +23,7 @@ public class TelekineticPulse extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheUnchained.Enums.COLOR_ORANGE;
+    public static final CardColor COLOR = TheUnchained.Enums.UNCHAINED_COLOR;
 
     private static final int COST = 1;
     private static final int CHAIN_LENGTH = 1;

@@ -127,13 +127,13 @@ public class CharacterSelectUIPatch {
                                     TheUnchainedMod.UNCHAINED_BOOSTER_PACK_ACTIVATED = boosterPackButtonStatus;
 
                                     if(boosterPackButtonStatus) {
-                                        if (!BaseMod.getRelicsInCustomPool(TheUnchained.Enums.COLOR_ORANGE).containsKey(CrushingGauntlets.ID))
-                                            BaseMod.addRelicToCustomPool(new CrushingGauntlets(), TheUnchained.Enums.COLOR_ORANGE);
+                                        if (!BaseMod.getRelicsInCustomPool(TheUnchained.Enums.UNCHAINED_COLOR).containsKey(CrushingGauntlets.ID))
+                                            BaseMod.addRelicToCustomPool(new CrushingGauntlets(), TheUnchained.Enums.UNCHAINED_COLOR);
                                     }
                                     else
                                     {
-                                        if (BaseMod.getRelicsInCustomPool(TheUnchained.Enums.COLOR_ORANGE).containsKey(CrushingGauntlets.ID))
-                                            BaseMod.removeRelicFromCustomPool(BaseMod.getRelicsInCustomPool(TheUnchained.Enums.COLOR_ORANGE).get(CrushingGauntlets.ID), TheUnchained.Enums.COLOR_ORANGE);
+                                        if (BaseMod.getRelicsInCustomPool(TheUnchained.Enums.UNCHAINED_COLOR).containsKey(CrushingGauntlets.ID))
+                                            BaseMod.removeRelicFromCustomPool(BaseMod.getRelicsInCustomPool(TheUnchained.Enums.UNCHAINED_COLOR).get(CrushingGauntlets.ID), TheUnchained.Enums.UNCHAINED_COLOR);
                                     }
                                     TheUnchainedMod.unchainedConfig.save();
                                 } catch (Exception e) {
