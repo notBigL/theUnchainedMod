@@ -37,10 +37,10 @@ public class GainRelayAction extends AbstractGameAction {
                         mo.getPower(GlyphBrandPower.POWER_ID).onSpecificTrigger();
                     }
                 }
-
                 if(((AbstractPlayer) target).hasRelic(ArcaneAmplifier.ID))
                 {
-                    ((AbstractPlayer) target).getRelic(ArcaneAmplifier.ID).onTrigger();
+                    for(ArcaneAmplifier amp : ArcaneAmplifier.AllAmplifiers)
+                        if(amp != null) amp.onTrigger();
                 }
             }
         }

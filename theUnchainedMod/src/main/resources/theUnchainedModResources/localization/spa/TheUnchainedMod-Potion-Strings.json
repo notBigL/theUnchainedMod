@@ -2,34 +2,34 @@
   "theUnchainedMod:PlaceholderPotion": {
     "NAME": "Poción de Mantener Posición",
     "DESCRIPTIONS": [
-      "Gana ",
+      "Gana #b",
       "Al final de tu turno, pierdes",
-      " de Fuerza."
+      " de #yFuerza."
     ]
   },
   "theUnchainedMod:ChainGrease": {
     "NAME": "Grasa de Cadena",
     "DESCRIPTIONS": [
-      "Gana ",
-      " de Bloqueo. Elimina TODO el Daño Colateral. Termina TODAS tus Cadenas activas."
+      "Gana #b",
+      " de #yBloqueo. Elimina TODO el #yDaño #yColateral. Termina TODAS tus #yCadenas activas."
     ]
   },
   "theUnchainedMod:DancePotion": {
     "NAME": "Eau de Ballet",
     "DESCRIPTIONS": [
-      "Agrega ", " Remolinos a tu mano."
+      "Agrega #b", " #yRemolinos a tu mano."
     ]
   },
   "theUnchainedMod:CrushingElixir": {
     "NAME": "Elixir Aplastante",
     "DESCRIPTIONS": [
-      "Aplica ", " de Armadura Aplastada para TODOS los enemigos."
+      "Aplica #b", " de #yArmadura #yAplastada para TODOS los enemigos."
     ]
   },
 "theUnchainedMod:RelayPotion": {
     "NAME": "Arcano Embotellado",
     "DESCRIPTIONS": [
-      "Gana ", " Relevo y ",  " Daño Colateral."
+      "Gana #b", " #yRelevo y #b",  " #yDaño #yColateral."
     ]
   }
 }
