@@ -48,7 +48,7 @@ public class GlyphBrandPower extends AbstractPower {
 
     public void onSpecificTrigger() {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserDifferentColorEffect(owner.hb.cX, owner.hb.cY, source.hb.cX, source.hb.cY), 0.1F));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
     }
 
 

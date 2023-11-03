@@ -17,5 +17,6 @@ public class EndOfCombatExpirePatch {
         }
         RelayedDmgSum.relayedDamageSum.set(gAM, 0);
         ChainsFinishedThisCombat.chainsFinishedThisCombat.set(gAM, 0);
+        SwirlsGeneratedThisCombat.swirlsGeneratedThisCombat.set(gAM, 0);
     }
 }
