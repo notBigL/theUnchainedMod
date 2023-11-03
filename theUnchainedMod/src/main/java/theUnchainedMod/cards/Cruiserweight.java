@@ -1,9 +1,13 @@
 package theUnchainedMod.cards;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.powers.CruiserweightPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
@@ -40,5 +44,6 @@ public class Cruiserweight extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new CruiserweightPower(p, p, magicNumber)));
     }
 }
