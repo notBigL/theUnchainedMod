@@ -22,7 +22,6 @@ public class ArcaneAmplifier extends CustomRelic {
     public static final String ID = TheUnchainedMod.makeID("ArcaneAmplifier");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Arcane_Amplifier_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Arcane_Amplifier_relic.png"));
-    public static ArrayList<ArcaneAmplifier> AllAmplifiers = new ArrayList<>();
 
     public ArcaneAmplifier() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
@@ -59,21 +58,5 @@ public class ArcaneAmplifier extends CustomRelic {
             counter = 0;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ArcaneMasteryPower(AbstractDungeon.player, 1)));
         }
-    }
-    @Override
-    public void onEquip() {
-        if(!AllAmplifiers.contains(this)) AllAmplifiers.add(this);
-        super.onEquip();
-    }
-    @Override
-    public void onUnequip() {
-        if(AllAmplifiers.contains(this)) AllAmplifiers.remove(this);
-        super.onUnequip();
-    }
-
-    @Override
-    public void atBattleStart() {
-        if(!AllAmplifiers.contains(this)) AllAmplifiers.add(this);
-        super.atBattleStart();
     }
 }

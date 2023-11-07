@@ -39,8 +39,10 @@ public class GainRelayAction extends AbstractGameAction {
                 }
                 if(((AbstractPlayer) target).hasRelic(ArcaneAmplifier.ID))
                 {
-                    for(ArcaneAmplifier amp : ArcaneAmplifier.AllAmplifiers)
-                        if(amp != null) amp.onTrigger();
+                    for (AbstractRelic r : AbstractDungeon.player.relics)
+                    {
+                        if(r instanceof ArcaneAmplifier) r.onTrigger();
+                    }
                 }
             }
         }

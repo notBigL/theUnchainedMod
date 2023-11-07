@@ -18,8 +18,6 @@ import static theUnchainedMod.TheUnchainedMod.makeRelicPath;
 
 public class TotemOfPain extends CustomRelic {
     public static final String ID = TheUnchainedMod.makeID("TotemOfPain");
-
-
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("TotemOfPain_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("TotemOfPain_relic.png"));
 

@@ -103,7 +103,4 @@ public class MomentumPower extends NewTwoAmountPower {
         }
         return amount;
     }
-
-
-    //public void setMomentumRequired(int newMomentumRequired) { this.momentumRequired = newMomentumRequired;}
 }
