@@ -18,8 +18,6 @@ import static theUnchainedMod.TheUnchainedMod.makeRelicPath;
 
 public class DancingRibbons extends CustomRelic {
     public static final String ID = TheUnchainedMod.makeID("DancingRibbons");
-
-
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("DancingRibbons_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("DancingRibbons_relic.png"));
 

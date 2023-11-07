@@ -33,7 +33,7 @@ public class TotemOfPain extends CustomRelic {
     public void onPlayerEndTurn() {
         if (counter > 0) {
             AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
-            if (target != null) {
+            if (target != null && !target.isDeadOrEscaped()) {
                 this.flash();
                 AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(AbstractDungeon.player, counter, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
