@@ -23,25 +23,30 @@ public class ApplyCrushedArmorAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        for (AbstractRelic r : AbstractDungeon.player.relics) {
-            if (r instanceof CrushingGauntlets) {
-                int dmg = amount * 3;
-                AbstractDungeon.actionManager.addToTop(new DamageAction(target, new DamageInfo(source, dmg, DamageInfo.DamageType.HP_LOSS), AttackEffect.SLASH_HORIZONTAL));
-                r.flash();
-                this.isDone = true;
-                return;
+        if(AbstractDungeon.player.hasRelic(CrushingGauntlets.ID)) {
+            int crushingGauntletAmount = 0;
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                if (r instanceof CrushingGauntlets) {
+                    crushingGauntletAmount++;
+                    r.flash();
+                }
             }
+            int dmg = amount * 3 * crushingGauntletAmount;
+            AbstractDungeon.actionManager.addToTop(new DamageAction(target, new DamageInfo(source, dmg, DamageInfo.DamageType.HP_LOSS), AttackEffect.SLASH_HORIZONTAL));
+            this.isDone = true;
+            return;
         }
         boolean hasArtifact = target.hasPower(ArtifactPower.POWER_ID);
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, source, new CrushedArmorPower(target, source, amount)));
         if (!hasArtifact) {
-            for (AbstractRelic r : AbstractDungeon.player.relics) {
-                if (r instanceof Wrench) {
-                    AbstractDungeon.actionManager.addToTop(new DamageAction(target, new DamageInfo(source, 4, DamageInfo.DamageType.HP_LOSS), AttackEffect.SLASH_HORIZONTAL));
-                    r.flash();
-                    break;
+            if(AbstractDungeon.player.hasRelic(Wrench.ID))
+                for (AbstractRelic r : AbstractDungeon.player.relics)
+                {
+                    if (r instanceof Wrench) {
+                        AbstractDungeon.actionManager.addToTop(new DamageAction(target, new DamageInfo(source, 4, DamageInfo.DamageType.HP_LOSS), AttackEffect.SLASH_HORIZONTAL));
+                        r.flash();
+                    }
                 }
-            }
         }
         this.isDone = true;
     }

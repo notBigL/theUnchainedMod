@@ -4,8 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theUnchainedMod.patches.RelayHelpers;
 import theUnchainedMod.patches.RelayedDmgSum;
+import theUnchainedMod.relics.TotemOfPain;
 
 public class ApplyRelayedDamageAction extends AbstractGameAction {
 
@@ -21,8 +23,9 @@ public class ApplyRelayedDamageAction extends AbstractGameAction {
             RelayHelpers.addNextTurnRelayedDamage(amount, target);
         }
         if (target instanceof AbstractPlayer) {
-            if (((AbstractPlayer) target).hasRelic("theUnchainedMod:TotemOfPain")) {
-                ((AbstractPlayer) target).getRelic("theUnchainedMod:TotemOfPain").counter += amount;
+            if (((AbstractPlayer) target).hasRelic(TotemOfPain.ID)) {
+                for(AbstractRelic r : AbstractDungeon.player.relics)
+                    if(r instanceof TotemOfPain) r.counter += amount;
             }
         }
 
