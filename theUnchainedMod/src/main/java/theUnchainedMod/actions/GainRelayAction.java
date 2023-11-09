@@ -19,7 +19,6 @@ import theUnchainedMod.powers.RelayPower;
 import theUnchainedMod.relics.ArcaneAmplifier;
 
 public class GainRelayAction extends AbstractGameAction {
-
     public GainRelayAction(AbstractCreature target, int amount) {
         this.amount = amount;
         this.target = target;
@@ -27,7 +26,7 @@ public class GainRelayAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (!target.isDying && !target.isDead) {
+        if (target != null && target.isDying && !target.isDead) {
             RelayHelpers.addRelay(amount, target);
             CardCrawlGame.sound.playA("relayApply", MathUtils.random(-0.2F, 0.2F));
 
@@ -37,11 +36,9 @@ public class GainRelayAction extends AbstractGameAction {
                         mo.getPower(GlyphBrandPower.POWER_ID).onSpecificTrigger();
                     }
                 }
-                if(((AbstractPlayer) target).hasRelic(ArcaneAmplifier.ID))
-                {
-                    for (AbstractRelic r : AbstractDungeon.player.relics)
-                    {
-                        if(r instanceof ArcaneAmplifier) r.onTrigger();
+                if (((AbstractPlayer) target).hasRelic(ArcaneAmplifier.ID)) {
+                    for (AbstractRelic r : AbstractDungeon.player.relics) {
+                        if (r instanceof ArcaneAmplifier) r.onTrigger();
                     }
                 }
             }
