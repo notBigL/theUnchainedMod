@@ -3,5 +3,29 @@
     "TEXT": [
       "cheapen"
     ]
+  },
+  "theUnchainedMod:RelayPack": {
+  "TEXT": ["Unchained - Relay", "theUnchainedMod:Relay, it's block but better, but also worse? (But also better)", "BigL & Mezix"]
+},
+  "theUnchainedMod:RelayPackHat": {
+    "TEXT": ["It makes a very loud GOOOOOOOOONG noise when you move around", "Bell Head"]
+  },
+  "theUnchainedMod:ChainPack": {
+    "TEXT": ["Unchained - Chains", "Play a certain amount of cards to finish powerful theUnchainedMod:Chains.", "BigL & Mezix"]
+  },
+  "theUnchainedMod:ChainPackHat": {
+    "TEXT": ["It's kind of kinky if you stop and think about it.", "Chain Mesh"]
+  },
+  "theUnchainedMod:CrushedArmorPack": {
+    "TEXT": ["Unchained - Crushed Armor", "Cards that make the enemy hurt themselves whenever they gain Block.", "BigL & Mezix"]
+  },
+  "theUnchainedMod:CrushedArmorPackHat": {
+    "TEXT": ["We love block don't we folks? * the live studio audience roars in approval as your enemies laugh nervously *.", "Blocky"]
+  },
+  "theUnchainedMod:SupportPack": {
+    "TEXT": ["Unchained - Support", "Debuffs, buffs, deck manipulation and, most importantly, *TAXES.", "BigL & Mezix"]
+  },
+  "theUnchainedMod:SupportPackHat": {
+    "TEXT": ["Biblically accurate Unchained.", "Demon's Mask"]
   }
 }

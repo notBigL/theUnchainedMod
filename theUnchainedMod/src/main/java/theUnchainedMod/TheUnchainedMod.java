@@ -8,6 +8,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
@@ -20,6 +21,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import thePackmaster.SpireAnniversary5Mod;
 import theUnchainedMod.booster_pack_cards.*;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.characters.TheUnchained;
@@ -121,7 +123,6 @@ public class TheUnchainedMod implements
     // Colors (RGB)
     // Character Color
     public static final Color UNCHAINED_ORANGE = CardHelper.getColor(255.0f, 170.0f, 17.0f);
-    public static final Color UNCHAINED_BOOSTER_COLOR = CardHelper.getColor(255.0f, 170.0f, 17.0f);
 
     // Potion Colors in RGB
     public static final Color LINK_POTION_LIQUID = CardHelper.getColor(220.0F, 170.0f, 71.0f);
@@ -204,6 +205,9 @@ public class TheUnchainedMod implements
     public static String makePowerPath(String resourcePath) {
         return getModID() + "Resources/images/powers/" + resourcePath;
     }
+    public static String makeImagePath(String resourcePath) {
+        return getModID() + "Resources/images/" + resourcePath;
+    }
 
     public static String makeEventPath(String resourcePath) {
         return getModID() + "Resources/images/events/" + resourcePath;
@@ -246,6 +250,9 @@ public class TheUnchainedMod implements
 
         setModID("theUnchainedMod");
 
+        if (Loader.isModLoaded("anniv5"))
+            SpireAnniversary5Mod.subscribe(new PackLoader());
+
         logger.info("Done subscribing");
 
         logger.info("Creating the color " + TheUnchained.Enums.UNCHAINED_COLOR.toString());
@@ -256,13 +263,6 @@ public class TheUnchainedMod implements
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
-
-        // THE UNCHAINED BOOSTER PACK CARDS
-        /*BaseMod.addColor(TheUnchained.Enums.COLOR_BOOSTER, UNCHAINED_BOOSTER_COLOR, UNCHAINED_BOOSTER_COLOR, UNCHAINED_BOOSTER_COLOR,
-                UNCHAINED_BOOSTER_COLOR, UNCHAINED_BOOSTER_COLOR, UNCHAINED_BOOSTER_COLOR, UNCHAINED_BOOSTER_COLOR,
-                ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
-                ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
-                ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);*/
 
         logger.info("Done creating the color");
 
