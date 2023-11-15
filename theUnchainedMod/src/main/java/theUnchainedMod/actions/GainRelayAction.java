@@ -26,7 +26,7 @@ public class GainRelayAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (target != null && target.isDying && !target.isDead) {
+        if (target != null && !target.isDying && !target.isDead) {
             RelayHelpers.addRelay(amount, target);
             CardCrawlGame.sound.playA("relayApply", MathUtils.random(-0.2F, 0.2F));
 
