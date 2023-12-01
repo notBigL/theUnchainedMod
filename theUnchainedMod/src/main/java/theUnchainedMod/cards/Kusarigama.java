@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.characters.TheUnchained;
+import theUnchainedMod.powers.AbstractChainPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
@@ -53,7 +54,8 @@ public class Kusarigama extends AbstractDynamicCard {
         if(!super.canUse(p, m)) return false;
 
         for (AbstractPower aP : p.powers) {
-            if (aP.name != null && aP.name.equals("Attack Chain") && aP.amount == 1) {
+            if (aP instanceof AbstractChainPower && ((AbstractChainPower) aP).cardType == CardType.ATTACK && aP.amount == 1)
+            {
                 return true;
             }
         }
