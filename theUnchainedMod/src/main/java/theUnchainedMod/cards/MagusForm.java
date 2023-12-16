@@ -30,7 +30,7 @@ public class MagusForm extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         this.isEthereal = true;
 
-        if(TheUnchainedMod.MAGNUS_FORM_SELECTED) {
+        if(TheUnchainedMod.MagnusFormSelected()) {
             name = "Magnus Form";
         }
         else {

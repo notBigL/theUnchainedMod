@@ -19,7 +19,7 @@ public class RemoveBoosterPackCardsFromPoolPatch {
 
         if(AbstractDungeon.player instanceof TheUnchained) {
             boolean cardsHaveBeenRemoved = false;
-            if (!TheUnchainedMod.UNCHAINED_BOOSTER_PACK_ACTIVATED)
+            if (!TheUnchainedMod.BoosterpackActivated())
             {
                 RemoveAllCards();
                 cardsHaveBeenRemoved = true;

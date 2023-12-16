@@ -114,7 +114,7 @@ public class TheUnchained extends CustomPlayer {
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
-        if(!UNCHAINED_SKIN_ACTIVATED) {
+        if(!PrinceUnboundActivated()) {
             initializeClass(THE_DEFAULT_CHARACTER, // required call to load textures and setup energy/loadout.
                     // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
                     THE_DEFAULT_SHOULDER_2, // campfire pose
@@ -137,8 +137,15 @@ public class TheUnchained extends CustomPlayer {
 
         // =============== ANIMATIONS =================
 
-        if(UNCHAINED_SKIN_ACTIVATED) loadAnimation(THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS, THE_UNCHAINED_PRINCE_UNBOUND_JSON, 1.0f);
-        else                         loadAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f);
+        if(PrinceUnboundActivated())
+            loadAnimation(THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS, THE_UNCHAINED_PRINCE_UNBOUND_JSON, 1.0f);
+        else
+        {
+            if(BirthdaySkinActivated())
+                loadAnimation(THE_UNCHAINED_BIRTHDAY_SKELETON_ATLAS, THE_UNCHAINED_BIRTHDAY_SKELETON_JSON, 1.0f);
+            else
+                loadAnimation(THE_UNCHAINED_SKELETON_ATLAS, THE_UNCHAINED_SKELETON_JSON, 1.0f);
+        }
         AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
         e.setTimeScale(1.0f);
 
@@ -330,8 +337,6 @@ public class TheUnchained extends CustomPlayer {
 
         unchainedConfig.setBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY, true);
         unchainedConfig.setBool(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY, true);
-        TheUnchainedMod.UNCHAINED_SKIN_UNLOCKED = true;
-        TheUnchainedMod.UNCHAINED_BOOSTER_PACK_UNLOCKED = true;
         try
         {
             TheUnchainedMod.unchainedConfig.save();

@@ -80,9 +80,7 @@ public class TheUnchainedMod implements
 
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
-            Settings.GameLanguage.SPA,
-            //TODO: Activate german language
-            // Settings.GameLanguage.DEU
+            Settings.GameLanguage.SPA
     };
 
 
@@ -100,23 +98,28 @@ public class TheUnchainedMod implements
 
         //  Unlock all Optional Content
         public static final String UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY = "AllOptionalContentUnlocked";
-        public static boolean UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = false;
+        public static boolean ContentUnlocked(){ return TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY);}
 
         //  Replace Magus Form with Magnus Form
         public static final String MAGNUS_FORM_SELECTED_PROPERTY = "MagnusFormSelected";
-        public static boolean MAGNUS_FORM_SELECTED = false;
+        public static boolean MagnusFormSelected(){ return TheUnchainedMod.unchainedConfig.getBool(MAGNUS_FORM_SELECTED_PROPERTY);}
 
         //  Prince Unbound Skin
         public static final String UNCHAINED_SKIN_UNLOCKED_PROPERTY = "PrinceUnboundSkinUnlocked";
-        public static boolean UNCHAINED_SKIN_UNLOCKED = false;
-        public static final String UNCHAINED_SKIN_ACTIVATED_PROPERTY = "PrinceUnboundSkinActivated";
-        public static boolean UNCHAINED_SKIN_ACTIVATED = false;
+        public static boolean PrinceUnboundUnlocked(){ return TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY);}
+        public static final String PRINCE_UNBOUND_SKIN_ACTIVATED_PROPERTY = "PrinceUnboundSkinActivated";
+        public static boolean PrinceUnboundActivated(){ return TheUnchainedMod.unchainedConfig.getBool(PRINCE_UNBOUND_SKIN_ACTIVATED_PROPERTY);}
+
+        // Birthday Skin
+
+        public static final String BIRTHDAY_SKIN_ACTIVATED_PROPERTY = "BirthdaySkinActivated";
+        public static boolean BirthdaySkinActivated(){ return TheUnchainedMod.unchainedConfig.getBool(BIRTHDAY_SKIN_ACTIVATED_PROPERTY);}
 
         //  Booster Pack
         public static final String UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY = "BoosterPackUnlocked";
-        public static boolean UNCHAINED_BOOSTER_PACK_UNLOCKED = false;
+        public static boolean BoosterpackUnlocked(){ return TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY);}
         public static final String UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY = "BoosterPackActivated";
-        public static boolean UNCHAINED_BOOSTER_PACK_ACTIVATED = false;
+        public static boolean BoosterpackActivated(){ return TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY);}
 
     // =============== INPUT TEXTURE LOCATION =================
 
@@ -183,6 +186,8 @@ public class TheUnchainedMod implements
     public static final String THE_UNCHAINED_SKELETON_JSON = "theUnchainedModResources/images/char/defaultCharacter/idle/skeleton_Skeleton.json";
     public static final String THE_UNCHAINED_PRINCE_UNBOUND_SKELETON_ATLAS = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/princeUnboundSkeleton.atlas";
     public static final String THE_UNCHAINED_PRINCE_UNBOUND_JSON = "theUnchainedModResources/images/char/defaultCharacter/princeUnbound/princeUnboundSkeleton_Skeleton.json";
+    public static final String THE_UNCHAINED_BIRTHDAY_SKELETON_ATLAS = "theUnchainedModResources/images/char/defaultCharacter/birthdaySkin/UnchainedBirthdayBoi.atlas";
+    public static final String THE_UNCHAINED_BIRTHDAY_SKELETON_JSON = "theUnchainedModResources/images/char/defaultCharacter/birthdaySkin/UnchainedBirthdayBoi_Skeleton.json";
 
     // =============== MAKE IMAGE PATHS =================
 
@@ -279,15 +284,6 @@ public class TheUnchainedMod implements
         try {
             unchainedConfig.load(); // Load the setting and set the boolean to equal it
 
-            UNCHAINED_BOOSTER_PACK_UNLOCKED = unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY);
-            UNCHAINED_BOOSTER_PACK_ACTIVATED = unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY);
-
-            UNCHAINED_SKIN_UNLOCKED = unchainedConfig.getBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY);
-            UNCHAINED_SKIN_ACTIVATED = unchainedConfig.getBool(UNCHAINED_SKIN_ACTIVATED_PROPERTY);
-
-            UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = unchainedConfig.getBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY);
-            MAGNUS_FORM_SELECTED = unchainedConfig.getBool(MAGNUS_FORM_SELECTED_PROPERTY);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -353,7 +349,7 @@ public class TheUnchainedMod implements
     @Override
     public void receiveEditCharacters() {
         logger.info("Beginning to edit characters. " + "Add " + TheUnchained.Enums.THE_UNCHAINED.toString());
-        if(!UNCHAINED_SKIN_ACTIVATED) {
+        if(PrinceUnboundActivated()) {
             BaseMod.addCharacter(new TheUnchained("the Default", TheUnchained.Enums.THE_UNCHAINED),
                     THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheUnchained.Enums.THE_UNCHAINED);
         }
@@ -386,16 +382,15 @@ public class TheUnchainedMod implements
 
         ModLabeledToggleButton unlockAllOptionalContentButton = new ModLabeledToggleButton("Unlocks all optional content so it can be used whenever you want to.",
                 350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
-                UNCHAINED_OPTIONAL_CONTENT_UNLOCKED, // Boolean it uses
+                ContentUnlocked(), // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
                 (label) -> {
                 }, // thing??????? idk
                 (button) -> { // The actual button:
-                    UNCHAINED_OPTIONAL_CONTENT_UNLOCKED = button.enabled; // The boolean true/false will be whether the button is enabled or not
                     try {
                         // And based on that boolean, set the settings and save them
                         //SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theUnchainedDefaultSettings);
-                        unchainedConfig.setBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY, UNCHAINED_OPTIONAL_CONTENT_UNLOCKED);
+                        unchainedConfig.setBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY, ContentUnlocked());
                         unchainedConfig.save();
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -407,14 +402,13 @@ public class TheUnchainedMod implements
         UpdateMagnusForm();
         ModLabeledToggleButton magnusFormButton = new ModLabeledToggleButton("Replaces Magus Form with Magnus Form. \n We are not sure why we did this, but it was 2 AM and these things happen sometimes.",
                 350.0f, 600.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                MAGNUS_FORM_SELECTED, // Boolean it uses
+                MagnusFormSelected(), // Boolean it uses
                 settingsPanel,
                 (label) -> {
                 },
                 (button) -> { // The actual button:
-                    MAGNUS_FORM_SELECTED = button.enabled;
                     try {
-                        unchainedConfig.setBool(MAGNUS_FORM_SELECTED_PROPERTY, MAGNUS_FORM_SELECTED);
+                        unchainedConfig.setBool(MAGNUS_FORM_SELECTED_PROPERTY, MagnusFormSelected());
                         unchainedConfig.save();
 
                         UpdateMagnusForm();
@@ -446,7 +440,7 @@ public class TheUnchainedMod implements
     public void UpdateMagnusForm()
     {
         MagusForm compendiumMagusForm = (MagusForm) CardLibrary.getCard(MagusForm.ID);
-        if(MAGNUS_FORM_SELECTED) {
+        if(MagnusFormSelected()) {
             compendiumMagusForm.name = "Magnus Form";
             MagusForm.IMG = TheUnchainedMod.makeCardPath("MagnusForm.png");
         }
