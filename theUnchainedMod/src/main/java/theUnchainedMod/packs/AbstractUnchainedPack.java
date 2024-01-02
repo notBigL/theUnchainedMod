@@ -23,6 +23,6 @@ public abstract class AbstractUnchainedPack extends AbstractCardPack {
     }
 
     public String getHatPath() {
-        return makeImagePath("hats/"+packID.replace(TheUnchainedMod.getModID() + ":", "")+".png");
+        return makeImagePath("hats/"+packID.replace(TheUnchainedMod.getModID() + ":", "")+"Hat.png");
     }
 }
