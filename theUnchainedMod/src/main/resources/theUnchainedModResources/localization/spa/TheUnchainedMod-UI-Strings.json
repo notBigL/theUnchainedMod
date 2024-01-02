@@ -14,18 +14,18 @@
     "TEXT": ["Unchained - Chains", "Play a certain amount of cards to finish powerful theUnchainedMod:Chains.", "BigL & Mezix"]
   },
   "theUnchainedMod:ChainPackHat": {
-    "TEXT": ["It's kind of kinky if you stop and think about it.", "Chain Mesh"]
+    "TEXT": ["There is no way you can see with this thing on.", "Chain Mesh"]
   },
   "theUnchainedMod:CrushedArmorPack": {
     "TEXT": ["Unchained - Crushed Armor", "Cards that make the enemy hurt themselves whenever they gain Block.", "BigL & Mezix"]
   },
   "theUnchainedMod:CrushedArmorPackHat": {
-    "TEXT": ["We love block don't we folks? * the live studio audience roars in approval as your enemies laugh nervously *.", "Blocky"]
+    "TEXT": ["We love block don't we folks? <live studio audience roars in approval> <your enemies laugh nervously>.", "Mr. Blocky"]
   },
   "theUnchainedMod:SupportPack": {
     "TEXT": ["Unchained - Support", "Debuffs, buffs, deck manipulation and, most importantly, *TAXES.", "BigL & Mezix"]
   },
   "theUnchainedMod:SupportPackHat": {
-    "TEXT": ["Biblically accurate Unchained.", "Demon's Mask"]
+    "TEXT": ["Biblically accurate Unchained.", "DO NOT BE AFRAID"]
   }
 }

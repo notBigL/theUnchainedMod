@@ -9,12 +9,15 @@ import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
@@ -22,12 +25,15 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import jdk.nashorn.internal.runtime.Debug;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.cards.*;
 import theUnchainedMod.relics.RustedChains;
 import theUnchainedMod.vfx.ChainAcrossScreenEffect;
+import theUnchainedMod.vfx.SmallLaserDifferentColorEffect;
+import theUnchainedMod.vfx.TelekineticPulseWaveEffect;
 import theUnchainedMod.vfx.UnchainedVictoryVFX;
 
 import java.util.ArrayList;
@@ -302,7 +308,8 @@ public class TheUnchained extends CustomPlayer {
         return new AbstractGameAction.AttackEffect[]{
                 AbstractGameAction.AttackEffect.BLUNT_HEAVY,
                 AbstractGameAction.AttackEffect.BLUNT_HEAVY,
-                AbstractGameAction.AttackEffect.BLUNT_HEAVY};
+                AbstractGameAction.AttackEffect.FIRE
+        };
     }
 
     // Should return a string containing what text is shown when your character is
