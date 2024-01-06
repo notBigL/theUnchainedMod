@@ -27,7 +27,8 @@ public class LastResort extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.UNCHAINED_COLOR;
 
     private static final int COST = 0;
-    private static final int MAGIC_NUMBER = 3;
+    private static final int MAGIC_NUMBER = 2;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
     private static final int SECOND_MAGIC_NUMBER = 2;
     private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 1;
     private static final int ENERGY_GAIN = 2;
@@ -44,6 +45,7 @@ public class LastResort extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
         }
     }

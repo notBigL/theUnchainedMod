@@ -170,7 +170,7 @@
   },
   "theUnchainedMod:RelentlessOnslaught": {
     "NAME": "Relentless Onslaught",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL 1 theunchainedmod:Chain: Deal !D! damage !M! times and reapply this theunchainedmod:Chain. NL Exhaust. "
+    "DESCRIPTION": "Deal !D! damage !M! times. NL 1 theunchainedmod:Chain: Deal !D! damage !M! times. Reapply this theunchainedmod:Chain. NL Exhaust. "
   },
   "theUnchainedMod:Refresh": {
     "NAME": "Refresh",
@@ -200,7 +200,7 @@
   },
   "theUnchainedMod:TelekineticPulse": {
     "NAME": "Telekinetic Pulse",
-    "DESCRIPTION": "1 theunchainedmod:Chain: ALL enemies gain !theUnchainedMod:SecondMagic! Block, lose !M! HP and reapply this theunchainedmod:Chain."
+    "DESCRIPTION": "1 theunchainedmod:Chain: ALL enemies gain !theUnchainedMod:SecondMagic! Block, lose !M! HP. Reapply this theunchainedmod:Chain."
   },
   "theUnchainedMod:TieDown": {
     "NAME": "Tie Down",
