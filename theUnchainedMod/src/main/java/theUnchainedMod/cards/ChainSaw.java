@@ -31,7 +31,7 @@ public class ChainSaw extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 15;
-    private static final int MAGIC_NUMBER = 5;
+    private static final int MAGIC_NUMBER = 10;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 5;
 
     public ChainSaw() {
