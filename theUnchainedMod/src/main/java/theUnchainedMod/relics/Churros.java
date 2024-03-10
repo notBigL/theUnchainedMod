@@ -35,7 +35,7 @@ public class Churros extends CustomRelic {
     }
 
 
-    public void onSpecificTrigger() {
+    public void onTrigger() {
         counter++;
         if (counter == 6) {
             this.flash();

@@ -124,7 +124,7 @@ public class AbstractChainPower extends AbstractPower {
     private void churroIncrement() {
         if (player.hasRelic(Churros.ID)) {
             Churros churros = (Churros) player.getRelic(Churros.ID);
-            churros.onSpecificTrigger();
+            churros.onTrigger();
         }
     }
 
