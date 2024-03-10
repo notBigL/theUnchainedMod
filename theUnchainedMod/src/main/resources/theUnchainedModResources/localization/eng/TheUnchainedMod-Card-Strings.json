@@ -140,7 +140,7 @@
   },
   "theUnchainedMod:RelentlessMovements": {
     "NAME": "Relentless Movements",
-    "DESCRIPTION": "Finishing a theunchainedmod:Chain gives !M! theunchainedmod:Momentum."
+    "DESCRIPTION": "Whenever you finish a theunchainedmod:Chain, gain !M! theunchainedmod:Momentum."
   },
   "theUnchainedMod:Burnish": {
     "NAME": "Burnish",
