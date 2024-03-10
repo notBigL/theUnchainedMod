@@ -20,7 +20,7 @@ public class TelekineticPulse extends AbstractDynamicCard {
 
     public static final String ID = TheUnchainedMod.makeID(TelekineticPulse.class.getSimpleName());
     public static final String IMG = makeCardPath("TelekineticPulse.png");
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheUnchained.Enums.UNCHAINED_COLOR;
@@ -38,6 +38,7 @@ public class TelekineticPulse extends AbstractDynamicCard {
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
         tags.add(CustomTags.CHAIN);
         this.isMultiDamage = true;
+        this.exhaust = true;
     }
 
     @Override
@@ -54,6 +55,7 @@ public class TelekineticPulse extends AbstractDynamicCard {
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new TelekineticPulseAction(magicNumber, defaultSecondMagicNumber));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new TelekineticPulsePower(p, CHAIN_LENGTH, new TelekineticPulseAction(magicNumber, defaultSecondMagicNumber ), magicNumber, defaultSecondMagicNumber, TYPE)));
         if (p.hasPower(DeliciousChurroPower.POWER_ID)) {
             p.getPower(DeliciousChurroPower.POWER_ID).onSpecificTrigger();

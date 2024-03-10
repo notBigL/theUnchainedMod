@@ -25,7 +25,6 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import jdk.nashorn.internal.runtime.Debug;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theUnchainedMod.TheUnchainedMod;

@@ -200,7 +200,7 @@
   },
   "theUnchainedMod:TelekineticPulse": {
     "NAME": "Telekinetic Pulse",
-    "DESCRIPTION": "1 theunchainedmod:Chain: ALL enemies gain !theUnchainedMod:SecondMagic! Block, lose !M! HP. Reapply this theunchainedmod:Chain."
+    "DESCRIPTION": "ALL enemies gain !theUnchainedMod:SecondMagic! Block and lose !M! HP. NL 1 theunchainedmod:Chain: ALL enemies gain !theUnchainedMod:SecondMagic! Block, lose !M! HP. Reapply this theunchainedmod:Chain. NL Exhaust."
   },
   "theUnchainedMod:TieDown": {
     "NAME": "Tie Down",
