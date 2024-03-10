@@ -22,14 +22,11 @@ public class Refresh extends AbstractDynamicRelayCard {
 
     private static final int COST = 2;
     private static final int MAGIC_NUMBER = 14;
-    private static final int SECOND_MAGIC_NUMBER = 14;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 4;
-    private static final int UPGRADE_PLUS_SECOND_MAGIC_NUMBER = 4;
 
     public Refresh() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
-        defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
     }
 
     @Override
@@ -37,13 +34,12 @@ public class Refresh extends AbstractDynamicRelayCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
-            upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainRelayAction(p, magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new RefreshAction(defaultSecondMagicNumber, p));
+        AbstractDungeon.actionManager.addToBottom(new RefreshAction(p));
     }
 }

@@ -174,7 +174,7 @@
   },
   "theUnchainedMod:Refresh": {
     "NAME": "Refresh",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL Lose up to !theUnchainedMod:SecondMagic! theunchainedmod:Relayed_Damage and gain Block equal to the amount you removed."
+    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL Remove ALL your theunchainedmod:Relayed_Damage and gain theunchainedmod:Relay equal to the amount you removed."
   },
   "theUnchainedMod:RoyalAssessment": {
     "NAME": "Royal Assessment",
@@ -187,7 +187,7 @@
   },
   "theUnchainedMod:GlyphSwing": {
     "NAME": "Glyph Swing",
-    "DESCRIPTION": "Deal !D! damage. Remove up to !M! theunchainedmod:Relayed_Damage and deal damage equal to the amount you removed."
+    "DESCRIPTION": "Deal !D! damage. Remove ALL your theunchainedmod:Relayed_Damage and deal damage equal to the amount you removed."
   },
   "theUnchainedMod:Baguazhang": {
     "NAME": "Baguazhang",
@@ -293,7 +293,7 @@
   },
   "theUnchainedMod:EyeForAnEye": {
     "NAME": "Eye For An Eye",
-    "DESCRIPTION": "Gain !theUnchainedMod:SecondMagic! Vigor. NL Remove up to !M! theunchainedmod:Relayed_Damage. NL Gain Vigor equal to the amount you removed."
+    "DESCRIPTION": "If you have theunchainedmod:Relayed_Damage, NL gain !M! Strength. NL Remove ALL your theunchainedmod:Relayed_Damage."
   },
   "theUnchainedMod:DefensiveLink": {
     "NAME": "Defensive Link",

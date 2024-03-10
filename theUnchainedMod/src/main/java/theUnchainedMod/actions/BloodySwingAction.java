@@ -16,8 +16,7 @@ public class BloodySwingAction extends AbstractGameAction {
 
     private final AbstractPlayer player;
 
-    public BloodySwingAction(int amountToLoseAndDamage, AbstractPlayer player, AbstractMonster m) {
-        this.amount = amountToLoseAndDamage;
+    public BloodySwingAction(AbstractPlayer player, AbstractMonster m) {
         this.player = player;
         this.target = m;
     }
@@ -26,26 +25,11 @@ public class BloodySwingAction extends AbstractGameAction {
     @Override
     public void update() {
         int damage = 0;
-        int restAmount = this.amount;
-        if (RelayHelpers.thisTurnRelayedDamage.get(player) > amount) {
-            RelayHelpers.loseThisTurnRelayedDamage(amount, false, player);
-            damage = this.amount;
-            restAmount = 0;
-        } else {
-            damage = RelayHelpers.thisTurnRelayedDamage.get(player);
-            restAmount -= RelayHelpers.thisTurnRelayedDamage.get(player);
-            RelayHelpers.loseThisTurnRelayedDamage(false, player);
-        }
 
-        if (restAmount > 0) {
-            if (RelayHelpers.nextTurnRelayedDamage.get(player) > restAmount) {
-                RelayHelpers.loseNextTurnRelayedDamage(restAmount, false, player);
-                damage = this.amount;
-            } else {
-                damage += RelayHelpers.nextTurnRelayedDamage.get(player);
-                RelayHelpers.loseNextTurnRelayedDamage(false, player);
-            }
-        }
+        damage += RelayHelpers.thisTurnRelayedDamage.get(player);
+        RelayHelpers.loseThisTurnRelayedDamage(false, player);
+        damage += RelayHelpers.nextTurnRelayedDamage.get(player);
+        RelayHelpers.loseNextTurnRelayedDamage(false, player);
 
         if (damage > 0) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(player, damage, DamageInfo.DamageType.NORMAL), AttackEffect.FIRE));
