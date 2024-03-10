@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -47,15 +48,15 @@ public class AbstractChainPower extends AbstractPower {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        if (!AbstractDungeon.player.hasRelic(Carabiner.ID)) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
-        }
+        triggerCarabiner();
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
     }
 
 
     public void onUseCard(AbstractCard c, UseCardAction action) {
         switch (c.cardID) {
             case "theUnchainedMod:ChainSaw":
+                triggerCarabiner();
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
                 break;
             case "theUnchainedMod:Liberation":
@@ -67,7 +68,7 @@ public class AbstractChainPower extends AbstractPower {
                 this.flash();
                 break;
             case "theUnchainedMod:Swirl":
-                if(player.hasRelic(DancingRibbons.ID)) {
+                if (player.hasRelic(DancingRibbons.ID)) {
                     AbstractDungeon.actionManager.addToBottom(new ChainAction(this.owner, c, this.cardType, this.ID, "link"));
                     this.flash();
                     break;
@@ -124,6 +125,12 @@ public class AbstractChainPower extends AbstractPower {
         if (player.hasRelic(Churros.ID)) {
             Churros churros = (Churros) player.getRelic(Churros.ID);
             churros.onSpecificTrigger();
+        }
+    }
+
+    private void triggerCarabiner() {
+        if (player.hasRelic(Carabiner.ID)) {
+            player.getRelic(Carabiner.ID).onTrigger();
         }
     }
 }
