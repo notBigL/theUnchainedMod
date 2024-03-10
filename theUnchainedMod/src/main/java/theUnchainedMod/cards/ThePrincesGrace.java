@@ -22,7 +22,7 @@ public class ThePrincesGrace extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.UNCHAINED_COLOR;
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int MAGIC_NUMBER = 1;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
     private static final int SECOND_MAGIC_NUMBER = 6;
