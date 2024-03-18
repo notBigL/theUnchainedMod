@@ -22,7 +22,7 @@ public class RelayPotion extends CustomPotion {
 
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
-    public final int relayAmount = 10;
+    public final int relayAmount = 15;
     public final int relayedDamageAmount = 10;
 
     public RelayPotion() {

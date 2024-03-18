@@ -2,11 +2,16 @@ package theUnchainedMod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.util.TextureLoader;
 
@@ -29,6 +34,7 @@ public class Memento extends CustomRelic {
         alreadyBroken = false;
     }
 
+/*
     public void onBlockBroken(AbstractCreature m) {
         if (!alreadyBroken) {
             this.flash();
@@ -37,13 +43,24 @@ public class Memento extends CustomRelic {
             alreadyBroken = true;
         }
     }
-
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         if (target instanceof AbstractMonster && target.currentBlock > 0 && !alreadyBroken) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(target, this));
             this.addToBot(new GainEnergyAction(1));
             alreadyBroken = true;
+        }
+    }*/
+
+    @Override
+    public void onUseCard(AbstractCard c, UseCardAction action) {
+        if (c.type == AbstractCard.CardType.ATTACK && action.target != null) {
+            if (action.target instanceof AbstractMonster && action.target.currentBlock > 0 && !alreadyBroken) {
+                this.flash();
+                this.addToBot(new RelicAboveCreatureAction(action.target, this));
+                this.addToBot(new GainEnergyAction(1));
+                alreadyBroken = true;
+            }
         }
     }
 
