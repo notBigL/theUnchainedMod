@@ -49,16 +49,18 @@ public class TelekineticPulse extends AbstractDynamicCard {
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_SECOND_MAGIC_NUMBER);
         }
     }
+
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        if(UtilityClass.ChurrosPowerActivated()) this.glowColor = Color.PURPLE;
+        if (UtilityClass.ChurrosPowerActivated()) this.glowColor = Color.PURPLE;
     }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new TelekineticPulseAction(magicNumber, defaultSecondMagicNumber));
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new TelekineticPulsePower(p, CHAIN_LENGTH, new TelekineticPulseAction(magicNumber, defaultSecondMagicNumber ), magicNumber, defaultSecondMagicNumber, TYPE)));
         if (p.hasPower(DeliciousChurroPower.POWER_ID)) {
             p.getPower(DeliciousChurroPower.POWER_ID).onSpecificTrigger();
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new TelekineticPulsePower(p, CHAIN_LENGTH, new TelekineticPulseAction(magicNumber, defaultSecondMagicNumber), magicNumber, defaultSecondMagicNumber, TYPE)));}
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new TelekineticPulsePower(p, CHAIN_LENGTH, new TelekineticPulseAction(magicNumber, defaultSecondMagicNumber), magicNumber, defaultSecondMagicNumber, TYPE)));
+        }
+        AbstractDungeon.actionManager.addToBottom(new TelekineticPulseAction(magicNumber, defaultSecondMagicNumber));
     }
 }
