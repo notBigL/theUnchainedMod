@@ -24,8 +24,8 @@ public class GlyphBeam extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.UNCHAINED_COLOR;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 12;
-    private static final int UPGRADE_PLUS_DAMAGE = 3;
+    private static final int DAMAGE = 5;
+    private static final int UPGRADE_PLUS_DAMAGE = 2;
 
     public GlyphBeam() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
