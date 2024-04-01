@@ -30,6 +30,7 @@ public class GlyphBeam extends AbstractDynamicCard {
     public GlyphBeam() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = damage = DAMAGE;
+        this.exhaust = true;
     }
 
     @Override
@@ -44,7 +45,7 @@ public class GlyphBeam extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserDifferentColorEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.1F));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new GlyphBrandPower(m, p, damage)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new GlyphBrandPower(p, p, damage)));
     }
 
 }
