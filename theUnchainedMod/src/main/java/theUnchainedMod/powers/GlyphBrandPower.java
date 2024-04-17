@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.util.TextureLoader;
@@ -47,13 +48,18 @@ public class GlyphBrandPower extends AbstractPower {
     }
 
     public void onSpecificTrigger() {
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserDifferentColorEffect(owner.hb.cX, owner.hb.cY, source.hb.cX, source.hb.cY), 0.1F));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+        //AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserDifferentColorEffect(owner.hb.cX, owner.hb.cY, source.hb.cX, source.hb.cY), 0.1F));
+        //AbstractDungeon.actionManager.addToBottom(new DamageAction(this.owner, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+
+        AbstractCreature randomCreature = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserDifferentColorEffect(owner.hb.cX, owner.hb.cY, randomCreature.hb.cX, randomCreature.hb.cY), 0.1F));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(randomCreature, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
     }
 
-
+/*
     public void atEndOfTurn(boolean isPlayer) {
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
+    */
 
 }
