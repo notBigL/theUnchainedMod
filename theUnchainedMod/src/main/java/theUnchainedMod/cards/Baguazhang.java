@@ -79,13 +79,9 @@ public class Baguazhang extends AbstractDynamicCard {
 
         while(var1.hasNext()) {
             AbstractMonster m = (AbstractMonster)var1.next();
-            if (m != null && !m.isDeadOrEscaped() && (m.getIntentDmg() < defaultSecondMagicNumber || m.intent == AbstractMonster.Intent.BUFF ||
-                    m.intent == AbstractMonster.Intent.DEBUFF || m.intent == AbstractMonster.Intent.STRONG_DEBUFF ||
-                    m.intent == AbstractMonster.Intent.DEBUG || m.intent == AbstractMonster.Intent.DEFEND ||
-                    m.intent == AbstractMonster.Intent.DEFEND_DEBUFF || m.intent == AbstractMonster.Intent.DEFEND_BUFF ||
-                    m.intent == AbstractMonster.Intent.ESCAPE || m.intent == AbstractMonster.Intent.MAGIC ||
-                    m.intent == AbstractMonster.Intent.NONE || m.intent == AbstractMonster.Intent.SLEEP ||
-                    m.intent == AbstractMonster.Intent.STUN || m.intent == AbstractMonster.Intent.UNKNOWN)) {
+            if (m != null && (m.getIntentDmg() > SECOND_MAGIC_NUMBER && (m.intent == AbstractMonster.Intent.ATTACK ||
+                    m.intent == AbstractMonster.Intent.ATTACK_BUFF || m.intent == AbstractMonster.Intent.ATTACK_DEBUFF ||
+                    m.intent == AbstractMonster.Intent.ATTACK_DEFEND))) {
                 this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
             }

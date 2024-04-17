@@ -20,13 +20,9 @@ public class BaguazhangAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (m != null && (m.getIntentDmg() < enemyDamageAmount || m.intent == AbstractMonster.Intent.BUFF ||
-                m.intent == AbstractMonster.Intent.DEBUFF || m.intent == AbstractMonster.Intent.STRONG_DEBUFF ||
-                m.intent == AbstractMonster.Intent.DEBUG || m.intent == AbstractMonster.Intent.DEFEND ||
-                m.intent == AbstractMonster.Intent.DEFEND_DEBUFF || m.intent == AbstractMonster.Intent.DEFEND_BUFF ||
-                m.intent == AbstractMonster.Intent.ESCAPE || m.intent == AbstractMonster.Intent.MAGIC ||
-                m.intent == AbstractMonster.Intent.NONE || m.intent == AbstractMonster.Intent.SLEEP ||
-                m.intent == AbstractMonster.Intent.STUN || m.intent == AbstractMonster.Intent.UNKNOWN)) {
+        if (m != null && (m.getIntentDmg() > enemyDamageAmount && (m.intent == AbstractMonster.Intent.ATTACK ||
+                m.intent == AbstractMonster.Intent.ATTACK_BUFF || m.intent == AbstractMonster.Intent.ATTACK_DEBUFF ||
+                m.intent == AbstractMonster.Intent.ATTACK_DEFEND))) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(source, amount));
         }
         this.isDone = true;

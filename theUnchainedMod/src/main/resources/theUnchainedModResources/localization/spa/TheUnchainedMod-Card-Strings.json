@@ -186,7 +186,7 @@
   },
   "theUnchainedMod:Baguazhang": {
     "NAME": "Baguazhang",
-    "DESCRIPTION": "Gana !B! de Bloqueo. NL El enemigo gana 5 de bloqueo. NL Si el enemigo tiene la intención de hacer menos de !theUnchainedMod:SecondMagic! de daño (por golpe), gana !M! de Bloqueo."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL El enemigo gana 5 de bloqueo. NL Si el enemigo tiene la intención de hacer más de !theUnchainedMod:SecondMagic! de daño (por golpe), gana !M! de Bloqueo."
   },
   "theUnchainedMod:MagusForm": {
     "NAME": "Forma de Mago",
