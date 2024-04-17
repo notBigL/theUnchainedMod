@@ -25,16 +25,11 @@ public class GainRelayAction extends AbstractGameAction {
             CardCrawlGame.sound.playA("relayApply", MathUtils.random(-0.2F, 0.2F));
 
             if (target instanceof AbstractPlayer) {
-                if(AbstractDungeon.player.hasPower(GlyphBrandPower.POWER_ID))
-                {
-                    AbstractDungeon.player.getPower(GlyphBrandPower.POWER_ID).onSpecificTrigger();
-                }
-                /*
                 for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                     if (!mo.isDeadOrEscaped() && mo.hasPower(GlyphBrandPower.POWER_ID)) {
                         mo.getPower(GlyphBrandPower.POWER_ID).onSpecificTrigger();
                     }
-                }*/
+                }
                 if (((AbstractPlayer) target).hasRelic(ArcaneAmplifier.ID)) {
                     for (AbstractRelic r : AbstractDungeon.player.relics) {
                         if (r instanceof ArcaneAmplifier) r.onTrigger();
