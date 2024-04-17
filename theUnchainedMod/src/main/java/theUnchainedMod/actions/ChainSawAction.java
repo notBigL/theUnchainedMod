@@ -3,11 +3,9 @@ package theUnchainedMod.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.powers.AbstractChainPower;
 
-import java.util.Iterator;
 import java.util.UUID;
 
 public class ChainSawAction extends AbstractGameAction {

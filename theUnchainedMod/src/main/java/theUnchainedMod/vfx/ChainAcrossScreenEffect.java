@@ -1,18 +1,11 @@
 package theUnchainedMod.vfx;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import org.lwjgl.Sys;
-
-import java.awt.*;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
 import static theUnchainedMod.TheUnchainedMod.makeVFXPath;

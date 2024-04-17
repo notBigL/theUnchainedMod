@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theUnchainedMod.powers.MomentumPower;
-import theUnchainedMod.powers.ToughnessPower;
 
 public class SpinAction extends AbstractGameAction {
     private final boolean freeToPlayOnce;

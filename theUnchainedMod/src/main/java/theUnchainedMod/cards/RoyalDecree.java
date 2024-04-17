@@ -9,7 +9,6 @@ import theUnchainedMod.actions.RandomTwoCostCardAction;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.vfx.RoyalDecreeEffect;
 
-
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class RoyalDecree extends AbstractDynamicCard {

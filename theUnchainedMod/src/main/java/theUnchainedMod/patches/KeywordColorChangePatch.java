@@ -1,13 +1,7 @@
 package theUnchainedMod.patches;
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.core.Settings;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-
-import java.util.Arrays;
 
 @SpirePatch(clz = FontHelper.class, method = "renderRotatedText")
 public class KeywordColorChangePatch {

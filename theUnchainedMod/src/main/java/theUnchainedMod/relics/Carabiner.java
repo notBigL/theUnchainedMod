@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import theUnchainedMod.TheUnchainedMod;
-import theUnchainedMod.powers.AbstractChainPower;
 import theUnchainedMod.util.TextureLoader;
 
 import static theUnchainedMod.TheUnchainedMod.makeRelicOutlinePath;

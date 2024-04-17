@@ -1,7 +1,6 @@
 package theUnchainedMod.potions;
 
 import basemod.abstracts.CustomPotion;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,7 +11,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.ApplyRelayedDamageAction;
 import theUnchainedMod.actions.GainRelayAction;
-import theUnchainedMod.cards.Swirl;
 import theUnchainedMod.patches.CustomPotionEnums;
 
 public class RelayPotion extends CustomPotion {

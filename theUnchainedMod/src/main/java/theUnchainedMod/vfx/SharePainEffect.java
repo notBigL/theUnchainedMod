@@ -12,10 +12,8 @@ import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import org.lwjgl.Sys;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 import static com.megacrit.cardcrawl.helpers.ImageMaster.loadImage;
 import static theUnchainedMod.TheUnchainedMod.makeVFXPath;

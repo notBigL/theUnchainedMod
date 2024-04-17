@@ -1,6 +1,9 @@
 package theUnchainedMod;
 
-import basemod.*;
+import basemod.AutoAdd;
+import basemod.BaseMod;
+import basemod.ModLabeledToggleButton;
+import basemod.ModPanel;
 import basemod.eventUtil.AddEventParams;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -22,13 +25,14 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import thePackmaster.SpireAnniversary5Mod;
-import theUnchainedMod.booster_pack_cards.*;
-import theUnchainedMod.cards.*;
+import theUnchainedMod.booster_pack_cards.ArcaneArtillery;
+import theUnchainedMod.cards.AbstractDefaultCard;
+import theUnchainedMod.cards.MagusForm;
 import theUnchainedMod.characters.TheUnchained;
 import theUnchainedMod.events.TheDemonSpeaksEvent;
-import theUnchainedMod.potions.DancePotion;
 import theUnchainedMod.potions.ChainGrease;
 import theUnchainedMod.potions.CrushingElixir;
+import theUnchainedMod.potions.DancePotion;
 import theUnchainedMod.potions.RelayPotion;
 import theUnchainedMod.relics.*;
 import theUnchainedMod.util.IDCheckDontTouchPls;

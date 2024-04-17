@@ -10,7 +10,8 @@ import theUnchainedMod.actions.ArcaneLinkAction;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.cards.AbstractDynamicBoosterPackRelayCard;
 import theUnchainedMod.characters.TheUnchained;
-import theUnchainedMod.powers.*;
+import theUnchainedMod.powers.AbstractChainPower;
+import theUnchainedMod.powers.AbstractMasterChainPower;
 
 import java.util.Iterator;
 

@@ -3,12 +3,8 @@ package theUnchainedMod.cards;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import theUnchainedMod.patches.CustomTags;
 import theUnchainedMod.powers.ArcaneMasteryPower;
-
-import java.io.Console;
-import java.util.Iterator;
 
 public abstract class AbstractDynamicRelayCard extends AbstractDynamicCard {
 

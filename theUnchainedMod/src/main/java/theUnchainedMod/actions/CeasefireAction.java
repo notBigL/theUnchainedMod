@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.patches.RelayHelpers;
-import theUnchainedMod.powers.RelayPower;
 
 public class CeasefireAction extends AbstractGameAction {
 

@@ -7,12 +7,9 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import org.lwjgl.Sys;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.powers.ArcaneMasteryPower;
 import theUnchainedMod.util.TextureLoader;
-
-import java.util.ArrayList;
 
 import static theUnchainedMod.TheUnchainedMod.makeRelicOutlinePath;
 import static theUnchainedMod.TheUnchainedMod.makeRelicPath;
