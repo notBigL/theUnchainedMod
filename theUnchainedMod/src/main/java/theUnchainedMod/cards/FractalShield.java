@@ -24,7 +24,7 @@ public class FractalShield extends AbstractDynamicRelayCard {
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 6;
+    private static final int MAGIC_NUMBER = 8;
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 4;
 
     public FractalShield() {
@@ -36,7 +36,7 @@ public class FractalShield extends AbstractDynamicRelayCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            //upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
             this.rawDescription = UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
