@@ -47,7 +47,8 @@
   },
   "theUnchainedMod:PropheticSwing": {
     "NAME": "Prophetic Swing",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Scry !M!."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL The next time you draw a Card, draw !M! additional Card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy. NL The next time you draw a Card, draw !M! additional Cards."
   },
   "theUnchainedMod:TetheredMind": {
     "NAME": "Tethered Mind",

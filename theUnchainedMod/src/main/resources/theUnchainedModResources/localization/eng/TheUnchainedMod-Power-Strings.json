@@ -462,5 +462,13 @@
       " damage and lose #b",
       " Strength."
     ]
+  },
+  "theUnchainedMod:PropheticSwingPower": {
+    "NAME": "As foretold",
+    "DESCRIPTIONS": [
+      "The next time you draw a card, draw #y",
+      " additional Card.",
+      " additional Cards."
+    ]
   }
 }
