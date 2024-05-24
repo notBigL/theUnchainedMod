@@ -23,7 +23,6 @@ public class MakeHasteAction extends AbstractGameAction {
             c = (AbstractCard) var1.next();
             if (c instanceof Swirl){
                 swirlsToExhaust++;
-                //this.addToTop(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
             }
         }
         for(int i = 0; i < swirlsToExhaust; i++)

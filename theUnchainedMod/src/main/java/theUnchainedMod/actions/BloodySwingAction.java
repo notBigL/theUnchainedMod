@@ -23,9 +23,8 @@ public class BloodySwingAction extends AbstractGameAction {
         int damage = 0;
 
         damage += RelayHelpers.thisTurnRelayedDamage.get(player);
-        RelayHelpers.loseThisTurnRelayedDamage(false, player);
         damage += RelayHelpers.nextTurnRelayedDamage.get(player);
-        RelayHelpers.loseNextTurnRelayedDamage(false, player);
+        RelayHelpers.loseAllRelayedDamage(player);
 
         if (damage > 0) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(target, new DamageInfo(player, damage, DamageInfo.DamageType.NORMAL), AttackEffect.FIRE));

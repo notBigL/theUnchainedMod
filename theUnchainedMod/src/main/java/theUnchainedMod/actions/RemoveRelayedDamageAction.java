@@ -13,8 +13,7 @@ public class RemoveRelayedDamageAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        RelayHelpers.loseNextTurnRelayedDamage(false, player);
-        RelayHelpers.loseThisTurnRelayedDamage(false, player);
+        RelayHelpers.loseAllRelayedDamage(player);
         this.isDone = true;
     }
 }

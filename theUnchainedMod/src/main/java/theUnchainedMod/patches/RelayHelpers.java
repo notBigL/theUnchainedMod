@@ -60,17 +60,17 @@ public class RelayHelpers {
         RelayHelpers.currentRelay.set(creature, RelayHelpers.currentRelay.get(creature) + MathUtils.floor(tmp));
 
         if (RelayHelpers.currentRelay.get(creature) > 999) {
-        RelayHelpers.currentRelay.set(creature, 999);
-    }
+            RelayHelpers.currentRelay.set(creature, 999);
+        }
         if (effect && RelayHelpers.currentRelay.get(creature) > 0) {
-        RelayHelpers.gainRelayAnimation(creature);
-    } else if (relayAmount > 0) {
-        Color tmpCol = Settings.GOLD_COLOR.cpy();
-        tmpCol.a = RelayHelpers.relayTextColor.get(creature).a;
-        RelayHelpers.relayTextColor.set(creature, tmpCol);
-        RelayHelpers.relayScale.set(creature, 5.0F);
+            RelayHelpers.gainRelayAnimation(creature);
+        } else if (relayAmount > 0) {
+            Color tmpCol = Settings.GOLD_COLOR.cpy();
+            tmpCol.a = RelayHelpers.relayTextColor.get(creature).a;
+            RelayHelpers.relayTextColor.set(creature, tmpCol);
+            RelayHelpers.relayScale.set(creature, 5.0F);
+        }
     }
-}
 
     public static void addNextTurnRelayedDamage(int relayedDamageAmount, AbstractCreature creature) {
         float tmp = (float) relayedDamageAmount;
@@ -328,6 +328,15 @@ public class RelayHelpers {
             }
         }
 
+    }
+
+    public static void loseAllRelayedDamage(AbstractCreature creature) {
+        if (creature != null && !creature.isDeadOrEscaped() && creature.hasPower(FractalShieldPower.POWER_ID)) {
+            creature.getPower(FractalShieldPower.POWER_ID).onSpecificTrigger();
+        }
+
+        loseNextTurnRelayedDamage(false, creature);
+        loseThisTurnRelayedDamage(false, creature);
     }
 
 

@@ -19,9 +19,8 @@ public class RefreshAction extends AbstractGameAction {
         int relay = 0;
 
         relay += RelayHelpers.thisTurnRelayedDamage.get(player);
-        RelayHelpers.loseThisTurnRelayedDamage(false, player);
         relay += RelayHelpers.nextTurnRelayedDamage.get(player);
-        RelayHelpers.loseNextTurnRelayedDamage(false, player);
+        RelayHelpers.loseAllRelayedDamage(player);
 
         if (relay > 0) {
             AbstractDungeon.actionManager.addToBottom(new GainRelayAction(player, relay));

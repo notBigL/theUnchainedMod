@@ -100,8 +100,7 @@
   },
   "theUnchainedMod:FractalShield": {
     "NAME": "Fractal Shield",
-    "DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage.",
-    "UPGRADE_DESCRIPTION": "Gain !M! theunchainedmod:Relay. theunchainedmod:Relay now blocks theunchainedmod:Relayed_Damage and HP Loss."
+    "DESCRIPTION": "Whenever you remove theunchainedmod:Relayed_Damage, gain !M! theunchainedmod:Relay."
   },
   "theUnchainedMod:Windup": {
     "NAME": "Windup",

@@ -24,8 +24,8 @@ public class FractalShield extends AbstractDynamicRelayCard {
     public static final String UPGRADE_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     private static final int COST = 1;
-    private static final int MAGIC_NUMBER = 8;
-    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 4;
+    private static final int MAGIC_NUMBER = 5;
+    private static final int UPGRADE_PLUS_MAGIC_NUMBER = 2;
 
     public FractalShield() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -37,22 +37,11 @@ public class FractalShield extends AbstractDynamicRelayCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC_NUMBER);
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            this.initializeDescription();
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainRelayAction(p, magicNumber));
-        if (!p.hasPower(FractalShieldPower.POWER_ID)) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FractalShieldPower(p, p)));
-        }
-        if(upgraded)
-        {
-            if (!p.hasPower(FractalShieldBlocksAllDamagePower.POWER_ID)) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FractalShieldBlocksAllDamagePower(p)));
-            }
-        }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FractalShieldPower(p, p, magicNumber)));
     }
 }

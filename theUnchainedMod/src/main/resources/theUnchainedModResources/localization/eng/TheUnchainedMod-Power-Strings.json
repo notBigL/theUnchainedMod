@@ -142,7 +142,8 @@
   "theUnchainedMod:FractalShieldPower": {
     "NAME": "Fractal Shield",
     "DESCRIPTIONS": [
-      "Relay blocks Relayed Damage."
+      "Whenever you remove Relayed Damage, gain #b",
+      " Relay."
     ]
   },
   "theUnchainedMod:ClaustrophobiaPower": {
