@@ -17,6 +17,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -430,7 +431,7 @@ public class TheUnchainedMod implements
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
         AddEventParams eventParams = new AddEventParams.Builder(TheDemonSpeaksEvent.ID, TheDemonSpeaksEvent.class) // for this specific event
-                .dungeonID(Exordium.ID) // The dungeon (act) this event will appear in
+                .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
                 .playerClass(TheUnchained.Enums.THE_UNCHAINED) // Character specific event
                 .create();
 
