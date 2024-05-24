@@ -339,7 +339,7 @@
   },
   "theUnchainedMod:MakeHaste": {
     "NAME": "Make Haste",
-    "DESCRIPTION": "Play as many cards from the top of your draw pile as you have *Swirls."
+    "DESCRIPTION": "Play as many cards from the top of your draw pile as you have *Swirls in your hand. Exhaust the Cards you played."
   },
   "theUnchainedMod:MagicMecha": {
     "NAME": "Magic Mecha",

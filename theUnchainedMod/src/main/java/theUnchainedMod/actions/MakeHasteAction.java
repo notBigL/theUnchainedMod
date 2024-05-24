@@ -29,7 +29,7 @@ public class MakeHasteAction extends AbstractGameAction {
         {
             this.addToBot(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null,
                     true, AbstractDungeon.cardRandomRng),
-                    false));
+                    true));
         }
         this.isDone = true;
     }
