@@ -331,7 +331,7 @@ public class RelayHelpers {
     }
 
     public static void loseAllRelayedDamage(AbstractCreature creature) {
-        if (creature != null && !creature.isDeadOrEscaped() && creature.hasPower(FractalShieldPower.POWER_ID)) {
+        if (creature != null && !creature.isDeadOrEscaped() && creature.hasPower(FractalShieldPower.POWER_ID) && (RelayHelpers.thisTurnRelayedDamage.get(creature) > 0 || RelayHelpers.nextTurnRelayedDamage.get(creature) > 0)) {
             creature.getPower(FractalShieldPower.POWER_ID).onSpecificTrigger();
         }
 
