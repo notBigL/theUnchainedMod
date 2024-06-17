@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.GainRelayAction;
 import theUnchainedMod.util.TextureLoader;
@@ -48,11 +47,6 @@ public class BrokenCharm extends CustomRelic {
     }
 
     @Override
-    public void justEnteredRoom(AbstractRoom room) {
-        this.grayscale = false;
-    }
-
-    @Override
     public void atBattleStart() {
         this.counter = 0;
     }
@@ -60,6 +54,7 @@ public class BrokenCharm extends CustomRelic {
     @Override
     public void onVictory() {
         this.counter = -1;
+        this.grayscale = false;
     }
 
     @Override
