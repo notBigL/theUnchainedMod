@@ -231,8 +231,8 @@
   },
   "theUnchainedMod:FouettéEnTournant": {
     "NAME": "Fouetté En Tournant",
-    "DESCRIPTION": "Gain 2 theunchainedmod:Momentum X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 2 theunchainedmod:Momentum (X + 1) times. NL Exhaust."
+    "DESCRIPTION": "Gain 3 theunchainedmod:Momentum X times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 3 theunchainedmod:Momentum (X + 1) times. NL Exhaust."
   },
   "theUnchainedMod:Ceasefire": {
     "NAME": "Ceasefire",
