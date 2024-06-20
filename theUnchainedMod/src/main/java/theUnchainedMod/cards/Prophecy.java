@@ -24,6 +24,7 @@ public class Prophecy extends AbstractDynamicCard {
 
     public Prophecy() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.selfRetain = true;
         this.exhaust = true;
     }
 
