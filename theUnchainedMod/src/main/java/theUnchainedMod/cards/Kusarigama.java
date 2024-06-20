@@ -26,8 +26,8 @@ public class Kusarigama extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.UNCHAINED_COLOR;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 30;
-    private static final int UPGRADE_PLUS_DMG = 6;
+    private static final int DAMAGE = 32;
+    private static final int UPGRADE_PLUS_DMG = 8;
 
     public Kusarigama() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
