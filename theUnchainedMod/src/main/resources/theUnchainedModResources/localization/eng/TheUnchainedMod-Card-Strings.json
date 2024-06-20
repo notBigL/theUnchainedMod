@@ -144,7 +144,7 @@
   },
   "theUnchainedMod:Burnish": {
     "NAME": "Burnish",
-    "DESCRIPTION": "Exhaust a card. Gain theunchainedmod:Momentum equal to double its cost."
+    "DESCRIPTION": "Exhaust a card. Gain theunchainedmod:Momentum equal to double its cost + 1."
   },
   "theUnchainedMod:SharePain": {
     "NAME": "Share Pain",
