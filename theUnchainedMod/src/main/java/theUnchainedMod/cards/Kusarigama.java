@@ -54,7 +54,7 @@ public class Kusarigama extends AbstractDynamicCard {
         if(!super.canUse(p, m)) return false;
 
         for (AbstractPower aP : p.powers) {
-            if (aP instanceof AbstractChainPower && ((AbstractChainPower) aP).cardType == CardType.ATTACK && aP.amount == 1)
+            if (aP instanceof AbstractChainPower && ((AbstractChainPower) aP).cardType == CardType.ATTACK)
             {
                 return true;
             }

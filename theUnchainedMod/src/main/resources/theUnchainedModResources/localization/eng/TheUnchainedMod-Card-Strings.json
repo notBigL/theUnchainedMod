@@ -77,9 +77,9 @@
   },
   "theUnchainedMod:Kusarigama": {
     "NAME": "Kusarigama",
-    "DESCRIPTION": "Can only be played if it finishes an Attack theunchainedmod:Chain. Deal !D! damage to ALL enemies.",
+    "DESCRIPTION": "Can only be played if you have an active Attack theunchainedmod:Chain. Deal !D! damage to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
-      "I need to finish an Attack Chain with this."
+      "I need an active Attack Chain to play this."
     ]
   },
   "theUnchainedMod:KeepDistance": {
