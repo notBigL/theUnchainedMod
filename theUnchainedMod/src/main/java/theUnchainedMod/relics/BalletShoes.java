@@ -17,7 +17,7 @@ public class BalletShoes extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BalletShoes_relic.png"));
 
     public BalletShoes() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
         tips.add(new PowerTip(
                 BaseMod.getKeywordTitle(DESCRIPTIONS[1].toLowerCase()),
                 BaseMod.getKeywordDescription(DESCRIPTIONS[1].toLowerCase())
