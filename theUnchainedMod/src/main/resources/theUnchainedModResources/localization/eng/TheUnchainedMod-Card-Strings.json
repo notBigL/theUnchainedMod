@@ -376,5 +376,9 @@
   "theUnchainedMod:ArcaneLink": {
     "NAME": "Arcane Link",
     "DESCRIPTION": "Gain !M! theunchainedmod:Relay. NL If you have an active theunchainedmod:Chain, gain !theUnchainedMod:SecondMagic! theunchainedmod:Arcane_Mastery."
+  },
+  "theUnchainedMod:RoyalGambit": {
+    "NAME": "Royal Gambit",
+    "DESCRIPTION": "Draw !M! cards. NL Increase this card's cost by !theUnchainedMod:SecondMagic! this combat."
   }
 }
