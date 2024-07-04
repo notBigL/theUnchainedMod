@@ -27,10 +27,10 @@ public class RelentlessOnslaught extends AbstractDynamicCard {
     public static final CardColor COLOR = TheUnchained.Enums.UNCHAINED_COLOR;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 2;
-    private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int DAMAGE = 3;
+    private static final int UPGRADE_PLUS_DMG = 2;
     private static final int CHAIN_LENGTH = 1;
-    private static final int MAGIC_NUMBER = 3;
+    private static final int MAGIC_NUMBER = 2;
 
     public RelentlessOnslaught() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
