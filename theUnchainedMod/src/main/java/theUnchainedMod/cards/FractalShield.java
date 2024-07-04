@@ -1,5 +1,6 @@
 package theUnchainedMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,6 +14,7 @@ import theUnchainedMod.powers.FractalShieldPower;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
+@AutoAdd.Ignore
 public class FractalShield extends AbstractDynamicRelayCard {
 
     public static final String ID = TheUnchainedMod.makeID(FractalShield.class.getSimpleName());
