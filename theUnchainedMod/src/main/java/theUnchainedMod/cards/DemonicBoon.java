@@ -11,8 +11,8 @@ import theUnchainedMod.characters.TheUnchained;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
-public class RoyalGambit extends AbstractDynamicCard {
-    public static final String ID = TheUnchainedMod.makeID(RoyalGambit.class.getSimpleName());
+public class DemonicBoon extends AbstractDynamicCard {
+    public static final String ID = TheUnchainedMod.makeID(DemonicBoon.class.getSimpleName());
     public static final String IMG = makeCardPath("TradeOffer.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -25,7 +25,7 @@ public class RoyalGambit extends AbstractDynamicCard {
     private static final int UPGRADE_PLUS_MAGIC_NUMBER = 1;
     private static final int SECOND_MAGIC_NUMBER = 1;
 
-    public RoyalGambit() {
+    public DemonicBoon() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         defaultBaseSecondMagicNumber = defaultSecondMagicNumber = SECOND_MAGIC_NUMBER;
