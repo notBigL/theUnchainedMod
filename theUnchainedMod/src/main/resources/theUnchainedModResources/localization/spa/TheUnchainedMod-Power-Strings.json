@@ -369,8 +369,8 @@
   "theUnchainedMod:GlyphBrandPower": {
     "NAME": "Marca",
     "DESCRIPTIONS": [
-      "Cada vez que ganas Relevo en este turno, este enemigo toma #y",
-      " de daño."
+      "Cada vez que ganas Relevo en este turno, este enemigo pierde #y",
+      " HP."
     ]
   },
   "theUnchainedMod:NextTurnRelayedDamage": {

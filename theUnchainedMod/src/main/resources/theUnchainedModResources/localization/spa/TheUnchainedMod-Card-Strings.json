@@ -59,7 +59,7 @@
   },
   "theUnchainedMod:GlyphBeam": {
     "NAME": "Haz de Glifo",
-    "DESCRIPTION": "Inflige !D! de daño. Cada vez que ganes theunchainedmod:Relevo este turno, el enemigo gana !D! de daño."
+    "DESCRIPTION": "Inflige !D! de daño. Cada vez que ganes theunchainedmod:Relevo este turno, el enemigo pierde !D! HP."
   },
   "theUnchainedMod:Cruiserweight": {
     "NAME": "Peso Ligero",

@@ -60,7 +60,7 @@
   },
   "theUnchainedMod:GlyphBeam": {
     "NAME": "Glyph Beam",
-    "DESCRIPTION": "Deal !D! damage. Whenever you gain theunchainedmod:Relay this turn, the enemy takes !D! damage."
+    "DESCRIPTION": "Deal !D! damage. Whenever you gain theunchainedmod:Relay this turn, the enemy loses !D! HP."
   },
   "theUnchainedMod:Cruiserweight": {
     "NAME": "Cruiserweight",

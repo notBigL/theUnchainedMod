@@ -378,8 +378,8 @@
   "theUnchainedMod:GlyphBrandPower": {
     "NAME": "Branded",
     "DESCRIPTIONS": [
-      "Whenever you gain Relay this turn, this enemy takes #y",
-      " damage."
+      "Whenever you gain Relay this turn, this enemy loses #y",
+      " HP."
     ]
   },
   "theUnchainedMod:NextTurnRelayedDamage": {
