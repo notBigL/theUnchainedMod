@@ -92,6 +92,7 @@ public class TheUnchainedMod implements
 
     // CONFIG
     public static SpireConfig unchainedConfig;
+
     static {
         try {
             unchainedConfig = new SpireConfig("The Unchained", "config");
@@ -102,30 +103,53 @@ public class TheUnchainedMod implements
 
     public static Properties theUnchainedDefaultSettings = new Properties();
 
-        //  Unlock all Optional Content
-        public static final String UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY = "AllOptionalContentUnlocked";
-        public static boolean ContentUnlocked(){ return TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY);}
+    //  Unlock all Optional Content
+    public static final String UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY = "AllOptionalContentUnlocked";
 
-        //  Replace Magus Form with Magnus Form
-        public static final String MAGNUS_FORM_SELECTED_PROPERTY = "MagnusFormSelected";
-        public static boolean MagnusFormSelected(){ return TheUnchainedMod.unchainedConfig.getBool(MAGNUS_FORM_SELECTED_PROPERTY);}
+    public static boolean ContentUnlocked() {
+        return TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_OPTIONAL_CONTENT_UNLOCKED_PROPERTY);
+    }
 
-        //  Prince Unbound Skin
-        public static final String UNCHAINED_SKIN_UNLOCKED_PROPERTY = "PrinceUnboundSkinUnlocked";
-        public static boolean PrinceUnboundUnlocked(){ return TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY);}
-        public static final String PRINCE_UNBOUND_SKIN_ACTIVATED_PROPERTY = "PrinceUnboundSkinActivated";
-        public static boolean PrinceUnboundActivated(){ return TheUnchainedMod.unchainedConfig.getBool(PRINCE_UNBOUND_SKIN_ACTIVATED_PROPERTY);}
+    //  Replace Magus Form with Magnus Form
+    public static final String MAGNUS_FORM_SELECTED_PROPERTY = "MagnusFormSelected";
 
-        // Birthday Skin
+    public static boolean MagnusFormSelected() {
+        return TheUnchainedMod.unchainedConfig.getBool(MAGNUS_FORM_SELECTED_PROPERTY);
+    }
 
-        public static final String BIRTHDAY_SKIN_ACTIVATED_PROPERTY = "BirthdaySkinActivated";
-        public static boolean BirthdaySkinActivated(){ return TheUnchainedMod.unchainedConfig.getBool(BIRTHDAY_SKIN_ACTIVATED_PROPERTY);}
+    //  Prince Unbound Skin
+    public static final String UNCHAINED_SKIN_UNLOCKED_PROPERTY = "PrinceUnboundSkinUnlocked";
 
-        //  Booster Pack
-        public static final String UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY = "BoosterPackUnlocked";
-        public static boolean BoosterpackUnlocked(){ return TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY);}
-        public static final String UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY = "BoosterPackActivated";
-        public static boolean BoosterpackActivated(){ return TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY);}
+    public static boolean PrinceUnboundUnlocked() {
+        return TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_SKIN_UNLOCKED_PROPERTY);
+    }
+
+    public static final String PRINCE_UNBOUND_SKIN_ACTIVATED_PROPERTY = "PrinceUnboundSkinActivated";
+
+    public static boolean PrinceUnboundActivated() {
+        return TheUnchainedMod.unchainedConfig.getBool(PRINCE_UNBOUND_SKIN_ACTIVATED_PROPERTY);
+    }
+
+    // Birthday Skin
+
+    public static final String BIRTHDAY_SKIN_ACTIVATED_PROPERTY = "BirthdaySkinActivated";
+
+    public static boolean BirthdaySkinActivated() {
+        return TheUnchainedMod.unchainedConfig.getBool(BIRTHDAY_SKIN_ACTIVATED_PROPERTY);
+    }
+
+    //  Booster Pack
+    public static final String UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY = "BoosterPackUnlocked";
+
+    public static boolean BoosterpackUnlocked() {
+        return TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_UNLOCKED_PROPERTY);
+    }
+
+    public static final String UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY = "BoosterPackActivated";
+
+    public static boolean BoosterpackActivated() {
+        return TheUnchainedMod.unchainedConfig.getBool(UNCHAINED_BOOSTER_PACK_ACTIVATED_PROPERTY);
+    }
 
     // =============== INPUT TEXTURE LOCATION =================
 
@@ -216,6 +240,7 @@ public class TheUnchainedMod implements
     public static String makePowerPath(String resourcePath) {
         return getModID() + "Resources/images/powers/" + resourcePath;
     }
+
     public static String makeImagePath(String resourcePath) {
         return getModID() + "Resources/images/" + resourcePath;
     }
@@ -223,6 +248,7 @@ public class TheUnchainedMod implements
     public static String makeEventPath(String resourcePath) {
         return getModID() + "Resources/images/events/" + resourcePath;
     }
+
     public static String makePotionPath(String resourcePath) {
         return getModID() + "Resources/images/potions/" + resourcePath;
     }
@@ -355,14 +381,12 @@ public class TheUnchainedMod implements
     @Override
     public void receiveEditCharacters() {
         logger.info("Beginning to edit characters. " + "Add " + TheUnchained.Enums.THE_UNCHAINED.toString());
-        if(PrinceUnboundActivated()) {
-            BaseMod.addCharacter(new TheUnchained("the Default", TheUnchained.Enums.THE_UNCHAINED),
-                    THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheUnchained.Enums.THE_UNCHAINED);
-        }
-        else
-        {
+        if (PrinceUnboundActivated()) {
             BaseMod.addCharacter(new TheUnchained("the Default", TheUnchained.Enums.THE_UNCHAINED),
                     THE_DEFAULT_BUTTON, PRINCE_UNBOUND_PORTRAIT, TheUnchained.Enums.THE_UNCHAINED);
+        } else {
+            BaseMod.addCharacter(new TheUnchained("the Default", TheUnchained.Enums.THE_UNCHAINED),
+                    THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheUnchained.Enums.THE_UNCHAINED);
         }
 
         receiveEditPotions();
@@ -425,7 +449,6 @@ public class TheUnchainedMod implements
                 });
 
 
-
         settingsPanel.addUIElement(unlockAllOptionalContentButton); // Add the button to the settings panel. Button is a go.
         settingsPanel.addUIElement(magnusFormButton);
 
@@ -443,14 +466,12 @@ public class TheUnchainedMod implements
     }
 
 
-    public void UpdateMagnusForm()
-    {
+    public void UpdateMagnusForm() {
         MagusForm compendiumMagusForm = (MagusForm) CardLibrary.getCard(MagusForm.ID);
-        if(MagnusFormSelected()) {
+        if (MagnusFormSelected()) {
             compendiumMagusForm.name = "Magnus Form";
             MagusForm.IMG = TheUnchainedMod.makeCardPath("MagnusForm.png");
-        }
-        else {
+        } else {
             compendiumMagusForm.name = "Magus Form";
             MagusForm.IMG = TheUnchainedMod.makeCardPath("MagusForm.png");
         }
