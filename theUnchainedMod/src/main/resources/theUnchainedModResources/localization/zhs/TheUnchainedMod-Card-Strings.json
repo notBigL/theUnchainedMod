@@ -1,0 +1,380 @@
+{
+  "theUnchainedMod:Unshackling": {
+    "NAME": "破除枷锁",
+    "DESCRIPTION": "当你打出一张牌，在这场战斗中升级它。Whenever you play a card, Upgrade it for the rest of combat。",
+    "UPGRADE_DESCRIPTION": "固有。NL 当你打出一张牌，在这场战斗中升级它。Whenever you play a card, Upgrade it for the rest of combat。"
+  },
+  "theUnchainedMod:Whiplash": {
+    "NAME": "鞭笞",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL !theUnchainedMod:SecondMagic! theunchainedmod:连锁: 敌人失去 !M! 点生命。"
+  },
+  "theUnchainedMod:LashOut": {
+    "NAME": "猛击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 1 theunchainedmod:连锁: 获得 [E]。"
+  },
+  "theUnchainedMod:HeartfeltSpeech": {
+    "NAME": "衷心之言",
+    "DESCRIPTION": "获得 !M! 层易伤。 NL !theUnchainedMod:SecondMagic! theunchainedmod:连锁: 获得 1 层无实体。消耗。"
+  },
+  "theUnchainedMod:ArcaneCharm": {
+    "NAME": "秘法护符",
+    "DESCRIPTION": "回合开始时, 获得 !M! 点 theunchainedmod:传导护盾。"
+  },
+  "theUnchainedMod:DualBarrier": {
+    "NAME": "双重屏障",
+    "DESCRIPTION": "获得 !B! 点格挡。 获得 !M! 点 theunchainedmod:传导护盾。"
+  },
+  "theUnchainedMod:RecklessSwing": {
+    "NAME": "鲁莽挥击",
+    "DESCRIPTION": "造成 !D! 点伤害。 获得 !M! 点 theunchainedmod:传导伤害"
+  },
+  "theUnchainedMod:FullSwing": {
+    "NAME": "全力挥击",
+    "DESCRIPTION": "造成 !M! 点伤害。 对所有敌人造成 !D! 点伤害。"
+  },
+  "theUnchainedMod:QuickSwing": {
+    "NAME": "迅捷挥击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 1 theunchainedmod:连锁 :抽 !M! 张牌"
+  },
+  "theUnchainedMod:StepBack": {
+    "NAME": "以退为进",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 1 theunchainedmod:连锁 :获得 !B! 点格挡。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 1 theunchainedmod:连锁 :获得 !B! 点格挡。"
+  },
+  "theUnchainedMod:MasterworkGlyph": {
+    "NAME": "精工符文",
+    "DESCRIPTION": "获得 !M! 点 theunchainedmod:传导护盾。如果你没有格挡，再获得 !M! 点 theunchainedmod:传导护盾 。"
+  },
+  "theUnchainedMod:PropheticSwing": {
+    "NAME": "先知挥击",
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害。 NL 下次抽牌时，多抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "对随机敌人造成 !D! 点伤害。 NL 下次抽牌时，多抽 !M! 张牌。"
+  },
+  "theUnchainedMod:TetheredMind": {
+    "NAME": "苦痛枷锁",
+    "DESCRIPTION": "获得 !M! theunchainedmod:传导护盾。 NL 当你受到伤害或伤害被 theunchainedmod:传导护盾 抵挡时, 敌人失去相同的生命值。 NL 消耗。"
+  },
+  "theUnchainedMod:Liberation": {
+    "NAME": "解放",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 完成当前所有 theunchainedmod:连锁 。 NL 移除所有的 theunchainedmod:传导伤害。 消耗。"
+  },
+  "theUnchainedMod:GlyphBeam": {
+    "NAME": "符文射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 在本回合当你获得 theunchainedmod:传导护盾 时，敌人受到 !D! 点伤害。"
+  },
+  "theUnchainedMod:Cruiserweight": {
+    "NAME": "灵巧出击",
+    "DESCRIPTION": "当你抽一张两费牌的时候，抽 1 张卡。",
+    "UPGRADE_DESCRIPTION": "当你抽一张两费牌的时候，抽 2 张卡。"
+  },
+  "theUnchainedMod:BasicStrike": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "theUnchainedMod:BasicDefend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "theUnchainedMod:Kusarigama": {
+    "NAME": "锁镰绞杀",
+    "DESCRIPTION": "只有在有攻击 theunchainedmod:连锁 时才能打出，对全部敌人造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      "我需要一个攻击连锁才能打出这张牌。"
+    ]
+  },
+  "theUnchainedMod:KeepDistance": {
+    "NAME": "保持距离",
+    "DESCRIPTION": "获得 !B! 点格挡。敌人获得 !M! 点格挡。"
+  },
+  "theUnchainedMod:MuscleMemory": {
+    "NAME": "肌肉记忆",
+    "DESCRIPTION": "本回合你下 1 张两费牌将会打出两次。",
+    "UPGRADE_DESCRIPTION": "本回合你下 2 张两费牌将会打出两次。"
+  },
+  "theUnchainedMod:RazorChain": {
+    "NAME": "链锯",
+    "DESCRIPTION": "敌人失去 !D! 点生命值。 如果敌人拥有格挡，再失去 !D! 点生命。 失去的生命值受 theunchainedmod:伤害修正效果 影响。"
+  },
+  "theUnchainedMod:GuardedPosture": {
+    "NAME": "守御之姿",
+    "DESCRIPTION": "完成连锁时，获得 !M! 点格挡。"
+  },
+  "theUnchainedMod:FractalShield": {
+    "NAME": "分形之盾",
+    "DESCRIPTION": "当你移除 theunchainedmod:传导伤害 时，获得 !M! 点 theunchainedmod:传导护盾 。"
+  },
+  "theUnchainedMod:Windup": {
+    "NAME": "瞄准",
+    "DESCRIPTION": "给予 !M! 层易伤。 NL !theUnchainedMod:SecondMagic! theunchainedmod:连锁 : 在手牌中添加一张随机攻击牌。 NL 本回合费用为0并消耗。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层易伤。 NL !theUnchainedMod:SecondMagic! theunchainedmod:Chain: 在手牌中添加一张随机已升级的攻击牌。 NL 本回合费用为0并消耗。"
+  },
+  "theUnchainedMod:APlomb": {
+    "NAME": "沉稳",
+    "DESCRIPTION": "获得 !B! 点格挡。 获得 !M! 层 theunchainedmod:动势 。 NL 下一回合，获得 !theUnchainedMod:SecondMagic! 层 theunchainedmod:动势 。"
+  },
+  "theUnchainedMod:Battement": {
+    "NAME": "踢腿",
+    "DESCRIPTION": "造成 !D! 点伤害。 获得 !M! 层 theunchainedmod:动势。"
+  },
+  "theUnchainedMod:Swirl": {
+    "NAME": "回旋",
+    "DESCRIPTION": "保留。 获得 !B! 点格挡。 NL 造成 !D! 点伤害。 本回合 *回旋 获得加倍的伤害和格挡。 消耗。",
+    "UPGRADE_DESCRIPTION": "保留。 获得 !B! 点格挡。NL 造成 !D! 点伤害。 本回合 *回旋 获得加倍的伤害和格挡。获得 1 层 theunchainedmod:动势 。 消耗 。"
+  },
+  "theUnchainedMod:RoyalDecree": {
+    "NAME": "王命",
+    "DESCRIPTION": "在你的手牌中加入一张随机的二费牌。 NL 本回合消耗 !M! 点能量。 NL 消耗。"
+  },
+  "theUnchainedMod:Claustrophobia": {
+    "NAME": "幽闭威吓",
+    "DESCRIPTION": "回合开始时，给予所有敌人 !M! 层 theunchainedmod:粉碎装甲 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，给予所有敌人 !M! 层 theunchainedmod:粉碎装甲 。"
+  },
+  "theUnchainedMod:ArcaneStrike": {
+    "NAME": "奥术打击",
+    "DESCRIPTION": "造成 !D! 点伤害两次。获得 !M! 点 theunchainedmod:传导护盾 。"
+  },
+  "theUnchainedMod:SolarPlexus": {
+    "NAME": "要害突袭",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL !M! theunchainedmod:连锁: theunchainedmod:击晕 敌人。 NL 消耗 。"
+  },
+  "theUnchainedMod:RelentlessMovements": {
+    "NAME": "不休舞步",
+    "DESCRIPTION": "当你完成一次 theunchainedmod:连锁，获得 !M! 点 theunchainedmod:动势 。"
+  },
+  "theUnchainedMod:Burnish": {
+    "NAME": "抛光",
+    "DESCRIPTION": "消耗一张卡牌。 获得等同于该卡两倍费用 + 1 层 theunchainedmod:动势 。"
+  },
+  "theUnchainedMod:SharePain": {
+    "NAME": "痛楚映射",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 伤害等同于这场战斗中获得的所有 theunchainedmod:传导伤害 。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 造成 !D! 点伤害。 NL 伤害等同于这场战斗中获得的所有 theunchainedmod:传导伤害 。"
+  },
+  "theUnchainedMod:Overexertion": {
+    "NAME": "强制爆发",
+    "DESCRIPTION": "获得 [E] [E]。NL 获得 !M! 点 theunchainedmod:传导伤害。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E]。NL 获得 !M! 点 theunchainedmod:传导伤害。 NL 消耗。"
+  },
+  "theUnchainedMod:Ballet": {
+    "NAME": "芭蕾",
+    "DESCRIPTION": "在回合开始时，获得 !M! 点 theunchainedmod:动势。 NL *回旋 现在会作用于全部敌人。"
+  },
+  "theUnchainedMod:WideSwing": {
+    "NAME": "横扫挥击",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 如果你有未结束的 theunchainedmod:连锁，结束你的回合。"
+  },
+  "theUnchainedMod:SingleOut": {
+    "NAME": "一拳",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机敌人获得 !M! 点格挡。"
+  },
+  "theUnchainedMod:RelentlessOnslaught": {
+    "NAME": "猛攻",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。NL 1 theunchainedmod:连锁: 造成 !D! 点伤害 !M! 次。重复这个 theunchainedmod:连锁 。NL 消耗。 "
+  },
+  "theUnchainedMod:Refresh": {
+    "NAME": "更新",
+    "DESCRIPTION": "获得 !M! 点 theunchainedmod:传导护盾。NL 移除所有的 theunchainedmod:传导伤害 并获得与移除的传导伤害等同的 theunchainedmod:传导护盾 。"
+  },
+  "theUnchainedMod:RoyalAssessment": {
+    "NAME": "王室审查/皇家评估",
+    "DESCRIPTION": "每有一个敌人有格挡，获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "每有一个敌人有格挡，获得 [E] 。如果所有敌人都有格挡，获得 [E] 。"
+  },
+  "theUnchainedMod:Cocoon": {
+    "NAME": "茧衣",
+    "DESCRIPTION": "获得 !M! 层 theunchainedmod:传导护盾 。你的 theunchainedmod:传导护盾 不会在下回合开始时消失。"
+  },
+  "theUnchainedMod:GlyphSwing": {
+    "NAME": "符文挥击",
+    "DESCRIPTION": "造成 !D! 点伤害。 移除你的 theunchainedmod:传导伤害 并造成与你移除的传导伤害相同的伤害。"
+  },
+  "theUnchainedMod:Baguazhang": {
+    "NAME": "八卦掌",
+    "DESCRIPTION": "获得 !B! 点格挡。NL 敌人获得 5 点格挡。NL 如果敌人的意图单段攻击伤害超过 !theUnchainedMod:SecondMagic! ，获得 !M! 点格挡。"
+  },
+  "theUnchainedMod:MagusForm": {
+    "NAME": "魔导形态",
+    "DESCRIPTION": "虚无。NL 当你打出两费牌, 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "当你打出两费牌, 获得 [E] 。"
+  },
+  "theUnchainedMod:TelekineticPulse": {
+    "NAME": "念力波动",
+    "DESCRIPTION": "所有敌人获得 !theUnchainedMod:SecondMagic! 点格挡并失去 !M! 点生命值。 NL 1 theunchainedmod:连锁: 所有敌人获得 !theUnchainedMod:SecondMagic! 点格挡，失去 !M! 点生命值。重复此 theunchainedmod:连锁 。NL 消耗。"
+  },
+  "theUnchainedMod:TieDown": {
+    "NAME": "窒息",
+    "DESCRIPTION": "敌人在本回合与下回合失去 !M! 点力量。 消耗 。"
+  },
+  "theUnchainedMod:ThePrincesGrace": {
+    "NAME": "恩典",
+    "DESCRIPTION": "回合开始时抽 !M! 张额外卡牌。回合开始时所有敌人获得 !theUnchainedMod:SecondMagic! 点格挡。",
+    "UPGRADE_DESCRIPTION": "回合开始时抽 !M! 张额外卡牌。回合开始时所有敌人获得 !theUnchainedMod:SecondMagic! 点格挡"
+  },
+  "theUnchainedMod:Cuff": {
+    "NAME": "镣铐",
+    "DESCRIPTION": "固有。 NL 造成 !D! 点伤害。 NL 给予 !theUnchainedMod:SecondMagic! 层虚弱。 NL 2 theunchainedmod:连锁: 敌人失去 !M! 点力量。NL 消耗 。"
+  },
+  "theUnchainedMod:Premonition": {
+    "NAME": "预知",
+    "DESCRIPTION": "获得 !B! 点格挡。NL 如果在这回合耗尽了 [E] , 下回合获得 [E] [E] 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。NL 如果在这回合耗尽了 [E] , 下回合获得 NL [E] [E] [E] 。"
+  },
+  "theUnchainedMod:Pirouette": {
+    "NAME": "旋转",
+    "DESCRIPTION": "在你的手牌中添加一张 *回旋 。NL 升级手牌中所有的 *回旋 。 消耗 。"
+  },
+  "theUnchainedMod:TradeOffer": {
+    "NAME": "等价交换",
+    "DESCRIPTION": "敌人获得 !M! 点格挡。NL 抽 !theUnchainedMod:SecondMagic! 张牌。",
+    "UPGRADE_DESCRIPTION": "敌人获得 !M! 点格挡。NL 抽 !theUnchainedMod:SecondMagic! 张牌。"
+  },
+  "theUnchainedMod:FouettéEnTournant": {
+    "NAME": "舞步回旋",
+    "DESCRIPTION": "获得 3 层 theunchainedmod:动势 X 次。NL 消耗。",
+    "UPGRADE_DESCRIPTION": "获得 3 层theunchainedmod:动势 (X + 1) 次。NL 消耗。"
+  },
+  "theUnchainedMod:Ceasefire": {
+    "NAME": "和平协定",
+    "DESCRIPTION": "使你的 theunchainedmod:传导护盾 翻倍。所有敌人的格挡翻倍。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "使你的 theunchainedmod:传导护盾 翻倍。所有敌人的格挡翻倍。"
+  },
+  "theUnchainedMod:Suffocate": {
+    "NAME": "致命压制",
+    "DESCRIPTION": "获得等同于敌人格挡的格挡。 NL 敌人失去等同于他的格挡的生命值。"
+  },
+  "theUnchainedMod:ThreadOfAriadne": {
+    "NAME": "柳暗花明",
+    "DESCRIPTION": "如果你有还未完成的连锁，获得一个额外回合。结束你的回合。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "我需要一个未完成的连锁打出这张牌。"
+    ]
+  },
+  "theUnchainedMod:LawOfInertia": {
+    "NAME": "不变法则",
+    "DESCRIPTION": "每回合第一次完成 theunchainedmod:连锁 ，获得 !M! 点力量和敏捷。如果在回合结束没有完成一个 theunchainedmod:连锁 ，失去 !M! 点力量和敏捷。"
+  },
+  "theUnchainedMod:LastResort": {
+    "NAME": "破釜沉舟",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 [E] [E]。 !theUnchainedMod:SecondMagic! theunchainedmod:连锁: 失去你所有的 [E]。 NL 消耗 。"
+  },
+  "theUnchainedMod:ChainSaw": {
+    "NAME": "链锯",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 删除所有未完成的 theunchainedmod:连锁 。本场战斗每删除1 theunchainedmod:连锁 ，提高本牌的伤害 !M! 点。"
+  },
+  "theUnchainedMod:ReinforcedLink": {
+    "NAME": "链接加固",
+    "DESCRIPTION": "获得 !B! 点格挡。如果你有未结束的:连锁 ，获得 [E] 并抽 1 张牌。"
+  },
+  "theUnchainedMod:Prophecy": {
+    "NAME": "镜像预知",
+    "DESCRIPTION": "保留。 NL 复制手牌中的1张牌，将复制放在抽牌堆的顶端。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留。 NL 复制手牌中的1张牌两次，将复制放在抽牌堆的顶端。 NL 消耗 。"
+  },
+  "theUnchainedMod:Riposte": {
+    "NAME": "舞动回击",
+    "DESCRIPTION": "获得 !B! 点格挡。造成 !D! 点伤害。 获得 !M! 层 theunchainedmod:动势。"
+  },
+  "theUnchainedMod:HeavyHitter": {
+    "NAME": "碎甲重击",
+    "DESCRIPTION": "获得 !M! 层临时力量。本回合当你攻击一个敌人，给予 !theUnchainedMod:SecondMagic! 层 theunchainedmod:粉碎装甲 。"
+  },
+  "theUnchainedMod:GraspFuture": {
+    "NAME": "未来掌控",
+    "DESCRIPTION": "造成 !D! 点伤害。从你的抽牌堆放 !M! 张牌到抽牌堆的顶部。"
+  },
+  "theUnchainedMod:DoubleDown": {
+    "NAME": "双重连锁防护",
+    "DESCRIPTION": "获得 !B! 点格挡两次。 NL 对所有 theunchainedmod:连锁 生效。"
+  },
+  "theUnchainedMod:KeepSwinging": {
+    "NAME": "持续挥击",
+    "DESCRIPTION": "名字中带有“挥击”的牌造成 !M! 点额外伤害。"
+  },
+  "theUnchainedMod:EyeForAnEye": {
+    "NAME": "以眼还眼",
+    "DESCRIPTION": "如果你有 theunchainedmod:传导伤害 ， NL 获得 !M! 层力量。 NL 移除所有的 theunchainedmod:传导伤害 。"
+  },
+  "theUnchainedMod:DefensiveLink": {
+    "NAME": "防护纽带",
+    "DESCRIPTION": "获得 !B! 点格挡。本回合降低选择手牌的花费1点。"
+  },
+  "theUnchainedMod:ChaseDestiny": {
+    "NAME": "逐命",
+    "DESCRIPTION": "在本回合，当你完成一个 theunchainedmod:连锁 ，获得 [E] 。 消耗 。",
+    "UPGRADE_DESCRIPTION": "在本回合与下回合，当你完成一个 theunchainedmod:连锁 ，获得 [E] 。 消耗 。"
+  },
+  "theUnchainedMod:StareDown": {
+    "NAME": "恶魔凝视",
+    "DESCRIPTION": "获得 !M! 点 临时敏捷 。 1 theunchainedmod:连锁: 给予所有敌人 !theUnchainedMod:SecondMagic! 层 虚弱 。"
+  },
+  "theUnchainedMod:ArcaneTransmutation": {
+    "NAME": "秘法转换",
+    "DESCRIPTION": "当一个敌人获得格挡时，获得 !M! 点 theunchainedmod:传导护盾 。"
+  },
+  "theUnchainedMod:Cripple": {
+    "NAME": "致残",
+    "DESCRIPTION": "给与 !M! 层 theunchainedmod:粉碎装甲 。给与 !theUnchainedMod:SecondMagic! 层虚弱。 NL 消耗 。"
+  },
+  "theUnchainedMod:OffhandedSwing": {
+    "NAME": "斜侧挥击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌，如果是两费牌，免费将其打出。（指向性牌将一定指向相同目标）"
+  },
+  "theUnchainedMod:Haste": {
+    "NAME": "急速？",
+    "DESCRIPTION": "抽 !M! 张牌，如果抽到的卡提供 theunchainedmod:动势 , 再抽 1 张牌。 NL 获得 !theUnchainedMod:SecondMagic! 点 theunchainedmod:动势。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张卡，如果抽到的卡提供 theunchainedmod:动势, 打出并再抽 1 张牌。NL 获得 !theUnchainedMod:SecondMagic! 点 theunchainedmod:动势。"
+  },
+  "theUnchainedMod:ImmovableObject": {
+    "NAME": "坚如磐石",
+    "DESCRIPTION": "获得 !B! 点格挡。在这个回合，当你被攻击，攻击你的敌人每段攻击获得 !M! 层 theunchainedmod:粉碎装甲 。"
+  },
+  "theUnchainedMod:Taxes": {
+    "NAME": "正当征税",
+    "DESCRIPTION": "每有一个敌人，获得 !M! 金币。"
+  },
+  "theUnchainedMod:RetreatingSwing": {
+    "NAME": "后撤挥击",
+    "DESCRIPTION": "造成 !D! 点伤害。 获得未被格挡伤害值的格挡。"
+  },
+  "theUnchainedMod:MakeHaste": {
+    "NAME": "急速",
+    "DESCRIPTION": "手牌中每有一张 *回旋 ，打出抽牌堆顶部的一张牌。消耗打出的牌。"
+  },
+  "theUnchainedMod:MagicMecha": {
+    "NAME": "魔能机甲",
+    "DESCRIPTION": "!M! theunchainedmod:至高连锁: 获得 !theUnchainedMod:SecondMagic! 点力量， !theUnchainedMod:SecondMagic! 点敏捷和 !theUnchainedMod:SecondMagic! 点 theunchainedmod:奥术专注 。"
+  },
+  "theUnchainedMod:BarbedWire": {
+    "NAME": "链锁荆棘",
+    "DESCRIPTION": "回合结束时，每有1个 theunchainedmod:连锁 没有完成，对所有敌人造成 !M! 点伤害。"
+  },
+  "theUnchainedMod:ArcaneArtillery": {
+    "NAME": "传导炮火",
+    "DESCRIPTION": "造成等同于当前  theunchainedmod:传导护盾 的伤害。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成等同于当前 theunchainedmod:传导护盾 的伤害。",
+    "EXTENDED_DESCRIPTION": [ " NL (造成 !D! 点伤害。)"]
+  },
+  "theUnchainedMod:ChainFlourish": {
+    "NAME": "链之华舞",
+    "DESCRIPTION": "在这场战斗中，每完成 1 个 theunchainedmod:连锁 ，造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [ " NL (本场战斗完成 1 个连锁。)" ,
+                              " NL (本场战斗完成 !M! 个连锁。)"]
+  },
+  "theUnchainedMod:CrushPlates": {
+    "NAME": "碾压板甲",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予敌人与其当前格挡相同的 theunchainedmod:粉碎装甲 。"
+  },
+  "theUnchainedMod:SwordOfDamocles": {
+    "NAME": "达摩克利斯之剑",
+    "DESCRIPTION": "获得 !M! 点力量。NL 1 theunchainedmod:至高连锁 : 失去 !theUnchainedMod:SecondMagic! 点生命值和 !M! 点力量。NL 消耗。 "
+  },
+  "theUnchainedMod:MeltingHex": {
+    "NAME": "消融术",
+    "DESCRIPTION": "给予 !theUnchainedMod:SecondMagic! 层 theunchainedmod:粉碎装甲和 !M! 层 theunchainedmod:柔韧 。NL 消耗。"
+  },
+  "theUnchainedMod:ArcaneLink": {
+    "NAME": "奥术链接",
+    "DESCRIPTION": "获得 !M! 点 theunchainedmod:传导护盾 。NL 如果你有一个未完成的 theunchainedmod:连锁，获得 !theUnchainedMod:SecondMagic! 点 theunchainedmod:奥术专注 。"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "theUnchainedMod:BalletShoes": {
+    "NAME": "芭蕾舞鞋",
+    "FLAVOR": "穿上它，你的每个姿势都完美无瑕。",
+    "DESCRIPTIONS": [
+      "得到 #y回旋 所需的 #y动势 总是减少 #b1 点。",
+      "theunchainedmod:动势",
+      "theunchainedmod:回旋"
+    ]
+  },
+  "theUnchainedMod:RustedChains": {
+    "NAME": "锈蚀锁链",
+    "FLAVOR": "这些锁链曾将你困在牢墙上。如今，它们是你得心应手的工具。",
+    "DESCRIPTIONS": [
+      "在每场战斗中，当你打出第 #b6 张牌，抽一张牌，下一张牌的耗能为 #b0 。"
+    ]
+  },
+  "theUnchainedMod:HeartOfTheUnderdog": {
+    "NAME": "不屈之心",
+    "FLAVOR": "每当深陷困境之时，你就能感受到他更强烈的跳动。",
+    "DESCRIPTIONS": [
+      "回合结束时，如果你的 #y格挡 不高于所有敌人的总和，获得 #b1 点 #y力量。"
+    ]
+  },
+  "theUnchainedMod:Carabiner": {
+    "NAME": "扣环",
+    "FLAVOR": "没有比这更好的链条连锁工具了。",
+    "DESCRIPTIONS": [
+      "当你删除一个 #y连锁 或者一个 #y连锁 断裂，获得 #b7 点 #y格挡 。",
+      "theunchainedmod:Chain"
+    ]
+  },
+  "theUnchainedMod:PolishedChains": {
+    "NAME": "崭新锁链",
+    "FLAVOR": "你甚至可以在上面看到自己的倒影。",
+    "DESCRIPTIONS": [
+      "替代 #y锈蚀锁链 。 战斗中你每打出 #b6 张牌，抽一张牌，下一张牌的耗能为 #b0 。"
+    ]
+  },
+  "theUnchainedMod:BrokenCharm": {
+    "NAME": "破损护符",
+    "FLAVOR": "摇晃它发出的声音并不使人愉快，但它有着情感价值。",
+    "DESCRIPTIONS": [
+      "在前三回合开始时，获得 #b",
+      "点 #y传导护盾 。",
+      "theunchainedmod:传导护盾"
+    ]
+  },
+  "theUnchainedMod:Churros": {
+    "NAME": "吉拿棒",
+    "FLAVOR": "这些美味的点心让你充满力量。",
+    "DESCRIPTIONS": [
+      "每第 #b7 个生成的 #y连锁 将会被复制。",
+      "theunchainedmod:连锁"
+    ]
+  },
+  "theUnchainedMod:Memento": {
+    "NAME": "记忆铭物",
+    "FLAVOR": "当战局发生变化，恶魔就会苏醒。",
+    "DESCRIPTIONS": [
+      "每回合第一次攻击带有格挡的敌人，获得 [E] 。"
+    ]
+  },
+  "theUnchainedMod:TotemOfPain": {
+    "NAME": "苦痛图腾",
+    "FLAVOR": "当你贴近聆听时，可以听到恶魔低语：“分享即关怀。”。",
+    "DESCRIPTIONS": [
+      "获得与你获得的 #y传导伤害 相同的计数，你回合结束时，对一个随机敌人造成计数点的伤害并重新计数。",
+      "theunchainedmod:传导伤害"
+    ]
+  },
+  "theUnchainedMod:DancingRibbons": {
+    "NAME": "舞动丝带",
+    "FLAVOR": "让你想起在酒馆大厅跳舞的欢乐时光。",
+    "DESCRIPTIONS": [
+      "#y回旋 可以作用于任何 #y连锁 。",
+      "theunchainedmod:回旋",
+      "theunchainedmod:连锁"
+    ]
+  },
+  "theUnchainedMod:Wrench": {
+    "NAME": "扳手",
+    "FLAVOR": "你的盔甲永远不够紧。",
+    "DESCRIPTIONS": [
+      "当你给予 #y粉碎装甲 时，敌人失去 #b4 点生命值。",
+      "theunchainedmod:粉碎装甲"
+    ]
+  },
+  "theUnchainedMod:CrushingGauntlets": {
+    "NAME": "碎灭之握",
+    "FLAVOR": "既然可以直接粉碎他们的身体，何必粉碎他们的铠甲？",
+    "DESCRIPTIONS": [
+      "你不能给予 #y粉碎装甲 ，而是直接使敌人失去对应层数三倍的血量。",
+      "theunchainedmod:粉碎装甲"
+    ]
+  },
+  "theUnchainedMod:ArcaneAmplifier": {
+    "NAME": "奥术增幅器",
+    "FLAVOR": "你感受到与世界核心的奥秘共鸣。",
+    "DESCRIPTIONS": [
+      "回合内每 #b3 次获得 #y传导伤害，获得 #b1 层 #y奥术专注。",
+      "theunchainedmod:传导护盾",
+      "theunchainedmod:奥术专注"
+    ]
+  }
+}

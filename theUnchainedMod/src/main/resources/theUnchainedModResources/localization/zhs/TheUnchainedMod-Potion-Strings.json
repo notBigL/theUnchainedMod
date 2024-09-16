@@ -1,0 +1,35 @@
+{
+  "theUnchainedMod:PlaceholderPotion": {
+    "NAME": "占位药水",
+    "DESCRIPTIONS": [
+      "获得 ",
+      "在回合结束时，失去 ",
+      "点 #y力量 。"
+    ]
+  },
+  "theUnchainedMod:ChainGrease": {
+    "NAME": "锁链润滑剂",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      "点 #y格挡 。移除所有的 #y传导伤害。完成所有未完成的 #y连锁 。"
+    ]
+  },
+  "theUnchainedMod:DancePotion": {
+    "NAME": "芭蕾香水",
+    "DESCRIPTIONS": [
+      "在手牌中添加 #b", "张 #y回旋。"
+    ]
+  },
+  "theUnchainedMod:CrushingElixir": {
+    "NAME": "崩裂之液",
+    "DESCRIPTIONS": [
+      "给予所有敌人 #b", "层 #y粉碎装甲。"
+    ]
+  },
+  "theUnchainedMod:RelayPotion": {
+    "NAME": "传导秘药",
+    "DESCRIPTIONS": [
+      "获得 #b", "点 #y传导护盾 and #b",  "点 #y传导伤害。"
+    ]
+  }
+}

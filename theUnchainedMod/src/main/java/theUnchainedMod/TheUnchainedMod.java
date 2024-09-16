@@ -85,7 +85,8 @@ public class TheUnchainedMod implements
 
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
-            Settings.GameLanguage.SPA
+            Settings.GameLanguage.SPA,
+            Settings.GameLanguage.ZHS
     };
 
 
