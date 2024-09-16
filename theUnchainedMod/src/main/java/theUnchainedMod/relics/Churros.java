@@ -48,6 +48,15 @@ public class Churros extends CustomRelic {
         }
     }
 
+    public void atBattleStart() {
+        if (counter == 6) {
+            this.flash();
+            this.beginLongPulse();
+            AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DeliciousChurroPower(AbstractDungeon.player)));
+        }
+    }
+
     public void onVictory() {
         this.stopPulse();
     }
