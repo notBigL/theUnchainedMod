@@ -1,474 +1,474 @@
 {
   "theUnchainedMod:CommonPower": {
-    "NAME": "Placeholder Power",
+    "NAME": "占位能力",
     "DESCRIPTIONS": [
-      "You applied #b",
-      " keyword.",
-      " keywords."
+      "你施加 #b",
+      " 关键词。",
+      " 关键词。"
     ]
   },
   "theUnchainedMod:RarePower": {
-    "NAME": "Placeholder Power",
+    "NAME": "占位能力",
     "DESCRIPTIONS": [
-      "At the start of your turn, TOUCH #b",
-      " enemy.",
-      " enemies."
+      "在回合开始时，接触 #b",
+      " 敌人。",
+      " 敌人。"
     ]
   },
   "theUnchainedMod:UnshacklingPower": {
-    "NAME": "Unshackling",
+    "NAME": "破除枷锁",
     "DESCRIPTIONS": [
-      "After playing a Card, upgrade it.",
-      "After playing a Card, upgrade it #b",
-      " times."
+      "打出牌后，升级它。",
+      "打出牌后，升级它 #b",
+      " 次。"
     ]
   },
   "theUnchainedMod:BrassKnucklePower": {
-    "NAME": "Attack Chain",
+    "NAME": "攻击连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this Turn, gain #y1 Energy.",
-      "If you play #b",
-      " more Attacks this Turn, gain #y1 Energy."
+      "本回合再打出 #b1 张攻击牌，获得 #y1 能量。",
+      "本回合再打出 #b",
+      " 张攻击牌，获得 #y1 能量。"
     ]
   },
   "theUnchainedMod:WhiplashPower": {
-    "NAME": "Attack Chain",
+    "NAME": "攻击连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this Turn, enemy loses #r",
-      " health.",
-      "If you play #b",
-      " more Attacks this Turn, enemy loses #r"
+      "本回合再打出 #b1 攻击牌，敌人失去 #r",
+      " 点生命。",
+      "本回合再打出 #b",
+      " 张攻击牌。敌人失去 #r"
     ]
   },
   "theUnchainedMod:PlayDeadPower": {
-    "NAME": "Skill Chain",
+    "NAME": "技能连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Skill this Turn, gain #y1 Intangible.",
-      "If you play #b",
-      " more Skills this Turn, gain #y1 Intangible."
+      "本回合再打出 #b1 张技能牌，获得 #y1 层 无实体 。",
+      "本回合再打出 #b",
+      " 张技能牌，获得 #y1 层 无实体 。"
     ]
   },
   "theUnchainedMod:RelayPower": {
-    "NAME": "Relay",
+    "NAME": "传导护盾",
     "DESCRIPTIONS": [
-      "Blocks #b",
-      " damage this turn. Blocked damage is gained as Relayed Damage."
+      "本回合阻挡 #b",
+      " 点伤害。被阻挡的伤害转化为 传导伤害 。"
     ]
   },
   "theUnchainedMod:RelayedDamagePower": {
-    "NAME": "Relayed Damage",
+    "NAME": "传导伤害",
     "DESCRIPTIONS": [
-      "At the end of this turn, take #r",
-      " damage."
+      "在本回合结束时，受到 #r",
+      " 点伤害。"
     ]
   },
   "theUnchainedMod:ArcaneCharmPower": {
-    "NAME": "Arcane Charm",
+    "NAME": "秘法护符",
     "DESCRIPTIONS": [
-      "Gain #y",
-      " Relay at the start of your turn."
+      "回合开始时获得 #y",
+      " 点 传导护盾 。"
     ]
   },
   "theUnchainedMod:QuickSwingPower": {
-    "NAME": "Attack Chain",
+    "NAME": "攻击连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this turn, draw #y2 cards.",
-      "If you play #b",
-      " more Attacks this Turn, draw #y2 cards.",
-      "If you play #b1 more Attack this turn, draw #y3 cards.",
-      " more Attacks this Turn, draw #y3 cards."
+      "本回合再打出 #b1 张攻击牌，抽 #y2 张牌。",
+      "本回合再打出 #b",
+      " 张攻击牌，抽 #y2 张牌。",
+      "本回合再打出 #b1 张攻击牌, 抽 #y3 张牌。",
+      " 张攻击牌，抽 #y3 张牌。"
     ]
   },
   "theUnchainedMod:StepBackPower": {
-    "NAME": "Skill Chain",
+    "NAME": "技能连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Skill this turn, gain #b",
-      " Block.",
-      "If you play #b",
-      " more Skills this turn, gain #b"
+      "本回合再打出 #b1 张技能牌，获得 #b",
+      " 点 格挡。",
+      "本回合再打出 #b",
+      " 张技能牌，获得 #b"
     ]
   },
   "theUnchainedMod:MakeRoomPower": {
-    "NAME": "Skill Chain",
+    "NAME": "技能连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Skill this turn, gain #y2 Energy.",
-      "If you play #b",
-      " more Skills this turn, gain #y2 Energy."
+      "本回合再打出 #b1 张技能牌，获得 #y2 能量。",
+      "本回合再打出 #b",
+      " 张技能牌，获得 #y2 能量。"
     ]
   },
   "theUnchainedMod:OiledChainsPower": {
-    "NAME": "Chain extension",
+    "NAME": "连锁延申",
     "DESCRIPTIONS": [
-      "The next card you play is free."
+      "下一场打出的牌耗能为 0 。"
     ]
   },
   "theUnchainedMod:TiedToThePlayerPower": {
-    "NAME": "Tied to the Player",
+    "NAME": "与玩家链接",
     "DESCRIPTIONS": [
-      "This enemy loses HP #y",
-      " times",
-      " everytime the player takes damage."
+      "每当玩家受到未被格挡阻挡的伤害，这个敌人失去生命 #y",
+      " 次",
+      " 。"
     ]
   },
   "theUnchainedMod:TiedToAnEnemyPower": {
-    "NAME": "Tied to an enemy",
+    "NAME": "与敌人链接",
     "DESCRIPTIONS": [
-      "Your mind is tied to an enemy."
+      "你的痛楚与敌人共享。"
     ]
   },
   "theUnchainedMod:CruiserweightPower": {
-    "NAME": "Cruiserweight",
+    "NAME": "灵巧出击",
     "DESCRIPTIONS": [
-      "Everytime you draw a 2-cost card. Draw #y",
-      " card.",
-      " cards."
+      "每次抽到 1 张 2 费牌。抽 #y",
+      " 张牌。",
+      " 张牌。"
     ]
   },
   "theUnchainedMod:MuscleMemoryPower": {
-    "NAME": "Muscle Memory",
+    "NAME": "肌肉记忆",
     "DESCRIPTIONS": [
-      "The next 2-cost card you play is played twice.",
-      "The next #b",
-      " 2-cost cards you play are played twice."
+      "本回合下 1 张打出的 2 费卡将会打出两次。",
+      "本回合下 #b",
+      " 张打出的 2 费卡将会打出两次。"
     ]
   },
   "theUnchainedMod:NextTurnRelayedDamagePower": {
-    "NAME": "Next Turn Damage",
+    "NAME": "下回合受伤",
     "DESCRIPTIONS": [
-      "At the end of next turn, take #r",
-      " damage."
+      "下回合结束时，受到 #r",
+      " 点伤害。"
     ]
   },
   "theUnchainedMod:FractalShieldPower": {
-    "NAME": "Fractal Shield",
+    "NAME": "分形护盾",
     "DESCRIPTIONS": [
-      "Whenever you remove Relayed Damage, gain #b",
-      " Relay."
+      "每当传导伤害被移除，获得 #b",
+      " 点 传导护盾。"
     ]
   },
   "theUnchainedMod:ClaustrophobiaPower": {
-    "NAME": "Claustrophobia",
+    "NAME": "幽闭恐吓",
     "DESCRIPTIONS": [
-      "At the start of your turn, apply #b",
-      " Crushed Armor to ALL enemies."
+      "回合开始时，给予全部敌人 #b",
+      " 层 粉碎装甲。"
     ]
   },
   "theUnchainedMod:SolarPlexusPower": {
-    "NAME": "Attack Chain",
+    "NAME": "攻击连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this turn, Stun the enemy.",
-      "If you play #b",
-      " more Attacks this turn, Stun the enemy."
+      "本回合再打出 #b1 张攻击牌，击晕敌人。",
+      "本回合再打出 #b",
+      " 张攻击牌，击晕敌人。"
     ]
   },
   "theUnchainedMod:MomentumPower": {
-    "NAME": "Momentum",
+    "NAME": "动势",
     "DESCRIPTIONS": [
-      "You have #g",
-      " Momentum. When you obtain #b",
-      " Momentum, add a Swirl into your hand."
+      "拥有 #g",
+      " 点 动势 。当你获得 #b",
+      " 点 动势，在手牌中加入一张 回旋 。"
     ]
   },
   "theUnchainedMod:FullSpinPower": {
-    "NAME": "Full Spins",
+    "NAME": "全力旋转",
     "DESCRIPTIONS": [
-      "You have done #b",
-      " full spins this turn.",
-      " full spin this turn."
+      "本回合已经积累了 #b",
+      " 层 全力旋转 。",
+      " 层 全力旋转 。"
     ]
   },
   "theUnchainedMod:GainMomentumEveryTurnPower": {
-    "NAME": "Perfect Balance",
+    "NAME": "绝妙平衡",
     "DESCRIPTIONS": [
-      "Gain #y",
-      " Momentum every turn."
+      "回合开始时获得 #y",
+      " 点 动势。"
     ]
   },
   "theUnchainedMod:SwirlsHitAllEnemiesPower": {
-    "NAME": "Large Radius",
+    "NAME": "大幅度回旋",
     "DESCRIPTIONS": [
-      "Swirls hit ALL enemies."
+      "回旋将对所有敌人造成伤害。"
     ]
   },
   "theUnchainedMod:RelentlessOnslaughtPower": {
-    "NAME": "Attack Chain",
+    "NAME": "攻击连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this Turn, deal #y",
-      " damage #y",
-      " times, and reapply this Chain."
+      "本回合再打出 #b1 张攻击牌造成 #y",
+      " 点伤害 #y",
+      " 次，而后重复这个连锁。"
     ]
   },
   "theUnchainedMod:TunnelVisionChainPower": {
-    "NAME": "Power Chain",
+    "NAME": "能力连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Power this Turn, gain #y",
-      " TunnelVision.",
-      "If you play #b",
-      " more Powers this Turn, gain #y"
+      "本回合再打出 #b1 张能力牌，获得 #y",
+      " 层 TunnelVision。",
+      "本回合再打出 #b",
+      " 张能力牌，获得 #y"
     ]
   },
   "theUnchainedMod:EnclosingSteelPower": {
-    "NAME": "Hugged by Chains",
+    "NAME": "锁链护身",
     "DESCRIPTIONS": [
-      "Dont lose your Relay at the start of next turn.",
-      "Dont lose your Relay at the start of the next #b",
-      " turns."
+      "下个回合开始时， 传导护盾 不会消失",
+      "下 #b",
+      " 个回合开始时， 传导护盾 不会消失。"
     ]
   },
   "theUnchainedMod:MagusFormPower": {
-    "NAME": "Magus Form",
+    "NAME": "魔导形态",
     "DESCRIPTIONS": [
-      "Whenever you play a 2-cost card, gain #y",
-      " Energy."
+      "每当你打出 1 张 2 费牌，获得 #y",
+      " 能量。"
     ]
   },
   "theUnchainedMod:TelekineticPulsePower": {
-    "NAME": "Skill Chain",
+    "NAME": "技能连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Skill this turn, ALL enemies gain #y",
-      " Block and lose #y",
-      " HP."
+      "本回合再打出 #b1 张技能牌，所有敌人获得 #y",
+      " 点 格挡并失去 #y",
+      " 点生命。"
     ]
   },
   "theUnchainedMod:LongerChainsPower": {
-    "NAME": "Grace Of The Prince",
+    "NAME": "恩典",
     "DESCRIPTIONS": [
-      "At the start of each turn, ALL enemies gain #y",
-      " Block."
+      "回合开始时，所有敌人获得 #y",
+      " 点 格挡。"
     ]
   },
   "theUnchainedMod:PremonitionPower": {
-    "NAME": "Premonition",
+    "NAME": "预知",
     "DESCRIPTIONS": [
-      "If you end your turn with 0 Energy, gain #y",
-      " Energy next turn.",
-      "Next turn gain #y",
-      " Energy."
+      "如果以 0 能量结束回合，下回合开始获得 #y",
+      " 能量。",
+      " #y",
+      " 能量。"
     ]
   },
   "theUnchainedMod:InfiniteChainPower": {
-    "NAME": "Infinite Chain",
+    "NAME": "无尽锁链",
     "DESCRIPTIONS": [
-      "Next turn, add ",
-      " Infinite Chain into your hand."
+      "下一回合，在你的手牌添加 ",
+      " 张无尽锁链。"
     ]
   },
   "theUnchainedMod:LawOfInertiaPower": {
-    "NAME": "Inertia",
+    "NAME": "惯性",
     "DESCRIPTIONS": [
-      "At the start of turn, lose ",
-      " Strength and Dexterity, if you did not finish a Chain the turn before."
+      "若上个回合没有完成连锁，则在回合开始时，失去",
+      " 点 力量 和 敏捷 。"
     ]
   },
   "theUnchainedMod:AccelerationPower": {
-    "NAME": "Accelerate",
+    "NAME": "推动",
     "DESCRIPTIONS": [
-      " The first time you finish a Chain each turn, gain ",
-      " Strength and Dexterity."
+      " 每个回合第一次完成连锁，获得 ",
+      " 点 力量 和 敏捷 。"
     ]
   },
   "theUnchainedMod:LastResortPower": {
-    "NAME": "Skill Chain",
+    "NAME": "技能连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Skill this turn, lose ALL your Energy.",
-      "If you play #b",
-      " more Skills this turn, lose ALL your Energy."
+      "本回合再打出 #b1 张技能牌，失去全部能量。",
+      "本回合再打出 #b",
+      " 张技能牌，失去全部能量。"
     ]
   },
   "theUnchainedMod:FluidMovementPower": {
-    "NAME": "Fluid Movement",
+    "NAME": "自然舞步",
     "DESCRIPTIONS": [
-      "Everytime you finish a Chain, gain #y",
-      " Momentum."
+      "每当你完成 1 个连锁，获得 #y",
+      " 点 动势 。"
     ]
   },
   "theUnchainedMod:HobblesPower": {
-    "NAME": "Attack Chain",
+    "NAME": "攻击连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this Turn, enemy loses #y",
-      " Strength.",
-      "If you play #b",
-      " more Attacks this Turn, enemy loses #y"
+      "本回合再打出 #b1 张攻击牌，敌人失去 #y",
+      " 点 力量 。",
+      "本回合再打出 #b",
+      " 张攻击牌，敌人失去 #y"
     ]
   },
   "theUnchainedMod:SwingingPower": {
-    "NAME": "Keep on Swinging",
+    "NAME": "持续挥击",
     "DESCRIPTIONS": [
-      "ALL Swing Cards deal #b",
-      " more damage this combat."
+      "本场战斗中，所有名字中带有“挥击”的牌额外造成 #b",
+      " 点伤害。"
     ]
   },
   "theUnchainedMod:ChaseDestinyPower": {
     "NAME": "Path to Destiny",
     "DESCRIPTIONS": [
-      "This turn, gain 1 Energy everytime you finish a Chain.",
-      "This and next turn, gain 1 Energy everytime you finish a Chain.",
-      "Gain 1 Energy for the next #y",
-      " turns, everytime you finish a Chain."
+      "在本回合，每当你完成 1 连锁，获得 1 能量。",
+      "在本回合与下回合，每当你完成 1 连锁，获得 1 能量。",
+      "每当你完成 1 连锁，获得 1 能量，在本回合与下 #y",
+      " 个回合。"
     ]
   },
   "theUnchainedMod:StareDownPower": {
-    "NAME": "Skill Chain",
+    "NAME": "技能连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Skill this Turn, ALL enemies gain #b",
-      "If you play #b",
-      " more Skills this Turn, ALL enemies gain #b",
-      " Weak."
+      "本回合再打出 #b1 张技能牌，所有敌人获得 #b",
+      "本回合再打出 #b",
+      " 张技能牌，所有敌人获得 #b",
+      " 层 虚弱。"
     ]
   },
   "theUnchainedMod:CrushedArmorPower": {
-    "NAME": "Crushed Armor",
+    "NAME": "粉碎装甲",
     "DESCRIPTIONS": [
-      "Loses #r",
-      " HP everytime it gains Block."
+      "每当获得格挡时，失去 #r",
+      " 点生命。"
     ]
   },
   "theUnchainedMod:TaxedPower": {
-    "NAME": "Taxed",
+    "NAME": "已交税",
     "DESCRIPTIONS": [
-      "This enemy is too poor to be taxed again."
+      "这个敌人太穷，以至于不能再次交税了。"
     ]
   },
   "theUnchainedMod:RandomCommonAttackChainPower": {
-    "NAME": "Attack Chain",
+    "NAME": "攻击连锁",
     "DESCRIPTIONS": [
-      "If you play #b1 more Attack this Turn, add a random common Attack to your hand.",
-      "If you play #b",
-      " more Attacks this Turn, add a random common Attack to your hand."
+      "本回合再打出 #b1 张攻击牌，在手牌中加入 1 张随机的普通攻击牌。该牌本回合耗能为 0 。",
+      "本回合再打出 #b",
+      " 张攻击牌在手牌中加入 1 张随机的普通攻击牌。该牌本回合耗能为 0 。"
     ]
   },
   "theUnchainedMod:GainMomentumNextTurnPower": {
-    "NAME": "Carried Momentum",
+    "NAME": "动势传递",
     "DESCRIPTIONS": [
-      "Next Turn, gain #y",
-      " Momentum."
+      "下一回合，获得 #y",
+      " 点 动势。"
     ]
   },
   "theUnchainedMod:WeldingPower": {
     "NAME": "Welding",
     "DESCRIPTIONS": [
-      "The first Chain you start each turn, is finished instantly.",
-      "The first #y",
-      " Chains you start each turn, are finished instantly."
+      "每回合第一个连锁将会立即完成The first Chain you start each turn, is finished instantly。",
+      "每回合前 #y",
+      " 个连锁将会立即完成。"
     ]
   },
   "theUnchainedMod:FuseChainPower": {
-    "NAME": "Fuse Chains",
+    "NAME": "融合锁链",
     "DESCRIPTIONS": [
-      "The next Chain you start, is finished instantly.",
-      "The next #y",
-      " Chains you start, are finished instantly."
+      "下 1 个开始的连锁将会立即完成。",
+      "下 #y",
+      " 个开始的连锁将会立即完成。"
     ]
   },
   "theUnchainedMod:TiedDownPower": {
-    "NAME": "Tied Down",
+    "NAME": "窒息",
     "DESCRIPTIONS": [
-      "At the end of its turn, gains #b",
-      " Strength.",
-      "At the end of its next turn, gains #b"
+      "本回合结束时，获得 #b",
+      " 点 力量。",
+      "下回合结束时，获得 #b"
     ]
   },
   "theUnchainedMod:GuardedPosturePower": {
-    "NAME": "Guarded Posture",
+    "NAME": "守御之姿",
     "DESCRIPTIONS": [
-      "Whenever a Chain is finished, gain #b",
-      " Block."
+      "每当 1 个连锁完成，获得 #b",
+      " 点格挡。"
     ]
   },
   "theUnchainedMod:GlyphBrandPower": {
-    "NAME": "Branded",
+    "NAME": "符文标记",
     "DESCRIPTIONS": [
-      "Whenever you gain Relay this turn, this enemy takes #y",
-      " damage."
+      "本回合，每当你获得传导护盾，该敌人受到 #y",
+      " 点伤害。"
     ]
   },
   "theUnchainedMod:NextTurnRelayedDamage": {
-    "NAME": "Relayed Damage",
+    "NAME": "传导伤害",
     "DESCRIPTIONS": [
-      "Your ",
-      " Relayed Damage will hit you next turn for #y",
-      " damage."
+      "你的 ",
+      " 点 传导伤害 将会在下回合对你造成 #y",
+      " 点伤害。"
     ]
   },
   "theUnchainedMod:ThisTurnRelayedDamage": {
-    "NAME": "Relayed Damage",
+    "NAME": "传导伤害",
     "DESCRIPTIONS": [
-      "Your ",
-      " Relayed Damage will hit you this turn for #r",
-      " damage."
+      "你的 ",
+      " 点 传导伤害 将会在下回合对你造成 #r",
+      " 点伤害。"
     ]
   },
   "theUnchainedMod:ImmovableObjectPower": {
-    "NAME": "Immovable Object",
+    "NAME": "坚如磐石",
     "DESCRIPTIONS": [
-      "When attacked, attacking enemy gains #y",
-      " Crushed Armor."
+      "当被攻击，攻击你的敌人每段攻击获得 #y",
+      " 层 粉碎装甲。"
     ]
   },
   "theUnchainedMod:HeavyHitPower": {
-    "NAME": "Heavy Hits",
+    "NAME": "强手猛击",
     "DESCRIPTIONS": [
-      "This turn, hitting an enemy applies #y",
-      " Crushed Armor."
+      "在本回合，攻击一个敌人同时给与 #y",
+      " 层 粉碎装甲。"
     ]
   },
   "theUnchainedMod:ArcaneTransmutationPower": {
-    "NAME": "Transmute Armor",
+    "NAME": "转化装甲",
     "DESCRIPTIONS": [
-      "Gain #y",
-      " Relay, everytime an enemy gains Block."
+      "每当一个敌人获得 格挡 ，获得 #y",
+      " 点 传导护盾。"
     ]
   },
   "theUnchainedMod:DeliciousChurroPower": {
-    "NAME": "Delicious Churro",
+    "NAME": "美味的吉拿棒",
     "DESCRIPTIONS": [
-      "The next Chain you start is copied."
+      "下一个开始的连锁将被复制。"
       ]
     },
   "theUnchainedMod:MagicMechaPower": {
-    "NAME": "Magic Mecha",
+    "NAME": "魔能机甲",
     "DESCRIPTIONS": [
-      "If you play",
+      "再打出",
       " #b",
-      " more Attack,",
-      " more Skill and",
-      " more Power, ",
-      " gain #y",
-      " Strength, Dexterity and #yArcane #yMastery"
+      " 张攻击牌、",
+      " 张技能牌、",
+      " 张能力牌, ",
+      " 获得 #y",
+      " 点 力量 、 敏捷 、 奥术专注。"
     ]
   },
   "theUnchainedMod:ArcaneMasteryPower": {
-    "NAME": "Arcane Mastery",
+    "NAME": "奥术专注",
     "DESCRIPTIONS": [
-      "Increase all Relay gained by cards this combat by #b"
+      "从卡牌获得的格挡增加 #b 。"
     ]
   },
   "theUnchainedMod:BarbedWireChainsPower": {
-    "NAME": "Barbed Wire",
+    "NAME": "链锁荆棘",
     "DESCRIPTIONS": [
-      "Deal #b",
-      " to ALL enemies for each chain not finished at the end of your turn."
+      "在回合结束时，每有 1 个连锁没有完成，对所有敌人造成 #b",
+      " 点伤害。"
     ]
   },
   "theUnchainedMod:DamoclesChainPower": {
-    "NAME": "Sword of Damocles",
+    "NAME": "达摩克里斯之剑",
     "DESCRIPTIONS": [
-      "If you play",
+      "再打出",
       " #b",
-      " more Attack,",
-      " more Skill and",
-      " more Power, ",
-      " this Turn, take #b",
-      " damage and lose #b",
-      " Strength."
+      " 张攻击牌、",
+      " 张技能牌、",
+      " 张能力牌, ",
+      " this Turn, 受到 #b",
+      " 点伤害，失去 #b",
+      " 点 力量 。"
     ]
   },
   "theUnchainedMod:PropheticSwingPower": {
-    "NAME": "As Foretold",
+    "NAME": "先知之力",
     "DESCRIPTIONS": [
-      "The next time you draw a card, draw #y",
-      " additional Card.",
-      " additional Cards."
+      "下次抽牌时，多抽 #y",
+      " 张牌。",
+      " 张牌。"
     ]
   }
 }
