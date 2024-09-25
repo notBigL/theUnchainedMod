@@ -1,29 +1,29 @@
 {
   "theUnchainedMod:MakeHandCardCostLessAction": {
     "TEXT": [
-      "cheapen"
+      "耗能减 1 "
     ]
   },
   "theUnchainedMod:RelayPack": {
-  "TEXT": ["咒链术士——传导护盾", "theUnchainedMod:传导护盾, 更好的格挡，也可能更糟？（总的来说更好）", "BigL & Mezix"]
+  "TEXT": ["咒链术士——传导护盾", "theUnchainedMod:传导护盾 , 更好的 格挡 ，也可能更糟？（总的来说更好）", "BigL & Mezix"]
 },
   "theUnchainedMod:RelayPackHat": {
     "TEXT": ["每次移动都会发出巨大的“咚……”的一声", "大钟头"]
   },
   "theUnchainedMod:ChainPack": {
-    "TEXT": ["咒链术士——连锁", "打出一定类型的卡牌以实现强大的 theUnchainedMod:连锁 效果。", "BigL & Mezix"]
+    "TEXT": ["咒链术士——连锁", "打出一定类型一定数量的卡牌以实现强大的 theUnchainedMod:连锁 效果。", "BigL & Mezix"]
   },
   "theUnchainedMod:ChainPackHat": {
     "TEXT": ["戴上这个东西，你就什么都看不见了。", "链网头盔"]
   },
   "theUnchainedMod:CrushedArmorPack": {
-    "TEXT": ["咒链术士——粉碎装甲", "使敌人在获得格挡时受到伤害。", "BigL & Mezix"]
+    "TEXT": ["咒链术士——粉碎装甲", "使敌人在获得 格挡 时受到伤害。", "BigL & Mezix"]
   },
   "theUnchainedMod:CrushedArmorPackHat": {
     "TEXT": ["我们都爱格挡，对吧？（观众热烈欢呼）（敌人紧张地笑）。", "戈当先生"]
   },
   "theUnchainedMod:SupportPack": {
-    "TEXT": ["咒链术士——Support", "减益、增益、牌组操控，还有最重要的 *正当征税 。", "BigL & Mezix"]
+    "TEXT": ["咒链术士——辅助", "减益、增益、牌组操控，还有最重要的 *正当征税 。", "BigL & Mezix"]
   },
   "theUnchainedMod:SupportPackHat": {
     "TEXT": ["Biblically accurate Unchained。", "无畏"]

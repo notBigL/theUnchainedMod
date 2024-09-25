@@ -18,17 +18,17 @@
   "theUnchainedMod:UnshacklingPower": {
     "NAME": "破除枷锁",
     "DESCRIPTIONS": [
-      "打出牌后，升级它。",
-      "打出牌后，升级它 #b",
+      "打出牌后，在本场战斗升级它。",
+      "打出牌后，在本场战斗升级它 #b",
       " 次。"
     ]
   },
   "theUnchainedMod:BrassKnucklePower": {
     "NAME": "攻击连锁",
     "DESCRIPTIONS": [
-      "本回合再打出 #b1 张攻击牌，获得 #y1 能量。",
+      "本回合再打出 #b1 张攻击牌，获得 #y1 能量 。",
       "本回合再打出 #b",
-      " 张攻击牌，获得 #y1 能量。"
+      " 张攻击牌，获得 #y1 能量 。"
     ]
   },
   "theUnchainedMod:WhiplashPower": {
@@ -83,7 +83,7 @@
     "NAME": "技能连锁",
     "DESCRIPTIONS": [
       "本回合再打出 #b1 张技能牌，获得 #b",
-      " 点 格挡。",
+      " 点 格挡 。",
       "本回合再打出 #b",
       " 张技能牌，获得 #b"
     ]
@@ -91,21 +91,21 @@
   "theUnchainedMod:MakeRoomPower": {
     "NAME": "技能连锁",
     "DESCRIPTIONS": [
-      "本回合再打出 #b1 张技能牌，获得 #y2 能量。",
+      "本回合再打出 #b1 张技能牌，获得 #y2 能量 。",
       "本回合再打出 #b",
-      " 张技能牌，获得 #y2 能量。"
+      " 张技能牌，获得 #y2 能量 。"
     ]
   },
   "theUnchainedMod:OiledChainsPower": {
     "NAME": "连锁延申",
     "DESCRIPTIONS": [
-      "下一场打出的牌耗能为 0 。"
+      "下一张打出的牌耗能为 0 。"
     ]
   },
   "theUnchainedMod:TiedToThePlayerPower": {
-    "NAME": "与玩家链接",
+    "NAME": "与你链接",
     "DESCRIPTIONS": [
-      "每当玩家受到未被格挡阻挡的伤害，这个敌人失去生命 #y",
+      "每当你受到未被格挡阻挡的伤害，失去生命 #y",
       " 次",
       " 。"
     ]
@@ -127,9 +127,9 @@
   "theUnchainedMod:MuscleMemoryPower": {
     "NAME": "肌肉记忆",
     "DESCRIPTIONS": [
-      "本回合下 1 张打出的 2 费卡将会打出两次。",
+      "本回合下 1 张打出的 2 费牌将会打出两次。",
       "本回合下 #b",
-      " 张打出的 2 费卡将会打出两次。"
+      " 张打出的 2 费牌将会打出两次。"
     ]
   },
   "theUnchainedMod:NextTurnRelayedDamagePower": {
@@ -143,7 +143,7 @@
     "NAME": "分形护盾",
     "DESCRIPTIONS": [
       "每当传导伤害被移除，获得 #b",
-      " 点 传导护盾。"
+      " 点 传导护盾 。"
     ]
   },
   "theUnchainedMod:ClaustrophobiaPower": {
@@ -156,9 +156,9 @@
   "theUnchainedMod:SolarPlexusPower": {
     "NAME": "攻击连锁",
     "DESCRIPTIONS": [
-      "本回合再打出 #b1 张攻击牌，击晕敌人。",
+      "本回合再打出 #b1 张攻击牌，给予敌人一层 击晕 。",
       "本回合再打出 #b",
-      " 张攻击牌，击晕敌人。"
+      " 张攻击牌，给予敌人一层 击晕 。"
     ]
   },
   "theUnchainedMod:MomentumPower": {
@@ -187,7 +187,7 @@
   "theUnchainedMod:SwirlsHitAllEnemiesPower": {
     "NAME": "大幅度回旋",
     "DESCRIPTIONS": [
-      "回旋将对所有敌人造成伤害。"
+      " 回旋 将对所有敌人造成伤害。"
     ]
   },
   "theUnchainedMod:RelentlessOnslaughtPower": {
@@ -219,7 +219,7 @@
     "NAME": "魔导形态",
     "DESCRIPTIONS": [
       "每当你打出 1 张 2 费牌，获得 #y",
-      " 能量。"
+      " 能量 。"
     ]
   },
   "theUnchainedMod:TelekineticPulsePower": {
@@ -242,7 +242,7 @@
     "DESCRIPTIONS": [
       "如果以 0 能量结束回合，下回合开始获得 #y",
       " 能量。",
-      " #y",
+      "下回合开始时获得 #y",
       " 能量。"
     ]
   },
@@ -256,27 +256,27 @@
   "theUnchainedMod:LawOfInertiaPower": {
     "NAME": "惯性",
     "DESCRIPTIONS": [
-      "若上个回合没有完成连锁，则在回合开始时，失去",
+      "若上个回合没有完成任何 连锁 ，则在回合开始时，失去",
       " 点 力量 和 敏捷 。"
     ]
   },
   "theUnchainedMod:AccelerationPower": {
     "NAME": "推动",
     "DESCRIPTIONS": [
-      " 每个回合第一次完成连锁，获得 ",
+      "每个回合第 1 次完成 连锁 ，获得 ",
       " 点 力量 和 敏捷 。"
     ]
   },
   "theUnchainedMod:LastResortPower": {
     "NAME": "技能连锁",
     "DESCRIPTIONS": [
-      "本回合再打出 #b1 张技能牌，失去全部能量。",
+      "本回合再打出 #b1 张技能牌，失去全部能量 。",
       "本回合再打出 #b",
       " 张技能牌，失去全部能量。"
     ]
   },
   "theUnchainedMod:FluidMovementPower": {
-    "NAME": "自然舞步",
+    "NAME": "不休舞步",
     "DESCRIPTIONS": [
       "每当你完成 1 个连锁，获得 #y",
       " 点 动势 。"
@@ -299,12 +299,12 @@
     ]
   },
   "theUnchainedMod:ChaseDestinyPower": {
-    "NAME": "Path to Destiny",
+    "NAME": "命运之链",
     "DESCRIPTIONS": [
-      "在本回合，每当你完成 1 连锁，获得 1 能量。",
-      "在本回合与下回合，每当你完成 1 连锁，获得 1 能量。",
-      "每当你完成 1 连锁，获得 1 能量，在本回合与下 #y",
-      " 个回合。"
+      "在本回合，每当你完成 1 连锁，获得 1 能量 。",
+      "在本回合与下回合，每当你完成 1 连锁，获得 1 能量 。",
+      "在本回合与下 #y",
+      " 个回合，每当你完成 1 连锁，获得 1 能量 。"
     ]
   },
   "theUnchainedMod:StareDownPower": {
@@ -319,7 +319,7 @@
   "theUnchainedMod:CrushedArmorPower": {
     "NAME": "粉碎装甲",
     "DESCRIPTIONS": [
-      "每当获得格挡时，失去 #r",
+      "获得格挡时，失去 #r",
       " 点生命。"
     ]
   },
@@ -332,9 +332,9 @@
   "theUnchainedMod:RandomCommonAttackChainPower": {
     "NAME": "攻击连锁",
     "DESCRIPTIONS": [
-      "本回合再打出 #b1 张攻击牌，在手牌中加入 1 张随机的普通攻击牌。该牌本回合耗能为 0 。",
+      "本回合再打出 #b1 张攻击牌，在手牌中加入 1 张随机的普通攻击牌。该牌本回合耗能为 0 且 消耗 。",
       "本回合再打出 #b",
-      " 张攻击牌在手牌中加入 1 张随机的普通攻击牌。该牌本回合耗能为 0 。"
+      " 张攻击牌在手牌中加入 1 张随机的普通攻击牌。该牌本回合耗能为 0 且 消耗 。"
     ]
   },
   "theUnchainedMod:GainMomentumNextTurnPower": {
@@ -345,11 +345,11 @@
     ]
   },
   "theUnchainedMod:WeldingPower": {
-    "NAME": "Welding",
+    "NAME": "开了",
     "DESCRIPTIONS": [
-      "每回合第一个连锁将会立即完成The first Chain you start each turn, is finished instantly。",
+      "每回合第一个开始的 连锁 将会立即完成。",
       "每回合前 #y",
-      " 个连锁将会立即完成。"
+      " 个开始的 连锁 将会立即完成。"
     ]
   },
   "theUnchainedMod:FuseChainPower": {
@@ -364,29 +364,29 @@
     "NAME": "窒息",
     "DESCRIPTIONS": [
       "本回合结束时，获得 #b",
-      " 点 力量。",
+      " 点 力量 。",
       "下回合结束时，获得 #b"
     ]
   },
   "theUnchainedMod:GuardedPosturePower": {
     "NAME": "守御之姿",
     "DESCRIPTIONS": [
-      "每当 1 个连锁完成，获得 #b",
-      " 点格挡。"
+      "每当 1 个 连锁 完成，获得 #b",
+      " 点 格挡 。"
     ]
   },
   "theUnchainedMod:GlyphBrandPower": {
     "NAME": "符文标记",
     "DESCRIPTIONS": [
-      "本回合，每当你获得传导护盾，该敌人受到 #y",
-      " 点伤害。"
+      "本回合，每当你获得传导护盾，该敌人失去 #y",
+      " 点生命。"
     ]
   },
   "theUnchainedMod:NextTurnRelayedDamage": {
     "NAME": "传导伤害",
     "DESCRIPTIONS": [
       "你的 ",
-      " 点 传导伤害 将会在下回合对你造成 #y",
+      " 点 传导伤害 将会在下回合结束时对你造成 #y",
       " 点伤害。"
     ]
   },
@@ -394,35 +394,35 @@
     "NAME": "传导伤害",
     "DESCRIPTIONS": [
       "你的 ",
-      " 点 传导伤害 将会在下回合对你造成 #r",
+      " 点 传导伤害 将会在本回合结束时对你造成 #r",
       " 点伤害。"
     ]
   },
   "theUnchainedMod:ImmovableObjectPower": {
     "NAME": "坚如磐石",
     "DESCRIPTIONS": [
-      "当被攻击，攻击你的敌人每段攻击获得 #y",
-      " 层 粉碎装甲。"
+      "当你被攻击，每有一段攻击敌人获得 #y",
+      " 层 粉碎装甲 。"
     ]
   },
   "theUnchainedMod:HeavyHitPower": {
     "NAME": "强手猛击",
     "DESCRIPTIONS": [
-      "在本回合，攻击一个敌人同时给与 #y",
-      " 层 粉碎装甲。"
+      "在本回合，攻击一个敌人同时给予 #y",
+      " 层 粉碎装甲 。"
     ]
   },
   "theUnchainedMod:ArcaneTransmutationPower": {
     "NAME": "转化装甲",
     "DESCRIPTIONS": [
       "每当一个敌人获得 格挡 ，获得 #y",
-      " 点 传导护盾。"
+      " 点 传导护盾 。"
     ]
   },
   "theUnchainedMod:DeliciousChurroPower": {
     "NAME": "美味的吉拿棒",
     "DESCRIPTIONS": [
-      "下一个开始的连锁将被复制。"
+      "下一个开始的 连锁 将被复制。"
       ]
     },
   "theUnchainedMod:MagicMechaPower": {
@@ -431,10 +431,10 @@
       "再打出",
       " #b",
       " 张攻击牌、",
-      " 张技能牌、",
+      " 张技能牌和",
       " 张能力牌, ",
       " 获得 #y",
-      " 点 力量 、 敏捷 、 奥术专注。"
+      " 点 力量 、 敏捷 和 奥术专注。"
     ]
   },
   "theUnchainedMod:ArcaneMasteryPower": {
@@ -456,9 +456,9 @@
       "再打出",
       " #b",
       " 张攻击牌、",
-      " 张技能牌、",
+      " 张技能牌和",
       " 张能力牌, ",
-      " this Turn, 受到 #b",
+      " 受到 #b",
       " 点伤害，失去 #b",
       " 点 力量 。"
     ]
