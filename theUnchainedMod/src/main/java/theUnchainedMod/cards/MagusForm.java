@@ -3,6 +3,7 @@ package theUnchainedMod.cards;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
@@ -30,14 +31,16 @@ public class MagusForm extends AbstractDynamicCard {
         baseMagicNumber = magicNumber = MAGIC_NUMBER;
         this.isEthereal = true;
 
-        if(TheUnchainedMod.MagnusFormSelected()) {
-            name = "Magnus Form";
-        }
-        else {
-            name = "Magus Form";
+        if (Settings.language.equals(Settings.GameLanguage.ENG)) {
+            if (TheUnchainedMod.MagnusFormSelected()) {
+                name = "Magnus Form";
+            } else {
+                name = "Magus Form";
+            }
         }
         tags.add(BaseModCardTags.FORM);
     }
+
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();

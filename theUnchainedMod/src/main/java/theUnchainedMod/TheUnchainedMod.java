@@ -430,7 +430,7 @@ public class TheUnchainedMod implements
 
         // Set Magnus Form
         UpdateMagnusForm();
-        ModLabeledToggleButton magnusFormButton = new ModLabeledToggleButton("Replaces Magus Form with Magnus Form. \n We are not sure why we did this, but it was 2 AM and these things happen sometimes.",
+        ModLabeledToggleButton magnusFormButton = new ModLabeledToggleButton("Replaces Magus Form with Magnus Form. \n We are not sure why we did this, but it was 2 AM and these things happen sometimes. \n (Only works in english)",
                 350.0f, 600.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 MagnusFormSelected(), // Boolean it uses
                 settingsPanel,
@@ -467,17 +467,21 @@ public class TheUnchainedMod implements
 
 
     public void UpdateMagnusForm() {
-        MagusForm compendiumMagusForm = (MagusForm) CardLibrary.getCard(MagusForm.ID);
-        if (MagnusFormSelected()) {
-            compendiumMagusForm.name = "Magnus Form";
-            MagusForm.IMG = TheUnchainedMod.makeCardPath("MagnusForm.png");
-        } else {
-            compendiumMagusForm.name = "Magus Form";
-            MagusForm.IMG = TheUnchainedMod.makeCardPath("MagusForm.png");
-        }
+        logger.info(getLangString());
+        if (getLangString().equals("eng")) {
+            logger.info(getLangString() + "2");
+            MagusForm compendiumMagusForm = (MagusForm) CardLibrary.getCard(MagusForm.ID);
+            if (MagnusFormSelected()) {
+                compendiumMagusForm.name = "Magnus Form";
+                MagusForm.IMG = TheUnchainedMod.makeCardPath("MagnusForm.png");
+            } else {
+                compendiumMagusForm.name = "Magus Form";
+                MagusForm.IMG = TheUnchainedMod.makeCardPath("MagusForm.png");
+            }
 
-        compendiumMagusForm.loadCardImage(MagusForm.IMG);
-        compendiumMagusForm.update();
+            compendiumMagusForm.loadCardImage(MagusForm.IMG);
+            compendiumMagusForm.update();
+        }
     }
     // =============== / POST-INITIALIZE/ =================
 
