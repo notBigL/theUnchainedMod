@@ -170,7 +170,7 @@
   },
   "theUnchainedMod:RelentlessOnslaught": {
     "NAME": "猛攻",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 1 theunchainedmod:连锁 :造成 !D! 点伤害 !M! 次。本连锁完成后，重复这个 theunchainedmod:连锁 。NL 消耗 。 "
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 1 theunchainedmod:连锁 :造成 !D! 点伤害 !M! 次。本连锁完成后，重复这个 theunchainedmod:连锁 。 NL 消耗 。 "
   },
   "theUnchainedMod:Refresh": {
     "NAME": "更新",
