@@ -353,13 +353,17 @@
     "NAME": "传导炮火",
     "DESCRIPTION": "造成等同于当前 theunchainedmod:传导护盾 的伤害。",
     "UPGRADE_DESCRIPTION": "对所有敌人造成等同于当前 theunchainedmod:传导护盾 的伤害。",
-    "EXTENDED_DESCRIPTION": [ " NL (造成 !D! 点伤害。)"]
+    "EXTENDED_DESCRIPTION": [
+      " NL (造成 !D! 点伤害。)"
+    ]
   },
   "theUnchainedMod:ChainFlourish": {
     "NAME": "链之华舞",
     "DESCRIPTION": "在这场战斗中，每完成 1 个 theunchainedmod:连锁 ，造成 !D! 点伤害。",
-    "EXTENDED_DESCRIPTION": [ " NL (本场战斗已完成 1 个连锁。)" ,
-                              " NL (本场战斗已完成 !M! 个连锁。)"]
+    "EXTENDED_DESCRIPTION": [
+      " NL (本场战斗已完成 1 个连锁。)",
+      " NL (本场战斗已完成 !M! 个连锁。)"
+    ]
   },
   "theUnchainedMod:CrushPlates": {
     "NAME": "碾压板甲",
@@ -376,5 +380,9 @@
   "theUnchainedMod:ArcaneLink": {
     "NAME": "奥术链接",
     "DESCRIPTION": "获得 !M! 点 theunchainedmod:传导护盾 。 NL 如果你有一个未完成的 theunchainedmod:连锁 ，获得 !theUnchainedMod:SecondMagic! 点 theunchainedmod:奥术专注 。"
+  },
+  "theUnchainedMod:DemonicBoon": {
+    "NAME": "恶魔馈赠",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 本场战斗中本牌的耗能增加 !theUnchainedMod:SecondMagic! 。"
   }
 }
