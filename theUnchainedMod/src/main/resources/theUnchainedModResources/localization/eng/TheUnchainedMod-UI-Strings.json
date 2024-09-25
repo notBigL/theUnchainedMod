@@ -5,27 +5,68 @@
     ]
   },
   "theUnchainedMod:RelayPack": {
-  "TEXT": ["Unchained - Relay", "theUnchainedMod:Relay, it's block but better, but also worse? (But also better)", "BigL & Mezix"]
-},
+    "TEXT": [
+      "Unchained - Relay",
+      "theUnchainedMod:Relay, it's block but better, but also worse? (But also better)",
+      "BigL & Mezix"
+    ]
+  },
   "theUnchainedMod:RelayPackHat": {
-    "TEXT": ["It makes a very loud GOOOOOOOOONG noise when you move around", "Bell Head"]
+    "TEXT": [
+      "It makes a very loud GOOOOOOOOONG noise when you move around",
+      "Bell Head"
+    ]
   },
   "theUnchainedMod:ChainPack": {
-    "TEXT": ["Unchained - Chains", "Play a certain amount of cards to finish powerful theUnchainedMod:Chains.", "BigL & Mezix"]
+    "TEXT": [
+      "Unchained - Chains",
+      "Play a certain amount of cards to finish powerful theUnchainedMod:Chains.",
+      "BigL & Mezix"
+    ]
   },
   "theUnchainedMod:ChainPackHat": {
-    "TEXT": ["There is no way you can see with this thing on.", "Chain Mesh"]
+    "TEXT": [
+      "There is no way you can see with this thing on.",
+      "Chain Mesh"
+    ]
   },
   "theUnchainedMod:CrushedArmorPack": {
-    "TEXT": ["Unchained - Crushed Armor", "Cards that make the enemy hurt themselves whenever they gain Block.", "BigL & Mezix"]
+    "TEXT": [
+      "Unchained - Crushed Armor",
+      "Cards that make the enemy hurt themselves whenever they gain Block.",
+      "BigL & Mezix"
+    ]
   },
   "theUnchainedMod:CrushedArmorPackHat": {
-    "TEXT": ["We love block don't we folks? <live studio audience roars in approval> <your enemies laugh nervously>.", "Mr. Blocky"]
+    "TEXT": [
+      "We love block don't we folks? <live studio audience roars in approval> <your enemies laugh nervously>.",
+      "Mr. Blocky"
+    ]
   },
   "theUnchainedMod:SupportPack": {
-    "TEXT": ["Unchained - Support", "Debuffs, buffs, deck manipulation and, most importantly, *TAXES.", "BigL & Mezix"]
+    "TEXT": [
+      "Unchained - Support",
+      "Debuffs, buffs, deck manipulation and, most importantly, *TAXES.",
+      "BigL & Mezix"
+    ]
   },
   "theUnchainedMod:SupportPackHat": {
-    "TEXT": ["Biblically accurate Unchained.", "BE NOT AFRAID"]
-  }
+    "TEXT": [
+      "Biblically accurate Unchained.",
+      "BE NOT AFRAID"
+    ]
+  },
+  "theUnchainedMod:BirthdaySkin": {
+    "TEXT": [
+      "Activate Birthday Boy Mode."
+    ]
+  },  "theUnchainedMod:UnboundSkin": {
+  "TEXT": [
+    "Use the 'Prince Unbound' skin."
+  ]
+},  "theUnchainedMod:BoosterPack": {
+  "TEXT": [
+    "Activate the optional Booster Pack (Check Compendium for Cards and Relics)."
+  ]
+}
 }
