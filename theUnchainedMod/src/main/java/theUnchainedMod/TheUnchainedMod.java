@@ -467,9 +467,7 @@ public class TheUnchainedMod implements
 
 
     public void UpdateMagnusForm() {
-        logger.info(getLangString());
         if (getLangString().equals("eng")) {
-            logger.info(getLangString() + "2");
             MagusForm compendiumMagusForm = (MagusForm) CardLibrary.getCard(MagusForm.ID);
             if (MagnusFormSelected()) {
                 compendiumMagusForm.name = "Magnus Form";
