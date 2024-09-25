@@ -13,7 +13,7 @@ import static theUnchainedMod.TheUnchainedMod.makeCardPath;
 
 public class DemonicBoon extends AbstractDynamicCard {
     public static final String ID = TheUnchainedMod.makeID(DemonicBoon.class.getSimpleName());
-    public static final String IMG = makeCardPath("TradeOffer.png");
+    public static final String IMG = makeCardPath("DemonicBoon.png");
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
