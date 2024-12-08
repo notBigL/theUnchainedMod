@@ -383,6 +383,6 @@
   },
   "theUnchainedMod:DemonicBoon": {
     "NAME": "恶魔馈赠",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 本场战斗中本牌的耗能增加 !theUnchainedMod:SecondMagic! 。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 本场战斗中所有恶魔馈赠的耗能增加 !theUnchainedMod:SecondMagic! 。"
   }
 }

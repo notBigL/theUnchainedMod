@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theUnchainedMod.TheUnchainedMod;
 import theUnchainedMod.actions.IncreaseCostAction;
+import theUnchainedMod.actions.IncreaseCostOnDemonicBoonAction;
 import theUnchainedMod.characters.TheUnchained;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
@@ -43,5 +44,6 @@ public class DemonicBoon extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
         AbstractDungeon.actionManager.addToBottom(new IncreaseCostAction(this.uuid, this.defaultSecondMagicNumber));
+        AbstractDungeon.actionManager.addToBottom(new IncreaseCostOnDemonicBoonAction(this.defaultSecondMagicNumber));
     }
 }

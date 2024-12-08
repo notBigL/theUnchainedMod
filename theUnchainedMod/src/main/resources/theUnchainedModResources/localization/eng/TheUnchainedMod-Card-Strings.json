@@ -379,6 +379,6 @@
   },
   "theUnchainedMod:DemonicBoon": {
     "NAME": "Demonic Boon",
-    "DESCRIPTION": "Draw !M! cards. NL Increase this card's cost by !theUnchainedMod:SecondMagic! this combat."
+    "DESCRIPTION": "Draw !M! cards. NL Increase the cost of ALL Demonic Boon cards by !theUnchainedMod:SecondMagic! this combat."
   }
 }
